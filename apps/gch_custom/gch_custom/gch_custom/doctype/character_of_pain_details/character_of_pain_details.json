@@ -1,0 +1,30 @@
+{
+ "actions": [],
+ "creation": "2022-01-10 12:37:22.887853",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "character_of_pain"
+ ],
+ "fields": [
+  {
+   "fieldname": "character_of_pain",
+   "fieldtype": "Link",
+   "label": "Character of Pain",
+   "options": "Character of Pain"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2022-01-10 12:37:22.887853",
+ "modified_by": "Administrator",
+ "module": "Gch Custom",
+ "name": "Character of Pain Details",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

@@ -1,0 +1,224 @@
+{
+ "actions": [],
+ "creation": "2021-11-17 15:48:26.434683",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "sales_invoice",
+  "type",
+  "column_break_5",
+  "status",
+  "patient_details_section",
+  "patient",
+  "patient_name",
+  "encounter_details_section",
+  "encounter",
+  "doctor",
+  "doctor_name",
+  "diagnosis_table",
+  "insurance_details_section",
+  "insurance_category",
+  "insurance_category_name",
+  "is_slade_360",
+  "item_details_section",
+  "get_items_for_invoice",
+  "items",
+  "total_amount",
+  "total_amount_paid",
+  "total_authorized_amount",
+  "total_outstanding_amount",
+  "reference_details_section",
+  "amended_from",
+  "slade_details_section",
+  "get_authorization",
+  "authorized_amount",
+  "authorization_comments"
+ ],
+ "fields": [
+  {
+   "fieldname": "type",
+   "fieldtype": "Select",
+   "label": "Type",
+   "options": "\nInsurance\nMtiba\nNHIF"
+  },
+  {
+   "fieldname": "sales_invoice",
+   "fieldtype": "Link",
+   "label": "Sales Invoice",
+   "options": "Sales Invoice"
+  },
+  {
+   "default": "Draft",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "\nDraft\nRequested\nInitiated\nPartially Paid\nPayment Ordered\nPaid\nFailed\nCancelled"
+  },
+  {
+   "fieldname": "item_details_section",
+   "fieldtype": "Section Break",
+   "label": "Item Details"
+  },
+  {
+   "fieldname": "items",
+   "fieldtype": "Table",
+   "label": "Items",
+   "options": "Payment Request Item Details"
+  },
+  {
+   "fieldname": "encounter_details_section",
+   "fieldtype": "Section Break",
+   "label": "Encounter Details"
+  },
+  {
+   "fieldname": "encounter",
+   "fieldtype": "Link",
+   "label": "Encounter",
+   "options": "Patient Encounter"
+  },
+  {
+   "fieldname": "patient",
+   "fieldtype": "Link",
+   "label": "Patient",
+   "options": "Patient"
+  },
+  {
+   "fieldname": "patient_name",
+   "fieldtype": "Data",
+   "label": "Patient Name"
+  },
+  {
+   "fieldname": "total_amount",
+   "fieldtype": "Currency",
+   "label": "Total Amount"
+  },
+  {
+   "fieldname": "total_amount_paid",
+   "fieldtype": "Currency",
+   "label": "Total Amount Paid"
+  },
+  {
+   "fieldname": "total_outstanding_amount",
+   "fieldtype": "Currency",
+   "label": "Total Outstanding Amount"
+  },
+  {
+   "fieldname": "column_break_5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "get_items_for_invoice",
+   "fieldtype": "Button",
+   "label": "Get Items for Invoice"
+  },
+  {
+   "fieldname": "patient_details_section",
+   "fieldtype": "Section Break",
+   "label": "Patient Details"
+  },
+  {
+   "fieldname": "insurance_details_section",
+   "fieldtype": "Section Break",
+   "label": "Insurance Details"
+  },
+  {
+   "fieldname": "insurance_category",
+   "fieldtype": "Link",
+   "label": "Insurance Category",
+   "options": "Insurance Category"
+  },
+  {
+   "fieldname": "reference_details_section",
+   "fieldtype": "Section Break",
+   "label": "Reference Details"
+  },
+  {
+   "fieldname": "insurance_category_name",
+   "fieldtype": "Data",
+   "label": "Insurance Category Name"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_slade_360",
+   "fieldtype": "Check",
+   "label": "is_slade_360"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Sales Invoice Payment Request",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "slade_details_section",
+   "fieldtype": "Section Break",
+   "label": "Slade Details"
+  },
+  {
+   "fieldname": "get_authorization",
+   "fieldtype": "Button",
+   "label": "Get Authorization"
+  },
+  {
+   "fieldname": "authorized_amount",
+   "fieldtype": "Currency",
+   "label": "Authorized Amount"
+  },
+  {
+   "fieldname": "authorization_comments",
+   "fieldtype": "Small Text",
+   "label": "Authorization Comments"
+  },
+  {
+   "fieldname": "diagnosis_table",
+   "fieldtype": "Table",
+   "label": "Diagnosis Table",
+   "options": "Codification Table"
+  },
+  {
+   "fieldname": "doctor",
+   "fieldtype": "Link",
+   "label": "Doctor",
+   "options": "Healthcare Practitioner"
+  },
+  {
+   "fieldname": "doctor_name",
+   "fieldtype": "Data",
+   "label": "Doctor Name"
+  },
+  {
+   "fieldname": "total_authorized_amount",
+   "fieldtype": "Currency",
+   "label": "Total Authorized Amount"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2021-11-17 16:59:27.604074",
+ "modified_by": "Administrator",
+ "module": "Gch Custom",
+ "name": "Sales Invoice Payment Request",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

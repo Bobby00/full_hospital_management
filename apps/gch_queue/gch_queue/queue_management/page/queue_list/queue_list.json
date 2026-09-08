@@ -1,0 +1,19 @@
+{
+ "content": null,
+ "creation": "2021-07-05 10:11:30.430840",
+ "docstatus": 0,
+ "doctype": "Page",
+ "idx": 0,
+ "modified": "2021-07-05 10:11:30.430840",
+ "modified_by": "Administrator",
+ "module": "Queue Management",
+ "name": "queue-list",
+ "owner": "Administrator",
+ "page_name": "Queue List",
+ "roles": [],
+ "script": null,
+ "standard": "Yes",
+ "style": null,
+ "system_page": 0,
+ "title": "Queue List"
+}

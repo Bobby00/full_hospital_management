@@ -1,0 +1,35 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:patient_observation",
+ "creation": "2021-10-18 11:09:45.948919",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "patient_observation"
+ ],
+ "fields": [
+  {
+   "fieldname": "patient_observation",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Patient Observation",
+   "options": "Wellbaby Patient Observation",
+   "reqd": 1,
+   "unique": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2021-10-18 11:14:05.549397",
+ "modified_by": "Administrator",
+ "module": "Gch Custom",
+ "name": "Wellbaby Patient Observation Details",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

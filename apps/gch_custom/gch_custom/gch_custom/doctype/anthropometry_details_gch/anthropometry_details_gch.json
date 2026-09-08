@@ -1,0 +1,108 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2022-09-23 08:57:08.340488",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "weight_in_kilograms",
+  "height_in_centimeters",
+  "head_circumference_in_centimeters",
+  "bsa",
+  "encounter",
+  "clinic",
+  "column_break_5",
+  "bmi",
+  "muac",
+  "bmi_for_age_percentile",
+  "height_for_age_percentile",
+  "weight_for_age_percentile",
+  "date_taken"
+ ],
+ "fields": [
+  {
+   "fieldname": "weight_in_kilograms",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "label": "Weight In Kilograms"
+  },
+  {
+   "fieldname": "height_in_centimeters",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "label": "Height in Centimeters"
+  },
+  {
+   "fieldname": "head_circumference_in_centimeters",
+   "fieldtype": "Float",
+   "label": "Head Circumference In Centimeters"
+  },
+  {
+   "fieldname": "bsa",
+   "fieldtype": "Float",
+   "label": "BSA"
+  },
+  {
+   "fieldname": "column_break_5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "bmi",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "label": "BMI"
+  },
+  {
+   "fieldname": "bmi_for_age_percentile",
+   "fieldtype": "Float",
+   "label": "BMI for Age Percentile"
+  },
+  {
+   "fieldname": "height_for_age_percentile",
+   "fieldtype": "Float",
+   "label": "Height for Age Percentile"
+  },
+  {
+   "fieldname": "weight_for_age_percentile",
+   "fieldtype": "Float",
+   "label": "Weight for Age Percentile"
+  },
+  {
+   "default": "Now",
+   "fieldname": "date_taken",
+   "fieldtype": "Datetime",
+   "label": "Date Taken"
+  },
+  {
+   "fieldname": "muac",
+   "fieldtype": "Data",
+   "label": "MUAC"
+  },
+  {
+   "fieldname": "encounter",
+   "fieldtype": "Link",
+   "label": "Encounter",
+   "options": "Patient Encounter"
+  },
+  {
+   "fieldname": "clinic",
+   "fieldtype": "Data",
+   "label": "Clinic"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-06-28 11:04:31.922130",
+ "modified_by": "Administrator",
+ "module": "Gch Custom",
+ "name": "Anthropometry Details GCH",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

@@ -1,0 +1,111 @@
+<div class="row layout-main">
+    <div class="col-lg-2 layout-side-section">
+        <div class="user-profile-sidebar">
+
+            <div class="user-image-container hidden-xs hidden-sm">
+                <div class="sidebar-image-wrapper">
+                    <div class="sidebar-standard-image hide">
+                        <div class="standard-image"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="profile-details">
+                <div class="detail-item user-stats-detail">
+                    <!-- <h5>Details</h5> -->
+                    <div class="user-stats mt-3">
+
+                        <div class="user-stats-item mt-4">
+                            <svg class="icon icon-lg" style="">
+                                <use class="no-stroke" href="#icon-color-energy-points"></use>
+                            </svg>
+                            <div>
+                                <div class="stat-value">Doctor\'s Name</div>
+                                <div class="stat-label">{{frappe.session.user_fullname}}</div>
+                            </div>
+                        </div>
+                        <div class="user-stats-item mt-4">
+                            <svg class="icon icon-lg" style="">
+                                <use class="no-stroke" href="#icon-color-review-points"></use>
+                            </svg>
+                            <div>
+                                <div class="stat-value">Current Room</div>
+                                <div class="stat-label">0</div>
+                            </div>
+                        </div>
+                        <div class="user-stats-item mt-4">
+                            <svg class="icon icon-lg" style="">
+                                <use class="no-stroke" href="#icon-color-rank"></use>
+                            </svg>
+                            <div>
+                                <div class="stat-value">Current Clinic</div>
+                                <!-- <div class="stat-label">{{scheduled.first_name}}</div> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- <div class="profile-links detail-item">
+                    <p><a class="edit-profile-link">First Link</a></p>
+                    <p><a class="user-settings-link">Second Link</a></p>
+                    <p> <a class="leaderboard-link">Third Link</a> </p>
+                </div> -->
+
+            </div>
+        </div>
+    </div>
+    <div class="col layout-main-section-wrapper">
+        <div class="layout-main-section">
+            <div class="row user-profile">
+                <div class="col-md-12">
+                    <div class="performance-graphs">
+                        <div class="frappe-card chart-column-container line-chart-container">
+                            <div class="title-area">
+                                <h4 class="card-title">Encounter Information</h4>
+                            </div>
+                            <div class="list-row-container" tabindex="1">
+                                <div class="form-group">
+                                    <div class="clearfix"> <label class="control-label"
+                                            style="padding-right: 0px;">Encounter Number</label> </div>
+                                    <div class="control-input-wrapper">
+                                        <div class="control-input">
+                                            <div class="link-field ui-front" style="position: relative;">
+                                                <div class="awesomplete"><input type="text"
+                                                        class="input-with-feedback form-control" data-fieldtype="Link"
+                                                        data-fieldname="patient_encounter" placeholder=""
+                                                        data-doctype="Prescription" data-target="Patient Encounter"
+                                                        autocomplete="off" aria-expanded="false"
+                                                        aria-owns="awesomplete_list_3" role="combobox">
+                                                    <ul hidden="" role="listbox" id="awesomplete_list_3"></ul><span
+                                                        class="visually-hidden" role="status" aria-live="assertive"
+                                                        aria-atomic="true">Begin typing for results.</span>
+                                                </div>
+                                                <span class="link-btn" style="display: none;">
+                                                    <a class="btn-open no-decoration" title="Open Link">
+                                                        <svg class="icon icon-xs" style="">
+                                                            <use class="" href="#icon-arrow-right"></use>
+                                                        </svg>
+                                                    </a>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="control-value like-disabled-input" style="display: none;"></div>
+                                        <p class="help-box small text-muted"></p>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+            </div>
+
+
+        </div>
+        <div class="layout-footer hide"></div>
+    </div>
+</div>

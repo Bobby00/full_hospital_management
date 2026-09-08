@@ -1,0 +1,290 @@
+frappe.pages["queue-list"].on_page_load = function (wrapper) {
+	new QueueList(wrapper);
+};
+
+let queue_items = [];
+let priority = "indicator-pill red";
+let drug_alergy = "indicator-pill yellow";
+let normal = "indicator-pill green";
+let index = 1;
+
+const current_queue_items = async () => {
+	let g = "";
+	const data = await frappe
+		.call({
+			method:
+				"gch_queue.queue_management.page.queue_list.queue.get_current_queues",
+			// "gch_queue.services.render_queue",
+		})
+
+		.then((result) =>
+			result.message.map(
+				(k) =>
+				(g =
+					g +
+					`
+				<div class="level list-row">
+				   <div class="level-left ellipsis">
+
+					  <div class="list-row-col ellipsis list-subject level">
+
+						 <input class="level-item list-row-checkbox hidden-xs" type="checkbox" data-name="${k.patient
+					}" >
+
+			 
+						 <span class="level-item" style="margin-bottom: 1px;">
+							<span class="like-action not-liked" data-name="${k.patient
+					}" data-doctype="Patient" data-liked-by="null" title=""></span>
+							<span class="likes-count"></span>
+						 </span>
+						 <span class="level-item bold ellipsis" title="${k.patient}">
+						 <a class="ellipsis ${k.is_emergency_patient
+						? priority
+						: k.is_drug_allergy_patient
+							? drug_alergy
+							: normal
+					}" href="/app/patient/${k.patient}" title=${k.patient
+					} data-doctype="Patient" data-name="${k.patient}">
+						 ${k.patient}
+						 </a>
+						 </span>
+					  </div>
+
+
+					  <div class="list-row-col ellipsis hidden-xs ">
+						 <span class="ellipsis" title="Service Unit: ${k.is_emergency_patient}">
+						 <a class="filterable ellipsis" data-filter="is_emergency_patient,=,${k.is_emergency_patient
+					}">
+						 ${k.is_emergency_patient
+						? "Emergency"
+						: k.is_drug_allergy_patient
+							? "Drug Alergy"
+							: k.is_priority_patient
+								? "Priority"
+								: k.is_fall_risk_patient
+									? "Fall Risk"
+									: k.is_isolation_patient
+										? "Isolation"
+										: "Normal"
+					}
+						 </a>
+						 </span>
+					  </div>
+
+
+					  <div class="list-row-col ellipsis hidden-xs ">
+						 <span class="ellipsis" title="Service Unit: ${k.gch_patient_age}">
+						 <a class="filterable ellipsis" data-filter="gch_patient_age,=,${k.gch_patient_age}">
+						 ${k.gch_patient_age}
+						 </a>
+						 </span>
+					  </div>
+
+					  <div class="list-row-col ellipsis hidden-xs ">
+						 <span class="ellipsis" title="Service Unit: ${k.encounter}">
+						 <a class="filterable ellipsis" data-filter="encounter,=,${k.encounter}">
+						 ${k.encounter}
+						 </a>
+						 </span>
+					  </div>
+
+
+					  <div class="list-row-col ellipsis hidden-xs ">
+						 <span class="ellipsis" title="Service Unit: ${k.service_unit}">
+						 <a class="filterable ellipsis" data-filter="service_unit,=,${k.service_unit}">
+						 ${k.service_unit}
+						 </a>
+						 </span>
+					  </div>
+					  <div class="list-row-col ellipsis hidden-xs ">
+						 <span class="ellipsis" title=Name: ${k.queue_position}>
+						 <a class="filterable ellipsis" data-filter="queue_position,=,${k.queue_position
+					}">
+
+			 	${index++}
+
+						 </a>
+						 </span>
+					  </div>
+				   </div>
+				</div>
+			 `)
+			)
+		);
+
+	return g;
+};
+
+let OurLoop = async () => await current_queue_items();
+
+QueueList = Class.extend({
+	init: function (wrapper) {
+		this.page = frappe.ui.make_app_page({
+			parent: wrapper,
+			title: "Current Queue",
+			single_column: true,
+		});
+
+		this.make();
+	},
+
+	make: async function () {
+		let grabClass = $(this);
+
+		let htmlContent = `
+ 
+		  <div class="row layout-main">
+			 <div class="col-lg-2 layout-side-section">
+				<div class="user-profile-sidebar">
+ 
+				   <div class="user-image-container hidden-xs hidden-sm">
+					  <div class="sidebar-image-wrapper">
+						 <div class="sidebar-standard-image hide">
+							<div class="standard-image"></div>
+						 </div>
+					  </div>
+				   </div>
+ 
+				   <div class="profile-details">
+					  <div class="detail-item user-stats-detail">
+						 <h5>Details</h5>
+						 <div class="user-stats mt-3">
+ 
+							<div class="user-stats-item mt-4">
+							   <svg class="icon icon-lg" style="">
+								  <use class="no-stroke" href="#icon-color-energy-points"></use>
+							   </svg>
+							   <div>
+								  <div class="stat-value">0</div>
+								  <div class="stat-label">Drug Alergy</div>
+							   </div>
+							</div>
+ 
+							<div class="user-stats-item mt-4">
+							   <svg class="icon icon-lg" style="">
+								  <use class="no-stroke" href="#icon-color-review-points"></use>
+							   </svg>
+							   <div>
+								  <div class="stat-value">0</div>
+								  <div class="stat-label">Normal</div>
+							   </div>
+							</div>
+ 
+							<div class="user-stats-item mt-4">
+							   <svg class="icon icon-lg" style="">
+								  <use class="no-stroke" href="#icon-color-rank"></use>
+							   </svg>
+							   <div>
+								  <div class="stat-value">0</div>
+								  <div class="stat-label">Total</div>
+							   </div>
+							</div>
+ 
+							<!--
+							<div class="user-stats-item mt-4">
+							   <svg class="icon icon-lg" style="">
+								  <use class="no-stroke" href="#icon-color-monthly-rank"></use>
+							   </svg>
+							   <div>
+								  <div class="stat-value">0</div>
+								  <div class="stat-label">Monthly Rank</div>
+							   </div>
+							</div>
+ 
+							-->
+ 
+						 </div>
+					  </div>
+ 
+					  <div class="profile-links detail-item">
+						 <p><a class="edit-profile-link">First Link</a></p>
+						 <p><a class="user-settings-link">Second Link</a></p>
+						 <p> <a class="leaderboard-link">Third Link</a> </p>
+					  </div>
+ 
+				   </div>
+				</div>
+			 </div>
+ 
+
+
+
+			 
+			 <div class="col layout-main-section-wrapper">
+				<div class="layout-main-section">
+				   <div class="row user-profile">
+					  <div class="col-md-12">
+						 <div class="performance-graphs">
+
+
+
+ 
+							<div class="frappe-card chart-column-container line-chart-container">
+							   <div class="title-area">
+								  <h4 class="card-title">Queued Patients</h4>
+							   </div>
+ 
+ 
+							   <div class="list-row-container" tabindex="1">
+ 
+ 
+								  <header class="level list-row-head text-muted">
+									 <div class="level-left list-header-subject">
+										<div class="list-row-col ellipsis list-subject level  ">
+										   <input class="level-item list-check-all hidden-xs" type="checkbox" title="Select All">
+										   <span class="level-item">Full Name</span>
+										</div>
+
+
+										<div class="list-row-col ellipsis hidden-xs  ">
+										   <span>Status</span>
+										</div>
+
+
+										<div class="list-row-col ellipsis hidden-xs  ">
+										   <span>Age</span>
+										</div>
+
+										<div class="list-row-col ellipsis hidden-xs  ">
+										   <span>Encounter Number</span>
+										</div>
+
+										<div class="list-row-col ellipsis hidden-xs  ">
+										   <span>Queue</span>
+										</div>
+										<div class="list-row-col ellipsis hidden-xs  ">
+										   <span>Queue Position</span>
+										</div>
+									 </div>
+									 <div class="level-left checkbox-actions" style="display: none;">
+										<div class="level list-subject">
+										   <input class="level-item list-check-all hidden-xs" type="checkbox" title="Select All">
+										   <span class="level-item list-header-meta"></span>
+										</div>
+									 </div>
+								  </header>
+ 
+								  ${await OurLoop()}
+ 
+ 
+							   </div>
+ 
+							</div>
+ 
+ 
+						 </div>
+ 
+					  </div>
+				   </div>
+				</div>
+				<div class="layout-footer hide"></div>
+			 </div>
+		  </div>
+ 
+		  `;
+
+		let body = htmlContent;
+
+		$(frappe.render_template(body, this)).appendTo(this.page.main);
+	},
+});

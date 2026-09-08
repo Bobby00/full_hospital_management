@@ -1,0 +1,147 @@
+{
+ "actions": [],
+ "beta": 1,
+ "creation": "2021-08-31 09:46:43.877226",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "do_not_issue",
+  "do_not_issue_reason",
+  "medication",
+  "brand",
+  "preparation",
+  "dose",
+  "route",
+  "frequency",
+  "duration_days",
+  "notes",
+  "available_qty",
+  "billed_qty",
+  "discount",
+  "unit_price",
+  "total",
+  "additional_label_information",
+  "refillable"
+ ],
+ "fields": [
+  {
+   "default": "0",
+   "fieldname": "do_not_issue",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Do Not Issue"
+  },
+  {
+   "depends_on": "eval:cur_frm.doc.do_not_issue==1;",
+   "fieldname": "do_not_issue_reason",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Do Not Issue Reason",
+   "mandatory_depends_on": "eval:cur_frm.doc.do_not_issue==1;",
+   "options": "Patient Declined\nPatient Allergic\nDrug Expired"
+  },
+  {
+   "fieldname": "medication",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Medication"
+  },
+  {
+   "fieldname": "brand",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Brand"
+  },
+  {
+   "fieldname": "preparation",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Preparation"
+  },
+  {
+   "fieldname": "dose",
+   "fieldtype": "Data",
+   "label": "Dose"
+  },
+  {
+   "fieldname": "route",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Route"
+  },
+  {
+   "fieldname": "frequency",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Frequency"
+  },
+  {
+   "fieldname": "duration_days",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Duration (Days)"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Notes"
+  },
+  {
+   "fieldname": "available_qty",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Available Qty"
+  },
+  {
+   "fieldname": "billed_qty",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Billed Qty"
+  },
+  {
+   "fieldname": "discount",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Discount"
+  },
+  {
+   "fieldname": "unit_price",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Unit Price"
+  },
+  {
+   "fieldname": "total",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Total"
+  },
+  {
+   "fieldname": "additional_label_information",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Additional Label Information "
+  },
+  {
+   "default": "0",
+   "fieldname": "refillable",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Refillable"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2021-09-07 01:51:05.758896",
+ "modified_by": "Administrator",
+ "module": "Gch Custom",
+ "name": "Pharmacy Prescription Table",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

@@ -1,0 +1,95 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-09-12 09:39:10.065288",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "date_and_time",
+  "oph",
+  "sg",
+  "ketones",
+  "glucose",
+  "leukocytes",
+  "column_break_7",
+  "nitrates",
+  "proteins",
+  "urobilinogen",
+  "bilirubin",
+  "erythrocyteshb"
+ ],
+ "fields": [
+  {
+   "default": "Now",
+   "fieldname": "date_and_time",
+   "fieldtype": "Datetime",
+   "label": "Date and Time"
+  },
+  {
+   "fieldname": "oph",
+   "fieldtype": "Data",
+   "label": "OPH"
+  },
+  {
+   "fieldname": "sg",
+   "fieldtype": "Data",
+   "label": "SG"
+  },
+  {
+   "fieldname": "ketones",
+   "fieldtype": "Data",
+   "label": "Ketones"
+  },
+  {
+   "fieldname": "glucose",
+   "fieldtype": "Data",
+   "label": "Glucose"
+  },
+  {
+   "fieldname": "leukocytes",
+   "fieldtype": "Data",
+   "label": "Leukocytes"
+  },
+  {
+   "fieldname": "column_break_7",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "nitrates",
+   "fieldtype": "Data",
+   "label": "Nitrates"
+  },
+  {
+   "fieldname": "proteins",
+   "fieldtype": "Data",
+   "label": "Proteins"
+  },
+  {
+   "fieldname": "urobilinogen",
+   "fieldtype": "Data",
+   "label": "Urobilinogen"
+  },
+  {
+   "fieldname": "bilirubin",
+   "fieldtype": "Data",
+   "label": "Bilirubin"
+  },
+  {
+   "fieldname": "erythrocyteshb",
+   "fieldtype": "Data",
+   "label": "Erythrocytes/HB"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-09-12 09:39:10.065288",
+ "modified_by": "Administrator",
+ "module": "GCH PCCU",
+ "name": "Dipstix Urinalysis Table",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

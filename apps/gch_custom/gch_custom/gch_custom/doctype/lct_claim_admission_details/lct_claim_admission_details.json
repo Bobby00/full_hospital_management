@@ -1,0 +1,44 @@
+{
+ "actions": [],
+ "creation": "2022-03-14 15:28:04.973561",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "admit_date",
+  "discharge_date",
+  "discharge_summary"
+ ],
+ "fields": [
+  {
+   "fieldname": "admit_date",
+   "fieldtype": "Datetime",
+   "in_list_view": 1,
+   "label": "admit_date"
+  },
+  {
+   "fieldname": "discharge_date",
+   "fieldtype": "Datetime",
+   "in_list_view": 1,
+   "label": "discharge_date"
+  },
+  {
+   "fieldname": "discharge_summary",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "discharge_summary"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2022-03-15 13:22:01.359699",
+ "modified_by": "Administrator",
+ "module": "Gch Custom",
+ "name": "Lct Claim Admission Details",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

@@ -1,0 +1,30 @@
+{
+ "actions": [],
+ "creation": "2022-01-10 13:01:42.531695",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "abdomenal_pain_aggravator"
+ ],
+ "fields": [
+  {
+   "fieldname": "abdomenal_pain_aggravator",
+   "fieldtype": "Link",
+   "label": "Abdomenal Pain Aggravator",
+   "options": "Abdomenal Pain Aggravator"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2022-01-10 13:01:42.531695",
+ "modified_by": "Administrator",
+ "module": "Gch Custom",
+ "name": "Abdomenal Pain Aggravator Details",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

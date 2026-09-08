@@ -1,0 +1,41 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-12-21 10:35:02.845517",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "tool_name",
+  "inpatient_record",
+  "nursing_tool_link"
+ ],
+ "fields": [
+  {
+   "fieldname": "tool_name",
+   "fieldtype": "Data",
+   "label": "Nursing Tool"
+  },
+  {
+   "fieldname": "inpatient_record",
+   "fieldtype": "Data",
+   "label": "Inpatient Record"
+  },
+  {
+   "fieldname": "nursing_tool_link",
+   "fieldtype": "Data",
+   "label": "Nursing Tool Link"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-01-18 10:21:32.729797",
+ "modified_by": "Administrator",
+ "module": "Gch Inpatient",
+ "name": "Completed Nursing Tools",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

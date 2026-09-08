@@ -1,0 +1,160 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-11-29 10:58:54.339636",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "order_name",
+  "patient",
+  "ward",
+  "room",
+  "bed",
+  "status_custom",
+  "column_break_7",
+  "test_order_status",
+  "date",
+  "time",
+  "select_menu",
+  "menu_option",
+  "ordered_by",
+  "received_by"
+ ],
+ "fields": [
+  {
+   "allow_in_quick_entry": 1,
+   "fetch_from": "order_name.patient",
+   "fieldname": "patient",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Patient",
+   "options": "Patient"
+  },
+  {
+   "fetch_from": "order_name.received_by",
+   "fieldname": "received_by",
+   "fieldtype": "Link",
+   "label": "Received By",
+   "options": "User"
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fetch_from": "order_name.select_menu",
+   "fieldname": "select_menu",
+   "fieldtype": "Link",
+   "in_global_search": 1,
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Select Menu",
+   "options": "Catering Menu"
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fetch_from": "order_name.menu_option",
+   "fieldname": "menu_option",
+   "fieldtype": "Select",
+   "in_global_search": 1,
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Menu Time Option",
+   "options": "\nBREAKFAST\n10 AM TEA\nLUNCH\n4PM TEA\nDINNER"
+  },
+  {
+   "fetch_from": "order_name.ward",
+   "fieldname": "ward",
+   "fieldtype": "Link",
+   "in_global_search": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Ward",
+   "options": "Nursing Ward"
+  },
+  {
+   "fetch_from": "order_name.room",
+   "fieldname": "room",
+   "fieldtype": "Data",
+   "label": "Room"
+  },
+  {
+   "fetch_from": "order_name.bed",
+   "fieldname": "bed",
+   "fieldtype": "Data",
+   "label": "Bed"
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "columns": 1,
+   "fetch_from": "order_name.date",
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "label": "Order Date"
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "columns": 1,
+   "fetch_from": "order_name.time",
+   "fieldname": "time",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "label": "Order Time"
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fetch_from": "order_name.ordered_by",
+   "fieldname": "ordered_by",
+   "fieldtype": "Link",
+   "in_global_search": 1,
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Ordered by",
+   "options": "Healthcare Practitioner"
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "order_name",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Order Name",
+   "options": "Patient Meal Order"
+  },
+  {
+   "fetch_from": "order_name.workflow_state",
+   "fieldname": "status_custom",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Order Status"
+  },
+  {
+   "fetch_from": "order_name.workflow_state",
+   "fieldname": "test_order_status",
+   "fieldtype": "Data",
+   "label": "Order Status"
+  },
+  {
+   "fieldname": "column_break_7",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "hide_toolbar": 1,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-09-03 05:00:29.434797",
+ "modified_by": "Administrator",
+ "module": "Gch Inpatient",
+ "name": "Patient Meal Order List",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

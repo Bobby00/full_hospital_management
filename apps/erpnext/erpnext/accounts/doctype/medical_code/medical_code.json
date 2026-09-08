@@ -1,0 +1,116 @@
+{
+ "actions": [],
+ "allow_copy": 1,
+ "allow_import": 1,
+ "allow_rename": 1,
+ "autoname": "format:{medical_code_standard} {code}",
+ "creation": "2017-06-21 13:02:56.122897",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "medical_code_standard",
+  "is_critical",
+  "code",
+  "description",
+  "lft",
+  "rgt",
+  "is_group",
+  "old_parent",
+  "parent_medical_code"
+ ],
+ "fields": [
+  {
+   "fieldname": "medical_code_standard",
+   "fieldtype": "Link",
+   "ignore_user_permissions": 1,
+   "label": "Medical Code Standard",
+   "options": "Medical Code Standard",
+   "reqd": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "is_critical",
+   "fieldtype": "Check",
+   "label": "is critical"
+  },
+  {
+   "fieldname": "code",
+   "fieldtype": "Data",
+   "ignore_xss_filter": 1,
+   "in_list_view": 1,
+   "label": "Code",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "bold": 1,
+   "fieldname": "description",
+   "fieldtype": "Small Text",
+   "ignore_xss_filter": 1,
+   "in_list_view": 1,
+   "label": "Description"
+  },
+  {
+   "fieldname": "lft",
+   "fieldtype": "Int",
+   "hidden": 1,
+   "label": "Left",
+   "no_copy": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "rgt",
+   "fieldtype": "Int",
+   "hidden": 1,
+   "label": "Right",
+   "no_copy": 1,
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "is_group",
+   "fieldtype": "Check",
+   "label": "Is Group"
+  },
+  {
+   "fieldname": "old_parent",
+   "fieldtype": "Link",
+   "label": "Old Parent",
+   "options": "Medical Code"
+  },
+  {
+   "fieldname": "parent_medical_code",
+   "fieldtype": "Link",
+   "label": "Parent Medical Code",
+   "options": "Medical Code"
+  }
+ ],
+ "is_tree": 1,
+ "links": [],
+ "modified": "2022-09-29 12:25:51.403844",
+ "modified_by": "Administrator",
+ "module": "Accounts",
+ "name": "Medical Code",
+ "nsm_parent_field": "parent_medical_code",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Physician",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "restrict_to_domain": "Healthcare",
+ "search_fields": "code, description",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

@@ -1,0 +1,102 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-07-02 15:25:13.901716",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "mode",
+  "pip",
+  "etco",
+  "peep",
+  "fio2",
+  "rate",
+  "nitric_oxide",
+  "humidifier_temperature",
+  "time"
+ ],
+ "fields": [
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "mode",
+   "fieldtype": "Data",
+   "in_global_search": 1,
+   "in_list_view": 1,
+   "in_preview": 1,
+   "label": "Mode",
+   "search_index": 1
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "pip",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "PIP"
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "etco",
+   "fieldtype": "Data",
+   "in_global_search": 1,
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "ETCO"
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "peep",
+   "fieldtype": "Data",
+   "in_global_search": 1,
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "PEEP"
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "fio2",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "FiO2",
+   "search_index": 1
+  },
+  {
+   "fieldname": "rate",
+   "fieldtype": "Data",
+   "label": "Rate"
+  },
+  {
+   "fieldname": "nitric_oxide",
+   "fieldtype": "Data",
+   "label": "Nitric Oxide"
+  },
+  {
+   "fieldname": "humidifier_temperature",
+   "fieldtype": "Data",
+   "label": "Humidifier Temperature"
+  },
+  {
+   "default": "Now",
+   "fieldname": "time",
+   "fieldtype": "Datetime",
+   "label": "Time"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-07-02 15:49:41.077359",
+ "modified_by": "Administrator",
+ "module": "GCH PCCU",
+ "name": "PCCU Ventilation",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

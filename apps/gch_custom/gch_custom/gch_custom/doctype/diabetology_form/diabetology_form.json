@@ -1,0 +1,297 @@
+{
+ "actions": [],
+ "autoname": "naming_series:",
+ "creation": "2022-01-10 11:51:05.719914",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "patient_details_section",
+  "naming_series",
+  "patient_encounter",
+  "patient",
+  "patient_name",
+  "dob",
+  "age",
+  "column_break_7",
+  "date",
+  "gender",
+  "gender_hmtl",
+  "weight",
+  "weight_html",
+  "height",
+  "height_html",
+  "bmi",
+  "bmi_html",
+  "patient_history_section",
+  "thyroid_disease",
+  "hyperlipidemia_disease",
+  "column_break_20",
+  "hypertension_disease",
+  "insulin_monitoring_chart_section",
+  "insulin_chart",
+  "correct_medication_doses",
+  "compliance_of_medication",
+  "physical_examination_section",
+  "growth_velocity",
+  "tanner_stage_breast",
+  "testes_right",
+  "extremities",
+  "column_break_22",
+  "penile_length",
+  "tanner_stage_pubic_hair",
+  "testes_left",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "patient_details_section",
+   "fieldtype": "Section Break",
+   "label": "Patient Details"
+  },
+  {
+   "fieldname": "patient_encounter",
+   "fieldtype": "Link",
+   "label": "Patient Encounter",
+   "options": "Patient Encounter"
+  },
+  {
+   "fetch_from": "patient_encounter.patient",
+   "fieldname": "patient",
+   "fieldtype": "Link",
+   "label": "Patient",
+   "options": "Patient",
+   "read_only": 1
+  },
+  {
+   "bold": 1,
+   "fetch_from": "patient.patient_name",
+   "fieldname": "patient_name",
+   "fieldtype": "Data",
+   "label": "Patient Name",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "patient.dob",
+   "fieldname": "dob",
+   "fieldtype": "Date",
+   "hidden": 1,
+   "label": "Date of Birth"
+  },
+  {
+   "fetch_from": "patient_encounter.patient_age",
+   "fieldname": "age",
+   "fieldtype": "HTML",
+   "label": "Age",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_7",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Datetime",
+   "label": "Date"
+  },
+  {
+   "fetch_from": "patient.sex",
+   "fieldname": "gender",
+   "fieldtype": "Link",
+   "label": "Gender",
+   "options": "Gender",
+   "read_only": 1
+  },
+  {
+   "fieldname": "gender_hmtl",
+   "fieldtype": "HTML",
+   "label": "Gender"
+  },
+  {
+   "fetch_from": "patient_encounter.weight_in_kilograms",
+   "fieldname": "weight",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Weight In Kilograms"
+  },
+  {
+   "fieldname": "weight_html",
+   "fieldtype": "HTML",
+   "label": "Weight",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "patient_encounter.height_in_centimeters",
+   "fieldname": "height",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Height in Centimeters"
+  },
+  {
+   "fieldname": "height_html",
+   "fieldtype": "HTML",
+   "label": "Height",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "patient_encounter.bmi",
+   "fieldname": "bmi",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "BMI"
+  },
+  {
+   "fieldname": "bmi_html",
+   "fieldtype": "HTML",
+   "label": "BMI"
+  },
+  {
+   "fieldname": "physical_examination_section",
+   "fieldtype": "Section Break",
+   "label": "Physical Examination"
+  },
+  {
+   "fieldname": "growth_velocity",
+   "fieldtype": "Float",
+   "label": "Growth Velocity ( cm/yr )",
+   "precision": "2"
+  },
+  {
+   "fieldname": "tanner_stage_breast",
+   "fieldtype": "Select",
+   "label": "Tanner Stage Breast",
+   "options": "\n1\n2\n3\n4\n5",
+   "precision": "2"
+  },
+  {
+   "fieldname": "testes_right",
+   "fieldtype": "Float",
+   "label": "Testes Right (cc)",
+   "precision": "2"
+  },
+  {
+   "fieldname": "extremities",
+   "fieldtype": "Small Text",
+   "label": "Extremities"
+  },
+  {
+   "fieldname": "column_break_22",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "penile_length",
+   "fieldtype": "Float",
+   "label": "Penile Length (cm)",
+   "precision": "2"
+  },
+  {
+   "fieldname": "tanner_stage_pubic_hair",
+   "fieldtype": "Select",
+   "label": "Tanner Stage Pubic Hair",
+   "options": "\n1\n2\n3\n4\n5",
+   "precision": "2"
+  },
+  {
+   "fieldname": "testes_left",
+   "fieldtype": "Float",
+   "label": " Testes Left (cc)",
+   "precision": "2"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Diabetology Form",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Diabetology Form",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "patient_history_section",
+   "fieldtype": "Section Break",
+   "label": "Patient History"
+  },
+  {
+   "fieldname": "thyroid_disease",
+   "fieldtype": "Small Text",
+   "label": "Thyroid Disease"
+  },
+  {
+   "fieldname": "hyperlipidemia_disease",
+   "fieldtype": "Small Text",
+   "label": "Hyperlipidemia Disease"
+  },
+  {
+   "fieldname": "column_break_20",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "hypertension_disease",
+   "fieldtype": "Small Text",
+   "label": "Hypertension Disease"
+  },
+  {
+   "fieldname": "insulin_monitoring_chart_section",
+   "fieldtype": "Section Break",
+   "label": "Insulin Monitoring Chart"
+  },
+  {
+   "fieldname": "correct_medication_doses",
+   "fieldtype": "Select",
+   "label": "Correct Medication Doses",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "compliance_of_medication",
+   "fieldtype": "Select",
+   "label": "Compliance of Medication",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "insulin_chart",
+   "fieldtype": "Table",
+   "label": "Insulin Chart",
+   "options": "Insulin Chart Details"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "options": "HLC-DFENC-.YYYY.-"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2022-01-11 10:57:09.418218",
+ "modified_by": "Administrator",
+ "module": "Gch Custom",
+ "name": "Diabetology Form",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

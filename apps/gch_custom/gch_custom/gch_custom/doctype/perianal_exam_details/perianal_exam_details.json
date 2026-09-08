@@ -1,0 +1,30 @@
+{
+ "actions": [],
+ "creation": "2022-01-10 13:38:34.887122",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "perianal_exam"
+ ],
+ "fields": [
+  {
+   "fieldname": "perianal_exam",
+   "fieldtype": "Link",
+   "label": "Perianal Exam",
+   "options": "Perianal Exam"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2022-01-10 13:38:34.887122",
+ "modified_by": "Administrator",
+ "module": "Gch Custom",
+ "name": "Perianal Exam Details",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

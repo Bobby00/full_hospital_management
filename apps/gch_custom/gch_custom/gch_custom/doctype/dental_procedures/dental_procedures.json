@@ -1,0 +1,330 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2022-10-17 17:16:23.119388",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "location",
+  "tooth_number",
+  "tooth_name",
+  "tooth_condition",
+  "tooth_decay",
+  "decay_layer",
+  "area_of_decay",
+  "additional_area_of_decay",
+  "other_area_of_decay",
+  "cavitation",
+  "pulp_involved",
+  "tooth_fracture",
+  "fracture_location",
+  "tooth_wear_fracture_type",
+  "tooth_wear",
+  "wear_type",
+  "area_of_wear",
+  "additional_area_of_wear",
+  "other_area_of_wear",
+  "discoloration",
+  "tooth_color",
+  "column_break_18",
+  "periodontal_probing",
+  "probing_depth_disto_palatalmm",
+  "probing_depth_palatal",
+  "probing_depth_mesio_palatal",
+  "probing_depth_disto_buccal_mm",
+  "probing_depth_buccal_mm",
+  "probing_depth_mesio_buccal_mm",
+  "periodontal_gingival",
+  "gingival_margin_disto_palatal_mm",
+  "gingival_margin_palatal_mm",
+  "gingival_margin_mesio_palatal_mm",
+  "gingival_margin_disto_buccal_mm",
+  "gingival_margin_buccal_mm",
+  "gingival_margin_mesio_buccal_mm",
+  "bleeding_by_probing",
+  "procedure",
+  "description",
+  "apical",
+  "development_disorder"
+ ],
+ "fields": [
+  {
+   "fieldname": "location",
+   "fieldtype": "Select",
+   "label": "Location",
+   "options": "Upper Right\nUpper Left\nLower Right\nLower Left"
+  },
+  {
+   "fieldname": "tooth_number",
+   "fieldtype": "Select",
+   "label": "Tooth Number",
+   "options": "11\n12\n13\n14\n15\n16\n17\n18\n21\n22\n23\n24\n25\n26\n27\n28\n31\n32\n33\n34\n35\n36\n37\n38\n41\n42\n43\n44\n45\n46\n47\n48\n51\n52\n53\n54\n55\n61\n62\n63\n64\n65\n71\n72\n73\n74\n75\n81\n82\n83\n84\n85"
+  },
+  {
+   "fieldname": "tooth_name",
+   "fieldtype": "Link",
+   "label": "Tooth Name",
+   "options": "Tooth Name"
+  },
+  {
+   "fieldname": "tooth_condition",
+   "fieldtype": "Select",
+   "label": "Tooth Condition",
+   "options": "Filling"
+  },
+  {
+   "default": "0",
+   "fieldname": "tooth_decay",
+   "fieldtype": "Check",
+   "label": "Tooth Decay"
+  },
+  {
+   "depends_on": "eval:doc.tooth_decay==1",
+   "fieldname": "decay_layer",
+   "fieldtype": "Select",
+   "label": "Decay Layer",
+   "options": "Dentin"
+  },
+  {
+   "depends_on": "eval:doc.tooth_decay==1",
+   "fieldname": "area_of_decay",
+   "fieldtype": "Link",
+   "label": "Area of decay",
+   "options": "Area of Decay"
+  },
+  {
+   "default": "0",
+   "depends_on": "eval:doc.tooth_decay==1",
+   "fieldname": "additional_area_of_decay",
+   "fieldtype": "Check",
+   "label": "Additional Area of Decay?"
+  },
+  {
+   "depends_on": "eval:doc.additional_area_of_decay==1",
+   "fieldname": "other_area_of_decay",
+   "fieldtype": "Link",
+   "label": "Other Area of Decay",
+   "options": "Area of Decay"
+  },
+  {
+   "fieldname": "cavitation",
+   "fieldtype": "Select",
+   "label": "Cavitation",
+   "options": "Yes\nNo"
+  },
+  {
+   "default": "0",
+   "fieldname": "pulp_involved",
+   "fieldtype": "Check",
+   "label": "Pulp Involved",
+   "options": "Yes\nNo"
+  },
+  {
+   "default": "0",
+   "fieldname": "tooth_fracture",
+   "fieldtype": "Check",
+   "label": "Tooth Fracture"
+  },
+  {
+   "depends_on": "eval:doc.tooth_fracture==1",
+   "fieldname": "fracture_location",
+   "fieldtype": "Select",
+   "label": "Fracture Location",
+   "options": "Crown Fracture\nCusp Fracture"
+  },
+  {
+   "depends_on": "eval:doc.tooth_fracture==1",
+   "fieldname": "tooth_wear_fracture_type",
+   "fieldtype": "Select",
+   "label": "Fracture Type",
+   "options": "Vertical\nHorizontal"
+  },
+  {
+   "default": "0",
+   "fieldname": "tooth_wear",
+   "fieldtype": "Check",
+   "label": "Tooth Wear"
+  },
+  {
+   "depends_on": "eval:doc.tooth_wear==1",
+   "fieldname": "wear_type",
+   "fieldtype": "Select",
+   "label": "Wear Type",
+   "options": "Abrasion"
+  },
+  {
+   "depends_on": "eval:doc.tooth_wear==1",
+   "fieldname": "area_of_wear",
+   "fieldtype": "Link",
+   "label": "Area of Wear",
+   "options": "Area of Decay"
+  },
+  {
+   "depends_on": "eval:doc.tooth_wear==1",
+   "fieldname": "additional_area_of_wear",
+   "fieldtype": "Select",
+   "label": "Additional Area of Wear?"
+  },
+  {
+   "depends_on": "eval:doc.additional_area_of_wear==1",
+   "fieldname": "other_area_of_wear",
+   "fieldtype": "Link",
+   "label": "Other Area of Wear",
+   "options": "Area of Decay"
+  },
+  {
+   "default": "0",
+   "fieldname": "discoloration",
+   "fieldtype": "Check",
+   "label": "Discoloration"
+  },
+  {
+   "depends_on": "eval:doc.discoloration==1",
+   "fieldname": "tooth_color",
+   "fieldtype": "Select",
+   "label": "Tooth Color",
+   "options": "Yellow\nGrey\nBrown\nGreen"
+  },
+  {
+   "fieldname": "column_break_18",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "periodontal_probing",
+   "fieldtype": "Check",
+   "label": "Periodontal Probing"
+  },
+  {
+   "depends_on": "eval:doc.periodontal_probing==1",
+   "fieldname": "probing_depth_disto_palatalmm",
+   "fieldtype": "Select",
+   "label": "Probing Depth Disto Palatal(mm)",
+   "options": "1\n2\n3"
+  },
+  {
+   "depends_on": "eval:doc.periodontal_probing==1",
+   "fieldname": "probing_depth_palatal",
+   "fieldtype": "Select",
+   "label": "Probing Depth Palatal",
+   "options": "0\n1\n2\n3"
+  },
+  {
+   "depends_on": "eval:doc.periodontal_probing==1",
+   "fieldname": "probing_depth_mesio_palatal",
+   "fieldtype": "Select",
+   "label": "Probing Depth Mesio Palatal",
+   "options": "1\n2\n3"
+  },
+  {
+   "fieldname": "probing_depth_disto_buccal_mm",
+   "fieldtype": "Select",
+   "label": "Probing Depth Disto Buccal (mm)",
+   "options": "1\n2\n3"
+  },
+  {
+   "depends_on": "eval:doc.periodontal_probing==1",
+   "fieldname": "probing_depth_buccal_mm",
+   "fieldtype": "Select",
+   "label": "Probing Depth Buccal (mm)",
+   "options": "1\n2\n3"
+  },
+  {
+   "depends_on": "eval:doc.periodontal_probing==1",
+   "fieldname": "probing_depth_mesio_buccal_mm",
+   "fieldtype": "Select",
+   "label": "Probing Depth Mesio Buccal (mm)",
+   "options": "1\n2\n3\n4"
+  },
+  {
+   "default": "0",
+   "fieldname": "periodontal_gingival",
+   "fieldtype": "Check",
+   "label": "Periodontal Gingival"
+  },
+  {
+   "depends_on": "eval:doc.periodontal_gingival==1",
+   "fieldname": "gingival_margin_disto_palatal_mm",
+   "fieldtype": "Select",
+   "label": "Gingival Margin Disto Palatal (mm)",
+   "options": "1\n2\n3\n4"
+  },
+  {
+   "depends_on": "eval:doc.periodontal_gingival==1",
+   "fieldname": "gingival_margin_palatal_mm",
+   "fieldtype": "Select",
+   "label": "Gingival Margin Palatal (mm)",
+   "options": "1\n2\n3\n4"
+  },
+  {
+   "depends_on": "eval:doc.periodontal_gingival==1",
+   "fieldname": "gingival_margin_mesio_palatal_mm",
+   "fieldtype": "Select",
+   "label": "Gingival Margin Mesio Palatal (mm)",
+   "options": "1\n2\n3"
+  },
+  {
+   "depends_on": "eval:doc.periodontal_gingival==1",
+   "fieldname": "gingival_margin_disto_buccal_mm",
+   "fieldtype": "Select",
+   "label": "Gingival Margin Disto Buccal (mm)",
+   "options": "1\n2\n3"
+  },
+  {
+   "depends_on": "eval:doc.periodontal_gingival==1",
+   "fieldname": "gingival_margin_buccal_mm",
+   "fieldtype": "Select",
+   "label": "Gingival Margin Buccal (mm)",
+   "options": "1\n2\n3"
+  },
+  {
+   "depends_on": "eval:doc.periodontal_gingival==1",
+   "fieldname": "gingival_margin_mesio_buccal_mm",
+   "fieldtype": "Select",
+   "label": "Gingival Margin Mesio Buccal (mm)",
+   "options": "1\n2\n3"
+  },
+  {
+   "depends_on": "eval:doc.periodontal_gingival==1",
+   "fieldname": "bleeding_by_probing",
+   "fieldtype": "Select",
+   "label": "Bleeding by Probing",
+   "options": "Yes\nNo"
+  },
+  {
+   "fieldname": "procedure",
+   "fieldtype": "Select",
+   "label": "Procedure",
+   "options": "Tooth Extraction\nTooth Refill"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Small Text",
+   "label": "Description"
+  },
+  {
+   "default": "0",
+   "fieldname": "apical",
+   "fieldtype": "Check",
+   "label": "Apical"
+  },
+  {
+   "default": "0",
+   "fieldname": "development_disorder",
+   "fieldtype": "Check",
+   "label": "Development Disorder"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2022-10-19 17:21:50.085678",
+ "modified_by": "Administrator",
+ "module": "Gch Custom",
+ "name": "Dental Procedures",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

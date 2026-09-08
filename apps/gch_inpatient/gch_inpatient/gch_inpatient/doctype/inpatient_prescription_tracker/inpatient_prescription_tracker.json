@@ -1,0 +1,104 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-08-07 13:05:18.529738",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "date",
+  "drug_prescription",
+  "stopped",
+  "stopped_on",
+  "stopped_by",
+  "stop_user",
+  "inpatient_record",
+  "administration_schedule",
+  "is_high_alert"
+ ],
+ "fields": [
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "drug_prescription",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Drug Prescription",
+   "options": "Inpatient Doctor Prescription Table",
+   "reqd": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "stopped",
+   "fieldtype": "Check",
+   "label": "Stopped"
+  },
+  {
+   "fieldname": "stopped_on",
+   "fieldtype": "Datetime",
+   "label": "Stopped On"
+  },
+  {
+   "fieldname": "stopped_by",
+   "fieldtype": "Link",
+   "label": "Stopped by",
+   "options": "User"
+  },
+  {
+   "fieldname": "inpatient_record",
+   "fieldtype": "Link",
+   "label": "Inpatient Record",
+   "options": "Inpatient Record",
+   "reqd": 1
+  },
+  {
+   "fieldname": "administration_schedule",
+   "fieldtype": "Table",
+   "label": "Administration Schedule",
+   "options": "Inpatient Prescription Administration Tracker",
+   "reqd": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "is_high_alert",
+   "fieldtype": "Check",
+   "hidden": 1,
+   "label": "is high_alert",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "stopped_by.full_name",
+   "fieldname": "stop_user",
+   "fieldtype": "Data",
+   "label": "Stop User"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-12-15 11:24:08.947382",
+ "modified_by": "Administrator",
+ "module": "Gch Inpatient",
+ "name": "Inpatient Prescription Tracker",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

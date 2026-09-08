@@ -1,0 +1,115 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{drug}-{wellbaby_vaccine}",
+ "creation": "2021-10-18 12:12:24.833002",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "wellbaby_vaccine",
+  "vaccine_type",
+  "drug",
+  "drug_description",
+  "uom",
+  "quantity",
+  "vaccinated",
+  "is_this_the_vaccine_youre_coming_for",
+  "vaccine_dispensed",
+  "revaccination"
+ ],
+ "fields": [
+  {
+   "columns": 1,
+   "fieldname": "drug",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Drug",
+   "options": "Item",
+   "unique": 1
+  },
+  {
+   "fetch_from": "drug.description",
+   "fieldname": "drug_description",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Drug Description",
+   "read_only": 1
+  },
+  {
+   "columns": 1,
+   "fieldname": "vaccine_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Vaccine Type",
+   "options": "\nKEPI Vaccine\nPrivate Vaccine"
+  },
+  {
+   "columns": 1,
+   "fieldname": "quantity",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Quantity"
+  },
+  {
+   "fieldname": "wellbaby_vaccine",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Vaccine",
+   "options": "Vaccine"
+  },
+  {
+   "columns": 2,
+   "depends_on": "eval: frappe.user.has_role(\"GCH-Nurse\")",
+   "fieldname": "vaccinated",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Vaccinated",
+   "mandatory_depends_on": "eval: frappe.user.has_role(\"GCH-Nurse\")",
+   "options": "\nNo\nYes"
+  },
+  {
+   "columns": 1,
+   "fetch_from": "drug.stock_uom",
+   "fieldname": "uom",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "UOM",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "vaccine_dispensed",
+   "fieldtype": "Check",
+   "hidden": 1,
+   "label": "Vaccine Dispensed"
+  },
+  {
+   "depends_on": "eval: frappe.user.has_role(\"GCH-Reception\")",
+   "fieldname": "is_this_the_vaccine_youre_coming_for",
+   "fieldtype": "Select",
+   "label": "Is this the vaccine you're coming for?",
+   "mandatory_depends_on": "eval: frappe.user.has_role(\"GCH-Reception\")",
+   "options": "\nNo\nYes"
+  },
+  {
+   "default": "0",
+   "fieldname": "revaccination",
+   "fieldtype": "Check",
+   "hidden": 1,
+   "label": "Revaccination"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2023-10-26 10:41:36.386486",
+ "modified_by": "Administrator",
+ "module": "Gch Custom",
+ "name": "Wellbaby Vaccine Details",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

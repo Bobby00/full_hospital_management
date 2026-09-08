@@ -1,0 +1,76 @@
+{
+ "actions": [],
+ "allow_copy": 1,
+ "beta": 1,
+ "creation": "2017-06-22 13:09:23.159579",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "medical_code",
+  "code",
+  "description",
+  "is_communicable",
+  "is_significant"
+ ],
+ "fields": [
+  {
+   "fieldname": "medical_code",
+   "fieldtype": "Link",
+   "ignore_user_permissions": 1,
+   "in_list_view": 1,
+   "label": "Medical Code",
+   "options": "Medical Code",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "medical_code.code",
+   "fieldname": "code",
+   "fieldtype": "Data",
+   "ignore_xss_filter": 1,
+   "in_list_view": 1,
+   "label": "Code",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "medical_code.description",
+   "fieldname": "description",
+   "fieldtype": "Small Text",
+   "ignore_xss_filter": 1,
+   "in_list_view": 1,
+   "label": "Description",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fetch_from": "medical_code.is_communicable",
+   "fieldname": "is_communicable",
+   "fieldtype": "Check",
+   "hidden": 1,
+   "label": "Is communicable",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fetch_from": "medical_code.is_significant",
+   "fieldname": "is_significant",
+   "fieldtype": "Check",
+   "hidden": 1,
+   "label": "Is significant",
+   "read_only": 1
+  }
+ ],
+ "istable": 1,
+ "links": [],
+ "modified": "2022-11-30 15:56:00.461398",
+ "modified_by": "Administrator",
+ "module": "Gch Custom",
+ "name": "Codification Table",
+ "owner": "Administrator",
+ "permissions": [],
+ "quick_entry": 1,
+ "restrict_to_domain": "Healthcare",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

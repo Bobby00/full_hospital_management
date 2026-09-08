@@ -1,0 +1,132 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2022-04-30 11:37:06.554030",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "patient_details_section",
+  "patient_encounter",
+  "patient",
+  "patient_name",
+  "age",
+  "column_break_8",
+  "weight",
+  "height",
+  "bmi",
+  "bsa",
+  "drug_allergy",
+  "item_list_section",
+  "pharmacy_scrollable_table"
+ ],
+ "fields": [
+  {
+   "fieldname": "patient_encounter",
+   "fieldtype": "Link",
+   "label": "Patient Encounter",
+   "options": "Patient Encounter"
+  },
+  {
+   "fieldname": "item_list_section",
+   "fieldtype": "Section Break",
+   "label": "Item List"
+  },
+  {
+   "fieldname": "pharmacy_scrollable_table",
+   "fieldtype": "HTML",
+   "in_preview": 1,
+   "label": "Pharmacy Scrollable Table",
+   "options": " <div id=\"pharmacy_scrollable_table\" style=\"overflow-x: scroll;\"></div>"
+  },
+  {
+   "fieldname": "patient_details_section",
+   "fieldtype": "Section Break",
+   "label": "Patient Details"
+  },
+  {
+   "fetch_from": "patient_encounter.patient",
+   "fieldname": "patient",
+   "fieldtype": "Link",
+   "label": "Patient",
+   "options": "Patient",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "patient.patient_name",
+   "fieldname": "patient_name",
+   "fieldtype": "Data",
+   "label": "Patient Name",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "patient.gch_patient_age",
+   "fieldname": "age",
+   "fieldtype": "Data",
+   "label": "Age",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "patient_encounter.weight_in_kilograms",
+   "fieldname": "weight",
+   "fieldtype": "Data",
+   "label": "Weight",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "patient_encounter.height_in_centimeters",
+   "fieldname": "height",
+   "fieldtype": "Data",
+   "label": "Height",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_8",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "patient_encounter.bsa",
+   "fieldname": "bsa",
+   "fieldtype": "Data",
+   "label": "BSA",
+   "read_only": 1
+  },
+  {
+   "fieldname": "drug_allergy",
+   "fieldtype": "Data",
+   "label": "Drug Allergy",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "patient_encounter.bmi",
+   "fieldname": "bmi",
+   "fieldtype": "Data",
+   "label": "BMI",
+   "read_only": 1
+  }
+ ],
+ "hide_toolbar": 1,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2022-04-30 14:42:56.484977",
+ "modified_by": "Administrator",
+ "module": "Gch Custom",
+ "name": "Pharmacy Dispensement Form",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

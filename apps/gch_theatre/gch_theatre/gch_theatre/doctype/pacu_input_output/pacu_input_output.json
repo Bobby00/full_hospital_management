@@ -1,0 +1,62 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-07-24 11:27:04.865363",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "iv_fluids",
+  "urine_output",
+  "blood_loss",
+  "done",
+  "done_by",
+  "time_done"
+ ],
+ "fields": [
+  {
+   "fieldname": "iv_fluids",
+   "fieldtype": "Float",
+   "label": "IV Fluids"
+  },
+  {
+   "fieldname": "urine_output",
+   "fieldtype": "Float",
+   "label": "Urine Output"
+  },
+  {
+   "fieldname": "blood_loss",
+   "fieldtype": "Float",
+   "label": "Blood Loss"
+  },
+  {
+   "fieldname": "done",
+   "fieldtype": "Link",
+   "label": "Done",
+   "options": "Healthcare Practitioner"
+  },
+  {
+   "fetch_from": "done.fullname",
+   "fieldname": "done_by",
+   "fieldtype": "Data",
+   "label": "Done by",
+   "read_only": 1
+  },
+  {
+   "fieldname": "time_done",
+   "fieldtype": "Datetime",
+   "label": "Time Done"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-07-24 11:27:04.865363",
+ "modified_by": "Administrator",
+ "module": "GCH Theatre",
+ "name": "PACU Input Output",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

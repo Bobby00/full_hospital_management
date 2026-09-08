@@ -1,0 +1,167 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2021-10-06 10:22:11.684816",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "route",
+  "preparation",
+  "a_operation",
+  "age",
+  "type",
+  "wa_operation",
+  "w_operation",
+  "min_dose",
+  "max_dose",
+  "column_break_9",
+  "uom",
+  "weight",
+  "absolute_max",
+  "frequency",
+  "period",
+  "min_duration",
+  "max_duration",
+  "label"
+ ],
+ "fields": [
+  {
+   "columns": 1,
+   "fieldname": "a_operation",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "A. Operation",
+   "options": "\nEqual to\nLess than\nLess than or equal to\nGreater than\nGreater than or equal to"
+  },
+  {
+   "columns": 1,
+   "fieldname": "type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Type",
+   "options": "\nDays\nWeeks\nMonths\nYears"
+  },
+  {
+   "columns": 1,
+   "fieldname": "wa_operation",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "W/A. Operation",
+   "mandatory_depends_on": "Age Weight Band Details",
+   "options": "\nOr\nAnd"
+  },
+  {
+   "columns": 1,
+   "fieldname": "weight",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Weight",
+   "mandatory_depends_on": "Age Weight Band Details"
+  },
+  {
+   "columns": 1,
+   "fieldname": "route",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Route",
+   "options": "Drug Route"
+  },
+  {
+   "fieldname": "absolute_max",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Absolute Max"
+  },
+  {
+   "columns": 1,
+   "fieldname": "w_operation",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "W. Operation",
+   "options": "\nEqual to\nLess than\nLess than or equal to\nGreater than\nGreater than or equal to"
+  },
+  {
+   "columns": 1,
+   "fieldname": "preparation",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Preparation",
+   "options": "Drug Formula"
+  },
+  {
+   "fieldname": "column_break_9",
+   "fieldtype": "Column Break"
+  },
+  {
+   "columns": 1,
+   "fieldname": "min_dose",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Min Dose"
+  },
+  {
+   "columns": 1,
+   "fieldname": "max_dose",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Max Dose"
+  },
+  {
+   "fieldname": "frequency",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Frequency"
+  },
+  {
+   "fieldname": "period",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Period",
+   "options": "\nDay\nWeek\nMonth\nYear"
+  },
+  {
+   "fieldname": "min_duration",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Min Duration"
+  },
+  {
+   "fieldname": "max_duration",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Max Duration"
+  },
+  {
+   "fieldname": "label",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Label"
+  },
+  {
+   "columns": 1,
+   "fieldname": "age",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Age"
+  },
+  {
+   "fieldname": "uom",
+   "fieldtype": "Link",
+   "label": "UOM",
+   "options": "UOM"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2022-01-06 13:10:13.622775",
+ "modified_by": "Administrator",
+ "module": "Gch Custom",
+ "name": "Age Weight Band Details",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

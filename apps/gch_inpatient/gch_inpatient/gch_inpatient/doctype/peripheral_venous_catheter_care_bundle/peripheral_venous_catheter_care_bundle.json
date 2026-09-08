@@ -1,0 +1,306 @@
+{
+ "actions": [],
+ "autoname": "format:GCH-PVCCB-{###}",
+ "creation": "2023-12-14 04:24:32.967861",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "encounter_details_section",
+  "patient_encounter",
+  "is_inpatient",
+  "inpatient_record",
+  "patient",
+  "patient_name",
+  "uhid",
+  "column_break_8",
+  "gender",
+  "wardroombed",
+  "encounter_date",
+  "consulting_doctor",
+  "triage_section",
+  "weight",
+  "height",
+  "temperature",
+  "bmi_column",
+  "bmi",
+  "bsa",
+  "procedure_items_section",
+  "items",
+  "section_break_30",
+  "date_of_insertion",
+  "time_of_insertion",
+  "hours_post_insertion",
+  "name_of_person_checking",
+  "appropriate_hand_hygiene_followed_before_handling_patient",
+  "appearance_of_protective_bandage_layer",
+  "any_patient_interference",
+  "details_of_catheter_site_and_limb",
+  "catheter_flushed_with",
+  "injection_port_cleaned_with",
+  "daily_review_of_necessary",
+  "catheter_removed",
+  "peripheral_venous_catheter_daily_maintenance",
+  "peripheral_venous_maintenance_html",
+  "section_break_comments",
+  "comments",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "encounter_details_section",
+   "fieldtype": "Section Break",
+   "label": "Encounter Details"
+  },
+  {
+   "depends_on": "eval:doc.is_inpatient == 1",
+   "fieldname": "inpatient_record",
+   "fieldtype": "Link",
+   "label": "Inpatient Record",
+   "options": "Inpatient Record"
+  },
+  {
+   "fetch_from": "patient_encounter.patient",
+   "fieldname": "patient",
+   "fieldtype": "Link",
+   "label": "Patient",
+   "options": "Patient"
+  },
+  {
+   "fetch_from": "patient.patient_name",
+   "fieldname": "patient_name",
+   "fieldtype": "Data",
+   "label": "Patient Name"
+  },
+  {
+   "fetch_from": "patient.uhid_code",
+   "fieldname": "uhid",
+   "fieldtype": "Data",
+   "label": "UHID"
+  },
+  {
+   "fieldname": "column_break_8",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "patient.sex",
+   "fieldname": "gender",
+   "fieldtype": "Data",
+   "label": "Gender"
+  },
+  {
+   "fieldname": "wardroombed",
+   "fieldtype": "Data",
+   "label": "Ward/Room/Bed"
+  },
+  {
+   "default": "Today",
+   "fieldname": "encounter_date",
+   "fieldtype": "Date",
+   "label": "Encounter Date"
+  },
+  {
+   "fieldname": "consulting_doctor",
+   "fieldtype": "Data",
+   "label": "Consulting Doctor"
+  },
+  {
+   "fieldname": "triage_section",
+   "fieldtype": "Section Break",
+   "label": "TRIAGE"
+  },
+  {
+   "fieldname": "weight",
+   "fieldtype": "Data",
+   "label": "Weight"
+  },
+  {
+   "fieldname": "height",
+   "fieldtype": "Data",
+   "label": "Height"
+  },
+  {
+   "fieldname": "temperature",
+   "fieldtype": "Data",
+   "label": "Temperature"
+  },
+  {
+   "fieldname": "bmi_column",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "bmi",
+   "fieldtype": "Data",
+   "label": "BMI"
+  },
+  {
+   "fieldname": "bsa",
+   "fieldtype": "Data",
+   "label": "BSA"
+  },
+  {
+   "fieldname": "section_break_30",
+   "fieldtype": "Section Break",
+   "hidden": 1
+  },
+  {
+   "default": "Today",
+   "fieldname": "date_of_insertion",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "default": "Now",
+   "fieldname": "time_of_insertion",
+   "fieldtype": "Time",
+   "label": "Time"
+  },
+  {
+   "fieldname": "hours_post_insertion",
+   "fieldtype": "Data",
+   "label": "Hours post insertion"
+  },
+  {
+   "fieldname": "name_of_person_checking",
+   "fieldtype": "Data",
+   "label": "Name of person checking"
+  },
+  {
+   "fieldname": "appropriate_hand_hygiene_followed_before_handling_patient",
+   "fieldtype": "Data",
+   "label": "Appropriate hand hygiene followed before handling patient"
+  },
+  {
+   "fieldname": "appearance_of_protective_bandage_layer",
+   "fieldtype": "Data",
+   "label": "Appearance of protective bandage layer"
+  },
+  {
+   "fieldname": "any_patient_interference",
+   "fieldtype": "Data",
+   "label": "Any patient interference?"
+  },
+  {
+   "fieldname": "details_of_catheter_site_and_limb",
+   "fieldtype": "Data",
+   "label": "Details of catheter site and limb"
+  },
+  {
+   "fieldname": "catheter_flushed_with",
+   "fieldtype": "Data",
+   "label": "Catheter flushed with"
+  },
+  {
+   "fieldname": "injection_port_cleaned_with",
+   "fieldtype": "Data",
+   "label": "Injection port cleaned with? "
+  },
+  {
+   "fieldname": "daily_review_of_necessary",
+   "fieldtype": "Data",
+   "label": "Daily review of necessary "
+  },
+  {
+   "fieldname": "catheter_removed",
+   "fieldtype": "Data",
+   "label": "Catheter removed"
+  },
+  {
+   "fieldname": "peripheral_venous_catheter_daily_maintenance",
+   "fieldtype": "Section Break",
+   "label": "PERIPHERAL VENOUS CATHETER DAILY MAINTENANCE CHECKLIST (ASSESS EACH SHIFT)"
+  },
+  {
+   "fieldname": "peripheral_venous_maintenance_html",
+   "fieldtype": "HTML"
+  },
+  {
+   "fieldname": "section_break_comments",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "comments",
+   "fieldtype": "Small Text",
+   "label": "Any other comments"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "PERIPHERAL VENOUS CATHETER CARE BUNDLE",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "PERIPHERAL VENOUS CATHETER CARE BUNDLE",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "procedure_items_section",
+   "fieldtype": "Section Break",
+   "label": "Procedure Items"
+  },
+  {
+   "fieldname": "items",
+   "fieldtype": "Table",
+   "label": "Items",
+   "options": "Clinical Procedure Item"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_inpatient",
+   "fieldtype": "Check",
+   "label": "Is Inpatient"
+  },
+  {
+   "depends_on": "eval:doc.is_inpatient == 0 ",
+   "fieldname": "patient_encounter",
+   "fieldtype": "Link",
+   "label": "Patient Encounter",
+   "options": "Patient Encounter"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2024-05-29 09:23:10.834583",
+ "modified_by": "Administrator",
+ "module": "Gch Inpatient",
+ "name": "PERIPHERAL VENOUS CATHETER CARE BUNDLE",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "All",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

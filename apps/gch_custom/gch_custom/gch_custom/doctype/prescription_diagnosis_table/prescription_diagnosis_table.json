@@ -1,0 +1,42 @@
+{
+ "actions": [],
+ "creation": "2021-08-31 06:32:37.991893",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "icd11_code_tree",
+  "icd11_description",
+  "check_diagnosis"
+ ],
+ "fields": [
+  {
+   "fieldname": "icd11_code_tree",
+   "fieldtype": "Data",
+   "label": "ICD11 Code Tree"
+  },
+  {
+   "fieldname": "icd11_description",
+   "fieldtype": "Data",
+   "label": "ICD11 Description"
+  },
+  {
+   "default": "0",
+   "fieldname": "check_diagnosis",
+   "fieldtype": "Check",
+   "label": "Select Diagnosis"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2021-08-31 07:32:46.132240",
+ "modified_by": "Administrator",
+ "module": "Gch Custom",
+ "name": "Prescription Diagnosis Table",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

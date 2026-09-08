@@ -1,0 +1,74 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:review_identity",
+ "creation": "2021-12-10 13:06:53.574875",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "review_identity",
+  "patient",
+  "encounter",
+  "doc_status"
+ ],
+ "fields": [
+  {
+   "fieldname": "review_identity",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "label": "Review Identity",
+   "unique": 1
+  },
+  {
+   "fieldname": "patient",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "label": "Patient",
+   "options": "Patient",
+   "search_index": 1
+  },
+  {
+   "fieldname": "encounter",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "label": "Encounter",
+   "search_index": 1
+  },
+  {
+   "default": "1",
+   "fieldname": "doc_status",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Doc Status",
+   "search_index": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2022-02-08 16:41:55.308491",
+ "modified_by": "Administrator",
+ "module": "Gch Custom",
+ "name": "Multidisciplinary Review",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

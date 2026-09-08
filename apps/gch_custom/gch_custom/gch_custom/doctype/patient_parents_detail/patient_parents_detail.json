@@ -1,0 +1,92 @@
+{
+ "actions": [],
+ "autoname": "GCHPR.#####",
+ "creation": "2021-06-16 16:09:21.395298",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "parents",
+  "first_name",
+  "last_name",
+  "relationship",
+  "is_primary",
+  "phone_number"
+ ],
+ "fields": [
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "parents",
+   "fieldtype": "Link",
+   "in_global_search": 1,
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Parents",
+   "options": "Parent",
+   "reqd": 1
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "relationship",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Relationship",
+   "options": "Parent Relation",
+   "reqd": 1
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "default": "0",
+   "fieldname": "is_primary",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Is Primary",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "parents.first_name",
+   "fieldname": "first_name",
+   "fieldtype": "Data",
+   "in_global_search": 1,
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "First Name",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "parents.last_name",
+   "fieldname": "last_name",
+   "fieldtype": "Data",
+   "in_global_search": 1,
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Last Name",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "parents.phone_number",
+   "fieldname": "phone_number",
+   "fieldtype": "Read Only",
+   "label": "Phone Number"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2022-09-20 08:24:00.852161",
+ "modified_by": "Administrator",
+ "module": "Gch Custom",
+ "name": "Patient Parents Detail",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

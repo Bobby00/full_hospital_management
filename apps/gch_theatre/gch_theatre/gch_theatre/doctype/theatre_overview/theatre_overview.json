@@ -1,0 +1,345 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2024-06-24 14:18:08.405988",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "inpatient_record",
+  "surgeon",
+  "vitals_section",
+  "vital_signs_graph",
+  "vital_signs_table",
+  "athropometry_section_section",
+  "assessments_section",
+  "patient_assessment",
+  "start_assessment",
+  "completed_assessments",
+  "anthropometry",
+  "diagnosis_section_section",
+  "diagnosis",
+  "doctors_note",
+  "labs_section",
+  "lab_tests",
+  "medication_section",
+  "prescription_table",
+  "post_operative_patient_observation_chart_section",
+  "postop_observations",
+  "surgeon_operating_notes_section",
+  "surgical_notes",
+  "surgeons_notes_table",
+  "anaesthetists_section_section",
+  "anaest_consent",
+  "anaesthesia_consent",
+  "create_anaesthesia_consent",
+  "pre_aneasthesia_label",
+  "pre_anaesthesia_assessments",
+  "create_anaesthesia_assessment",
+  "pre_induction_label",
+  "pre_induction_assessment",
+  "create_pre_induction_assessment",
+  "anesthesia_record_label",
+  "anaethetists_record",
+  "create_anaesthesia_record",
+  "theatre_nurse_section_section",
+  "preop_checklist",
+  "nursing_checklist",
+  "create_theatre_nursing_checklist",
+  "intraop_checklist",
+  "intra_op",
+  "create_intraop_checklist",
+  "postop",
+  "postop_checklist",
+  "create_postop_checklist"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Naming Series",
+   "options": "HLC-THO-.YYYY.-"
+  },
+  {
+   "fieldname": "inpatient_record",
+   "fieldtype": "Link",
+   "label": "Inpatient Record",
+   "options": "Inpatient Record"
+  },
+  {
+   "fieldname": "vitals_section",
+   "fieldtype": "Section Break",
+   "label": "Vitals"
+  },
+  {
+   "fieldname": "vital_signs_graph",
+   "fieldtype": "HTML",
+   "label": "Vital Signs graph"
+  },
+  {
+   "fieldname": "vital_signs_table",
+   "fieldtype": "Table",
+   "label": "Vital Signs Table",
+   "options": "Patient Encounter Vital Signs"
+  },
+  {
+   "fieldname": "athropometry_section_section",
+   "fieldtype": "Section Break",
+   "label": "Athropometry Section"
+  },
+  {
+   "fieldname": "anthropometry",
+   "fieldtype": "Table",
+   "label": "Anthropometry",
+   "options": "Anthropometry Details GCH"
+  },
+  {
+   "fieldname": "diagnosis_section_section",
+   "fieldtype": "Section Break",
+   "label": "Diagnosis Section"
+  },
+  {
+   "fieldname": "diagnosis",
+   "fieldtype": "Table",
+   "label": "Diagnosis",
+   "options": "Codification Table"
+  },
+  {
+   "fieldname": "labs_section",
+   "fieldtype": "Section Break",
+   "label": "Labs"
+  },
+  {
+   "fieldname": "lab_tests",
+   "fieldtype": "Table",
+   "label": "Lab Tests",
+   "options": "Lab Prescription"
+  },
+  {
+   "fieldname": "medication_section",
+   "fieldtype": "Section Break",
+   "label": "Medication"
+  },
+  {
+   "fieldname": "prescription_table",
+   "fieldtype": "Table",
+   "label": "prescription Table",
+   "options": "Inpatient Doctor Prescription Table"
+  },
+  {
+   "fieldname": "surgeon",
+   "fieldtype": "Link",
+   "label": "Surgeon",
+   "options": "Healthcare Practitioner"
+  },
+  {
+   "fieldname": "doctors_note",
+   "fieldtype": "Text",
+   "label": "Doctors Note"
+  },
+  {
+   "fieldname": "surgeon_operating_notes_section",
+   "fieldtype": "Section Break",
+   "label": "Surgeon Operating notes"
+  },
+  {
+   "fieldname": "anaesthetists_section_section",
+   "fieldtype": "Section Break",
+   "label": "Anaesthetists Section"
+  },
+  {
+   "fieldname": "theatre_nurse_section_section",
+   "fieldtype": "Section Break",
+   "label": "Theatre Nurse Section"
+  },
+  {
+   "fieldname": "surgical_notes",
+   "fieldtype": "HTML",
+   "label": "Surgeon's Notes",
+   "options": "<div class=\"row\">\n  <div class=\"col-md-12\">\n    <div class=\"table-responsive-sm\">\n      <table class=\"table table-striped table-bordered \" style=\"font-size: 12px;\">\n        <thead>\n          <tr>\n            <th>Link</th>\n            <th>Surgeon</th>\n            <th>Preoperative Diagnosis</th>\n            <th>Procedures Performed</th>\n            <th>Perioperative complications</th>\n            <th>Post Operative Instructions</th>\n          </tr>\n        </thead>\n        <tbody class=\"surgical-notes\"></tbody>\n      </table>\n    </div>\n  </div>\n</div>\n"
+  },
+  {
+   "fieldname": "anaethetists_record",
+   "fieldtype": "HTML",
+   "label": "Anaesthesia Record",
+   "options": "<div class=\"row\">\n  <div class=\"col-md-12\">\n    <div class=\"table-responsive-sm\">\n      <table class=\"table table-striped table-bordered \" style=\"font-size: 12px;\">\n        <thead>\n          <tr>\n            <th>Link</th>\n            <th>Drug/ Latext Allergy</th>\n            <th>Relevant surgical history</th>\n            <th>Mallampati Score</th>\n            <th>General Condition</th>\n            <th>Plan/ Risk discussed with parents/ Caregiver</th>\n            <th>Anaesthetist Name</th>\n          </tr>\n        </thead>\n        <tbody class=\"anaesthesia-record\"></tbody>\n      </table>\n    </div>\n  </div>\n</div>\n"
+  },
+  {
+   "fieldname": "nursing_checklist",
+   "fieldtype": "HTML",
+   "label": "Theatre Nursing Checklist",
+   "options": "<div class=\"row\">\n  <div class=\"col-md-12\">\n    <div class=\"table-responsive-sm\">\n      <table class=\"table table-striped table-bordered \" style=\"font-size: 12px;\">\n        <thead>\n          <tr>\n            <th>Link</th>\n            <th>Both Doctors Informed</th>\n            <th>Theatre Staff Informed</th>\n            <th>Consent Obtained</th>\n            <th>Time of Last Feed</th>\n            <th>Blood Available</th>\n            <th>Prepared by</th>\n          </tr>\n        </thead>\n        <tbody class=\"nursing-record\"></tbody>\n      </table>\n    </div>\n  </div>\n</div>\n"
+  },
+  {
+   "fieldname": "surgeons_notes_table",
+   "fieldtype": "Button",
+   "label": "Create Surgeon's Notes"
+  },
+  {
+   "fieldname": "create_anaesthesia_record",
+   "fieldtype": "Button",
+   "label": "Create Anaesthesia Record"
+  },
+  {
+   "fieldname": "create_theatre_nursing_checklist",
+   "fieldtype": "Button",
+   "label": "Theatre Nurse Checklist"
+  },
+  {
+   "fieldname": "preop_checklist",
+   "fieldtype": "HTML",
+   "label": "PreOp Checklist",
+   "options": "<h5>Pre-Op Checklist</h5>"
+  },
+  {
+   "fieldname": "intraop_checklist",
+   "fieldtype": "HTML",
+   "label": "IntraOp Checklist",
+   "options": "<h5>Intra-Op Checklist</h5>"
+  },
+  {
+   "fieldname": "intra_op",
+   "fieldtype": "HTML",
+   "label": "intraOp Checklist",
+   "options": "<div class=\"row\">\n  <div class=\"col-md-12\">\n    <div class=\"table-responsive-sm\">\n      <table class=\"table table-striped table-bordered \" style=\"font-size: 12px;\">\n        <thead>\n          <tr>\n            <th>Link</th>\n            <th>Both Doctors Informed</th>\n            <th>Theatre Staff Informed</th>\n            <th>Consent Obtained</th>\n            <th>Time of Last Feed</th>\n            <th>Blood Available</th>\n            <th>Prepared by</th>\n          </tr>\n        </thead>\n        <tbody class=\"nursing-record\"></tbody>\n      </table>\n    </div>\n  </div>\n</div>\n"
+  },
+  {
+   "fieldname": "create_intraop_checklist",
+   "fieldtype": "Button",
+   "label": "IntraOp Checklist"
+  },
+  {
+   "fieldname": "postop",
+   "fieldtype": "HTML",
+   "label": "PostOp Checklist",
+   "options": "<h5>Post-Op Checklist</h5>"
+  },
+  {
+   "fieldname": "create_postop_checklist",
+   "fieldtype": "Button",
+   "label": "PostOp Checklist"
+  },
+  {
+   "fieldname": "postop_checklist",
+   "fieldtype": "HTML",
+   "label": "PostOp Checklist",
+   "options": "<div class=\"row\">\n  <div class=\"col-md-12\">\n    <div class=\"table-responsive-sm\">\n      <table class=\"table table-striped table-bordered \" style=\"font-size: 12px;\">\n        <thead>\n          <tr>\n            <th>Link</th>\n            <th>Spo2 Monitoring</th>\n            <th>Specific Instructions</th>\n            <th>Nurse Led Discharge</th>\n            <th>Time oArrived in PACU</th>\n            <th>Received</th>\n          </tr>\n        </thead>\n        <tbody class=\"postop-checklist\"></tbody>\n      </table>\n    </div>\n  </div>\n</div>\n"
+  },
+  {
+   "fieldname": "assessments_section",
+   "fieldtype": "Section Break",
+   "label": "Assessments "
+  },
+  {
+   "fieldname": "patient_assessment",
+   "fieldtype": "Link",
+   "label": "Patient Assessment",
+   "options": "Patient Assessment Template"
+  },
+  {
+   "fieldname": "start_assessment",
+   "fieldtype": "Button",
+   "label": "Start Assessment"
+  },
+  {
+   "fieldname": "completed_assessments",
+   "fieldtype": "HTML",
+   "label": "Completed Assessments",
+   "options": "<div class=\"row\">\n  <div class=\"col-md-12\">\n    <div class=\"table-responsive-sm\">\n      <table class=\"table table-striped table-bordered \" style=\"font-size: 12px;\">\n        <thead>\n          <tr>\n            <th>Assessment No</th>\n            <th>Type</th>\n            <th>Score</th>\n            <th>Date</th>\n            <th>Time</th>\n            <th>Done by</th>\n            <th>Action</th>\n          </tr>\n        </thead>\n        <tbody class=\"encounter-assessment\"></tbody>\n      </table>\n    </div>\n  </div>\n</div>"
+  },
+  {
+   "fieldname": "post_operative_patient_observation_chart_section",
+   "fieldtype": "Section Break",
+   "label": "Post Operative Patient Observation Chart"
+  },
+  {
+   "fieldname": "postop_observations",
+   "fieldtype": "Table",
+   "label": "PostOp Observations",
+   "options": "Post Operative Patient Observation Chart"
+  },
+  {
+   "fieldname": "anaest_consent",
+   "fieldtype": "HTML",
+   "label": "Anaest Consent",
+   "options": "<h5>Anaesthesia Consent </h5>"
+  },
+  {
+   "fieldname": "anaesthesia_consent",
+   "fieldtype": "HTML",
+   "label": "Anaesthesia Consent",
+   "options": "<div class=\"row\">\n  <div class=\"col-md-12\">\n    <div class=\"table-responsive-sm\">\n      <table class=\"table table-striped table-bordered \" style=\"font-size: 12px;\">\n        <thead>\n          <tr>\n            <th>Link</th>\n            <th>Drug/ Latext Allergy</th>\n            <th>Relevant surgical history</th>\n            <th>Mallampati Score</th>\n            <th>General Condition</th>\n            <th>Plan/ Risk discussed with parents/ Caregiver</th>\n            <th>Anaesthetist Name</th>\n          </tr>\n        </thead>\n        <tbody class=\"anaesthesia-assessment\"></tbody>\n      </table>\n    </div>\n  </div>\n</div>\n"
+  },
+  {
+   "fieldname": "create_anaesthesia_consent",
+   "fieldtype": "Button",
+   "label": "Anaethesia Consent"
+  },
+  {
+   "fieldname": "pre_aneasthesia_label",
+   "fieldtype": "HTML",
+   "label": "Pre Anaesthesia Assessment",
+   "options": "<h5>Pre Aneasthesia  Assessment</h5>"
+  },
+  {
+   "fieldname": "pre_anaesthesia_assessments",
+   "fieldtype": "HTML",
+   "label": "Pre Anaesthesia Assessments",
+   "options": "<div class=\"row\">\n  <div class=\"col-md-12\">\n    <div class=\"table-responsive-sm\">\n      <table class=\"table table-striped table-bordered \" style=\"font-size: 12px;\">\n        <thead>\n          <tr>\n            <th>Link</th>\n            <th>Drug/ Latext Allergy</th>\n            <th>Relevant surgical history</th>\n            <th>Mallampati Score</th>\n            <th>General Condition</th>\n            <th>Plan/ Risk discussed with parents/ Caregiver</th>\n            <th>Anaesthetist Name</th>\n          </tr>\n        </thead>\n        <tbody class=\"anaesthesia-record\"></tbody>\n      </table>\n    </div>\n  </div>\n</div>\n"
+  },
+  {
+   "fieldname": "create_anaesthesia_assessment",
+   "fieldtype": "Button",
+   "label": "Pre Anaesthesia Assessment"
+  },
+  {
+   "fieldname": "pre_induction_label",
+   "fieldtype": "HTML",
+   "label": "Pre Induction Assessment",
+   "options": "<h5> Pre Induction Assessment</h5>"
+  },
+  {
+   "fieldname": "pre_induction_assessment",
+   "fieldtype": "HTML",
+   "label": "Pre Induction Assessment",
+   "options": "<div class=\"row\">\n  <div class=\"col-md-12\">\n    <div class=\"table-responsive-sm\">\n      <table class=\"table table-striped table-bordered \" style=\"font-size: 12px;\">\n        <thead>\n          <tr>\n            <th>Link</th>\n            <th>Drug/ Latext Allergy</th>\n            <th>Relevant surgical history</th>\n            <th>Mallampati Score</th>\n            <th>General Condition</th>\n            <th>Plan/ Risk discussed with parents/ Caregiver</th>\n            <th>Anaesthetist Name</th>\n          </tr>\n        </thead>\n        <tbody class=\"anaesthesia-record\"></tbody>\n      </table>\n    </div>\n  </div>\n</div>\n"
+  },
+  {
+   "fieldname": "create_pre_induction_assessment",
+   "fieldtype": "Button",
+   "label": "Pre Induction Assessment"
+  },
+  {
+   "fieldname": "anesthesia_record_label",
+   "fieldtype": "HTML",
+   "label": "Anaesthesia Record",
+   "options": "<h5>Anaesthesia Record</h5>"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-07-25 14:22:28.589124",
+ "modified_by": "Administrator",
+ "module": "GCH Theatre",
+ "name": "Theatre Overview",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

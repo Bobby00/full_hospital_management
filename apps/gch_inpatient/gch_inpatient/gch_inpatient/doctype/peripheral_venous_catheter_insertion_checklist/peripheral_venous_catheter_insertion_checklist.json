@@ -1,0 +1,299 @@
+{
+ "actions": [],
+ "autoname": "format:GCH-PVCI-{###}",
+ "creation": "2023-12-14 02:47:23.465835",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "encounter_details_section",
+  "patient_encounter",
+  "is_inpatient",
+  "inpatient_record",
+  "patient",
+  "patient_name",
+  "uhid",
+  "column_break_8",
+  "gender",
+  "wardroombed",
+  "encounter_date",
+  "consulting_doctor",
+  "triage_section",
+  "weight",
+  "height",
+  "temperature",
+  "bmi_column",
+  "bmi",
+  "bsa",
+  "procedure_items_section",
+  "items",
+  "section_break_30",
+  "date_of_insertion",
+  "time_of_insertion",
+  "name_of_person_inserting",
+  "location_of_peripheral_catheter",
+  "catheter_gauge",
+  "reason_of_catheter_insertion",
+  "catheter_site_cleaned_with",
+  "ease_of_insertion_of_catheter",
+  "patient_compliance_level",
+  "appearance_of_catheter_site_and_limp_prior_to_insertion",
+  "catheter_flushed_with",
+  "peripheral_venous_catheter_insertion_checklist",
+  "peripheral_venous_html",
+  "section_break_comments",
+  "checked_by",
+  "comments",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "encounter_details_section",
+   "fieldtype": "Section Break",
+   "label": "Encounter Details"
+  },
+  {
+   "depends_on": "eval:doc.is_inpatient == 1",
+   "fieldname": "inpatient_record",
+   "fieldtype": "Link",
+   "label": "Inpatient Record",
+   "options": "Inpatient Record"
+  },
+  {
+   "fetch_from": "patient_encounter.patient",
+   "fieldname": "patient",
+   "fieldtype": "Link",
+   "label": "Patient",
+   "options": "Patient"
+  },
+  {
+   "fetch_from": "patient.patient_name",
+   "fieldname": "patient_name",
+   "fieldtype": "Data",
+   "label": "Patient Name"
+  },
+  {
+   "fetch_from": "patient.uhid_code",
+   "fieldname": "uhid",
+   "fieldtype": "Data",
+   "label": "UHID"
+  },
+  {
+   "fieldname": "column_break_8",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "patient.sex",
+   "fieldname": "gender",
+   "fieldtype": "Data",
+   "label": "Gender"
+  },
+  {
+   "fieldname": "wardroombed",
+   "fieldtype": "Data",
+   "label": "Ward/Room/Bed"
+  },
+  {
+   "default": "Today",
+   "fieldname": "encounter_date",
+   "fieldtype": "Date",
+   "label": "Encounter Date"
+  },
+  {
+   "fieldname": "consulting_doctor",
+   "fieldtype": "Data",
+   "label": "Consulting Doctor"
+  },
+  {
+   "fieldname": "triage_section",
+   "fieldtype": "Section Break",
+   "label": "TRIAGE"
+  },
+  {
+   "fieldname": "weight",
+   "fieldtype": "Data",
+   "label": "Weight"
+  },
+  {
+   "fieldname": "height",
+   "fieldtype": "Data",
+   "label": "Height"
+  },
+  {
+   "fieldname": "temperature",
+   "fieldtype": "Data",
+   "label": "Temperature"
+  },
+  {
+   "fieldname": "bmi_column",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "bmi",
+   "fieldtype": "Data",
+   "label": "BMI"
+  },
+  {
+   "fieldname": "bsa",
+   "fieldtype": "Data",
+   "label": "BSA"
+  },
+  {
+   "fieldname": "section_break_30",
+   "fieldtype": "Section Break",
+   "hidden": 1
+  },
+  {
+   "default": "User",
+   "fieldname": "checked_by",
+   "fieldtype": "Link",
+   "label": "Checked by",
+   "options": "User"
+  },
+  {
+   "fieldname": "comments",
+   "fieldtype": "Small Text",
+   "label": "Comments"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "PERIPHERAL VENOUS CATHETER INSERTION CHECKLIST",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "default": "Today",
+   "fieldname": "date_of_insertion",
+   "fieldtype": "Date",
+   "label": "Date of insertion"
+  },
+  {
+   "default": "Now",
+   "fieldname": "time_of_insertion",
+   "fieldtype": "Time",
+   "label": "Time of insertion"
+  },
+  {
+   "fieldname": "name_of_person_inserting",
+   "fieldtype": "Data",
+   "label": "Name of person inserting"
+  },
+  {
+   "fieldname": "location_of_peripheral_catheter",
+   "fieldtype": "Data",
+   "label": "Location of peripheral catheter"
+  },
+  {
+   "fieldname": "catheter_gauge",
+   "fieldtype": "Data",
+   "label": "Catheter gauge"
+  },
+  {
+   "fieldname": "reason_of_catheter_insertion",
+   "fieldtype": "Data",
+   "label": "Reason of catheter insertion"
+  },
+  {
+   "fieldname": "catheter_site_cleaned_with",
+   "fieldtype": "Data",
+   "label": "Catheter site cleaned with?"
+  },
+  {
+   "fieldname": "ease_of_insertion_of_catheter",
+   "fieldtype": "Data",
+   "label": "Ease of insertion of catheter"
+  },
+  {
+   "fieldname": "patient_compliance_level",
+   "fieldtype": "Data",
+   "label": "Patient compliance Level"
+  },
+  {
+   "fieldname": "appearance_of_catheter_site_and_limp_prior_to_insertion",
+   "fieldtype": "Data",
+   "label": "Appearance of catheter site and limp prior  to insertion"
+  },
+  {
+   "fieldname": "catheter_flushed_with",
+   "fieldtype": "Data",
+   "label": "Catheter flushed with"
+  },
+  {
+   "fieldname": "peripheral_venous_catheter_insertion_checklist",
+   "fieldtype": "Section Break",
+   "label": "PERIPHERAL VENOUS CATHETER INSERTION CHECKLIST"
+  },
+  {
+   "fieldname": "peripheral_venous_html",
+   "fieldtype": "HTML"
+  },
+  {
+   "fieldname": "section_break_comments",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "procedure_items_section",
+   "fieldtype": "Section Break",
+   "label": "Procedure Items"
+  },
+  {
+   "fieldname": "items",
+   "fieldtype": "Table",
+   "label": "Items",
+   "options": "Clinical Procedure Item"
+  },
+  {
+   "depends_on": "eval:doc.is_inpatient == 0 ",
+   "fieldname": "patient_encounter",
+   "fieldtype": "Link",
+   "label": "Patient Encounter",
+   "options": "Patient Encounter"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_inpatient",
+   "fieldtype": "Check",
+   "label": "Is Inpatient"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2024-05-29 09:27:27.820334",
+ "modified_by": "Administrator",
+ "module": "Gch Inpatient",
+ "name": "PERIPHERAL VENOUS CATHETER INSERTION CHECKLIST",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "All",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

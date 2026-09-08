@@ -1,0 +1,32 @@
+{
+ "actions": [],
+ "creation": "2021-07-29 09:35:08.466305",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "other_allergy"
+ ],
+ "fields": [
+  {
+   "fieldname": "other_allergy",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Other Allergy",
+   "options": "Other Allergy",
+   "reqd": 1
+  }
+ ],
+ "istable": 1,
+ "links": [],
+ "modified": "2021-07-29 09:35:08.466305",
+ "modified_by": "Administrator",
+ "module": "Gch Custom",
+ "name": "Patient Other Allergy",
+ "owner": "Administrator",
+ "permissions": [],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

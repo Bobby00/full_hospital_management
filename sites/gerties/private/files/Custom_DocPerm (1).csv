@@ -1,0 +1,1000 @@
+"ID","Role","Reference Document Type","If user is the owner","Level","Select","Read","Write","Create","Delete","Submit","Cancel","Amend","Report","Export","Import","Set User Permissions","Share","Print","Email"
+"92aee0f704","GCH-Reception","Patient Encounter",0,3,0,1,1,0,0,0,0,0,0,1,0,0,0,0,0
+"f444a9abce","GCH-Reception","Patient Encounter",0,2,0,1,1,0,0,0,0,0,0,1,0,0,0,0,0
+"16dad8cbf3","GCH-Pharmacy","Pharmacy Dispensement Form",0,6,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0
+"947d830325","GCH-Pharmacy","Pharmacy Dispensement Form",0,4,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0
+"544d333761","GCH-Doctor","Doctor Prescription",0,6,0,1,1,0,0,0,0,0,0,1,0,0,0,0,0
+"88e7021740","GCH-Doctor","Doctor Prescription",0,5,0,1,1,0,0,0,0,0,0,1,0,0,0,0,0
+"166790cb2b","GCH-Doctor","Doctor Prescription",0,4,0,1,1,0,0,0,0,0,0,1,0,0,0,0,0
+"5f97a1c25c","GCH-Doctor","Prescription",0,5,0,1,1,0,0,0,0,0,0,1,0,0,0,0,0
+"9061703e53","GCH-Pharmacy","POS Opening Entry",0,0,1,1,1,1,0,0,0,0,0,1,0,0,0,0,0
+"c0c312ca89","GCH-Pharmacy","POS Settings",0,0,1,1,1,1,1,0,0,0,0,1,0,0,0,1,0
+"fd96db631c","GCH-Pharmacy","POS Profile",0,0,1,1,1,1,0,0,0,0,0,1,0,0,0,0,0
+"40b6510f1f","GCH-Doctor","Clinical Procedure",0,0,1,1,1,1,1,1,0,0,0,1,0,0,0,1,0
+"715cc25789","GCH-Pharmacy","Price List",0,0,1,1,0,0,0,0,0,0,0,1,0,0,0,0,0
+"b8c5fac55e","GCH-Pharmacy","Warehouse",0,0,1,1,1,0,0,0,0,0,0,1,0,0,0,0,0
+"333087a645","GCH-Pharmacy","Prescription",0,0,1,1,1,0,0,0,0,0,0,1,0,0,0,0,0
+"7d8f92582c","GCH-Reception","Lab Test Batch",0,0,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0
+"84317c51f6","GCH-Pharmacy","Pharmacy Prescription",0,0,1,1,1,0,0,0,0,0,0,1,0,0,0,0,0
+"1487ff96d1","GCH-Pharmacy","Queue",0,2,0,1,1,0,0,0,0,0,0,1,0,0,0,0,0
+"b79f60d4a5","GCH-Pharmacy","Queue",0,0,1,1,1,1,0,0,0,0,0,1,0,0,0,1,0
+"58c596b468","GCH-Doctor","Doctor Prescription",0,6,0,1,1,0,0,0,0,0,0,1,0,0,0,0,0
+"5bcde922e1","GCH-Doctor","Doctor Prescription",0,4,0,1,1,0,0,0,0,0,0,1,0,0,0,0,0
+"28c7672551","System Manager","Lab Test Batch",0,0,0,1,1,1,1,0,0,0,1,1,0,0,1,1,1
+"3d0d3193e3","GCH-Pharmacy","Patient Education",0,6,0,1,1,0,0,0,0,0,0,1,0,0,0,0,0
+"9d00765539","GCH-Pharmacy","Patient Education",0,4,0,1,1,0,0,0,0,0,0,1,0,0,0,0,0
+"c7b321c96d","GCH-Pharmacy","Patient Education",0,0,1,1,1,0,0,0,0,0,0,1,0,0,0,0,0
+"bce9b30131","GCH-Pharmacy","Print Format",0,0,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0
+"a511df61c0","GCH-Pharmacy","Medical Department",0,0,0,1,1,0,0,0,0,0,0,1,0,0,0,0,0
+"d3b6d261e7","GCH-Pharmacy","Healthcare Practitioner",0,0,1,1,1,0,0,0,0,0,0,1,0,0,0,0,0
+"df02f71c12","GCH-Pharmacy","Prescription",0,6,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0
+"cc239f4e34","GCH-Pharmacy","Prescription",0,5,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0
+"3f02e4f583","GCH-Pharmacy","Prescription",0,4,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0
+"3a2b0cf8af","GCH-Reception","Slade Invoice",0,0,1,1,1,1,0,1,0,0,0,0,0,0,0,0,0
+"211fb8e0c1","GCH-Reception","Slade Claim",0,0,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0
+"fab4ff8452","GCH-Reception","Slade Auth",0,0,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0
+"fd99f79005","GCH-Pharmacy","Company",0,0,1,1,0,0,0,0,0,0,0,1,0,0,0,0,0
+"d53db2cecb","GCH-Pharmacy","Pharmacy Dispensement Form",0,0,1,1,1,1,1,0,0,0,1,1,0,0,1,1,1
+"21cd349318","GCH-TriageNurse","Ward",0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+"5af66f3fba","GCH-TriageNurse","Religion",0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+"6f59b18fea","GCH-Doctor","Medical Department",0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+"6c4ab4c7b6","GCH-Reception","Price List",0,0,1,1,0,0,0,0,0,0,0,1,0,0,0,0,0
+"19cd5611bd","GCH-LabTechnician","Sample Collection",0,0,1,1,1,0,0,1,0,0,0,0,0,0,0,1,0
+"939f846204","GCH-Reception","Price List",0,0,1,1,0,0,0,0,0,0,0,1,0,0,0,0,0
+"a04ee84187","System Manager","Pharmacy Dispensement Form",0,0,0,1,1,1,1,0,0,0,1,1,0,0,1,1,1
+"ed0406bbed","GCH-Doctor","Medical Department",0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+"ec93d0dbdc","GCH-TriageNurse","Religion",0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+"ca4db1d1af","GCH-TriageNurse","Ward",0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+"5a151be7ba","GCH-TriageNurse","Country",0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+"a818f05bb3","GCH-Reception","Payment Entry",0,0,0,1,1,1,0,1,0,1,0,1,0,0,0,0,1
+"df1312f447","GCH-Reception","Practitioner Station Entry",0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+"f0d4eac588","GCH-Pharmacy","Pharmacy Prescription",0,5,0,1,1,0,0,0,0,0,0,1,0,0,0,0,0
+"189c117e16","GCH-Pharmacy","GCH Prescription Frequency",0,4,0,1,1,0,0,0,0,0,0,1,0,0,0,0,0
+"8bb41e23a0","GCH-Pharmacy","GCH Prescription Frequency",0,5,0,1,1,0,0,0,0,0,0,1,0,0,0,0,0
+"054dbd8540","GCH-Pharmacy","Doctor Prescription",0,4,0,1,1,0,0,0,0,0,0,1,0,0,0,0,0
+"aec3f0f50d","GCH-Pharmacy","Doctor Prescription",0,5,0,1,1,0,0,0,0,0,0,1,0,0,0,0,0
+"96be22d9dd","GCH-Pharmacy","Practitioner Station Entry",0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+"4aa9ce38a0","GCH-Doctor","Healthcare Practitioner",0,0,1,1,1,0,0,0,0,0,0,1,0,0,0,0,0
+"7779c0b3f0","GCH-Doctor","Practitioner Station Entry",0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+"a0760a1419","GCH-Doctor","Generic Drug Name",0,0,1,1,0,0,0,0,0,0,0,1,0,0,0,0,0
+"70b32bf222","GCH-Doctor","Generic Drug Name",0,0,1,1,0,0,0,0,0,0,0,1,0,0,0,0,0
+"0fa5c62cf1","GCH-Doctor","Practitioner Station Entry",0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+"5576325fef","GCH-Doctor","Healthcare Practitioner",0,0,1,1,1,0,0,0,0,0,0,1,0,0,0,0,0
+"0e45898e1c","GCH-Pharmacy","Practitioner Station Entry",0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+"2151b08d67","GCH-Pharmacy","Doctor Prescription",0,5,0,1,1,0,0,0,0,0,0,1,0,0,0,0,0
+"52ca6672dc","GCH-Pharmacy","Doctor Prescription",0,4,0,1,1,0,0,0,0,0,0,1,0,0,0,0,0
+"2e8b029134","GCH-Pharmacy","GCH Prescription Frequency",0,5,0,1,1,0,0,0,0,0,0,1,0,0,0,0,0
+"b4542a68f7","GCH-Pharmacy","GCH Prescription Frequency",0,4,0,1,1,0,0,0,0,0,0,1,0,0,0,0,0
+"fc0207d198","GCH-Pharmacy","Pharmacy Prescription",0,5,0,1,1,0,0,0,0,0,0,1,0,0,0,0,0
+"2b63616182","GCH-Pharmacy","Pharmacy Prescription",0,4,0,1,1,0,0,0,0,0,0,1,0,0,0,0,0
+"fd26a21003","System Manager","GCH Prescription Frequency",0,0,0,1,1,1,1,0,0,0,1,1,0,0,1,1,1
+"ab1596026d","GCH-Doctor","GCH Prescription Frequency",0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+"e8a9ec4128","GCH-LabTechnician","Lab Test",0,0,1,1,1,0,0,1,0,0,0,0,0,0,0,1,0
+"3394af6600","GCH-LabTechnician","Practitioner Station Entry",0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+"af2071be65","GCH-Nurse","Practitioner Station Entry",0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+"5919af24fe","GCH-Doctor","Generic Drug Name",0,0,1,1,0,0,0,0,0,0,0,1,0,0,0,0,0
+"a4478a8095","GCH-Doctor","Practitioner Station Entry",0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+"b5ba84864b","GCH-Doctor","Healthcare Practitioner",0,0,1,1,1,0,0,0,0,0,0,1,0,0,0,0,0
+"0cf69b1c6e","GCH-Pharmacy","Practitioner Station Entry",0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+"2bfbfaa1db","System Manager","GCH Prescription Frequency",0,0,0,1,1,1,1,0,0,0,1,1,0,0,1,1,1
+"8c05c76245","GCH-Doctor","GCH Prescription Frequency",0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+"246cdf3f83","GCH-LabTechnician","Lab Test",0,0,1,1,1,0,0,1,0,0,0,0,0,0,0,1,0
+"17b2a41270","GCH-LabTechnician","Practitioner Station Entry",0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+"4660d85432","GCH-Nurse","Practitioner Station Entry",0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+"580509916f","GCH-Doctor","Doctor Prescription",0,0,1,1,1,1,1,1,1,1,1,1,0,0,1,1,0
+"12ac12ddfe","GCH-Reception","Customer",0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+"7fef898ec7","GCH-Reception","Account",0,0,1,1,0,0,0,0,0,0,0,1,0,0,0,0,0
+"a84d1daa3a","GCH-Reception","Workflow State",0,0,1,1,1,0,0,0,0,0,0,1,0,0,0,0,0
+"908ffeb993","GCH-Reception","Denomination",0,0,1,1,1,1,1,0,0,0,0,1,0,0,0,0,0
+"e416de9116","GCH-Reception","Insurance Category",0,0,1,1,0,0,0,0,0,0,0,1,0,0,0,0,0
+"ff945f3595","GCH-Reception","Wellbaby Schedule",0,0,1,1,1,1,0,0,0,0,0,1,0,0,0,0,0
+"7c9b9b290a","GCH-Reception","Healthcare Settings",0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+"cce20e0cde","GCH-Reception","Medical Department",0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+"1ca1eba98d","GCH-Reception","Appointment Type",0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+"32bff3b780","GCH-Reception","Clinical Procedure Template",0,0,1,1,1,0,0,0,0,0,0,1,0,0,0,0,0
+"084a3bef22","GCH-Reception","Therapy Plan",0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+"acc74369c7","GCH-TriageNurse","Healthcare Settings",0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+"dbf28872cb","GCH-TriageNurse","Medical Department",0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+"8686be807e","GCH-TriageNurse","Vaccine Administration",0,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,0
+"8b6adc9ea5","GCH-TriageNurse","Dosage Form",0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+"5f5590d5e7","GCH-Credit Control","Insurance Category",0,0,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0
+"8d7c45ddf9","GCH-Credit Control","UOM",0,0,1,1,0,0,0,0,0,0,0,1,0,0,0,0,0
+"93d4070c05","GCH-Credit Control","Item Group",0,0,1,1,0,0,0,0,0,0,0,1,0,0,0,0,0
+"fec34aaccc","GCH-Doctor","Prescription",0,0,1,1,1,1,1,0,0,0,0,1,0,0,0,0,0
+"5f8086d33d","GCH-Doctor","Healthcare Service Unit",0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+"687b7bf80f","GCH-Doctor","Appointment",0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+"77de02589c","GCH-Doctor","Barrier To Care Education",0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+"cffc9de13b","GCH-Doctor","Patient Education",0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+"49ef0045fb","GCH-Doctor","Branch",0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+"9dce6b3458","GCH-Nurse","Patient Assessment Template",0,0,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0
+"5fc5fb6c8e","GCH-Nurse","Healthcare Service Unit",0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+"20f6169f45","GCH-Nurse","Healthcare Practitioner",0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+"0231a33dcf","GCH-Reception","Healthcare Practitioner",0,0,1,1,0,0,0,0,0,0,0,1,0,0,0,0,0
+"7c13b6442a","GCH-TriageNurse","Clinical Procedure",0,0,1,1,1,1,0,1,0,0,0,0,0,0,0,0,0
+"cec1b950b1","GCH-Reception","Sales Order",0,0,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0
+"acab3cebd5","GCH-Reception","GCH Country",0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+"f2dc5be546","GCH-TriageNurse","Duration Period",0,0,1,1,0,0,0,0,0,0,0,1,0,0,0,0,0
+"33962570f7","GCH-Reception","Lab Test",0,0,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0
+"e718590a5b","GCH-Nurse","Clinical Procedure",0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0
+"ea76ea0038","GCH-Reception","Clinical Procedure",0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0
+"cadac9c51c","GCH-Reception","Therapy Session",0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0
+"2fc9def8f9","GCH-Reception","Payment Request",0,0,0,1,0,0,0,1,0,0,0,1,0,0,0,0,0
+"faf893943d","GCH-Reception","Mode of Payment",0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0
+"e4933294f7","GCH-TriageNurse","Vaccine",0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0
+"ca3a262afb","GCH-TriageNurse","Generic Drug Name",0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+"b1900c97a6","GCH-Reception","Dunning",0,0,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0
+"5e678c3cf8","GCH-TriageNurse","Stock Settings",0,0,1,1,0,0,0,0,0,0,0,1,0,0,0,0,0
+"a6a8058c42","GCH-TriageNurse","Nursing Checklist Template",0,0,1,1,0,0,0,0,0,0,0,1,0,0,0,0,0
+"4f8357e600","GCH-TriageNurse","Nursing Checklist Task Option",0,0,1,1,0,0,0,0,0,0,0,1,0,0,0,0,0
+"42faee2f92","GCH-TriageNurse","Nursing Checklist",0,0,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0
+"1beb03328a","GCH-Doctor","Discharge Conclusion",0,0,1,1,0,0,0,0,0,0,0,1,0,0,0,0,0
+"93640c29a8","GCH-Reception","Stock Settings",0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+"44219d5c8a","GCH-Ophthalmology","Ophthalmology Clinic Form",0,0,1,1,1,1,1,0,0,0,0,0,0,0,0,1,0
+"856e5c9641","GCH-Pharmacy","Generic Drug Name",0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+"09447f37fd","GCH-Pharmacy","Prescription Dosage",0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+"c8d771ad01","GCH-Pharmacy","Prescription Duration",0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+"a13a6d9068","GCH-Pharmacy","Dosage Form",0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+"eb5cd17074","GCH-TriageNurse","Warehouse",0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+"2cf883357d","GCH-TriageNurse","Score Guideline",0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+"18420ba8b3","GCH-TriageNurse","Patient Encounter Workflow History",0,0,1,1,1,1,0,0,0,0,0,1,0,0,0,0,0
+"d7a9c1fc7b","GCH-Reception","Patient Encounter Workflow History",0,0,1,1,1,1,1,1,0,0,0,1,0,0,0,0,0
+"5ee1a4e4db","GCH-TriageNurse","Customer Group",0,0,1,1,1,0,0,0,0,0,0,1,0,0,0,0,0
+"eaff13a0c5","GCH-Reception","Mpesa STK Request",0,0,1,1,1,1,0,0,0,0,0,1,0,0,0,0,0
+"7837c8870e","GCH-Doctor","Patient Encounter Workflow History",0,0,1,1,1,1,0,1,0,0,0,1,0,0,0,0,0
+"f372716f5f","GCH-Pharmacy","Healthcare Service Unit",0,0,1,1,0,0,0,0,0,0,0,1,0,0,0,0,0
+"b4b16545cc","GCH-TriageNurse","Workflow State",0,0,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0
+"dfc9265238","GCH-Pharmacy","Workflow State",0,0,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0
+"825e091103","GCH-Pharmacy","Patient Encounter Workflow History",0,0,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0
+"5a6dbc94a1","GCH-TriageNurse","Multidisciplinary Review",0,0,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0
+"390aea0c1b","GCH-Doctor","Multidisciplinary Review",0,0,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0
+"f840becef6","GCH-Wellbaby Nurse","Multidisciplinary Review",0,0,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0
+"b48b28fbcc","GCH-Wellbaby Nurse","Patient Encounter Workflow History",0,0,1,1,1,1,0,0,0,0,0,1,0,0,0,0,0
+"838318c9e9","GCH-Wellbaby Nurse","Wellbaby Schedule",0,0,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0
+"f378ee6a56","GCH-Doctor","Dosage Form",0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+"1b4a6d576d","GCH-Reception","Contact",0,0,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0
+"8d2fbc9609","GCH-Reception","Ward",0,0,1,1,0,0,0,0,0,0,0,1,0,0,0,0,0
+"8f6e70ec50","GCH-Reception","Department",0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+"7b5c7b13c5","GCH-Gastroenterology","Gastroenterology  Form",0,0,1,1,1,1,0,1,1,1,1,1,0,0,0,1,1
+"542fcfeb38","GCH-TriageNurse","Dosage Form",0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+"8f624b0b13","GCH-Doctor","Dosage Form",0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+"c88e399f52","GCH-Reception","Payment Terms Template",0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+"24d5da99bb","GCH-Reception","Payment Term",0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+"97b2787e1b","GCH-Reception","Territory",0,0,1,1,0,0,0,0,0,0,0,1,0,0,0,0,0
+"1524dae3e8","GCH-Reception","Lab Test",0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+"0b9a38f452","GCH-Reception","Insurance Category",0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+"84b9909971","GCH-Reception","Nursing Checklist",0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+"30f21d2521","GCH-Reception","Clinical Procedure Template",0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+"a33c6ceb23","GCH-Reception","Lab Test Template",0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+"b45e1e3f55","GCH-Reception","Territory",0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+"a154de0cf2","GCH-TriageNurse","Practitioner Station Entry",0,0,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0
+"d4f3339400","GCH-TriageNurse","Wellbaby Schedule",0,0,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0
+"fd8abec2f0","GCH-TriageNurse","Discharge Conclusion",0,0,1,1,0,0,0,0,0,0,0,1,0,0,0,0,0
+"57391438d1","GCH-Reception","Mpesa C2B Request",0,0,1,1,1,1,0,1,0,0,0,0,0,0,0,0,0
+"c40b7d571a","GCH-Reception","Lct Claim",0,0,1,1,1,1,1,1,0,0,0,1,0,0,0,0,0
+"df239043ac","GCH-Doctor","Generic Drug Name",0,0,1,1,0,0,0,0,0,0,0,1,0,0,0,0,0
+"2f50cf0931","GCH-Doctor","Practitioner Station Entry",0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+"b2bbe50b7b","GCH-Doctor","Healthcare Practitioner",0,0,1,1,1,0,0,0,0,0,0,1,0,0,0,0,0
+"581b20f084","GCH-Doctor","Lab Test",0,0,1,1,1,1,0,0,0,0,0,1,0,0,0,1,0
+"c051c1dc0e","GCH-Pharmacy","Practitioner Station Entry",0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+"e8d97f537c","GCH-Doctor","GCH Prescription Frequency",0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+"5ecce48749","GCH-LabTechnician","Lab Test",0,0,1,1,1,0,0,1,0,0,0,0,0,0,0,1,0
+"0ae1f1d655","GCH-LabTechnician","Practitioner Station Entry",0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+"08148bb0fd","GCH-Nurse","Practitioner Station Entry",0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+"772c408379","GCH-Doctor","Prescription",0,4,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0
+"a5cb687a67","GCH-Doctor","Healthcare Practitioner",0,0,1,1,0,0,0,0,0,0,0,1,0,0,0,0,0
+"c472076be5","System Manager","GCH Prescription Frequency",0,0,0,1,1,1,1,0,0,0,1,1,0,0,1,1,1
+"ee4a53c94e","Sales Manager","Territory",0,0,0,1,0,0,0,0,0,0,1,0,0,0,0,1,1
+"ea0d9c2578","Maintenance User","Territory",0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+"9c0b4705a5","Sales User","Territory",0,0,0,1,0,0,0,0,0,0,1,0,0,0,0,1,1
+"9093121f0c","Customer","Territory",0,0,1,0,0,0,0,0,0,0,1,1,0,0,1,1,1
+"6a40b286a6","Stock User","Territory",0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+"3240bba959","Sales Master Manager","Territory",0,0,0,1,1,1,1,0,0,0,1,1,1,1,1,1,1
+"592594ffd2","GCH-Reception","Insurance Category",0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+"e743153575","GCH-Reception","Lab Test",0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+"82df9777bd","GCH-Doctor","Sales Invoice",0,0,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0
+"7159b6d150","GCH-TriageNurse","Sales Invoice",0,0,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0
+"ea0e701fd0","GCH-Reception","Sales Invoice",0,0,1,1,1,1,0,1,0,0,0,1,0,0,0,1,0
+"2e0ab8d4c9","System Manager","Letter Head",0,0,0,1,1,1,1,0,0,0,1,0,0,0,1,1,1
+"2213aeaa55","All","Letter Head",0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+"d825348290","Accounts User","Mode of Payment",0,0,0,1,0,0,0,0,0,0,1,0,0,0,0,0,0
+"5790d6f055","Accounts Manager","Mode of Payment",0,0,0,1,1,1,0,0,0,0,1,0,0,0,1,1,1
+"8ea531b991","System Manager","File",0,0,0,1,1,1,1,0,0,0,1,1,1,0,1,1,1
+"0d342ad5fd","All","File",1,0,0,1,1,1,1,0,0,0,1,1,0,0,1,1,1
+"d5ee309614","Administrator","Custom Field",0,0,0,1,1,1,1,0,0,0,1,0,0,0,1,1,1
+"603d5aae7b","System Manager","Custom Field",0,0,0,1,1,1,1,0,0,0,1,0,0,0,1,1,1
+"8baff06422","HR User","Branch",0,0,0,1,1,1,1,0,0,0,1,0,0,0,1,1,1
+"71424767a5","HR User","Designation",0,0,0,1,1,1,1,0,0,0,1,0,0,0,1,1,1
+"7119dacb43","Sales User","Designation",0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+"5a87a402a5","HR Manager","Branch",0,0,0,1,1,1,1,0,0,0,1,0,0,0,1,1,1
+"c5a2f97c58","HR Manager","Expense Claim",0,0,0,1,1,1,1,1,1,1,1,1,0,0,1,1,1
+"b6c793b10a","HR User","Expense Claim",0,0,0,1,1,1,1,1,1,1,1,0,0,0,1,1,1
+"a272487f28","HR Manager","Holiday List",0,0,0,1,1,1,1,0,0,0,1,0,0,0,1,1,1
+"88bebc9ec8","Employee","Expense Claim",0,0,0,1,1,1,0,0,0,0,1,0,0,0,1,1,1
+"57638d2dbf","HR Manager","Employment Type",0,0,0,1,1,1,1,0,0,0,1,1,1,0,1,1,1
+"109cb8dd46","HR User","Employment Type",0,0,0,1,1,1,1,0,0,0,1,0,0,0,1,1,1
+"0a8f7cbba2","Expense Approver","Expense Claim",0,0,0,1,1,1,1,1,1,1,1,0,0,0,1,1,1
+"c8c7a956f0","Employee","Salary Slip",0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+"3055d01f1f","HR User","Salary Slip",0,0,0,1,1,1,0,1,0,0,1,0,0,0,1,1,1
+"08bbfa154c","HR Manager","Salary Slip",0,0,0,1,1,1,1,1,1,1,1,0,0,0,1,1,1
+"e282c6a46a","Sales User","Contact",0,0,0,1,1,1,0,0,0,0,1,0,0,0,1,1,1
+"c8975086be","Accounts User","Contact",0,0,0,1,1,1,0,0,0,0,1,0,0,0,1,1,1
+"b179cf91b2","System Manager","Address",0,0,0,1,1,1,1,0,0,0,1,1,1,1,1,1,1
+"adcc14c41b","All","Contact",0,1,0,1,0,0,0,0,0,0,1,0,0,0,0,0,0
+"a4688c89fd","Purchase Manager","Contact",0,0,0,1,1,1,0,0,0,0,1,0,0,0,1,1,1
+"8ccaa76e00","Purchase User","Contact",0,0,0,1,1,1,0,0,0,0,1,0,0,0,1,1,1
+"8a6f6171dd","Sales Manager","Contact",0,0,0,1,1,1,0,0,0,0,1,0,0,0,1,1,1
+"8658636460","Maintenance User","Contact",0,0,0,1,1,1,0,0,0,0,1,0,0,0,1,1,1
+"61b67bd6df","Purchase User","Address",0,0,0,1,1,1,0,0,0,0,1,0,0,0,1,1,1
+"565923bd9e","Accounts User","Address",0,0,0,1,1,1,0,0,0,0,1,0,0,0,1,1,1
+"4903c8aca6","System Manager","Contact",0,0,0,1,1,1,1,0,0,0,1,1,1,1,1,1,1
+"384ec0388f","Maintenance Manager","Contact",0,0,0,1,1,1,0,0,0,0,1,0,0,0,1,1,1
+"304bfaa58a","Maintenance User","Address",0,0,0,1,1,1,0,0,0,0,1,0,0,0,1,1,1
+"2cee5e35f4","Sales Master Manager","Contact",0,0,0,1,1,1,1,0,0,0,1,0,0,0,1,1,1
+"19d1d24e47","Sales User","Address",0,0,0,1,1,1,0,0,0,0,1,0,0,0,1,1,1
+"17d135e088","Purchase Master Manager","Contact",0,0,0,1,1,1,1,0,0,0,1,0,0,0,1,1,1
+"140402f035","Accounts Manager","Contact",0,0,0,1,1,1,0,0,0,0,1,0,0,0,1,1,1
+"e87a59898d","Purchase User","Cost Center",0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+"c0aa93675f","Sales User","Cost Center",0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+"409e54daaf","Accounts Manager","Cost Center",0,0,0,1,1,1,1,0,0,0,1,0,0,0,1,1,1
+"3261256de8","Auditor","Cost Center",0,0,0,1,0,0,0,0,0,0,1,1,0,0,0,0,0
+"06a6219457","Accounts User","Cost Center",0,0,0,1,0,0,0,0,0,0,1,0,0,0,0,1,1
+"f8e915293f","Purchase User","Currency",0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+"7f5a164586","Accounts User","Currency",0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+"7b34d16f56","System Manager","Currency",0,0,0,1,1,1,1,0,0,0,1,1,1,0,1,1,1
+"1ccf3df7bf","Sales User","Currency",0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+"860b5d876c","HR User","Job Applicant",0,0,0,1,1,1,1,0,0,0,1,0,0,0,1,1,1
+"44e88f4e62","Projects User","Task",0,0,0,1,1,1,1,0,0,0,1,0,0,0,1,1,1
+"f5bfd60e33","Accounts Manager","Account",0,0,0,1,1,1,1,0,0,0,1,1,1,1,1,1,1
+"b3b2996496","Sales User","Account",0,0,0,1,0,0,0,0,0,0,1,0,0,0,0,1,1
+"967ee04b05","Purchase User","Account",0,0,0,1,0,0,0,0,0,0,1,0,0,0,0,1,1
+"255ce87c57","Accounts User","Account",0,0,0,1,1,1,1,0,0,0,1,1,1,0,1,1,1
+"164bcb7c79","Auditor","Account",0,0,0,1,0,0,0,0,0,0,1,0,0,0,0,1,1
+"f6a71610af","Academics User","Department",0,0,0,1,1,1,1,0,0,0,1,1,0,0,1,1,1
+"ea6b452b64","HR Manager","Department",0,0,0,1,1,1,1,0,0,0,1,1,1,1,1,1,1
+"49afc8131d","HR User","Department",0,0,0,1,1,1,1,0,0,0,1,0,0,0,1,1,1
+"fabe02d36f","HR Manager","Leave Application",0,0,0,1,1,1,1,1,1,1,1,1,0,1,1,1,1
+"be5179061e","HR User","Leave Application",0,0,0,1,1,1,1,1,1,1,1,0,0,1,1,1,1
+"943ff9b6a4","All","Leave Application",0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+"8ca751d68b","Leave Approver","Leave Application",0,0,0,1,1,0,1,1,1,1,1,0,0,0,1,1,1
+"70bc72b325","Leave Approver","Leave Application",0,1,0,1,1,0,0,0,0,0,1,0,0,0,0,0,0
+"4e73d41ff6","Employee","Leave Application",0,0,0,1,1,1,0,0,0,0,1,0,0,0,1,1,1
+"3017c37159","HR User","Leave Application",0,1,0,1,1,0,0,0,0,0,1,0,0,0,0,0,0
+"7bfed574b3","HR User","Leave Allocation",0,0,0,1,1,1,1,1,1,1,1,0,0,0,1,1,1
+"4c2d8db982","HR Manager","Leave Allocation",0,0,0,1,1,1,1,1,1,1,1,1,1,0,1,1,1
+"ca721e8c5b","HR User","Leave Type",0,0,0,1,1,1,1,0,0,0,1,0,0,0,1,1,1
+"78a7b16152","HR Manager","Leave Type",0,0,0,1,1,1,1,0,0,0,1,0,0,0,1,1,1
+"6e3a872a41","Employee","Leave Type",0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+"dd7eee4540","Accounts User","Timesheet",0,0,0,1,1,1,1,1,1,1,1,0,0,0,0,0,1
+"829d859d21","Projects User","Timesheet",0,0,0,1,1,1,1,1,1,1,1,0,0,0,1,1,1
+"58b7f05e7e","HR User","Timesheet",0,0,0,1,1,1,1,1,1,1,1,1,0,0,1,1,1
+"462aae90b2","Manufacturing User","Timesheet",0,0,0,1,1,1,1,1,1,1,1,1,0,0,1,1,1
+"31e3f79c65","Accounts User","Timesheet",0,1,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0
+"121fe479da","Employee","Timesheet",0,0,0,1,1,1,0,0,0,0,0,0,0,0,0,0,0
+"634d7b2598","Item Manager","Batch",0,0,0,1,1,1,1,0,0,0,1,1,1,1,1,1,1
+"ee6e552947","HR User","Employee",0,0,0,1,1,1,1,0,0,0,1,1,1,0,1,1,1
+"cff691e421","HR Manager","Employee",0,0,0,1,1,1,1,0,0,0,1,1,1,1,1,1,1
+"27b4f6bb4b","Employee","Employee",0,0,0,1,0,0,0,0,0,0,1,0,0,0,0,1,1
+"f7b7a85810","Projects Manager","Project",0,0,0,1,1,1,1,0,0,0,1,1,0,0,1,1,1
+"5c43ef80d9","All","Project",0,1,0,1,0,0,0,0,0,0,1,0,0,0,0,0,0
+"0a375906d9","Projects User","Project",0,0,0,1,1,1,1,0,0,0,1,0,0,0,1,1,1
+"f1cb8b1b2d","HR Manager","Salary Structure",0,0,0,1,1,1,1,1,1,1,1,1,1,0,1,1,1
+"19e39d464f","HR User","Salary Structure",0,0,0,1,1,1,1,1,1,1,1,0,0,0,1,1,1
+"f0db7e8628","Accounts User","Journal Entry",0,0,0,1,1,1,1,1,1,1,1,0,0,0,1,1,1
+"5a376e842c","Accounts Manager","Journal Entry",0,0,0,1,1,1,1,1,1,1,1,1,1,0,1,1,1
+"007ad0712c","Auditor","Journal Entry",0,0,0,1,0,0,0,0,0,0,1,0,0,0,0,1,1
+"ec8769212b","Projects User","Company",0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+"b68547bfd5","Purchase User","Company",0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+"a25bdc4064","Sales User","Company",0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+"9077ccc435","Accounts Manager","Company",0,0,0,1,1,1,1,0,0,0,1,1,0,0,1,1,1
+"6f16f323cf","Stock User","Company",0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+"37533a081e","System Manager","Company",0,0,0,1,1,1,1,0,0,0,1,0,0,0,1,1,1
+"1fefad414e","Employee","Company",0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+"083b7ece44","Accounts User","Company",0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,1,1
+"f83640513f","Sales Manager","Customer",0,0,0,1,0,0,0,0,0,0,1,0,0,0,0,1,1
+"c52d96430b","Sales Master Manager","Customer",0,1,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0
+"c07701b243","Stock User","Customer",0,0,0,1,0,0,0,0,0,0,1,0,0,0,0,1,1
+"68d4ac3d52","Sales User","Customer",0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+"67f5d8d856","Sales Master Manager","Customer",0,0,0,1,1,1,1,0,0,0,1,1,1,1,1,1,1
+"62653a48e6","Sales User","Customer",0,0,0,1,1,1,0,0,0,0,1,0,0,0,1,1,1
+"55e81bbd53","Stock Manager","Customer",0,0,0,1,0,0,0,0,0,0,1,0,0,0,0,1,1
+"4d6c76c6b9","Accounts Manager","Customer",0,0,0,1,0,0,0,0,0,0,1,0,0,0,0,1,1
+"1b685970d0","Accounts User","Customer",0,0,0,1,0,0,0,0,0,0,1,0,0,0,0,1,1
+"59cf87f160","System Manager","User",0,1,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0
+"0cb5b4e7c4","System Manager","User",0,0,0,1,1,1,1,0,0,0,1,1,1,1,1,1,1
+"8bf46513e1","Accounts Manager","Payment Request",0,0,0,1,1,1,1,1,1,1,1,1,0,0,1,1,1
+"54d42b194b","Accounts User","Payment Request",0,0,0,1,1,1,1,0,0,0,1,1,0,0,1,1,1
+"f5eae2d639","Accounts User","Payment Entry",0,0,0,1,1,1,1,1,1,1,1,1,1,0,1,1,1
+"5472416c65","Accounts Manager","Payment Entry",0,0,0,1,1,1,1,1,1,1,1,1,1,0,1,1,1
+"53e598e017","Fleet Manager","Vehicle Log",0,0,0,1,1,1,1,1,1,0,1,1,0,0,1,1,1
+"240526fd36","HR User","Employee Health Insurance",0,0,0,1,0,0,0,0,0,0,1,1,0,0,1,1,1
+"03f5f3e580","HR Manager","Employee Health Insurance",0,0,0,1,1,1,1,0,0,0,1,1,0,0,1,1,1
+"6df728cc43","System Manager","Gender",0,0,0,1,1,1,1,0,0,0,1,1,0,0,1,1,1
+"143f29d61a","All","Gender",0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+"c553e8c441","System Manager","Salutation",0,0,0,1,1,1,1,0,0,0,1,1,0,0,1,1,1
+"8d301d935f","All","Salutation",0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+"165a15a61a","Administrator","Salutation",0,0,0,1,1,1,1,0,0,0,1,1,0,0,1,1,1
+"f217070ba0","Accounts Manager","Payment Term",0,0,0,1,1,1,1,0,0,0,1,1,0,0,1,1,1
+"ddf3b56e64","System Manager","Payment Term",0,0,0,1,1,1,1,0,0,0,1,1,0,0,1,1,1
+"d051d502b2","Accounts User","Payment Term",0,0,0,1,1,1,1,0,0,0,1,1,0,0,1,1,1
+"cd887dd9e4","Accounts Manager","Payment Terms Template",0,0,0,1,1,1,1,0,0,0,1,1,0,0,1,1,1
+"6a949ba1d2","Accounts User","Payment Terms Template",0,0,0,1,1,1,1,0,0,0,1,1,0,0,1,1,1
+"52b205e682","System Manager","Payment Terms Template",0,0,0,1,1,1,1,0,0,0,1,1,0,0,1,1,1
+"c7085f18c7","Fulfillment User","Delivery Trip",0,0,0,1,1,1,1,1,1,1,1,1,0,0,1,1,1
+"96000f5a9c","Stock User","Delivery Trip",0,0,0,1,1,1,1,1,1,1,1,1,0,0,1,1,1
+"2fdd60f5a1","HR Manager","Payroll Entry",0,0,0,1,1,1,1,1,1,0,1,0,0,0,1,0,0
+"bcb0ffb83e","Employee","Compensatory Leave Request",0,0,0,1,1,1,1,0,0,0,1,1,0,0,1,1,1
+"af65cf5a65","HR Manager","Compensatory Leave Request",0,0,0,1,1,1,1,1,1,0,1,1,0,0,1,1,1
+"939e3296f3","HR User","Compensatory Leave Request",0,0,0,1,1,1,1,1,0,0,1,1,0,0,1,1,1
+"4407c2863f","System Manager","Compensatory Leave Request",0,0,0,1,1,1,1,0,0,0,1,1,0,0,1,1,1
+"e03e1c8134","HR User","Payroll Period",0,0,0,1,1,1,1,0,0,0,1,1,0,0,1,1,1
+"aee27acc80","HR Manager","Payroll Period",0,0,0,1,1,1,1,0,0,0,1,1,0,0,1,1,1
+"25a5271b1a","System Manager","Payroll Period",0,0,0,1,1,1,1,0,0,0,1,1,0,0,1,1,1
+"b599e36b4f","HR User","Attendance Request",0,0,0,1,1,1,1,1,1,1,1,1,0,0,1,1,1
+"af48d82ca3","Employee","Attendance Request",0,0,0,1,1,1,1,0,0,0,1,1,0,0,1,1,1
+"945107933b","HR Manager","Attendance Request",0,0,0,1,1,1,1,1,1,1,1,1,0,0,1,1,1
+"27cfa23a37","System Manager","Attendance Request",0,0,0,1,1,1,1,1,1,1,1,1,0,0,1,1,1
+"56903e3139","HR User","Employee Grade",0,0,0,1,1,1,1,0,0,0,1,1,0,0,1,1,1
+"5601b0ae9a","HR Manager","Employee Grade",0,0,0,1,1,1,1,0,0,0,1,1,0,0,1,1,1
+"0413635ae0","System Manager","Employee Grade",0,0,0,1,1,1,1,0,0,0,1,1,0,0,1,1,1
+"fc3457b89c","HR User","Shift Type",0,0,0,1,1,1,0,0,0,0,1,1,0,0,1,1,1
+"ee4e304e6e","Employee","Shift Type",0,0,0,1,0,0,0,0,0,0,1,1,0,0,1,1,1
+"c83dee862f","HR Manager","Shift Type",0,0,0,1,1,1,1,0,0,0,1,1,0,0,1,1,1
+"e9ef331a9d","System Manager","Employee Tax Exemption Declaration",0,0,0,1,1,1,1,1,1,1,1,1,0,0,1,1,1
+"4bea1b47d3","HR Manager","Employee Tax Exemption Declaration",0,0,0,1,1,1,1,1,1,1,1,1,0,0,1,1,1
+"1a7229674f","Employee","Employee Tax Exemption Declaration",0,0,0,1,1,1,1,1,1,1,1,1,0,0,1,1,1
+"052aa5f69e","HR User","Employee Tax Exemption Declaration",0,0,0,1,1,1,1,1,1,1,1,1,0,0,1,1,1
+"e0ed2d18cf","Employee","Employee Tax Exemption Proof Submission",0,0,0,1,1,1,1,1,1,1,1,1,0,0,1,1,1
+"da1f3ad9a2","HR User","Employee Tax Exemption Proof Submission",0,0,0,1,1,1,1,1,1,1,1,1,0,0,1,1,1
+"a063220ffc","HR Manager","Employee Tax Exemption Proof Submission",0,0,0,1,1,1,1,1,1,1,1,1,0,0,1,1,1
+"5fc3115086","System Manager","Employee Tax Exemption Proof Submission",0,0,0,1,1,1,1,1,1,1,1,1,0,0,1,1,1
+"c805a9607f","Healthcare Administrator","Healthcare Service Unit Type",0,0,0,1,1,1,1,0,0,0,1,1,0,0,1,1,1
+"bada7eedcb","System Manager","Inpatient Medication Order",0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1
+"eb55974472","System Manager","Inpatient Medication Entry",0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1
+"bcb356936d","All","Verification Device",0,0,1,1,1,1,1,0,0,0,1,1,0,1,1,1,1
+"10fdf1eed9","Employee Self Service","Salary Slip",0,0,0,1,0,0,0,0,0,0,0,1,0,0,1,1,1
+"d889944517","Employee Self Service","Employee",0,0,0,1,1,0,0,0,0,0,0,1,0,0,1,1,1
+"251bb1ad11","Employee Self Service","Expense Claim",0,0,0,1,1,1,1,0,0,0,0,1,0,0,1,1,1
+"a1a46d1da6","Employee Self Service","Leave Application",0,0,0,1,1,1,1,0,0,0,0,1,0,0,1,1,1
+"a0fcb59f0b","Employee Self Service","Attendance Request",0,0,0,1,1,1,1,0,0,0,0,1,0,0,1,1,1
+"5db9decbe1","Employee Self Service","Compensatory Leave Request",0,0,0,1,1,1,1,0,0,0,0,1,0,0,1,1,1
+"65edb9e6c3","Employee Self Service","Employee Tax Exemption Declaration",0,0,0,1,1,1,1,0,0,0,0,1,0,0,1,1,1
+"ccf777c7ba","Employee Self Service","Employee Tax Exemption Proof Submission",0,0,0,1,1,1,1,0,0,0,0,1,0,0,1,1,1
+"a0f5138b17","Employee Self Service","Timesheet",0,0,0,1,1,1,1,1,1,1,0,1,0,0,1,1,1
+"34ae89de02","Employee Self Service","Branch",0,0,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0
+"e0edaaaeba","Employee Self Service","Department",0,0,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0
+"4c2574d4f3","Employee Self Service","Company",0,0,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0
+"2225892a80","Employee Self Service","Journal Entry",0,0,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0
+"36c0ffd006","Employee Self Service","Shift Type",0,0,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0
+"b39dbcd6fd","Employee Self Service","Leave Allocation",0,0,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0
+"8768b49ad6","Employee Self Service","Currency",0,0,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0
+"38270367bb","Employee Self Service","Mode of Payment",0,0,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0
+"d2e0f70e28","Employee Self Service","Salutation",0,0,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0
+"d86897945e","Employee Self Service","Task",0,0,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0
+"b845d1b94a","Employee Self Service","Customer",0,0,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0
+"4ae2e02730","Employee Self Service","Employee Grade",0,0,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0
+"5400a0d078","Employee Self Service","Employee Health Insurance",0,0,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0
+"3d5f3fc965","Employee Self Service","Leave Type",0,0,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0
+"44337a7784","Employee Self Service","Cost Center",0,0,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0
+"6ab69f59dd","Employee Self Service","Gender",0,0,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0
+"0808132e15","Employee Self Service","Vehicle Log",0,0,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0
+"e5484bd07d","Employee Self Service","User",0,0,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0
+"dcf874381c","Employee Self Service","Salary Structure",0,0,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0
+"ede5cc7bd3","Employee Self Service","Employment Type",0,0,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0
+"5da1278f29","Employee Self Service","Project",0,0,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0
+"016a83865d","Employee Self Service","Holiday List",0,0,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0
+"426ce4314a","Employee Self Service","Payroll Period",0,0,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0
+"2cc7a7900f","Employee Self Service","Delivery Trip",0,0,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0
+"289ad51270","Employee Self Service","Letter Head",0,0,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0
+"f607e17204","Employee Self Service","Payroll Entry",0,0,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0
+"fa20babf2e","Employee Self Service","Job Applicant",0,0,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0
+"03b9d2c58b","Employee Self Service","Designation",0,0,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0
+"760ab38602","Employee Self Service","Account",0,0,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0
+"85676cb587","Employee Self Service","File",0,0,0,1,1,1,0,0,0,0,0,1,0,0,0,0,0
+"55fff65f53","All","Parent Relation",0,0,1,1,1,1,1,0,0,0,1,1,1,1,1,1,1
+"1d8dcc442c","All","Payment Entry",0,0,0,1,0,1,0,0,0,0,0,1,0,0,0,0,0
+"ecca10b55e","Guest","Payment Entry",0,0,0,1,1,1,0,1,0,0,0,1,0,0,0,0,0
+"f1ec946203","Guest","Account",0,0,1,1,0,0,0,0,0,0,0,1,0,0,0,0,0
+"97f3a8defc","All","Patient Country",0,0,1,1,1,1,0,0,0,0,0,1,0,0,0,0,0
+"cb54844af6","All","Patient Town",0,0,1,1,1,1,0,0,0,0,0,1,0,0,0,0,0
+"671cb7c4c2","System Manager","Patient Appointment",0,0,1,1,1,1,0,0,0,0,0,1,0,0,0,0,0
+"d7733a743e","All","Custom Field",0,0,1,1,0,1,1,0,0,0,0,1,0,0,0,0,0
+"c5fa1f3015","All","Payment Request",0,0,1,1,0,0,0,1,0,0,0,1,0,0,0,0,0
+"caf0b32790","All","Healthcare Service Unit",0,0,1,1,1,1,0,0,0,0,0,1,0,0,0,0,0
+"a83d832722","All","Insurance Billing Rule Template",0,0,1,1,1,1,1,0,0,0,1,1,1,0,0,1,1
+"6f1ddde718","System Manager","Clinical Procedure Template",0,0,1,1,1,1,1,0,0,0,0,1,0,0,0,0,0
+"92c7165e87","System Manager","Clinical Procedure",0,0,1,1,1,1,1,1,0,0,0,1,0,0,0,0,0
+"ba913fef9d","System Manager","Gastroenterology  Form",0,0,0,1,1,1,1,0,0,0,1,1,0,0,1,1,1
+"9208da79f2","System Manager","Healthcare Service Unit",0,0,1,1,1,1,1,0,0,0,0,1,0,0,0,1,1
+"e59a785584","System Manager","Healthcare Service Unit Type",0,0,1,1,1,1,1,0,0,0,1,1,1,1,1,1,1
+"a0b794732f","System Manager","Lab Test",0,0,1,1,1,1,1,1,1,1,1,1,1,1,0,1,1
+"a11daf1a88","System Manager","Lab Test Template",0,0,1,1,1,1,1,0,0,0,1,1,1,1,1,1,1
+"4efe7a6f95","System Manager","Item Group",0,0,1,1,1,1,1,0,0,0,1,1,1,1,1,1,1
+"4722658767","System Manager","Mtiba Request",0,0,1,1,1,1,1,0,0,0,1,1,0,0,1,1,1
+"53b779cf39","All","Mtiba Request",0,0,1,1,1,1,0,1,0,0,0,1,0,0,0,0,0
+"68a4b7b656","Guest","Mtiba Request",0,0,1,1,1,1,0,0,0,0,0,1,0,0,0,0,0
+"b4a4128aa9","System Manager","Ward",0,0,0,1,1,1,1,0,0,0,1,1,0,0,1,1,1
+"0d936d41c5","System Manager","Nursing Checklist Template",0,0,1,1,1,1,1,0,0,0,1,1,1,0,0,1,1
+"98f976c759","System Manager","Religion",0,0,1,1,1,1,1,0,0,0,0,1,0,0,0,0,1
+"73a311f59c","System Manager","Branch",0,0,1,1,0,1,0,0,0,0,0,1,0,0,0,0,0
+"95a28a3931","All","Branch",0,0,1,1,0,0,0,0,0,0,0,1,0,0,0,0,1
+"d98795c0fc","All","Slade Auth",0,0,1,1,1,1,1,0,0,0,1,1,1,0,1,1,1
+"25d261ba2e","System Manager","Slade Auth",0,0,1,1,1,1,1,0,0,0,1,1,1,0,1,1,1
+"a6695dfde2","All","GST HSN Code",0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0
+"76dd023cf6","Accounts Manager","GST HSN Code",0,0,0,1,1,1,0,0,0,0,0,1,0,0,0,0,0
+"b58473bca8","Accounts User","GST HSN Code",0,0,0,1,1,1,0,0,0,0,0,1,0,0,0,0,0
+"69678039ba","System Manager","GST HSN Code",0,0,0,1,1,1,0,0,0,0,0,1,0,0,0,0,0
+"d3002df99c","Item Manager","GST HSN Code",0,0,0,1,1,1,0,0,0,0,0,1,0,0,0,0,0
+"7c3d60e95f","Stock Manager","GST HSN Code",0,0,0,1,1,1,0,0,0,0,0,1,0,0,0,0,0
+"6213a04ae7","All","GST Settings",0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0
+"57ffa9a365","Accounts Manager","GST Settings",0,0,0,1,1,1,0,0,0,0,0,1,0,0,0,0,0
+"530e9b9e59","Accounts User","GST Settings",0,0,0,1,1,1,0,0,0,0,0,1,0,0,0,0,0
+"eca6e9d860","System Manager","GST Settings",0,0,0,1,1,1,0,0,0,0,0,1,0,0,0,0,0
+"57ff1f87ef","All","GSTR 3B Report",0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0
+"d47e700bc6","Accounts Manager","GSTR 3B Report",0,0,0,1,1,1,0,0,0,0,0,1,0,0,0,0,0
+"27f51e5618","Accounts User","GSTR 3B Report",0,0,0,1,1,1,0,0,0,0,0,1,0,0,0,0,0
+"32351bbca8","System Manager","GSTR 3B Report",0,0,0,1,1,1,0,0,0,0,0,1,0,0,0,0,0
+"51a611e8c3","All","Lower Deduction Certificate",0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0
+"000c16e945","Accounts Manager","Lower Deduction Certificate",0,0,0,1,1,1,0,0,0,0,0,1,0,0,0,0,0
+"1c6753a373","Accounts User","Lower Deduction Certificate",0,0,0,1,1,1,0,0,0,0,0,1,0,0,0,0,0
+"717a6e2841","System Manager","Lower Deduction Certificate",0,0,0,1,1,1,0,0,0,0,0,1,0,0,0,0,0
+"b89ba4b812","All","E Invoice Settings",0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0
+"c9acbeb8a5","Accounts Manager","E Invoice Settings",0,0,0,1,1,1,0,0,0,0,0,1,0,0,0,0,0
+"582fb90b7b","Accounts User","E Invoice Settings",0,0,0,1,1,1,0,0,0,0,0,1,0,0,0,0,0
+"9643012c41","System Manager","E Invoice Settings",0,0,0,1,1,1,0,0,0,0,0,1,0,0,0,0,0
+"a4be857a93","System Manager","Generic Drug Name",0,0,1,1,1,1,1,0,0,0,0,1,1,0,0,0,0
+"d314971ea2","Guest","Clinical Procedure",0,0,1,1,1,1,0,0,0,0,0,1,0,0,0,0,0
+"09bcb8e322","GCH-Gastroenterology","Gastroenterology  Form",0,0,1,1,1,1,0,1,1,1,1,1,0,0,0,1,1
+"12f3edee7d","GCH-TriageNurse","Dosage Form",0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+"07f54e95c9","GCH-Doctor","Dosage Form",0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+"9c5d246d54","GCH-Reception","Payment Terms Template",0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+"88a9fedb9a","GCH-Reception","Payment Term",0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+"ab04860029","GCH-Reception","Batch",0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+"04e9c966ca","GCH-Reception","Warehouse",0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+"369ac43c94","GCH-Reception","UOM",0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+"407d985749","GCH-Reception","Contact",0,0,1,1,1,1,1,0,0,0,0,0,0,0,0,1,0
+"711403504c","GCH-Reception","Address",0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+"96e29ca61a","GCH-Reception","Customer Group",0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+"164b54aff3","GCH-Reception","Ward",0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+"a84d8b6e3c","System Manager","E Invoice Settings",0,0,0,1,1,1,0,0,0,0,0,1,0,0,0,0,0
+"09659e0576","Accounts User","E Invoice Settings",0,0,0,1,1,1,0,0,0,0,0,1,0,0,0,0,0
+"0bcff0b628","Accounts Manager","E Invoice Settings",0,0,0,1,1,1,0,0,0,0,0,1,0,0,0,0,0
+"7db39fa1cb","All","E Invoice Settings",0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0
+"2b2e9377a0","System Manager","Lower Deduction Certificate",0,0,0,1,1,1,0,0,0,0,0,1,0,0,0,0,0
+"e33ec9acbe","Accounts User","Lower Deduction Certificate",0,0,0,1,1,1,0,0,0,0,0,1,0,0,0,0,0
+"a2f6f26cfd","Accounts Manager","Lower Deduction Certificate",0,0,0,1,1,1,0,0,0,0,0,1,0,0,0,0,0
+"a85d2150b7","All","Lower Deduction Certificate",0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0
+"4866e01a92","System Manager","GSTR 3B Report",0,0,0,1,1,1,0,0,0,0,0,1,0,0,0,0,0
+"b8f30ad8f7","Accounts User","GSTR 3B Report",0,0,0,1,1,1,0,0,0,0,0,1,0,0,0,0,0
+"3b7d79719f","Accounts Manager","GSTR 3B Report",0,0,0,1,1,1,0,0,0,0,0,1,0,0,0,0,0
+"a3ef259e74","All","GSTR 3B Report",0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0
+"ecdcc517d4","System Manager","GST Settings",0,0,0,1,1,1,0,0,0,0,0,1,0,0,0,0,0
+"1d19c4711a","Accounts User","GST Settings",0,0,0,1,1,1,0,0,0,0,0,1,0,0,0,0,0
+"46c24fe7b1","Accounts Manager","GST Settings",0,0,0,1,1,1,0,0,0,0,0,1,0,0,0,0,0
+"3a5da10dc0","All","GST Settings",0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0
+"12d16c6428","Stock Manager","GST HSN Code",0,0,0,1,1,1,0,0,0,0,0,1,0,0,0,0,0
+"ac4158a1b1","Item Manager","GST HSN Code",0,0,0,1,1,1,0,0,0,0,0,1,0,0,0,0,0
+"7ef1f1b7e6","System Manager","GST HSN Code",0,0,0,1,1,1,0,0,0,0,0,1,0,0,0,0,0
+"8074f5d727","Accounts User","GST HSN Code",0,0,0,1,1,1,0,0,0,0,0,1,0,0,0,0,0
+"2719c7d4b3","Accounts Manager","GST HSN Code",0,0,0,1,1,1,0,0,0,0,0,1,0,0,0,0,0
+"4c47d1bafe","All","GST HSN Code",0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0
+"3aecd0660a","System Manager","Workflow Action",0,0,1,1,1,1,1,0,0,0,0,1,0,1,0,0,0
+"5b0daaf878","All","Lct Member",0,0,1,1,1,1,0,0,0,0,0,1,0,0,0,0,0
+"969e94b75c","System Manager","Lct Claim",0,0,1,1,1,1,1,1,1,1,1,1,0,0,1,1,1
+"7fdb1a0f1e","System Manager","Lct Member",0,0,0,1,1,1,1,0,0,0,1,1,0,0,1,1,1
+"a588114f3f","System Manager","Slade Invoice",0,0,1,1,1,1,1,0,1,1,1,1,0,0,1,1,1
+"a68093f3b2","System Manager","Slade Claim",0,0,0,1,1,1,1,0,0,0,1,1,0,0,1,1,1
+"66d020162d","All","Branch",0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+"39c62f04f3","System Manager","Branch",0,0,1,1,0,0,0,0,0,0,0,1,0,0,0,0,0
+"39a2589972","GCH-Ophthalmology","Ophthalmology Clinic Form",0,0,1,1,1,1,0,1,1,1,1,0,0,0,0,1,1
+"1031915cad","System Manager","Ward",0,0,0,1,1,1,1,0,0,0,1,1,0,0,1,1,1
+"d17479a4a7","System Manager","Hematology Form",0,0,1,1,1,1,0,1,0,0,0,1,0,0,0,0,0
+"6820a0c140","GCH-Doctor","Patient Encounter Workflow History",0,0,1,1,1,1,0,1,0,0,0,0,0,0,0,0,0
+"e79b852c52","GCH-TriageNurse","Patient Encounter Workflow History",0,0,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0
+"4e6d4af43e","GCH-Reception","Patient Encounter Workflow History",0,0,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0
+"e3fb4c11f6","System Manager","Mtiba Setting",0,0,1,1,1,1,1,0,0,0,1,1,0,0,1,1,1
+"0a636a8b1e","GCH-Gastroenterology","Gastroentology Form",0,0,1,1,1,1,0,1,1,1,1,0,0,0,0,1,1
+"58f4a09977","GCH-Endocrinology","Endocrinology Form",0,0,1,1,1,1,0,1,1,1,1,0,0,0,0,1,1
+"fc440f8287","GCH-Hematology","Hematology Form",0,0,1,1,1,1,0,1,1,1,0,0,0,0,0,1,1
+"23f9c82a1e","GCH-Diabetology","Diabetology Form",0,0,1,1,1,1,0,1,1,1,1,0,0,0,0,1,1
+"27b28e42fd","GCH-Doctor","Discharge Conclusion",0,0,1,1,1,0,0,0,0,0,0,0,0,0,0,1,0
+"a0933e8cfa","GCH-TriageNurse","Customer Group",0,0,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0
+"75e7726ec4","GCH-TriageNurse","Score Guideline",0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+"eda7a17706","GCH-TriageNurse","Warehouse",0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+"ef2a4ad165","GCH-Pharmacy","Dosage Form",0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+"a00f7071b1","GCH-Pharmacy","Prescription Duration",0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+"b6bb2911db","GCH-Pharmacy","Prescription Dosage",0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+"6d9c95e462","GCH-Pharmacy","Generic Drug Name",0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+"86844db1dd","GCH-Reception","Mpesa STK Request",0,0,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0
+"57d122c36d","GCH-Reception","Stock Settings",0,0,1,1,0,0,0,0,0,0,0,1,0,0,0,0,0
+"c2a4161816","GCH-Reception","Dunning",0,0,1,1,1,0,0,0,0,0,0,1,0,0,0,0,0
+"1ecdac1878","System Manager","Practitioner Station Entry",0,0,1,1,1,1,1,0,0,0,1,1,0,0,1,1,1
+"7c7d27895b","System Manager","Ophthalmology Clinic Form",0,0,0,1,1,1,1,0,0,0,1,1,0,0,1,1,1
+"6a0d7e893a","GCH-TriageNurse","Stock Settings",0,0,1,1,0,0,0,0,0,0,0,1,0,0,0,0,0
+"d9ba17f4a1","GCH-TriageNurse","Nursing Checklist Task Option",0,0,1,1,0,0,0,0,0,0,0,1,0,0,0,0,0
+"c730327f66","GCH-TriageNurse","Nursing Checklist Template",0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+"dfa6c66a09","GCH-TriageNurse","Nursing Checklist",0,0,1,1,1,1,0,1,0,0,0,0,0,0,0,0,0
+"1842c1da23","System Manager","Patient Encounter Workflow History",0,0,0,1,1,1,1,0,0,0,1,1,0,0,1,1,1
+"c03668125e","System Manager","Mpesa C2B Request",0,0,1,1,1,1,1,1,1,1,1,1,1,0,1,1,1
+"e290256c31","GCH-TriageNurse","Patient Assessment Action",0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+"4c140f0793","GCH-Doctor","Patient Assessment Action",0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+"a82e157316","GCH-Credit Control","Insurance Category",0,0,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0
+"9e49bf3227","GCH-Reception","Religion",0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+"bed82c7f10","GCH-Reception","Race",0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+"06f494538c","GCH-Reception","Nationality",0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+"0f75af220f","GCH-Reception","Gender",0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+"4dbbc7232b","GCH-Reception","Parent Relation",0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+"11f5f7d7a2","GCH-TriageNurse","Patient Education",0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+"4815afb53e","GCH-TriageNurse","Barrier To Care Education",0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+"8ccd962958","GCH-TriageNurse","Appointment",0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+"c050aa05c9","GCH-TriageNurse","Patient Appointment",0,0,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0
+"0cc705d0d0","GCH-Reception","Patient Appointment",0,0,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0
+"6ad54ff1c6","GCH-Credit Control","Queue",0,0,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0
+"863216c5dd","GCH-Doctor","Patient Assessment Template",0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+"cfd3f07fc2","GCH-Doctor","Queue",0,0,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0
+"8ae7871004","GCH-TriageNurse","Queue",0,0,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0
+"7ca1768368","GCH-Reception","Queue",0,0,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0
+"0605781073","GCH-TriageNurse","Healthcare Service Unit",0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+"3abe85bbde","GCH-Reception","Healthcare Service Unit",0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+"a1d6e628d5","GCH-Credit Control","Verification Device",0,0,1,1,1,1,0,0,0,0,0,1,0,0,0,0,0
+"82520cd944","GCH-Credit Control","Insurance Billing Rule Template",0,0,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0
+"c843956c68","GCH-Credit Control","Copay Type",0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+"a4008b1ebd","GCH-Credit Control","Healthcare Service Unit",0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+"50d664c50f","GCH-Credit Control","Insurance Scheme",0,0,1,1,1,1,0,0,0,0,0,1,0,0,0,0,0
+"9d7570dd9f","GCH-TriageNurse","Healthcare Practitioner",0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+"feea52aa45","GCH-TriageNurse","Patient Assessment Template",0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+"52ef462df3","GCH-Doctor","Clinical Procedure Template",0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+"8593d6b41b","GCH-Doctor","Lab Test Template",0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+"04fc39eb3d","GCH-Doctor","Medical Code",0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+"b819d2813c","GCH-Doctor","Prescription Duration",0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+"0cc83b1644","GCH-Doctor","Prescription Dosage",0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+"54d9822730","GCH-Doctor","Complaint",0,0,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0
+"d2904c836f","GCH-Doctor","Other Allergy",0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+"87e7125d0d","GCH-Doctor","Food Allergy",0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+"73e11ac82c","GCH-Doctor","Drug Allergy",0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+"9773e2ff83","GCH-TriageNurse","Clinical Procedure Template",0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+"018d1c8728","GCH-TriageNurse","Lab Test Template",0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+"8e72f9a157","GCH-TriageNurse","Medical Code",0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+"fc9dd34d01","GCH-TriageNurse","Prescription Duration",0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+"d8a86a66c0","GCH-TriageNurse","Prescription Dosage",0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+"475c001ff7","GCH-TriageNurse","Complaint",0,0,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0
+"8edfff2760","GCH-TriageNurse","Other Allergy",0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+"a50185cd26","GCH-TriageNurse","Food Allergy",0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+"a39e00ede2","GCH-TriageNurse","Drug Allergy",0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+"033351e44d","GCH-TriageNurse","Branch",0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+"3b1977687b","GCH-Reception","Branch",0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+"335d10a2ef","GCH-Reception","Marital Status",0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+"6078760ed0","GCH-Reception","Occupation",0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+"67bf09faef","GCH-Reception","Identification Type",0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+"e25b3099a1","GCH-Reception","Food Allergy",0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+"c5054fd890","GCH-Reception","Drug Allergy",0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+"45ab1f728b","GCH-Reception","Assistive Communication Device",0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+"78bd83ef76","GCH-Reception","Movement Support",0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+"0162ae3908","GCH-Reception","Assistive Movement Device",0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+"15faf1ffd6","GCH-Reception","Patient Language",0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+"724ccdc468","GCH-Reception","Patient Town",0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+"e5a078a280","GCH-Reception","Patient Country",0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+"d7571b0134","GCH-Reception","Insurance Scheme",0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+"b99d036389","GCH-Credit Control","Item Group",0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+"b01c672beb","GCH-Doctor","Patient Assessment Parameter",0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+"675c3ab80f","GCH-Doctor","Branch",0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+"b2d6ac0e4d","GCH-Doctor","Patient Education",0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+"d9c09a8263","GCH-Doctor","Barrier To Care Education",0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+"7daa7f8933","GCH-Doctor","Appointment",0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+"cb9d2d3ec9","GCH-Doctor","Healthcare Service Unit",0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+"09ae17e293","GCH-Reception","Healthcare Practitioner",0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+"ec2b570d11","GCH-Reception","Country",0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+"8c71b24ad8","GCH-TriageNurse","Patient Assessment Parameter",0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+"8510ecde94","GCH-TriageNurse","Prescription",0,0,1,1,0,0,0,0,0,0,0,1,0,0,0,0,0
+"3ea6446049","GCH-Doctor","Prescription",0,3,0,1,1,0,0,0,0,0,0,1,0,0,0,0,0
+"40f5b5c383","GCH-Doctor","Prescription",0,2,0,1,1,0,0,0,0,0,0,1,0,0,0,0,0
+"ff59092407","GCH-Doctor","Prescription",0,1,0,1,1,0,0,0,0,0,0,1,0,0,0,0,0
+"378945c71d","GCH-Doctor","Prescription",0,0,1,1,1,1,1,1,0,0,0,1,0,0,0,0,0
+"c0183adcd1","GCH-TriageNurse","User Location",0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+"3783288cdf","GCH-Reception","User Location",0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+"94f2d1349c","GCH-Nurse","User Location",0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+"6aeaba5e89","GCH-Doctor","User Location",0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+"6095dc4e78","GCH-TriageNurse","Vaccine",0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0
+"471b3ff842","GCH-Reception","Payment Request",0,0,1,1,0,0,0,1,0,1,0,1,0,0,0,0,1
+"890ac2c951","GCH-Reception","Payment Entry",0,0,1,1,1,1,0,1,0,1,0,0,0,0,0,1,1
+"63c8620054","GCH-Reception","Mode of Payment",0,0,1,1,0,0,0,0,0,0,0,1,0,0,0,0,0
+"0c22364680","GCH-Reception","Therapy Session",0,0,1,1,0,0,0,0,0,0,0,1,0,0,0,0,0
+"e2f29ab95b","GCH-Reception","Clinical Procedure",0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+"5581f6c005","GCH-TriageNurse","Duration Period",0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+"1c40473c65","GCH-Pharmacy Store","Item Group",0,0,1,1,0,0,0,0,0,0,0,1,0,0,0,0,0
+"7f614d7f50","GCH-Credit Control","UOM",0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+"1bc8d84474","System Manager","Nursing Checklist Task Option",0,0,0,1,1,1,1,0,0,0,1,1,0,0,1,1,1
+"b9fec9171a","System Manager","Nursing Checklist Template",0,0,0,1,1,1,1,0,0,0,1,1,0,0,1,1,1
+"5f87ec0c9b","All","Nursing Checklist",0,0,0,1,1,1,1,0,0,0,1,1,0,0,1,1,1
+"f2688f04ec","System Manager","Nursing Checklist",0,0,1,1,1,1,1,0,0,0,1,1,0,0,1,1,1
+"7e4c8535bc","System Manager","Patient Appointment",0,0,1,1,1,1,1,0,0,0,1,1,1,1,1,1,1
+"013f2a0828","System Manager","User Location",0,0,1,1,1,1,1,0,0,0,1,1,1,1,1,1,1
+"5107c63dfb","System Manager","Religion",0,0,1,1,1,1,1,0,0,0,0,1,1,0,0,0,0
+"9aadbe5092","System Manager","Country",0,0,0,1,1,1,1,0,0,0,1,1,1,0,0,0,0
+"4a4d3102d1","System Manager","Race",0,0,1,1,0,1,1,0,0,0,0,1,1,0,0,0,0
+"5103bdc999","System Manager","Multidisciplinary Review",0,0,0,1,1,1,1,0,0,0,1,1,0,0,1,1,1
+"fbdb6dd51b","System Manager","Duration Period",0,0,1,1,1,1,1,0,0,0,1,1,1,1,1,1,1
+"942fdf7f2e","System Manager","Discharge Conclusion",0,0,0,1,1,1,1,0,0,0,1,1,0,0,1,1,1
+"0ec20a7698","GCH-Doctor","Patient Encounter",0,3,0,1,1,0,0,0,0,0,0,1,0,0,0,0,0
+"395b6c2738","GCH-Doctor","Patient Encounter",0,2,0,1,1,0,0,0,0,0,0,1,0,0,0,0,0
+"29cf255474","GCH-Doctor","Patient Encounter",0,1,0,1,1,0,0,0,0,0,0,1,0,0,0,0,0
+"f8995dd9fe","GCH-Doctor","Patient Encounter",0,0,1,1,1,1,0,1,0,0,0,0,0,0,0,0,0
+"756fe76c0a","GCH-TriageNurse","Patient Encounter",0,2,0,1,1,0,0,0,0,0,0,1,0,0,0,0,0
+"f80bf85d58","GCH-TriageNurse","Patient Encounter",0,1,0,1,1,0,0,0,0,0,0,1,0,0,0,0,0
+"ca210a2937","GCH-TriageNurse","Patient Encounter",0,0,1,1,1,1,0,1,0,1,0,0,0,0,0,0,0
+"3fef8d0b97","GCH-Reception","Patient Encounter",0,1,0,1,1,0,0,0,0,0,0,1,0,0,0,0,0
+"7490c1e260","GCH-Reception","Patient Encounter",0,0,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0
+"c5d229b374","GCH-Doctor","Patient",0,1,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0
+"f81a27f8d8","GCH-Doctor","Patient",0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+"aed1e89556","GCH-TriageNurse","Patient",0,1,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0
+"ea58fe995d","GCH-TriageNurse","Patient",0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+"b53c9ccc07","GCH-Reception","Patient",0,1,0,1,1,0,0,0,0,0,0,1,0,0,0,0,0
+"92e543557c","System Manager","GCH Country",0,0,0,1,1,1,1,0,0,0,1,1,0,0,1,1,1
+"b8e654b058","System Manager","Denomination",0,0,0,1,1,1,1,0,0,0,1,1,1,0,1,1,1
+"3671b30d8b","System Manager","Healthcare Service Unit",0,0,1,1,1,1,1,0,0,0,1,1,1,1,1,1,1
+"c2f482afcd","Guest","Account",0,0,0,1,1,1,0,0,0,0,0,1,0,0,0,0,0
+"1dd33047f4","System Manager","Patient Medical Record",0,0,1,1,0,0,0,0,0,0,1,1,1,1,1,1,1
+"4b8e134ddf","System Manager","Prescription",0,0,0,1,1,1,1,0,0,0,1,1,0,0,1,1,1
+"c8d50fabec","GCH-Doctor","Patient Assessment",0,0,1,1,1,1,0,1,1,1,0,0,0,0,0,0,0
+"ba7fbf4bff","GCH-TriageNurse","Patient Assessment",0,0,1,1,1,1,0,1,1,1,0,0,0,0,0,0,0
+"76b6e117c4","System Manager","Mpesa STK Request",0,0,0,1,1,1,1,0,0,0,1,1,0,0,1,1,1
+"d5cb8b074c","Employee Self Service","Sales Invoice",0,0,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0
+"e639a8a322","GCH-Reception","Item",0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+"e8e22be97d","GCH-Credit Control","Item",0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+"233572e966","GCH-Doctor","Item",0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+"b5dcb79ae4","GCH-TriageNurse","Item",0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+"b024e9d987","System Manager","Insurance Company",0,0,1,1,1,1,1,0,0,0,1,1,1,1,1,1,1
+"94bb5c8fb1","System Manager","Corporate Company",0,0,1,1,1,1,1,0,0,0,1,1,1,1,1,1,1
+"69083e963a","System Manager","Inpatient Record",0,0,1,1,1,1,1,0,0,0,1,1,1,1,1,1,1
+"20d72f598d","GCH-Credit Control","Corporate Company",0,0,1,1,1,1,0,0,0,0,0,1,0,0,0,0,0
+"69c1b79b07","GCH-Credit Control","Insurance Company",0,0,1,1,1,1,0,0,0,0,0,1,0,0,0,0,0
+"db370feb7a","System Manager","Item",0,0,1,1,1,1,1,0,0,0,1,1,1,1,1,1,1
+"848b462c9a","System Manager","Vaccine Administration",0,0,0,1,1,1,1,0,0,0,1,1,0,0,1,1,1
+"54e1152477","System Manager","Vaccine",0,0,0,1,1,1,1,0,0,0,1,1,0,0,1,1,1
+"5752a53c94","System Manager","Wellbaby Schedule",0,0,0,1,1,1,1,0,0,0,1,1,0,0,1,1,1
+"bb4e74e544","System Manager","Pharmacy Prescription",0,0,0,1,1,1,1,0,0,0,1,1,0,0,1,1,1
+"351ccaf462","System Manager","Doctor Prescription",0,0,1,1,1,1,1,1,0,0,1,1,0,0,1,1,1
+"7959492e7b","System Manager","Insurance Category",0,0,0,1,1,1,1,0,0,0,1,1,0,0,1,1,1
+"62a16e970f","System Manager","Generic Drug Name",0,0,0,1,1,1,1,0,0,0,1,1,0,0,1,1,1
+"0e6a7430e5","System Manager","Patient Education",0,0,0,1,1,1,1,0,0,0,1,1,0,0,1,1,1
+"284e491159","System Manager","Barrier To Care Education",0,0,0,1,1,1,1,0,0,0,1,1,0,0,1,1,1
+"df473386d1","All","Blog Post",0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0
+"672046b12d","System Manager","Patient Encounter",0,0,1,1,1,1,0,1,1,1,1,1,1,1,1,0,1
+"97c7d8d6f6","System Manager","Verification Device",0,0,1,1,1,1,1,0,0,0,0,1,0,0,0,0,0
+"f102ea5bb6","GCH-Reception","Patient County",0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+"ed2493125e","System Manager","Other Allergy",0,0,0,1,1,1,1,0,0,0,1,1,0,0,1,1,1
+"5e0b222ade","System Manager","Drug Allergy",0,0,0,1,1,1,1,0,0,0,1,1,0,0,1,1,1
+"78bf6c452e","System Manager","Food Allergy",0,0,0,1,1,1,1,0,0,0,1,1,0,0,1,1,1
+"90b95d920e","System Manager","Assistive Communication Device",0,0,0,1,1,1,1,0,0,0,1,1,0,0,1,1,1
+"5a3f785df5","System Manager","Movement Support",0,0,0,1,1,1,1,0,0,0,1,1,0,0,1,1,1
+"f6e5e9de8f","System Manager","Assistive Movement Device",0,0,0,1,1,1,1,0,0,0,1,1,0,0,1,1,1
+"2543c0c96c","System Manager","Patient Town",0,0,0,1,1,1,1,0,0,0,1,1,1,0,1,1,1
+"2618122b9e","System Manager","Patient County",0,0,0,1,1,1,1,0,0,0,1,1,0,0,1,1,1
+"48a6ad4113","System Manager","Patient Country",0,0,0,1,1,1,1,0,0,0,1,1,0,0,1,1,1
+"09de3a283c","GCH-Reception","Parent",0,0,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0
+"81333ce40a","GCH-Reception","Patient",0,0,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0
+"c9f072508d","System Manager","Parent Relation",0,0,0,1,1,1,1,0,0,0,1,1,0,0,1,1,1
+"1c5259397e","System Manager","Score Guideline",0,0,0,1,1,1,1,0,0,0,1,1,0,0,1,1,1
+"1e5519bc20","System Manager","Queue",0,0,0,1,1,1,1,0,0,0,1,1,0,0,1,1,1
+"ef4e799ea1","System Manager","Queue Group",0,0,0,1,1,1,1,0,0,0,1,1,0,0,1,1,1
+"f7619167ee","System Manager","Identification Type",0,0,0,1,1,1,1,0,0,0,1,1,0,0,1,1,1
+"b9572233ff","Employee Self Service","File",0,0,0,1,1,1,0,0,0,0,0,1,0,0,0,0,0
+"13ea28d83b","Employee Self Service","Currency",0,0,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0
+"da457abf71","Employee Self Service","Employee Health Insurance",0,0,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0
+"ba79f05741","Employee Self Service","Customer",0,0,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0
+"ae8cf95602","Employee Self Service","Account",0,0,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0
+"e2ac3cc8d9","Employee Self Service","Cost Center",0,0,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0
+"840cd9b734","Employee Self Service","Job Applicant",0,0,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0
+"bd8123b9bc","Employee Self Service","Project",0,0,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0
+"917f34ccc6","Employee Self Service","Task",0,0,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0
+"acdedaba4b","Employee Self Service","Payroll Entry",0,0,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0
+"05cbe41088","Employee Self Service","Payroll Period",0,0,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0
+"903459017b","Employee Self Service","Salutation",0,0,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0
+"543f1c7a86","Employee Self Service","Letter Head",0,0,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0
+"9110f3276f","Employee Self Service","Mode of Payment",0,0,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0
+"bbe3efec3b","Employee Self Service","Employment Type",0,0,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0
+"605723901e","Employee Self Service","Salary Structure",0,0,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0
+"41e366ac72","Employee Self Service","Delivery Trip",0,0,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0
+"35f84b60bd","Employee Self Service","Department",0,0,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0
+"49f680042b","Employee Self Service","Employee Grade",0,0,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0
+"123bc07f2a","Employee Self Service","Holiday List",0,0,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0
+"4837501644","Employee Self Service","Company",0,0,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0
+"2023179c46","Employee Self Service","Vehicle Log",0,0,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0
+"8d3fd0105f","Employee Self Service","Designation",0,0,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0
+"8e228db1c4","Employee Self Service","Leave Type",0,0,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0
+"efa99c0e14","Employee Self Service","Shift Type",0,0,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0
+"39e4cab1ea","Employee Self Service","Branch",0,0,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0
+"7abaeded8d","Employee Self Service","Journal Entry",0,0,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0
+"6bd78fcdc4","Employee Self Service","User",0,0,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0
+"ed00a735f4","Employee Self Service","Leave Allocation",0,0,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0
+"249b139710","Employee Self Service","Gender",0,0,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0
+"17aecd81f5","Employee Self Service","Timesheet",0,0,0,1,1,1,1,1,1,1,0,1,0,0,1,1,1
+"4bba30ead7","Employee Self Service","Employee Tax Exemption Proof Submission",0,0,0,1,1,1,1,0,0,0,0,1,0,0,1,1,1
+"718f3fdfe3","Employee Self Service","Employee Tax Exemption Declaration",0,0,0,1,1,1,1,0,0,0,0,1,0,0,1,1,1
+"6d29784073","Employee Self Service","Compensatory Leave Request",0,0,0,1,1,1,1,0,0,0,0,1,0,0,1,1,1
+"c82ba4b620","Employee Self Service","Attendance Request",0,0,0,1,1,1,1,0,0,0,0,1,0,0,1,1,1
+"b3d4cff87e","Employee Self Service","Leave Application",0,0,0,1,1,1,1,0,0,0,0,1,0,0,1,1,1
+"334792665d","Employee Self Service","Expense Claim",0,0,0,1,1,1,1,0,0,0,0,1,0,0,1,1,1
+"5c827ddaa6","Employee Self Service","Employee",0,0,0,1,1,0,0,0,0,0,0,1,0,0,1,1,1
+"9910f6a485","Employee Self Service","Salary Slip",0,0,0,1,0,0,0,0,0,0,0,1,0,0,1,1,1
+"0be2c44892","System Manager","Patient Language",0,0,0,1,1,1,1,0,0,0,1,1,0,0,1,1,1
+"c0074f4b9c","System Manager","Marital Status",0,0,0,1,1,1,1,0,0,0,1,1,0,0,1,1,1
+"3149f7f182","System Manager","Occupation",0,0,0,1,1,1,1,0,0,0,1,1,0,0,1,1,1
+"c151c2a964","System Manager","Insurance Billing Rule Template",0,0,0,1,1,1,1,0,0,0,1,1,0,0,1,1,1
+"8da623b333","System Manager","Copay Type",0,0,0,1,1,1,1,0,0,0,1,1,0,0,1,1,1
+"8afa64c5c6","System Manager","Insurance Scheme",0,0,0,1,1,1,1,0,0,0,1,1,0,0,1,1,1
+"1d8f250d86","System Manager","Inpatient Medication Entry",0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1
+"3baaa51ab5","System Manager","Inpatient Medication Order",0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1
+"602f41545d","Healthcare Administrator","Patient Assessment Template",0,0,0,1,1,1,1,0,0,0,1,1,0,0,1,1,1
+"8afc1b0046","Physician","Patient Assessment Template",0,0,0,1,1,1,0,0,0,0,1,1,0,0,1,1,1
+"cc272eab75","System Manager","Patient Assessment Template",0,0,0,1,1,1,1,0,0,0,1,1,0,0,1,1,1
+"00d750645c","System Manager","Therapy Plan",0,0,0,1,1,1,1,0,0,0,1,1,0,0,1,1,1
+"0d8a7f7af5","Healthcare Administrator","Therapy Plan",0,0,0,1,1,1,1,0,0,0,1,1,0,0,1,1,1
+"2997664528","Physician","Therapy Plan",0,0,0,1,1,0,0,0,0,0,1,1,0,0,1,1,1
+"721680e19b","Physician","Therapy Session",0,0,0,1,1,1,0,1,1,0,1,1,0,0,1,1,1
+"83774a06aa","System Manager","Therapy Session",0,0,0,1,1,1,1,0,0,0,1,1,0,0,1,1,1
+"142c1456b2","Sales Manager","POS Opening Entry",0,0,0,1,1,1,0,1,1,0,1,1,0,0,1,1,1
+"62e2ca439d","System Manager","POS Opening Entry",0,0,0,1,1,1,1,1,1,0,1,1,0,0,1,1,1
+"b3bf2374dc","Administrator","POS Opening Entry",0,0,0,1,1,1,1,1,1,0,1,1,0,0,1,1,1
+"17837f3ecd","Sales User","Appointment",0,0,0,1,1,1,0,0,0,0,1,1,0,0,1,1,1
+"2d2adc02cd","Sales Manager","Appointment",0,0,0,1,1,1,1,0,0,0,1,1,0,0,1,1,1
+"57a64b647e","Guest","Appointment",0,0,0,1,0,1,0,0,0,0,1,1,0,0,1,1,1
+"5917038dae","System Manager","Appointment",0,0,0,1,1,1,1,0,0,0,1,1,0,0,1,1,1
+"2f40e1aecf","Accounts User","Dunning",0,0,0,1,1,1,1,0,0,0,1,1,0,0,1,1,1
+"5ba51025e6","Accounts Manager","Dunning",0,0,0,1,1,1,1,1,1,0,1,1,0,0,1,1,1
+"d5323c61da","System Manager","Dunning",0,0,0,1,1,1,1,1,1,1,1,1,0,0,1,1,1
+"13d27b14a4","All","Dashboard",0,0,0,1,0,0,0,0,0,0,1,1,0,0,1,1,1
+"b54759a4c3","Dashboard Manager","Dashboard",0,0,0,1,1,1,1,0,0,0,1,1,0,0,1,1,1
+"b93bb22813","System Manager","Dashboard",0,0,0,1,1,1,1,0,0,0,1,1,0,0,1,1,1
+"3fc369f971","System Manager","Dashboard Chart",0,0,0,1,1,1,1,0,0,0,1,1,0,0,1,1,1
+"6067b963b9","Dashboard Manager","Dashboard Chart",0,0,0,1,1,1,1,0,0,0,1,1,0,0,1,1,1
+"7be6d9e7d5","All","Dashboard Chart",0,0,0,1,0,1,0,0,0,0,1,1,0,0,1,1,1
+"009c34786a","Nursing User","Inpatient Record",0,2,0,1,0,0,0,0,0,0,1,1,0,0,1,1,1
+"0b065337e6","Nursing User","Inpatient Record",0,1,0,1,0,0,0,0,0,0,1,0,0,0,0,0,0
+"2736064563","Physician","Inpatient Record",0,0,0,1,1,1,1,0,0,0,1,1,0,0,1,1,1
+"4ee4c76f8c","Physician","Inpatient Record",0,1,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0
+"6bb16f983f","Physician","Inpatient Record",0,2,0,1,0,0,0,0,0,0,1,1,0,0,1,1,1
+"bc9fba8311","Healthcare Administrator","Inpatient Record",0,0,0,1,1,1,1,0,0,0,1,1,0,0,1,1,1
+"c75c950278","Nursing User","Inpatient Record",0,0,0,1,1,1,1,0,0,0,1,1,0,0,1,1,1
+"eeeac7c57c","Healthcare Administrator","Inpatient Record",0,2,0,1,1,0,0,0,0,0,1,1,0,0,1,1,1
+"a709be65eb","All","Workflow Action",0,0,1,1,0,0,1,0,0,0,0,0,0,0,0,0,0
+"3edf0869f6","System Manager","Employee Tax Exemption Proof Submission",0,0,0,1,1,1,1,1,1,1,1,1,0,0,1,1,1
+"5425f18750","HR Manager","Employee Tax Exemption Proof Submission",0,0,0,1,1,1,1,1,1,1,1,1,0,0,1,1,1
+"78b4aa816e","HR User","Employee Tax Exemption Proof Submission",0,0,0,1,1,1,1,1,1,1,1,1,0,0,1,1,1
+"eb2a9c9a58","Employee","Employee Tax Exemption Proof Submission",0,0,0,1,1,1,1,1,1,1,1,1,0,0,1,1,1
+"142af6320f","HR User","Employee Tax Exemption Declaration",0,0,0,1,1,1,1,1,1,1,1,1,0,0,1,1,1
+"30bf7e43b1","Employee","Employee Tax Exemption Declaration",0,0,0,1,1,1,1,1,1,1,1,1,0,0,1,1,1
+"4869ee20b1","HR Manager","Employee Tax Exemption Declaration",0,0,0,1,1,1,1,1,1,1,1,1,0,0,1,1,1
+"ad70962b40","System Manager","Employee Tax Exemption Declaration",0,0,0,1,1,1,1,1,1,1,1,1,0,0,1,1,1
+"36fae7cf75","HR Manager","Shift Type",0,0,0,1,1,1,1,0,0,0,1,1,0,0,1,1,1
+"9943d6b724","HR User","Shift Type",0,0,0,1,1,1,0,0,0,0,1,1,0,0,1,1,1
+"c38759edb2","Employee","Shift Type",0,0,0,1,0,0,0,0,0,0,1,1,0,0,1,1,1
+"40a6ce33c4","HR Manager","Employee Grade",0,0,0,1,1,1,1,0,0,0,1,1,0,0,1,1,1
+"564702df4c","System Manager","Employee Grade",0,0,0,1,1,1,1,0,0,0,1,1,0,0,1,1,1
+"debd996bfd","HR User","Employee Grade",0,0,0,1,1,1,1,0,0,0,1,1,0,0,1,1,1
+"168422c6b3","Employee","Attendance Request",0,0,0,1,1,1,1,0,0,0,1,1,0,0,1,1,1
+"24a026b63b","HR User","Attendance Request",0,0,0,1,1,1,1,1,1,1,1,1,0,0,1,1,1
+"81f8baeb9e","System Manager","Attendance Request",0,0,0,1,1,1,1,1,1,1,1,1,0,0,1,1,1
+"ee8de9a038","HR Manager","Attendance Request",0,0,0,1,1,1,1,1,1,1,1,1,0,0,1,1,1
+"291d8b3aa6","System Manager","Payroll Period",0,0,0,1,1,1,1,0,0,0,1,1,0,0,1,1,1
+"6083561212","HR Manager","Payroll Period",0,0,0,1,1,1,1,0,0,0,1,1,0,0,1,1,1
+"e53c32dd41","HR User","Payroll Period",0,0,0,1,1,1,1,0,0,0,1,1,0,0,1,1,1
+"16f33a20cc","Employee","Compensatory Leave Request",0,0,0,1,1,1,1,0,0,0,1,1,0,0,1,1,1
+"1f09cd63d8","HR User","Compensatory Leave Request",0,0,0,1,1,1,1,1,0,0,1,1,0,0,1,1,1
+"5559076026","System Manager","Compensatory Leave Request",0,0,0,1,1,1,1,0,0,0,1,1,0,0,1,1,1
+"71a2a39b82","HR Manager","Compensatory Leave Request",0,0,0,1,1,1,1,1,1,0,1,1,0,0,1,1,1
+"ea92ca5cfa","HR Manager","Payroll Entry",0,0,0,1,1,1,1,1,1,0,1,0,0,0,1,0,0
+"2cd58d33ab","Stock User","Delivery Trip",0,0,0,1,1,1,1,1,1,1,1,1,0,0,1,1,1
+"91bd094e6e","Fulfillment User","Delivery Trip",0,0,0,1,1,1,1,1,1,1,1,1,0,0,1,1,1
+"41620a1951","Nursing User","Clinical Procedure Template",0,0,0,1,0,0,0,0,0,0,1,1,0,0,1,1,1
+"5c9b50a4cb","System Manager","Clinical Procedure Template",0,0,0,1,1,1,1,0,0,0,1,1,0,0,1,1,1
+"6314b13a13","Physician","Clinical Procedure Template",0,0,0,1,1,0,0,0,0,0,1,1,0,0,1,1,1
+"f027fbf9cd","Healthcare Administrator","Clinical Procedure Template",0,0,0,1,1,1,1,0,0,0,1,1,0,0,1,1,1
+"01fd847fc7","Sales User","POS Settings",0,0,0,1,1,0,0,0,0,0,0,0,0,0,1,1,1
+"3a0c3d5b66","System Manager","POS Settings",0,0,0,1,1,0,0,0,0,0,0,0,0,0,1,1,1
+"c9531a771d","Accounts User","POS Settings",0,0,0,1,1,0,0,0,0,0,0,0,0,0,1,1,1
+"dc24a0f897","Physician","Medical Code",0,0,0,1,1,1,1,0,0,0,1,1,0,0,1,1,1
+"ab3fc4f9bd","Healthcare Administrator","Healthcare Settings",0,0,0,1,1,1,1,0,0,0,0,0,0,0,1,1,1
+"0cc157253a","Healthcare Administrator","Patient Appointment",0,0,0,1,1,1,1,0,0,0,1,1,0,0,1,1,1
+"1ac64b9193","Nursing User","Patient Appointment",0,0,0,1,1,1,1,0,0,0,1,1,0,0,1,1,1
+"d9ed08d296","Physician","Patient Appointment",0,0,0,1,1,1,1,0,0,0,1,1,0,0,1,1,1
+"3902fbd55d","Administrator","Salutation",0,0,0,1,1,1,1,0,0,0,1,1,0,0,1,1,1
+"671a23e70d","All","Salutation",0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+"bededfffb0","System Manager","Salutation",0,0,0,1,1,1,1,0,0,0,1,1,0,0,1,1,1
+"dc56286e8c","All","Gender",0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+"fcd4835823","System Manager","Gender",0,0,0,1,1,1,1,0,0,0,1,1,0,0,1,1,1
+"7b0ca1681a","Physician","Dosage Form",0,0,0,1,1,1,1,0,0,0,1,1,0,0,1,1,1
+"a79ecc4a9f","Healthcare Administrator","Dosage Form",0,0,0,1,1,1,1,0,0,0,1,1,0,0,1,1,1
+"58422a2125","Physician","Clinical Procedure",0,0,0,1,1,1,1,1,1,0,1,1,0,0,1,1,1
+"a3bb4e9de4","Nursing User","Clinical Procedure",0,0,0,1,1,1,1,1,0,0,1,1,0,0,1,1,1
+"5dfe939c2a","HR User","Employee Health Insurance",0,0,0,1,0,0,0,0,0,0,1,1,0,0,1,1,1
+"d53c709dc4","HR Manager","Employee Health Insurance",0,0,0,1,1,1,1,0,0,0,1,1,0,0,1,1,1
+"171feb3baa","Laboratory User","Medical Department",0,0,0,1,1,0,0,0,0,0,1,1,0,0,1,1,1
+"2cd42bf974","Physician","Medical Department",0,0,0,1,1,0,0,0,0,0,1,1,0,0,1,1,1
+"7b73d2c183","Healthcare Administrator","Medical Department",0,0,0,1,1,1,1,0,0,0,1,1,0,0,1,1,1
+"a4427ffff2","Nursing User","Medical Department",0,0,0,1,1,0,0,0,0,0,1,1,0,0,1,1,1
+"09a2b1c48e","Healthcare Administrator","Complaint",0,0,0,1,1,1,1,0,0,0,1,1,0,0,1,1,1
+"a7af5088b6","Physician","Complaint",0,0,0,1,1,1,1,0,0,0,1,1,0,0,1,1,1
+"32344621bd","System Manager","Custom DocPerm",0,0,0,1,1,1,1,0,0,0,1,1,1,0,1,1,1
+"328ad1701d","Nursing User","Healthcare Service Unit",0,0,0,1,0,0,0,0,0,0,1,1,0,0,1,1,1
+"42b644df74","Physician","Healthcare Service Unit",0,0,0,1,1,1,0,0,0,0,1,1,0,0,1,1,1
+"694210ec95","Healthcare Administrator","Healthcare Service Unit",0,0,0,1,1,1,1,0,0,0,1,1,0,0,1,1,1
+"3043333457","Healthcare Administrator","Prescription Duration",0,0,0,1,1,1,1,0,0,0,1,1,0,0,1,1,1
+"4bc68ea727","Physician","Prescription Duration",0,0,0,1,1,1,1,0,0,0,1,1,0,0,1,1,1
+"8a76c8b473","Physician","Prescription Dosage",0,0,0,1,1,1,1,0,0,0,1,1,0,0,1,1,1
+"ea1234a3c9","Healthcare Administrator","Prescription Dosage",0,0,0,1,1,1,1,0,0,0,1,1,0,0,1,1,1
+"ecb8fefd40","Fleet Manager","Vehicle Log",0,0,0,1,1,1,1,1,1,0,1,1,0,0,1,1,1
+"7e4dbf7179","Physician","Appointment Type",0,0,0,1,1,1,1,0,0,0,1,1,0,0,1,1,1
+"9dbfe91a63","Healthcare Administrator","Appointment Type",0,0,0,1,1,1,1,0,0,0,1,1,0,0,1,1,1
+"5c6ea56d2e","Physician","Patient Medical Record",0,0,0,1,1,1,1,0,0,0,1,1,0,0,1,1,1
+"3331841342","Accounts User","Payment Entry",0,0,0,1,1,1,1,1,1,1,1,1,1,0,1,1,1
+"f518587e66","Accounts Manager","Payment Entry",0,0,0,1,1,1,1,1,1,1,1,1,1,0,1,1,1
+"dba26e0e64","Physician","Patient Encounter",0,0,0,1,1,1,1,1,1,1,1,1,0,0,1,1,1
+"1c3dc4dcc1","Laboratory User","Sample Collection",0,0,0,1,1,1,0,1,1,1,1,1,0,0,1,1,1
+"194de55568","Healthcare Administrator","Lab Test Template",0,0,0,1,1,1,1,0,0,0,1,1,0,0,1,1,1
+"ee29ac0462","Laboratory User","Lab Test Template",0,0,1,1,0,0,0,0,0,0,1,1,0,0,1,1,1
+"3664c61a56","Laboratory User","Lab Test",0,0,1,1,1,1,0,1,1,1,1,0,0,0,1,1,1
+"d7420c2cb5","LabTest Approver","Lab Test",0,0,0,1,1,0,0,0,0,0,1,1,0,0,1,1,1
+"f2f88d75e2","Physician","Lab Test",0,0,0,1,1,0,0,0,0,0,1,1,0,0,1,1,1
+"e569477f13","Physician","Healthcare Practitioner",0,0,0,1,1,1,1,0,0,0,1,1,0,0,1,1,1
+"e980676af1","Nursing User","Healthcare Practitioner",0,0,0,1,1,1,1,0,0,0,1,1,0,0,1,1,1
+"f5c528e33a","Laboratory User","Healthcare Practitioner",0,0,0,1,1,1,0,0,0,0,1,0,0,0,1,1,1
+"f26f19ae9d","System Manager","Payment Gateway",0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+"4e489b6849","Accounts User","Payment Request",0,0,0,1,1,1,1,0,0,0,1,1,0,0,1,1,1
+"dc1e19217c","Accounts Manager","Payment Request",0,0,0,1,1,1,1,1,1,1,1,1,0,0,1,1,1
+"3e3c310591","System Manager","User",0,1,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0
+"49f3cde4a2","System Manager","User",0,0,0,1,1,1,1,0,0,0,1,1,1,1,1,1,1
+"efa6c26067","Stock Manager","Stock Settings",0,0,0,1,1,1,0,0,0,0,0,0,0,0,1,1,1
+"28e5ef659f","Sales Manager","Sales Order",0,1,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0
+"380b599bcd","Maintenance User","Sales Order",0,0,0,1,1,1,1,1,1,1,1,0,0,0,1,1,1
+"414a552d47","Sales Manager","Sales Order",0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1
+"5e39fd7577","Accounts User","Sales Order",0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,1,1
+"9d104e5a9e","Stock User","Sales Order",0,0,0,1,0,0,0,0,0,0,1,0,0,0,0,0,0
+"ba2209e239","Sales User","Sales Order",0,0,0,1,1,1,1,1,1,1,1,0,0,0,1,1,1
+"287a528050","Stock User","Customer",0,0,0,1,0,0,0,0,0,0,1,0,0,0,0,1,1
+"2a9daeaebc","Accounts User","Customer",0,0,0,1,0,0,0,0,0,0,1,0,0,0,0,1,1
+"2dfe804b8e","Sales User","Customer",0,0,0,1,1,1,0,0,0,0,1,0,0,0,1,1,1
+"64485da9c1","Sales Manager","Customer",0,0,0,1,0,0,0,0,0,0,1,0,0,0,0,1,1
+"a23094e97b","Sales Master Manager","Customer",0,0,0,1,1,1,1,0,0,0,1,1,1,1,1,1,1
+"bc527f74b1","Accounts Manager","Customer",0,0,0,1,0,0,0,0,0,0,1,0,0,0,0,1,1
+"cd19cf37d6","Sales User","Customer",0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+"e66002d995","Sales Master Manager","Customer",0,1,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0
+"eb1a3f1583","Stock Manager","Customer",0,0,0,1,0,0,0,0,0,0,1,0,0,0,0,1,1
+"6cad497d3e","All","Sales Invoice",0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+"6d81da48e7","Accounts Manager","Sales Invoice",0,1,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0
+"b17a377bff","Accounts User","Sales Invoice",0,0,0,1,1,1,0,1,0,1,1,0,0,0,1,1,1
+"d93d01ce86","Accounts Manager","Sales Invoice",0,0,0,1,1,1,1,1,1,1,1,0,0,0,1,1,1
+"1e8d57c4f7","Accounts Manager","POS Profile",0,0,0,1,1,1,1,0,0,0,1,0,0,0,1,1,1
+"bfe12c4e8f","Accounts User","POS Profile",0,0,0,1,0,0,0,0,0,0,1,0,0,0,0,1,1
+"1a6f8ae28d","Purchase User","Company",0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+"6d8369aa94","Sales User","Company",0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+"7210223e36","Projects User","Company",0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+"c9f0a97f8f","System Manager","Company",0,0,0,1,1,1,1,0,0,0,1,0,0,0,1,1,1
+"d0f9ae8405","Employee","Company",0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+"d7881e1d7e","Stock User","Company",0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+"e689fafb2b","Accounts User","Company",0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,1,1
+"ea099fd6c8","Accounts Manager","Company",0,0,0,1,1,1,1,0,0,0,1,1,0,0,1,1,1
+"4178bb7537","Blogger","Blog Post",0,0,0,1,1,1,0,0,0,0,1,0,0,0,1,1,1
+"8162ab8f75","Website Manager","Blog Post",0,0,0,1,1,1,1,0,0,0,1,0,0,1,1,1,1
+"43b5b78bff","All","Item Group",0,0,1,0,0,0,0,0,0,0,1,1,0,0,1,1,1
+"649da769d3","Accounts User","Item Group",0,0,0,1,0,0,0,0,0,0,1,0,0,0,0,1,1
+"691dcd673d","Item Manager","Item Group",0,0,0,1,1,1,1,0,0,0,1,1,1,1,1,1,1
+"72014cc101","Sales User","Item Group",0,0,0,1,0,0,0,0,0,0,1,0,0,0,0,1,1
+"98c82b4e04","Stock User","Item Group",0,0,0,1,0,0,0,0,0,0,1,0,0,0,0,1,1
+"c3a27cb45e","Stock Manager","Item Group",0,0,0,1,0,0,0,0,0,0,1,1,0,0,0,1,1
+"f828522c7a","Purchase User","Item Group",0,0,0,1,0,0,0,0,0,0,1,0,0,0,0,1,1
+"0fdc3ae8ba","Accounts User","Journal Entry",0,0,0,1,1,1,1,1,1,1,1,0,0,0,1,1,1
+"7883525ce4","Auditor","Journal Entry",0,0,0,1,0,0,0,0,0,0,1,0,0,0,0,1,1
+"a08cdda70f","Accounts Manager","Journal Entry",0,0,0,1,1,1,1,1,1,1,1,1,1,0,1,1,1
+"1a91f9b427","Purchase User","Warehouse",0,0,0,1,0,0,0,0,0,0,1,0,0,0,0,1,1
+"27b1e5e728","Accounts User","Warehouse",0,0,0,1,0,0,0,0,0,0,1,0,0,0,0,1,1
+"33a5e9bd72","Item Manager","Warehouse",0,0,0,1,1,1,1,0,0,0,1,1,1,1,1,1,1
+"3af48ca5fe","Stock User","Warehouse",0,0,0,1,0,0,0,0,0,0,1,0,0,0,0,1,1
+"ab27e73fe5","Sales User","Warehouse",0,0,0,1,0,0,0,0,0,0,1,0,0,0,0,1,1
+"e15b7445ae","Manufacturing User","Warehouse",0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+"2626a40147","HR User","Salary Structure",0,0,0,1,1,1,1,1,1,1,1,0,0,0,1,1,1
+"830535493d","HR Manager","Salary Structure",0,0,0,1,1,1,1,1,1,1,1,1,1,0,1,1,1
+"08d7d4144f","Projects User","Project",0,0,0,1,1,1,1,0,0,0,1,0,0,0,1,1,1
+"c1126bbc7e","All","Project",0,1,0,1,0,0,0,0,0,0,1,0,0,0,0,0,0
+"fb75f1395c","Projects Manager","Project",0,0,0,1,1,1,1,0,0,0,1,1,0,0,1,1,1
+"5f2713eec1","Employee","Employee",0,0,0,1,0,0,0,0,0,0,1,0,0,0,0,1,1
+"8a4c495e33","HR Manager","Employee",0,0,0,1,1,1,1,0,0,0,1,1,1,1,1,1,1
+"b032bd4b18","HR User","Employee",0,0,0,1,1,1,1,0,0,0,1,1,1,0,1,1,1
+"38f94333b9","Projects User","Timesheet",0,0,0,1,1,1,1,1,1,1,1,0,0,0,1,1,1
+"4923ddb410","Accounts User","Timesheet",0,1,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0
+"5fcfb8e925","Manufacturing User","Timesheet",0,0,0,1,1,1,1,1,1,1,1,1,0,0,1,1,1
+"a37b15d8a8","Employee","Timesheet",0,0,0,1,1,1,0,0,0,0,0,0,0,0,0,0,0
+"f8270a5c86","Accounts User","Timesheet",0,0,0,1,1,1,1,1,1,1,1,0,0,0,0,0,1
+"f949d2696d","HR User","Timesheet",0,0,0,1,1,1,1,1,1,1,1,1,0,0,1,1,1
+"1389f7c516","HR User","Leave Type",0,0,0,1,1,1,1,0,0,0,1,0,0,0,1,1,1
+"89771ceecb","Employee","Leave Type",0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+"bccb6e949e","HR Manager","Leave Type",0,0,0,1,1,1,1,0,0,0,1,0,0,0,1,1,1
+"9bd383d6af","HR User","Leave Allocation",0,0,0,1,1,1,1,1,1,1,1,0,0,0,1,1,1
+"b949357747","HR Manager","Leave Allocation",0,0,0,1,1,1,1,1,1,1,1,1,1,0,1,1,1
+"2cbf95e267","Leave Approver","Leave Application",0,1,0,1,1,0,0,0,0,0,1,0,0,0,0,0,0
+"458987f494","HR User","Leave Application",0,0,0,1,1,1,1,1,1,1,1,0,0,1,1,1,1
+"48ec9ec4f4","HR Manager","Leave Application",0,0,0,1,1,1,1,1,1,1,1,1,0,1,1,1,1
+"5a5135034b","HR User","Leave Application",0,1,0,1,1,0,0,0,0,0,1,0,0,0,0,0,0
+"897eb2c0ad","Leave Approver","Leave Application",0,0,0,1,1,0,1,1,1,1,1,0,0,0,1,1,1
+"b9732d14ad","Employee","Leave Application",0,0,0,1,1,1,0,0,0,0,1,0,0,0,1,1,1
+"d6f87e4f57","All","Leave Application",0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+"1766c102e2","HR User","Department",0,0,0,1,1,1,1,0,0,0,1,0,0,0,1,1,1
+"3d071e32d4","HR Manager","Department",0,0,0,1,1,1,1,0,0,0,1,1,1,1,1,1,1
+"4fd6daac56","Academics User","Department",0,0,0,1,1,1,1,0,0,0,1,1,0,0,1,1,1
+"09146ab3dd","Accounts User","Account",0,0,0,1,1,1,1,0,0,0,1,1,1,0,1,1,1
+"1e5344c7e0","Accounts Manager","Account",0,0,0,1,1,1,1,0,0,0,1,1,1,1,1,1,1
+"333b5b6c43","Sales User","Account",0,0,0,1,0,0,0,0,0,0,1,0,0,0,0,1,1
+"61a480af4b","Auditor","Account",0,0,0,1,0,0,0,0,0,0,1,0,0,0,0,1,1
+"ec987b16d1","Purchase User","Account",0,0,0,1,0,0,0,0,0,0,1,0,0,0,0,1,1
+"07bc7d4020","Projects User","Task",0,0,0,1,1,1,1,0,0,0,1,0,0,0,1,1,1
+"a3a6a36fbe","HR User","Job Applicant",0,0,0,1,1,1,1,0,0,0,1,0,0,0,1,1,1
+"482acc1f9c","Sales User","Currency",0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+"5c073adc29","Purchase User","Currency",0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+"bdc75e7ea1","System Manager","Currency",0,0,0,1,1,1,1,0,0,0,1,1,1,0,1,1,1
+"e6a47c9a95","Accounts User","Currency",0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+"b6e3467ccf","Purchase Master Manager","Price List",0,0,0,1,1,1,1,0,0,0,1,0,0,0,1,0,0
+"d27f29a593","Sales Master Manager","Price List",0,0,0,1,1,1,1,0,0,0,1,1,1,0,1,0,0
+"d36ee42e31","Sales User","Price List",0,0,0,1,0,0,0,0,0,0,1,0,0,0,0,0,0
+"f422c1a4de","Manufacturing User","Price List",0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+"fac59de227","Purchase User","Price List",0,0,0,1,0,0,0,0,0,0,1,0,0,0,0,0,0
+"08ac30ece1","Purchase User","Cost Center",0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+"0ad5e5c3c1","Auditor","Cost Center",0,0,0,1,0,0,0,0,0,0,1,1,0,0,0,0,0
+"136e93f438","Accounts User","Cost Center",0,0,0,1,0,0,0,0,0,0,1,0,0,0,0,1,1
+"1c951b694a","Sales User","Cost Center",0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+"7718dff46c","Accounts Manager","Cost Center",0,0,0,1,1,1,1,0,0,0,1,0,0,0,1,1,1
+"d82a8da6f3","System Manager","Print Format",0,0,0,1,1,1,1,0,0,0,1,0,0,0,1,1,1
+"00dd8f7cbc","Accounts Manager","Contact",0,0,0,1,1,1,0,0,0,0,1,0,0,0,1,1,1
+"12ba3a702a","Maintenance Manager","Contact",0,0,0,1,1,1,0,0,0,0,1,0,0,0,1,1,1
+"553fc73572","Purchase Master Manager","Contact",0,0,0,1,1,1,1,0,0,0,1,0,0,0,1,1,1
+"5dfde42631","Accounts User","Contact",0,0,0,1,1,1,0,0,0,0,1,0,0,0,1,1,1
+"6df6e72ec5","All","Contact",0,1,0,1,0,0,0,0,0,0,1,0,0,0,0,0,0
+"7e80c32337","Sales User","Contact",0,0,0,1,1,1,0,0,0,0,1,0,0,0,1,1,1
+"9cac376cdc","Purchase User","Contact",0,0,0,1,1,1,0,0,0,0,1,0,0,0,1,1,1
+"a43340f513","Maintenance User","Contact",0,0,0,1,1,1,0,0,0,0,1,0,0,0,1,1,1
+"a899bd173f","System Manager","Contact",0,0,0,1,1,1,1,0,0,0,1,1,1,1,1,1,1
+"b4e6e8e893","Sales Master Manager","Contact",0,0,0,1,1,1,1,0,0,0,1,0,0,0,1,1,1
+"c3448cb760","Purchase Manager","Contact",0,0,0,1,1,1,0,0,0,0,1,0,0,0,1,1,1
+"ccf1e86847","Sales Manager","Contact",0,0,0,1,1,1,0,0,0,0,1,0,0,0,1,1,1
+"0ab43f4696","Stock Manager","UOM",0,0,0,1,0,0,0,0,0,0,1,0,0,0,0,1,1
+"2079bc1ae6","Sales User","Territory",0,0,0,1,0,0,0,0,0,0,1,0,0,0,0,1,1
+"2e31adadc9","Sales Master Manager","Territory",0,0,0,1,1,1,1,0,0,0,1,1,1,1,1,1,1
+"2f56272c98","Maintenance User","Territory",0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+"36989b42b4","Item Manager","UOM",0,0,0,1,1,1,1,0,0,0,1,1,1,0,1,1,1
+"4ffb7ff3b5","Sales Manager","Territory",0,0,0,1,0,0,0,0,0,0,1,0,0,0,0,1,1
+"853bf875c4","Stock User","UOM",0,0,0,1,0,0,0,0,0,0,1,0,0,0,0,1,1
+"d4776ac6bb","Stock User","Territory",0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+"d717cf6d89","Customer","Territory",0,0,1,0,0,0,0,0,0,0,1,1,0,0,1,1,1
+"a8ce7205ab","Customer","Customer Group",0,0,1,0,0,0,0,0,0,0,1,1,0,0,1,1,1
+"aea2be31cd","Sales Manager","Customer Group",0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+"c068bd0531","Sales User","Customer Group",0,0,0,1,0,0,0,0,0,0,1,0,0,0,0,1,1
+"c0de2de866","Sales User","Customer Group",0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+"d14ad53f59","Sales Master Manager","Customer Group",0,0,0,1,1,1,1,0,0,0,1,1,1,1,1,1,1
+"d6f75887bb","Sales Manager","Customer Group",0,0,0,1,0,0,0,0,0,0,1,0,0,0,0,1,1
+"e4eecf03de","Sales Master Manager","Customer Group",0,1,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0
+"419430687f","HR Manager","Salary Slip",0,0,0,1,1,1,1,1,1,1,1,0,0,0,1,1,1
+"66995fffe4","Employee","Salary Slip",0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+"dc37873bb3","HR User","Salary Slip",0,0,0,1,1,1,0,1,0,0,1,0,0,0,1,1,1
+"34ca6dd598","HR Manager","Holiday List",0,0,0,1,1,1,1,0,0,0,1,0,0,0,1,1,1
+"3a8cd904fd","Employee","Expense Claim",0,0,0,1,1,1,0,0,0,0,1,0,0,0,1,1,1
+"5c76d3a642","Expense Approver","Expense Claim",0,0,0,1,1,1,1,1,1,1,1,0,0,0,1,1,1
+"733c00c12e","HR User","Expense Claim",0,0,0,1,1,1,1,1,1,1,1,0,0,0,1,1,1
+"91533e1355","HR User","Employment Type",0,0,0,1,1,1,1,0,0,0,1,0,0,0,1,1,1
+"985c08be5e","HR Manager","Employment Type",0,0,0,1,1,1,1,0,0,0,1,1,1,0,1,1,1
+"aa7adeadc2","HR Manager","Expense Claim",0,0,0,1,1,1,1,1,1,1,1,1,0,0,1,1,1
+"997be51d6a","Sales User","Designation",0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+"d5219fd4d5","HR User","Branch",0,0,0,1,1,1,1,0,0,0,1,0,0,0,1,1,1
+"d9b5e00345","HR Manager","Branch",0,0,0,1,1,1,1,0,0,0,1,0,0,0,1,1,1
+"e0c3eb5b1b","HR User","Designation",0,0,0,1,1,1,1,0,0,0,1,0,0,0,1,1,1
+"4dc8d8b98a","Accounts User","GL Entry",0,0,0,1,0,0,0,0,0,0,1,1,0,0,0,1,1
+"919fb1a7cf","Auditor","GL Entry",0,0,0,1,0,0,0,0,0,0,1,1,0,0,0,0,0
+"a293fc3955","Accounts Manager","GL Entry",0,0,0,1,0,0,0,0,0,0,1,1,0,0,0,1,1
+"7c85fa0a31","System Manager","Workflow Action Master",0,0,0,1,1,1,1,0,0,0,0,1,1,0,1,1,1
+"f0600e0447","System Manager","Workflow State",0,0,0,1,1,1,1,0,0,0,0,0,0,0,1,1,1
+"9c9ba674bf","System Manager","Workflow",0,0,1,1,1,1,1,0,0,0,1,1,1,1,1,1,1
+"2751ad34e0","System Manager","Page",0,0,0,1,1,0,0,0,0,0,0,0,0,0,1,1,1
+"d6001faae6","Administrator","Page",0,0,0,1,1,1,0,0,0,0,0,0,0,0,1,1,1
+"2e07aa7811","All","File",1,0,0,1,1,1,1,0,0,0,1,1,0,0,1,1,1
+"6ff96e9da1","System Manager","File",0,0,0,1,1,1,1,0,0,0,1,1,1,0,1,1,1
+"9a3d9cfcc7","Accounts Manager","Mode of Payment",0,0,0,1,1,1,0,0,0,0,1,0,0,0,1,1,1
+"ee8bfeb9a3","Accounts User","Mode of Payment",0,0,0,1,0,0,0,0,0,0,1,0,0,0,0,0,0
+"8b34c768d8","System Manager","Letter Head",0,0,0,1,1,1,1,0,0,0,1,0,0,0,1,1,1
+"fa7453088a","All","Letter Head",0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0

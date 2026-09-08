@@ -1,0 +1,96 @@
+{
+ "actions": [],
+ "autoname": "field:treatment_code",
+ "creation": "2022-06-24 11:42:23.599044",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "patient_encounter",
+  "sales_invoice",
+  "treatment_code",
+  "external_treatment_code",
+  "notes",
+  "items",
+  "diagnosis"
+ ],
+ "fields": [
+  {
+   "fieldname": "patient_encounter",
+   "fieldtype": "Link",
+   "label": "Patient Encounter",
+   "options": "Patient Encounter"
+  },
+  {
+   "fieldname": "sales_invoice",
+   "fieldtype": "Link",
+   "label": "Sales Invoice",
+   "options": "Sales Invoice"
+  },
+  {
+   "fieldname": "treatment_code",
+   "fieldtype": "Data",
+   "label": "Treatment Code",
+   "unique": 1
+  },
+  {
+   "fieldname": "external_treatment_code",
+   "fieldtype": "Data",
+   "label": "External Treatment Code"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "label": "Notes"
+  },
+  {
+   "fieldname": "items",
+   "fieldtype": "Table",
+   "label": "Items",
+   "options": "Mtiba Request Item Details"
+  },
+  {
+   "fieldname": "diagnosis",
+   "fieldtype": "Table",
+   "label": "Diagnosis",
+   "options": "Mtiba Request Diagnosis Details"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2022-06-29 15:24:18.973130",
+ "modified_by": "Administrator",
+ "module": "Gch Custom",
+ "name": "Mtiba Invoice",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "All",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

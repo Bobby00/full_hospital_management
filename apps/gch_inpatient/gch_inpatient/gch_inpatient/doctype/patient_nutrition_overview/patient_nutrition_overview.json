@@ -1,0 +1,214 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2024-06-12 08:20:54.237929",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "patient_details_section",
+  "inpatient_record",
+  "patient",
+  "age",
+  "gender",
+  "column_break_7",
+  "ward",
+  "room",
+  "bed",
+  "anthropometry_details_section_section",
+  "anthropometry_details",
+  "diet_details_section",
+  "diet_details_table",
+  "nutrition_plan_section_section",
+  "diet_type",
+  "feeding_route",
+  "current_meal_plan",
+  "nutrition_meal_plan_overview",
+  "create_nutrition_meal_plan",
+  "meal_order_summary_section",
+  "meal_order_summary_table",
+  "create_meal_order",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Naming Series",
+   "options": "HLC-PNO-.YYYY.-"
+  },
+  {
+   "fieldname": "patient_details_section",
+   "fieldtype": "Section Break",
+   "label": "Patient Details"
+  },
+  {
+   "fieldname": "inpatient_record",
+   "fieldtype": "Link",
+   "label": "Inpatient Record",
+   "options": "Inpatient Record",
+   "unique": 1
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fetch_from": "inpatient_record.patient",
+   "fieldname": "patient",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Patient",
+   "options": "Patient"
+  },
+  {
+   "fetch_from": "inpatient_record.dob",
+   "fieldname": "age",
+   "fieldtype": "Data",
+   "label": "DOB"
+  },
+  {
+   "fetch_from": "inpatient_record.gender",
+   "fieldname": "gender",
+   "fieldtype": "Link",
+   "label": "Gender",
+   "options": "Gender"
+  },
+  {
+   "fetch_from": "inpatient_record.ward_station",
+   "fieldname": "ward",
+   "fieldtype": "Link",
+   "in_global_search": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Ward",
+   "options": "Nursing Ward"
+  },
+  {
+   "fetch_from": "inpatient_record.room_no",
+   "fieldname": "room",
+   "fieldtype": "Data",
+   "label": "Room"
+  },
+  {
+   "fetch_from": "inpatient_record.bed_number",
+   "fieldname": "bed",
+   "fieldtype": "Data",
+   "label": "Bed"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Patient Nutrition Overview",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_7",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "anthropometry_details_section_section",
+   "fieldtype": "Section Break",
+   "label": "Anthropometry Details Section"
+  },
+  {
+   "fieldname": "anthropometry_details",
+   "fieldtype": "Table",
+   "label": "Anthropometry Details",
+   "options": "Anthropometry Details GCH"
+  },
+  {
+   "fieldname": "meal_order_summary_section",
+   "fieldtype": "Section Break",
+   "label": "Meal Order Summary"
+  },
+  {
+   "fieldname": "meal_order_summary_table",
+   "fieldtype": "Table",
+   "label": "Meal Order Summary Table",
+   "options": "Patient Meal Order List"
+  },
+  {
+   "fieldname": "nutrition_plan_section_section",
+   "fieldtype": "Section Break",
+   "label": "Nutrition Meal Plan Section"
+  },
+  {
+   "fieldname": "diet_type",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "Diet type",
+   "options": "Nutrition Diet Type"
+  },
+  {
+   "fieldname": "feeding_route",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "Feeding Route",
+   "options": "Nutrition Feeding Route"
+  },
+  {
+   "fieldname": "current_meal_plan",
+   "fieldtype": "Link",
+   "label": "Current Meal Plan",
+   "options": "Patient Meal Plan",
+   "read_only": 1
+  },
+  {
+   "fieldname": "nutrition_meal_plan_overview",
+   "fieldtype": "Table",
+   "label": "Nutrition Meal Plan Overview",
+   "options": "Patient Nutrition Plan Table"
+  },
+  {
+   "fieldname": "create_nutrition_meal_plan",
+   "fieldtype": "Button",
+   "label": "Create Nutrition Meal Plan"
+  },
+  {
+   "fieldname": "create_meal_order",
+   "fieldtype": "Button",
+   "label": "Create Catering Meal Order"
+  },
+  {
+   "fieldname": "diet_details_section",
+   "fieldtype": "Section Break",
+   "label": "Diet Request Details"
+  },
+  {
+   "fieldname": "diet_details_table",
+   "fieldtype": "Table",
+   "label": "Diet Details Table",
+   "options": "Patient Nutrition Diet Details"
+  }
+ ],
+ "hide_toolbar": 1,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-07-03 09:26:49.627852",
+ "modified_by": "Administrator",
+ "module": "Gch Inpatient",
+ "name": "Patient Nutrition Overview",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

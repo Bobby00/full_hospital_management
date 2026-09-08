@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include gch_messaging *.css
+recursive-include gch_messaging *.csv
+recursive-include gch_messaging *.html
+recursive-include gch_messaging *.ico
+recursive-include gch_messaging *.js
+recursive-include gch_messaging *.json
+recursive-include gch_messaging *.md
+recursive-include gch_messaging *.png
+recursive-include gch_messaging *.py
+recursive-include gch_messaging *.svg
+recursive-include gch_messaging *.txt
+recursive-exclude gch_messaging *.pyc

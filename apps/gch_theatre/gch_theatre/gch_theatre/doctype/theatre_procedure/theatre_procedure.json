@@ -1,0 +1,50 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-06-10 09:33:30.135083",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "procedure_name",
+  "procedure_type",
+  "urgency"
+ ],
+ "fields": [
+  {
+   "fieldname": "procedure_name",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Procedure Name",
+   "options": "Clinical Procedure Template",
+   "reqd": 1
+  },
+  {
+   "fieldname": "procedure_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Procedure Type",
+   "options": "\nEmergency\nElective",
+   "reqd": 1
+  },
+  {
+   "fieldname": "urgency",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Urgency",
+   "options": "\n1\n2\n3\n4",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-06-10 09:33:30.135083",
+ "modified_by": "Administrator",
+ "module": "GCH Theatre",
+ "name": "Theatre Procedure",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

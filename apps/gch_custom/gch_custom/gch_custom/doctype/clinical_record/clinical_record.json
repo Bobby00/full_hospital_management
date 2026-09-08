@@ -1,0 +1,255 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2022-12-21 03:36:53.814675",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "patient_details_section",
+  "naming_series",
+  "patient_encounter",
+  "patient_name",
+  "patient_uhid",
+  "patient_age",
+  "date_of_birth",
+  "gender",
+  "column_break_8",
+  "date",
+  "assessment_time",
+  "bmi",
+  "height_in_centimeters",
+  "weight_in_kilograms",
+  "physical_examinations_section",
+  "patient_physical_examination",
+  "history_section",
+  "patient_history",
+  "plan_of_action",
+  "patient_plan_of_action_notes",
+  "triage_notes",
+  "nursing_chief_complaint",
+  "nurse_notes",
+  "allergies_section",
+  "drug_allergy",
+  "food_allergy",
+  "other_allergy",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "patient_details_section",
+   "fieldtype": "Section Break",
+   "label": "Patient Details"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "options": "HLC-CLINICAL-RECORD-.YYYY.-"
+  },
+  {
+   "fieldname": "patient_encounter",
+   "fieldtype": "Link",
+   "label": "Patient Encounter",
+   "options": "Patient Encounter"
+  },
+  {
+   "fetch_from": "patient_encounter.date_of_birth",
+   "fieldname": "date_of_birth",
+   "fieldtype": "Data",
+   "label": "Date of Birth",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "patient_encounter.patient_sex",
+   "fieldname": "gender",
+   "fieldtype": "Link",
+   "label": "Gender",
+   "options": "Gender",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_8",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Today",
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Date",
+   "reqd": 1
+  },
+  {
+   "default": "Now",
+   "fieldname": "assessment_time",
+   "fieldtype": "Time",
+   "in_list_view": 1,
+   "label": "Assessment Time",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "patient_encounter.bmi",
+   "fieldname": "bmi",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "BMI",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "patient_encounter.height_in_centimeters",
+   "fieldname": "height_in_centimeters",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Height in Centimeters",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "patient_encounter.weight_in_kilograms",
+   "fieldname": "weight_in_kilograms",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Weight in Kilograms",
+   "read_only": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Clinical Record",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "physical_examinations_section",
+   "fieldtype": "Section Break",
+   "label": "Physical Examinations"
+  },
+  {
+   "fieldname": "patient_physical_examination",
+   "fieldtype": "Table",
+   "label": "Patient Physical Examination",
+   "options": "Patient Encounter Physical Examination Details"
+  },
+  {
+   "fieldname": "history_section",
+   "fieldtype": "Section Break",
+   "label": "History"
+  },
+  {
+   "fieldname": "patient_history",
+   "fieldtype": "Table",
+   "label": "Patient History",
+   "options": "Patient Encounter History Details"
+  },
+  {
+   "fieldname": "triage_notes",
+   "fieldtype": "Section Break",
+   "label": "Nursing Notes"
+  },
+  {
+   "fieldname": "nursing_chief_complaint",
+   "fieldtype": "Table",
+   "label": "Nursing Chief Complaint",
+   "mandatory_depends_on": "eval:!doc.__islocal && doc.workflow_state == 'Pending Triage' && !doc.clinic == 'Wellbaby - GCH'",
+   "options": "Nursing Chief Complaint"
+  },
+  {
+   "fieldname": "nurse_notes",
+   "fieldtype": "Small Text",
+   "label": "Nurse Notes",
+   "translatable": 1
+  },
+  {
+   "fieldname": "plan_of_action",
+   "fieldtype": "Section Break",
+   "label": "Care Objectives or Plan of Action"
+  },
+  {
+   "fieldname": "patient_plan_of_action_notes",
+   "fieldtype": "Table",
+   "label": "Patient Plan of Action Notes",
+   "options": "Patient Encounter Plan of Action"
+  },
+  {
+   "fieldname": "allergies_section",
+   "fieldtype": "Section Break",
+   "hidden": 1,
+   "label": "Allergies"
+  },
+  {
+   "fetch_from": "patient_encounter.drug_allergy",
+   "fieldname": "drug_allergy",
+   "fieldtype": "Table MultiSelect",
+   "hidden": 1,
+   "label": "Drug Allergy",
+   "options": "Patient Drug Allergy"
+  },
+  {
+   "fetch_from": "patient_encounter.food_allergy",
+   "fieldname": "food_allergy",
+   "fieldtype": "Table MultiSelect",
+   "hidden": 1,
+   "label": "Food Allergy",
+   "options": "Patient Food Allergy"
+  },
+  {
+   "fetch_from": "patient_encounter.other_allergy",
+   "fieldname": "other_allergy",
+   "fieldtype": "Table MultiSelect",
+   "hidden": 1,
+   "label": "Other Allergy",
+   "options": "Patient Other Allergy"
+  },
+  {
+   "fetch_from": "patient_encounter.patient_age",
+   "fieldname": "patient_age",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Age",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "patient_encounter.patient",
+   "fieldname": "patient_name",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Patient",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "patient_encounter.patient_uhid",
+   "fieldname": "patient_uhid",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Patient UHID Code"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2022-12-21 09:18:47.290618",
+ "modified_by": "Administrator",
+ "module": "Gch Custom",
+ "name": "Clinical Record",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

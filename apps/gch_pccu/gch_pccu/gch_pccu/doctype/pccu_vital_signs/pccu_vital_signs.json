@@ -1,0 +1,150 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-07-02 13:39:03.331978",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "pulse_rate",
+  "invasive_blood_pressure",
+  "mean_invasive_blood_pressure",
+  "non_invansive_blood_pressure",
+  "mean_non_invansive_blood_pressure",
+  "cerebral_perfusion_pressure",
+  "respiratory_rate",
+  "column_break_8",
+  "central_veneous_pressure",
+  "pulmonary_artery_rate",
+  "left_atrial_pressure",
+  "temperature",
+  "spo2",
+  "brain_saturation",
+  "recorded_at"
+ ],
+ "fields": [
+  {
+   "fieldname": "pulse_rate",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Pulse Rate"
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "invasive_blood_pressure",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "IBP"
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "mean_invasive_blood_pressure",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Mean IBP"
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "non_invansive_blood_pressure",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "NIBP"
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "mean_non_invansive_blood_pressure",
+   "fieldtype": "Data",
+   "in_global_search": 1,
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Mean NIBP"
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "default": "0",
+   "fieldname": "cerebral_perfusion_pressure",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Cerebral Perfusion Pressure"
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "respiratory_rate",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Respiratory Rate",
+   "search_index": 1
+  },
+  {
+   "columns": 4,
+   "fieldname": "central_veneous_pressure",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Central Veneous Pressure",
+   "precision": "0"
+  },
+  {
+   "fieldname": "pulmonary_artery_rate",
+   "fieldtype": "Int",
+   "label": "Pulmonary Artery Rate"
+  },
+  {
+   "fieldname": "left_atrial_pressure",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Left Atrial Pressure"
+  },
+  {
+   "fieldname": "temperature",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Temperature",
+   "non_negative": 1,
+   "precision": "1"
+  },
+  {
+   "fieldname": "spo2",
+   "fieldtype": "Data",
+   "label": "SpO2"
+  },
+  {
+   "fieldname": "brain_saturation",
+   "fieldtype": "Int",
+   "label": "Brain Saturation"
+  },
+  {
+   "default": "Now",
+   "fieldname": "recorded_at",
+   "fieldtype": "Datetime",
+   "label": "Recorded At"
+  },
+  {
+   "fieldname": "column_break_8",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-07-02 16:17:28.577398",
+ "modified_by": "Administrator",
+ "module": "GCH PCCU",
+ "name": "PCCU Vital Signs",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

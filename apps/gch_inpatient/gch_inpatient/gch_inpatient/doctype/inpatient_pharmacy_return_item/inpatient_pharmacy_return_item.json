@@ -1,0 +1,83 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-03-25 09:14:24.686035",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "item",
+  "item_name",
+  "issued_quantity",
+  "return_quantity",
+  "return_by",
+  "returning_name",
+  "returned_at",
+  "return_reason"
+ ],
+ "fields": [
+  {
+   "fieldname": "item",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Item",
+   "options": "Item"
+  },
+  {
+   "fetch_from": "item.item_name",
+   "fieldname": "item_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Item Name"
+  },
+  {
+   "fieldname": "issued_quantity",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Issued Quantity",
+   "read_only": 1
+  },
+  {
+   "fieldname": "return_quantity",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Return Quantity"
+  },
+  {
+   "fieldname": "return_by",
+   "fieldtype": "Link",
+   "label": "Return By",
+   "options": "User"
+  },
+  {
+   "fetch_from": "return_by.full_name",
+   "fieldname": "returning_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Returned by",
+   "read_only": 1
+  },
+  {
+   "fieldname": "returned_at",
+   "fieldtype": "Datetime",
+   "label": "Returned At"
+  },
+  {
+   "fieldname": "return_reason",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Return Reason"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-04-04 11:26:24.249397",
+ "modified_by": "Administrator",
+ "module": "Gch Inpatient",
+ "name": "Inpatient Pharmacy Return Item",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

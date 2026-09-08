@@ -1,0 +1,346 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:GCH-THB-{DD}{MM}{YYYY}-{####}",
+ "creation": "2023-08-07 05:49:35.864419",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "surgeon_anaesthetist_section",
+  "surgeon_or_doctor",
+  "surgeon_name",
+  "booking_info_column_break",
+  "anaesthetist",
+  "title",
+  "anaesthetist_name",
+  "patient_details_section",
+  "patient",
+  "not_in_system",
+  "patient_name",
+  "uhid_search",
+  "patient_uhid",
+  "mode_of_payment",
+  "patient_details_column_break",
+  "patient_phone",
+  "contact_phone",
+  "patient_dob",
+  "patient_gender",
+  "surgery_details_section",
+  "surgery",
+  "theatre",
+  "theatre_name",
+  "column_break_19",
+  "surgery_start_time",
+  "surgery_duration",
+  "surgery_end_time",
+  "is_forwarded",
+  "confirmation_details_section",
+  "is_surgeon_confirmed",
+  "is_patient_confirmed",
+  "is_finance_team_confirmed",
+  "finance_team_status",
+  "column_break_31",
+  "finance_comments",
+  "diagnosis_section_break",
+  "diagnosis",
+  "clinical_procedures_section",
+  "clinical_procedures",
+  "additional_notes__requirements_section",
+  "special_requirements",
+  "patient_education",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "surgeon_or_doctor",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Surgeon / Doctor",
+   "options": "Healthcare Practitioner",
+   "reqd": 1
+  },
+  {
+   "depends_on": "eval:doc.not_in_system",
+   "fieldname": "patient_name",
+   "fieldtype": "Data",
+   "label": "Patient Name"
+  },
+  {
+   "depends_on": "eval:doc.patient",
+   "fieldname": "patient_gender",
+   "fieldtype": "Link",
+   "label": "Patient Gender",
+   "options": "Gender",
+   "read_only": 1
+  },
+  {
+   "fieldname": "patient_dob",
+   "fieldtype": "Date",
+   "label": "Patient DOB"
+  },
+  {
+   "fieldname": "patient_phone",
+   "fieldtype": "Data",
+   "label": "Patient Phone"
+  },
+  {
+   "fieldname": "diagnosis",
+   "fieldtype": "Table",
+   "label": "Diagnosis",
+   "options": "Codification Table"
+  },
+  {
+   "fieldname": "special_requirements",
+   "fieldtype": "Long Text",
+   "label": "Special Requirements"
+  },
+  {
+   "fieldname": "anaesthetist",
+   "fieldtype": "Link",
+   "label": "Anaesthetist",
+   "options": "Healthcare Practitioner"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Theatre Booking",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "is_forwarded",
+   "fieldtype": "Check",
+   "hidden": 1,
+   "label": "Is Forwarded"
+  },
+  {
+   "depends_on": "eval:!doc.not_in_system",
+   "fieldname": "patient",
+   "fieldtype": "Link",
+   "label": "Patient",
+   "options": "Patient"
+  },
+  {
+   "fieldname": "booking_info_column_break",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "diagnosis_section_break",
+   "fieldtype": "Section Break",
+   "label": "Medical Diagnosis"
+  },
+  {
+   "depends_on": "eval:doc.patient",
+   "fetch_from": "patient.uhid_code",
+   "fieldname": "patient_uhid",
+   "fieldtype": "Data",
+   "label": "Patient UHID",
+   "read_only": 1
+  },
+  {
+   "fieldname": "clinical_procedures_section",
+   "fieldtype": "Section Break",
+   "label": "Clinical Procedures"
+  },
+  {
+   "fetch_from": "surgeon_or_doctor.practitioner_name",
+   "fieldname": "surgeon_name",
+   "fieldtype": "Data",
+   "label": "Surgeon Name",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "anaesthetist.practitioner_name",
+   "fieldname": "anaesthetist_name",
+   "fieldtype": "Data",
+   "label": "Anaesthetist Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "surgeon_anaesthetist_section",
+   "fieldtype": "Section Break",
+   "label": "Surgeon / Anaesthetist Details"
+  },
+  {
+   "fieldname": "patient_details_section",
+   "fieldtype": "Section Break",
+   "label": "Patient Details"
+  },
+  {
+   "fieldname": "patient_details_column_break",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "surgery_details_section",
+   "fieldtype": "Section Break",
+   "label": "Surgery Details"
+  },
+  {
+   "fieldname": "additional_notes__requirements_section",
+   "fieldtype": "Section Break",
+   "label": "Additional Notes / Requirements"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_finance_team_confirmed",
+   "fieldtype": "Check",
+   "label": "Finance Team Confirmed"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_patient_confirmed",
+   "fieldtype": "Check",
+   "label": "Patient Confirmed"
+  },
+  {
+   "fieldname": "surgery",
+   "fieldtype": "Table MultiSelect",
+   "hidden": 1,
+   "label": "Surgery",
+   "options": "Theatre Booking Clinical Procedure Template"
+  },
+  {
+   "fieldname": "column_break_19",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "theatre",
+   "fieldtype": "Link",
+   "label": "Theatre",
+   "options": "Theatre"
+  },
+  {
+   "fieldname": "surgery_end_time",
+   "fieldtype": "Datetime",
+   "label": "Surgery End Time"
+  },
+  {
+   "fieldname": "surgery_start_time",
+   "fieldtype": "Datetime",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Surgery Start Time"
+  },
+  {
+   "fetch_from": "theatre.theatre_name",
+   "fieldname": "theatre_name",
+   "fieldtype": "Data",
+   "label": "Theatre Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "clinical_procedures",
+   "fieldtype": "Table",
+   "label": "Procedures/Packages",
+   "options": "Theatre Booking Clinical Procedure Template"
+  },
+  {
+   "default": "0",
+   "depends_on": "eval:!doc.patient",
+   "fieldname": "not_in_system",
+   "fieldtype": "Check",
+   "label": "Not In System"
+  },
+  {
+   "fieldname": "title",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Title",
+   "read_only": 1
+  },
+  {
+   "fieldname": "surgery_duration",
+   "fieldtype": "Duration",
+   "hide_days": 1,
+   "hide_seconds": 1,
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Surgery Duration"
+  },
+  {
+   "fieldname": "uhid_search",
+   "fieldtype": "Data",
+   "label": "Search By UHID (Press Enter to Search)"
+  },
+  {
+   "fieldname": "patient_education",
+   "fieldtype": "Long Text",
+   "label": "Patient Education"
+  },
+  {
+   "depends_on": "eval:doc.is_finance_team_confirmed;",
+   "fieldname": "finance_comments",
+   "fieldtype": "Long Text",
+   "label": "Finance Team Comments",
+   "mandatory_depends_on": "eval:doc.is_finance_team_confirmed;"
+  },
+  {
+   "depends_on": "eval:doc.is_finance_team_confirmed;",
+   "fieldname": "finance_team_status",
+   "fieldtype": "Select",
+   "label": "Finance Team Status",
+   "mandatory_depends_on": "eval:doc.is_finance_team_confirmed;",
+   "options": "\nRejected\nApproved"
+  },
+  {
+   "fieldname": "confirmation_details_section",
+   "fieldtype": "Section Break",
+   "label": "Confirmation Details"
+  },
+  {
+   "fieldname": "column_break_31",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "1",
+   "fieldname": "is_surgeon_confirmed",
+   "fieldtype": "Check",
+   "label": "Surgeon Confirmed"
+  },
+  {
+   "description": "Separate numbers with newline(\\n), comma(,), tab(\\t), semicolon(;), or pipe(|)",
+   "fieldname": "contact_phone",
+   "fieldtype": "Small Text",
+   "label": "Contact Phone"
+  },
+  {
+   "fieldname": "mode_of_payment",
+   "fieldtype": "Select",
+   "label": "Mode Of Payment",
+   "options": "\nCash\nInsurance\nFoundation",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2024-06-07 14:34:44.811709",
+ "modified_by": "Administrator",
+ "module": "GCH Theatre",
+ "name": "Theatre Booking",
+ "name_case": "Title Case",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

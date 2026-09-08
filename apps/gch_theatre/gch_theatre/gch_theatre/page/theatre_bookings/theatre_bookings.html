@@ -1,0 +1,121 @@
+<link rel="stylesheet" href="/assets/gch_theatre/visjs/vis-timeline-graph2d.min.css">
+<script type="text/javascript" src="/assets/gch_theatre/visjs/vis-timeline-graph2d.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/fullcalendar-scheduler@6.1.10/index.global.min.js"></script>
+    
+
+     
+<div class="row layout-main">
+    <div class="col layout-main-section-wrapper">
+        <div class="layout-main-section">
+            <div class="row user-profile">
+                <div class="col-md-12">
+                    <div class="performance-graphs">
+                        <!-- <div class="frappe-card chart-column-container line-chart-container"> -->
+                            <!-- <div class="title-area py-3"> -->
+                                <!-- <h4 class="card-title">
+                                    Theatre Bookings Timeline &nbsp;
+                                </h4> -->
+
+
+                                <!-- <div class="bookings-list-filter dept-filter py-0">
+                                    
+                                </div>
+                                <div class="bookings-list-filter date-filter py-0">
+
+                                </div> -->
+
+                                <!-- <span class="badge badge-pill badge-warning">
+                                    <a href="/app/theatre-booking" >View All Bookings</a>
+                                </span> -->
+                            <!-- </div> -->
+                            
+                            
+                            <!-- <div id="timeline"></div> -->
+                            <!-- <div id="calendar"></div> -->
+                        <!-- </div> -->
+                        <div class="frappe-card chart-column-container line-chart-container">
+                            <div class="title-area py-3">
+                                <h4 class="card-title">
+                                    Confirmed Theatre Bookings for {{booking_date}} &nbsp;
+                                </h4>
+
+                                <div class="bookings-list-filter dept-filter py-0">
+
+                                </div>
+                                <div class="bookings-list-filter date-filter py-0">
+
+                                </div>
+
+                                <span class="badge badge-pill badge-warning">
+                                    <a href="/app/theatre-booking" >View All Bookings</a>
+                                </span>
+                            </div>
+                            
+                            <div class="list-row-container" tabindex="1">
+                                <header class="level list-row-head text-muted">
+                                    <div class="level-left list-header-subject">
+                                        <div class="list-row-col ellipsis list-subject level">
+                                            <input class="level-item list-check-all hidden-xs" type="checkbox"
+                                                title="Select All">
+                                            <span class="level-item">Patient</span>
+                                        </div>
+                                        <div class="list-row-col ellipsis hidden-xs">
+                                            <span>Surgeon</span>
+                                        </div>
+                                        <!-- <div class="list-row-col ellipsis hidden-xs hidden-sm hidden-md hidden-lg ">
+                                              <span>Encounter Creation Time</span>
+                                          </div> -->
+                                        <div class="list-row-col ellipsis hidden-xs">
+                                            <span>Anaesthetist</span>
+                                        </div>
+                                        <div class="list-row-col ellipsis hidden-xs">
+                                            <span>Surgery Name</span>
+                                        </div>
+                                        <div class="list-row-col ellipsis hidden-xs">
+                                            <span>Surgery Time</span>
+                                        </div>
+                                        <!-- <div class="list-row-col ellipsis hidden-xs  ">
+                                            <span></span>
+                                        </div> -->
+                                        <div class="list-row-col ellipsis hidden-xs  ">
+                                            <span>Theatre Name</span>
+                                        </div>
+                                        <!-- <div class="list-row-col ellipsis hidden-xs  ">
+                                            <span>Mode of Payment</span>
+                                        </div> -->
+                                        <!-- <div class="list-row-col ellipsis hidden-xs  ">
+                                            <span>Status</span>
+                                        </div> -->
+                                        <!-- <div class="list-row-col ellipsis hidden-xs  ">
+                                            <span>Action</span>
+                                        </div> -->
+                                    </div>
+                                    <div class="level-left checkbox-actions" style="display: none;">
+                                        <div class="level list-subject">
+                                            <input class="level-item list-check-all hidden-xs" type="checkbox"
+                                                title="Select All">
+                                            <span class="level-item list-header-meta"></span>
+                                        </div>
+                                    </div>
+                                </header>
+                            </div>
+                            <div class="level-left checkbox-actions" style="display: none">
+                                <div class="level list-subject">
+                                    <input class="level-item list-check-all hidden-xs" type="checkbox"
+                                        title="Select All" />
+                                    <span class="level-item list-header-meta"></span>
+                                </div>
+                            </div>
+                            </header>
+                            <div class="bookings-list"></div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="layout-footer hide"></div>
+</div>
+
+

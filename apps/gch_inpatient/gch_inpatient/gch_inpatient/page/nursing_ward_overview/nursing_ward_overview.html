@@ -1,0 +1,251 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+<style>
+    .ward-btn.active {
+        background-color: #28a745 !important;  /* Green for active */
+        color: white !important;               /* White text for better visibility */
+        border-color: #28a745 !important;      /* Matching border color */
+        font-weight: 700;
+    }
+</style>
+
+    <div class="col layout-main-section-wrapper">
+        <div style="font-family: Montserrat;" class="layout-main-section">
+            
+
+            <!-- <div class="row user-profile"> -->
+
+                <div class="col-md-12">
+                    <div class="patient-info">
+                        <div class="frappe-card chart-column-container line-chart-container">
+                                                        
+                            <div>
+                                <br>
+                                <h3>{{ ward_name }}</h3>
+                                <br>
+                                        <!-- <p><strong>Total Beds & Cots:</strong> {{occupancy_info_doc.total_beds}}</p> -->
+                                        <div class="row">
+                                            <div class="col-2">    
+                                                <p><strong>Available Beds:</strong> {{ total_beds }} </p>
+                                                <p><strong>Available Cots:</strong> {{occupancy_info_doc.unoccupied_cots}} </p>
+                                                
+                                            </div>
+                                            <div class="col-2">
+                                                <p><strong>Locked Beds:</strong> {{occupancy_info_doc.locked_beds}}</p>
+                                                <p><strong>Locked Cots:</strong> {{occupancy_info_doc.locked_cots}}</p>
+                                                
+                                            </div>
+                                            <div class="col-2">
+                                                <p><strong>Occupied Beds:</strong> {{ total_occupied_beds }}</p>
+                                                <p><strong>Occupied Cots:</strong> {{ occupancy_info_doc.occupied_cots }}</p>
+                                                <!-- <p><strong>Occupancy Level:</strong>  </p> -->
+                                            </div>
+                                            <div class="col-2">
+                                                <p><strong>Unoccupied Beds:</strong> {{ total_unoccupied_beds }}</p>
+                                                <p><strong>Unoccupied Cots:</strong> {{ occupancy_info_doc.unoccupied_cots }}</p>
+                                            </div>
+
+                                            <div class="col-2">
+                                                <p><strong>Number of Male:</strong> {{ male_count }} </p>
+                                                <p><strong>Number of Female:</strong> {{ female_count }} </p>
+                                                
+                                            </div>
+                                            <div class="col-2">
+                                                
+                                            
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                        <table class="table table-bordered table-hover">
+                                            <tr class="text-center" style="background: steelblue; font-size: 15px; color: white;">
+                                                <th>Room & Bed Info</th>
+                                                <th>Patient Name</th>
+                                                <th>Bed days</th>
+                                                <th>Consultant</th>
+                                                <th>Payment Type</th>
+                                                <th>Action</th>
+                                                <th>Discharge<br>Information</th>
+                                            </tr>
+
+                                            {% for row in occupancy_info_doc.bed_details %}
+
+                                            <!-- Changing the starting table row background to control bg color -->
+
+                                                {% if row.occupancy_status %}
+                                                    {% if row.occupancy_status.is_assigned %}
+                                                        <tr style="background: #2490ef21;">
+                                                    {% endif %}
+                                                    
+                                                    {% if row.occupancy_status.is_booking %}
+                                                        <tr style="background: #ef242430;">
+                                                    {% endif %}
+
+                                                    {% if row.occupancy_status.is_lodging %}
+                                                        <tr style="background: #6d24ef30;">
+                                                    {% endif %}
+                                                {% endif %}
+                                            
+                                                <td>
+                                                    <span style="font-size: 12px; font-weight: 500;" class="text-sm">Room No: <strong><span id="ward_room_row-${i}">{{
+                                                    row.ward_room
+                                                }}</span></strong> </span>
+                                                                                <br>
+                                                                                <span style="font-size: 12px; font-weight: 500;" class="text-sm">Bed Number: <strong><span id="bed_number_row-${i}">{{
+                                                    row.bed_number
+                                                }}</span></strong> </span>
+                                                                                <span style="display: none;" id="bed_code_row-${i}">{{
+                                                    row.name
+                                                }}</span>
+                                                                                <br>
+                                                                                <span style="font-size: 12px; font-weight: 500;" class="text-sm">Bed Type: <strong><span id="room_category_row-${i}">{{
+                                                    row.bed_type
+                                                }}</span></strong></span>
+                                                </td>
+                                                <td class="text-center">
+                                                    {% if row.occupant %}
+                                                        {% if row.occupant.sex == "Female" %}
+                                                            <i style="color: #f3a6b4; font-size: 18px; padding-right:5px;" class="fa-solid fa-venus"></i> <span style="font-size: 16px; font-weight: 500;">{{ row.occupant.name }}</span>
+                                                        {% endif %}
+
+                                                        {% if  row.occupant.sex == "Male" %}
+                                                            <i style="color: blue; font-size: 18px; padding-right:5px;" class="fa-solid fa-mars"></i> <span style="font-size: 16px; font-weight: 500;">{{ row.occupant.name }}</span>
+                                                        {% endif %}
+
+                                                        {% if row.occupancy_status %}
+                                                            {% if row.occupancy_status.is_booking %}
+                                                                <p style="color: red; font-weight: 700; padding-top: 10px">BED BOOKED</p>
+                                                            {% endif %}
+
+                                                            {% if row.occupancy_status.is_lodging %}
+                                                                <p style="color: purple; font-weight: 700; padding-top: 10px"> LODGING </p>
+                                                            {% endif %}
+                                                        {% endif %}
+
+                                                        
+                                                    {% endif %}
+                                                </td>
+                                                <td class="text-center">
+                                                    {% if row.inpatient_record %} {{ row.bed_days }} {% endif %}
+
+                                                    <div>
+                                                    {% if row.diet_requests %}
+                                                        
+                                                        <p style="font-weight: 600; margin: 20px 0px;">{{ row.diet_requests }}</p>
+                                                        
+                                                    {% endif %}
+                                                    </div>
+
+                                                </td>
+                                                <td class="text-center"> {% if row.inpatient_record %} {{ row.inpatient_record.practitioner_name }} {% endif %}</td>
+                                                <td class="text-center"> {% if row.inpatient_record %} {{ row.inpatient_record.billing_type }} {% endif %}</td>
+                                                <td style="padding: 0;" class="text-center">
+                                                    <!-- <a href="/app/inpatient-record/{% if row.inpatient_record %}{{ row.inpatient_record.name }}{% endif %}">
+                                                        <button style="font-size: 10px;" class="btn btn-primary btn-sm">View</button>
+                                                    </a> -->
+
+                                                    {% if row.occupant && row.is_locked == 0 %}
+                                                        <a title="View Inpatient Record" href="/app/inpatient-record/{% if row.inpatient_record %}{{ row.inpatient_record.name }}{% endif %}">
+                                                            
+                                                            <svg style="width: 14%; color:#8E44AD;" width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M21 10C19.8954 10 19 10.8954 19 12H16C14.8954 12 14 12.8954 14 14V36C14 37.1046 14.8954 38 16 38H32C33.1046 38 34 37.1046 34 36V14C34 12.8954 33.1046 12 32 12H29C29 10.8954 28.1046 10 27 10H21ZM21 12H27V14H21V12ZM24.5572 28L22.0638 34.649C21.8699 35.1661 22.1319 35.7425 22.649 35.9364C23.1661 36.1304 23.7425 35.8684 23.9365 35.3512L25.1948 31.9955H27.8054L29.0638 35.3512C29.2577 35.8684 29.8341 36.1304 30.3512 35.9364C30.8684 35.7425 31.1304 35.1661 30.9365 34.649L28.4431 28H31.3013C31.8536 28 32.3013 27.5523 32.3013 27C32.3013 26.4477 31.8536 26 31.3013 26H27.0191C27.0064 25.9998 26.9936 25.9998 26.9809 26H26.0193C26.0066 25.9998 25.9939 25.9998 25.9812 26H21.0002C20.448 26 20.0002 26.4477 20.0002 27C20.0002 27.5523 20.448 28 21.0002 28H24.5572ZM31 19.24H17V17.24H31V19.24ZM17 23.4H22V21.4H17V23.4ZM28.5 23C28.5 24.1046 27.6046 25 26.5 25C25.3954 25 24.5 24.1046 24.5 23C24.5 21.8954 25.3954 21 26.5 21C27.6046 21 28.5 21.8954 28.5 23Z" fill="currentColor"/>
+                                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M39 8H9C8.44771 8 8 8.44772 8 9V39C8 39.5523 8.44772 40 9 40H39C39.5523 40 40 39.5523 40 39V9C40 8.44771 39.5523 8 39 8ZM9 6C7.34315 6 6 7.34315 6 9V39C6 40.6569 7.34315 42 9 42H39C40.6569 42 42 40.6569 42 39V9C42 7.34315 40.6569 6 39 6H9Z" fill="currentColor"/>
+                                                            </svg>
+                                                                 
+                                                        </a>
+
+                                                        
+                                                        <a title="Open Treatment Sheet" href="/app/treatment-sheet/{% if row.inpatient_record %}{{ row.inpatient_record.name }}{% endif %}">
+                                                            
+                                                            <svg style="width: 14%; color: #4CAF50;"  width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M10 4C9.44772 4 9 4.44772 9 5V43C9 43.5523 9.44772 44 10 44H38C38.5523 44 39 43.5523 39 43V15C39 14.7348 38.8946 14.4804 38.7071 14.2929L28.7071 4.29289C28.5196 4.10536 28.2652 4 28 4H10ZM11 42V6H27V15C27 15.5523 27.4477 16 28 16H37V42H11ZM35.5858 14L29 7.41421V14H35.5858ZM17 33H19V26H20.5857L25.5858 31.0001L22.2929 34.293L23.7072 35.7072L27 32.4143L30.2928 35.7072L31.7071 34.293L28.4142 31.0001L31.7072 27.7072L30.2929 26.293L27 29.5859L23.3948 25.9808C25.4186 25.7825 27 24.0759 27 22C27 19.7909 25.2091 18 23 18H18C17.4477 18 17 18.4477 17 19V33ZM23 24H19V20H23C24.1046 20 25 20.8954 25 22C25 23.1046 24.1046 24 23 24Z" fill="currentColor"/>
+                                                            </svg>
+                                                            
+                                                        </a>
+                                                        
+                                                        <a title="Open Multidisciplinary" onclick="redirectOrCreate(this)" data-doctype="Multidisciplinary" data-doc_link="/app/multidisciplinary/" data-existing_record="{{ row.multidisciplinary_record.name }}" data-inpatient_record="{{ row.inpatient_record.name }}">
+                                                            
+                                                            <svg style="width: 14%; color: #F39C12" width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M11 30C11 29.4477 11.4477 29 12 29H26C26.5523 29 27 29.4477 27 30C27 30.5523 26.5523 31 26 31H12C11.4477 31 11 30.5523 11 30Z" fill="currentColor"/>
+                                                                <path d="M12 34C11.4477 34 11 34.4477 11 35C11 35.5523 11.4477 36 12 36H26C26.5523 36 27 35.5523 27 35C27 34.4477 26.5523 34 26 34H12Z" fill="currentColor"/>
+                                                                <path d="M14 21V18H16V21H19V23H16V26H14V23H11V21H14Z" fill="currentColor"/>
+                                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M15 6C13.3431 6 12 7.34315 12 9H9C7.34315 9 6 10.3431 6 12V39C6 40.6569 7.34315 42 9 42H29C30.6569 42 32 40.6569 32 39V12C32 10.3431 30.6569 9 29 9H26C26 7.34315 24.6569 6 23 6H15ZM23 12C23.5523 12 24 11.5523 24 11V9C24 8.44772 23.5523 8 23 8H15C14.4477 8 14 8.44772 14 9V11C14 11.5523 14.4477 12 15 12H23ZM12 11C12 12.6569 13.3431 14 15 14H23C24.6569 14 26 12.6569 26 11H29C29.5523 11 30 11.4477 30 12V39C30 39.5523 29.5523 40 29 40H9C8.44772 40 8 39.5523 8 39V12C8 11.4477 8.44772 11 9 11H12Z" fill="currentColor"/>
+                                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M36 17C36 15.3431 37.3431 14 39 14C40.6569 14 42 15.3431 42 17V37.3028L39 41.8028L36 37.3028V17ZM39 16C38.4477 16 38 16.4477 38 17V19H40V17C40 16.4477 39.5523 16 39 16ZM39 38.1972L40 36.6972V21H38V36.6972L39 38.1972Z" fill="currentColor"/>
+                                                            </svg>
+
+                                                        </a>
+                                                        
+                                                        <a title="Open Input Output Chart" onclick="redirectOrCreate(this)" data-doctype="Nursing Input Output Chart" data-doc_link="/app/nursing-input-output-chart/" data-existing_record="{{ row.input_output.name }}" data-inpatient_record="{{ row.inpatient_record.name }}">
+                                                            
+                                                            <svg style="width: 14%; color: #2980B9" width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M6 39C6 40.6569 7.34315 42 9 42H39C40.6569 42 42 40.6569 42 39V9C42 7.34315 40.6569 6 39 6H9C7.34315 6 6 7.34315 6 9V39ZM40 9C40 8.44771 39.5523 8 39 8H17.3145C17.3148 9.11598 17.3154 10.6477 17.3163 10.7405C17.35 14.3482 17.817 16.1167 18.7342 17.0618C19.5398 17.892 20.8979 18.2938 23.4483 18.3692C23.6502 16.3334 24.4621 14.709 25.6552 13.5517C27.0283 12.2198 28.8467 11.5652 30.6465 11.5652C32.4464 11.5652 34.2647 12.2198 35.6379 13.5517C37.0228 14.895 37.894 16.8677 37.894 19.3824V27.7146C37.894 30.0693 37.503 32.5607 36.2917 34.4946C35.0351 36.5007 32.9564 37.8043 29.8822 37.8043C26.7189 37.8043 24.523 35.9216 22.5827 34.2475L22.5209 34.1941C20.5454 32.4895 18.7691 30.9566 16.2502 30.6087C15.1924 30.6197 14.4572 30.9033 13.9288 31.2903C13.3803 31.6921 12.9866 32.2557 12.7081 32.9075C12.1388 34.2399 12.12 35.7752 12.1475 36.4349C12.153 36.5657 12.1558 37.983 12.1578 39.3149L12.1587 40H39C39.5523 40 40 39.5523 40 39V9ZM8 9C8 8.44772 8.44771 8 9 8H15.3145C15.3148 9.11892 15.3154 10.6584 15.3164 10.7592C15.3497 14.3305 15.769 16.8782 17.2989 18.4547C18.675 19.8726 20.7403 20.2934 23.3881 20.369C23.2743 25.3012 22.2993 27.1866 21.2728 27.956C20.7286 28.3639 20.0595 28.5473 19.2082 28.6111C18.625 28.6548 18.053 28.6409 17.4211 28.6256C17.0741 28.6172 16.709 28.6083 16.3142 28.6083C14.8454 28.6083 13.666 29.0037 12.747 29.6768C11.8377 30.3429 11.249 31.2323 10.869 32.1216C10.1212 33.8715 10.1181 35.7703 10.1493 36.5182C10.1492 36.5154 10.1492 36.5165 10.1493 36.5229L10.15 36.5829C10.1505 36.6311 10.151 36.6972 10.1514 36.7793C10.1524 36.9432 10.1532 37.1668 10.154 37.4304C10.1555 37.9572 10.1568 38.6405 10.1578 39.3178L10.1587 40H9C8.44772 40 8 39.5523 8 39V9ZM25.0307 24.4664C27.426 23.3089 29.2699 24.2451 31.01 25.1287C32.6098 25.941 34.1219 26.7088 35.894 25.7637V19.3824C35.894 17.3524 35.2033 15.9164 34.2454 14.9873C33.2758 14.0468 31.9704 13.5652 30.6465 13.5652C29.3227 13.5652 28.0173 14.0468 27.0477 14.9873C26.0898 15.9164 25.3991 17.3524 25.3991 19.3824C25.3991 21.3933 25.2758 23.072 25.0307 24.4664Z" fill="currentColor"/>
+                                                            </svg>
+                                                                
+                                                        </a>
+
+                                                        <a title="Nutrition Overview" onclick="redirectOrCreate(this)" data-doctype="Patient Nutrition Overview" data-doc_link="/app/patient-nutrition-overview/" data-existing_record="{{ row.nutrition_information.name }}" data-inpatient_record="{{ row.inpatient_record.name }}">
+                                                            
+                                                            <svg style="width: 14%; color:#C0392B;" width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M5.02686 12.004C5.17698 14.6951 5.94291 16.3609 7.06462 17.3875C6.51693 17.7954 6.19941 18.4801 6.31599 19.2204C6.88836 22.855 8.31931 30.5431 11.2527 39.209C11.8357 40.9314 14.1641 40.9314 14.7471 39.209C17.6805 30.5431 19.1115 22.855 19.6838 19.2204C19.8004 18.4801 19.4829 17.7954 18.9352 17.3875C20.0568 16.3609 20.8228 14.6951 20.9729 12.004C21.0036 11.4526 20.5507 10.9983 19.9985 11.0062C18.3703 11.0296 17.0772 11.1285 16.0685 11.4676C15.6521 10.3692 14.8113 9.3322 13.5461 8.3855C13.2229 8.14364 12.7768 8.14364 12.4535 8.3855C11.1987 9.32451 10.3613 10.3524 9.94146 11.4409C8.96183 11.152 7.679 11.0374 6.00387 11.0081C5.45167 10.9984 4.9961 11.4526 5.02686 12.004ZM14.8808 13.9768L14.1983 12.1766C14.0094 11.6781 13.6401 11.1177 12.9999 10.5265C12.3664 11.1114 11.9981 11.6663 11.8075 12.1606L11.144 13.8807L9.37572 13.3592C8.85407 13.2053 8.14177 13.1027 7.14103 13.0479C7.43834 14.9761 8.15298 15.791 8.80446 16.2123C9.73598 16.8147 11.0932 16.998 12.9699 16.9999H13.0298C14.9065 16.998 16.2638 16.8147 17.1953 16.2123C17.8474 15.7906 18.5628 14.9745 18.8596 13.0424C17.8897 13.0933 17.209 13.1942 16.7057 13.3634L14.8808 13.9768ZM8.30596 18.9999H17.6938C17.4074 20.8074 16.9099 23.5991 16.124 26.9999H11.9998V28.9999H15.6447C14.9541 31.7822 14.0842 34.8824 12.9999 38.1299C12.6456 37.0689 12.3142 36.0236 12.0045 34.9999H12.9998V32.9999H11.4183C10.4609 29.6259 9.74447 26.548 9.22082 23.9999H11.9998L11.9998 21.9999H8.82722C8.60614 20.8238 8.43474 19.8124 8.30596 18.9999Z" fill="currentColor"/>
+                                                                <path d="M38.2423 28.0298C38.7781 28.1637 39.1038 28.7066 38.9699 29.2424C38.3803 31.6007 36.6006 33.3805 34.2423 33.9701C33.7065 34.104 33.1636 33.7782 33.0296 33.2424C32.8957 32.7066 33.2214 32.1637 33.7572 32.0298C35.3989 31.6193 36.6192 30.3991 37.0296 28.7574C37.1636 28.2216 37.7065 27.8958 38.2423 28.0298Z" fill="currentColor"/>
+                                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M32.6506 21.0273C31.5417 18.4345 31.7339 15.68 33.7068 13.707L32.2926 12.2928C29.9633 14.6222 29.5588 17.6702 30.34 20.4708C25.7643 18.4006 20.9998 22.2076 20.9998 27.9999C20.9998 33.5228 25.9246 37.9999 31.9998 37.9999C38.0749 37.9999 42.9998 33.5228 42.9998 27.9999C42.9998 21.7798 37.5053 17.849 32.6506 21.0273ZM31.9998 24.0611L30.7504 23.0616C28.8924 21.5753 27.0619 21.6578 25.6757 22.514C24.2101 23.4192 22.9998 25.3574 22.9998 27.9999C22.9998 32.2431 26.8455 35.9999 31.9998 35.9999C37.154 35.9999 40.9998 32.2431 40.9998 27.9999C40.9998 25.3575 39.7894 23.4192 38.3238 22.514C36.9376 21.6578 35.1071 21.5753 33.2491 23.0616L31.9998 24.0611Z" fill="currentColor"/>
+                                                                <path d="M33.9998 17.9999C36.9998 17.9999 38.9998 15.9999 38.9998 12.9999C35.9998 12.9999 33.9998 14.9999 33.9998 17.9999Z" fill="currentColor"/>
+                                                            </svg>
+
+                                                        </a>
+
+                                                        <a title="Super/Matrons Notes" onclick="redirectOrCreate(this)" data-doctype="Matron Notes" data-doc_link="/app/matron-notes/" data-existing_record="{{ row.matron_notes }}" data-inpatient_record="{{ row.inpatient_record.name }}">
+                                                            <svg style="width: 14%; color: #7F8C8D;" width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M26 6C26.5523 6 27 6.44772 27 7V11C27 11.5523 26.5523 12 26 12C25.4477 12 25 11.5523 25 11V10H19.0001L19.0001 8H25V7C25 6.44772 25.4477 6 26 6Z" fill="currentColor"/>
+                                                                <path d="M16 6C15.4477 6 15 6.44772 15 7V8H13C11.3431 8 10 9.34315 10 11V35C10 36.6569 11.3431 38 13 38H30C31.6569 38 33 36.6569 33 35V11C33 9.34315 31.6569 8 30 8H29.0001V10H30C30.5523 10 31 10.4477 31 11V35C31 35.5523 30.5523 36 30 36H13C12.4477 36 12 35.5523 12 35V11C12 10.4477 12.4477 10 13 10H15V11C15 11.5523 15.4477 12 16 12C16.5523 12 17 11.5523 17 11V7C17 6.44772 16.5523 6 16 6Z" fill="currentColor"/>
+                                                                <path d="M14 19C14 18.4477 14.4477 18 15 18H28C28.5523 18 29 18.4477 29 19C29 19.5523 28.5523 20 28 20H15C14.4477 20 14 19.5523 14 19Z" fill="currentColor"/>
+                                                                <path d="M15 23C14.4477 23 14 23.4477 14 24C14 24.5523 14.4477 25 15 25H22C22.5523 25 23 24.5523 23 24C23 23.4477 22.5523 23 22 23H15Z" fill="currentColor"/>
+                                                                <path d="M14 29C14 28.4477 14.4477 28 15 28H26C26.5523 28 27 28.4477 27 29C27 29.5523 26.5523 30 26 30H15C14.4477 30 14 29.5523 14 29Z" fill="currentColor"/>
+                                                                <path d="M13 40C10.2386 40 8 37.7614 8 35V10H6V35C6 38.866 9.13401 42 13 42H30V40H13Z" fill="currentColor"/>
+                                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M36 13C36 11.3431 37.3431 10 39 10C40.6569 10 42 11.3431 42 13V33.3028L39 37.8028L36 33.3028V13ZM39 12C38.4477 12 38 12.4477 38 13V15H40V13C40 12.4477 39.5523 12 39 12ZM39 34.1972L40 32.6972V17H38V32.6972L39 34.1972Z" fill="currentColor"/>
+                                                                </svg>
+                                                            
+                                                        </a>
+
+                                                        <!-- <a style="margin-right: 10px;" data-bed_number="{{ row.bed_number }}" data-patient="" data-room_number="" data-bed_code="" data-room_type="" onclick="transfer_patient(this)"><i title="Transfer Patient" class="fa fa-exchange fa-2x" style="color: mediumorchid;"></i></a> -->
+                                                    
+                                                    {% else %}
+                                                        {% if row.is_locked == 1 %}
+                                                            <p style="font-size: 18px; font-weight: 700; color: firebrick;">BED LOCKED</p>
+                                                        {% else %}
+                                                            <!-- <button style="font-size: 12px;" onclick="" class="btn btn-primary btn-sm"><strong>Assign Patient Here</strong></button> -->
+                                                        {% endif %}
+
+                                                    {% endif %}
+                                                </td>
+                                                <td class="text-center">
+                                                    <p>-</p>
+                                                </td>
+
+                                                
+
+                                            </tr>
+
+                                            {% endfor %}
+                        
+                                        </table>
+
+                                    </div>
+
+                            </div>
+                            
+                    
+                    </div>
+
+                </div>
+            <!-- </div> -->
+
+            
+
+        </div>
+        <div class="layout-footer hide"></div>
+    </div>

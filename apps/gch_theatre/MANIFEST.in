@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include gch_theatre *.css
+recursive-include gch_theatre *.csv
+recursive-include gch_theatre *.html
+recursive-include gch_theatre *.ico
+recursive-include gch_theatre *.js
+recursive-include gch_theatre *.json
+recursive-include gch_theatre *.md
+recursive-include gch_theatre *.png
+recursive-include gch_theatre *.py
+recursive-include gch_theatre *.svg
+recursive-include gch_theatre *.txt
+recursive-exclude gch_theatre *.pyc

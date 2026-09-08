@@ -1,0 +1,243 @@
+{
+ "actions": [],
+ "autoname": "format:GCH-PVCCB-{###}",
+ "creation": "2024-06-10 03:17:29.484940",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "encounter_details_section",
+  "inpatient_record",
+  "patient",
+  "patient_name",
+  "uhid",
+  "column_break_8",
+  "gender",
+  "wardroombed",
+  "encounter_date",
+  "consulting_doctor",
+  "triage_section",
+  "weight",
+  "height",
+  "temperature",
+  "bmi_column",
+  "bmi",
+  "bsa",
+  "history_complaints_section",
+  "complaints_1",
+  "column_break_20",
+  "complaints_2",
+  "section_break_22",
+  "nutrition_history",
+  "socioeconomic_history",
+  "other_relevant_history",
+  "immunization",
+  "history_of_present_illness",
+  "column_break_28",
+  "family_history",
+  "drug_history",
+  "birth_history",
+  "growth_and_development"
+ ],
+ "fields": [
+  {
+   "fieldname": "encounter_details_section",
+   "fieldtype": "Section Break",
+   "label": "Encounter Details"
+  },
+  {
+   "fieldname": "inpatient_record",
+   "fieldtype": "Link",
+   "label": "Inpatient Record",
+   "options": "Inpatient Record"
+  },
+  {
+   "fetch_from": "inpatient_record.patient",
+   "fieldname": "patient",
+   "fieldtype": "Link",
+   "label": "Patient",
+   "options": "Patient"
+  },
+  {
+   "fetch_from": "patient.patient_name",
+   "fieldname": "patient_name",
+   "fieldtype": "Data",
+   "label": "Patient Name"
+  },
+  {
+   "fetch_from": "patient.uhid_code",
+   "fieldname": "uhid",
+   "fieldtype": "Data",
+   "label": "UHID"
+  },
+  {
+   "fieldname": "column_break_8",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "patient.sex",
+   "fieldname": "gender",
+   "fieldtype": "Data",
+   "label": "Gender"
+  },
+  {
+   "fieldname": "wardroombed",
+   "fieldtype": "Data",
+   "label": "Ward/Room/Bed"
+  },
+  {
+   "default": "Today",
+   "fieldname": "encounter_date",
+   "fieldtype": "Date",
+   "label": "Encounter Date"
+  },
+  {
+   "fetch_from": "inpatient_record.primary_practitioner",
+   "fieldname": "consulting_doctor",
+   "fieldtype": "Data",
+   "label": "Consulting Doctor"
+  },
+  {
+   "fieldname": "triage_section",
+   "fieldtype": "Section Break",
+   "label": "TRIAGE"
+  },
+  {
+   "fieldname": "weight",
+   "fieldtype": "Data",
+   "label": "Weight"
+  },
+  {
+   "fieldname": "height",
+   "fieldtype": "Data",
+   "label": "Height"
+  },
+  {
+   "fieldname": "temperature",
+   "fieldtype": "Data",
+   "label": "Temperature"
+  },
+  {
+   "fieldname": "bmi_column",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "bmi",
+   "fieldtype": "Data",
+   "label": "BMI"
+  },
+  {
+   "fieldname": "bsa",
+   "fieldtype": "Data",
+   "label": "BSA"
+  },
+  {
+   "fieldname": "history_complaints_section",
+   "fieldtype": "Section Break",
+   "label": "HISTORY COMPLAINTS"
+  },
+  {
+   "fieldname": "complaints_1",
+   "fieldtype": "Table",
+   "options": "Patient History Complaints"
+  },
+  {
+   "fieldname": "column_break_20",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "complaints_2",
+   "fieldtype": "Table",
+   "options": "Patient History Complaints"
+  },
+  {
+   "fieldname": "section_break_22",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "nutrition_history",
+   "fieldtype": "Small Text",
+   "label": "Nutrition History"
+  },
+  {
+   "fieldname": "socioeconomic_history",
+   "fieldtype": "Small Text",
+   "label": "Socioeconomic History"
+  },
+  {
+   "fieldname": "other_relevant_history",
+   "fieldtype": "Small Text",
+   "label": "Other Relevant History"
+  },
+  {
+   "fieldname": "immunization",
+   "fieldtype": "Small Text",
+   "label": "Immunization"
+  },
+  {
+   "fieldname": "history_of_present_illness",
+   "fieldtype": "Small Text",
+   "label": "History of Present Illness"
+  },
+  {
+   "fieldname": "column_break_28",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "family_history",
+   "fieldtype": "Small Text",
+   "label": "Family History"
+  },
+  {
+   "fieldname": "drug_history",
+   "fieldtype": "Small Text",
+   "label": "Drug History"
+  },
+  {
+   "fieldname": "birth_history",
+   "fieldtype": "Small Text",
+   "label": "Birth History"
+  },
+  {
+   "fieldname": "growth_and_development",
+   "fieldtype": "Small Text",
+   "label": "Growth and Development"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-11-22 17:29:50.188746",
+ "modified_by": "Administrator",
+ "module": "Gch Inpatient",
+ "name": "Patient History",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "All",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

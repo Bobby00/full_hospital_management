@@ -1,0 +1,215 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2024-02-19 11:37:50.608419",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "patient_details_section",
+  "admission_form",
+  "inpatient_record",
+  "patient_name",
+  "patient_uhid",
+  "date_of_birth",
+  "gender",
+  "parentguardian_name",
+  "column_break_7",
+  "is_top_up_form",
+  "top_up_amount",
+  "ward_of_preference",
+  "date_of_admission",
+  "lodged_in",
+  "date_of_lodging",
+  "reason_for_lodging",
+  "section_break_14",
+  "nurses_name",
+  "nurse_signature",
+  "column_break_17",
+  "managers_name",
+  "managers_signature",
+  "admitting_officers_name",
+  "admitting_officers_signature",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "patient_details_section",
+   "fieldtype": "Section Break",
+   "label": "Patient Details"
+  },
+  {
+   "fieldname": "ward_of_preference",
+   "fieldtype": "Link",
+   "label": "Ward of preference",
+   "options": "Nursing Ward"
+  },
+  {
+   "default": "Today",
+   "fieldname": "date_of_admission",
+   "fieldtype": "Date",
+   "label": "Date of Admission"
+  },
+  {
+   "fetch_from": "admission_form.ward_station",
+   "fieldname": "lodged_in",
+   "fieldtype": "Link",
+   "label": "Lodged In",
+   "options": "Nursing Ward"
+  },
+  {
+   "default": "Today",
+   "fieldname": "date_of_lodging",
+   "fieldtype": "Date",
+   "label": "Date of Lodging"
+  },
+  {
+   "fieldname": "reason_for_lodging",
+   "fieldtype": "Small Text",
+   "label": "Reason for lodging"
+  },
+  {
+   "fetch_from": "admission_form.fathers_name",
+   "fieldname": "parentguardian_name",
+   "fieldtype": "Data",
+   "label": "Parent/Guardian Name"
+  },
+  {
+   "fieldname": "nurse_signature",
+   "fieldtype": "Signature",
+   "label": "Nurse signature"
+  },
+  {
+   "fieldname": "managers_name",
+   "fieldtype": "Link",
+   "label": "Manager's Name",
+   "options": "User"
+  },
+  {
+   "fieldname": "managers_signature",
+   "fieldtype": "Signature",
+   "label": "Manager's Signature"
+  },
+  {
+   "fieldname": "admitting_officers_name",
+   "fieldtype": "Link",
+   "label": "Admitting Officer's Name",
+   "options": "User"
+  },
+  {
+   "fieldname": "admitting_officers_signature",
+   "fieldtype": "Signature",
+   "label": "Admitting Officer's Signature"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Series",
+   "options": "LODGER-FORM-.YYYY.-"
+  },
+  {
+   "fetch_from": "admission_form.patient",
+   "fieldname": "patient_name",
+   "fieldtype": "Link",
+   "label": "Patient Name",
+   "options": "Patient"
+  },
+  {
+   "fetch_from": "admission_form.patient_uhid",
+   "fieldname": "patient_uhid",
+   "fieldtype": "Data",
+   "label": "Patient UHID"
+  },
+  {
+   "fetch_from": "admission_form.date_of_birth",
+   "fieldname": "date_of_birth",
+   "fieldtype": "Data",
+   "label": "Date of Birth"
+  },
+  {
+   "fetch_from": "admission_form.gender",
+   "fieldname": "gender",
+   "fieldtype": "Data",
+   "label": "Gender"
+  },
+  {
+   "fieldname": "column_break_7",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_14",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "nurses_name",
+   "fieldtype": "Link",
+   "label": "Nurse's Name",
+   "options": "Healthcare Practitioner"
+  },
+  {
+   "fieldname": "column_break_17",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Lodger Form",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "admission_form",
+   "fieldtype": "Link",
+   "label": "Admission Form",
+   "options": "Admission Form"
+  },
+  {
+   "depends_on": "eval:doc.is_top_up_form",
+   "fieldname": "top_up_amount",
+   "fieldtype": "Data",
+   "label": "Top up Amount"
+  },
+  {
+   "fetch_from": "admission_form.inpatient_record",
+   "fieldname": "inpatient_record",
+   "fieldtype": "Link",
+   "label": "Inpatient Record",
+   "options": "Inpatient Record"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_top_up_form",
+   "fieldtype": "Check",
+   "label": "Is top up form?"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2024-06-18 12:05:01.595832",
+ "modified_by": "Administrator",
+ "module": "Gch Inpatient",
+ "name": "Lodger Form",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

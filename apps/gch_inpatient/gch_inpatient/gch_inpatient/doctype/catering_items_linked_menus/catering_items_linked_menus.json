@@ -1,0 +1,31 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-09-02 12:45:26.438120",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "linked_menus"
+ ],
+ "fields": [
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "linked_menus",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Linked Menus",
+   "options": "Catering Menu"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-09-02 12:49:16.626738",
+ "modified_by": "Administrator",
+ "module": "Gch Inpatient",
+ "name": "Catering Items Linked Menus",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

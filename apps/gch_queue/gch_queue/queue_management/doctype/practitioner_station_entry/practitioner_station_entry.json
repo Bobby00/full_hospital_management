@@ -1,0 +1,100 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{branch_short_name}-{DD}{MM}{YY}-{#######}",
+ "creation": "2022-02-02 05:24:49.507161",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "healthcare_practitioner",
+  "user",
+  "station",
+  "time_in",
+  "time_out",
+  "branch",
+  "branch_short_name",
+  "user_ip"
+ ],
+ "fields": [
+  {
+   "fieldname": "healthcare_practitioner",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Healthcare Practitioner",
+   "options": "Healthcare Practitioner"
+  },
+  {
+   "fieldname": "station",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Station",
+   "options": "Healthcare Service Unit"
+  },
+  {
+   "fieldname": "time_in",
+   "fieldtype": "Datetime",
+   "in_list_view": 1,
+   "label": "Time In"
+  },
+  {
+   "fieldname": "time_out",
+   "fieldtype": "Datetime",
+   "label": "Time Out"
+  },
+  {
+   "fieldname": "user",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "User",
+   "options": "User"
+  },
+  {
+   "fieldname": "branch",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Branch",
+   "options": "Branch"
+  },
+  {
+   "fetch_from": "branch.short_name",
+   "fieldname": "branch_short_name",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Branch Short Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "user_ip",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "label": "User IP"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-01-23 02:16:32.672706",
+ "modified_by": "Administrator",
+ "module": "Queue Management",
+ "name": "Practitioner Station Entry",
+ "name_case": "UPPER CASE",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

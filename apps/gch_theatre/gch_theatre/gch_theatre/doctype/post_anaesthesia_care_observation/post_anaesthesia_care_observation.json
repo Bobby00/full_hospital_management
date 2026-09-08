@@ -1,0 +1,93 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-07-24 11:08:56.612644",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "bp",
+  "pulse_rate",
+  "pulse",
+  "color",
+  "peripheries",
+  "spo2",
+  "fio202_lmin",
+  "aw_device",
+  "spont_vent",
+  "cns"
+ ],
+ "fields": [
+  {
+   "fieldname": "bp",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "BP"
+  },
+  {
+   "fieldname": "pulse_rate",
+   "fieldtype": "Float",
+   "label": "Pulse Rate"
+  },
+  {
+   "fieldname": "pulse",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Pulse",
+   "options": "\nStrong\nWeak\nRegular\nIrregular"
+  },
+  {
+   "fieldname": "color",
+   "fieldtype": "Select",
+   "label": "Color",
+   "options": "\nPink\nPale\nBlue"
+  },
+  {
+   "fieldname": "peripheries",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Peripheries",
+   "options": "\nWarm\nCold"
+  },
+  {
+   "fieldname": "spo2",
+   "fieldtype": "Float",
+   "label": "SPO2"
+  },
+  {
+   "fieldname": "fio202_lmin",
+   "fieldtype": "Float",
+   "label": "FIO2/02 L/min"
+  },
+  {
+   "fieldname": "aw_device",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "AW Device",
+   "options": "\nLMA\nEET\nOral AW\nNasal AW\nNil"
+  },
+  {
+   "fieldname": "spont_vent",
+   "fieldtype": "Select",
+   "label": "Spont Vent",
+   "options": "\nAdequate\nNoisy"
+  },
+  {
+   "fieldname": "cns",
+   "fieldtype": "Select",
+   "label": "CNS",
+   "options": "Unresponsive\nArousable\nFully Awake\nSleeping"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-07-24 11:08:56.612644",
+ "modified_by": "Administrator",
+ "module": "GCH Theatre",
+ "name": "Post Anaesthesia Care Observation",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

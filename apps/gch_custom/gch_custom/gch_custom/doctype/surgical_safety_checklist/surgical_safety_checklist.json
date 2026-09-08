@@ -1,0 +1,472 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2023-09-08 09:46:50.766388",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "patient_details_section",
+  "naming_series",
+  "patient",
+  "patient_uhid",
+  "patient_encounter",
+  "date_of_birth",
+  "procedure_name",
+  "column_break_7",
+  "department",
+  "date",
+  "procedure_start_time",
+  "procedure_end_time",
+  "first_check_section",
+  "verify_the_correct_patient_procedure_and_site",
+  "informed_consent_has_been__completed",
+  "procedure_site_has_been_marked_with__a_site_marker",
+  "relevant_diagnostic_images_are__present",
+  "relevant_pre_procedure_preparations__done",
+  "column_break_17",
+  "verify_the_correct_patient_procedure_checked_by",
+  "informed_consent_has_been_completed_checked_by",
+  "procedure_site_has_been_marked_with_a_site_marker_checked_by",
+  "relevant_diagnostic_images_are_present_checked_by",
+  "relevant_pre_procedure_preparations_done_checked_by",
+  "column_break_23",
+  "verify_correct_patient_procedure_counter_checked_by",
+  "informed_consent_has_been_completed_counter_checked_by",
+  "procedure_site_has_been_marked_counter_checked_by",
+  "relevant_diagnostic_images_are_present_counter_checked_by",
+  "relevant_pre_procedure_preparations_done_counter_checked_by",
+  "check_2_time_out_section",
+  "correct_patient_identity",
+  "correct_procedure_to_be_done",
+  "correct_surgicalinvasive_procedure_site",
+  "patient_positioning_for_procedure",
+  "as_appropriate_imaging_equipment_implants_verified",
+  "column_break_35",
+  "correct_patient_identity_checked",
+  "correct_procedure_to_be_done_checked",
+  "correct_surgicalinvasive_procedure_site_checked",
+  "patient_positioning_for_procedure_checked",
+  "as_appropriate_imaging_equipment_implants_verified_checked",
+  "column_break_41",
+  "correct_patient_identity_counter_checked",
+  "correct_procedure_to_be_done_counter_checked",
+  "correct_surgicalinvasive_procedure_site_counter_checked",
+  "patient_positioning_for_procedure_counter_checked",
+  "as_appropriate_imaging_equipment_counter_checked",
+  "section_3_checks",
+  "name_of_the_surgicalinvasive_procedure_that_was_recordedwritten",
+  "completion_of_instrument_sponge_and_needle_counts_as_applicable",
+  "any_equipment_problems_to_be__addressed_as_applicable",
+  "labelling_specimens_when_present_during_signout",
+  "column_break_51",
+  "name_of_the_surgicalinvasive_procedure_checked",
+  "completion_of_instrument_sponge_and_needle_checked",
+  "any_equipment_problems_to_be__addressed_as_applicable_checked",
+  "labelling_specimens_when_present_during_signout_checked",
+  "column_break_57",
+  "name_of_the_surgicalinvasive_procedure_counter_checked",
+  "completion_of_instrument_sponge_and_needle_counter_checked",
+  "any_equipment_problems_addressed_counter_checked",
+  "labelling_specimens_when_present_during_signout_counter_checked",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "patient_details_section",
+   "fieldtype": "Section Break",
+   "label": "Patient Details"
+  },
+  {
+   "fetch_from": "patient_encounter.patient",
+   "fieldname": "patient",
+   "fieldtype": "Link",
+   "label": "Patient",
+   "options": "Patient"
+  },
+  {
+   "fetch_from": "patient_encounter.patient_uhid",
+   "fieldname": "patient_uhid",
+   "fieldtype": "Data",
+   "label": "Patient UHID"
+  },
+  {
+   "fetch_from": "patient_encounter.date_of_birth",
+   "fieldname": "date_of_birth",
+   "fieldtype": "Data",
+   "label": "Date of Birth"
+  },
+  {
+   "fieldname": "procedure_name",
+   "fieldtype": "Link",
+   "label": "Procedure Name",
+   "options": "Clinical Procedure Template"
+  },
+  {
+   "fieldname": "column_break_7",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "department",
+   "fieldtype": "Data",
+   "label": "Department"
+  },
+  {
+   "default": "Today",
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "first_check_section",
+   "fieldtype": "Section Break",
+   "label": "Check 1 - To be done before taking patient to procedure area"
+  },
+  {
+   "fieldname": "verify_the_correct_patient_procedure_and_site",
+   "fieldtype": "Select",
+   "label": "Verify the correct patient, procedure, and site",
+   "options": "\nYES\nNO\nN/A"
+  },
+  {
+   "fieldname": "informed_consent_has_been__completed",
+   "fieldtype": "Select",
+   "label": "Informed consent has been  completed",
+   "options": "\nYES\nNO\nN/A"
+  },
+  {
+   "fieldname": "procedure_site_has_been_marked_with__a_site_marker",
+   "fieldtype": "Select",
+   "label": "Procedure site has been marked with  a site marker",
+   "options": "\nYES\nNO\nN/A"
+  },
+  {
+   "fieldname": "relevant_diagnostic_images_are__present",
+   "fieldtype": "Select",
+   "label": "Relevant diagnostic images are  present",
+   "options": "\nYES\nNO\nN/A"
+  },
+  {
+   "fieldname": "relevant_pre_procedure_preparations__done",
+   "fieldtype": "Select",
+   "label": "Relevant pre procedure preparations  done",
+   "options": "\nYES\nNO\nN/A"
+  },
+  {
+   "fieldname": "column_break_17",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "informed_consent_has_been_completed_checked_by",
+   "fieldtype": "Link",
+   "label": "Checked by",
+   "options": "Healthcare Practitioner"
+  },
+  {
+   "fieldname": "procedure_site_has_been_marked_with_a_site_marker_checked_by",
+   "fieldtype": "Link",
+   "label": "Checked by",
+   "options": "Healthcare Practitioner"
+  },
+  {
+   "fieldname": "relevant_diagnostic_images_are_present_checked_by",
+   "fieldtype": "Link",
+   "label": "Checked by",
+   "options": "Healthcare Practitioner"
+  },
+  {
+   "fieldname": "relevant_pre_procedure_preparations_done_checked_by",
+   "fieldtype": "Link",
+   "label": "Checked by",
+   "options": "Healthcare Practitioner"
+  },
+  {
+   "fieldname": "column_break_23",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "informed_consent_has_been_completed_counter_checked_by",
+   "fieldtype": "Link",
+   "label": "Counter checked by",
+   "options": "Healthcare Practitioner"
+  },
+  {
+   "fieldname": "procedure_site_has_been_marked_counter_checked_by",
+   "fieldtype": "Link",
+   "label": "Counter checked by",
+   "options": "Healthcare Practitioner"
+  },
+  {
+   "fieldname": "relevant_diagnostic_images_are_present_counter_checked_by",
+   "fieldtype": "Link",
+   "label": "Counter checked by",
+   "options": "Healthcare Practitioner"
+  },
+  {
+   "fieldname": "relevant_pre_procedure_preparations_done_counter_checked_by",
+   "fieldtype": "Link",
+   "label": "Counter checked by",
+   "options": "Healthcare Practitioner"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "SURGICAL SAFETY CHECKLIST",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "verify_the_correct_patient_procedure_checked_by",
+   "fieldtype": "Link",
+   "label": "Checked by",
+   "options": "Healthcare Practitioner"
+  },
+  {
+   "fieldname": "verify_correct_patient_procedure_counter_checked_by",
+   "fieldtype": "Link",
+   "label": "Counter checked by",
+   "options": "Healthcare Practitioner"
+  },
+  {
+   "fieldname": "check_2_time_out_section",
+   "fieldtype": "Section Break",
+   "label": "Check 2 (Time Out) - To be performed Just before the start of the procedure. Team to agree  on the following:"
+  },
+  {
+   "fieldname": "correct_patient_identity",
+   "fieldtype": "Select",
+   "label": "Correct Patient Identity",
+   "options": "\nYES\nNO\nN/A"
+  },
+  {
+   "fieldname": "correct_procedure_to_be_done",
+   "fieldtype": "Select",
+   "label": "Correct Procedure to be Done",
+   "options": "\nYES\nNO\nN/A"
+  },
+  {
+   "fieldname": "correct_surgicalinvasive_procedure_site",
+   "fieldtype": "Select",
+   "label": "Correct Surgical/invasive Procedure Site",
+   "options": "\nYES\nNO\nN/A"
+  },
+  {
+   "fieldname": "patient_positioning_for_procedure",
+   "fieldtype": "Select",
+   "label": "Patient Positioning for Procedure",
+   "options": "\nYES\nNO\nN/A"
+  },
+  {
+   "fieldname": "as_appropriate_imaging_equipment_implants_verified",
+   "fieldtype": "Select",
+   "label": "As Appropriate, Imaging, Equipment, Implants, or Special Requirements Verified",
+   "options": "\nYES\nNO\nN/A"
+  },
+  {
+   "fieldname": "column_break_35",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "correct_patient_identity_checked",
+   "fieldtype": "Link",
+   "label": "Checked by",
+   "options": "Healthcare Practitioner"
+  },
+  {
+   "fieldname": "correct_procedure_to_be_done_checked",
+   "fieldtype": "Link",
+   "label": "Checked by",
+   "options": "Healthcare Practitioner"
+  },
+  {
+   "fieldname": "correct_surgicalinvasive_procedure_site_checked",
+   "fieldtype": "Link",
+   "label": "Checked by",
+   "options": "Healthcare Practitioner"
+  },
+  {
+   "fieldname": "patient_positioning_for_procedure_checked",
+   "fieldtype": "Link",
+   "label": "Checked by",
+   "options": "Healthcare Practitioner"
+  },
+  {
+   "fieldname": "as_appropriate_imaging_equipment_implants_verified_checked",
+   "fieldtype": "Link",
+   "label": "Checked by",
+   "options": "Healthcare Practitioner"
+  },
+  {
+   "fieldname": "column_break_41",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "correct_patient_identity_counter_checked",
+   "fieldtype": "Link",
+   "label": "Counter Checked by",
+   "options": "Healthcare Practitioner"
+  },
+  {
+   "fieldname": "correct_procedure_to_be_done_counter_checked",
+   "fieldtype": "Link",
+   "label": "Counter Checked by",
+   "options": "Healthcare Practitioner"
+  },
+  {
+   "fieldname": "correct_surgicalinvasive_procedure_site_counter_checked",
+   "fieldtype": "Link",
+   "label": "Counter Checked by",
+   "options": "Healthcare Practitioner"
+  },
+  {
+   "fieldname": "patient_positioning_for_procedure_counter_checked",
+   "fieldtype": "Link",
+   "label": "Counter Checked by",
+   "options": "Healthcare Practitioner"
+  },
+  {
+   "fieldname": "as_appropriate_imaging_equipment_counter_checked",
+   "fieldtype": "Link",
+   "label": "Counter Checked by",
+   "options": "Healthcare Practitioner"
+  },
+  {
+   "fieldname": "section_3_checks",
+   "fieldtype": "Section Break",
+   "label": "Check 3 (Sign-Out)\u2013 To be performed before patient leaves the procedure area"
+  },
+  {
+   "fieldname": "name_of_the_surgicalinvasive_procedure_that_was_recordedwritten",
+   "fieldtype": "Select",
+   "label": "Name of the Surgical/invasive Procedure That Was Recorded/Written",
+   "options": "\nYES\nNO\nN/A"
+  },
+  {
+   "fieldname": "completion_of_instrument_sponge_and_needle_counts_as_applicable",
+   "fieldtype": "Select",
+   "label": "Completion of Instrument, Sponge, and Needle Counts (as applicable)",
+   "options": "\nYES\nNO\nN/A"
+  },
+  {
+   "fieldname": "any_equipment_problems_to_be__addressed_as_applicable",
+   "fieldtype": "Select",
+   "label": "Any equipment problems to be  addressed (as applicable)",
+   "options": "\nYES\nNO\nN/A"
+  },
+  {
+   "fieldname": "labelling_specimens_when_present_during_signout",
+   "fieldtype": "Select",
+   "label": "Labeling of specimens (when specimens are present during the sign-out process, labels are read  aloud, including patient name)",
+   "options": "\nYES\nNO\nN/A"
+  },
+  {
+   "fieldname": "column_break_51",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "name_of_the_surgicalinvasive_procedure_checked",
+   "fieldtype": "Link",
+   "label": "Checked by",
+   "options": "Healthcare Practitioner"
+  },
+  {
+   "fieldname": "completion_of_instrument_sponge_and_needle_checked",
+   "fieldtype": "Link",
+   "label": "Checked by",
+   "options": "Healthcare Practitioner"
+  },
+  {
+   "fieldname": "any_equipment_problems_to_be__addressed_as_applicable_checked",
+   "fieldtype": "Link",
+   "label": "Checked by",
+   "options": "Healthcare Practitioner"
+  },
+  {
+   "fieldname": "labelling_specimens_when_present_during_signout_checked",
+   "fieldtype": "Link",
+   "label": "Checked by",
+   "options": "Healthcare Practitioner"
+  },
+  {
+   "fieldname": "column_break_57",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "name_of_the_surgicalinvasive_procedure_counter_checked",
+   "fieldtype": "Link",
+   "label": "Counter Checked by",
+   "options": "Healthcare Practitioner"
+  },
+  {
+   "fieldname": "completion_of_instrument_sponge_and_needle_counter_checked",
+   "fieldtype": "Link",
+   "label": "Counter Checked by",
+   "options": "Healthcare Practitioner"
+  },
+  {
+   "fieldname": "any_equipment_problems_addressed_counter_checked",
+   "fieldtype": "Link",
+   "label": "Counter Checked by",
+   "options": "Healthcare Practitioner"
+  },
+  {
+   "fieldname": "labelling_specimens_when_present_during_signout_counter_checked",
+   "fieldtype": "Link",
+   "label": "Counter Checked by",
+   "options": "Healthcare Practitioner"
+  },
+  {
+   "fieldname": "patient_encounter",
+   "fieldtype": "Link",
+   "label": "Patient Encounter",
+   "options": "Patient Encounter"
+  },
+  {
+   "fieldname": "procedure_end_time",
+   "fieldtype": "Time",
+   "label": "Procedure End Time"
+  },
+  {
+   "default": "Now",
+   "fieldname": "procedure_start_time",
+   "fieldtype": "Time",
+   "label": "Procedure Start Time"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Series",
+   "options": "HLC-SGCALCHECK-.YYYY.-"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2023-10-03 08:34:34.760792",
+ "modified_by": "Administrator",
+ "module": "Gch Custom",
+ "name": "SURGICAL SAFETY CHECKLIST",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1,
+ "track_seen": 1
+}

@@ -1,0 +1,30 @@
+{
+ "actions": [],
+ "creation": "2022-01-10 12:54:09.387455",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "abdomenal_pain_occurrence"
+ ],
+ "fields": [
+  {
+   "fieldname": "abdomenal_pain_occurrence",
+   "fieldtype": "Link",
+   "label": "Abdomenal Pain Occurrence",
+   "options": "Abdomenal Pain Occurrence"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2022-01-10 12:54:09.387455",
+ "modified_by": "Administrator",
+ "module": "Gch Custom",
+ "name": "Abdomenal Pain Occurrence Details",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

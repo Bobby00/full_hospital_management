@@ -1,0 +1,102 @@
+{
+ "actions": [],
+ "creation": "2021-06-16 18:43:57.198106",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "healthcare_service_unit",
+  "copay_type",
+  "covering",
+  "percentage_of",
+  "amount",
+  "percentage",
+  "valid_from",
+  "valid_upto"
+ ],
+ "fields": [
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "healthcare_service_unit",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Healthcare Service Unit",
+   "options": "Healthcare Service Unit"
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "copay_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Copay Type",
+   "options": "Flat Rate\nPercentage"
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "covering",
+   "fieldtype": "Select",
+   "in_global_search": 1,
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Covering",
+   "options": "\nInpatient\nOutpatient"
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "percentage_of",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Percentage Of",
+   "options": "Item"
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "default": "0",
+   "depends_on": "eval:(doc.copay_type==\"Flat Rate\")",
+   "fieldname": "amount",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Amount",
+   "mandatory_depends_on": "eval:(doc.copay_type==\"Flat Rate\")",
+   "non_negative": 1
+  },
+  {
+   "depends_on": "eval:(doc.copay_type==\"Percentage\")",
+   "fieldname": "percentage",
+   "fieldtype": "Percent",
+   "label": "Percentage",
+   "mandatory_depends_on": "eval:(doc.copay_type==\"Percentage\")"
+  },
+  {
+   "fieldname": "valid_from",
+   "fieldtype": "Date",
+   "label": "Valid From"
+  },
+  {
+   "fieldname": "valid_upto",
+   "fieldtype": "Date",
+   "label": "Valid Upto"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2022-04-12 11:05:06.881324",
+ "modified_by": "Administrator",
+ "module": "Gch Custom",
+ "name": "Copayment Detail",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

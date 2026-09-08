@@ -1,0 +1,78 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-12-18 11:30:27.296773",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "item",
+  "item_name",
+  "is_recurring",
+  "amount",
+  "bed_charge",
+  "bed_type"
+ ],
+ "fields": [
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "item",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Item",
+   "options": "Item",
+   "reqd": 1
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "default": "0",
+   "fieldname": "is_recurring",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "label": "is recurring"
+  },
+  {
+   "fieldname": "amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "label": "amount",
+   "read_only": 1
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fetch_from": "item.item_name",
+   "fieldname": "item_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "label": "Item Name"
+  },
+  {
+   "default": "0",
+   "fieldname": "bed_charge",
+   "fieldtype": "Check",
+   "label": "Bed Charge"
+  },
+  {
+   "depends_on": "eval:doc.bed_charge==1;",
+   "fieldname": "bed_type",
+   "fieldtype": "Link",
+   "label": "Bed Type",
+   "mandatory_depends_on": "eval:doc.bed_charge==1;",
+   "options": "Nursing Ward Bed Type"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-11-26 11:10:31.589669",
+ "modified_by": "Administrator",
+ "module": "Gch Inpatient",
+ "name": "Nursing Ward Charges",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

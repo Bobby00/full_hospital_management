@@ -1,0 +1,401 @@
+{
+  "actions": [],
+  "allow_rename": 1,
+  "autoname": "naming_series:",
+  "creation": "2022-05-17 14:09:08.979046",
+  "doctype": "DocType",
+  "editable_grid": 1,
+  "engine": "InnoDB",
+  "field_order": [
+    "patient_details_section",
+    "naming_series",
+    "patient_encounter",
+    "encounter",
+    "patient",
+    "age",
+    "date_of_birth",
+    "gender",
+    "column_break_6",
+    "date",
+    "assessment_time",
+    "bmi",
+    "height",
+    "weight_in_kilograms",
+    "physical_examinations_section",
+    "patient_physical_examination",
+    "history_section",
+    "patient_history",
+    "investigative_section",
+    "attachments",
+    "notes",
+    "diagnosis_section",
+    "diagnosis_table",
+    "plan_of_action",
+    "patient_plan_of_action_notes",
+    "section_break_12",
+    "dental_screen_gch",
+    "dental_screen_section_2",
+    "dental_section_section",
+    "dental_procedure_table",
+    "procedures_total",
+    "amended_from",
+    "prescription_details_section_section",
+    "prescription_table",
+    "laboratory_section",
+    "lab_tests",
+    "radiology_section",
+    "radiology_details",
+    "service_referrals_section",
+    "service_referral",
+    "patient_consent_section",
+    "consent",
+    "i_consent_and_authorize_performance_of_the_procedure_gch",
+    "i_refuse_to_consent_performance_of_the_procedure_gch",
+    "i_consent_and_authorize_performance_anesthesia_gch",
+    "i_refuse_to_consent_performance_anesthesia_gch",
+    "terms",
+    "patient_signature",
+    "doctor_consent_section",
+    "doctor_signature",
+    "other_dental_safety_checks_section"
+  ],
+  "fields": [
+    {
+      "fieldname": "patient_details_section",
+      "fieldtype": "Section Break",
+      "label": "Patient Details"
+    },
+    {
+      "fieldname": "naming_series",
+      "fieldtype": "Select",
+      "label": "Series",
+      "options": "HLC-DENTAL-.YYYY.-"
+    },
+    {
+      "fieldname": "patient_encounter",
+      "fieldtype": "Link",
+      "label": "Patient Encounter",
+      "options": "Patient Encounter",
+      "reqd": 1
+    },
+    {
+      "fetch_from": "patient_encounter.patient_name",
+      "fieldname": "patient",
+      "fieldtype": "Data",
+      "label": "Patient",
+      "read_only": 1
+    },
+    {
+      "fetch_from": "patient_encounter.patient_age",
+      "fieldname": "age",
+      "fieldtype": "Data",
+      "label": "Age",
+      "read_only": 1
+    },
+    {
+      "fetch_from": "patient_encounter.height_in_centimeters",
+      "fieldname": "height",
+      "fieldtype": "Data",
+      "label": "Height in Centimeters",
+      "read_only": 1
+    },
+    {
+      "fieldname": "column_break_6",
+      "fieldtype": "Column Break"
+    },
+    {
+      "default": "Today",
+      "fieldname": "date",
+      "fieldtype": "Date",
+      "in_list_view": 1,
+      "label": "Date",
+      "reqd": 1
+    },
+    {
+      "default": "Now",
+      "fieldname": "assessment_time",
+      "fieldtype": "Time",
+      "in_list_view": 1,
+      "label": "Assessment Time",
+      "reqd": 1
+    },
+    {
+      "fetch_from": "patient_encounter.bmi",
+      "fieldname": "bmi",
+      "fieldtype": "Data",
+      "label": "Bmi",
+      "read_only": 1
+    },
+    {
+      "fetch_from": "patient_encounter.patient_sex",
+      "fieldname": "gender",
+      "fieldtype": "Link",
+      "label": "Gender",
+      "options": "Gender",
+      "read_only": 1
+    },
+    {
+      "fieldname": "section_break_12",
+      "fieldtype": "Section Break",
+      "label": "Dental Formula Guide"
+    },
+    {
+      "fieldname": "dental_screen_gch",
+      "fieldtype": "HTML",
+      "options": "<div class=\"\">\n  <div class=\"row\">\n    <div class=\"col-12\">\n      <center>\n        <img src=\"/files/dental_gch_part_one.png\" style=\"\" usemap=\"#dental_map\">\n      </center>\n    </div>\n  </div>\n</div>\n\n<map name=\"dental_map\">\n  <area alt=\"fiveFive\" coords=\"91,139,123,161,137,132,113,121,101,128,98,135\" id=\"fiveFive\" shape=\"poly\" title=\"fiveFive\">\n    <area alt=\"fiveFour\" coords=\"126,100,142,107,129,127,100,111,113,100\" id=\"fiveFour\" shape=\"poly\" title=\"fiveFour\">\n    <area alt=\"fiveThree\" coords=\"117,78,148,89,149,100,140,102,117,91\" id=\"fiveThree\" shape=\"poly\" target=\"\" title=\"fiveThree\">\n    <area alt=\"fiveTwo\" coords=\"158,88,158,74,133,58,142,80,147,88\" id=\"fiveTwo\" shape=\"poly\" title=\"fiveTwo\">\n    <area alt=\"fiveOne\" coords=\"170,90,181,72,176,50,161,52,157,66\" id=\"fiveOne\" shape=\"poly\" title=\"fiveOne\">\n\n<area alt=\"sixOne\" coords=\"183,71,191,62,202,62,202,73,198,80,190,88\" id=\"sixOne\" shape=\"poly\" title=\"sixOne\">\n    <area alt=\"sixTwo\" coords=\"207,76,220,67,228,71,221,82,215,88,205,90\" id=\"sixTwo\" shape=\"poly\" title=\"sixTwo\">\n    <area alt=\"sixThree\" coords=\"220,88,242,82,247,91,232,93,225,105,214,96\" id=\"sixThree\" shape=\"poly\" title=\"sixThree\">\n    <area alt=\"sixFour\" coords=\"232,99,258,101,261,111,246,123,232,125,225,111\" id=\"sixFour\" shape=\"poly\" title=\"sixFour\">\n    <area alt=\"sixFive\" coords=\"237,128,249,125,268,131,264,142,246,159,231,145\" id=\"sixFive\" shape=\"poly\" title=\"sixFive\">\n    <area alt=\"sevenFive\" coords=\"242,170,254,179,268,187,254,198,232,201,229,182\" id=\"sevenFive\" shape=\"poly\" title=\"sevenFive\">\n    <area alt=\"sevenFour\" coords=\"229,203,242,205,258,218,241,225,225,225,219,215\" id=\"sevenFour\" shape=\"poly\" title=\"sevenFour\">\n    <area alt=\"sevenThree\" coords=\"217,225,231,233,232,243,217,240,208,230\" id=\"sevenThree\" shape=\"poly\" title=\"sevenThree\">\n    <area alt=\"sevenTwo\" coords=\"203,253,214,256,215,244,205,236,198,243\" id=\"sevenTwo\" shape=\"poly\" title=\"sevenTwo\">\n    <area alt=\"sevenOne\" coords=\"190,237,181,251,190,264,198,251\" id=\"sevenOne\" shape=\"poly\" title=\"sevenOne\">\n    <area alt=\"eightOne\" coords=\"175,238,163,248,169,265,180,252\" id=\"eightOne\" shape=\"poly\" title=\"eightOne\">\n    <area alt=\"eightTwo\" coords=\"159,235,147,240,142,252,149,257,161,247\" id=\"eightTwo\" shape=\"poly\" title=\"eightTwo\">\n    <area alt=\"eightThree\" coords=\"146,223,153,228,147,237,127,245,134,228\" id=\"eightThree\" shape=\"poly\" title=\"eightThree\">\n    <area alt=\"eightFour\" coords=\"131,200,139,209,144,219,127,227,105,221,119,205\" id=\"eightFour\" shape=\"poly\" title=\"eightFour\">\n    <area alt=\"eightFive\" coords=\"119,168,131,178,132,195,120,200,95,192\" id=\"eightFive\" shape=\"poly\" title=\"eightFive\">\n\n<area coords=\"498,152,522,152,522,169,510,176,478,168\" id=\"oneEight\" shape=\"poly\" title=\"oneEight\">\n    <area coords=\"500,132,520,134,527,151,495,149,473,138\" id=\"oneSeven\" shape=\"poly\" title=\"oneSeven\">\n    <area coords=\"507,109,529,112,522,131,502,128,481,117\" id=\"oneSix\" shape=\"poly\" title=\"oneSix\">\n    <area coords=\"519,89,536,95,532,111,507,106,483,94\" id=\"oneFive\" shape=\"poly\" title=\"oneFive\">\n    <area coords=\"529,70,546,79,539,94,517,86,498,75\" id=\"oneFour\" shape=\"poly\" title=\"oneFour\">\n    <area coords=\"541,53,554,63,556,73,542,75,517,59\" id=\"oneThree\" shape=\"poly\" title=\"oneThree\">\n    <area coords=\"566,42,573,59,563,70,547,53,542,32\" id=\"oneTwo\" shape=\"poly\" title=\"oneTwo\">\n    <area coords=\"595,40,593,52,583,62,569,44,580,18\" id=\"oneOne\" shape=\"poly\" title=\"oneOne\">\n    <area coords=\"625,45,612,62,600,57,597,38,610,18\" id=\"twoOne\" shape=\"poly\" title=\"twoOne\">\n    <area coords=\"647,59,631,66,620,59,627,45,651,34\" id=\"twoTwo\" shape=\"poly\" title=\"twoTwo\">\n    <area coords=\"666,68,647,78,636,71,644,61,681,54\" id=\"twoThree\" shape=\"poly\" title=\"twoThree\">\n    <area coords=\"658,96,671,89,695,76,661,72,646,81\" id=\"twoFour\" shape=\"poly\" title=\"twoFour\">\n    <area coords=\"685,108,668,113,656,99,675,91,708,94\" id=\"twoFive\" shape=\"poly\" title=\"twoFive\">\n    <area coords=\"668,133,692,129,720,118,688,109,663,117\" id=\"twoSix\" shape=\"poly\" title=\"twoSix\">\n    <area coords=\"673,152,695,154,722,142,695,130,671,134\" id=\"twoSeven\" shape=\"poly\" title=\"twoSeven\">\n    <area coords=\"668,174,688,174,719,167,695,157,669,155\" id=\"twoEight\" shape=\"poly\" title=\"twoEight\">\n    <area coords=\"673,187,690,186,717,196,695,208,669,206\" id=\"threeEight\" shape=\"poly\" title=\"threeEight\">\n    <area coords=\"675,212,692,210,722,220,693,229,675,229\" id=\"threeSeven\" shape=\"poly\" title=\"threeSeven\">\n    <area coords=\"675,231,692,235,715,246,688,255,669,248\" id=\"threeSix\" shape=\"poly\" title=\"threeSix\">\n    <area coords=\"666,251,681,256,700,272,669,277,656,268\" id=\"threeFive\" shape=\"poly\" title=\"threeFive\">\n    <area coords=\"653,272,664,279,681,294,653,294,641,284\" id=\"threeFour\" shape=\"poly\" title=\"threeFour\">\n    <area coords=\"639,290,649,296,663,310,637,307,631,295\" id=\"threeThree\" shape=\"poly\" title=\"threeThree\">\n    <area coords=\"622,297,634,307,634,325,619,312\" id=\"threeTwo\" shape=\"poly\" title=\"threeTwo\">\n    <area coords=\"607,298,617,314,612,332,602,312\" id=\"threeOne\" shape=\"poly\" title=\"threeOne\">\n    <area coords=\"592,298,598,315,586,334,583,315\" id=\"fourOne\" shape=\"poly\" title=\"fourOne\">\n    <area coords=\"578,298,563,305,558,327,580,314\" id=\"fourTwo\" shape=\"poly\" title=\"fourTwo\">\n    <area coords=\"566,294,553,294,529,316,561,304\" id=\"fourThree\" shape=\"poly\" title=\"fourThree\">\n    <area coords=\"542,273,556,276,556,286,546,295,514,298\" id=\"fourFour\" shape=\"poly\" title=\"fourFour\">\n    <area coords=\"532,253,541,263,536,274,525,279,497,279,517,262\" id=\"fourFive\" shape=\"poly\" title=\"fourFive\">\n    <area coords=\"522,234,532,251,514,259,486,256,505,239\" id=\"fourSix\" shape=\"poly\" title=\"fourSix\">\n    <area coords=\"502,213,520,209,522,230,503,237,480,230\" id=\"fourSeven\" shape=\"poly\" title=\"fourSeven\">\n    <area coords=\"502,187,522,187,525,197,524,206,498,209,478,199\" id=\"fourEight\" shape=\"poly\" title=\"fourEight\">\n</map>\n"
+    },
+    {
+      "fieldname": "dental_section_section",
+      "fieldtype": "Section Break",
+      "label": "Dental Procedure Section"
+    },
+    {
+      "fieldname": "dental_procedure_table",
+      "fieldtype": "Table",
+      "label": "Dental Procedure Table",
+      "options": "Dental Procedures GCH"
+    },
+    {
+      "fieldname": "amended_from",
+      "fieldtype": "Link",
+      "label": "Amended From",
+      "no_copy": 1,
+      "options": "Dental Clinic Procedure",
+      "print_hide": 1,
+      "read_only": 1
+    },
+    {
+      "fieldname": "prescription_details_section_section",
+      "fieldtype": "Section Break",
+      "label": "Prescription Details Section"
+    },
+    {
+      "fieldname": "prescription_table",
+      "fieldtype": "Table",
+      "label": "Prescription Table",
+      "options": "Doctor Prescription Table"
+    },
+    {
+      "fetch_from": "patient_encounter.weight_in_kilograms",
+      "fieldname": "weight_in_kilograms",
+      "fieldtype": "Data",
+      "label": "Weight in Kilograms",
+      "read_only": 1
+    },
+    {
+      "fieldname": "diagnosis_section",
+      "fieldtype": "Section Break",
+      "label": "Diagnosis"
+    },
+    {
+      "fieldname": "diagnosis_table",
+      "fieldtype": "Table",
+      "label": "Medical Code Table",
+      "options": "Codification Table"
+    },
+    {
+      "fetch_from": "patient_encounter.date_of_birth",
+      "fieldname": "date_of_birth",
+      "fieldtype": "Data",
+      "label": "Date of Birth",
+      "read_only": 1
+    },
+    {
+      "fieldname": "dental_screen_section_2",
+      "fieldtype": "HTML",
+      "hidden": 1,
+      "options": "<div class=\"\">\n  <div class=\"row\">\n    <div class=\"col-12\">\n      <center>\n        <img src=\"/files/dental_gch_part_two.png\" style=\"\">\n      </center>\n    </div>\n  </div>\n</div>\n\n<br>\n<br>\n<br>\n<div id=\"scroll_to_procedure_table\">\n</div>\n\n"
+    },
+    {
+      "fieldname": "physical_examinations_section",
+      "fieldtype": "Section Break",
+      "label": "Physical Examinations"
+    },
+    {
+      "fieldname": "patient_physical_examination",
+      "fieldtype": "Table",
+      "label": "Patient Physical Examination",
+      "options": "Patient Encounter Physical Examination Details"
+    },
+    {
+      "fieldname": "history_section",
+      "fieldtype": "Section Break",
+      "label": "History"
+    },
+    {
+      "fieldname": "patient_history",
+      "fieldtype": "Table",
+      "label": "Patient History",
+      "options": "Patient Encounter History Details"
+    },
+    {
+      "fieldname": "investigative_section",
+      "fieldtype": "Section Break",
+      "label": "Investigative"
+    },
+    {
+      "fieldname": "notes",
+      "fieldtype": "Small Text",
+      "label": "Notes"
+    },
+    {
+      "fieldname": "plan_of_action",
+      "fieldtype": "Section Break",
+      "label": "Care Objectives or Plan of Action"
+    },
+    {
+      "fieldname": "patient_plan_of_action_notes",
+      "fieldtype": "Table",
+      "label": "Patient Plan of Action Notes",
+      "options": "Patient Encounter Plan of Action"
+    },
+    {
+      "fieldname": "service_referrals_section",
+      "fieldtype": "Section Break",
+      "label": "Service Referrals"
+    },
+    {
+      "fieldname": "service_referral",
+      "fieldtype": "Table",
+      "label": "Service Referral",
+      "options": "Patient Service Referral"
+    },
+    {
+      "fieldname": "attachments",
+      "fieldtype": "Attach",
+      "label": "Attachments"
+    },
+    {
+      "fieldname": "consent",
+      "fieldtype": "HTML",
+      "hidden": 1,
+      "label": "consent",
+      "options": "<h4>Parent/Guardian/Patient Declaration</h4>\n<p style=\"font-size: 15px;\">As the parent/guardian/patient, I confirm that</p>\n<ol style=\"font-size: 15px;\">\n  <li>The doctor, anesthetist, or other authorized health professional has explained to me about the procedure.</li>\n  <li>The risks, expected outcomes, benefits, and alternatives of this procedure, and what would happen if the procedure is not performed have been discussed with me, and my questions have been answered to my satisfaction and understanding.</li>\n  <li>I understand that anesthesia services may/will be required and the risks, expected outcomes, benefits, and alternatives, and what would happen if the anesthesia is not performed have been discussed with me and that my questions have been answered to my satisfaction and understanding.</li>\n  <li>I have been given written explanations of the procedure and anesthesia (where applicable).</li>\n  <li>I understand if any tissue, part, limb, or organ is removed, the hospital will dispose of it in accordance with the hospital-approved process.</li>\n  <li>I understand that photography, audio, or visual recordings for the purpose of diagnosis/treatment only may be made.</li>\n</ol>\n<br>\n<p style=\"font-size: 15px;\">Tick approved boxes below</p>",
+      "read_only": 1
+    },
+    {
+      "fieldname": "terms",
+      "fieldtype": "HTML",
+      "hidden": 1,
+      "label": "terms",
+      "options": "<p style=\"font-size: 15px; color: #59BAE3; font-weight: 500;\"><em>If you have any questions concerning the proposed procedure/treatment, ask the doctor before signing this consent form. Read and thoroughly understand the written explanations of the procedure(s) (where applicable)</em></p> "
+    },
+    {
+      "fieldname": "patient_consent_section",
+      "fieldtype": "Section Break",
+      "hidden": 1,
+      "label": "Patient Consent",
+      "read_only": 1
+    },
+    {
+      "fieldname": "patient_signature",
+      "fieldtype": "Signature",
+      "hidden": 1,
+      "label": "Patient Signature"
+    },
+    {
+      "depends_on": "eval:doc.docstatus == 2",
+      "fieldname": "doctor_consent_section",
+      "fieldtype": "Section Break",
+      "hidden": 1,
+      "label": "Doctor Consent",
+      "read_only": 1
+    },
+    {
+      "default": "0",
+      "fieldname": "i_consent_and_authorize_performance_of_the_procedure_gch",
+      "fieldtype": "Check",
+      "hidden": 1,
+      "label": "I consent and authorize performance of the procedure"
+    },
+    {
+      "default": "0",
+      "fieldname": "i_refuse_to_consent_performance_of_the_procedure_gch",
+      "fieldtype": "Check",
+      "hidden": 1,
+      "label": "I refuse to consent performance of the procedure"
+    },
+    {
+      "default": "0",
+      "fieldname": "i_consent_and_authorize_performance_anesthesia_gch",
+      "fieldtype": "Check",
+      "hidden": 1,
+      "label": "I consent and authorize performance anesthesia"
+    },
+    {
+      "default": "0",
+      "fieldname": "i_refuse_to_consent_performance_anesthesia_gch",
+      "fieldtype": "Check",
+      "hidden": 1,
+      "label": "I refuse to consent performance anesthesia"
+    },
+
+    {
+      "fetch_from": "patient_encounter.encounter_number",
+      "fieldname": "encounter",
+      "fieldtype": "Link",
+      "hidden": 1,
+      "label": "Encounter",
+      "options": "Patient Encounter"
+    },
+    {
+      "fieldname": "other_dental_safety_checks_section",
+      "fieldtype": "Section Break",
+      "label": "Other Dental Safety Checks"
+    },
+    {
+      "fieldname": "radiology_section",
+      "fieldtype": "Section Break",
+      "label": "Radiology"
+    },
+    {
+      "fieldname": "radiology_details",
+      "fieldtype": "Table",
+      "label": "Radiology Details",
+      "options": "Lab Prescription"
+    },
+    {
+      "fieldname": "laboratory_section",
+      "fieldtype": "Section Break",
+      "label": "Laboratory"
+    },
+    {
+      "fieldname": "lab_tests",
+      "fieldtype": "Table",
+      "label": "Lab Tests",
+      "options": "Lab Prescription"
+    },
+    {
+      "fieldname": "procedures_total",
+      "fieldtype": "Data",
+      "label": "Procedures Total",
+      "read_only": 1
+    }
+  ],
+  "index_web_pages_for_search": 1,
+  "is_submittable": 1,
+  "links": [],
+  "modified": "2023-08-09 17:40:34.221039",
+  "modified_by": "Administrator",
+  "module": "Gch Custom",
+  "name": "Dental Clinic Procedure",
+  "owner": "Administrator",
+  "permissions": [
+    {
+      "create": 1,
+      "delete": 1,
+      "email": 1,
+      "export": 1,
+      "print": 1,
+      "read": 1,
+      "report": 1,
+      "role": "System Manager",
+      "share": 1,
+      "write": 1
+    }
+  ],
+  "sort_field": "modified",
+  "sort_order": "DESC",
+  "track_changes": 1,
+  "track_seen": 1
+}

@@ -1,0 +1,102 @@
+ID,Workflow Name,Document Type,Workflow State Field,Is Active,Don't Override Status,Send Email Alert,,ID,State,Only Allow Edit For,Doc Status,Update Field,Update Value,Is Optional State,Next Action Email Template,Message,,ID,State,Action,Next State,Allowed,Allow Self Approval,Condition
+name,workflow_name,document_type,workflow_state_field,is_active,override_status,send_email_alert,~,name,state,allow_edit,doc_status,update_field,update_value,is_optional_state,next_action_email_template,message,~,name,state,action,next_state,allowed,allow_self_approval,condition
+Yes,Yes,Yes,Yes,No,No,No,,Yes,Yes,Yes,No,No,No,No,No,No,,Yes,Yes,Yes,Yes,Yes,No,No
+Data,Data,Link,Data,Check,Check,Check,,Data,Link,Link,Select,Select,Data,Check,Link,Text,,Data,Link,Link,Link,Link,Check,Code
+,,Valid DocType,,0 or 1,0 or 1,0 or 1,,,Valid Workflow State,Valid Role,"One of: 0, 1, 2",,,0 or 1,Valid Email Template,,,,Valid Workflow State,Valid Workflow Action Master,Valid Workflow State,Valid Role,0 or 1,
+,,,,,,,,,,,,,,,,,,,,,,,,
+"""Patient Encounter Workflow""",Patient Encounter Workflow,Patient Encounter,workflow_state,0,0,1,,"""51ac9604be""",Registration,GCH-Reception,0,queue_group,QG-00008,0,,,,"""e294f20bf2""",Registration,Proceed to Triage,Triage,Nursing User,1,
+,,,,,,,,"""390d1d4d65""",Triage,Nursing User,0,queue_group,QG-00009,0,,,,"""e21f9fd8f7""",Triage,Proceed to Reception,Reception,Nursing User,1,
+,,,,,,,,"""ab553ffc87""",Reception,GCH-Reception,0,queue_group,QG-00010,0,,,,"""e28a8fa606""",Reception,Proceed to Doctor,Doctor,Nursing User,1,
+,,,,,,,,"""6a8b2057a1""",Doctor,GCH-Doctor,0,queue_group,QG-00011,0,,,,"""53c9133970""",Doctor,Proceed to Lab,LAB/Investigation,Nursing User,1,
+,,,,,,,,"""4fde6afc6e""",LAB/Investigation,Nursing User,0,queue_group,QG-00012,0,,,,"""033cd11766""",LAB/Investigation,Proceed to Doctor,Pharmacy,Nursing User,1,
+,,,,,,,,"""4dcadaff81""",Pharmacy,Nursing User,0,queue_group,QG-00013,0,,,,,,,,,,
+"""Patient Encounter""",Patient Encounter,Patient Encounter,workflow_state,0,0,1,,"""47f44c385c""",Pending Triage,GCH-TriageNurse,0,queue_group,QG-00009,0,,,,"""8ce7b28e53""",Pending Triage,Proceed to Reception,Pending Reception,GCH-TriageNurse,1,"(doc.weight_in_kilograms > 0) and (doc.height_in_centimeters > 0) and ((doc.has_no_drug_allergy == 0) or (doc.drug_allergy != """")) and ((doc.has_no_food_allergy == 0) or (doc.food_allergy != """"))"
+,,,,,,,,"""19fe80ce92""",Pending Reception,GCH-Reception,0,queue_group,QG-00010,0,,,,"""084de793bf""",Pending Reception,Proceed to Doctor,Pending Doctor,GCH-Reception,1,
+,,,,,,,,"""205710ec2a""",Pending Doctor,GCH-Doctor,0,queue_group,QG-00011,0,,,,"""d2055a0e8c""",Pending Reception,Proceed to Lab,Pending LAB/Investigation,GCH-Reception,1,
+,,,,,,,,"""65cb3d0ceb""",Pending Discharge,GCH-Doctor,0,queue_group,QG-00011,0,,,,"""68a3bfec3a""",Pending Reception,Proceed to Pharmacy,Pending Pharmacy,GCH-Reception,1,
+,,,,,,,,"""59bba92479""",Discharged,GCH-Doctor,0,queue_group,QG-00011,0,,,,"""5dd845c95f""",Pending Doctor,Proceed to Reception,Pending Reception,GCH-Doctor,1,
+,,,,,,,,"""d9845b6608""",Pending LAB/Investigation,GCH-LabTechnician,0,queue_group,QG-00012,0,,,,"""014feb42b2""",Pending Doctor,Discharge Patient,Discharged,GCH-Doctor,1,"((doc.op_discharge_has_barrier_to_care == 0) or (doc.outpatient_discharge_barriers_to_care_ != """")) and ((doc.op_discharge_has_education == 0) or (doc.outpatient_discharge_patient_education != """")) and (doc.op_conclusions_at_the_end_of_treatment != """") and (doc.outpatient_discharge_patients_condition_at_discharge != """")"
+,,,,,,,,"""b7dc659bd4""",Pending Pharmacy,GCH-Nurse,0,queue_group,QG-00013,0,,,,"""e731b487ac""",Discharged,Proceed to Checkout,Pending Checkout,GCH-Doctor,1,"doc.op_conclusions_at_the_end_of_treatment != """""
+,,,,,,,,"""293932c6be""",Pending Checkout,GCH-Pharmacy,0,queue_group,QG-00033,0,,,,"""1a7653b7fe""",Pending LAB/Investigation,Proceed to Doctor,Pending Doctor,GCH-LabTechnician,1,
+,,,,,,,,"""468b81c0d8""",Encounter Closed,GCH-Discharge Clerk,1,queue_group,Closed,0,,,,"""4c64f0eaf8""",Pending Pharmacy,Proceed to Doctor,Pending Doctor,GCH-Nurse,1,
+,,,,,,,,,,,,,,,,,,"""de4c6d03dc""",Pending Pharmacy,Pending Payment (Reception),Pending Reception,GCH-Pharmacy,1,
+,,,,,,,,,,,,,,,,,,"""b5770a2882""",Pending Checkout,Close Encounter,Encounter Closed,GCH-Discharge Clerk,1,
+,,,,,,,,,,,,,,,,,,"""ea407a5d76""",Pending Reception,Proceed to Checkout,Pending Checkout,GCH-Reception,1,
+"""Purchase Approval""",Purchase Approval,Purchase Order,workflow_state,1,0,1,,"""e3f6b72867""",Pending Approvals,Item Manager,0,,,0,,,,"""cc9a648944""",Pending Approvals,Send for Approval,Approval Pending By Department Manager,Item Manager,1,
+,,,,,,,,"""0ce4f0a752""",Approval Pending By Department Manager,Item Manager,0,,,0,,,,"""cb99b5c62d""",Approval Pending By Department Manager,Approve,Approval Pending By Procurement Manager,Item Manager,1,
+,,,,,,,,"""5966cc6392""",Approval Pending By Procurement Manager,Purchase Manager,0,,,0,,,,"""d26bfdebcd""",Approval Pending By Department Manager,Reject,Pending Approvals,Item Manager,1,
+,,,,,,,,"""3be9501937""",Approval Pending By Finance Manager,Accounts Manager,0,,,0,,,,"""a3ccd81aac""",Approval Pending By Procurement Manager,Approve,Approval Pending By Finance Manager,Purchase Manager,1,
+,,,,,,,,"""0084331567""",Approved,Item Manager,1,,,0,,,,"""27ed9e060b""",Approval Pending By Procurement Manager,Reject,Approval Pending By Department Manager,Purchase Manager,1,
+,,,,,,,,,,,,,,,,,,"""d368bb5d4b""",Approval Pending By Finance Manager,Approve,Approved,Accounts Manager,1,
+,,,,,,,,,,,,,,,,,,"""59a8560994""",Approval Pending By Finance Manager,Reject,Approval Pending By Procurement Manager,Accounts Manager,1,
+"""Outpatient Workflow""",Outpatient Workflow,Patient Encounter,workflow_state,1,0,0,,"""2958976b1f""",Pending Triage,GCH-TriageNurse,0,queue_group,QG-00039,0,,,,"""9576801fc9""",Pending Triage,Proceed to Reception,Pending Reception,GCH-TriageNurse,1,
+,,,,,,,,"""b477d0e247""",Pending Reception,GCH-Reception,0,queue_group,QG-00035,0,,,,"""47923a53c2""",Pending Triage,Pull to Reception,Pending Reception,GCH-Reception,1,
+,,,,,,,,"""ffa475fca7""",Pending Doctor,GCH-Doctor,0,queue_group,QG-00036,0,,,,"""0a51a63b8a""",Pending Reception,Proceed to Doctor,Pending Doctor,GCH-Reception,1,
+,,,,,,,,"""17a301d1ed""",Pending Lab Payment,GCH-Reception,0,queue_group,QG-00035,0,,,,"""99088a32e2""",Pending Reception,Bill Procedure,Pending Procedure Payment,GCH-Reception,1,"doc.mode_of_payment != ""Insurance"""
+,,,,,,,,"""96f6a1cdfc""",Pending LAB/Investigation,Laboratory User,0,queue_group,QG-00037,0,,,,"""fad52e9744""",Pending Reception,Bill Lab,Pending Lab Payment,GCH-Reception,1,"doc.mode_of_payment != ""Insurance"""
+,,,,,,,,"""8744c30693""",Pending Radiology Payment,GCH-Reception,0,queue_group,QG-00035,0,,,,"""5661c489b5""",Pending Reception,Bill Radiology,Pending Radiology Payment,GCH-Reception,1,"doc.mode_of_payment != ""Insurance"""
+,,,,,,,,"""21da986391""",Pending Radiology,GCH-Radiology,0,queue_group,QG-00041,0,,,,"""00a704cbf5""",Pending Reception,Proceed to Pharmacy,Pending Pharmacy,GCH-Reception,1,
+,,,,,,,,"""b7d1c1b924""",Pending Procedure Payment,GCH-Reception,0,queue_group,QG-00035,0,,,,"""a31bb8d217""",Pending Reception,Proceed to Procedure,Pending Procedure,GCH-Reception,1,"doc.mode_of_payment == ""Insurance"""
+,,,,,,,,"""4a3a871db8""",Pending Procedure,GCH-TriageNurse,0,queue_group,QG-00040,0,,,,"""2fd019e088""",Pending Reception,Proceed to Lab,Pending LAB/Investigation,GCH-Reception,1,"doc.mode_of_payment == ""Insurance"""
+,,,,,,,,"""ded6f2e3a6""",Pending Procedure,GCH-Doctor,0,queue_group,QG-00040,0,,,,"""f2329cb9c6""",Pending Reception,Proceed to Radiology,Pending Radiology,GCH-Reception,1,"doc.mode_of_payment == ""Insurance"""
+,,,,,,,,"""e1be59be8e""",Pending Procedure,GCH-Dental,0,queue_group,QG-00040,0,,,,"""401848dc95""",Pending Doctor,Proceed to Procedure,Pending Procedure Payment,GCH-Doctor,1,"doc.mode_of_payment != ""Insurance"""
+,,,,,,,,"""174ad46293""",Pending Vaccination,GCH-Wellbaby Nurse,0,queue_group,QG-00042,0,,,,"""f5e45b1c30""",Pending Doctor,Proceed to Procedure,Pending Procedure,GCH-Doctor,1,"doc.mode_of_payment != ""Cash"""
+,,,,,,,,"""0180df65ed""",Pending Pharmacy,GCH-Pharmacy,0,queue_group,QG-00038,0,,,,"""89b9654ad0""",Pending Doctor,Proceed to Lab,Pending Lab Payment,GCH-Doctor,1,"doc.mode_of_payment != ""Insurance"""
+,,,,,,,,"""cd74d3f84f""",Pending Prescription Payment,GCH-Reception,0,queue_group,QG-00035,0,,,,"""3d2f228751""",Pending Doctor,Proceed to Lab,Pending LAB/Investigation,GCH-Doctor,1,"doc.mode_of_payment != ""Cash"""
+,,,,,,,,"""dc76e98889""",Pending Invoice Closing,GCH-Reception,0,,,0,,,,"""67d72af5eb""",Pending Doctor,Proceed to Radiology,Pending Radiology Payment,GCH-Doctor,1,"doc.mode_of_payment != ""Insurance"""
+,,,,,,,,"""9f82dd291b""",Paid,GCH-Pharmacy,0,queue_group,QG-00038,0,,,,"""a95e076f0c""",Pending Doctor,Proceed to Radiology,Pending Radiology,GCH-Doctor,1,"doc.mode_of_payment != ""Cash"""
+,,,,,,,,"""4482fafa1e""",Paid,GCH-Reception,0,queue_group,QG-00038,0,,,,"""b19cf920a2""",Pending Doctor,Proceed to Pharmacy,Pending Pharmacy,GCH-Doctor,1,
+,,,,,,,,"""862d32f859""",Encounter Closed,GCH-Discharge Clerk,1,queue_group,QG-0000,0,,,,"""765e3d0570""",Pending Doctor,Proceed to Reception,Pending Reception,GCH-Doctor,1,
+,,,,,,,,,,,,,,,,,,"""f7eaeea665""",Pending Doctor,Close Encounter,Encounter Closed,GCH-Doctor,1,"((doc.op_discharge_has_barrier_to_care == 0) or (doc.outpatient_discharge_barriers_to_care_ != """")) and ((doc.op_discharge_has_education == 0) or (doc.outpatient_discharge_patient_education != """")) and (doc.op_conclusions_at_the_end_of_treatment != """") and (doc.outpatient_discharge_patients_condition_at_discharge != """") or (doc.mode_of_payment != ""Insurance"")"
+,,,,,,,,,,,,,,,,,,"""d04e6ef470""",Pending Doctor,Proceed to Reception (Invoice Closing),Pending Invoice Closing,GCH-Doctor,1,"doc.mode_of_payment != ""Cash"""
+,,,,,,,,,,,,,,,,,,"""9939b1c242""",Pending Lab Payment,Proceed to Lab,Pending LAB/Investigation,GCH-Reception,1,
+,,,,,,,,,,,,,,,,,,"""a3eb99d509""",Pending Lab Payment,Pull to Reception,Pending Reception,GCH-Reception,1,
+,,,,,,,,,,,,,,,,,,"""ec112de051""",Pending LAB/Investigation,Proceed to Doctor,Pending Doctor,Laboratory User,1,
+,,,,,,,,,,,,,,,,,,"""c15b535aac""",Pending LAB/Investigation,Proceed to Pharmacy,Pending Pharmacy,Laboratory User,1,"doc.mode_of_payment == ""Insurance"""
+,,,,,,,,,,,,,,,,,,"""2ab837a574""",Pending LAB/Investigation,Proceed to Procedure,Pending Procedure,Laboratory User,1,"doc.mode_of_payment == ""Insurance"""
+,,,,,,,,,,,,,,,,,,"""f059579750""",Pending LAB/Investigation,Proceed to Radiology,Pending Radiology,Laboratory User,1,"doc.mode_of_payment == ""Insurance"""
+,,,,,,,,,,,,,,,,,,"""5e8cc9d5a2""",Pending LAB/Investigation,Proceed to Reception (Invoice Closing),Pending Invoice Closing,Laboratory User,1,"doc.mode_of_payment != ""Cash"""
+,,,,,,,,,,,,,,,,,,"""7d92f3b5b0""",Pending LAB/Investigation,Pull to Reception,Pending Reception,GCH-Reception,1,
+,,,,,,,,,,,,,,,,,,"""57acf81ab7""",Pending LAB/Investigation,Close Encounter,Encounter Closed,Laboratory User,1,"doc.clinic == ""Walk-in"" and doc.mode_of_payment != ""Insurance"""
+,,,,,,,,,,,,,,,,,,"""b6933312bb""",Pending Radiology Payment,Proceed to Radiology,Pending Radiology,GCH-Reception,1,
+,,,,,,,,,,,,,,,,,,"""b40a2f6615""",Pending Radiology Payment,Pull to Reception,Pending Reception,GCH-Reception,1,
+,,,,,,,,,,,,,,,,,,"""5547401cac""",Pending Radiology,Proceed to Doctor,Pending Doctor,GCH-Radiology,1,
+,,,,,,,,,,,,,,,,,,"""eb3f304462""",Pending Radiology,Proceed to Reception,Pending Reception,GCH-Radiology,1,
+,,,,,,,,,,,,,,,,,,"""36a734e092""",Pending Radiology,Proceed to Lab,Pending LAB/Investigation,GCH-Radiology,1,"doc.mode_of_payment == ""Insurance"""
+,,,,,,,,,,,,,,,,,,"""e3a2b32635""",Pending Radiology,Proceed to Procedure,Pending Procedure,GCH-Radiology,1,"doc.mode_of_payment == ""Insurance"""
+,,,,,,,,,,,,,,,,,,"""f1dd5afd47""",Pending Radiology,Proceed to Pharmacy,Pending Pharmacy,GCH-Radiology,1,"doc.mode_of_payment == ""Insurance"""
+,,,,,,,,,,,,,,,,,,"""0514edc0ee""",Pending Radiology,Proceed to Reception (Invoice Closing),Pending Invoice Closing,GCH-Radiology,1,"doc.mode_of_payment != ""Cash"""
+,,,,,,,,,,,,,,,,,,"""4ad518aa44""",Pending Radiology,Pull to Reception,Pending Reception,GCH-Reception,1,
+,,,,,,,,,,,,,,,,,,"""87843014f0""",Pending Radiology,Close Encounter,Encounter Closed,GCH-Radiology,1,"doc.mode_of_payment != ""Insurance"" or doc.clinic == 'Walk-In - GCH'"
+,,,,,,,,,,,,,,,,,,"""13841f29a6""",Pending Procedure Payment,Proceed to Procedure,Pending Procedure,GCH-Reception,1,
+,,,,,,,,,,,,,,,,,,"""809e7ab951""",Pending Procedure Payment,Pull to Reception,Pending Reception,GCH-Reception,1,
+,,,,,,,,,,,,,,,,,,"""8eb2071c2c""",Pending Procedure,Proceed to Doctor,Pending Doctor,GCH-TriageNurse,1,
+,,,,,,,,,,,,,,,,,,"""be90c3cf74""",Pending Procedure,Proceed to Reception,Pending Reception,GCH-TriageNurse,1,
+,,,,,,,,,,,,,,,,,,"""8a1ca8f8ef""",Pending Procedure,Proceed to Pharmacy,Pending Pharmacy,GCH-TriageNurse,1,
+,,,,,,,,,,,,,,,,,,"""fd61b864aa""",Pending Procedure,Proceed to Lab,Pending LAB/Investigation,GCH-TriageNurse,1,"doc.mode_of_payment == ""Insurance"""
+,,,,,,,,,,,,,,,,,,"""56ecc5699c""",Pending Procedure,Proceed to Radiology,Pending Radiology,GCH-TriageNurse,1,"doc.mode_of_payment == ""Insurance"""
+,,,,,,,,,,,,,,,,,,"""f296896d10""",Pending Procedure,Proceed to Reception,Pending Reception,GCH-Dental,1,
+,,,,,,,,,,,,,,,,,,"""683e887fe6""",Pending Procedure,Close Encounter,Encounter Closed,GCH-TriageNurse,1,"doc.mode_of_payment != ""Insurance"""
+,,,,,,,,,,,,,,,,,,"""d99013ae5d""",Pending Procedure,Proceed to Reception (Invoice Closing),Pending Invoice Closing,GCH-TriageNurse,1,"doc.mode_of_payment != ""Cash"""
+,,,,,,,,,,,,,,,,,,"""07b3438526""",Pending Procedure,Proceed to Pharmacy,Pending Pharmacy,GCH-Dental,0,
+,,,,,,,,,,,,,,,,,,"""1f89337a18""",Pending Reception,Proceed to Vaccination,Pending Vaccination,GCH-Reception,1,
+,,,,,,,,,,,,,,,,,,"""108e519b9d""",Pending Vaccination,Proceed to Doctor,Pending Doctor,GCH-Wellbaby Nurse,1,
+,,,,,,,,,,,,,,,,,,"""0c1b374315""",Pending Vaccination,Pull to Reception,Pending Reception,GCH-Reception,1,
+,,,,,,,,,,,,,,,,,,"""8f14503942""",Pending Vaccination,Proceed to Reception,Pending Reception,GCH-Wellbaby Nurse,1,
+,,,,,,,,,,,,,,,,,,"""0562b0d9f0""",Pending Vaccination,Close Encounter,Encounter Closed,GCH-Wellbaby Nurse,1,"doc.mode_of_payment != ""Insurance"""
+,,,,,,,,,,,,,,,,,,"""6a8877b2c6""",Pending Vaccination,Proceed to Reception (Invoice Closing),Pending Invoice Closing,GCH-Wellbaby Nurse,1,"doc.mode_of_payment != ""Cash"""
+,,,,,,,,,,,,,,,,,,"""b22a3c25d5""",Pending Pharmacy,Proceed to Payment,Pending Prescription Payment,GCH-Pharmacy,1,"doc.mode_of_payment == ""Cash"""
+,,,,,,,,,,,,,,,,,,"""304e4a4dd0""",Pending Pharmacy,Proceed to Doctor,Pending Doctor,GCH-Pharmacy,1,
+,,,,,,,,,,,,,,,,,,"""09643313fd""",Pending Pharmacy,Proceed to Reception (Invoice Closing),Pending Invoice Closing,GCH-Pharmacy,1,"doc.mode_of_payment == ""Insurance"""
+,,,,,,,,,,,,,,,,,,"""e7d5649dff""",Pending Pharmacy,Proceed to Procedure,Pending Procedure,GCH-Pharmacy,1,
+,,,,,,,,,,,,,,,,,,"""043033d7b3""",Pending Pharmacy,Proceed to Lab,Pending LAB/Investigation,GCH-Pharmacy,1,"doc.mode_of_payment == ""Insurance"""
+,,,,,,,,,,,,,,,,,,"""be4c76a011""",Pending Pharmacy,Proceed to Radiology,Pending Radiology,GCH-Pharmacy,1,"doc.mode_of_payment == ""Insurance"""
+,,,,,,,,,,,,,,,,,,"""a7ba54f785""",Pending Invoice Closing,Close Encounter,Encounter Closed,GCH-Reception,1,doc.prescription == None
+,,,,,,,,,,,,,,,,,,"""5a94dd32af""",Pending Invoice Closing,Proceed to Pharmacy,Paid,GCH-Reception,1,
+,,,,,,,,,,,,,,,,,,"""86433caeb2""",Pending Invoice Closing,Pull to Reception,Pending Reception,GCH-Reception,1,
+,,,,,,,,,,,,,,,,,,"""05fe4776fd""",Pending Prescription Payment,Proceed to Pharmacy,Paid,GCH-Reception,1,
+,,,,,,,,,,,,,,,,,,"""7cb5c25bd8""",Pending Prescription Payment,Pull to Reception,Pending Reception,GCH-Reception,1,
+,,,,,,,,,,,,,,,,,,"""0a0e069de8""",Pending Reception,Close Encounter,Encounter Closed,GCH-Reception,1,"doc.clinic != 'Wellbaby - GCH' or doc.mode_of_payment != ""Insurance"""
+,,,,,,,,,,,,,,,,,,"""16ec100040""",Pending Reception,Proceed to Triage,Pending Triage,GCH-Reception,1,
+,,,,,,,,,,,,,,,,,,"""2c80e24fd2""",Paid,Pull to Reception,Pending Reception,GCH-Reception,1,
+,,,,,,,,,,,,,,,,,,"""e490336111""",Paid,Close Encounter,Encounter Closed,GCH-Pharmacy,1,

@@ -1,0 +1,56 @@
+{
+ "actions": [],
+ "creation": "2022-01-06 14:20:36.437361",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "checklist",
+  "checklist_name",
+  "checklist_template",
+  "checklist_template_name"
+ ],
+ "fields": [
+  {
+   "fieldname": "checklist",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Checklist",
+   "options": "Nursing Checklist",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "checklist.checklist_name",
+   "fieldname": "checklist_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Checklist Name"
+  },
+  {
+   "fetch_from": "checklist.checklist_template",
+   "fieldname": "checklist_template",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Checklist Template",
+   "options": "Nursing Checklist Template"
+  },
+  {
+   "fetch_from": "checklist.checklist_name",
+   "fieldname": "checklist_template_name",
+   "fieldtype": "Data",
+   "label": "Checklist Template Name"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2022-01-07 15:13:42.629110",
+ "modified_by": "Administrator",
+ "module": "Gch Custom",
+ "name": "Completed Nursing Checklist Details",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

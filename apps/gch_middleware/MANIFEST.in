@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include gch_middleware *.css
+recursive-include gch_middleware *.csv
+recursive-include gch_middleware *.html
+recursive-include gch_middleware *.ico
+recursive-include gch_middleware *.js
+recursive-include gch_middleware *.json
+recursive-include gch_middleware *.md
+recursive-include gch_middleware *.png
+recursive-include gch_middleware *.py
+recursive-include gch_middleware *.svg
+recursive-include gch_middleware *.txt
+recursive-exclude gch_middleware *.pyc

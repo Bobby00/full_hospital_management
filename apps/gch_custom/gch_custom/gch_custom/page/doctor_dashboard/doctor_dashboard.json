@@ -1,0 +1,24 @@
+{
+ "content": null,
+ "creation": "2021-10-15 06:54:17.656656",
+ "docstatus": 0,
+ "doctype": "Page",
+ "idx": 0,
+ "modified": "2021-10-18 23:54:19.624256",
+ "modified_by": "Administrator",
+ "module": "Gch Custom",
+ "name": "doctor-dashboard",
+ "owner": "Administrator",
+ "page_name": "Doctor Dashboard",
+ "restrict_to_domain": "Healthcare",
+ "roles": [
+  {
+   "role": "GCH-Doctor"
+  }
+ ],
+ "script": null,
+ "standard": "Yes",
+ "style": null,
+ "system_page": 1,
+ "title": "Doctor's Dashboard"
+}

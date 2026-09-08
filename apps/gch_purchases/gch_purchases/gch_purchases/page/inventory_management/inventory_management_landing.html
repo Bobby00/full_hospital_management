@@ -1,0 +1,43 @@
+
+<!-- <h1>This is a test {{user}}</h1> -->
+<div class="row">
+    <div class="col-md-4">
+        <div class="card" style="background: linear-gradient(to right, #482d3e, #f09) !important;color: #fff;">
+            <div class="card-body">
+                <h4 class="card-title" style="font-size: 32px;color: white;height: 5vh;">Requisition Requests <i style="color: rgb(159, 0, 13);" class="fa fa-shopping-cart"  aria-hidden="true"></i></h4><br>
+                           
+                <div class="btn btn-outline-primary btn-lg btn-block" style="color: white;" onclick="create_new_material_request(this)"> Create New Requisition Request <span class="badge badge-info" style="font-size: 16px;">New</span> </div>
+                <div class="btn btn-outline-primary btn-lg btn-block" style="color: white;" onclick="generate()">Generate Requisition Request <span class="badge badge-info" style="font-size: 16px;">New</span> </div>
+                <div class="btn btn-outline-primary btn-lg btn-block" style="color: white;" onclick="requisition_orders(this,false)">Pending Requisition Request <span class="badge badge-warning" style="font-size: 16px;">{{pending_req_requests}}</span></div>
+                <div class="btn btn-outline-primary btn-lg btn-block" style="color: white;" onclick="requisition_orders(this,true)">My Requisition Request <span class="badge badge-warning" style="font-size: 16px;">{{all_my_requests}}</span></div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card" style="background: linear-gradient(to right, #373b44, #4286f4) !important;color: #fff;">
+            <div class="card-body">
+                <h4 class="card-title" style="font-size: 32px;color: white;height: 5vh;;">Goods Transfer Requests <i style="color: rgb(208, 255, 0);" class="fa fa-arrows-h"></i></h4><br>
+                <div class="btn btn-outline-primary btn-lg btn-block" style="color: white;">My Requests <span class="badge badge-warning" style="font-size: 16px;">{{all_my_requests}}</span></div>
+                <div class="btn btn-outline-primary btn-lg btn-block" style="color: white;">Pending My Action <span class="badge badge-warning" style="font-size: 16px;">{{pending_my_action}}</span></div>
+                <div class="btn btn-outline-primary btn-lg btn-block" style="color: white;">Available in Other Warehouses <span class="badge badge-warning" style="font-size: 16px;">{{available_in_other_warehouses}}</span></div>
+                <div class="btn btn-outline-primary btn-lg btn-block" style="color: white;">Available in My Warehouse <span class="badge badge-warning" style="font-size: 16px;">{{available_in_my_warehouse}}</span></div>
+                <div class="btn btn-outline-primary btn-lg btn-block" style="color: white;" onclick="declare_Stock_for_redistribution(this)">Declare stock Available for Redistribution <span class="badge badge-info" style="font-size: 16px;">New</span></div>
+                
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card" style="background: linear-gradient(to right, #0a504a, #38ef7d) !important;color: #fff;">
+            <div class="card-body">
+                <h4 class="card-title" style="font-size: 32px;color: white;height: 5vh;;">Purchase Orders <i  style="color: rgb(8, 0, 164);" class="fa fa-credit-card"></i></h4><br>
+                <div class="btn btn-outline-primary btn-lg btn-block" style="color: white;" onclick="create_new_purchase_order(this)">Create New Purchase Order <span class="badge badge-info" style="font-size: 16px;">New</span> </div>
+                <div class="btn btn-outline-primary btn-lg btn-block" style="color: white;">Orders To Be Received <span class="badge badge-warning" style="font-size: 16px;">{{to_be_received}}</span></div>
+                <div class="btn btn-outline-primary btn-lg btn-block" style="color: white;">Pending My Approval <span class="badge badge-warning" style="font-size: 16px;">{{pending_my_approval}}</span></div>
+                <div class="btn btn-outline-primary btn-lg btn-block" style="color: white;">Pending Review <span class="badge badge-warning" style="font-size: 16px;">{{pending_review}}</span></div>
+                <div class="btn btn-outline-primary btn-lg btn-block" style="color: white;">To be Sent to Supplier <span class="badge badge-warning" style="font-size: 16px;">{{to_be_sent_to_supplier}}</span></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="purchase-order-list"></div>
+

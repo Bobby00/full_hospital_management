@@ -1,0 +1,401 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2024-06-24 23:07:25.138207",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "inpatient_details_section",
+  "inpatient_record",
+  "theatre_overview",
+  "preoperative_checklist_section",
+  "communication",
+  "two_names_of_doctor_captured",
+  "both_doctors_informed",
+  "theatre_staff_informed",
+  "consent_obtained",
+  "theatre_staff_visit",
+  "nbm",
+  "time_of_last_feed",
+  "image_online",
+  "wardhome_attireundergarments_removed",
+  "bath_taken",
+  "theatre_gown_worn",
+  "id_band_worn",
+  "surgical_site_marked",
+  "dentures_removed",
+  "prosthesis_removed",
+  "any_loose_toothteeth",
+  "loose_toothteeth_numbers",
+  "all_jewelry_removed",
+  "nail_varnish_removed_if_dark",
+  "specific",
+  "canula",
+  "ngt",
+  "catheter",
+  "time_of_last_void",
+  "medication",
+  "pre_neds",
+  "pre_transfusion_done",
+  "units_cross_matched",
+  "blood_available",
+  "forms",
+  "all_doctors_notes_available",
+  "fluid_chart",
+  "xraysct_scan_available",
+  "pre_op_nursing",
+  "time_done",
+  "time_theatre_calls_for_patient",
+  "patient_arrival_at_receiving_area",
+  "prepared_by",
+  "taken_to_theatre_by",
+  "received_in_theatre_by",
+  "intra_operative_management_section",
+  "date",
+  "theatre",
+  "holding_area",
+  "time_in",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "collapsible": 1,
+   "fieldname": "preoperative_checklist_section",
+   "fieldtype": "Section Break",
+   "label": "Preoperative Checklist"
+  },
+  {
+   "fieldname": "communication",
+   "fieldtype": "Heading",
+   "label": "Communication"
+  },
+  {
+   "fieldname": "two_names_of_doctor_captured",
+   "fieldtype": "Select",
+   "label": "Two Names of Doctor Captured",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "both_doctors_informed",
+   "fieldtype": "Select",
+   "label": "Both Doctors Informed",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "theatre_staff_informed",
+   "fieldtype": "Select",
+   "label": "Theatre Staff Informed",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "consent_obtained",
+   "fieldtype": "Select",
+   "label": "Consent Obtained",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "theatre_staff_visit",
+   "fieldtype": "Data",
+   "label": "Theatre Staff Visit"
+  },
+  {
+   "fieldname": "nbm",
+   "fieldtype": "Heading",
+   "label": "NBM"
+  },
+  {
+   "fieldname": "time_of_last_feed",
+   "fieldtype": "Datetime",
+   "label": "Time of Last Feed"
+  },
+  {
+   "fieldname": "image_online",
+   "fieldtype": "Select",
+   "label": "Image Online",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "wardhome_attireundergarments_removed",
+   "fieldtype": "Select",
+   "label": "Ward/Home attire/Undergarments removed",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "bath_taken",
+   "fieldtype": "Select",
+   "label": "Bath Taken",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "theatre_gown_worn",
+   "fieldtype": "Select",
+   "label": "Theatre Gown Worn",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "id_band_worn",
+   "fieldtype": "Select",
+   "label": "ID Band Worn",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "surgical_site_marked",
+   "fieldtype": "Select",
+   "label": "Surgical Site Marked",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "dentures_removed",
+   "fieldtype": "Select",
+   "label": "Dentures Removed",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "prosthesis_removed",
+   "fieldtype": "Select",
+   "label": "Prosthesis Removed",
+   "options": "\nYes\nNo"
+  },
+  {
+   "default": "0",
+   "fieldname": "any_loose_toothteeth",
+   "fieldtype": "Check",
+   "label": "Any loose tooth/teeth"
+  },
+  {
+   "depends_on": "eval:doc.any_loose_toothteeth==1;",
+   "fieldname": "loose_toothteeth_numbers",
+   "fieldtype": "Data",
+   "label": "Loose tooth/teeth numbers",
+   "mandatory_depends_on": "eval:doc.any_loose_toothteeth==1;"
+  },
+  {
+   "fieldname": "all_jewelry_removed",
+   "fieldtype": "Select",
+   "label": "All jewelry removed",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "nail_varnish_removed_if_dark",
+   "fieldtype": "Select",
+   "label": "Nail varnish removed (if dark)",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "specific",
+   "fieldtype": "Heading",
+   "label": "Specific"
+  },
+  {
+   "default": "0",
+   "fieldname": "canula",
+   "fieldtype": "Check",
+   "label": "Canula"
+  },
+  {
+   "default": "0",
+   "fieldname": "ngt",
+   "fieldtype": "Check",
+   "label": "NGT"
+  },
+  {
+   "default": "0",
+   "fieldname": "catheter",
+   "fieldtype": "Check",
+   "label": "Catheter"
+  },
+  {
+   "fieldname": "time_of_last_void",
+   "fieldtype": "Datetime",
+   "label": "Time of last void"
+  },
+  {
+   "fieldname": "medication",
+   "fieldtype": "Heading",
+   "label": "Medication"
+  },
+  {
+   "fieldname": "pre_neds",
+   "fieldtype": "Table",
+   "label": "Pre-med given ",
+   "options": "Premeds"
+  },
+  {
+   "default": "0",
+   "fieldname": "pre_transfusion_done",
+   "fieldtype": "Check",
+   "label": "Pre transfusion done"
+  },
+  {
+   "default": "0",
+   "fieldname": "units_cross_matched",
+   "fieldtype": "Check",
+   "label": "Units Cross Matched"
+  },
+  {
+   "default": "0",
+   "fieldname": "blood_available",
+   "fieldtype": "Check",
+   "label": "Blood Available"
+  },
+  {
+   "fieldname": "forms",
+   "fieldtype": "Heading",
+   "label": "Forms"
+  },
+  {
+   "default": "0",
+   "fieldname": "all_doctors_notes_available",
+   "fieldtype": "Check",
+   "label": "All Doctors Notes Available"
+  },
+  {
+   "default": "0",
+   "fieldname": "fluid_chart",
+   "fieldtype": "Check",
+   "label": "Fluid Chart"
+  },
+  {
+   "default": "0",
+   "fieldname": "xraysct_scan_available",
+   "fieldtype": "Check",
+   "label": "Xrays/CT scan available"
+  },
+  {
+   "default": "0",
+   "fieldname": "pre_op_nursing",
+   "fieldtype": "Check",
+   "label": "Immediate pre-op Nursing observation Done (vital signs)"
+  },
+  {
+   "depends_on": "eval:doc.pre_op_nursing==1;",
+   "fieldname": "time_done",
+   "fieldtype": "Datetime",
+   "label": "Time done",
+   "mandatory_depends_on": "eval:doc.pre_op_nursing==1;"
+  },
+  {
+   "fieldname": "time_theatre_calls_for_patient",
+   "fieldtype": "Datetime",
+   "label": "Time theatre calls for patient"
+  },
+  {
+   "fieldname": "patient_arrival_at_receiving_area",
+   "fieldtype": "Datetime",
+   "label": "Patient arrival at receiving area"
+  },
+  {
+   "fieldname": "prepared_by",
+   "fieldtype": "Link",
+   "label": "Prepared by",
+   "options": "Healthcare Practitioner"
+  },
+  {
+   "fieldname": "taken_to_theatre_by",
+   "fieldtype": "Link",
+   "label": "Taken to theatre by",
+   "options": "Healthcare Practitioner"
+  },
+  {
+   "fieldname": "received_in_theatre_by",
+   "fieldtype": "Link",
+   "label": "Received in Theatre by",
+   "options": "Healthcare Practitioner"
+  },
+  {
+   "fieldname": "intra_operative_management_section",
+   "fieldtype": "Section Break",
+   "label": "INTRA OPERATIVE MANAGEMENT"
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "theatre",
+   "fieldtype": "Link",
+   "label": "Theatre",
+   "options": "Theatre"
+  },
+  {
+   "fieldname": "holding_area",
+   "fieldtype": "Data",
+   "label": "Holding Area"
+  },
+  {
+   "fieldname": "time_in",
+   "fieldtype": "Time",
+   "label": "Time In"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Theatre Nursing Checklist",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Theatre Nursing Checklist",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "inpatient_details_section",
+   "fieldtype": "Section Break",
+   "label": "Inpatient Details"
+  },
+  {
+   "fieldname": "inpatient_record",
+   "fieldtype": "Link",
+   "label": "Inpatient Record",
+   "options": "Inpatient Record"
+  },
+  {
+   "fieldname": "theatre_overview",
+   "fieldtype": "Link",
+   "label": "Theatre Overview",
+   "options": "Theatre Overview"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Naming Series",
+   "options": "HLC-TNC-.YYYY.-"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2024-06-26 08:36:26.895822",
+ "modified_by": "Administrator",
+ "module": "GCH Theatre",
+ "name": "Theatre Nursing Checklist",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

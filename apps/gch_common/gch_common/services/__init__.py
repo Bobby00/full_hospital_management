@@ -1,0 +1,3 @@
+from .rest import gch_common_api
+
+render_matching_patients = gch_common_api.render_matching_patients

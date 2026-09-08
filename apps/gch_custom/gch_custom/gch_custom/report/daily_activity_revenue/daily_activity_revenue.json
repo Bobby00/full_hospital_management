@@ -1,0 +1,70 @@
+{
+ "add_total_row": 1,
+ "columns": [
+  {
+   "fieldname": "from_date",
+   "fieldtype": "Date",
+   "label": "From Date",
+   "width": 0
+  },
+  {
+   "fieldname": "to_date",
+   "fieldtype": "Date",
+   "label": "To Date",
+   "width": 0
+  }
+ ],
+ "creation": "2023-06-20 08:54:44.274233",
+ "disable_prepared_report": 0,
+ "disabled": 0,
+ "docstatus": 0,
+ "doctype": "Report",
+ "filters": [
+  {
+   "fieldname": "from_date",
+   "fieldtype": "Date",
+   "label": "From Date",
+   "mandatory": 1,
+   "wildcard_filter": 0
+  },
+  {
+   "fieldname": "to_date",
+   "fieldtype": "Date",
+   "label": "To Date",
+   "mandatory": 1,
+   "wildcard_filter": 0
+  }
+ ],
+ "idx": 0,
+ "is_standard": "Yes",
+ "modified": "2023-06-20 09:42:06.026818",
+ "modified_by": "Administrator",
+ "module": "Gch Custom",
+ "name": "Daily Activity Revenue",
+ "owner": "Administrator",
+ "prepared_report": 0,
+ "query": "SELECT REV.OP_Services AS \"OP SERVICES\", REV.MSA, REV.PAN, REV.TOTS AS \"Service Totals\"\r\nFROM\r\n(\r\n    SELECT \r\n    \tCASE WHEN `tabSales Invoice Item`.income_account = \"4010 - Consultation Outpatient Fees - GCH\" THEN \"OP Consultation\"\r\n    \t\t WHEN `tabSales Invoice Item`.income_account = \"4002 - Drugs Income - GCH\" OR `tabSales Invoice Item`.income_account = \"4514 - Service Charge - GCH\" THEN \"Pharmacy Sales\"\r\n    \t\t WHEN `tabSales Invoice Item`.income_account = \"4007 - Laboratory Fees - GCH\" THEN \"Laboratory\"\r\n    \t\t WHEN `tabSales Invoice Item`.income_account = \"4307 - OPD Nursing Procedures - GCH\" THEN \"Outpatient Procedures\"\r\n    \t\t WHEN `tabSales Invoice Item`.income_account = \"4051 - Well Baby Clinic - GCH\" THEN \"Well Baby\"\r\n    \t\t WHEN `tabSales Invoice Item`.income_account = \"4065 - Dental Clinic - GCH\" THEN \"Dental\"\r\n    \t\t WHEN `tabSales Invoice Item`.income_account = \"4067 - Specialist Pediatric Clinic - GCH\" THEN \"Specialist Paediatric\"\r\n    \t\t WHEN `tabSales Invoice Item`.income_account = \"4068 - Nutrition Clinic - GCH\" THEN \"Nutritionist\"\r\n    \t\t ELSE \"Other Services\"\r\n    \tEND AS \"OP_Services\", /*`tabSales Invoice Item`.amount AS \"Amount\"*/\r\n    \tSUM(CASE WHEN branch = \"Mombasa\" THEN `tabSales Invoice Item`.amount ELSE 0 END) as \"MSA\",\r\n    \tSUM(CASE WHEN branch = \"Pangani\" THEN `tabSales Invoice Item`.amount ELSE 0 END) as \"PAN\", \r\n    \tSUM(`tabSales Invoice Item`.amount) as \"TOTS\"\r\n    FROM `tabSales Invoice` \r\n    LEFT JOIN `tabSales Invoice Item` ON  `tabSales Invoice Item`.parent = `tabSales Invoice`.name\r\n    WHERE `tabSales Invoice`.posting_date BETWEEN %(from_date)s AND %(to_date)s AND `tabSales Invoice`.status IN(\"Paid\",\"Unpaid\",\"Partly Paid\", \"Overdue\") \r\n    GROUP BY CASE WHEN `tabSales Invoice Item`.income_account = \"4010 - Consultation Outpatient Fees - GCH\" THEN \"Consultation\"\r\n    \t\t    WHEN `tabSales Invoice Item`.income_account = \"4002 - Drugs Income - GCH\" OR `tabSales Invoice Item`.income_account = \"4514 - Service Charge - GCH\" THEN \"Pharmacy Sales\"\r\n    \t\t    WHEN `tabSales Invoice Item`.income_account = \"4007 - Laboratory Fees - GCH\" THEN \"Laboratory\"\r\n    \t\t    WHEN `tabSales Invoice Item`.income_account = \"4307 - OPD Nursing Procedures - GCH\" THEN \"Outpatient Procedures\"\r\n    \t\t    WHEN `tabSales Invoice Item`.income_account = \"4051 - Well Baby Clinic - GCH\" THEN \"Well Baby\"\r\n    \t\t    WHEN `tabSales Invoice Item`.income_account = \"4065 - Dental Clinic - GCH\" THEN \"Dental\"\r\n    \t\t    WHEN `tabSales Invoice Item`.income_account = \"4067 - Specialist Pediatric Clinic - GCH\" THEN \"Specialist Paediatric\"\r\n    \t\t    WHEN `tabSales Invoice Item`.income_account = \"4068 - Nutrition Clinic - GCH\" THEN \"Nutritionist\"\r\n    \t\t    ELSE \"Other Services\"\r\n    \t\t END\r\n\t) AS REV\r\nGROUP BY REV.OP_Services\r\n\r\n",
+ "ref_doctype": "Sales Invoice",
+ "report_name": "Daily Activity Revenue",
+ "report_type": "Query Report",
+ "roles": [
+  {
+   "role": "Accounts Manager"
+  },
+  {
+   "role": "Accounts User"
+  },
+  {
+   "role": "Employee Self Service"
+  },
+  {
+   "role": "GCH-Reception"
+  },
+  {
+   "role": "GCH-TriageNurse"
+  },
+  {
+   "role": "GCH-Doctor"
+  }
+ ]
+}

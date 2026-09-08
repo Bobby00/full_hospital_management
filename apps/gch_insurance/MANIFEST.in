@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include gch_insurance *.css
+recursive-include gch_insurance *.csv
+recursive-include gch_insurance *.html
+recursive-include gch_insurance *.ico
+recursive-include gch_insurance *.js
+recursive-include gch_insurance *.json
+recursive-include gch_insurance *.md
+recursive-include gch_insurance *.png
+recursive-include gch_insurance *.py
+recursive-include gch_insurance *.svg
+recursive-include gch_insurance *.txt
+recursive-exclude gch_insurance *.pyc

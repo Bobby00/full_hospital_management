@@ -1,0 +1,108 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2021-12-08 14:23:30.013793",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "patient_encounter_general",
+  "patient_encounter_respiratory_system",
+  "patient_encounter_cardiovascular_system",
+  "patient_encounter_central_nervous_system",
+  "patient_encounter_abdomen",
+  "patient_encounter_genitourinary",
+  "patient_encounter_ear_nose_and_throat",
+  "patient_encounter_eyes",
+  "patient_encounter_skin",
+  "patient_encounter_musculoskeletal",
+  "review_identifier"
+ ],
+ "fields": [
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "patient_encounter_general",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "label": "General"
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "patient_encounter_cardiovascular_system",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "label": "Cardiovascular System"
+  },
+  {
+   "fieldname": "patient_encounter_genitourinary",
+   "fieldtype": "Small Text",
+   "label": "Genitourinary"
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "patient_encounter_ear_nose_and_throat",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "label": "Ear Nose and Throat"
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "patient_encounter_skin",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "label": "Skin"
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "patient_encounter_respiratory_system",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "label": "Respiratory System"
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "patient_encounter_abdomen",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "label": "Abdomen"
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "patient_encounter_central_nervous_system",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "label": "Central Nervous System"
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "patient_encounter_eyes",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "label": "Eyes"
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "patient_encounter_musculoskeletal",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "label": "Musculoskeletal"
+  },
+  {
+   "fieldname": "review_identifier",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Review identifier"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2022-07-29 09:08:03.476806",
+ "modified_by": "Administrator",
+ "module": "Gch Custom",
+ "name": "Patient Encounter Physical Examination Details",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

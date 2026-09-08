@@ -1,0 +1,45 @@
+{
+ "actions": [],
+ "autoname": "field:formula",
+ "creation": "2021-09-13 12:02:27.627099",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "formula"
+ ],
+ "fields": [
+  {
+   "fieldname": "formula",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Formula",
+   "reqd": 1,
+   "unique": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2021-09-13 12:05:46.503296",
+ "modified_by": "Administrator",
+ "module": "Gch Custom",
+ "name": "Drug Formula",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

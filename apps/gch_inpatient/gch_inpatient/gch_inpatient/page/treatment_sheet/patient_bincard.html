@@ -1,0 +1,76 @@
+<div class="list-row-container" tabindex="1">
+    <div class="btn btn-primary btn-sm " id="return-items" style="display: none" onclick="initiate_returns()">Return Items</div>
+    <header class="level list-row-head text-muted">
+        <div class="level-left list-header-subject">
+            <div class="list-row-col ellipsis hidden-xs ">                                          
+               <span style="padding: 5px;"><strong>Medication</strong></span>
+            </div>
+            <div class="list-row-col ellipsis hidden-xs  ">
+                <span ><strong>Issued Qty</strong></span>
+            </div>
+            <!-- <div class="list-row-col ellipsis hidden-xs  ">
+                <span ><strong>Returned Qty</strong></span>
+            </div> -->
+            <div class="list-row-col ellipsis hidden-xs  ">
+                <span ><strong>Days Taken</strong></span>
+            </div>
+            <div class="list-row-col ellipsis hidden-xs  ">
+                <span ><strong>Prescribed By</strong></span>
+            </div>
+            <div class="list-row-col ellipsis hidden-xs  ">
+                <span ><strong>Issued By</strong></span>
+            </div>
+            <div class="list-row-col ellipsis hidden-xs  ">
+                <span ><strong>Received By</strong></span>
+            </div>
+            <div class="list-row-col ellipsis hidden-xs  ">
+                <span ><strong>Status</strong></span>
+            </div>
+            <div class="list-row-col ellipsis hidden-xs  ">
+                <span ><strong>Actions</strong></span>
+            </div>
+            <div class="list-row-col ellipsis hidden-xs  ">
+                <input class="level-item list-check-all hidden-xs" type="checkbox" id="select_all" name="select_all" title="Select All" onclick="toggleCheckAll(this)">
+            </div>
+        </div>
+    </header>
+    {% for item in bincard_data %}
+    <div class="level list-row" id={{item.name}}>
+        <div class="list-row-col ellipsis list-subject hidden-xs">
+            <span style="padding: 5px;">{{item.item_name}}</span>
+        </div>
+        <div class="list-row-col ellipsis list-subject hidden-xs">
+            <span>{{item.billed_quantity? item.billed_quantity: "Pending"}}</span>
+        </div>
+        <!-- <div class="list-row-col ellipsis list-subject hidden-xs">
+            <span>0</span>
+        </div> -->
+        <div class="list-row-col ellipsis list-subject hidden-xs">
+            <span>1 of {{item.duration}}</span>
+        </div>
+        <div class="list-row-col ellipsis list-subject hidden-xs">
+            <span>{{item.prescribing_doctor}}</span>
+        </div>
+        <div class="list-row-col ellipsis list-subject hidden-xs">
+            <span>{{item.dispensed_by ? item.dispensed_by: "Pending"}}</span>
+        </div>
+        <div class="list-row-col ellipsis list-subject hidden-xs">
+            <span>{{item.receiving_nurse ? item.receiving_nurse: "Not received" }}</span>
+        </div>
+        <div class="list-row-col ellipsis list-subject hidden-xs">
+            <span>{{item.indication}}</span>
+        </div>
+        <div class="list-row-col ellipsis list-subject hidden-xs" >
+            
+            {% if item.return_status %}
+            <span class="" >{{item.return_status}}</span>
+            {% else %}
+            <!-- <span class="btn btn-primary btn-sm" data-issued="{{item.billed_quantity}}" data-name="{{item.name}}" onclick="returnMedication(this)">Return</span> -->
+            <input title="Select" class="level-item list-check-all hidden-xs row-checkbox"   type="checkbox"
+                name="checkbox" id=""/>
+            {%endif%}
+        </div>
+    </div>
+    {%endfor%}
+
+</div>

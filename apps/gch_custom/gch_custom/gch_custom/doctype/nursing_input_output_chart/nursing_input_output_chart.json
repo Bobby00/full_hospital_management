@@ -1,0 +1,260 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2023-11-14 14:06:47.236010",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "inpatient_record",
+  "multidisciplinary",
+  "encounter_details_section",
+  "patient",
+  "patient_name",
+  "uhid",
+  "column_break_8",
+  "gender",
+  "wardroombed",
+  "encounter_date",
+  "consulting_doctor",
+  "triage_section",
+  "weight",
+  "height",
+  "temperature",
+  "bmi_column",
+  "bmi",
+  "bsa",
+  "naming_series",
+  "orders_section",
+  "input_output_orders",
+  "section_break_6",
+  "prev_io_charts",
+  "previous_nursing_input_output_chart",
+  "section_break_4",
+  "input_output_table_1",
+  "table_1",
+  "add_record_t1",
+  "section_break_27",
+  "input_output_table_2",
+  "table_2",
+  "add_record_t2",
+  "column_break_4"
+ ],
+ "fields": [
+  {
+   "fieldname": "encounter_details_section",
+   "fieldtype": "Section Break",
+   "hidden": 1,
+   "label": "Encounter Details"
+  },
+  {
+   "fieldname": "column_break_8",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "patient.sex",
+   "fieldname": "gender",
+   "fieldtype": "Data",
+   "label": "Gender"
+  },
+  {
+   "fieldname": "wardroombed",
+   "fieldtype": "Data",
+   "label": "Ward/Room/Bed"
+  },
+  {
+   "default": "Today",
+   "fieldname": "encounter_date",
+   "fieldtype": "Date",
+   "label": "Encounter Date"
+  },
+  {
+   "fieldname": "consulting_doctor",
+   "fieldtype": "Data",
+   "label": "Consulting Doctor"
+  },
+  {
+   "fieldname": "triage_section",
+   "fieldtype": "Section Break",
+   "hidden": 1,
+   "label": "TRIAGE"
+  },
+  {
+   "fieldname": "weight",
+   "fieldtype": "Data",
+   "label": "Weight"
+  },
+  {
+   "fieldname": "height",
+   "fieldtype": "Data",
+   "label": "Height"
+  },
+  {
+   "fieldname": "temperature",
+   "fieldtype": "Data",
+   "label": "Temperature"
+  },
+  {
+   "fieldname": "bmi_column",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "bmi",
+   "fieldtype": "Data",
+   "label": "BMI"
+  },
+  {
+   "fieldname": "bsa",
+   "fieldtype": "Data",
+   "label": "BSA"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "options": "HLC-IOCHART-.YYYY.-"
+  },
+  {
+   "fieldname": "section_break_4",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": " <table class=\"table\" id=\"table_1\">\n      <thead>\n        <tr>\n          <th colspan=\"8\">Intake (in ml)</th>\n          <th colspan=\"6\">Output (in ml)</th>\n          <th></th>\n        </tr>\n        <tr>\n          <th colspan=\"3\"></th>\n          <th colspan=\"3\">Intravenous</th>\n          <th colspan=\"2\">Alimentary</th>\n          <th colspan=\"7\"></th>\n        </tr>\n        <tr>\n          <th>Date</th>\n          <th>Time</th>\n          <th>Fluid No</th>\n          <th>Type</th>\n          <th>Total Bottle</th>\n          <th>Infused</th>\n          <th>Type</th>\n          <th>Amount</th>\n          <th>Vomit</th>\n          <th>Stool</th>\n          <th>NG</th>\n          <th>Urine</th>\n          <th>Other</th>\n          <th>Specific Gravity</th>\n          <th>Sign</th>\n        </tr>\n      </thead>\n      <tbody>\n        <tr></tr>\n      </tbody>\n      <tfoot>\n        <tr>\n          <th colspan=\"3\">TOTAL INTAKE (A)</th>\n          <th colspan=\"4\">0</th>\n          <th colspan=\"3\">TOTAL OUTPUT (B)</th>\n          <th colspan=\"4\">0</th>\n          <th></th>\n        </tr>\n        <tr>\n          <th colspan=\"3\">Difference(A-B)</th>\n          <th colspan=\"12\">0</th>\n        </tr>\n      </tfoot>\n    </table>",
+   "fieldname": "table_1",
+   "fieldtype": "HTML",
+   "label": "Table_1"
+  },
+  {
+   "fieldname": "section_break_6",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "table_2",
+   "fieldtype": "HTML",
+   "hidden": 1,
+   "label": "Table_2"
+  },
+  {
+   "fieldname": "input_output_table_1",
+   "fieldtype": "Table",
+   "hidden": 1,
+   "label": "input_output_table_1",
+   "options": "Nursing Input Output Chart Details"
+  },
+  {
+   "fieldname": "add_record_t2",
+   "fieldtype": "Button",
+   "hidden": 1,
+   "label": "Add Record"
+  },
+  {
+   "fieldname": "add_record_t1",
+   "fieldtype": "Button",
+   "hidden": 1,
+   "label": "Add Record"
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "input_output_table_2",
+   "fieldtype": "Table",
+   "hidden": 1,
+   "label": "input_output_table_2",
+   "options": "Nursing Input Output Chart Details"
+  },
+  {
+   "fieldname": "orders_section",
+   "fieldtype": "Section Break",
+   "label": "Orders"
+  },
+  {
+   "fieldname": "input_output_orders",
+   "fieldtype": "Table",
+   "label": "input_output_orders",
+   "options": "Intake Fluid Specification Table"
+  },
+  {
+   "fieldname": "inpatient_record",
+   "fieldtype": "Link",
+   "label": "Inpatient Record",
+   "options": "Inpatient Record"
+  },
+  {
+   "fieldname": "patient",
+   "fieldtype": "Link",
+   "label": "Patient",
+   "options": "Patient"
+  },
+  {
+   "fieldname": "patient_name",
+   "fieldtype": "Data",
+   "label": "Patient Name"
+  },
+  {
+   "fieldname": "uhid",
+   "fieldtype": "Data",
+   "label": "UHID"
+  },
+  {
+   "fieldname": "multidisciplinary",
+   "fieldtype": "Link",
+   "label": "Multidisciplinary",
+   "options": "Multidisciplinary"
+  },
+  {
+   "fieldname": "previous_nursing_input_output_chart",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "previous_nursing_input_output_chart",
+   "options": "Nursing Input Output Chart"
+  },
+  {
+   "fieldname": "section_break_27",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "prev_io_charts",
+   "fieldtype": "HTML",
+   "label": "prev_io_charts"
+  }
+ ],
+ "hide_toolbar": 1,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-03-08 16:11:05.045885",
+ "modified_by": "Administrator",
+ "module": "Gch Custom",
+ "name": "Nursing Input Output Chart",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "All",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

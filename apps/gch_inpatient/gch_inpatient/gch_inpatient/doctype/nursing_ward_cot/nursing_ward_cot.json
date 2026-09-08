@@ -1,0 +1,70 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2021-11-21 21:08:13.667505",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "ward_room",
+  "cot_number",
+  "is_occupied",
+  "nursing_ward",
+  "is_locked"
+ ],
+ "fields": [
+  {
+   "fieldname": "ward_room",
+   "fieldtype": "Link",
+   "label": "Ward Room",
+   "options": "Nursing Ward Room"
+  },
+  {
+   "fieldname": "cot_number",
+   "fieldtype": "Data",
+   "label": "Cot Number"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_occupied",
+   "fieldtype": "Check",
+   "label": "Is Occupied"
+  },
+  {
+   "fieldname": "nursing_ward",
+   "fieldtype": "Data",
+   "label": "Nursing Ward",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "is_locked",
+   "fieldtype": "Check",
+   "label": "Is Locked"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-07-26 06:16:11.982117",
+ "modified_by": "Administrator",
+ "module": "Gch Inpatient",
+ "name": "Nursing Ward Cot",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

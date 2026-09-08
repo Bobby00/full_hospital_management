@@ -1,0 +1,84 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2022-06-02 16:16:22.708075",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "weight_in_kilograms",
+  "height_in_centimeters",
+  "head_circumference_in_centimeters",
+  "bsa",
+  "column_break_5",
+  "bmi",
+  "bmi_for_age_percentile",
+  "height_for_age_percentile",
+  "weight_for_age_percentile"
+ ],
+ "fields": [
+  {
+   "fieldname": "weight_in_kilograms",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "label": "Weight In Kilograms"
+  },
+  {
+   "fieldname": "height_in_centimeters",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "label": "Height in Centimeters"
+  },
+  {
+   "fieldname": "head_circumference_in_centimeters",
+   "fieldtype": "Float",
+   "label": "Head Circumference In Centimeters"
+  },
+  {
+   "fieldname": "bsa",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "label": "BSA"
+  },
+  {
+   "fieldname": "column_break_5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "bmi",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "label": "BMI"
+  },
+  {
+   "fieldname": "bmi_for_age_percentile",
+   "fieldtype": "Float",
+   "label": "BMI for Age Percentile"
+  },
+  {
+   "fieldname": "height_for_age_percentile",
+   "fieldtype": "Float",
+   "label": "Height for Age Percentile"
+  },
+  {
+   "fieldname": "weight_for_age_percentile",
+   "fieldtype": "Float",
+   "label": "Weight for Age Percentile"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2022-06-02 16:20:09.987677",
+ "modified_by": "Administrator",
+ "module": "Gch Custom",
+ "name": "Anthropometry Details",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

@@ -1,0 +1,135 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2021-11-20 19:55:12.212474",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "type",
+  "ward_bed",
+  "ward_cot",
+  "ward_room",
+  "nursing_ward",
+  "patient",
+  "patient_gender",
+  "patient_pews_score",
+  "doctor_on_duty",
+  "consulting_doctor",
+  "start_date",
+  "end_date",
+  "diet_alert"
+ ],
+ "fields": [
+  {
+   "fieldname": "doctor_on_duty",
+   "fieldtype": "Link",
+   "label": "Doctor on Duty",
+   "options": "Healthcare Practitioner"
+  },
+  {
+   "fieldname": "start_date",
+   "fieldtype": "Datetime",
+   "in_list_view": 1,
+   "label": "Start Date"
+  },
+  {
+   "fieldname": "end_date",
+   "fieldtype": "Datetime",
+   "in_list_view": 1,
+   "label": "End Date"
+  },
+  {
+   "fieldname": "patient",
+   "fieldtype": "Link",
+   "label": "Patient",
+   "options": "Patient",
+   "reqd": 1
+  },
+  {
+   "depends_on": "eval:cur_frm.doc.type == \"Bed\";",
+   "fieldname": "ward_bed",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Ward Bed",
+   "mandatory_depends_on": "eval:cur_frm.doc.type == \"Bed\";",
+   "options": "Nursing Ward Bed"
+  },
+  {
+   "depends_on": "eval:cur_frm.doc.type == \"Cot\";",
+   "fieldname": "ward_cot",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Ward Cot",
+   "mandatory_depends_on": "eval:cur_frm.doc.type == \"Cot\";",
+   "options": "Nursing Ward Cot"
+  },
+  {
+   "fieldname": "type",
+   "fieldtype": "Select",
+   "label": "Type",
+   "options": "Bed\nCot",
+   "reqd": 1
+  },
+  {
+   "fieldname": "nursing_ward",
+   "fieldtype": "Data",
+   "label": "Nursing Ward",
+   "read_only": 1
+  },
+  {
+   "fieldname": "ward_room",
+   "fieldtype": "Data",
+   "label": "Ward Room",
+   "read_only": 1
+  },
+  {
+   "fieldname": "patient_gender",
+   "fieldtype": "Data",
+   "label": "Patient Gender",
+   "read_only": 1
+  },
+  {
+   "fieldname": "patient_pews_score",
+   "fieldtype": "Data",
+   "label": "Patient PEWS Score",
+   "read_only": 1
+  },
+  {
+   "fieldname": "diet_alert",
+   "fieldtype": "Data",
+   "label": "Diet Alert",
+   "read_only": 1
+  },
+  {
+   "fieldname": "consulting_doctor",
+   "fieldtype": "Data",
+   "label": "Consulting Doctor",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2021-12-01 05:34:04.781704",
+ "modified_by": "Administrator",
+ "module": "Gch Custom",
+ "name": "Nursing Ward Occupancy Detail",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

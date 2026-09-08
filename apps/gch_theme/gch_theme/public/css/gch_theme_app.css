@@ -1,0 +1,144 @@
+/* Main */
+body {
+	font-size: 14px;
+	background-color: #f3f6f9;
+}
+a {
+    color: #666;
+	font-weight: 500;
+}
+.small, small {
+    font-size: 95%;
+}
+.h6.uppercase, h6.uppercase {
+    font-weight: 600;
+	font-size: 11.5px;
+}
+
+.page-container {
+    background: #e5f3f9!important;
+}
+
+/* Navigation Bar */
+.navbar-default {
+    background: linear-gradient(to right, #0397b3, #e2f0f5);
+    border: none;
+}
+.navbar-default .navbar-nav>li>a{
+	color:#fff;
+}
+.navbar-default .navbar-nav>li>a:hover{
+	color:#ddd;
+}
+.navbar-default .navbar-brand:hover {
+	color:#ddd;
+}
+
+/* Widgets */
+.widget {
+    background-color: white;
+	border: none;
+	box-shadow: 0px 3px 12px 0px #e8eafcad, 0 3px 3px -2px #461a7714;
+}
+.widget .widget-head .widget-title {
+    font-size: 14px;
+	color: #078ed6;
+}
+.widget.shortcut-widget-box .widget-head .widget-title i {
+    color: #078ed6;
+}	
+
+/* Sidebar */
+.desk-container .desk-sidebar .sidebar-item {
+    font-size: 13px;
+    font-weight: 600;
+	color: #444;
+}
+.desk-container .desk-sidebar .sidebar-item.selected, .desk-container .desk-sidebar .sidebar-item:hover {
+    color: white;
+    background: linear-gradient(to right, #0397b3, #e2f0f5);
+}
+.layout-side-section {
+    font-size: 14px;
+}
+.uppercase {
+    color:#078ed6;
+}
+
+/* Dropdowns */
+.dropdown-menu>li>a {
+    font-size: 13px;
+	color:#666;
+	font-weight: 500;
+}
+
+/* Page Heading */
+.page-head {
+    border-bottom: none !important;
+    box-shadow: 0 1px 10px 1px rgba(115, 108, 203, 0.1);
+}
+.page-title .title-text {
+	color: #078ed6;
+	font-size: 22px;
+}
+
+/*Main Section */
+.layout-main-section {
+    border: 1px solid #e4e4e4;
+    background-color: white;
+}
+.list-row-head {
+    background-color: #f3f6f9;
+    border-bottom: 1px solid #e4e4e4 !important;
+}
+
+/* Buttons */
+.btn-primary {
+    background-color: #078ed6;
+    border-color: #078ed6;
+}
+.control-label, .grid-heading-row {
+    font-size:13px;
+}
+.btn-primary:hover, .btn-primary:focus, .btn-primary.focus, .btn-primary:active, .btn-primary.active, .open > .dropdown-toggle.btn-primary {
+    background-color: #078ed6;
+    border-color:#078ed6;
+}
+.indicator-right.blue:after, .indicator.blue:before {
+    background: #078ed6;
+}
+
+/*Other Components*/
+input[type=checkbox]:checked:before {
+    color: #ae3c8e;
+}
+.col-lg-2.layout-side-section {
+    background: #7bcfed;
+}
+
+.navbar {
+    background: #7bcfed;
+}
+
+.sidebar-item-label {
+    color: #000;
+}
+
+.sidebar-item.selected{
+
+}
+
+.navbar .navbar-nav .nav-link {
+    color: #000 !important;
+}
+
+.standard-sidebar-item.selected {
+    background-color: #afb3ad!important;
+}
+
+.standard-sidebar-item:hover {
+    background-color: #afb3ad!important;
+}
+.widget-group {
+	padding: 2rem !important;
+}

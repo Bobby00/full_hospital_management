@@ -1,0 +1,84 @@
+{
+ "add_total_row": 0,
+ "columns": [],
+ "creation": "2022-10-31 14:28:22.686184",
+ "disable_prepared_report": 0,
+ "disabled": 0,
+ "docstatus": 0,
+ "doctype": "Report",
+ "filters": [
+  {
+   "fieldname": "from_date",
+   "fieldtype": "Date",
+   "label": "From Date",
+   "mandatory": 1,
+   "wildcard_filter": 0
+  },
+  {
+   "fieldname": "to_date",
+   "fieldtype": "Date",
+   "label": "To Date",
+   "mandatory": 1,
+   "wildcard_filter": 0
+  }
+ ],
+ "idx": 0,
+ "is_standard": "Yes",
+ "modified": "2022-11-09 08:41:34.945854",
+ "modified_by": "Administrator",
+ "module": "Gch Custom",
+ "name": "Daily Lab Activity",
+ "owner": "Administrator",
+ "prepared_report": 0,
+ "query": "SELECT\n    `tabLab Test`.department as \"Department\",\n    `tabLab Test`.lab_test_name as \"Laboratory Services\", \n    COUNT(CASE WHEN `tabPatient Encounter`.branch = \"Muthaiga\" THEN 1 END) as \"Muthaiga Clinic\",\n    COUNT(CASE WHEN `tabPatient Encounter`.branch = \"Buruburu\" THEN 1 END) as \"Buruburu Clinic\",\n    COUNT(CASE WHEN `tabPatient Encounter`.branch = \"Donholms\" THEN 1 END) as \"Donholms Clinic\",\n    COUNT(CASE WHEN `tabPatient Encounter`.branch = \"Embakasi\" THEN 1 END) as \"Embakasi Clinic\",\n    COUNT(CASE WHEN `tabPatient Encounter`.branch = \"Githogoro\" THEN 1 END) as \"Githogoro Clinic\",  \n    COUNT(CASE WHEN `tabPatient Encounter`.branch = \"Junction\" THEN 1 END) as \"Junction Clinic\",\n    COUNT(CASE WHEN `tabPatient Encounter`.branch = \"Kitengela\" THEN 1 END) as \"Kitengela Clinic\",\n    COUNT(CASE WHEN `tabPatient Encounter`.branch = \"Komarock\" THEN 1 END) as \"Komarock Clinic\",\n    COUNT(CASE WHEN `tabPatient Encounter`.branch = \"Lavington\" THEN 1 END) as \"Lavington Clinic\",\n    COUNT(CASE WHEN `tabPatient Encounter`.branch = \"Mombasa\" THEN 1 END) as \"Mombasa Clinic\", \n    COUNT(CASE WHEN `tabPatient Encounter`.branch = \"Nairobi West\" THEN 1 END) as \"Nairobi West Clinic\",\n    COUNT(CASE WHEN `tabPatient Encounter`.branch = \"Pangani\" THEN 1 END) as \"Pangani Clinic\",\n    COUNT(CASE WHEN `tabPatient Encounter`.branch = \"Rongai\" THEN 1 END) as \"Rongai Clinic\",\n    COUNT(CASE WHEN `tabPatient Encounter`.branch = \"Syokimau\" THEN 1 END) as \"Syokimau Clinic\",\n    COUNT(CASE WHEN `tabPatient Encounter`.branch = \"Thika\" THEN 1 END) as \"Thika Clinic\",\n    COUNT(CASE WHEN `tabPatient Encounter`.branch = \"TRM\" THEN 1 END) as \"TRM Clinic\",\n    COUNT(CASE WHEN `tabPatient Encounter`.branch = \"Westlands\" THEN 1 END) as \"Westlands Clinic\", \n    COUNT(`tabPatient Encounter`.branch) as \"Clinic Totals\"\nFROM \n    `tabPatient Encounter`  \n    \nLEFT JOIN \n    `tabLab Test` ON `tabPatient Encounter`.patient = `tabLab Test`.patient\n    \nWHERE \n    DATE_FORMAT(`tabPatient Encounter`.encounter_date, '%%Y-%%m-%%d') BETWEEN %(from_date)s AND %(to_date)s\nGROUP BY `tabLab Test`.lab_test_name\n",
+ "ref_doctype": "Patient Encounter",
+ "report_name": "Daily Lab Activity",
+ "report_type": "Query Report",
+ "roles": [
+  {
+   "role": "Physician"
+  },
+  {
+   "role": "System Manager"
+  },
+  {
+   "role": "GCH-Reception"
+  },
+  {
+   "role": "GCH-TriageNurse"
+  },
+  {
+   "role": "GCH-Doctor"
+  },
+  {
+   "role": "GCH-Pharmacy"
+  },
+  {
+   "role": "Physician"
+  },
+  {
+   "role": "System Manager"
+  },
+  {
+   "role": "GCH-Reception"
+  },
+  {
+   "role": "GCH-TriageNurse"
+  },
+  {
+   "role": "GCH-Doctor"
+  },
+  {
+   "role": "GCH-LabTechnician"
+  },
+  {
+   "role": "GCH-Wellbaby Nurse"
+  },
+  {
+   "role": "Support Team"
+  },
+  {
+   "role": "GCH-Dental"
+  }
+ ]
+}

@@ -1,0 +1,277 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2023-06-05 09:50:44.052227",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "title",
+  "patient_details_section",
+  "patient_encounter",
+  "inpatient_record",
+  "patient",
+  "age",
+  "date_of_birth",
+  "gender",
+  "column_break_7",
+  "bmi",
+  "height_in_centimeters",
+  "weight_in_kilograms",
+  "room_no",
+  "bed_no",
+  "billing_section",
+  "sales_invoice",
+  "admission_notes_section",
+  "admission_note",
+  "admission_notes_table",
+  "multidisciplinary_care_plan_section",
+  "multidisciplinary_table",
+  "pull_data_to_multidisciplinary",
+  "pull_multidisciplinary_data",
+  "enter_record_section",
+  "multidisciplinary_table_input",
+  "multidisciplinary_care_plan_table",
+  "nursing_tools_section",
+  "nursing_tools",
+  "start_nursing_checklist",
+  "completed_nursing_tools"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Series",
+   "no_copy": 1,
+   "options": "HLC-MDC-.YYYY.-",
+   "read_only": 1,
+   "set_only_once": 1
+  },
+  {
+   "fieldname": "title",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Title",
+   "no_copy": 1,
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "patient_details_section",
+   "fieldtype": "Section Break",
+   "label": "Patient Details"
+  },
+  {
+   "fieldname": "patient_encounter",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Outpatient Encounter",
+   "options": "Patient Encounter",
+   "read_only": 1
+  },
+  {
+   "fieldname": "inpatient_record",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Inpatient Record",
+   "options": "Inpatient Record",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "inpatient_record.patient",
+   "fieldname": "patient",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Patient"
+  },
+  {
+   "fetch_from": "patient_encounter.patient_age",
+   "fieldname": "age",
+   "fieldtype": "Data",
+   "label": "Age"
+  },
+  {
+   "fetch_from": "inpatient_record.dob",
+   "fieldname": "date_of_birth",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Date of Birth (YY/MM/DD)"
+  },
+  {
+   "fetch_from": "inpatient_record.gender",
+   "fieldname": "gender",
+   "fieldtype": "Link",
+   "label": "Gender",
+   "options": "Gender"
+  },
+  {
+   "fieldname": "column_break_7",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "patient_encounter.bmi",
+   "fieldname": "bmi",
+   "fieldtype": "Data",
+   "label": "BMI",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "patient_encounter.height_in_centimeters",
+   "fieldname": "height_in_centimeters",
+   "fieldtype": "Data",
+   "label": "Height in Centimeters",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "patient_encounter.weight_in_kilograms",
+   "fieldname": "weight_in_kilograms",
+   "fieldtype": "Data",
+   "label": "Weight in Kilograms",
+   "read_only": 1
+  },
+  {
+   "fieldname": "admission_notes_section",
+   "fieldtype": "Section Break",
+   "label": "Admission Notes"
+  },
+  {
+   "fetch_from": "patient_encounter.consultant_comments",
+   "fieldname": "admission_note",
+   "fieldtype": "Small Text",
+   "label": "Admission Notes",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "patient_encounter.consultant_comments",
+   "fieldname": "admission_notes_table",
+   "fieldtype": "Table",
+   "hidden": 1,
+   "options": "Admission Notes",
+   "read_only": 1
+  },
+  {
+   "fieldname": "multidisciplinary_care_plan_section",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "multidisciplinary_care_plan_table",
+   "fieldtype": "Table",
+   "hidden": 1,
+   "label": "Multidisciplinary Care Plan Table",
+   "options": "Multidisciplinary Care Plan"
+  },
+  {
+   "fieldname": "nursing_tools_section",
+   "fieldtype": "Section Break",
+   "hidden": 1,
+   "label": "Nursing Tools"
+  },
+  {
+   "fieldname": "nursing_tools",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "Nursing Tools",
+   "options": "Nursing Checklist Template"
+  },
+  {
+   "fieldname": "start_nursing_checklist",
+   "fieldtype": "Button",
+   "hidden": 1,
+   "label": "Start Nursing Checklist"
+  },
+  {
+   "fieldname": "completed_nursing_tools",
+   "fieldtype": "Table",
+   "hidden": 1,
+   "label": "Completed Nursing Tools",
+   "options": "Completed Nursing Checklist Details",
+   "read_only": 1
+  },
+  {
+   "fieldname": "multidisciplinary_table",
+   "fieldtype": "HTML",
+   "label": "Multidisciplinary Table",
+   "read_only": 1
+  },
+  {
+   "fieldname": "multidisciplinary_table_input",
+   "fieldtype": "HTML",
+   "label": "Multidisciplinary Table Input"
+  },
+  {
+   "fieldname": "enter_record_section",
+   "fieldtype": "Section Break",
+   "label": "New Entry"
+  },
+  {
+   "fieldname": "room_no",
+   "fieldtype": "Data",
+   "label": "Room No",
+   "read_only": 1
+  },
+  {
+   "fieldname": "bed_no",
+   "fieldtype": "Data",
+   "label": "Bed No",
+   "read_only": 1
+  },
+  {
+   "fieldname": "pull_multidisciplinary_data",
+   "fieldtype": "Button",
+   "hidden": 1,
+   "label": "Pull Multidisciplinary Data"
+  },
+  {
+   "fieldname": "pull_data_to_multidisciplinary",
+   "fieldtype": "Button",
+   "label": "Pull data to Multidisciplinary"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "billing_section",
+   "fieldtype": "Section Break",
+   "label": "Billing"
+  },
+  {
+   "fetch_from": "inpatient_record.sales_invoice",
+   "fieldname": "sales_invoice",
+   "fieldtype": "Data",
+   "label": "Sales Invoice",
+   "read_only": 1
+  }
+ ],
+ "hide_toolbar": 1,
+ "index_web_pages_for_search": 1,
+ "links": [
+  {
+   "group": "Encounters",
+   "link_doctype": "Inpatient Record",
+   "link_fieldname": "multidisciplinary"
+  }
+ ],
+ "modified": "2024-11-20 18:45:24.740958",
+ "modified_by": "Administrator",
+ "module": "Gch Inpatient",
+ "name": "Multidisciplinary",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

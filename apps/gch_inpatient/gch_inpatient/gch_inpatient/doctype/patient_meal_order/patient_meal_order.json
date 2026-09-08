@@ -1,0 +1,650 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2024-06-12 11:12:46.565402",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "inpatient_record",
+  "patient",
+  "dob",
+  "gender",
+  "ward",
+  "room",
+  "bed",
+  "column_break_9",
+  "status",
+  "taken_by",
+  "date",
+  "time",
+  "patient_meal_plan_details_section",
+  "meal_plan",
+  "meal_plan_menu_details",
+  "all_items_ordered_section",
+  "catering_meal_order_details",
+  "patient_meal_order_details_section_section",
+  "select_menu",
+  "menu_option",
+  "menu_time_option",
+  "order_details_section",
+  "breakfast_section",
+  "breakfast_drink_option",
+  "breakfast_starch_options",
+  "breakfast_protein_options",
+  "breakfast_side_piece_option",
+  "column_break_23",
+  "10_am_tea_section",
+  "10_am_drink",
+  "10_am_accompaniment",
+  "column_break_30",
+  "lunch_section",
+  "lunch_main_dish_options",
+  "lunch_accompaniment_options",
+  "lunch_accompaniment_2_options",
+  "lunch_dessert_1",
+  "column_break_35",
+  "4pm_tea_section",
+  "4pm_drink",
+  "4pm_snack",
+  "column_break_39",
+  "dinner_section",
+  "dinner_main_dish_options",
+  "dinner_accompaniment_1_options",
+  "dinner_accompaniment_2_options",
+  "dinner_dessert_options",
+  "section_break_48",
+  "make_parent_catering_meal_order",
+  "select_parent_menu",
+  "select_parent_menu_option",
+  "parent_meal_order_details_section_section",
+  "parent_catering_meal_order_details",
+  "parent_breakfast_section",
+  "parent_breakfast_drink_options",
+  "parent_breakfast_starch_options",
+  "parent_breakfast_protein_options",
+  "parent_breakfast_side_piece_options",
+  "column_break_58",
+  "parent_10_am_section",
+  "parent_10_am_drink",
+  "parent_10_am_accompaniment",
+  "column_break_62",
+  "parent_lunch",
+  "parent_lunch_main_dish_options",
+  "parent_lunch_accompaniment_options",
+  "parent_lunch_accompaniment_2_options",
+  "parent_lunch_dessert_options",
+  "column_break_67",
+  "parent_4pm_tea",
+  "parent_4pm_drink",
+  "parent_4pm_snack",
+  "column_break_71",
+  "dinner",
+  "parent_dinner_main_dish_options",
+  "parent_dinner_accompaniment_1_options",
+  "parent_dinner_accompaniment_2_options",
+  "parent_dinner_dessert_options",
+  "section_break_23",
+  "ordered_by",
+  "ordered_by_signature",
+  "column_break_26",
+  "received_by",
+  "received_by_signature",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Naming Series",
+   "options": "HLC-PMO-.YYYY.-"
+  },
+  {
+   "fieldname": "inpatient_record",
+   "fieldtype": "Link",
+   "label": "Inpatient Record",
+   "options": "Inpatient Record"
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fetch_from": "inpatient_record.patient",
+   "fieldname": "patient",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Patient",
+   "options": "Patient"
+  },
+  {
+   "fetch_from": "inpatient_record.dob",
+   "fieldname": "dob",
+   "fieldtype": "Data",
+   "label": "DOB"
+  },
+  {
+   "fetch_from": "inpatient_record.gender",
+   "fieldname": "gender",
+   "fieldtype": "Data",
+   "label": "Gender"
+  },
+  {
+   "fetch_from": "inpatient_record.ward_station",
+   "fieldname": "ward",
+   "fieldtype": "Link",
+   "in_global_search": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Ward",
+   "options": "Nursing Ward"
+  },
+  {
+   "fetch_from": "inpatient_record.room_no",
+   "fieldname": "room",
+   "fieldtype": "Data",
+   "label": "Room"
+  },
+  {
+   "fetch_from": "inpatient_record.bed_number",
+   "fieldname": "bed",
+   "fieldtype": "Data",
+   "label": "Bed"
+  },
+  {
+   "fieldname": "column_break_9",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "in_global_search": 1,
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Status",
+   "options": "\nDraft\nOrdered\nIssued\nDelivered\nCancelled"
+  },
+  {
+   "default": "User",
+   "fieldname": "taken_by",
+   "fieldtype": "Link",
+   "label": "Taken By",
+   "options": "User"
+  },
+  {
+   "default": "Today",
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Order Date"
+  },
+  {
+   "default": "Now",
+   "fieldname": "time",
+   "fieldtype": "Time",
+   "label": "Order Time"
+  },
+  {
+   "fieldname": "patient_meal_order_details_section_section",
+   "fieldtype": "Section Break",
+   "label": "PATIENT MEAL ORDER SECTION"
+  },
+  {
+   "fetch_from": "order_name.select_menu",
+   "fieldname": "select_menu",
+   "fieldtype": "Link",
+   "label": "Select Menu",
+   "options": "Catering Menu"
+  },
+  {
+   "fetch_from": "order_name.menu_option",
+   "fieldname": "menu_option",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "Menu Option",
+   "options": "Catering Menu Option"
+  },
+  {
+   "fieldname": "catering_meal_order_details",
+   "fieldtype": "Table",
+   "label": "Catering Meal Order Details",
+   "options": "Catering Meal Order Details"
+  },
+  {
+   "depends_on": "eval:doc.select_parent_menu",
+   "fieldname": "parent_meal_order_details_section_section",
+   "fieldtype": "Section Break",
+   "label": "PARENT'S MEAL ORDER SECTION"
+  },
+  {
+   "default": "0",
+   "fieldname": "make_parent_catering_meal_order",
+   "fieldtype": "Check",
+   "label": "Make Parent Catering Meal Order?"
+  },
+  {
+   "depends_on": "eval:doc.make_parent_catering_meal_order",
+   "fieldname": "select_parent_menu",
+   "fieldtype": "Link",
+   "label": "Select Parent Menu",
+   "options": "Catering Menu"
+  },
+  {
+   "depends_on": "eval:doc.make_parent_catering_meal_order",
+   "fieldname": "select_parent_menu_option",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Select Parent Menu Time Option",
+   "options": "\nBREAKFAST\n10 AM TEA\nLUNCH\n4PM TEA\nDINNER"
+  },
+  {
+   "depends_on": "eval:doc.select_parent_menu",
+   "fieldname": "parent_catering_meal_order_details",
+   "fieldtype": "Table",
+   "hidden": 1,
+   "label": "Parent Catering Meal Order Details",
+   "options": "Catering Meal Order Details"
+  },
+  {
+   "fieldname": "section_break_23",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "User",
+   "fieldname": "ordered_by",
+   "fieldtype": "Link",
+   "label": "Ordered by",
+   "options": "User"
+  },
+  {
+   "fieldname": "ordered_by_signature",
+   "fieldtype": "Signature",
+   "label": "Ordered by signature"
+  },
+  {
+   "fieldname": "column_break_26",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "order_name.received_by",
+   "fieldname": "received_by",
+   "fieldtype": "Link",
+   "label": "Received By",
+   "options": "User"
+  },
+  {
+   "fieldname": "received_by_signature",
+   "fieldtype": "Signature",
+   "label": "Received by signature"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "patient_meal_plan_details_section",
+   "fieldtype": "Section Break",
+   "label": "Patient Meal Plan Details"
+  },
+  {
+   "fieldname": "meal_plan",
+   "fieldtype": "Link",
+   "label": "Meal Plan",
+   "options": "Patient Meal Plan"
+  },
+  {
+   "fieldname": "meal_plan_menu_details",
+   "fieldtype": "Table",
+   "label": "Meal Plan Menu Details",
+   "options": "Catering Meal Plan Menu"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Patient Meal Order",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "breakfast_drink_option",
+   "fieldtype": "Link",
+   "label": "Breakfast Drink Options",
+   "options": "Breakfast Drinks"
+  },
+  {
+   "fieldname": "breakfast_starch_options",
+   "fieldtype": "Link",
+   "label": "Breakfast Starch Options",
+   "options": "Breakfast Starch"
+  },
+  {
+   "fieldname": "breakfast_protein_options",
+   "fieldtype": "Link",
+   "label": "Breakfast Protein Options",
+   "options": "Breakfast Proteins"
+  },
+  {
+   "fieldname": "breakfast_side_piece_option",
+   "fieldtype": "Link",
+   "label": "Breakfast Side Piece Options",
+   "options": "Breakfast Side Piece"
+  },
+  {
+   "fieldname": "column_break_23",
+   "fieldtype": "Column Break"
+  },
+  {
+   "collapsible": 1,
+   "depends_on": "eval:doc.select_menu",
+   "fieldname": "10_am_tea_section",
+   "fieldtype": "HTML",
+   "label": "10 AM Section",
+   "options": "<h5><strong>10 AM TEA</strong></h5>"
+  },
+  {
+   "fieldname": "10_am_drink",
+   "fieldtype": "Link",
+   "label": "10 AM DRINK",
+   "options": "CATERING 10 AM DRINKS"
+  },
+  {
+   "fieldname": "10_am_accompaniment",
+   "fieldtype": "Link",
+   "label": "10 AM Accompaniment",
+   "options": "Catering 10AM Accompaniments"
+  },
+  {
+   "collapsible": 1,
+   "depends_on": "eval:doc.select_menu",
+   "fieldname": "lunch_section",
+   "fieldtype": "HTML",
+   "label": "LUNCH",
+   "options": "<h5><strong>LUNCH</strong></h5>"
+  },
+  {
+   "fieldname": "lunch_main_dish_options",
+   "fieldtype": "Link",
+   "label": "Lunch Main DIsh Options",
+   "options": "Catering Lunch Main Dish"
+  },
+  {
+   "fieldname": "lunch_accompaniment_options",
+   "fieldtype": "Link",
+   "label": "Lunch Accompaniment 1 Options",
+   "options": "Lunch Accompaniments"
+  },
+  {
+   "fieldname": "lunch_dessert_1",
+   "fieldtype": "Link",
+   "label": "Lunch Dessert Options",
+   "options": "Lunch Dessert Options"
+  },
+  {
+   "collapsible": 1,
+   "depends_on": "eval:doc.select_menu",
+   "fieldname": "4pm_tea_section",
+   "fieldtype": "HTML",
+   "label": "4PM TEA",
+   "options": "<h5><strong>4 PM TEA</strong></h5>"
+  },
+  {
+   "fieldname": "4pm_drink",
+   "fieldtype": "Link",
+   "label": "4PM Drink",
+   "options": "Catering 4PM Tea Options"
+  },
+  {
+   "fieldname": "4pm_snack",
+   "fieldtype": "Link",
+   "label": "4PM Snack",
+   "options": "Catering 4PM Snack Options"
+  },
+  {
+   "collapsible": 1,
+   "depends_on": "eval:doc.select_menu",
+   "fieldname": "dinner_section",
+   "fieldtype": "HTML",
+   "label": "DINNER",
+   "options": "<h5><strong>DINNER</strong></h5>"
+  },
+  {
+   "fieldname": "dinner_main_dish_options",
+   "fieldtype": "Link",
+   "label": "Dinner Main Dish Options",
+   "options": "Dinner Main DIsh"
+  },
+  {
+   "fieldname": "dinner_accompaniment_1_options",
+   "fieldtype": "Link",
+   "label": "Dinner Accompaniment 1 Options",
+   "options": "Dinner Accompaniment 1"
+  },
+  {
+   "fieldname": "dinner_accompaniment_2_options",
+   "fieldtype": "Link",
+   "label": "Dinner Accompaniment 2 Options",
+   "options": "Dinner Accompaniment 2"
+  },
+  {
+   "fieldname": "dinner_dessert_options",
+   "fieldtype": "Link",
+   "label": "Dinner Dessert Options",
+   "options": "Dinner Dessert"
+  },
+  {
+   "fieldname": "menu_time_option",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Menu Time Option",
+   "options": "\nBREAKFAST\n10 AM TEA\nLUNCH\n4PM TEA\nDINNER"
+  },
+  {
+   "fieldname": "column_break_30",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_35",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_39",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval:doc.select_menu",
+   "fieldname": "order_details_section",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "breakfast_section",
+   "fieldtype": "HTML",
+   "label": "BREAKFAST SECTION",
+   "options": "<h5><strong>BREAKFAST</strong></h5>"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "all_items_ordered_section",
+   "fieldtype": "Section Break",
+   "label": "ALL ITEMS ORDERED"
+  },
+  {
+   "fieldname": "parent_breakfast_section",
+   "fieldtype": "HTML",
+   "label": "Parent Breakfast Section",
+   "options": "<h5><strong>BREAKFAST</strong></h5>"
+  },
+  {
+   "fieldname": "parent_breakfast_drink_options",
+   "fieldtype": "Link",
+   "label": "Parent Breakfast Drink Options",
+   "options": "Breakfast Drinks"
+  },
+  {
+   "fieldname": "parent_breakfast_starch_options",
+   "fieldtype": "Link",
+   "label": "Parent Breakfast Starch Options",
+   "options": "Breakfast Starch"
+  },
+  {
+   "fieldname": "parent_breakfast_protein_options",
+   "fieldtype": "Link",
+   "label": "Parent Breakfast Protein Options",
+   "options": "Breakfast Proteins"
+  },
+  {
+   "fieldname": "parent_breakfast_side_piece_options",
+   "fieldtype": "Link",
+   "label": "Parent Breakfast Side Piece Options",
+   "options": "Breakfast Side Piece"
+  },
+  {
+   "fieldname": "column_break_58",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "parent_10_am_section",
+   "fieldtype": "HTML",
+   "label": "Parent 10 AM Section",
+   "options": "<h5><strong>10 AM TEA</strong></h5>"
+  },
+  {
+   "fieldname": "parent_10_am_drink",
+   "fieldtype": "Link",
+   "label": "Parent 10 AM DRINK",
+   "options": "CATERING 10 AM DRINKS"
+  },
+  {
+   "fieldname": "parent_10_am_accompaniment",
+   "fieldtype": "Link",
+   "label": "Parent 10 AM Accompaniment",
+   "options": "Catering 10AM Accompaniments"
+  },
+  {
+   "fieldname": "column_break_62",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "parent_lunch",
+   "fieldtype": "HTML",
+   "label": "Parent LUNCH",
+   "options": "<h5><strong>LUNCH</strong></h5>"
+  },
+  {
+   "fieldname": "parent_lunch_main_dish_options",
+   "fieldtype": "Link",
+   "label": "Parent Lunch Main DIsh Options",
+   "options": "Catering Lunch Main Dish"
+  },
+  {
+   "fieldname": "parent_lunch_accompaniment_options",
+   "fieldtype": "Link",
+   "label": "Parent Lunch Accompaniment Options",
+   "options": "Lunch Accompaniments"
+  },
+  {
+   "fieldname": "parent_lunch_dessert_options",
+   "fieldtype": "Link",
+   "label": "Parent Lunch Dessert Options",
+   "options": "Lunch Dessert Options"
+  },
+  {
+   "fieldname": "column_break_67",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "parent_4pm_tea",
+   "fieldtype": "HTML",
+   "label": "Parent 4PM TEA",
+   "options": "<h5><strong>4 PM TEA</strong></h5>"
+  },
+  {
+   "fieldname": "parent_4pm_drink",
+   "fieldtype": "Link",
+   "label": "Parent 4PM Drink",
+   "options": "Catering 4PM Tea Options"
+  },
+  {
+   "fieldname": "parent_4pm_snack",
+   "fieldtype": "Link",
+   "label": "Parent 4PM Snack",
+   "options": "Catering 4PM Snack Options"
+  },
+  {
+   "fieldname": "column_break_71",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "dinner",
+   "fieldtype": "HTML",
+   "label": "DINNER",
+   "options": "<h5><strong>DINNER</strong></h5>"
+  },
+  {
+   "fieldname": "parent_dinner_main_dish_options",
+   "fieldtype": "Link",
+   "label": "Parent Dinner Main Dish Options",
+   "options": "Dinner Main DIsh"
+  },
+  {
+   "fieldname": "parent_dinner_accompaniment_1_options",
+   "fieldtype": "Link",
+   "label": "Parent Dinner Accompaniment 1 Options",
+   "options": "Dinner Accompaniment 1"
+  },
+  {
+   "fieldname": "parent_dinner_accompaniment_2_options",
+   "fieldtype": "Link",
+   "label": "Parent Dinner Accompaniment 2 Options",
+   "options": "Dinner Accompaniment 2"
+  },
+  {
+   "fieldname": "parent_dinner_dessert_options",
+   "fieldtype": "Link",
+   "label": "Parent Dinner Dessert Options",
+   "options": "Dinner Dessert"
+  },
+  {
+   "fieldname": "section_break_48",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "lunch_accompaniment_2_options",
+   "fieldtype": "Link",
+   "label": "Lunch Accompaniment 2 Options",
+   "options": "Lunch Accompaniments 2"
+  },
+  {
+   "fieldname": "parent_lunch_accompaniment_2_options",
+   "fieldtype": "Link",
+   "label": "Parent Lunch Accompaniment 2 Options",
+   "options": "Lunch Accompaniments 2"
+  }
+ ],
+ "hide_toolbar": 1,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2024-11-26 08:06:12.013644",
+ "modified_by": "Administrator",
+ "module": "Gch Inpatient",
+ "name": "Patient Meal Order",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

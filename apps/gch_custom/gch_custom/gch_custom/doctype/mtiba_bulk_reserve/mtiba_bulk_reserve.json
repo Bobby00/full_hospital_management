@@ -1,0 +1,70 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:externalinvoicenumber",
+ "creation": "2022-11-30 12:49:20.657722",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "invoice",
+  "treatmentcode",
+  "externalinvoicenumber",
+  "datecreated",
+  "invoiceitems"
+ ],
+ "fields": [
+  {
+   "fieldname": "treatmentcode",
+   "fieldtype": "Data",
+   "label": "treatmentCode"
+  },
+  {
+   "fieldname": "externalinvoicenumber",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "externalInvoiceNumber",
+   "unique": 1
+  },
+  {
+   "fieldname": "datecreated",
+   "fieldtype": "Data",
+   "label": "dateCreated"
+  },
+  {
+   "fieldname": "invoiceitems",
+   "fieldtype": "Table",
+   "label": "invoiceItems",
+   "options": "Mtiba Bulk Reserve Items Details"
+  },
+  {
+   "fieldname": "invoice",
+   "fieldtype": "Link",
+   "label": "invoice",
+   "options": "Sales Invoice"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2022-11-30 13:32:05.128135",
+ "modified_by": "Administrator",
+ "module": "Gch Custom",
+ "name": "Mtiba Bulk Reserve",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

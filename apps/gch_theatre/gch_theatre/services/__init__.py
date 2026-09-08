@@ -1,0 +1,12 @@
+from gch_theatre.services.rest import gch_theatre_api
+
+render_bookings = gch_theatre_api.render_bookings
+render_timeline = gch_theatre_api.render_theatre_timeline
+create_theatre_booking = gch_theatre_api.create_theatre_booking
+calendar_bookings_view = gch_theatre_api.render_calendar_bookings
+get_booking_procedures = gch_theatre_api.fetch_booking_procedures
+cancel_booking = gch_theatre_api.cancel_booking
+reschedule_booking = gch_theatre_api.reschedule_booking
+export_theatre_bookings = gch_theatre_api.export_theatre_bookings
+get_inpatient_doc = gch_theatre_api.get_inpatient_doc
+get_all_assessments = gch_theatre_api.get_all_assessments

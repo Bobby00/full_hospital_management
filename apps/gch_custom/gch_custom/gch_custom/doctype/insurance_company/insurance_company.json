@@ -1,0 +1,88 @@
+{
+ "actions": [],
+ "autoname": "GCHINC.#####",
+ "creation": "2021-06-16 16:05:28.233290",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "company_name",
+  "is_managed_care",
+  "kra_pin",
+  "is_main_kra_pin",
+  "customer",
+  "payer_code",
+  "needs_to_be_submitted_to_slade"
+ ],
+ "fields": [
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "company_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Company Name",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "label": "Customer",
+   "options": "Customer"
+  },
+  {
+   "fieldname": "payer_code",
+   "fieldtype": "Data",
+   "label": "Payer Code"
+  },
+  {
+   "default": "0",
+   "fieldname": "needs_to_be_submitted_to_slade",
+   "fieldtype": "Check",
+   "label": "Needs to be submitted to SLADE"
+  },
+  {
+   "fieldname": "kra_pin",
+   "fieldtype": "Data",
+   "label": "KRA Pin"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_managed_care",
+   "fieldtype": "Check",
+   "label": "Is managed care"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_main_kra_pin",
+   "fieldtype": "Check",
+   "label": "Is main kra pin"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-06-05 05:15:19.801542",
+ "modified_by": "Administrator",
+ "module": "Gch Custom",
+ "name": "Insurance Company",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "title_field": "company_name",
+ "track_changes": 1
+}

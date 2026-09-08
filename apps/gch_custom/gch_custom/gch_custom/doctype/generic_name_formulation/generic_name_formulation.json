@@ -1,0 +1,119 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2021-09-10 13:18:20.368416",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "route",
+  "preparation",
+  "minimum_dose",
+  "maximum_dose",
+  "uom",
+  "absolute_maximum",
+  "column_break_6",
+  "frequency",
+  "period_type",
+  "min_duration",
+  "max_duration",
+  "label"
+ ],
+ "fields": [
+  {
+   "columns": 1,
+   "fieldname": "route",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Route",
+   "options": "Drug Route"
+  },
+  {
+   "columns": 1,
+   "fieldname": "minimum_dose",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Min Dose"
+  },
+  {
+   "columns": 1,
+   "fieldname": "maximum_dose",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Max Dose"
+  },
+  {
+   "columns": 1,
+   "fieldname": "absolute_maximum",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Absolute Max"
+  },
+  {
+   "columns": 1,
+   "fieldname": "preparation",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Preparation",
+   "options": "Drug Formula"
+  },
+  {
+   "fieldname": "column_break_6",
+   "fieldtype": "Column Break"
+  },
+  {
+   "columns": 1,
+   "fieldname": "frequency",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Frequency"
+  },
+  {
+   "columns": 1,
+   "fieldname": "period_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Period Type",
+   "options": "\nHours\nDays\nWeeks"
+  },
+  {
+   "columns": 1,
+   "fieldname": "min_duration",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Min Duration"
+  },
+  {
+   "columns": 1,
+   "fieldname": "max_duration",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Max Duration"
+  },
+  {
+   "columns": 1,
+   "fieldname": "label",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Label"
+  },
+  {
+   "fieldname": "uom",
+   "fieldtype": "Link",
+   "label": "UOM",
+   "options": "UOM"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2022-01-06 13:07:55.851394",
+ "modified_by": "Administrator",
+ "module": "Gch Custom",
+ "name": "Generic Name Formulation",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

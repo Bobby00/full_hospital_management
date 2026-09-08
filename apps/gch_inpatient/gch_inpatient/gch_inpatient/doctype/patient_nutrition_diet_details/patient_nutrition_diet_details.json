@@ -1,0 +1,113 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-06-19 09:17:18.265886",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "nutrition_overview",
+  "patient",
+  "diet_form",
+  "diet_types",
+  "diet_prescription",
+  "nill_by_mouth",
+  "nutrition_consultation",
+  "diet_date",
+  "diet_time",
+  "status",
+  "nutrition",
+  "acceptedrejected_by",
+  "notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "nutrition_overview",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "Nutrition Overview",
+   "options": "Patient Nutrition Overview"
+  },
+  {
+   "fieldname": "patient",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "Patient",
+   "options": "Patient"
+  },
+  {
+   "fieldname": "diet_prescription",
+   "fieldtype": "Data",
+   "label": "Diet Prescription",
+   "read_only": 1
+  },
+  {
+   "default": "Today",
+   "fieldname": "diet_date",
+   "fieldtype": "Date",
+   "label": "Diet Date"
+  },
+  {
+   "default": "Now",
+   "fieldname": "diet_time",
+   "fieldtype": "Time",
+   "label": "Diet Time"
+  },
+  {
+   "default": "0",
+   "fieldname": "status",
+   "fieldtype": "Check",
+   "label": "Status"
+  },
+  {
+   "fieldname": "nutrition",
+   "fieldtype": "Data",
+   "label": "Nutrition"
+  },
+  {
+   "fieldname": "acceptedrejected_by",
+   "fieldtype": "Data",
+   "label": "Accepted/Rejected by"
+  },
+  {
+   "fieldname": "diet_form",
+   "fieldtype": "Link",
+   "label": "Diet Form",
+   "options": "Patient Nutrition Diet Form"
+  },
+  {
+   "fieldname": "diet_types",
+   "fieldtype": "Link",
+   "label": "Diet Types",
+   "options": "Patient Nutrition Diet Type"
+  },
+  {
+   "default": "0",
+   "fieldname": "nill_by_mouth",
+   "fieldtype": "Check",
+   "label": "Nill by Mouth"
+  },
+  {
+   "default": "0",
+   "fieldname": "nutrition_consultation",
+   "fieldtype": "Check",
+   "label": "Nutrition Consultation"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "label": "Notes"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-06-21 05:06:32.937826",
+ "modified_by": "Administrator",
+ "module": "Gch Inpatient",
+ "name": "Patient Nutrition Diet Details",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

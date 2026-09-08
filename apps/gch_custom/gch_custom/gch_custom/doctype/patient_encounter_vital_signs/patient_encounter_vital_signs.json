@@ -1,0 +1,111 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2021-12-08 14:17:49.606617",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "patient_encounter_temperature",
+  "patient_encounter_heart_rate",
+  "patient_encounter_heart_rate_sleeping",
+  "patient_encounter_respiratory_rate",
+  "patient_encounter_percutaneous_oxygen",
+  "vital_signs_column_break",
+  "patient_encounter_bp_systolic",
+  "patient_encounter_bp_diastolic",
+  "patient_encounter_mean_arterial_pressure",
+  "recorded_at",
+  "review_identifier",
+  "pulled_to_multidisciplinary"
+ ],
+ "fields": [
+  {
+   "fieldname": "patient_encounter_temperature",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Temperature",
+   "non_negative": 1,
+   "precision": "1",
+   "reqd": 1
+  },
+  {
+   "fieldname": "patient_encounter_heart_rate",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Heart Rate"
+  },
+  {
+   "default": "0",
+   "fieldname": "patient_encounter_heart_rate_sleeping",
+   "fieldtype": "Check",
+   "hidden": 1,
+   "label": "Heart Rate Sleeping Rate"
+  },
+  {
+   "fieldname": "patient_encounter_respiratory_rate",
+   "fieldtype": "Int",
+   "label": "Respiratory Rate"
+  },
+  {
+   "columns": 4,
+   "fieldname": "patient_encounter_percutaneous_oxygen",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Percutaneous Oxygen Saturation",
+   "precision": "0"
+  },
+  {
+   "fieldname": "vital_signs_column_break",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "patient_encounter_bp_systolic",
+   "fieldtype": "Int",
+   "label": "Blood Pressure systolic"
+  },
+  {
+   "fieldname": "patient_encounter_bp_diastolic",
+   "fieldtype": "Int",
+   "label": "Blood Pressure diastolic"
+  },
+  {
+   "fieldname": "review_identifier",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Review Identifier"
+  },
+  {
+   "default": "now",
+   "fieldname": "recorded_at",
+   "fieldtype": "Datetime",
+   "label": "Recorded At"
+  },
+  {
+   "default": "0",
+   "fieldname": "pulled_to_multidisciplinary",
+   "fieldtype": "Check",
+   "hidden": 1,
+   "label": "Pulled to Multidisciplinary"
+  },
+  {
+   "fieldname": "patient_encounter_mean_arterial_pressure",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Mean Arterial Pressure"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-12-03 08:21:19.262901",
+ "modified_by": "Administrator",
+ "module": "Gch Custom",
+ "name": "Patient Encounter Vital Signs",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

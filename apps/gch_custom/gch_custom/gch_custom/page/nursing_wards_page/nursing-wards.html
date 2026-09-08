@@ -1,0 +1,43 @@
+<div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-12 col-sm-offset-3 col-md-12 col-md-offset-2 main">
+        <div class="table-responsive">
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th>Ward ID</th>
+                <th>Ward Name</th>
+                <th>Total Beds</th>
+                <th>Total Cots</th>
+                <th>Unoccupied Beds</th>
+                <th>Unoccupied Cots</th>
+                <th>Available Beds for Admission</th>
+                <th>Available Cots for Admission</th>
+                <th>Locked Beds</th>
+                <th>Gender (M/F)</th>
+                <th>Doctor on Duty</th>
+
+              </tr>
+            </thead>
+            <tbody>
+                {% for ward in nursing_wards %}
+              <tr>
+                <td><a href="/app/nursing-ward-detail/{{ward.name}}">{{ward.name}}</a></td>
+                <td> <router-link to="/contact">{{ward.ward_name}}</router-link></td>
+                <td>{{ward.total_beds}}</td>
+                <td>{{ward.total_cots}}</td>
+                <td>{{ward.unoccupied_beds}}</td>
+                <td>{{ward.unoccupied_cots}}</td>
+                <td>{{ward.available_beds_for_admission}}</td>
+                <td>{{ward.available_cots_for_admission}}</td>
+                <td>{{ward.locked_beds}}</td>
+                <td>{{ward.gender}}</td>
+                <td>sit</td>
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>

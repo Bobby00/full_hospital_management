@@ -1,0 +1,462 @@
+<style>
+    h5 {
+        font-weight: 700;
+    }
+
+    .special-table-header {
+        font-size: 16px;
+    }
+
+    th {
+        background-color: #e2f0f5 !important;
+    }
+
+
+    .drug-allergy-item {
+        background-color: rgb(0, 255, 204);
+        border-radius: 30px;
+        padding: 3px;
+        padding-left: 5px;
+        margin-right: 10px;
+        font-weight: 700;
+    }
+
+    .food-allergy-item {
+        background-color: #30ef23;
+        border-radius: 30px;
+        padding: 3px;
+        padding-left: 5px;
+        margin-right: 10px;
+        font-weight: 700;
+    }
+
+    .other-allergy-item {
+        background-color: orange;
+        border-radius: 30px;
+        padding: 3px;
+        padding-left: 5px;
+        margin-right: 10px;
+        font-weight: 700;
+    }
+
+
+</style>
+
+<div class="row layout-main">
+
+    <div class="col-lg-2 layout-side-section" data-fieldname="patient">
+        <div class="user-profile-sidebar">
+
+            <div class="user-image-container hidden-xs hidden-sm">
+                <div class="sidebar-image-wrapper">
+                    <div class="sidebar-standard-image hide">
+                        <div class="standard-image"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="profile-details">
+                <div class="detail-item user-stats-detail">
+                    <!-- <h5>Details</h5> -->
+                    <div class="user-stats mt-3">
+
+
+
+                    </div>
+                </div>
+
+                <!-- <div class="profile-links detail-item">
+                    <p><a class="edit-profile-link">First Link</a></p>
+                    <p><a class="user-settings-link">Second Link</a></p>
+                    <p> <a class="leaderboard-link">Third Link</a> </p>
+                </div> -->
+
+            </div>
+        </div>
+    </div>
+    <div class="col layout-main-section-wrapper">
+        <div class="layout-main-section">
+            
+
+            <div class="row user-profile">
+
+                <div class="col-md-12">
+                    <div class="patient-info">
+                        <div class="frappe-card chart-column-container line-chart-container">
+                            <br>
+                            <div class="title-area">
+                                <h4 class="card-title">Patient Details </h4>
+                            </div>
+                            <hr>
+                            <br>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <h5>First Name: {{ first_name }}</h5>
+
+                                </div>
+
+                                <div class="col-md-4">
+                                    <h5>Middle Name: {{ middle_name }}</h5>
+                                    
+                                </div>
+
+                                <div class="col-md-4">
+                                    <h5>Last Name: {{ last_name }}</h5>
+                                    
+                                </div>
+
+                            </div>
+
+                            <br>
+
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <h5>DOB: {{ patient_data.message.dob }}</h5>
+
+                                </div>
+
+                                <div class="col-md-4">
+                                    <h5>Gender: {{ patient_data.message.sex }}</h5>
+                                    
+                                </div>
+
+                                <div class="col-md-4">
+                                    <h5>Age: {{ patient_age }}</h5>
+                                    
+                                </div>
+
+                            </div>
+
+                            <br>
+
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <h5>Patient UHID: {{ patient_data.message.uhid_code }}</h5>
+
+                                </div>
+
+                                <div class="col-md-4">
+                                    <h5>Father Name: {{ father_name }}</h5>
+                                    
+                                </div>
+
+                                <div class="col-md-4">
+                                    <h5>Mother Name: {{ mother_name }}</h5>
+                                    
+                                </div>
+
+                            </div>
+
+                            <br>
+
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <h5>Scheme: {{ patient_insurance_scheme }}</h5>
+
+                                </div>
+
+                                <div class="col-md-8">
+
+                                </div>
+
+                            </div>
+
+                            <hr>
+                            <br>
+
+                            <div class="container">
+
+                                <table class="table table-bordered">
+                                    <thead>
+                                        <tr>
+                                            <th class="special-table-header" colspan="4">Wellbaby Hearing Test</th>
+                                        </tr>
+                                        <tr>
+                                            <th class="special-table-header" colspan="4">A. History</th>
+                                        </tr>
+                                        </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td scope="row">Relative with ear surgery:</td>
+                                            <td> {{ latest_audiology.relative_with_ear_surgery }} </td>
+                                            
+                                        </tr>
+                                        <tr>
+                                            <td scope="row">Relative with hearing loss:</td>
+                                            <td> {{ latest_audiology.relative_with_hearing_loss }}</td>
+                                        
+                                        </tr>
+                                        <tr>
+                                            <td scope="row">Relative using hearing device:</td>
+                                            <td> {{ latest_audiology.relative_with_hearing_devices }} </td>
+                                            
+                                        </tr>
+                                
+                                    
+                                    </tbody>
+                                </table>
+
+
+                            </div>
+
+                            <hr>
+                            <br>
+
+                            <div class="container">
+
+                                <table class="table table-bordered">
+                                    <tr>
+                                        <th class="special-table-header" colspan="4">B. Otoacoustic Emission Test</th>
+                                    </tr>
+                                    <tr>
+                                        <th>Ear</th>
+                                        <th>Test Results</th>
+                                        <th>Follow-up Actions</th>
+                                    </tr>
+                                
+                                    
+                                    <tr>
+                                    
+                                        <td>
+                                                <p style="font-weight: 700;"> Left </p>
+                            
+                                        </td>
+                                        <td>
+                                            
+                                                <p> {{ latest_audiology.left_ear_results }} </p>
+                                            
+                                            
+                                        </td>
+                                        <td>
+                                        
+                                            <p> {{ latest_audiology._followup_actions }} </p>
+                                            
+                                        </td>
+                                    
+                                    </tr>
+
+                                    <tr>
+                                    
+                                        <td>
+                                            <p style="font-weight: 700;"> Right </p>
+                            
+                                        </td>
+                                        <td>
+                                            
+                                            <p> {{ latest_audiology.right_ear_results }} </p>
+                                        
+                                            
+                                        </td>
+                                        <td>
+                                        
+                                            <p> {{ latest_audiology._followup_actions }} </p>
+                                            
+                                        </td>
+                                        
+                                    </tr>
+                                    
+                                    
+                                    
+                                </table>
+                                
+                                <h5>Comments:</h5>
+                                <p>{{ latest_audiology.nurse_notes }}</p>
+                                
+
+                                <div class="row">
+                                    <div class="col-4">
+                                        <h5>Done by: {% if latest_audiology._followup_actions %}  {{ latest_audiology.done_by }} {% endif %} </h5>
+                                    </div>
+                                    <div class="col-4">
+                                        <h5>Date: {% if latest_audiology.done_by %} {{ latest_audiology.encounter_date }} {% endif %} </h5>
+                                    </div>
+                                    <div class="col-4">
+                                        <h5>Time: {% if latest_audiology.done_by %} {{ latest_audiology.encounter_time }} {% endif %}</h5>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <hr>
+                            <br>
+                            <br>
+
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <h5 style="padding-top: 25%;">Significant Diagnosis: </h5>
+
+                                </div>
+
+                                <div class="col-md-8">
+
+                                    <table style="width: 60%;" class="table table-bordered">
+                                        
+                                        <tr>
+                                            <th>ICD Code</th>
+                                            <th>ICD Description</th>
+                                        </tr>
+                                    
+                                    {% for item in significant_diag_list %}
+                                    
+                                        
+                                        <tr>
+                                            {{ item.counter }}
+                                            <td>
+                                                <p> {{ item.code }} </p>
+                                            </td>
+
+                                            <td>
+                                                <p>{{ item.description }}</p>                  
+                                            </td>
+                                        
+                                        </tr>
+                                        
+                                    {% endfor %}
+                                        
+                                    </table>
+
+                                </div>
+
+                            </div>
+
+                            <br>
+
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <h5>Significant
+                                        Procedures/Surgeries and
+                                        dates: </h5>
+
+                                </div>
+
+                                <div class="col-md-8">
+
+                                </div>
+
+                            </div>
+
+                            <br>
+
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <h5>Chronic Medications and
+                                        start dates: </h5>
+
+                                </div>
+
+                                <div class="col-md-8">
+                                    {% for chronic_med in chronic_medication_list %}
+                                        <p><span style="font-weight: 700">{{ chronic_med.item_name }}</span> - {{ chronic_med.modified }}</p>
+                                    {% endfor %}
+                                </div>
+
+                            </div>
+
+                            <br>
+
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <h5>Medication Allergies: </h5>
+
+                                </div>
+
+                                <div class="col-md-8">
+                                    {% for allergy in drug_allergy_list %}
+                                        <span class="drug-allergy-item"> {{ allergy.drug_allergy }} </span>
+                                    {% endfor %}
+                                </div>
+
+                            </div>
+
+                            <br>
+
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <h5>Food Allergies: </h5>
+
+                                </div>
+
+                                <div class="col-md-8">
+                                    {% for allergy in food_allergy_list %}
+                                        <span class="food-allergy-item"> {{ allergy.food_allergy }} </span>
+                                    {% endfor %}
+                                </div>
+
+                            </div>
+
+                            <br>
+
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <h5>Other Allergies: </h5>
+
+                                </div>
+
+                                <div class="col-md-8">
+                                    {% for allergy in other_allergy_list %}
+                                        <span class="other-allergy-item"> {{ allergy.other_allergy }} </span>
+                                    {% endfor %}
+                                </div>
+
+                            </div>
+
+                            <br>
+
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <h5>Number of Previous
+                                        admissions: </h5>
+
+                                </div>
+
+                                <div class="col-md-8">
+                                    <p>0</p>
+                                </div>
+
+                            </div>
+
+                            <br>
+
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <h5>Family History: </h5>
+
+                                </div>
+
+                                <div class="col-md-8">
+                                    <p>{{ most_recent_patient_history.patient_encounter_family_history }}</p>
+                                </div>
+
+                            </div>
+
+                            <br>
+
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <h5>Other Significant History: </h5>
+
+                                </div>
+
+                                <div class="col-md-8">
+                                    <p>{{ most_recent_patient_history.patient_encounter_other_relevant_history }}</p>
+                                </div>
+
+                            </div>
+
+                            <br>
+                            <br>
+                            <br>
+                        </div>
+
+                    
+                    </div>
+
+                </div>
+            </div>
+
+            
+
+        </div>
+        <div class="layout-footer hide"></div>
+    </div>
+</div>

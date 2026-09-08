@@ -1,0 +1,48 @@
+{
+ "actions": [],
+ "autoname": "GCHIVD.#######",
+ "creation": "2021-07-02 16:36:07.317932",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "device",
+  "device_name"
+ ],
+ "fields": [
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "device",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Device",
+   "options": "Verification Device"
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fetch_from": "device.device_name",
+   "fieldname": "device_name",
+   "fieldtype": "Data",
+   "in_global_search": 1,
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Device Name",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2021-09-29 12:31:33.249413",
+ "modified_by": "Administrator",
+ "module": "Gch Custom",
+ "name": "Verification Device Detail",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

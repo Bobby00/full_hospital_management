@@ -1,0 +1,77 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-07-24 11:17:09.907622",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "color",
+  "pulse",
+  "phe",
+  "side",
+  "position",
+  "time",
+  "done_by"
+ ],
+ "fields": [
+  {
+   "fieldname": "color",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Color",
+   "options": "\nPink\nPale\nBlue",
+   "reqd": 1
+  },
+  {
+   "fieldname": "pulse",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Pulse",
+   "options": "\nStrong\nWeak\nRegular\nIrregular",
+   "reqd": 1
+  },
+  {
+   "fieldname": "phe",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "PHE",
+   "options": "\nWarm\nCold",
+   "reqd": 1
+  },
+  {
+   "fieldname": "side",
+   "fieldtype": "Select",
+   "label": "Side",
+   "options": "\nRight\nLeft"
+  },
+  {
+   "fieldname": "position",
+   "fieldtype": "Select",
+   "label": "Position",
+   "options": "\nUpper\nLower"
+  },
+  {
+   "fieldname": "time",
+   "fieldtype": "Time",
+   "label": "Time"
+  },
+  {
+   "fieldname": "done_by",
+   "fieldtype": "Link",
+   "label": "Done by",
+   "options": "Healthcare Practitioner"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-07-24 11:22:23.445592",
+ "modified_by": "Administrator",
+ "module": "GCH Theatre",
+ "name": "Limb Circulation Chart",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

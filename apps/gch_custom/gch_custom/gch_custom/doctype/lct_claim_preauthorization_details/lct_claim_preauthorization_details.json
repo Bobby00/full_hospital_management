@@ -1,0 +1,51 @@
+{
+ "actions": [],
+ "creation": "2022-03-14 14:53:45.271761",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "code",
+  "authorized_by",
+  "message",
+  "amount"
+ ],
+ "fields": [
+  {
+   "fieldname": "code",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "code"
+  },
+  {
+   "fieldname": "authorized_by",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "authorized_by"
+  },
+  {
+   "fieldname": "message",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "message"
+  },
+  {
+   "fieldname": "amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "amount"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2022-03-15 13:22:40.250659",
+ "modified_by": "Administrator",
+ "module": "Gch Custom",
+ "name": "Lct Claim Preauthorization Details",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

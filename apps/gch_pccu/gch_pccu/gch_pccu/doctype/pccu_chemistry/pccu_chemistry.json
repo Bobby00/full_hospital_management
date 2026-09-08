@@ -1,0 +1,139 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-07-02 15:32:40.568010",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "sodium",
+  "potassium",
+  "chloride",
+  "urea",
+  "creatinine",
+  "albumen",
+  "column_break_7",
+  "glucose",
+  "ionised_calcium",
+  "magnesium",
+  "phosphate",
+  "crp",
+  "time"
+ ],
+ "fields": [
+  {
+   "allow_in_quick_entry": 1,
+   "columns": 1,
+   "fieldname": "sodium",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Sodium",
+   "search_index": 1
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "columns": 1,
+   "fieldname": "potassium",
+   "fieldtype": "Data",
+   "in_global_search": 1,
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Potassium"
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "columns": 1,
+   "fieldname": "chloride",
+   "fieldtype": "Data",
+   "in_global_search": 1,
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Chloride"
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "columns": 1,
+   "fieldname": "urea",
+   "fieldtype": "Data",
+   "in_global_search": 1,
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Urea"
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "columns": 1,
+   "fieldname": "creatinine",
+   "fieldtype": "Data",
+   "in_global_search": 1,
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Creatinine"
+  },
+  {
+   "columns": 1,
+   "fieldname": "albumen",
+   "fieldtype": "Data",
+   "label": "Albumen"
+  },
+  {
+   "columns": 1,
+   "fieldname": "glucose",
+   "fieldtype": "Data",
+   "label": "Glucose"
+  },
+  {
+   "columns": 1,
+   "fieldname": "ionised_calcium",
+   "fieldtype": "Data",
+   "label": "Ionised Calcium"
+  },
+  {
+   "fieldname": "magnesium",
+   "fieldtype": "Data",
+   "label": "Magnesium"
+  },
+  {
+   "fieldname": "phosphate",
+   "fieldtype": "Data",
+   "label": "Phosphate"
+  },
+  {
+   "fieldname": "crp",
+   "fieldtype": "Data",
+   "label": "CRP"
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "columns": 2,
+   "default": "Now",
+   "fieldname": "time",
+   "fieldtype": "Datetime",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Time"
+  },
+  {
+   "fieldname": "column_break_7",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-07-02 16:43:07.334010",
+ "modified_by": "Administrator",
+ "module": "GCH PCCU",
+ "name": "PCCU Chemistry",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

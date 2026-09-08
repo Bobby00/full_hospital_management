@@ -1,0 +1,26 @@
+{
+ "content": null,
+ "creation": "2023-07-28 06:38:19.387758",
+ "docstatus": 0,
+ "doctype": "Page",
+ "idx": 0,
+ "modified": "2023-07-28 06:38:19.387758",
+ "modified_by": "Administrator",
+ "module": "Queue Management",
+ "name": "all-queues",
+ "owner": "Administrator",
+ "page_name": "All Queues",
+ "roles": [
+  {
+   "role": "GCH-Reception"
+  },
+  {
+   "role": "System Manager"
+  }
+ ],
+ "script": null,
+ "standard": "Yes",
+ "style": null,
+ "system_page": 0,
+ "title": "All Queues"
+}

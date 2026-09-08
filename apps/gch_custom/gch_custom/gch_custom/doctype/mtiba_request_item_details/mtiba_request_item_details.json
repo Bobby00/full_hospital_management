@@ -1,0 +1,85 @@
+{
+ "actions": [],
+ "creation": "2022-02-10 15:15:27.431089",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "scheme",
+  "code",
+  "external_code",
+  "description",
+  "currency",
+  "quantity",
+  "amount",
+  "status",
+  "item_code"
+ ],
+ "fields": [
+  {
+   "fieldname": "scheme",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Scheme"
+  },
+  {
+   "fieldname": "code",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Code"
+  },
+  {
+   "fieldname": "external_code",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "External Code"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Data",
+   "label": "Description"
+  },
+  {
+   "fieldname": "currency",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Currency"
+  },
+  {
+   "fieldname": "quantity",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Quantity"
+  },
+  {
+   "fieldname": "amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Amount"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Status"
+  },
+  {
+   "fieldname": "item_code",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Item Code"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2022-02-10 15:22:28.112487",
+ "modified_by": "Administrator",
+ "module": "Gch Custom",
+ "name": "Mtiba Request Item Details",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

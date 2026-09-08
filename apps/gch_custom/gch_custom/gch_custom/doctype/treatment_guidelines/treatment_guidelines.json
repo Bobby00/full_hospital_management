@@ -1,0 +1,96 @@
+{
+ "actions": [],
+ "creation": "2021-08-31 06:45:07.862729",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "level_line",
+  "medication_type",
+  "preparation_type",
+  "min_dose",
+  "max_dose",
+  "absolute_maximum",
+  "route",
+  "frequency",
+  "minimum_duration_days",
+  "maximum_duration_days",
+  "remarks",
+  "select_to_prescribe"
+ ],
+ "fields": [
+  {
+   "fieldname": "level_line",
+   "fieldtype": "Data",
+   "label": "Level Line"
+  },
+  {
+   "fieldname": "medication_type",
+   "fieldtype": "Data",
+   "label": "Medication Type"
+  },
+  {
+   "fieldname": "preparation_type",
+   "fieldtype": "Data",
+   "label": "Preparation Type"
+  },
+  {
+   "fieldname": "min_dose",
+   "fieldtype": "Data",
+   "label": "Min Dose"
+  },
+  {
+   "fieldname": "max_dose",
+   "fieldtype": "Data",
+   "label": "Max Dose"
+  },
+  {
+   "fieldname": "absolute_maximum",
+   "fieldtype": "Data",
+   "label": "Absolute Maximum"
+  },
+  {
+   "fieldname": "route",
+   "fieldtype": "Data",
+   "label": "Route"
+  },
+  {
+   "fieldname": "frequency",
+   "fieldtype": "Data",
+   "label": "Frequency"
+  },
+  {
+   "fieldname": "minimum_duration_days",
+   "fieldtype": "Data",
+   "label": "Minimum Duration (Days)"
+  },
+  {
+   "fieldname": "maximum_duration_days",
+   "fieldtype": "Data",
+   "label": "Maximum Duration (Days)"
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Data",
+   "label": "Remarks"
+  },
+  {
+   "default": "0",
+   "fieldname": "select_to_prescribe",
+   "fieldtype": "Check",
+   "label": "Select to Prescribe"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2021-08-31 07:32:29.704516",
+ "modified_by": "Administrator",
+ "module": "Gch Custom",
+ "name": "Treatment Guidelines",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

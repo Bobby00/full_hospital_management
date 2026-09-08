@@ -1,0 +1,93 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-06-12 17:23:52.913019",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "meal_plan",
+  "meal_plan_name",
+  "date",
+  "route",
+  "proteins",
+  "dietician",
+  "is_active",
+  "comment"
+ ],
+ "fields": [
+  {
+   "fieldname": "meal_plan_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Meal Plan Name"
+  },
+  {
+   "fetch_from": "meal_plan_name.date",
+   "fieldname": "date",
+   "fieldtype": "Datetime",
+   "in_list_view": 1,
+   "label": "Date"
+  },
+  {
+   "columns": 1,
+   "fetch_from": "meal_plan_name.route",
+   "fieldname": "route",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Route"
+  },
+  {
+   "fetch_from": "meal_plan_name.proteins",
+   "fieldname": "proteins",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Proteins"
+  },
+  {
+   "fetch_from": "meal_plan_name.dietician",
+   "fieldname": "dietician",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Dietician"
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fetch_from": "meal_plan_name.comment",
+   "fieldname": "comment",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "label": "Comment"
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "columns": 1,
+   "default": "0",
+   "fetch_from": "meal_plan_name.is_active",
+   "fieldname": "is_active",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Is active?"
+  },
+  {
+   "fieldname": "meal_plan",
+   "fieldtype": "Link",
+   "label": "Meal Plan",
+   "options": "Patient Meal Plan"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-06-26 09:51:59.444455",
+ "modified_by": "Administrator",
+ "module": "Gch Inpatient",
+ "name": "Patient Nutrition Plan Table",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

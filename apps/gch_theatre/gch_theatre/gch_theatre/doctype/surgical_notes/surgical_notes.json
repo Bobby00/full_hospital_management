@@ -1,0 +1,211 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2024-06-24 23:01:22.364599",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "inpatient_record",
+  "theatre_overview",
+  "surgeon",
+  "assistant_surgeon",
+  "body_diagram",
+  "preoperative_diagnosis",
+  "post_operative_diagnosis",
+  "procedures_performed",
+  "procedure_description",
+  "perioperative_complications",
+  "est_blood_loss",
+  "transfused_blood_product",
+  "implantable_deveices_if_any",
+  "swabsharpsinstruments_correct",
+  "post_op_instructions",
+  "section_break_15",
+  "operating_surgeon",
+  "signature_of_operating_surgeon",
+  "column_break_17",
+  "scrub_nurse",
+  "signature_16",
+  "circulating_nurse",
+  "circulating_nurse_sign",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "inpatient_record",
+   "fieldtype": "Link",
+   "label": "Inpatient Record",
+   "options": "Inpatient Record",
+   "read_only": 1
+  },
+  {
+   "fieldname": "surgeon",
+   "fieldtype": "Link",
+   "label": "Surgeon",
+   "options": "Healthcare Practitioner"
+  },
+  {
+   "fieldname": "assistant_surgeon",
+   "fieldtype": "Table",
+   "label": "Assistant Surgeons",
+   "options": "Assisting Surgeons"
+  },
+  {
+   "fieldname": "body_diagram",
+   "fieldtype": "HTML",
+   "label": "Body Diagram"
+  },
+  {
+   "fieldname": "preoperative_diagnosis",
+   "fieldtype": "Table",
+   "label": "Preoperative Diagnosis",
+   "options": "Codification Table"
+  },
+  {
+   "fieldname": "post_operative_diagnosis",
+   "fieldtype": "Table",
+   "label": "Post operative Diagnosis",
+   "options": "Codification Table"
+  },
+  {
+   "fieldname": "procedures_performed",
+   "fieldtype": "Table",
+   "label": "Procedures Performed",
+   "options": "Surgeon Theatre Procedures"
+  },
+  {
+   "fieldname": "procedure_description",
+   "fieldtype": "Text",
+   "label": "Description of Procedure Done and its Findings"
+  },
+  {
+   "fieldname": "perioperative_complications",
+   "fieldtype": "Data",
+   "label": "Perioperative complications if any"
+  },
+  {
+   "fieldname": "est_blood_loss",
+   "fieldtype": "Int",
+   "label": "Estimated Blood Loss (ml)"
+  },
+  {
+   "fieldname": "transfused_blood_product",
+   "fieldtype": "Table",
+   "label": "Transfused Blood Product",
+   "options": "Transfused Blood Products"
+  },
+  {
+   "fieldname": "implantable_deveices_if_any",
+   "fieldtype": "Data",
+   "label": "Implantable deveices if any"
+  },
+  {
+   "fieldname": "swabsharpsinstruments_correct",
+   "fieldtype": "Select",
+   "label": "Swab/Sharps/Instruments Correct",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "post_op_instructions",
+   "fieldtype": "Text",
+   "label": "Post Operative Surgeon's Instructions"
+  },
+  {
+   "fieldname": "section_break_15",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "operating_surgeon",
+   "fieldtype": "Link",
+   "label": "Operating Surgeon",
+   "options": "Healthcare Practitioner"
+  },
+  {
+   "fieldname": "signature_of_operating_surgeon",
+   "fieldtype": "Signature",
+   "label": "Signature of operating surgeon"
+  },
+  {
+   "fieldname": "column_break_17",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "scrub_nurse",
+   "fieldtype": "Link",
+   "label": "Scrub Nurse",
+   "options": "Healthcare Practitioner"
+  },
+  {
+   "fieldname": "signature_16",
+   "fieldtype": "Signature"
+  },
+  {
+   "fieldname": "circulating_nurse",
+   "fieldtype": "Link",
+   "label": "Circulating Nurse",
+   "options": "Healthcare Practitioner"
+  },
+  {
+   "fieldname": "circulating_nurse_sign",
+   "fieldtype": "Signature"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Surgical Notes",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Surgical Notes",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "theatre_overview",
+   "fieldtype": "Link",
+   "label": "Theatre Overview",
+   "options": "Theatre Overview"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Naming Series",
+   "options": "HLC-SNO-.YYYY.-"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2024-06-26 08:26:52.237422",
+ "modified_by": "Administrator",
+ "module": "GCH Theatre",
+ "name": "Surgical Notes",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

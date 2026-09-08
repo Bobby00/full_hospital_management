@@ -1,0 +1,171 @@
+{
+ "actions": [],
+ "allow_import": 1,
+ "autoname": "field:trans_id",
+ "creation": "2022-01-20 13:04:31.511083",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "first_name",
+  "middle_name",
+  "last_name",
+  "msisdn",
+  "business_shortcode",
+  "transaction_type",
+  "column_break_7",
+  "trans_id",
+  "trans_time",
+  "bill_ref_number",
+  "invoice_number",
+  "third_party_trans_id",
+  "trans_amount",
+  "amended_from",
+  "used_amount",
+  "processed"
+ ],
+ "fields": [
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Mpesa C2B Request",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "transaction_type",
+   "fieldtype": "Data",
+   "label": "Transaction Type"
+  },
+  {
+   "fieldname": "trans_id",
+   "fieldtype": "Data",
+   "label": "Trans ID",
+   "unique": 1
+  },
+  {
+   "fieldname": "trans_time",
+   "fieldtype": "Data",
+   "label": "Trans Time"
+  },
+  {
+   "bold": 1,
+   "fieldname": "trans_amount",
+   "fieldtype": "Data",
+   "label": "Trans Amount"
+  },
+  {
+   "fieldname": "business_shortcode",
+   "fieldtype": "Data",
+   "label": "Business ShortCode"
+  },
+  {
+   "fieldname": "bill_ref_number",
+   "fieldtype": "Data",
+   "label": "Bill Ref Number"
+  },
+  {
+   "fieldname": "invoice_number",
+   "fieldtype": "Data",
+   "label": "Invoice Number"
+  },
+  {
+   "fieldname": "third_party_trans_id",
+   "fieldtype": "Data",
+   "label": "Third Party Trans ID"
+  },
+  {
+   "fieldname": "msisdn",
+   "fieldtype": "Data",
+   "label": "MSISDN"
+  },
+  {
+   "fieldname": "first_name",
+   "fieldtype": "Data",
+   "label": "First Name"
+  },
+  {
+   "fieldname": "middle_name",
+   "fieldtype": "Data",
+   "label": "Middle Name"
+  },
+  {
+   "fieldname": "last_name",
+   "fieldtype": "Data",
+   "label": "Last Name"
+  },
+  {
+   "fieldname": "column_break_7",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "used_amount",
+   "fieldtype": "Data",
+   "label": "Used"
+  },
+  {
+   "default": "0",
+   "fieldname": "processed",
+   "fieldtype": "Check",
+   "label": "processed"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2024-03-07 15:29:33.352839",
+ "modified_by": "Administrator",
+ "module": "Gch Custom",
+ "name": "Mpesa C2B Request",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "import": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "select": 1,
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "All",
+   "select": 1,
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Guest",
+   "select": 1,
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

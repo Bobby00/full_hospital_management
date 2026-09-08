@@ -1,0 +1,155 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2024-08-26 11:58:58.136062",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "patient_details_section",
+  "inpatient_record",
+  "patient",
+  "uhid",
+  "age",
+  "patient_age",
+  "gender",
+  "column_break_7",
+  "ward_room_bed",
+  "doctor",
+  "diagnosis",
+  "latest_vitals_section",
+  "vital_signs_table",
+  "night_superintendent__matron_notes_section",
+  "matrons_notes_table"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Series",
+   "options": "MATRON-NOTE-.YYYY.-"
+  },
+  {
+   "fieldname": "patient_details_section",
+   "fieldtype": "Section Break",
+   "label": "Patient Details"
+  },
+  {
+   "fetch_from": "inpatient_record.patient",
+   "fieldname": "patient",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Patient",
+   "options": "Patient"
+  },
+  {
+   "fetch_from": "inpatient_record.uhid",
+   "fieldname": "uhid",
+   "fieldtype": "Data",
+   "label": "UHID"
+  },
+  {
+   "fetch_from": "inpatient_record.dob",
+   "fieldname": "age",
+   "fieldtype": "Data",
+   "label": "DOB"
+  },
+  {
+   "fetch_from": "inpatient_record.gender",
+   "fieldname": "gender",
+   "fieldtype": "Data",
+   "label": "Gender"
+  },
+  {
+   "fieldname": "column_break_7",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "inpatient_record",
+   "fieldtype": "Link",
+   "in_global_search": 1,
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Inpatient Record",
+   "options": "Inpatient Record",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fetch_from": "inpatient_record.primary_practitioner",
+   "fieldname": "doctor",
+   "fieldtype": "Data",
+   "label": "Doctor"
+  },
+  {
+   "fieldname": "diagnosis",
+   "fieldtype": "Small Text",
+   "label": "Diagnosis"
+  },
+  {
+   "fieldname": "night_superintendent__matron_notes_section",
+   "fieldtype": "Section Break",
+   "label": "Night Superintendent / Matron Notes"
+  },
+  {
+   "fieldname": "matrons_notes_table",
+   "fieldtype": "Table",
+   "label": "Matrons Notes Table",
+   "options": "Matron Notes Table"
+  },
+  {
+   "fieldname": "latest_vitals_section",
+   "fieldtype": "Section Break",
+   "label": "Latest Vitals"
+  },
+  {
+   "fieldname": "vital_signs_table",
+   "fieldtype": "Table",
+   "label": "Vital Signs Table",
+   "options": "Patient Encounter Vital Signs"
+  },
+  {
+   "fieldname": "ward_room_bed",
+   "fieldtype": "Data",
+   "in_global_search": 1,
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Ward/Room/Bed"
+  },
+  {
+   "fieldname": "patient_age",
+   "fieldtype": "Data",
+   "label": "Age"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-10-25 14:26:32.070055",
+ "modified_by": "Administrator",
+ "module": "Gch Inpatient",
+ "name": "Matron Notes",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

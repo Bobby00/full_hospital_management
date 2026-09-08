@@ -1,0 +1,3 @@
+from .send_patient_encounter_to_labware import send_encounter
+
+send_encounter = send_encounter.send_to_labware

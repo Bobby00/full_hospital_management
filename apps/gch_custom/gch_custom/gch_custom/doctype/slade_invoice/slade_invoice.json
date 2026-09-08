@@ -1,0 +1,152 @@
+{
+ "actions": [],
+ "creation": "2022-03-10 12:50:28.441337",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "patient_encounter",
+  "inpatient_record",
+  "sales_invoice",
+  "invoice_date",
+  "patient",
+  "claim",
+  "slade_invoice_id",
+  "slade_claim",
+  "service_type",
+  "copays",
+  "lines",
+  "amended_from",
+  "attachment",
+  "submit_attachment",
+  "slade_attachment_id",
+  "slade_attachment_data",
+  "slade_attachment"
+ ],
+ "fields": [
+  {
+   "fieldname": "patient_encounter",
+   "fieldtype": "Link",
+   "label": "Patient Encounter",
+   "options": "Patient Encounter"
+  },
+  {
+   "fieldname": "sales_invoice",
+   "fieldtype": "Link",
+   "label": "Sales Invoice",
+   "options": "Sales Invoice"
+  },
+  {
+   "fieldname": "patient",
+   "fieldtype": "Link",
+   "label": "Patient",
+   "options": "Patient"
+  },
+  {
+   "fieldname": "service_type",
+   "fieldtype": "Select",
+   "label": "Service Type",
+   "options": "\nOutpatient\nInpatient"
+  },
+  {
+   "fieldname": "invoice_date",
+   "fieldtype": "Date",
+   "label": "Invoice Date"
+  },
+  {
+   "fieldname": "claim",
+   "fieldtype": "Data",
+   "label": "Claim"
+  },
+  {
+   "fieldname": "copays",
+   "fieldtype": "Table",
+   "label": "Copays",
+   "options": "Slade Invoice Copay Details"
+  },
+  {
+   "fieldname": "lines",
+   "fieldtype": "Table",
+   "label": "Lines",
+   "options": "Slade Invoice Item Details"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Slade Invoice",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "attachment",
+   "fieldtype": "Attach",
+   "label": "attachment"
+  },
+  {
+   "fieldname": "slade_invoice_id",
+   "fieldtype": "Data",
+   "label": "slade_invoice_id"
+  },
+  {
+   "fieldname": "slade_claim",
+   "fieldtype": "Data",
+   "label": "slade_claim"
+  },
+  {
+   "fieldname": "slade_attachment_id",
+   "fieldtype": "Data",
+   "label": "slade_attachment_id",
+   "read_only": 1
+  },
+  {
+   "fieldname": "slade_attachment_data",
+   "fieldtype": "Data",
+   "label": "slade_attachment_data",
+   "read_only": 1
+  },
+  {
+   "fieldname": "slade_attachment",
+   "fieldtype": "Data",
+   "label": "slade_attachment",
+   "read_only": 1
+  },
+  {
+   "fieldname": "submit_attachment",
+   "fieldtype": "Button",
+   "label": "Submit Attachment"
+  },
+  {
+   "fieldname": "inpatient_record",
+   "fieldtype": "Link",
+   "label": "Inpatient Record",
+   "options": "Inpatient Record"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2024-11-07 16:02:19.551406",
+ "modified_by": "Administrator",
+ "module": "Gch Custom",
+ "name": "Slade Invoice",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

@@ -1,0 +1,117 @@
+{
+ "actions": [],
+ "autoname": "field:member_number",
+ "creation": "2022-03-10 15:37:58.718495",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "patient",
+  "auth_token",
+  "member_number",
+  "benefit_balance",
+  "auth_expiry",
+  "auth_status",
+  "copay",
+  "service_type",
+  "authorization_guid",
+  "copay_type",
+  "message"
+ ],
+ "fields": [
+  {
+   "fieldname": "patient",
+   "fieldtype": "Link",
+   "label": "Patient",
+   "options": "Patient"
+  },
+  {
+   "fieldname": "auth_token",
+   "fieldtype": "Data",
+   "label": "Auth Token"
+  },
+  {
+   "fieldname": "member_number",
+   "fieldtype": "Data",
+   "label": "Member Number",
+   "unique": 1
+  },
+  {
+   "fieldname": "benefit_balance",
+   "fieldtype": "Currency",
+   "label": "Benefit Balance"
+  },
+  {
+   "fieldname": "auth_expiry",
+   "fieldtype": "Date",
+   "label": "Auth Expiry"
+  },
+  {
+   "fieldname": "auth_status",
+   "fieldtype": "Data",
+   "label": "Auth Status"
+  },
+  {
+   "fieldname": "copay",
+   "fieldtype": "Currency",
+   "label": "Copay"
+  },
+  {
+   "fieldname": "service_type",
+   "fieldtype": "Select",
+   "label": "Service Type",
+   "options": "\nOutpatient\nInpatient"
+  },
+  {
+   "fieldname": "authorization_guid",
+   "fieldtype": "Data",
+   "label": "Authorization Guid"
+  },
+  {
+   "fieldname": "copay_type",
+   "fieldtype": "Data",
+   "label": "Copay Type"
+  },
+  {
+   "fieldname": "message",
+   "fieldtype": "Small Text",
+   "label": "Message"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2022-04-06 17:30:51.272579",
+ "modified_by": "Administrator",
+ "module": "Gch Custom",
+ "name": "Slade Auth",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "All",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

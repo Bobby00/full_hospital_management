@@ -1,0 +1,98 @@
+[
+ {
+  "docstatus": 0,
+  "doctype": "Queue Group",
+  "location": "Muthaiga",
+  "modified": "2021-08-02 05:33:10.072436",
+  "name": "QG-00001",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null,
+  "require_appointments": 0,
+  "service_unit": "All Healthcare Service Units - GCH"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Queue Group",
+  "location": "Muthaiga",
+  "modified": "2021-07-30 11:42:00.658311",
+  "name": "QG-00008",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null,
+  "require_appointments": 0,
+  "service_unit": "Registration - GCH"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Queue Group",
+  "location": "Muthaiga",
+  "modified": "2021-07-30 11:42:21.371464",
+  "name": "QG-00009",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null,
+  "require_appointments": 0,
+  "service_unit": "Triage - GCH"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Queue Group",
+  "location": "Muthaiga",
+  "modified": "2021-07-30 11:43:16.228864",
+  "name": "QG-00010",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null,
+  "require_appointments": 0,
+  "service_unit": "Reception - GCH"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Queue Group",
+  "location": "Muthaiga",
+  "modified": "2021-07-30 11:43:29.364599",
+  "name": "QG-00011",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null,
+  "require_appointments": 0,
+  "service_unit": "Doctor - GCH"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Queue Group",
+  "location": "Muthaiga",
+  "modified": "2021-07-30 11:43:50.504192",
+  "name": "QG-00012",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null,
+  "require_appointments": 0,
+  "service_unit": "LAB/Investigation - GCH"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Queue Group",
+  "location": "Muthaiga",
+  "modified": "2021-07-30 11:44:00.509096",
+  "name": "QG-00013",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null,
+  "require_appointments": 0,
+  "service_unit": "Pharmacy - GCH"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Queue Group",
+  "location": "Muthaiga",
+  "modified": "2021-08-17 12:58:23.292447",
+  "name": "QG-00033",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null,
+  "require_appointments": 0,
+  "service_unit": "OP Discharge - GCH"
+ }
+]

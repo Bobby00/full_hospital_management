@@ -1,0 +1,60 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:NWDRM-{nursing_ward}.{#####}",
+ "creation": "2021-11-21 20:23:44.644937",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "nursing_ward",
+  "number_of_beds",
+  "gender"
+ ],
+ "fields": [
+  {
+   "fieldname": "nursing_ward",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Nursing Ward",
+   "options": "Nursing Ward"
+  },
+  {
+   "fieldname": "number_of_beds",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Number of Beds"
+  },
+  {
+   "fieldname": "gender",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Gender",
+   "options": "Male\nFemale\nUnisex"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2021-11-21 21:16:00.912600",
+ "modified_by": "Administrator",
+ "module": "Gch Custom",
+ "name": "Nursing Ward Room",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

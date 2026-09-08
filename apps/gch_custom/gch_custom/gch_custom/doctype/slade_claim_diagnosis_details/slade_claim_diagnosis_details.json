@@ -1,0 +1,39 @@
+{
+ "actions": [],
+ "autoname": "field:diagnosis_name",
+ "creation": "2022-03-10 17:23:31.001558",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "diagnosis_name",
+  "diagnosis_code"
+ ],
+ "fields": [
+  {
+   "fieldname": "diagnosis_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Diagnosis Name",
+   "unique": 1
+  },
+  {
+   "fieldname": "diagnosis_code",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Diagnosis Code"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2022-03-10 17:27:42.933447",
+ "modified_by": "Administrator",
+ "module": "Gch Custom",
+ "name": "Slade Claim Diagnosis Details",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

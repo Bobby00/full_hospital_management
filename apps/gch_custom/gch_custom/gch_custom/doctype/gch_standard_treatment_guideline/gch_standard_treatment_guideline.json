@@ -1,0 +1,95 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:GCHSTG - {code}",
+ "creation": "2022-03-10 06:22:32.660256",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "generic_name",
+  "medical_code",
+  "generic_drug",
+  "column_break_4",
+  "code",
+  "preparation",
+  "description"
+ ],
+ "fields": [
+  {
+   "fieldname": "medical_code",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Medical code",
+   "options": "Medical Code",
+   "search_index": 1
+  },
+  {
+   "fetch_from": "medical_code.code",
+   "fieldname": "code",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Code",
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "preparation",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Formula",
+   "options": "Drug Formula",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "medical_code.description",
+   "fieldname": "description",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Description",
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "generic_drug",
+   "fieldtype": "Link",
+   "label": "Generic Drug",
+   "options": "Generic Drug Name"
+  },
+  {
+   "fetch_from": "generic_drug.generic_name",
+   "fieldname": "generic_name",
+   "fieldtype": "Data",
+   "label": "Generic Drug Name"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2022-03-12 00:10:00.315094",
+ "modified_by": "Administrator",
+ "module": "Gch Custom",
+ "name": "GCH Standard Treatment Guideline",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "title_field": "medical_code",
+ "track_changes": 1
+}

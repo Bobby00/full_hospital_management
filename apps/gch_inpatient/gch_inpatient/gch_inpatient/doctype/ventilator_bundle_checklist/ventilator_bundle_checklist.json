@@ -1,0 +1,255 @@
+{
+ "actions": [],
+ "autoname": "format:GCH-VBC-{###}",
+ "creation": "2023-12-14 00:43:32.771302",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "encounter_details_section",
+  "inpatient_record",
+  "patient",
+  "patient_name",
+  "uhid",
+  "column_break_8",
+  "gender",
+  "wardroombed",
+  "encounter_date",
+  "consulting_doctor",
+  "triage_section",
+  "weight",
+  "height",
+  "temperature",
+  "bmi_column",
+  "bmi",
+  "bsa",
+  "section_break_18",
+  "ventilator_day",
+  "amended_from",
+  "date",
+  "head_of_the_bed_thirty_degrees",
+  "daily_sedative_interruption_and_daily_assessment_of_readiness",
+  "pud_prophylaxis",
+  "dvt_prophylaxis",
+  "daily_oral_care",
+  "section_break_20",
+  "date_of_ventilator_insertion",
+  "ventilator_bundle_html",
+  "section_break_30",
+  "checked_by",
+  "comments"
+ ],
+ "fields": [
+  {
+   "fieldname": "encounter_details_section",
+   "fieldtype": "Section Break",
+   "label": "Encounter Details"
+  },
+  {
+   "fieldname": "inpatient_record",
+   "fieldtype": "Link",
+   "label": "Inpatient Record",
+   "options": "Inpatient Record"
+  },
+  {
+   "fetch_from": "patient_encounter.patient",
+   "fieldname": "patient",
+   "fieldtype": "Link",
+   "label": "Patient",
+   "options": "Patient"
+  },
+  {
+   "fetch_from": "patient.patient_name",
+   "fieldname": "patient_name",
+   "fieldtype": "Data",
+   "label": "Patient Name"
+  },
+  {
+   "fetch_from": "patient.uhid_code",
+   "fieldname": "uhid",
+   "fieldtype": "Data",
+   "label": "UHID"
+  },
+  {
+   "fieldname": "column_break_8",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "patient.sex",
+   "fieldname": "gender",
+   "fieldtype": "Data",
+   "label": "Gender"
+  },
+  {
+   "fieldname": "wardroombed",
+   "fieldtype": "Data",
+   "label": "Ward/Room/Bed"
+  },
+  {
+   "default": "Today",
+   "fieldname": "encounter_date",
+   "fieldtype": "Date",
+   "label": "Encounter Date"
+  },
+  {
+   "fieldname": "consulting_doctor",
+   "fieldtype": "Data",
+   "label": "Consulting Doctor"
+  },
+  {
+   "fieldname": "triage_section",
+   "fieldtype": "Section Break",
+   "label": "TRIAGE"
+  },
+  {
+   "fieldname": "weight",
+   "fieldtype": "Data",
+   "label": "Weight"
+  },
+  {
+   "fieldname": "height",
+   "fieldtype": "Data",
+   "label": "Height"
+  },
+  {
+   "fieldname": "temperature",
+   "fieldtype": "Data",
+   "label": "Temperature"
+  },
+  {
+   "fieldname": "bmi_column",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "bmi",
+   "fieldtype": "Data",
+   "label": "BMI"
+  },
+  {
+   "fieldname": "bsa",
+   "fieldtype": "Data",
+   "label": "BSA"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "VENTILATOR BUNDLE CHECKLIST",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_20",
+   "fieldtype": "Section Break",
+   "label": "VENTILATOR BUNDLE CHECKLIST"
+  },
+  {
+   "fieldname": "date_of_ventilator_insertion",
+   "fieldtype": "Date",
+   "label": "Date of ventilator insertion"
+  },
+  {
+   "fieldname": "ventilator_day",
+   "fieldtype": "Data",
+   "label": "Ventilator Day"
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "daily_sedative_interruption_and_daily_assessment_of_readiness",
+   "fieldtype": "Select",
+   "label": "Daily sedative interruption and daily assessment of readiness to extubate",
+   "options": "\nYES\nNO\nN/A"
+  },
+  {
+   "fieldname": "pud_prophylaxis",
+   "fieldtype": "Select",
+   "label": "PUD Prophylaxis",
+   "options": "\nYES\nNO\nN/A"
+  },
+  {
+   "fieldname": "dvt_prophylaxis",
+   "fieldtype": "Select",
+   "label": "DVT Prophylaxis",
+   "options": "\nYES\nNO\nN/A"
+  },
+  {
+   "fieldname": "daily_oral_care",
+   "fieldtype": "Select",
+   "label": "Daily Oral Care (6 hly& PRN oral care)",
+   "options": "\nYES\nNO\nN/A"
+  },
+  {
+   "fieldname": "section_break_30",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "User",
+   "fieldname": "checked_by",
+   "fieldtype": "Link",
+   "label": "Checked by",
+   "options": "User"
+  },
+  {
+   "fieldname": "comments",
+   "fieldtype": "Small Text",
+   "label": "Comments"
+  },
+  {
+   "fieldname": "head_of_the_bed_thirty_degrees",
+   "fieldtype": "Select",
+   "label": "Head of the bed 30 degrees",
+   "options": "\nYES\nNO\nN/A"
+  },
+  {
+   "fieldname": "ventilator_bundle_html",
+   "fieldtype": "HTML"
+  },
+  {
+   "fieldname": "section_break_18",
+   "fieldtype": "Section Break",
+   "hidden": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2023-12-20 11:07:57.548474",
+ "modified_by": "Administrator",
+ "module": "Gch Inpatient",
+ "name": "VENTILATOR BUNDLE CHECKLIST",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "All",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

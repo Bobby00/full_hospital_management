@@ -1,0 +1,33 @@
+{
+ "actions": [],
+ "autoname": "GDN-#####",
+ "creation": "2021-08-26 11:46:53.441061",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "drug_route"
+ ],
+ "fields": [
+  {
+   "fieldname": "drug_route",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Drug Route",
+   "options": "Drug Route",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2021-08-26 11:47:23.600298",
+ "modified_by": "Administrator",
+ "module": "Gch Custom",
+ "name": "Generic Drug Route",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

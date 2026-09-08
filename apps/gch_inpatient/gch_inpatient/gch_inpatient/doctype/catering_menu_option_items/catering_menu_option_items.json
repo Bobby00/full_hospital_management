@@ -1,0 +1,71 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-11-29 11:24:37.496777",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "catering_menu_item",
+  "is_dry_good",
+  "limit",
+  "comment",
+  "is_active"
+ ],
+ "fields": [
+  {
+   "fieldname": "catering_menu_item",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "label": "Catering Menu Item",
+   "options": "Catering Menu Item"
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "limit",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "label": "Limit"
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "default": "0",
+   "fieldname": "is_active",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "label": "Is Active"
+  },
+  {
+   "fieldname": "comment",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Comment"
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "default": "0",
+   "fetch_from": "catering_menu_item.is_dry_good",
+   "fieldname": "is_dry_good",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Is dry good?"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-06-12 07:57:44.273411",
+ "modified_by": "Administrator",
+ "module": "Gch Inpatient",
+ "name": "Catering Menu Option Items",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

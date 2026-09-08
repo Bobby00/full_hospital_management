@@ -1,0 +1,173 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:GCH-SSIP-{####}",
+ "creation": "2023-12-14 13:03:32.324859",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "encounter_details_section",
+  "inpatient_record",
+  "patient",
+  "patient_name",
+  "uhid",
+  "is_inpatient",
+  "column_break_7",
+  "gender",
+  "wardroombed",
+  "consulting_doctor",
+  "date",
+  "section_break_2",
+  "hair_removal",
+  "prophylaxis_antibiotics",
+  "prophylaxis_admin_time",
+  "normal_temperature",
+  "blood_glucose",
+  "section_break_15",
+  "html_template",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "encounter_details_section",
+   "fieldtype": "Section Break",
+   "label": "Encounter Details"
+  },
+  {
+   "fieldname": "inpatient_record",
+   "fieldtype": "Link",
+   "label": "Inpatient Record",
+   "options": "Inpatient Record"
+  },
+  {
+   "fieldname": "patient",
+   "fieldtype": "Link",
+   "label": "Patient",
+   "options": "Patient"
+  },
+  {
+   "fetch_from": "patient.patient_name",
+   "fieldname": "patient_name",
+   "fieldtype": "Data",
+   "label": "Patient Name"
+  },
+  {
+   "fetch_from": "patient.uhid_code",
+   "fieldname": "uhid",
+   "fieldtype": "Data",
+   "label": "UHID"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_inpatient",
+   "fieldtype": "Check",
+   "hidden": 1,
+   "label": "Is Inpatient"
+  },
+  {
+   "fieldname": "column_break_7",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "patient.sex",
+   "fieldname": "gender",
+   "fieldtype": "Data",
+   "label": "Gender"
+  },
+  {
+   "fieldname": "wardroombed",
+   "fieldtype": "Data",
+   "label": "Ward/room/bed"
+  },
+  {
+   "fieldname": "consulting_doctor",
+   "fieldtype": "Data",
+   "label": "Consulting Doctor"
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_2",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_15",
+   "fieldtype": "Section Break",
+   "label": "SSI PREVENTION CHECKLIST"
+  },
+  {
+   "fieldname": "html_template",
+   "fieldtype": "HTML",
+   "label": "HTML_TEMPLATE"
+  },
+  {
+   "fieldname": "hair_removal",
+   "fieldtype": "Select",
+   "label": "Hair removal was avoided or clippers were used",
+   "options": "\nYES\nNO\nN/A"
+  },
+  {
+   "fieldname": "prophylaxis_antibiotics",
+   "fieldtype": "Select",
+   "label": "Was prescription of prophylaxis antibiotic appropriate?",
+   "options": "\nYES\nNO\nN/A"
+  },
+  {
+   "fieldname": "prophylaxis_admin_time",
+   "fieldtype": "Select",
+   "label": "Was prophylaxis antibiotic administered within 6o miniutes prior to the operation?",
+   "options": "\nYES\nNO\nN/A"
+  },
+  {
+   "fieldname": "normal_temperature",
+   "fieldtype": "Select",
+   "label": "Was Patient's temperature normal throughout the operation?",
+   "options": "\nYES\nNO\nN/A"
+  },
+  {
+   "fieldname": "blood_glucose",
+   "fieldtype": "Select",
+   "label": "Was patient's blood glucose level normal throughout the operation?",
+   "options": "\nYES\nNO\nN/A"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "SSI PREVENTION CHECKLIST",
+   "print_hide": 1,
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2023-12-14 15:12:13.694080",
+ "modified_by": "Administrator",
+ "module": "Gch Inpatient",
+ "name": "SSI PREVENTION CHECKLIST",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

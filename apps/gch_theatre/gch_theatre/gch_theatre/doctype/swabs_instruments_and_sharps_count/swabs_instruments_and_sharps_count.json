@@ -1,0 +1,86 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-07-15 09:00:26.978379",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "abd_swabs",
+  "raytec_swabs",
+  "cottonnoids",
+  "diss_swabs",
+  "needles",
+  "blades",
+  "instruments",
+  "tonsil_swabs",
+  "others"
+ ],
+ "fields": [
+  {
+   "fieldname": "abd_swabs",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "ABD Swabs",
+   "reqd": 1
+  },
+  {
+   "fieldname": "raytec_swabs",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Raytec Swabs"
+  },
+  {
+   "fieldname": "cottonnoids",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Cottonnoids"
+  },
+  {
+   "fieldname": "diss_swabs",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Diss Swabs"
+  },
+  {
+   "fieldname": "needles",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Needles"
+  },
+  {
+   "fieldname": "blades",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Blades"
+  },
+  {
+   "fieldname": "instruments",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Instruments"
+  },
+  {
+   "fieldname": "tonsil_swabs",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Tonsil swabs"
+  },
+  {
+   "fieldname": "others",
+   "fieldtype": "Data",
+   "label": "Others"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-07-15 10:34:09.511667",
+ "modified_by": "Administrator",
+ "module": "GCH Theatre",
+ "name": "Swabs Instruments and Sharps Count",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

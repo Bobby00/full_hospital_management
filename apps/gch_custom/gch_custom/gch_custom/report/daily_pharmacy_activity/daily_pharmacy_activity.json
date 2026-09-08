@@ -1,0 +1,84 @@
+{
+ "add_total_row": 0,
+ "columns": [],
+ "creation": "2022-10-31 00:56:32.427561",
+ "disable_prepared_report": 0,
+ "disabled": 0,
+ "docstatus": 0,
+ "doctype": "Report",
+ "filters": [
+  {
+   "fieldname": "from_date",
+   "fieldtype": "Date",
+   "label": "From Date",
+   "mandatory": 0,
+   "wildcard_filter": 0
+  },
+  {
+   "fieldname": "to_date",
+   "fieldtype": "Date",
+   "label": "To Date",
+   "mandatory": 0,
+   "wildcard_filter": 0
+  }
+ ],
+ "idx": 0,
+ "is_standard": "Yes",
+ "modified": "2022-10-31 00:56:32.427561",
+ "modified_by": "Administrator",
+ "module": "Gch Custom",
+ "name": "Daily Pharmacy Activity",
+ "owner": "Administrator",
+ "prepared_report": 0,
+ "query": "SELECT * from `tabPatient Encounter` \nWHERE DATE_FORMAT(creation, '%%Y-%%m-%%d') BETWEEN %(from_date)s AND %(to_date)s \nAND `tabPatient Encounter`.medical_department = \"Pharmacy\";",
+ "ref_doctype": "Patient Encounter",
+ "report_name": "Daily Pharmacy Activity",
+ "report_type": "Query Report",
+ "roles": [
+  {
+   "role": "Physician"
+  },
+  {
+   "role": "System Manager"
+  },
+  {
+   "role": "GCH-Reception"
+  },
+  {
+   "role": "GCH-TriageNurse"
+  },
+  {
+   "role": "GCH-Doctor"
+  },
+  {
+   "role": "GCH-Pharmacy"
+  },
+  {
+   "role": "Physician"
+  },
+  {
+   "role": "System Manager"
+  },
+  {
+   "role": "GCH-Reception"
+  },
+  {
+   "role": "GCH-TriageNurse"
+  },
+  {
+   "role": "GCH-Doctor"
+  },
+  {
+   "role": "GCH-LabTechnician"
+  },
+  {
+   "role": "GCH-Wellbaby Nurse"
+  },
+  {
+   "role": "Support Team"
+  },
+  {
+   "role": "GCH-Dental"
+  }
+ ]
+}

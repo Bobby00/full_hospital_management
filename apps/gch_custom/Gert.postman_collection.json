@@ -1,0 +1,446 @@
+{
+	"info": {
+		"_postman_id": "c6c0ae82-9253-4bff-a726-017027f83b94",
+		"name": "Gert",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24134618"
+	},
+	"item": [
+		{
+			"name": "Messaging",
+			"item": [
+				{
+					"name": "Send SMS",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"recipient\":\"254758462513\",\n    \"message\":\"Sent there from Gerties\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/api/method/gch_messaging.services.send_sms",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"api",
+								"method",
+								"gch_messaging.services.send_sms"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Send Email",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"to\":\"shalom.nyende@gmail.com\",\n    \"message\":\"Messages here\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/api/method/gch_messaging.services.send_email",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"api",
+								"method",
+								"gch_messaging.services.send_email"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Queue Management",
+			"item": [
+				{
+					"name": "Open Patient Encounter",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "token {{AUTH_TOKEN}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"patient\":\"Patient Name\",\n    \"service_unit\":\"\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/api/method/gch_queue.services.open_encounter",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"api",
+								"method",
+								"gch_queue.services.open_encounter"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Render Queue",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/api/method/gch_queue.services.render_queue?destination=Here",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"api",
+								"method",
+								"gch_queue.services.render_queue"
+							],
+							"query": [
+								{
+									"key": "destination",
+									"value": "Here"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Patient to Queue",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"patient_id\":\"Loice Wambui\",\n    \"priority\":\"1\",\n    \"queue_group\":\"QG-00001\",\n    \"phone\":\"254725307131\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/api/method/gch_queue.services.add",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"api",
+								"method",
+								"gch_queue.services.add"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Ward Management",
+			"item": [
+				{
+					"name": "List Ward Occupancy",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{GERT_BASE_URL}}/api/method/gch_custom.services.list_nurse_wards",
+							"host": [
+								"{{GERT_BASE_URL}}"
+							],
+							"path": [
+								"api",
+								"method",
+								"gch_custom.services.list_nurse_wards"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Assign Bed",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"patient\":\"\",\n    \"bed\":\"\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{GERT_BASE_URL}}/api/method/gch_custom.services.assign_bed",
+							"host": [
+								"{{GERT_BASE_URL}}"
+							],
+							"path": [
+								"api",
+								"method",
+								"gch_custom.services.assign_bed"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List Ward Rooms",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{GERT_BASE_URL}}/api/method/gch_custom.services.list_ward_rooms",
+							"host": [
+								"{{GERT_BASE_URL}}"
+							],
+							"path": [
+								"api",
+								"method",
+								"gch_custom.services.list_ward_rooms"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Generate OTP",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "token {{AUTH_TOKEN}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"phone_number\":\"254758462513\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/api/method/gch_custom.services.generate_otp",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"method",
+						"gch_custom.services.generate_otp"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Parent Detail",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "token {{AUTH_TOKEN}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"phone_number\":\"254758462513\",\n    \"otp\":\"9808\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/api/method/gch_custom.services.get_parent_details",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"method",
+						"gch_custom.services.get_parent_details"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Query Patient by UHID",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"uhid\":\"12345\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/api/method/gch_custom.services.query_uhid/",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"method",
+						"gch_custom.services.query_uhid",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Parent's Children",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"phone_number\":\"254725307131\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/api/method/gch_custom.services.query_children",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"method",
+						"gch_custom.services.query_children"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Patient Encounter Diagnoses",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"encounter_number\":\"HLC-ENC-2021-00001\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/api/method/gch_custom.services.query_encounter_diagnoses",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"method",
+						"gch_custom.services.query_encounter_diagnoses"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Nursing Ward Info",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/api/method/gch_custom.services.nurse_wards",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"method",
+						"gch_custom.services.nurse_wards"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Nursing Ward Occupancy",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"ward_name\": \"GCHNWD-Casualty\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/api/method/gch_custom.services.occupancy",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"method",
+						"gch_custom.services.occupancy"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

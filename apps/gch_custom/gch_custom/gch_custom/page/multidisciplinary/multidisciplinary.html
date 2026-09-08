@@ -1,0 +1,253 @@
+<div class="row layout-main">
+  <div class="col-md-12 layout-side-section">
+
+
+
+
+    
+
+
+
+    <div class="row layout-main">
+      <div class="col-md-12 layout-side-section">
+        <div class="user-profile-sidebar" style="overflow-x:auto;">
+          <table class="table">
+            <tr>
+              <th>Date</th>
+              <th>Assessment</th>
+              <th>Diagnosis</th>
+              <th>Care Objectives</th>
+              <th>Patient Order</th>
+              <th>Implementation</th>
+              <th>Evaluation</th>
+              <th>Practitioner</th>
+            </tr>
+
+
+
+
+            {% for item in multidisciplinary_data %}
+
+            <tr>
+
+
+              <td>{{ item.creation }}</td>
+              <!-- <td> {{ item.creation.strftime('%Y-%m-%d') }} </td> -->
+
+
+              <td>
+
+                {% if item.patient_encounter_temperature || item.patient_encounter_heart_rate || item.patient_encounter_bp_systolic %}
+
+                  {% if item.patient_encounter_temperature %}
+                    <b>Temperature:</b> {{ item.patient_encounter_temperature }} <br />
+                  {% endif %}
+
+                  {% if item.patient_encounter_heart_rate %}
+                    <b>Heart Rate:</b> {{ item.patient_encounter_heart_rate }} <br />
+                  {% endif %}
+
+                  {% if item.patient_encounter_bp_systolic %}
+                    <b>Blood Pressure:</b> {{ item.patient_encounter_bp_systolic }} /
+                  {{ item.patient_encounter_bp_diastolic }} <br />
+                  {% endif %}
+
+                {% endif %}
+
+                
+                
+                
+                
+
+
+
+                <!-- NURSING NOTES -->
+
+                {% if item.chief_complaint || item.duration_measure %}
+                <br/><br/>
+
+                <h6>NURSING NOTES</h6>
+                {% endif %}
+
+                {% if item.chief_complaint %}
+                  <b>Chief Complaint:</b> {{ item.chief_complaint }} <br/>
+                {% endif %}
+
+                {% if item.duration_measure %}
+                  <b>Duration:</b> {{ item.duration }} {{ item.duration_measure }}
+                {% endif %}
+
+                
+
+
+
+                <!-- ENCOUNTER HISTORT -->
+
+                {% if item.patient_encounter_chief_complaint || item.patient_encounter_history_of_present_illness || item.patient_encounter_systematic_enquiry || item.patient_encounter_past_medical_history || item.patient_encounter_family_history || item.patient_encounter_nutrition_history || item.patient_encounter_socio_economic_history || item.patient_encounter_milestones || item.patient_encounter_drug_history || item.patient_encounter_other_relevant_history %}
+
+                <br />
+
+                <h6>ENCOUNTER HISTORY</h6>
+
+                {% endif %}
+
+
+                {% if item.patient_encounter_chief_complaint %}
+                  <b>Chief Complaint:</b> {{ item.patient_encounter_chief_complaint }} <br/>
+                {% endif %}
+
+                {% if item.patient_encounter_history_of_present_illness %}
+                  <b>History of present illness:</b> {{ item.patient_encounter_history_of_present_illness }} <br/>
+                {% endif %}
+
+                {% if item.patient_encounter_systematic_enquiry %}
+                  <b>Systematic Enquiry:</b> {{ item.patient_encounter_systematic_enquiry }} <br/>
+                {% endif %}
+
+                {% if item.patient_encounter_past_medical_history %}
+                  <b>Past medical history:</b> {{ item.patient_encounter_past_medical_history }} <br/>
+                {% endif %}
+
+                {% if item.patient_encounter_family_history %}
+                  <b>Family History:</b> {{ item.patient_encounter_family_history }} <br/>
+                {% endif %}
+
+                {% if item.patient_encounter_nutrition_history %}
+                  <b>Nutrition History:</b> {{ item.patient_encounter_nutrition_history }} <br/>
+                {% endif %}
+
+                {% if item.patient_encounter_socio_economic_history %}
+                  <b>Socio economic history:</b> {{ item.patient_encounter_socio_economic_history }} <br/>
+                {% endif %}
+
+                {% if item.patient_encounter_milestones %}
+                  <b>Milestones:</b> {{ item.patient_encounter_milestones }} <br/>
+                {% endif %}
+
+                {% if item.patient_encounter_drug_history %}
+                  <b>Drug history:</b> {{ item.patient_encounter_drug_history }} <br/>
+                {% endif %}
+
+                {% if item.patient_encounter_other_relevant_history %}
+                  <b>Other relevant history:</b> {{ item.patient_encounter_other_relevant_history }} <br/>
+                {% endif %}
+
+
+                
+                
+                
+                
+                
+                
+                
+                
+                <!-- PHYSICAL EXAMINATION -->
+
+                {% if item.patient_encounter_general || item.patient_encounter_cardiovascular_system || item.patient_encounter_genitourinary || item.patient_encounter_ear_nose_and_throat || item.patient_encounter_respiratory_system || item.patient_encounter_abdomen || item.patient_encounter_central_nervous_system || item.patient_encounter_skin || item.patient_encounter_eyes || item.patient_encounter_musculoskeletal %}
+                <br /><br />
+            
+                <h6>PHYSICAL EXAMINATION</h6>
+
+                {% endif %}
+
+                {% if item.patient_encounter_general %}
+                  <b>General:</b> {{ item.patient_encounter_general }} <br/>
+                {% endif %}
+
+                {% if item.patient_encounter_cardiovascular_system %}
+                  <b>Cardiovascular System:</b> {{ item.patient_encounter_cardiovascular_system }} <br/>
+                {% endif %}
+
+                {% if item.patient_encounter_genitourinary %}
+                  <b>Genitourinary:</b> {{ item.patient_encounter_genitourinary }} <br/>
+                {% endif %}
+
+                {% if item.patient_encounter_ear_nose_and_throat %}
+                  <b>Ear Nose and Throat:</b> {{ item.patient_encounter_ear_nose_and_throat }} <br/>
+                {% endif %}
+
+                {% if item.patient_encounter_respiratory_system %}
+                  <b>Respiratory System:</b> {{ item.patient_encounter_respiratory_system }} <br/>
+                {% endif %}
+
+                {% if item.patient_encounter_abdomen %}
+                  <b>Abdomen:</b> {{ item.patient_encounter_abdomen }} <br/>
+                {% endif %}
+
+                {% if item.patient_encounter_central_nervous_system %}
+                  <b>Central Nervous System:</b> {{ item.patient_encounter_central_nervous_system }} <br/>
+                {% endif %}
+
+                {% if item.patient_encounter_skin %}
+                  <b>Skin:</b> {{ item.patient_encounter_skin }} <br/>
+                {% endif %}
+
+                {% if item.patient_encounter_eyes %}
+                  <b>Eyes:</b> {{ item.patient_encounter_eyes }} <br/>
+                {% endif %}
+
+                {% if item.patient_encounter_musculoskeletal %}
+                  <b>Musculoskeletal:</b> {{ item.patient_encounter_musculoskeletal }} <br/>
+                {% endif %}            
+              </td>
+
+
+              <td>
+                <div class="col-md-12">
+                  {% if item.description %}
+                    {{ item.description }}
+                  {% endif %}
+                </div>
+              </td>
+
+              <td>
+                {% if item.patient_encounter_plan_of_action_notes %}
+                <b>Plan of Action Notes:</b> {{ item.patient_encounter_plan_of_action_notes }}
+                {% endif %}
+              </td>
+
+              <td>
+                {% if item.lab_test_name %}
+                  <b>Observation:</b> {{ item.lab_test_name }}
+                {% endif %}
+
+                {% if item.procedure_name %}
+                  <b>Procedure:</b> {{ item.procedure_name }}
+                {% endif %}
+              </td>
+
+
+              <td></td>
+
+
+              <td></td>
+
+
+              <td>{{ item.modified_by }}</td>
+
+
+            </tr>
+            {% endfor %}
+
+
+          </table>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+</div>

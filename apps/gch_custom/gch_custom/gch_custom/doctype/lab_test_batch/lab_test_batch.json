@@ -1,0 +1,83 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:LRB-{DD}{MM}{YYYY}-{################}",
+ "creation": "2022-05-31 08:17:03.304430",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "department",
+  "patient_encounter",
+  "is_inpatient",
+  "inpatient_record",
+  "status",
+  "raw_result",
+  "result_document"
+ ],
+ "fields": [
+  {
+   "fieldname": "status",
+   "fieldtype": "Data",
+   "label": "Status"
+  },
+  {
+   "fieldname": "raw_result",
+   "fieldtype": "Long Text",
+   "label": "Raw Result"
+  },
+  {
+   "fieldname": "result_document",
+   "fieldtype": "Data",
+   "label": "Result Document"
+  },
+  {
+   "fieldname": "patient_encounter",
+   "fieldtype": "Link",
+   "label": "Patient Encounter",
+   "options": "Patient Encounter"
+  },
+  {
+   "fieldname": "department",
+   "fieldtype": "Link",
+   "label": "Department",
+   "options": "Medical Department"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_inpatient",
+   "fieldtype": "Check",
+   "label": "is inpatient"
+  },
+  {
+   "fieldname": "inpatient_record",
+   "fieldtype": "Link",
+   "label": "Inpatient Record",
+   "options": "Inpatient Record"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-08-13 16:24:12.421652",
+ "modified_by": "Administrator",
+ "module": "Gch Custom",
+ "name": "Lab Test Batch",
+ "name_case": "UPPER CASE",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

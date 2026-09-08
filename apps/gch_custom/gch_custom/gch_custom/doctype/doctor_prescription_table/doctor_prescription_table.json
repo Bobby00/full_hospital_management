@@ -1,0 +1,408 @@
+{
+ "actions": [],
+ "creation": "2021-08-31 06:52:03.776212",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "patient_details_section",
+  "dob",
+  "age",
+  "column_break_4",
+  "height_in_centimeters",
+  "weight_in_kilograms",
+  "column_break_5",
+  "bmi",
+  "section_break_7",
+  "generic_drug",
+  "generic_drug_name",
+  "brand",
+  "item_name",
+  "preparation_type",
+  "route",
+  "dose",
+  "dose_uom",
+  "prescription_frequency",
+  "frequency_type",
+  "duration",
+  "f_section_split_column",
+  "medication",
+  "is_chronic",
+  "unit_of_measure",
+  "selling_quantity",
+  "remarks",
+  "additional_label_info",
+  "item_description",
+  "available_quantity",
+  "billed_quantity",
+  "pharmacy_dose",
+  "pharmacy_frequency",
+  "pharmacy_duration",
+  "column_break_8",
+  "discount",
+  "unit_price",
+  "total",
+  "dont_issue",
+  "dont_issue_reason",
+  "refillable",
+  "refill_section",
+  "refill_type",
+  "refill_count",
+  "period_type",
+  "column_break_24",
+  "refill_notes",
+  "pharmacy_remark",
+  "sub_preparation_type",
+  "additional_item_info",
+  "item_route",
+  "item_preparation_type",
+  "selected_item_batch",
+  "dispensed_by",
+  "dispensed_at",
+  "dispensed"
+ ],
+ "fields": [
+  {
+   "columns": 2,
+   "depends_on": "eval: frappe.user_roles.includes(\"GCH-Pharmacy\");",
+   "fieldname": "medication",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Medication",
+   "options": "Item"
+  },
+  {
+   "columns": 1,
+   "fieldname": "preparation_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Preparation Type"
+  },
+  {
+   "columns": 1,
+   "fieldname": "dose",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Dose"
+  },
+  {
+   "columns": 1,
+   "fieldname": "route",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Route"
+  },
+  {
+   "columns": 1,
+   "fieldname": "duration",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Duration (Days)"
+  },
+  {
+   "columns": 1,
+   "fieldname": "remarks",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Remarks"
+  },
+  {
+   "columns": 1,
+   "default": "0",
+   "depends_on": "eval: frappe.user_roles.includes(\"GCH-Pharmacy\");",
+   "fieldname": "dont_issue",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Don't Issue"
+  },
+  {
+   "fieldname": "f_section_split_column",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval:frappe.user_roles.includes(\"GCH-Pharmac\");",
+   "fieldname": "column_break_8",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval: frappe.user_roles.includes(\"GCH-Pharmacy\");",
+   "fetch_from": "medication.item_name",
+   "fieldname": "brand",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Brand"
+  },
+  {
+   "depends_on": "eval:cur_frm.selected_doc?.dont_issue == 1;",
+   "fieldname": "dont_issue_reason",
+   "fieldtype": "Select",
+   "label": "Don't Issue Reason",
+   "options": "Patient Declined\nAnother Reason"
+  },
+  {
+   "depends_on": "eval: frappe.user_roles.includes(\"GCH-Pharmacy\");",
+   "fieldname": "available_quantity",
+   "fieldtype": "Data",
+   "label": "Available Quantity"
+  },
+  {
+   "depends_on": "eval: frappe.user_roles.includes(\"GCH-Pharmacy\");",
+   "fieldname": "billed_quantity",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Billed Quantity",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval:frappe.user_roles.includes(\"GCH-Pharmacy\");",
+   "fieldname": "discount",
+   "fieldtype": "Data",
+   "label": "Discount"
+  },
+  {
+   "depends_on": "eval: frappe.user_roles.includes(\"GCH-Pharmacy\");",
+   "fieldname": "unit_price",
+   "fieldtype": "Data",
+   "label": "Unit Price"
+  },
+  {
+   "depends_on": "eval: frappe.user_roles.includes(\"GCH-Pharmacy\");",
+   "fieldname": "total",
+   "fieldtype": "Data",
+   "label": "Total"
+  },
+  {
+   "depends_on": "eval: frappe.user_roles.includes(\"GCH-Pharmacy\");",
+   "fieldname": "additional_label_info",
+   "fieldtype": "Data",
+   "label": "Additional Label Info"
+  },
+  {
+   "default": "0",
+   "fieldname": "refillable",
+   "fieldtype": "Check",
+   "label": "Refillable"
+  },
+  {
+   "fieldname": "refill_type",
+   "fieldtype": "Select",
+   "label": "Refill Type",
+   "options": "Periodic Refill\nAlternate Refill"
+  },
+  {
+   "fieldname": "refill_section",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "refill_count",
+   "fieldtype": "Data",
+   "label": "Refill Count"
+  },
+  {
+   "fieldname": "period_type",
+   "fieldtype": "Select",
+   "label": "Period Type",
+   "options": "Weekly\nMonthly\nQuarterly"
+  },
+  {
+   "fieldname": "column_break_24",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "refill_notes",
+   "fieldtype": "Long Text",
+   "label": "Refill Notes"
+  },
+  {
+   "depends_on": "eval: frappe.user_roles.includes(\"GCH-Doctor\") || frappe.user_roles.includes(\"GCH-Pharmacy\");",
+   "fieldname": "generic_drug",
+   "fieldtype": "Link",
+   "label": "Generic Drug",
+   "options": "Generic Drug Name"
+  },
+  {
+   "depends_on": "eval:frappe.user_roles.includes(\"GCH-Pharmacy\");",
+   "fieldname": "unit_of_measure",
+   "fieldtype": "Data",
+   "label": "Unit of Measure"
+  },
+  {
+   "depends_on": "eval:frappe.user_roles.includes(\"GCH-Pharmacy\");",
+   "fieldname": "selling_quantity",
+   "fieldtype": "Data",
+   "label": "Selling Quantity"
+  },
+  {
+   "fieldname": "prescription_frequency",
+   "fieldtype": "Select",
+   "label": "Frequency"
+  },
+  {
+   "fieldname": "dose_uom",
+   "fieldtype": "Select",
+   "label": "Dose UOM"
+  },
+  {
+   "fieldname": "frequency_type",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Frequency Type",
+   "options": "Minutes\nHours\nDays\nWeeks\nMonths\nYears"
+  },
+  {
+   "fieldname": "pharmacy_dose",
+   "fieldtype": "Data",
+   "label": "Dose"
+  },
+  {
+   "fieldname": "pharmacy_frequency",
+   "fieldtype": "Select",
+   "label": "Frequency"
+  },
+  {
+   "fieldname": "pharmacy_duration",
+   "fieldtype": "Data",
+   "label": "Duration"
+  },
+  {
+   "fetch_from": "medication.item_name",
+   "fieldname": "item_name",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Item Name",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "medication.description",
+   "fieldname": "item_description",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Item Description",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "generic_drug.generic_name",
+   "fieldname": "generic_drug_name",
+   "fieldtype": "Data",
+   "label": "Generic Drug Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "pharmacy_remark",
+   "fieldtype": "Data",
+   "label": "Pharmacy Remark"
+  },
+  {
+   "fetch_from": "medication.sub_preparation_type",
+   "fieldname": "sub_preparation_type",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Sub Preparation Type"
+  },
+  {
+   "fetch_from": "medication.additional_label_info",
+   "fieldname": "additional_item_info",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Additional Item Info",
+   "length": 1000
+  },
+  {
+   "fetch_from": "medication.product_route",
+   "fieldname": "item_route",
+   "fieldtype": "Data",
+   "label": "Item Route"
+  },
+  {
+   "fetch_from": "medication.product_type",
+   "fieldname": "item_preparation_type",
+   "fieldtype": "Data",
+   "label": "Item Preparation Type"
+  },
+  {
+   "fieldname": "patient_details_section",
+   "fieldtype": "Section Break",
+   "label": "Patient Details"
+  },
+  {
+   "fetch_from": "cur_frm.doc.patient_dob",
+   "fieldname": "dob",
+   "fieldtype": "Read Only",
+   "label": "DOB"
+  },
+  {
+   "fieldname": "weight_in_kilograms",
+   "fieldtype": "Read Only",
+   "label": "Weight in Kilograms"
+  },
+  {
+   "fieldname": "bmi",
+   "fieldtype": "Read Only",
+   "label": "BMI"
+  },
+  {
+   "fieldname": "section_break_7",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "age",
+   "fieldtype": "Read Only",
+   "label": "Age"
+  },
+  {
+   "fieldname": "column_break_5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "height_in_centimeters",
+   "fieldtype": "Read Only",
+   "label": "Height in Centimeters"
+  },
+  {
+   "fieldname": "selected_item_batch",
+   "fieldtype": "Link",
+   "label": "Selected Item Batch",
+   "options": "Batch"
+  },
+  {
+   "fieldname": "dispensed_by",
+   "fieldtype": "Data",
+   "label": "Dispensed by"
+  },
+  {
+   "fieldname": "dispensed_at",
+   "fieldtype": "Datetime",
+   "label": "Dispensed at"
+  },
+  {
+   "default": "0",
+   "fetch_from": "medication.is_chronic",
+   "fieldname": "is_chronic",
+   "fieldtype": "Check",
+   "hidden": 1,
+   "label": "Is chronic"
+  },
+  {
+   "default": "0",
+   "fieldname": "dispensed",
+   "fieldtype": "Check",
+   "label": "Dispensed"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2022-12-02 12:33:35.611355",
+ "modified_by": "Administrator",
+ "module": "Gch Custom",
+ "name": "Doctor Prescription Table",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

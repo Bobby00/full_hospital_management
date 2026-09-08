@@ -1,0 +1,258 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2022-11-14 07:58:22.110629",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "location",
+  "tooth_number",
+  "column_break_3",
+  "tooth_name",
+  "procedure",
+  "procedure_name",
+  "price",
+  "section_break_7",
+  "procedure_notes",
+  "add_another_procedure",
+  "section_break_9",
+  "second_procedure",
+  "column_break_12",
+  "second_procedure_name",
+  "second_procedure_price",
+  "section_break_14",
+  "second_procedure_notes",
+  "add_third_procedure",
+  "section_break_17",
+  "third_procedure",
+  "column_break_19",
+  "third_procedure_name",
+  "third_procedure_price",
+  "section_break_21",
+  "third_procedure_notes",
+  "add_fourth_procedure",
+  "section_break_24",
+  "fourth_procedure",
+  "forth_procedure_price",
+  "column_break_26",
+  "fourth_procedure_name",
+  "section_break_28",
+  "fourth_procedure_notes"
+ ],
+ "fields": [
+  {
+   "columns": 3,
+   "fieldname": "location",
+   "fieldtype": "Select",
+   "label": "Location",
+   "options": "\nUpper Right\nUpper Left\nLower Right\nLower Left",
+   "read_only": 1
+  },
+  {
+   "columns": 2,
+   "fieldname": "tooth_number",
+   "fieldtype": "Select",
+   "label": "Tooth Number",
+   "options": "\n11\n12\n13\n14\n15\n16\n17\n18\n21\n22\n23\n24\n25\n26\n27\n28\n31\n32\n33\n34\n35\n36\n37\n38\n41\n42\n43\n44\n45\n46\n47\n48\n51\n52\n53\n54\n55\n61\n62\n63\n64\n65\n71\n72\n73\n74\n75\n81\n82\n83\n84\n85"
+  },
+  {
+   "columns": 3,
+   "fieldname": "tooth_name",
+   "fieldtype": "Data",
+   "label": "Tooth Name",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "procedure.item_name",
+   "fieldname": "procedure_name",
+   "fieldtype": "Data",
+   "label": "Procedure Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "procedure_notes",
+   "fieldtype": "Small Text",
+   "label": "Procedure Notes"
+  },
+  {
+   "default": "0",
+   "fieldname": "add_another_procedure",
+   "fieldtype": "Check",
+   "label": "Add Another Procedure?"
+  },
+  {
+   "depends_on": "eval:doc.add_another_procedure == 1;",
+   "fetch_from": "second_procedure.item_name",
+   "fieldname": "second_procedure_name",
+   "fieldtype": "Data",
+   "label": "Second Procedure Name",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval:doc.add_another_procedure == 1;",
+   "fieldname": "second_procedure_notes",
+   "fieldtype": "Small Text",
+   "label": "Second Procedure Notes"
+  },
+  {
+   "default": "0",
+   "depends_on": "eval:doc.add_another_procedure == 1;",
+   "fieldname": "add_third_procedure",
+   "fieldtype": "Check",
+   "label": "Add Third Procedure?"
+  },
+  {
+   "depends_on": "eval:doc.add_third_procedure == 1;",
+   "fetch_from": "third_procedure.item_name",
+   "fieldname": "third_procedure_name",
+   "fieldtype": "Data",
+   "label": "Third Procedure Name",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval:doc.add_third_procedure == 1;",
+   "fieldname": "third_procedure_notes",
+   "fieldtype": "Small Text",
+   "label": "Third Procedure Notes"
+  },
+  {
+   "default": "0",
+   "depends_on": "eval:doc.add_third_procedure == 1;",
+   "fieldname": "add_fourth_procedure",
+   "fieldtype": "Check",
+   "label": "Add Fourth Procedure?"
+  },
+  {
+   "depends_on": "eval:doc.add_fourth_procedure == 1;",
+   "fetch_from": "fourth_procedure.item_name",
+   "fieldname": "fourth_procedure_name",
+   "fieldtype": "Data",
+   "label": "Fourth Procedure Name",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval:doc.add_fourth_procedure == 1;",
+   "fieldname": "fourth_procedure_notes",
+   "fieldtype": "Small Text",
+   "label": "Fourth Procedure Notes"
+  },
+  {
+   "fieldname": "procedure",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Procedure",
+   "options": "Item",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval:doc.add_another_procedure == 1;",
+   "fieldname": "section_break_9",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_7",
+   "fieldtype": "Section Break"
+  },
+  {
+   "depends_on": "eval:doc.add_another_procedure == 1;",
+   "fieldname": "second_procedure",
+   "fieldtype": "Link",
+   "label": "Second Procedure",
+   "mandatory_depends_on": "eval:doc.add_another_procedure == 1;",
+   "options": "Item"
+  },
+  {
+   "fieldname": "column_break_12",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval:doc.add_another_procedure == 1;",
+   "fieldname": "section_break_14",
+   "fieldtype": "Section Break"
+  },
+  {
+   "depends_on": "eval:doc.add_third_procedure == 1;",
+   "fieldname": "section_break_17",
+   "fieldtype": "Section Break"
+  },
+  {
+   "depends_on": "eval:doc.add_third_procedure == 1;",
+   "fieldname": "third_procedure",
+   "fieldtype": "Link",
+   "label": "Third Procedure",
+   "mandatory_depends_on": "eval:doc.add_third_procedure == 1;",
+   "options": "Item"
+  },
+  {
+   "fieldname": "column_break_19",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval:doc.add_third_procedure == 1;",
+   "fieldname": "section_break_21",
+   "fieldtype": "Section Break"
+  },
+  {
+   "depends_on": "eval:doc.add_fourth_procedure == 1;",
+   "fieldname": "section_break_24",
+   "fieldtype": "Section Break"
+  },
+  {
+   "depends_on": "eval:doc.add_fourth_procedure == 1;",
+   "fieldname": "fourth_procedure",
+   "fieldtype": "Link",
+   "label": "Fourth Procedure",
+   "mandatory_depends_on": "eval:doc.add_fourth_procedure == 1;",
+   "options": "Item"
+  },
+  {
+   "fieldname": "column_break_26",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval:doc.add_fourth_procedure == 1;",
+   "fieldname": "section_break_28",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "price",
+   "fieldtype": "Data",
+   "label": "Procedure Price",
+   "read_only": 1
+  },
+  {
+   "fieldname": "second_procedure_price",
+   "fieldtype": "Data",
+   "label": "Procedure Price",
+   "read_only": 1
+  },
+  {
+   "fieldname": "third_procedure_price",
+   "fieldtype": "Data",
+   "label": "Procedure Price",
+   "read_only": 1
+  },
+  {
+   "fieldname": "forth_procedure_price",
+   "fieldtype": "Data",
+   "label": "Procedure Price",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2023-07-28 13:38:55.242280",
+ "modified_by": "Administrator",
+ "module": "Gch Custom",
+ "name": "Dental Procedures GCH",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

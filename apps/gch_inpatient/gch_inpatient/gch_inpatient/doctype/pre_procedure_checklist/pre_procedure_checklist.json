@@ -1,0 +1,332 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:GCH-PPCT-{####}",
+ "creation": "2023-12-15 13:40:23.714459",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "encounter_details_section",
+  "inpatient_record",
+  "patient",
+  "patient_name",
+  "uhid",
+  "is_inpatient",
+  "column_break_7",
+  "gender",
+  "wardroombed",
+  "consulting_doctor",
+  "date",
+  "section_break_12",
+  "patient_identity",
+  "identity_checked_by",
+  "identity_counter_checked_by",
+  "informed_consent",
+  "consent_checked_by",
+  "consent_counter_checked_by",
+  "site_marker",
+  "site_marker_checked_by",
+  "site_marker_counter_checked_by",
+  "diagnostic_images",
+  "diagnostic_images_checked_by",
+  "diagnostic_images_counter_checked_by",
+  "pre_procedure_preparations",
+  "pre_procedure_preparations_checked_by",
+  "pre_procedure_preparations_counter_checked_by",
+  "column_break_28",
+  "identity_verification",
+  "identity_verification_checked_by",
+  "identity_verification_counter_checked_by",
+  "procedure_verification",
+  "procedure_verification_checked_by",
+  "procedure_verification_counter_checked_by",
+  "site_reconfirmed",
+  "site_reconfirmation_checked_by",
+  "site_reconfirmation_counter_checked_by",
+  "patient_positioning",
+  "positioning_checked_by",
+  "positioning_counter_checked_by",
+  "final_verification",
+  "final_verification_checked_by",
+  "final_verification_counter_checked_by",
+  "section_break_2",
+  "html_template",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "encounter_details_section",
+   "fieldtype": "Section Break",
+   "label": "Encounter Details"
+  },
+  {
+   "fieldname": "inpatient_record",
+   "fieldtype": "Link",
+   "label": "Inpatient Record",
+   "options": "Inpatient Record"
+  },
+  {
+   "fieldname": "patient",
+   "fieldtype": "Link",
+   "label": "Patient",
+   "options": "Patient"
+  },
+  {
+   "fetch_from": "patient.patient_name",
+   "fieldname": "patient_name",
+   "fieldtype": "Data",
+   "label": "Patient Name"
+  },
+  {
+   "fetch_from": "patient.uhid_code",
+   "fieldname": "uhid",
+   "fieldtype": "Data",
+   "label": "UHID"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_inpatient",
+   "fieldtype": "Check",
+   "hidden": 1,
+   "label": "Is Inpatient"
+  },
+  {
+   "fieldname": "column_break_7",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "patient.sex",
+   "fieldname": "gender",
+   "fieldtype": "Data",
+   "label": "Gender"
+  },
+  {
+   "fieldname": "wardroombed",
+   "fieldtype": "Data",
+   "label": "Ward/room/bed"
+  },
+  {
+   "fieldname": "consulting_doctor",
+   "fieldtype": "Data",
+   "label": "Consulting Doctor"
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_2",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "html_template",
+   "fieldtype": "HTML",
+   "label": "HTML_TEMPLATE"
+  },
+  {
+   "fieldname": "section_break_12",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "patient_identity",
+   "fieldtype": "Select",
+   "label": "Patient has been correctly identified",
+   "options": "\nYES\nNO\nN/A"
+  },
+  {
+   "fieldname": "informed_consent",
+   "fieldtype": "Select",
+   "label": "Informed consent has been completed",
+   "options": "\nYES\nNO\nN/A"
+  },
+  {
+   "fieldname": "site_marker",
+   "fieldtype": "Select",
+   "label": "Procedure site has been marked with a site marker",
+   "options": "\nYES\nNO\nN/A"
+  },
+  {
+   "fieldname": "diagnostic_images",
+   "fieldtype": "Select",
+   "label": "Relevant diagnostic images are present",
+   "options": "\nYES\nNO\nN/A"
+  },
+  {
+   "fieldname": "pre_procedure_preparations",
+   "fieldtype": "Select",
+   "label": "Relevant pre-procedure preparations done",
+   "options": "\nYES\nNO\nN/A"
+  },
+  {
+   "fieldname": "identity_verification",
+   "fieldtype": "Select",
+   "label": "Patient identity verified ",
+   "options": "\nYES\nNO\nN/A"
+  },
+  {
+   "fieldname": "procedure_verification",
+   "fieldtype": "Select",
+   "label": "Procedure to be done verified",
+   "options": "\nYES\nNO\nN/A"
+  },
+  {
+   "fieldname": "site_reconfirmed",
+   "fieldtype": "Select",
+   "label": "Procedure side and site reconfirmed including site mark visualization",
+   "options": "\nYES\nNO\nN/A"
+  },
+  {
+   "fieldname": "patient_positioning",
+   "fieldtype": "Select",
+   "label": "Patient positioning for procedure verified",
+   "options": "\nYES\nNO\nN/A"
+  },
+  {
+   "fieldname": "final_verification",
+   "fieldtype": "Select",
+   "label": "As appropriate, imaging, equipment, implants or special requirements verified",
+   "options": "\nYES\nNO\nN/A"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Pre Procedure Checklist",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "identity_checked_by",
+   "fieldtype": "Data",
+   "label": "Patient identity checked by"
+  },
+  {
+   "fieldname": "identity_counter_checked_by",
+   "fieldtype": "Data",
+   "label": "Patient Identity Counter checked by"
+  },
+  {
+   "fieldname": "consent_checked_by",
+   "fieldtype": "Data",
+   "label": "Informed consent checked by"
+  },
+  {
+   "fieldname": "consent_counter_checked_by",
+   "fieldtype": "Data",
+   "label": "Informed consent  counter checked by"
+  },
+  {
+   "fieldname": "site_marker_checked_by",
+   "fieldtype": "Data",
+   "label": "Site marker checked by"
+  },
+  {
+   "fieldname": "site_marker_counter_checked_by",
+   "fieldtype": "Data",
+   "label": "Site marker counter checked by"
+  },
+  {
+   "fieldname": "diagnostic_images_checked_by",
+   "fieldtype": "Data",
+   "label": "Diagnostic images checked_by"
+  },
+  {
+   "fieldname": "diagnostic_images_counter_checked_by",
+   "fieldtype": "Data",
+   "label": "Diagnostic images counter checked by"
+  },
+  {
+   "fieldname": "pre_procedure_preparations_checked_by",
+   "fieldtype": "Data",
+   "label": "Pre-Procedure preparations checked by"
+  },
+  {
+   "fieldname": "pre_procedure_preparations_counter_checked_by",
+   "fieldtype": "Data",
+   "label": "Pre-procedure preparations counter checked by"
+  },
+  {
+   "fieldname": "identity_verification_checked_by",
+   "fieldtype": "Data",
+   "label": "Patient identity verification checked by"
+  },
+  {
+   "fieldname": "identity_verification_counter_checked_by",
+   "fieldtype": "Data",
+   "label": "Patient identity verification counter checked by"
+  },
+  {
+   "fieldname": "procedure_verification_checked_by",
+   "fieldtype": "Data",
+   "label": "Procedure to be done checked by"
+  },
+  {
+   "fieldname": "procedure_verification_counter_checked_by",
+   "fieldtype": "Data",
+   "label": "Procedure to be done counter checked by"
+  },
+  {
+   "fieldname": "site_reconfirmation_checked_by",
+   "fieldtype": "Data",
+   "label": "Procedure site reconfirmed checked by"
+  },
+  {
+   "fieldname": "site_reconfirmation_counter_checked_by",
+   "fieldtype": "Data",
+   "label": "Procedure site reconfirmed counter checked by"
+  },
+  {
+   "fieldname": "positioning_checked_by",
+   "fieldtype": "Data",
+   "label": "Patient positioning checked by"
+  },
+  {
+   "fieldname": "positioning_counter_checked_by",
+   "fieldtype": "Data",
+   "label": "Positioning counter checked by"
+  },
+  {
+   "fieldname": "final_verification_checked_by",
+   "fieldtype": "Data",
+   "label": "Final verification checked by"
+  },
+  {
+   "fieldname": "final_verification_counter_checked_by",
+   "fieldtype": "Data",
+   "label": "Final verification counter checked by"
+  },
+  {
+   "fieldname": "column_break_28",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2023-12-15 16:13:12.080830",
+ "modified_by": "Administrator",
+ "module": "Gch Inpatient",
+ "name": "Pre Procedure Checklist",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

@@ -1,0 +1,118 @@
+{
+ "actions": [],
+ "allow_import": 1,
+ "allow_rename": 1,
+ "autoname": "VAC.#######",
+ "creation": "2021-09-02 12:34:09.026578",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "vaccine_name",
+  "patient",
+  "patient_age",
+  "patient_name",
+  "send_reminder_email",
+  "unscheduled_repeat_vaccine",
+  "column_break_7",
+  "visit_period",
+  "vaccination_date",
+  "status"
+ ],
+ "fields": [
+  {
+   "fieldname": "patient",
+   "fieldtype": "Link",
+   "label": "Patient",
+   "options": "Patient",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "patient.patient_age",
+   "fieldname": "patient_age",
+   "fieldtype": "Data",
+   "label": "Age",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "patient.patient_name",
+   "fieldname": "patient_name",
+   "fieldtype": "Data",
+   "in_global_search": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Patient Name",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "send_reminder_email",
+   "fieldtype": "Check",
+   "label": "Send Reminder Email"
+  },
+  {
+   "default": "0",
+   "fieldname": "unscheduled_repeat_vaccine",
+   "fieldtype": "Check",
+   "label": "Unscheduled Repeat Vaccine"
+  },
+  {
+   "fieldname": "vaccine_name",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Vaccine Name",
+   "options": "Vaccine",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_7",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "vaccination_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Vaccination Date",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "vaccine_name.administered_at",
+   "fieldname": "visit_period",
+   "fieldtype": "Select",
+   "label": "Visit Period",
+   "options": "Birth\n6 Weeks\n10 Weeks\n14 Weeks\n18 Weeks\n6 Months\n7 Months\n9 Months\n1 Year\n15 Months\n2 Years\n6 Years\n10 Years"
+  },
+  {
+   "default": "Not Vaccinated",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Not Vaccinated\nVaccinated"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2021-11-17 16:47:30.043289",
+ "modified_by": "Administrator",
+ "module": "Gch Custom",
+ "name": "Wellbaby Schedule",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

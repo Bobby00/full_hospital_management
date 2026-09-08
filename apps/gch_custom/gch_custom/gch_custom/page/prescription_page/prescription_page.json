@@ -1,0 +1,26 @@
+{
+ "content": null,
+ "creation": "2021-11-16 05:58:37.110164",
+ "docstatus": 0,
+ "doctype": "Page",
+ "idx": 0,
+ "modified": "2021-11-16 05:58:37.110164",
+ "modified_by": "Administrator",
+ "module": "Gch Custom",
+ "name": "prescription-page",
+ "owner": "Administrator",
+ "page_name": "Prescription Page",
+ "roles": [
+  {
+   "role": "GCH-Doctor"
+  },
+  {
+   "role": "GCH-Pharmacy"
+  }
+ ],
+ "script": null,
+ "standard": "Yes",
+ "style": null,
+ "system_page": 0,
+ "title": "Prescription"
+}

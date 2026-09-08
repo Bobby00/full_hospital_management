@@ -1,0 +1,41 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-06-12 20:43:48.955131",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "site_1",
+  "size_g"
+ ],
+ "fields": [
+  {
+   "fieldname": "site_1",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Site",
+   "options": "\nLeft External Jugular\nRight External Jugular\nLeft Femur\nRight Femur\nLeft Arm\nRight Arm\nLeft Hand\nRight Hand\nScalp",
+   "reqd": 1
+  },
+  {
+   "fieldname": "size_g",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Size (Gauge)",
+   "options": "\n30\n28\n26\n24\n22\n20\n18\n16\n14\n12\n10",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-06-15 12:41:57.940634",
+ "modified_by": "Administrator",
+ "module": "GCH Theatre",
+ "name": "Theatre Peripheral IVs",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

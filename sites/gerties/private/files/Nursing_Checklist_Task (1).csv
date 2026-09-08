@@ -1,0 +1,194 @@
+ID,Task Name,,ID,Option,Option Name
+,,,,,
+"""GCH-NCTT-164""","Verify the correct patient, procedure and site",,"""f433c60f7e""",NO,NO
+,,,"""74fdad5822""",YES,YES
+,,,"""24e56c6e5d""",Not Applicable,Not Applicable
+,,,"""66011a832d""",Comment,Comment
+"""GCH-NCTT-162""",Name of person inserting ,,"""39f39faac0""",NO,NO
+,,,"""9915b92d87""",YES,YES
+,,,"""5a06d70a1b""",Not Applicable,Not Applicable
+,,,"""b40495e674""",Comment,Comment
+"""GCH-NCTT-161""",Location of peripheral catheter (eg Left cephalic vein),,"""aab5e814a2""",NO,NO
+,,,"""89bb534391""",YES,YES
+,,,"""8592851acb""",Not Applicable,Not Applicable
+,,,"""80c9d802f5""",Comment,Comment
+"""GCH-NCTT-160""",Catheter Gauge,,"""558a193880""",NO,NO
+,,,"""7def2549c1""",YES,YES
+,,,"""65d836a5fa""",Not Applicable,Not Applicable
+,,,"""317a51434b""",Comment,Comment
+"""GCH-NCTT-159""",Reason for insertion (eg IV medication),,"""412dba2c3e""",NO,NO
+,,,"""a542d60a0d""",YES,YES
+,,,"""a0d7b8afc8""",Not Applicable,Not Applicable
+,,,"""dc7d4fc5bb""",Comment,Comment
+"""GCH-NCTT-158""",Catheter site cleaned with,,"""74f0c98c70""",NO,NO
+,,,"""1deaf9f6e3""",YES,YES
+,,,"""8bdbbde0bd""",Not Applicable,Not Applicable
+,,,"""5e8315f277""",Comment,Comment
+"""GCH-NCTT-157""",Ease of insertion eg first attempt,,"""ffb630e29d""",NO,NO
+,,,"""1b61b09b4e""",YES,YES
+,,,"""907c3bca86""",Not Applicable,Not Applicable
+,,,"""617174e7cc""",Comment,Comment
+"""GCH-NCTT-156""","Patient compliance level (poor, fair or good)",,"""3863f886ac""",NO,NO
+,,,"""30a0c771ba""",YES,YES
+,,,"""58c90e004a""",Not Applicable,Not Applicable
+,,,"""1da5287d29""",Comment,Comment
+"""GCH-NCTT-155""","Appearance of limb before insertion eg pain swelling, pressure sores, erythema",,"""afeb93f280""",NO,NO
+,,,"""95fc6b6421""",YES,YES
+,,,"""6a05a1d798""",Not Applicable,Not Applicable
+,,,"""feedb3d4a3""",Comment,Comment
+"""GCH-NCTT-154""",Blood collected for laboratory analysis,,"""1cb3d24618""",NO,NO
+,,,"""3cdf0c7160""",YES,YES
+,,,"""3fa3baa505""",Not Applicable,Not Applicable
+,,,"""c38c1ecd72""",Comment,Comment
+"""GCH-NCTT-153""",OTHERS,,"""334770652c""",NO,NO
+,,,"""28373ac9b9""",YES,YES
+,,,"""59af09a96d""",Comment,Comment
+,,,"""c525d1f45a""",Not Applicable,Not Applicable
+"""GCH-NCTT-152""",MEDICAL DIAGNOSIS,,"""61ef8b9cb1""",NO,NO
+,,,"""41321ccac4""",YES,YES
+,,,"""e070325eda""",Not Applicable,Not Applicable
+,,,"""5be638299e""",Comment,Comment
+"""GCH-NCTT-151""",DIETARY INTAKE,,"""725f2e3b7e""",YES,YES
+,,,"""fab8f846f3""",NO,NO
+,,,"""12abf87a94""",Comment,Comment
+,,,"""9bdc276f18""",Not Applicable,Not Applicable
+"""GCH-NCTT-150""",WEIGHT,,"""9cdc5146e6""",Comment,Comment
+"""GCH-NCTT-149""",Action taken after VIP scoring,,"""d8e8063ce4""",Comment,Comment
+"""GCH-NCTT-148""",VIP SCORING,,"""805cb8554d""",NO,NO
+,,,"""9a900b4fa1""",YES,YES
+,,,"""a8ce516dd8""",Not Applicable,Not Applicable
+,,,"""a0e7105ad1""",Comment,Comment
+"""GCH-NCTT-147""",Does the patient still need the catheter?,,"""0e70a12a10""",NO,NO
+,,,"""b8576d2123""",YES,YES
+,,,"""833d612997""",Not Applicable,Not Applicable
+,,,"""26d9a5791e""",Comment,Comment
+"""GCH-NCTT-146""",Catheter flushed with pre filled normal saline,,"""61e6dfde66""",Comment,Comment
+,,,"""db783e85c0""",NO,NO
+,,,"""a8d9d15f8d""",YES,YES
+,,,"""b662f2b585""",Not Applicable,Not Applicable
+"""GCH-NCTT-145""",Hub/port cleaned with,,"""19a3ebd901""",Comment,Comment
+,,,"""8c3301bf47""",NO,NO
+,,,"""9ab11c5a6e""",Not Applicable,Not Applicable
+,,,"""ee684d1bfd""",YES,YES
+"""GCH-NCTT-144""",Any patient interference?,,"""b0f49bb148""",Comment,Comment
+,,,"""043c100294""",NO,NO
+,,,"""775b607c4a""",Not Applicable,Not Applicable
+,,,"""7c9011386a""",YES,YES
+"""GCH-NCTT-143""","Bandage appearance (Wet, dry, soiled clean)",,"""fb5af3adcc""",Comment,Comment
+,,,"""845285d0d1""",NO,NO
+,,,"""6ede1f012a""",YES,YES
+,,,"""cee1a8abaf""",Not Applicable,Not Applicable
+"""GCH-NCTT-142""",Hand hygiene performed before catheter care,,"""e557b1c6dd""",NO,NO
+,,,"""125b9eb966""",YES,YES
+,,,"""8a8b269732""",Not Applicable,Not Applicable
+,,,"""ae55d93e18""",Comment,Comment
+"""GCH-NCTT-141""",Normal blood sugars maintained through surgey for diabetic patients,,"""a92fe9db80""",YES,YES
+,,,"""724a1a99cf""",NO,NO
+,,,"""f6ed660f9f""",Not Applicable,Not Applicable
+,,,"""1285ed8ec5""",Comment,Comment
+"""GCH-NCTT-140""",Temperature maintained at normal throughout surgery (unless it was intentionally lowered eg in cardiac surgery),,"""25c3344e5c""",YES,YES
+,,,"""ede65bbdee""",NO,NO
+,,,"""b873c9b3eb""",Not Applicable,Not Applicable
+,,,"""f19405b8b0""",Comment,Comment
+"""GCH-NCTT-139""",Prophylactic antibiotic was administered (Administer within 60 minutes or as close to incision as possible),,"""cb94682229""",NO,NO
+,,,"""635b89e8e8""",YES,YES
+,,,"""5711ead31c""",Not Applicable,Not Applicable
+,,,"""bfc4ce73f9""",Comment,Comment
+"""GCH-NCTT-138""","Hair removal was avoided (if hair removal, clippers should be used)",,"""d87c5d1986""",Comment,Comment
+,,,"""a1f5981e1d""",YES,YES
+,,,"""35e3cc0ad5""",NO,NO
+,,,"""75b3fadf4d""",Not Applicable,Not Applicable
+"""GCH-NCTT-137""",Deep Venous Thrombosis (DVT) prophylaxis,,"""a9ce74d7e7""",YES,YES
+,,,"""38d6ca2d5f""",NO,NO
+,,,"""5335ce4f6c""",Not Applicable,Not Applicable
+,,,"""b6e1d0a28b""",Comment,Comment
+"""GCH-NCTT-136""",Peptic ulcer disease (PUD) prophylaxis,,"""190ab8ecdf""",Comment,Comment
+,,,"""e597b82852""",NO,NO
+,,,"""78c668c096""",YES,YES
+,,,"""69d09ce522""",Not Applicable,Not Applicable
+"""GCH-NCTT-135""",Daily oral care done (6hourly or PRN),,"""bec44d4eb3""",YES,YES
+,,,"""b1ee00570d""",NO,NO
+,,,"""4a383b4eca""",Not Applicable,Not Applicable
+,,,"""9c92e77e06""",Comment,Comment
+"""GCH-NCTT-134""",Daily sedative interruption and daily assessment for readiness to extubate,,"""73a0b12d83""",Comment,Comment
+,,,"""7321009dc0""",NO,NO
+,,,"""04356f5b39""",Not Applicable,Not Applicable
+,,,"""2a031d5f85""",YES,YES
+"""GCH-NCTT-133""",Head of bed elevated to 30 to 45 degrees,,"""2fd2bfb773""",Comment,Comment
+,,,"""e7db98d42f""",NO,NO
+,,,"""e2f8db3929""",Not Applicable,Not Applicable
+,,,"""11525d85ca""",YES,YES
+"""GCH-NCTT-132""",Date of ET tube insertion,,"""a6c2642a1d""",Comment,Comment
+,,,"""d1be698cbb""",NO,NO
+,,,"""7b5ad335be""",Not Applicable,Not Applicable
+,,,"""bcbfd6380a""",YES,YES
+"""GCH-NCTT-131""",Hand hygiene performed before ventilator care,,"""babde351bf""",Comment,Comment
+,,,"""08b6ad5776""",NO,NO
+,,,"""2a05f69ec9""",Not Applicable,Not Applicable
+,,,"""30cc2fb33a""",YES,YES
+"""GCH-NCTT-130""",Urinary bag maintained below the level of the bladder and not touching the floor,,"""e131254fa9""",Comment,Comment
+,,,"""f3b2c80cb2""",NO,NO
+,,,"""5efeab1204""",Not Applicable,Not Applicable
+,,,"""4dca299ae1""",YES,YES
+"""GCH-NCTT-129""",Routine emptying of the urinary bladder,,"""222c2d30ac""",Comment,Comment
+,,,"""45360519fb""",NO,NO
+,,,"""2799c969f4""",Not Applicable,Not Applicable
+,,,"""4718a676b2""",YES,YES
+"""GCH-NCTT-128""",Daily meatal hygiene has been performed on the patient,,"""8b6e4b7aad""",Comment,Comment
+,,,"""f8996651a5""",NO,NO
+,,,"""8d1431ed70""",Not Applicable,Not Applicable
+,,,"""9e5ce707dc""",YES,YES
+"""GCH-NCTT-127""",Urinary catheter is continuously connected,,"""2cbe9352bb""",Comment,Comment
+,,,"""9b450800fe""",NO,NO
+,,,"""3fd25bdbb7""",Not Applicable,Not Applicable
+,,,"""e9cfb8e592""",YES,YES
+"""GCH-NCTT-126""",Patient assessed for continual need for the urinary catheter,,"""fb45757c0b""",Comment,Comment
+,,,"""c6a2e21f00""",NO,NO
+,,,"""85fcf4e37d""",Not Applicable,Not Applicable
+,,,"""37082bed4b""",YES,YES
+"""GCH-NCTT-125""",Hand hygiene performed before and after handling the urinary catheter,,"""ad3a23d007""",Comment,Comment
+,,,"""9e33ff95d6""",NO,NO
+,,,"""8181897c00""",Not Applicable,Not Applicable
+,,,"""f749e541df""",YES,YES
+"""GCH-NCTT-124""",Standardized insertion packs/ equipment used,,"""29fb6e79d8""",Comment,Comment
+,,,"""954563f1de""",NO,NO
+,,,"""bf1d4d8c46""",Not Applicable,Not Applicable
+,,,"""1dc1138e81""",YES,YES
+"""GCH-NCTT-123""",Choice of site: correct site considered,,"""3d81972d42""",Comment,Comment
+,,,"""99dfbcd166""",NO,NO
+,,,"""90e1b6991b""",Not Applicable,Not Applicable
+,,,"""38e846ce73""",YES,YES
+"""GCH-NCTT-122""",Skin cleaning with alcohol-based chlorhexidine done,,"""63ad333f44""",Comment,Comment
+,,,"""d07de4debd""",NO,NO
+,,,"""603bcc798c""",Not Applicable,Not Applicable
+,,,"""9de5f44b51""",YES,YES
+"""GCH-NCTT-121""","Maximal sterile barrier precautions (PPE use: surgical mask, sterile gloves, cap, sterile gown, and large sterile drape)",,"""dc393ddd42""",Comment,Comment
+,,,"""d35c696995""",NO,NO
+,,,"""7c6bd5b370""",Not Applicable,Not Applicable
+,,,"""7a428748fb""",YES,YES
+"""GCH-NCTT-120""",Hand hygiene performed before the procedure starts,,"""97bf557346""",Comment,Comment
+,,,"""a0d114da96""",NO,NO
+,,,"""ff632ebd6a""",Not Applicable,Not Applicable
+,,,"""b8a47e740e""",YES,YES
+"""GCH-NCTT-119""",Checked by (indicate name of nurse or doctor),,"""2370541234""",Comment,Comment
+"""GCH-NCTT-118""",A different lumen is used for parenteral nutrition,,"""cffe9f3490""",NO,NO
+,,,"""3455625136""",Not Applicable,Not Applicable
+,,,"""990e7fbd48""",YES,YES
+"""GCH-NCTT-117""",Pulsated flushing technique (push – pause technique) used during flushing,,"""f3e31c8e01""",NO,NO
+,,,"""1a5a4f9ca5""",Not Applicable,Not Applicable
+,,,"""32cdab8ddd""",YES,YES
+"""GCH-NCTT-116""",Site care: site and dressing is clean,,"""5594669bb0""",NO,NO
+,,,"""e87c21977a""",Not Applicable,Not Applicable
+,,,"""733066407f""",YES,YES
+"""GCH-NCTT-115""",Hub scrubbed with chlorhexidine swab before access,,"""ad6f8b26f1""",NO,NO
+,,,"""83b4e8e193""",Not Applicable,Not Applicable
+,,,"""c4ce3fc5d4""",YES,YES
+"""GCH-NCTT-114""",Appropriate PPE used during the procedure,,"""191623bd6f""",NO,NO
+,,,"""964a64af59""",Not Applicable,Not Applicable
+,,,"""b454a8ede9""",YES,YES
+"""GCH-NCTT-113""",Hand hygiene performed before and after handling,,"""a69c47c3a2""",NO,NO
+,,,"""828cc2d3d6""",Not Applicable,Not Applicable
+,,,"""8b4a53d0e3""",YES,YES
+"""GCH-NCTT-112""",Daily Review of Central line necessity( date of removal discussed during rounds),,"""a1a61d11c3""",NO,NO
+,,,"""ee1644fcc6""",YES,YES
+,,,"""28805a122b""",Not Applicable,Not Applicable

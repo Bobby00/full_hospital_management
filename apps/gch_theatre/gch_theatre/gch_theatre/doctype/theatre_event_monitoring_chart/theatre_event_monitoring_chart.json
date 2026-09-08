@@ -1,0 +1,93 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-06-13 04:57:21.227880",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "temperature_c",
+  "pulse",
+  "systolic_pressure",
+  "diastolic_pressure",
+  "map",
+  "tourniquet_up",
+  "tourniquet_down",
+  "cvp_cmh2o",
+  "pcwp",
+  "lap"
+ ],
+ "fields": [
+  {
+   "fieldname": "temperature_c",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Temperature (C)"
+  },
+  {
+   "fieldname": "pulse",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Pulse"
+  },
+  {
+   "fieldname": "systolic_pressure",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Systolic Pressure"
+  },
+  {
+   "fieldname": "diastolic_pressure",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Diastolic Pressure"
+  },
+  {
+   "fieldname": "map",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Map"
+  },
+  {
+   "fieldname": "tourniquet_up",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Tourniquet Up"
+  },
+  {
+   "fieldname": "tourniquet_down",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Tourniquet Down"
+  },
+  {
+   "fieldname": "cvp_cmh2o",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "CVP (cmH2O)"
+  },
+  {
+   "fieldname": "pcwp",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "PCWP"
+  },
+  {
+   "fieldname": "lap",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "LAP"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-06-13 05:02:01.829104",
+ "modified_by": "Administrator",
+ "module": "GCH Theatre",
+ "name": "Theatre Event Monitoring Chart",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

@@ -1,0 +1,169 @@
+{
+ "actions": [],
+ "autoname": "field:first_name",
+ "creation": "2021-06-16 16:03:57.788472",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "parents_details_section",
+  "first_name",
+  "last_name",
+  "full_name",
+  "country_code",
+  "phone_number",
+  "identification_type",
+  "id__passport_no",
+  "column_break_6",
+  "occupation",
+  "marital_status",
+  "primary_language",
+  "secondary_language",
+  "country",
+  "nationality",
+  "employer_details_section",
+  "employer_details",
+  "medical_cover_details_section",
+  "parent_medical_cover_details"
+ ],
+ "fields": [
+  {
+   "fieldname": "parents_details_section",
+   "fieldtype": "Section Break",
+   "label": "Parents or Guardian Details"
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "first_name",
+   "fieldtype": "Data",
+   "in_global_search": 1,
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "First Name",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "last_name",
+   "fieldtype": "Data",
+   "label": "Last Name"
+  },
+  {
+   "fieldname": "full_name",
+   "fieldtype": "Data",
+   "label": "Full Name"
+  },
+  {
+   "fieldname": "phone_number",
+   "fieldtype": "Data",
+   "label": "Phone Number"
+  },
+  {
+   "fieldname": "id__passport_no",
+   "fieldtype": "Data",
+   "label": "Identification Number"
+  },
+  {
+   "fieldname": "column_break_6",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "occupation",
+   "fieldtype": "Link",
+   "label": "Occupation",
+   "options": "Occupation"
+  },
+  {
+   "fieldname": "marital_status",
+   "fieldtype": "Link",
+   "label": "Marital Status",
+   "options": "Marital Status"
+  },
+  {
+   "fieldname": "primary_language",
+   "fieldtype": "Link",
+   "label": "Primary Language",
+   "options": "Patient Language",
+   "reqd": 1
+  },
+  {
+   "fieldname": "secondary_language",
+   "fieldtype": "Link",
+   "label": "Secondary Language",
+   "options": "Patient Language"
+  },
+  {
+   "fieldname": "country",
+   "fieldtype": "Link",
+   "label": "Country",
+   "options": "Country"
+  },
+  {
+   "fieldname": "medical_cover_details_section",
+   "fieldtype": "Section Break",
+   "label": "Medical Cover Details"
+  },
+  {
+   "fieldname": "parent_medical_cover_details",
+   "fieldtype": "Table",
+   "label": "Parent Medical Cover Details",
+   "options": "Parent Medical Cover Detail"
+  },
+  {
+   "fieldname": "identification_type",
+   "fieldtype": "Link",
+   "label": "Identification Type",
+   "options": "Identification Type"
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "country_code",
+   "fieldtype": "Link",
+   "label": "Country Code",
+   "options": "GCH Country"
+  },
+  {
+   "fieldname": "nationality",
+   "fieldtype": "Link",
+   "label": "Nationality",
+   "options": "Nationality"
+  },
+  {
+   "fieldname": "employer_details_section",
+   "fieldtype": "Section Break",
+   "label": "Employer Details"
+  },
+  {
+   "fieldname": "employer_details",
+   "fieldtype": "Table",
+   "label": "Employer Details",
+   "options": "Parent Employment Details"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-10-12 08:55:06.584918",
+ "modified_by": "Administrator",
+ "module": "Gch Custom",
+ "name": "Parent",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

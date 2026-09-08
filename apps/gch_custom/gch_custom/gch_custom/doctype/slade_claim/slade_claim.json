@@ -1,0 +1,185 @@
+{
+ "actions": [],
+ "autoname": "field:sales_invoice",
+ "creation": "2022-03-10 12:38:26.426963",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "patient_encounter",
+  "inpatient_record",
+  "sales_invoice",
+  "patient",
+  "service_type",
+  "location_code",
+  "location_name",
+  "scheme_code",
+  "scheme_name",
+  "column_break_7",
+  "visit_number",
+  "visit_start",
+  "visit_end",
+  "authorization_code",
+  "currency",
+  "member_number",
+  "slade_claim_id",
+  "claim_workflow_state",
+  "diagnosis_details_section",
+  "icd10_code",
+  "claim_attachments_section",
+  "attachments",
+  "submit_attachments"
+ ],
+ "fields": [
+  {
+   "fieldname": "patient_encounter",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Patient Encounter",
+   "options": "Patient Encounter"
+  },
+  {
+   "fieldname": "sales_invoice",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Sales Invoice",
+   "options": "Sales Invoice",
+   "unique": 1
+  },
+  {
+   "fieldname": "patient",
+   "fieldtype": "Link",
+   "label": "Patient",
+   "options": "Patient"
+  },
+  {
+   "fieldname": "service_type",
+   "fieldtype": "Select",
+   "label": "Service Type",
+   "options": "\nOutpatient\nInpatient"
+  },
+  {
+   "fieldname": "location_code",
+   "fieldtype": "Data",
+   "label": "Location Code"
+  },
+  {
+   "fieldname": "location_name",
+   "fieldtype": "Data",
+   "label": "Location Name"
+  },
+  {
+   "fieldname": "scheme_code",
+   "fieldtype": "Data",
+   "label": "Scheme Code"
+  },
+  {
+   "fieldname": "scheme_name",
+   "fieldtype": "Data",
+   "label": "Scheme Name"
+  },
+  {
+   "fieldname": "visit_number",
+   "fieldtype": "Data",
+   "label": "Visit Number"
+  },
+  {
+   "fieldname": "visit_start",
+   "fieldtype": "Datetime",
+   "label": "Visit Start"
+  },
+  {
+   "fieldname": "visit_end",
+   "fieldtype": "Datetime",
+   "label": "Visit End"
+  },
+  {
+   "fieldname": "icd10_code",
+   "fieldtype": "Table",
+   "label": "ICD10 Code",
+   "options": "Slade Claim Diagnosis Details",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_7",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "diagnosis_details_section",
+   "fieldtype": "Section Break",
+   "label": "Diagnosis Details"
+  },
+  {
+   "fieldname": "authorization_code",
+   "fieldtype": "Data",
+   "label": "Authorization Code",
+   "unique": 1
+  },
+  {
+   "fieldname": "currency",
+   "fieldtype": "Data",
+   "label": "Currency"
+  },
+  {
+   "fieldname": "claim_workflow_state",
+   "fieldtype": "Data",
+   "label": "Claim Workflow State"
+  },
+  {
+   "fieldname": "member_number",
+   "fieldtype": "Data",
+   "label": "Member Number"
+  },
+  {
+   "fieldname": "slade_claim_id",
+   "fieldtype": "Data",
+   "label": "Slade Claim Id"
+  },
+  {
+   "fieldname": "claim_attachments_section",
+   "fieldtype": "Section Break",
+   "label": "Claim Attachments"
+  },
+  {
+   "fieldname": "attachments",
+   "fieldtype": "Table",
+   "label": "attachments",
+   "options": "Slade Claim Attachments"
+  },
+  {
+   "fieldname": "submit_attachments",
+   "fieldtype": "Button",
+   "label": "Submit Attachments"
+  },
+  {
+   "fieldname": "inpatient_record",
+   "fieldtype": "Link",
+   "label": "Inpatient Record",
+   "options": "Inpatient Record"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-11-07 16:01:23.963221",
+ "modified_by": "Administrator",
+ "module": "Gch Custom",
+ "name": "Slade Claim",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

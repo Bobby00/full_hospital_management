@@ -1,0 +1,83 @@
+{
+ "actions": [],
+ "allow_copy": 1,
+ "beta": 1,
+ "creation": "2021-11-05 09:46:15.602238",
+ "doctype": "DocType",
+ "document_type": "Document",
+ "engine": "InnoDB",
+ "field_order": [
+  "generic_drug",
+  "drug_name",
+  "item_name",
+  "column_break_4",
+  "dosage",
+  "period",
+  "amount"
+ ],
+ "fields": [
+  {
+   "fieldname": "generic_drug",
+   "fieldtype": "Link",
+   "ignore_user_permissions": 1,
+   "in_list_view": 1,
+   "label": "Drug",
+   "options": "Generic Drug Name",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "drug_code.item_name",
+   "fieldname": "drug_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Drug Name / Description"
+  },
+  {
+   "fieldname": "item_name",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "Item Name",
+   "options": "Medical Code"
+  },
+  {
+   "fieldname": "dosage",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "ignore_user_permissions": 1,
+   "label": "Dosage",
+   "options": "Prescription Dosage"
+  },
+  {
+   "fieldname": "period",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "ignore_user_permissions": 1,
+   "label": "Period",
+   "options": "Prescription Duration"
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "bold": 1,
+   "fieldname": "amount",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "label": "Amount",
+   "reqd": 1
+  }
+ ],
+ "istable": 1,
+ "links": [],
+ "modified": "2022-06-02 16:27:00.703129",
+ "modified_by": "Administrator",
+ "module": "Gch Custom",
+ "name": "Triage Drug Administered",
+ "owner": "Administrator",
+ "permissions": [],
+ "restrict_to_domain": "Healthcare",
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

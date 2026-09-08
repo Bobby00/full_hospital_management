@@ -1,0 +1,68 @@
+// frappe.provide('queue_management')
+frappe.pages['queue-list'].on_page_load = function(wrapper){
+    frappe.ui.make_app_page({
+        parent:wrapper,
+        title: __('Patient Queue')
+    });
+
+    let queue_list = new QueueList(wrapper);
+    $(wrapper).bind('show', () => {
+        queue_list.show();
+    })
+}
+
+class QueueList{
+    constructor(wrapper){
+        this.wrapper = $(wrapper);
+        this.page = wrapper.page;
+        // this.sidebar = this.wrapper.find('.layout-side-section');
+        this.main_section = this.wrapper.find('.layout-main-section');
+        this.start = 0;
+    }
+
+    show(){
+        frappe.breadcrumbs.add('Healthcare');
+        this.sidebar.empty();
+
+        let me = this;
+        // me.setup_filters();
+        
+    }
+    setup_filters() {
+        let me = this;
+        $('#date-filter').empty();
+			let date_range_field = frappe.ui.form.make_control({
+				df: {
+					fieldtype: 'DateRange',
+					fieldname: 'date_range',
+					placeholder: __('Date Range'),
+					input_class: 'input-xs',
+					change: () => {
+						let selected_date_range = date_range_field.get_value();
+						if (selected_date_range && selected_date_range.length === 2) {
+							me.start = 0;
+							// me.page.main.find('.patient_documents_list').html('');
+							this.setup_queue_items(date_range_field.get_value());
+						}
+					}
+				},
+				parent: $('#date-filter')
+			});
+			date_range_field.refresh();
+    }
+
+    setup_queue_items(selected_date_range="") {
+        let filters = {
+            start:this.start
+        }
+        if(selected_date_range){
+            filters['date-range'] = selected_date_range;
+        }
+        let me = this;
+        let queue_list = []
+        this.queue_list = []
+        this.queue = []
+
+    }
+
+}

@@ -1,0 +1,364 @@
+{
+ "actions": [],
+ "autoname": "format:GCH-PVCCB-{###}",
+ "creation": "2023-12-18 09:26:22.516936",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "encounter_details_section",
+  "inpatient_record",
+  "patient",
+  "patient_name",
+  "uhid",
+  "column_break_8",
+  "gender",
+  "wardroombed",
+  "encounter_date",
+  "encounter_time",
+  "consulting_doctor",
+  "triage_section",
+  "weight",
+  "height",
+  "temperature",
+  "bmi_column",
+  "bmi",
+  "bsa",
+  "section_break_30",
+  "eye_opening",
+  "best_motor_response",
+  "best_verbal_response_age_below_2yr",
+  "best_verbal_response_age_above_2yr",
+  "the_glascow_coma_scale_score",
+  "right_pupil_size",
+  "right_pupil_reaction",
+  "left_pupil_size",
+  "left_pupil_reaction",
+  "right_arm_normal_power",
+  "right_arm_severe_weakness",
+  "right_arm_spastic_flexion",
+  "right_arm_extension",
+  "right_arm_no_response",
+  "left_arm_normal_power",
+  "left_arm_severe_weakness",
+  "left_arm_spastic_flexion",
+  "left_arm_extension",
+  "left_arm_no_response",
+  "right_leg_normal_power",
+  "right_leg_mild_weakness",
+  "right_leg_severe_weakness",
+  "right_leg_extension",
+  "right_leg_no_response",
+  "left_leg_normal_power",
+  "left_leg_mild_weakness",
+  "left_leg_severe_weakness",
+  "left_leg_extension",
+  "left_leg_no_response",
+  "neurological_observation_chart_section",
+  "neurological_observation_html",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "encounter_details_section",
+   "fieldtype": "Section Break",
+   "label": "Encounter Details"
+  },
+  {
+   "fieldname": "inpatient_record",
+   "fieldtype": "Link",
+   "label": "Inpatient Record",
+   "options": "Inpatient Record"
+  },
+  {
+   "fetch_from": "patient_encounter.patient",
+   "fieldname": "patient",
+   "fieldtype": "Link",
+   "label": "Patient",
+   "options": "Patient"
+  },
+  {
+   "fetch_from": "patient.patient_name",
+   "fieldname": "patient_name",
+   "fieldtype": "Data",
+   "label": "Patient Name"
+  },
+  {
+   "fetch_from": "patient.uhid_code",
+   "fieldname": "uhid",
+   "fieldtype": "Data",
+   "label": "UHID"
+  },
+  {
+   "fieldname": "column_break_8",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "patient.sex",
+   "fieldname": "gender",
+   "fieldtype": "Data",
+   "label": "Gender"
+  },
+  {
+   "fieldname": "wardroombed",
+   "fieldtype": "Data",
+   "label": "Ward/Room/Bed"
+  },
+  {
+   "default": "Today",
+   "fieldname": "encounter_date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "consulting_doctor",
+   "fieldtype": "Data",
+   "label": "Consulting Doctor"
+  },
+  {
+   "fieldname": "triage_section",
+   "fieldtype": "Section Break",
+   "label": "TRIAGE"
+  },
+  {
+   "fieldname": "weight",
+   "fieldtype": "Data",
+   "label": "Weight"
+  },
+  {
+   "fieldname": "height",
+   "fieldtype": "Data",
+   "label": "Height"
+  },
+  {
+   "fieldname": "temperature",
+   "fieldtype": "Data",
+   "label": "Temperature"
+  },
+  {
+   "fieldname": "bmi_column",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "bmi",
+   "fieldtype": "Data",
+   "label": "BMI"
+  },
+  {
+   "fieldname": "bsa",
+   "fieldtype": "Data",
+   "label": "BSA"
+  },
+  {
+   "fieldname": "section_break_30",
+   "fieldtype": "Section Break",
+   "hidden": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "NEUROLOGICAL OBSERVATION CHART",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "default": "Now",
+   "fieldname": "encounter_time",
+   "fieldtype": "Time",
+   "label": "Time"
+  },
+  {
+   "fieldname": "eye_opening",
+   "fieldtype": "Data",
+   "label": "Eye Opening"
+  },
+  {
+   "fieldname": "best_motor_response",
+   "fieldtype": "Data",
+   "label": "Best Motor Response"
+  },
+  {
+   "fieldname": "best_verbal_response_age_below_2yr",
+   "fieldtype": "Data",
+   "label": "Best Verbal Response Age Below 2YR"
+  },
+  {
+   "fieldname": "the_glascow_coma_scale_score",
+   "fieldtype": "Data",
+   "label": "The glascow coma scale score"
+  },
+  {
+   "fieldname": "right_pupil_size",
+   "fieldtype": "Data",
+   "label": "Right pupil size"
+  },
+  {
+   "fieldname": "right_pupil_reaction",
+   "fieldtype": "Data",
+   "label": "Right pupil reaction"
+  },
+  {
+   "fieldname": "left_pupil_size",
+   "fieldtype": "Data",
+   "label": "Left pupil size"
+  },
+  {
+   "fieldname": "left_pupil_reaction",
+   "fieldtype": "Data",
+   "label": "Left pupil reaction"
+  },
+  {
+   "fieldname": "right_arm_normal_power",
+   "fieldtype": "Data",
+   "label": "right arm normal power"
+  },
+  {
+   "fieldname": "right_arm_severe_weakness",
+   "fieldtype": "Data",
+   "label": "right arm severe weakness"
+  },
+  {
+   "fieldname": "right_arm_spastic_flexion",
+   "fieldtype": "Data",
+   "label": "right arm spastic flexion"
+  },
+  {
+   "fieldname": "right_arm_extension",
+   "fieldtype": "Data",
+   "label": "right arm extension"
+  },
+  {
+   "fieldname": "right_arm_no_response",
+   "fieldtype": "Data",
+   "label": "right arm no response"
+  },
+  {
+   "fieldname": "left_arm_normal_power",
+   "fieldtype": "Data",
+   "label": "left arm normal power"
+  },
+  {
+   "fieldname": "left_arm_severe_weakness",
+   "fieldtype": "Data",
+   "label": "left arm severe weakness"
+  },
+  {
+   "fieldname": "left_arm_spastic_flexion",
+   "fieldtype": "Data",
+   "label": "left arm spastic flexion"
+  },
+  {
+   "fieldname": "left_arm_extension",
+   "fieldtype": "Data",
+   "label": "left arm extension"
+  },
+  {
+   "fieldname": "left_arm_no_response",
+   "fieldtype": "Data",
+   "label": "left arm no response"
+  },
+  {
+   "fieldname": "right_leg_normal_power",
+   "fieldtype": "Data",
+   "label": "right leg normal power"
+  },
+  {
+   "fieldname": "right_leg_mild_weakness",
+   "fieldtype": "Data",
+   "label": "right leg mild weakness"
+  },
+  {
+   "fieldname": "right_leg_severe_weakness",
+   "fieldtype": "Data",
+   "label": "right leg severe weakness"
+  },
+  {
+   "fieldname": "right_leg_extension",
+   "fieldtype": "Data",
+   "label": "right leg extension"
+  },
+  {
+   "fieldname": "right_leg_no_response",
+   "fieldtype": "Data",
+   "label": "right leg no response"
+  },
+  {
+   "fieldname": "left_leg_normal_power",
+   "fieldtype": "Data",
+   "label": "left leg normal power"
+  },
+  {
+   "fieldname": "left_leg_mild_weakness",
+   "fieldtype": "Data",
+   "label": "left leg mild weakness"
+  },
+  {
+   "fieldname": "left_leg_severe_weakness",
+   "fieldtype": "Data",
+   "label": "left leg severe weakness"
+  },
+  {
+   "fieldname": "left_leg_extension",
+   "fieldtype": "Data",
+   "label": "left leg extension"
+  },
+  {
+   "fieldname": "left_leg_no_response",
+   "fieldtype": "Data",
+   "label": "left leg no response"
+  },
+  {
+   "fieldname": "neurological_observation_html",
+   "fieldtype": "HTML"
+  },
+  {
+   "fieldname": "neurological_observation_chart_section",
+   "fieldtype": "Section Break",
+   "label": "NEUROLOGICAL OBSERVATION CHART"
+  },
+  {
+   "fieldname": "best_verbal_response_age_above_2yr",
+   "fieldtype": "Data",
+   "label": "Best Verbal Response Age Above 2YR"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2024-02-09 11:21:46.097258",
+ "modified_by": "Administrator",
+ "module": "Gch Inpatient",
+ "name": "NEUROLOGICAL OBSERVATION CHART",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "All",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

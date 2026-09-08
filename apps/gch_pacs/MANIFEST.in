@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include gch_pacs *.css
+recursive-include gch_pacs *.csv
+recursive-include gch_pacs *.html
+recursive-include gch_pacs *.ico
+recursive-include gch_pacs *.js
+recursive-include gch_pacs *.json
+recursive-include gch_pacs *.md
+recursive-include gch_pacs *.png
+recursive-include gch_pacs *.py
+recursive-include gch_pacs *.svg
+recursive-include gch_pacs *.txt
+recursive-exclude gch_pacs *.pyc

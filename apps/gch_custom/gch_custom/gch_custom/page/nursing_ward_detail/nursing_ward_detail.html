@@ -1,0 +1,84 @@
+<style>
+  .table tbody tr>td.success {
+    background-color: #dff0d8 !important;
+  }
+
+  .table tbody tr>td.error {
+    background-color: #f2dede !important;
+  }
+
+  .table tbody tr>td.warning {
+    background-color: #fcf8e3 !important;
+  }
+
+  .table tbody tr>td.info {
+    background-color: #d9edf7 !important;
+  }
+
+  .table-hover tbody tr:hover>td.success {
+    background-color: #d0e9c6 !important;
+  }
+
+  .table-hover tbody tr:hover>td.error {
+    background-color: #ebcccc !important;
+  }
+
+  .table-hover tbody tr:hover>td.warning {
+    background-color: #faf2cc !important;
+  }
+
+  .table-hover tbody tr:hover>td.info {
+    background-color: #c4e3f3 !important;
+  }
+</style>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-12 col-sm-offset-3 col-md-12 col-md-offset-2">
+      <span class="badge-pill badge badge-success">Available Beds: {{ward_occupancy.availability_info.available_beds_for_admission}}</span>
+      <span class="badge-pill badge badge-success">Available Cots: {{ward_occupancy.availability_info.available_cots_for_admission}}</span>
+      <span class="badge badge-warning">Occupied Beds: {{ward_occupancy.availability_info.occupied_beds}}</span>
+      <span class="badge badge-warning">Occupied Cots: {{ward_occupancy.availability_info.occupied_cots}}</span>
+      <span class="badge badge-info">Locked Beds: {{ward_occupancy.availability_info.locked_beds}}</span>
+      <span class="badge badge-info">Locked Cots: {{ward_occupancy.availability_info.locked_cots}}</span>
+      <span class="badge badge-primary">Total Beds: {{ward_details.total_beds}}</span>
+      <span class="badge badge-primary">Total cots: {{ward_details.total_cots}}</span>
+
+    </div>
+
+  </div>
+  <div class="row">
+    <div class="col-sm-12 col-sm-offset-3 col-md-12 col-md-offset-2 main">
+
+      <div class="table-responsive">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>Room</th>
+              <th>Bed/Cot Number</th>
+              <th>Patient Name</th>
+              <th>Gender</th>
+              <th>Bed Days</th>
+              <th>Consulting Doctor</th>
+              <th>PEWS Alert</th>
+              <th>Diet Alert</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for occupancy in ward_occupancy.ward_occupancy %}
+            <tr>
+              <td>{{occupancy.ward_room}}</td>
+              <td>{{occupancy.bed_number}}<span class="badge-pill badge badge-info">{{occupancy.type}}</span></td>
+              <td>{{occupancy.patient}}</td>
+              <td>{{occupancy.patient_gender}}</td>
+              <td>{{occupancy.bed_days}}</td>
+              <td>{{occupancy.consulting_doctor}}</td>
+              <td class="success">Score: {{occupancy.pews_alert}}</td>
+              <td class="error">{{occupancy.diet_allergy}}</td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

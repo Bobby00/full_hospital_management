@@ -1,0 +1,113 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-07-02 16:04:54.876453",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "date_and_time",
+  "mode",
+  "fio2",
+  "peep",
+  "pressure_control",
+  "patient_pip",
+  "rate",
+  "tv_ie",
+  "column_break_9",
+  "mv",
+  "map",
+  "ie_ratio",
+  "ettmark",
+  "comment",
+  "signature"
+ ],
+ "fields": [
+  {
+   "default": "Now",
+   "fieldname": "date_and_time",
+   "fieldtype": "Datetime",
+   "label": "Date and Time"
+  },
+  {
+   "fieldname": "mode",
+   "fieldtype": "Data",
+   "label": "Mode"
+  },
+  {
+   "fieldname": "fio2",
+   "fieldtype": "Data",
+   "label": "FiO2"
+  },
+  {
+   "fieldname": "peep",
+   "fieldtype": "Data",
+   "label": "PEEP"
+  },
+  {
+   "fieldname": "pressure_control",
+   "fieldtype": "Data",
+   "label": "Pressure Control"
+  },
+  {
+   "fieldname": "patient_pip",
+   "fieldtype": "Data",
+   "label": "Patient PIP"
+  },
+  {
+   "fieldname": "rate",
+   "fieldtype": "Data",
+   "label": "Rate"
+  },
+  {
+   "fieldname": "tv_ie",
+   "fieldtype": "Data",
+   "label": "TV I/E"
+  },
+  {
+   "fieldname": "mv",
+   "fieldtype": "Data",
+   "label": "MV"
+  },
+  {
+   "fieldname": "map",
+   "fieldtype": "Data",
+   "label": "MAP"
+  },
+  {
+   "fieldname": "ie_ratio",
+   "fieldtype": "Data",
+   "label": "I:E Ratio"
+  },
+  {
+   "fieldname": "ettmark",
+   "fieldtype": "Data",
+   "label": "ETT/MARK"
+  },
+  {
+   "fieldname": "comment",
+   "fieldtype": "Small Text",
+   "label": "Comment"
+  },
+  {
+   "fieldname": "signature",
+   "fieldtype": "Signature",
+   "label": "Signature"
+  },
+  {
+   "fieldname": "column_break_9",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-07-02 16:42:25.664792",
+ "modified_by": "Administrator",
+ "module": "GCH PCCU",
+ "name": "PCCU Ventilator Settings Chart",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

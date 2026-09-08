@@ -1,0 +1,61 @@
+{
+ "actions": [],
+ "autoname": "format:QG-{#####}",
+ "creation": "2021-07-22 06:13:54.824761",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "location",
+  "service_unit",
+  "require_appointments"
+ ],
+ "fields": [
+  {
+   "fieldname": "location",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Location",
+   "options": "Branch",
+   "reqd": 1
+  },
+  {
+   "fieldname": "service_unit",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Service Unit",
+   "options": "Healthcare Service Unit",
+   "reqd": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "require_appointments",
+   "fieldtype": "Check",
+   "label": "Require Appointments"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2022-04-01 17:26:23.159973",
+ "modified_by": "Administrator",
+ "module": "Queue Management",
+ "name": "Queue Group",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

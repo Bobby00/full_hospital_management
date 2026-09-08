@@ -1,0 +1,481 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2023-11-20 10:35:04.043815",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "patient_details_section",
+  "inpatient_record",
+  "multidisciplinary_record",
+  "patient_name",
+  "patient",
+  "uhid",
+  "age",
+  "dob",
+  "gender",
+  "column_break_8",
+  "bmi",
+  "height_in_centimeters",
+  "weight_in_kilograms",
+  "room_no",
+  "bed_no",
+  "primary_doctor",
+  "other_doctors",
+  "vital_signs_section",
+  "vital_signs_table",
+  "section_break_19",
+  "falls",
+  "falls_link",
+  "pews",
+  "pews_link",
+  "pain",
+  "pain_link",
+  "column_break_27",
+  "mean_arterial_pressure",
+  "mean_bp",
+  "spo2",
+  "capillary_refill_time_crt",
+  "avpu",
+  "section_break_28",
+  "invasive_devices",
+  "laboratory_results",
+  "time_doctors_informed_2",
+  "time_doctors_informed",
+  "column_break_29",
+  "site_of_device_insertion",
+  "radiology_results",
+  "time_reviewed",
+  "time_reviewed_2",
+  "column_break_30",
+  "condition_of_device_and_site",
+  "feedfluid_regimen",
+  "recommendations_section",
+  "doctors_instructions",
+  "pending_blood_works",
+  "pending_medication",
+  "pending_radiology_investigations",
+  "column_break_44",
+  "nursing_care",
+  "html_48",
+  "reason_pending_blood_works",
+  "reason_pending_medication",
+  "reason_pending_radiology_investigations",
+  "column_break_49",
+  "feedfluid_regimen_recommendations",
+  "section_break_51",
+  "time_of_handover",
+  "name_of_the_nurse_handing_over",
+  "column_break_54",
+  "date_of_handover",
+  "name_of_the_receiving_nurse",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "patient_details_section",
+   "fieldtype": "Section Break",
+   "label": "Patient Details"
+  },
+  {
+   "fieldname": "inpatient_record",
+   "fieldtype": "Link",
+   "in_global_search": 1,
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Inpatient Record",
+   "options": "Inpatient Record"
+  },
+  {
+   "fetch_from": "inpatient_record.patient",
+   "fieldname": "patient_name",
+   "fieldtype": "Data",
+   "in_filter": 1,
+   "in_global_search": 1,
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Patient Name"
+  },
+  {
+   "fetch_from": "inpatient_record.uhid",
+   "fieldname": "uhid",
+   "fieldtype": "Data",
+   "label": "UHID",
+   "read_only": 1
+  },
+  {
+   "fieldname": "age",
+   "fieldtype": "Data",
+   "label": "Age",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "inpatient_record.gender",
+   "fieldname": "gender",
+   "fieldtype": "Link",
+   "label": "Gender",
+   "options": "Gender",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_8",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "bmi",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "BMI"
+  },
+  {
+   "fieldname": "height_in_centimeters",
+   "fieldtype": "Data",
+   "label": "Height in Centimeters",
+   "read_only": 1
+  },
+  {
+   "fieldname": "weight_in_kilograms",
+   "fieldtype": "Data",
+   "label": "Weight in Kilograms",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "inpatient_record.room_no",
+   "fieldname": "room_no",
+   "fieldtype": "Data",
+   "label": "Room No",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "inpatient_record.bed_number",
+   "fieldname": "bed_no",
+   "fieldtype": "Data",
+   "label": "Bed No",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "inpatient_record.practitioner_name",
+   "fieldname": "primary_doctor",
+   "fieldtype": "Data",
+   "label": "Primary Doctor"
+  },
+  {
+   "fieldname": "other_doctors",
+   "fieldtype": "Data",
+   "label": "Other Doctors"
+  },
+  {
+   "fieldname": "vital_signs_section",
+   "fieldtype": "Section Break",
+   "label": "Vital Signs"
+  },
+  {
+   "fieldname": "vital_signs_table",
+   "fieldtype": "Table",
+   "label": "Vital Signs Table",
+   "options": "Patient Encounter Vital Signs"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Series",
+   "no_copy": 1,
+   "options": "HLC-NHT-.YYYY.-",
+   "read_only": 1,
+   "set_only_once": 1
+  },
+  {
+   "fieldname": "section_break_19",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "falls",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Falls"
+  },
+  {
+   "fieldname": "pews",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "PEWS"
+  },
+  {
+   "fieldname": "pain",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "PAIN"
+  },
+  {
+   "fieldname": "mean_bp",
+   "fieldtype": "Data",
+   "label": "Blood Pressure (systolic/diastolic)"
+  },
+  {
+   "fieldname": "spo2",
+   "fieldtype": "Data",
+   "label": "SPO2"
+  },
+  {
+   "fieldname": "capillary_refill_time_crt",
+   "fieldtype": "Data",
+   "label": "CAPILLARY REFILL TIME (CRT)"
+  },
+  {
+   "fieldname": "avpu",
+   "fieldtype": "Data",
+   "label": "AVPU"
+  },
+  {
+   "fieldname": "column_break_27",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_28",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_29",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_30",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "invasive_devices",
+   "fieldtype": "Link",
+   "label": "INVASIVE DEVICES",
+   "options": "Handsoff Invasive Devices"
+  },
+  {
+   "fieldname": "laboratory_results",
+   "fieldtype": "Data",
+   "label": "LABORATORY RESULTS"
+  },
+  {
+   "fieldname": "time_doctors_informed",
+   "fieldtype": "Datetime",
+   "hidden": 1,
+   "label": "TIME DOCTORS INFORMED"
+  },
+  {
+   "fieldname": "site_of_device_insertion",
+   "fieldtype": "Link",
+   "label": "SITE OF DEVICE INSERTION",
+   "options": "Handsoff Site of Device Insertion"
+  },
+  {
+   "fieldname": "radiology_results",
+   "fieldtype": "Data",
+   "label": "RADIOLOGY RESULTS"
+  },
+  {
+   "fieldname": "time_reviewed",
+   "fieldtype": "Datetime",
+   "hidden": 1,
+   "label": "TIME REVIEWED"
+  },
+  {
+   "fieldname": "condition_of_device_and_site",
+   "fieldtype": "Link",
+   "label": "CONDITION OF DEVICE AND SITE",
+   "options": "Handsoff Condition of Device and Site"
+  },
+  {
+   "fieldname": "feedfluid_regimen",
+   "fieldtype": "Data",
+   "label": "FEED/FLUID REGIMEN"
+  },
+  {
+   "fieldname": "recommendations_section",
+   "fieldtype": "Section Break",
+   "label": "Recommendations"
+  },
+  {
+   "fieldname": "doctors_instructions",
+   "fieldtype": "Small Text",
+   "label": "DOCTORS INSTRUCTIONS"
+  },
+  {
+   "fieldname": "pending_blood_works",
+   "fieldtype": "Data",
+   "label": "PENDING BLOOD WORKS"
+  },
+  {
+   "fieldname": "pending_medication",
+   "fieldtype": "Data",
+   "label": "PENDING MEDICATION"
+  },
+  {
+   "fieldname": "pending_radiology_investigations",
+   "fieldtype": "Data",
+   "label": "PENDING RADIOLOGY INVESTIGATIONS"
+  },
+  {
+   "fieldname": "column_break_44",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "nursing_care",
+   "fieldtype": "Data",
+   "label": "PRIORITY NURSING CARE"
+  },
+  {
+   "fieldname": "reason_pending_blood_works",
+   "fieldtype": "Data",
+   "label": "REASON"
+  },
+  {
+   "fieldname": "reason_pending_medication",
+   "fieldtype": "Data",
+   "label": "REASON"
+  },
+  {
+   "fieldname": "reason_pending_radiology_investigations",
+   "fieldtype": "Data",
+   "label": "REASON"
+  },
+  {
+   "fieldname": "column_break_49",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "feedfluid_regimen_recommendations",
+   "fieldtype": "Data",
+   "label": "FEED/FLUID REGIMEN"
+  },
+  {
+   "fieldname": "section_break_51",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "Now",
+   "fieldname": "time_of_handover",
+   "fieldtype": "Time",
+   "label": "Time of handover"
+  },
+  {
+   "fieldname": "name_of_the_nurse_handing_over",
+   "fieldtype": "Link",
+   "label": "Name of the nurse handing over",
+   "options": "Healthcare Practitioner"
+  },
+  {
+   "fieldname": "column_break_54",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Today",
+   "fieldname": "date_of_handover",
+   "fieldtype": "Date",
+   "label": "Date of handover"
+  },
+  {
+   "fieldname": "name_of_the_receiving_nurse",
+   "fieldtype": "Link",
+   "label": "Name of the receiving nurse",
+   "options": "Healthcare Practitioner"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Nursing Handsoff Tool",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "multidisciplinary_record",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "Multidisciplinary Record",
+   "options": "Multidisciplinary"
+  },
+  {
+   "fieldname": "mean_arterial_pressure",
+   "fieldtype": "Data",
+   "label": "Mean Arterial Pressure"
+  },
+  {
+   "fieldname": "html_48",
+   "fieldtype": "HTML",
+   "options": "<div style=\"margin-top: 5%;\">\n<br><br><br><br><br><br>\n</div>"
+  },
+  {
+   "fetch_from": "inpatient_record.patient",
+   "fieldname": "patient",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "patient"
+  },
+  {
+   "fieldname": "falls_link",
+   "fieldtype": "Link",
+   "label": "Falls Link",
+   "options": "Patient Assessment",
+   "read_only": 1
+  },
+  {
+   "fieldname": "pews_link",
+   "fieldtype": "Link",
+   "label": "PEWS Link",
+   "options": "Patient Assessment",
+   "read_only": 1
+  },
+  {
+   "fieldname": "pain_link",
+   "fieldtype": "Link",
+   "label": "Pain Link",
+   "options": "Patient Assessment",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "inpatient_record.dob",
+   "fieldname": "dob",
+   "fieldtype": "Data",
+   "label": "Date of Birth (YY/MM/DD)"
+  },
+  {
+   "fieldname": "time_doctors_informed_2",
+   "fieldtype": "Data",
+   "label": "TIME DOCTORS INFORMED"
+  },
+  {
+   "fieldname": "time_reviewed_2",
+   "fieldtype": "Data",
+   "label": "TIME REVIEWED"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2025-01-13 14:52:20.315716",
+ "modified_by": "Administrator",
+ "module": "Gch Inpatient",
+ "name": "Nursing Handsoff Tool",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

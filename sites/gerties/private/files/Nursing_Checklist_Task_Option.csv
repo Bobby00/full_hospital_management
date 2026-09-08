@@ -1,0 +1,47 @@
+ID,Option Name
+,
+"""Complementary feeding age (6 months)""",Complementary feeding age (6 months)
+"""GIT symptoms e.g. nausea, vomiting and diarrhea affecting dietary intake""","GIT symptoms e.g. nausea, vomiting and diarrhea affecting dietary intake"
+"""Documented food allergies and intolerances e.g. Milk protein allergy""",Documented food allergies and intolerances e.g. Milk protein allergy
+"""Documented nutritional Deficiencies e.g. iron deficiency anaemia""",Documented nutritional Deficiencies e.g. iron deficiency anaemia
+"""Hepatitis""",Hepatitis
+"""Cardiac""",Cardiac
+"""ICU care""",ICU care
+"""Burns greater than 10%""",Burns greater than 10%
+"""Cancer""",Cancer
+"""Diabetes""",Diabetes
+"""Taking very little food, or liquids only""","Taking very little food, or liquids only"
+"""Use of nutritional supplements or specialized feeding (NGT, Gastrotomy)""","Use of nutritional supplements or specialized feeding (NGT, Gastrotomy)"
+"""Decreased appetite but taking usual foods""",Decreased appetite but taking usual foods
+"""Normal  food intake""",Normal  food intake
+"""Unintentional weight loss in the past 1 month""",Unintentional weight loss in the past 1 month
+"""Weight for age /Weight for height  greater than 3SD/ 85th percentile (Overweight)""",Weight for age /Weight for height  greater than 3SD/ 85th percentile (Overweight)
+"""Weight for height less than 3SD (Severe Acute Malnutrition)""",Weight for height less than 3SD (Severe Acute Malnutrition)
+"""Weight for age /Weight for height less than 2SD/3rd percentile (underweight)""",Weight for age /Weight for height less than 2SD/3rd percentile (underweight)
+"""Weight for age/Weight for height less than 1SD/10th percentile (at risk)""",Weight for age/Weight for height less than 1SD/10th percentile (at risk)
+"""comment""",comment
+"""Pyrexia (5)""",Pyrexia (5)
+"""Palpable venous cord (4)""",Palpable venous cord (4)
+"""Induration (3)""",Induration (3)
+"""Pain along path of cannula (3)""",Pain along path of cannula (3)
+"""Swelling (2)""",Swelling (2)
+"""Erythema (2)""",Erythema (2)
+"""Erythema, swelling (2)""","Erythema, swelling (2)"
+"""Pain at IV site (2)""",Pain at IV site (2)
+"""Slight redness near IV site (1)""",Slight redness near IV site (1)
+"""Slight Pain near IV site (1)""",Slight Pain near IV site (1)
+"""One of the following is evident slight Pain near IV site (1), slight redness near IV site(1)""","One of the following is evident slight Pain near IV site (1), slight redness near IV site(1)"
+"""Appears healthy (0)""",Appears healthy (0)
+"""Use a 10cc syringe to flush the line 12 hourly and when the line is accessed for procedures""",Use a 10cc syringe to flush the line 12 hourly and when the line is accessed for procedures
+"""disinfect site with chlorhexidine and change dressing every 5 – 7 days (change earlier if soiled)""",disinfect site with chlorhexidine and change dressing every 5 – 7 days (change earlier if soiled)
+"""Scrub the hub at least 10 times in a motion similar to juicing the orange""",Scrub the hub at least 10 times in a motion similar to juicing the orange
+"""Consider correct technique and duration for hand hygiene""",Consider correct technique and duration for hand hygiene
+"""Must we continue having the central line on the patient""",Must we continue having the central line on the patient
+"""Location""",Location
+"""Done by""",Done by
+"""Date""",Date
+"""Counter Checked by""",Counter Checked by
+"""Checked By""",Checked By
+"""N/A""",N/A
+"""Yes""",Yes
+"""No""",No

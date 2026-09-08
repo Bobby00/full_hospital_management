@@ -1,0 +1,1080 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:GCH-PIA-{DD}{MM}{YYYY}-{####}",
+ "creation": "2024-07-08 08:31:25.352686",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "patient_details_section",
+  "inpatient_record",
+  "theatre_booking",
+  "theatre_overview",
+  "pre_induction_assessment",
+  "diagnosis_change",
+  "history",
+  "physical_examination",
+  "investigations",
+  "comments",
+  "plan_risk_discussed_with_parent_caregiver",
+  "anaesth",
+  "anaesth_name",
+  "date",
+  "anaesthesia_record",
+  "pre_induction_checklist",
+  "consent",
+  "machine_check",
+  "npo_since",
+  "column_break_68",
+  "suction_check",
+  "blood_available",
+  "whole_bloodml",
+  "prbcs_ml",
+  "ffps_ml",
+  "platelets_ml",
+  "scavenger_check",
+  "monitoring_section",
+  "ecg_leads",
+  "spo2",
+  "etco2",
+  "f102",
+  "nibp_1",
+  "ibp",
+  "temp_eg_nasal",
+  "stethoscope",
+  "column_break_79",
+  "paww",
+  "agent_monitors",
+  "monitoring_other",
+  "comment",
+  "art_line",
+  "art_line_site",
+  "cannula_g",
+  "art_performed_by",
+  "cvp",
+  "cvp_site",
+  "cvp_site_other",
+  "cvp_cannula",
+  "performed_by",
+  "peripheral_ivs_section",
+  "peripheral_ivs",
+  "hme",
+  "heated_humidifier",
+  "fluid_warmer",
+  "warming_blanket",
+  "ng_tube",
+  "urinary_catheter",
+  "bair_hugger",
+  "peripheral_others",
+  "positioning_section",
+  "supine",
+  "left_arm",
+  "right_arm",
+  "lithotomy_1",
+  "prone_1",
+  "lateral_1",
+  "positioning_others",
+  "eyepressure_points_protected",
+  "protection_measures_taken",
+  "column_break_119",
+  "anaesthetic_technique_1",
+  "ga",
+  "regional",
+  "monitored_caresedation",
+  "induction_section",
+  "intravenous",
+  "inhalational",
+  "premed_sedation",
+  "given_at",
+  "by_dr",
+  "drugs",
+  "anaesthesia_drugs_infusions_section",
+  "eventsmonitoring",
+  "input_output",
+  "miscellaneous_drug_section",
+  "antibiotic_given_at",
+  "suppositories_given_at",
+  "antiemetic_given_at",
+  "eventsnotes_section",
+  "notes",
+  "reversal",
+  "reversal_time",
+  "extubation",
+  "airway_write_in_size_section",
+  "mask_only",
+  "oral_aw",
+  "nasal_aw",
+  "laryngeal_mask",
+  "tracheostomy",
+  "column_break_135",
+  "std_ett",
+  "rae",
+  "armoured",
+  "2_lumen_tube",
+  "lmaeet_cuff_pressure_cmh2o",
+  "intubation_section",
+  "asleep",
+  "awaken",
+  "insitun",
+  "column_break_145",
+  "direct",
+  "indirectn",
+  "column_break_148",
+  "oral",
+  "intubation_tracheostomy",
+  "nasal",
+  "section_break_152",
+  "anchored_atcm",
+  "intubation",
+  "attempts",
+  "equal",
+  "grade",
+  "column_break_173",
+  "intubation_aided_by",
+  "throat_pack",
+  "inserted_by",
+  "inserted_at",
+  "removed_by",
+  "removed_at",
+  "breathing_system",
+  "nasal_prongs_lmin",
+  "ventilation_section",
+  "controlled",
+  "ventilator",
+  "assisted_ventilation",
+  "column_break_170",
+  "vt_mis",
+  "jet_ventilator",
+  "rr_min",
+  "others",
+  "regional_technique_section",
+  "type",
+  "technique_performed_by",
+  "regional_technique_time",
+  "siteapporach",
+  "needle",
+  "column_break_179",
+  "gauge",
+  "catheter",
+  "regional_drugs",
+  "nerve_stimulator",
+  "regional_comments",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "collapsible": 1,
+   "fieldname": "patient_details_section",
+   "fieldtype": "Section Break",
+   "label": "Patient Details"
+  },
+  {
+   "fieldname": "inpatient_record",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Inpatient Record",
+   "options": "Inpatient Record",
+   "reqd": 1
+  },
+  {
+   "fieldname": "theatre_booking",
+   "fieldtype": "Link",
+   "label": "Theatre Booking",
+   "options": "Theatre Booking",
+   "read_only": 1
+  },
+  {
+   "fieldname": "theatre_overview",
+   "fieldtype": "Link",
+   "label": "Theatre Overview",
+   "options": "Theatre Overview"
+  },
+  {
+   "fieldname": "pre_induction_assessment",
+   "fieldtype": "Section Break",
+   "label": "Pre-Induction Assessment"
+  },
+  {
+   "fieldname": "diagnosis_change",
+   "fieldtype": "Select",
+   "label": "Current Diagnosis",
+   "options": "\nChanged\nUnchanged"
+  },
+  {
+   "fieldname": "history",
+   "fieldtype": "Select",
+   "label": "History",
+   "options": "\nChanged\nUnchanged"
+  },
+  {
+   "fieldname": "physical_examination",
+   "fieldtype": "Select",
+   "label": "Physical Examination",
+   "options": "\nChanged\nUnchanged"
+  },
+  {
+   "fieldname": "investigations",
+   "fieldtype": "Select",
+   "label": "Investigations",
+   "options": "\nChanged\nUnchanged"
+  },
+  {
+   "fieldname": "comments",
+   "fieldtype": "Text",
+   "label": "Comments"
+  },
+  {
+   "fieldname": "plan_risk_discussed_with_parent_caregiver",
+   "fieldtype": "Select",
+   "label": "Plan/ Risk discussed with parent/ caregiver",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "anaesth",
+   "fieldtype": "Link",
+   "label": "Anaesthetist",
+   "options": "Healthcare Practitioner"
+  },
+  {
+   "fetch_from": "anaesth.practitioner_name",
+   "fieldname": "anaesth_name",
+   "fieldtype": "Data",
+   "label": "Anaesthetist Name"
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Datetime",
+   "label": "Date"
+  },
+  {
+   "fieldname": "anaesthesia_record",
+   "fieldtype": "Heading",
+   "label": "ANAESTHESIA RECORD"
+  },
+  {
+   "fieldname": "pre_induction_checklist",
+   "fieldtype": "Section Break",
+   "label": "Pre-Induction Checklist"
+  },
+  {
+   "default": "0",
+   "fieldname": "consent",
+   "fieldtype": "Check",
+   "label": "Consent"
+  },
+  {
+   "default": "0",
+   "fieldname": "machine_check",
+   "fieldtype": "Check",
+   "label": "Machine Check"
+  },
+  {
+   "fieldname": "npo_since",
+   "fieldtype": "Datetime",
+   "label": "NPO Since"
+  },
+  {
+   "fieldname": "column_break_68",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "suction_check",
+   "fieldtype": "Check",
+   "label": "Suction Check"
+  },
+  {
+   "default": "0",
+   "fieldname": "blood_available",
+   "fieldtype": "Check",
+   "label": "Blood Available "
+  },
+  {
+   "depends_on": "eval:doc.blood_available==1",
+   "fieldname": "whole_bloodml",
+   "fieldtype": "Int",
+   "label": "Whole Blood(ml)"
+  },
+  {
+   "depends_on": "eval:doc.blood_available==1",
+   "fieldname": "prbcs_ml",
+   "fieldtype": "Int",
+   "label": "PRBCs (ml)"
+  },
+  {
+   "depends_on": "eval:doc.blood_available==1",
+   "fieldname": "ffps_ml",
+   "fieldtype": "Int",
+   "label": "FFPs (ml)"
+  },
+  {
+   "depends_on": "eval:doc.blood_available==1",
+   "fieldname": "platelets_ml",
+   "fieldtype": "Int",
+   "label": "Platelets (ml)"
+  },
+  {
+   "default": "0",
+   "fieldname": "scavenger_check",
+   "fieldtype": "Check",
+   "label": "Scavenger Check"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "monitoring_section",
+   "fieldtype": "Section Break",
+   "label": "Monitoring"
+  },
+  {
+   "fieldname": "ecg_leads",
+   "fieldtype": "Select",
+   "label": "ECG Leads:",
+   "options": "\n3 Lead\n5 Lead"
+  },
+  {
+   "default": "0",
+   "fieldname": "spo2",
+   "fieldtype": "Check",
+   "label": "Oxygen Saturation (SPO2)"
+  },
+  {
+   "default": "0",
+   "fieldname": "etco2",
+   "fieldtype": "Check",
+   "label": "End tidal CO2(EtCO2)"
+  },
+  {
+   "default": "0",
+   "fieldname": "f102",
+   "fieldtype": "Check",
+   "label": "F1O2"
+  },
+  {
+   "default": "0",
+   "fieldname": "nibp_1",
+   "fieldtype": "Check",
+   "label": "NIBP"
+  },
+  {
+   "default": "0",
+   "fieldname": "ibp",
+   "fieldtype": "Check",
+   "label": "IBP"
+  },
+  {
+   "fieldname": "temp_eg_nasal",
+   "fieldtype": "Select",
+   "label": "Temp",
+   "options": "\nNasal\nRectal\nSkin\nEsophageal"
+  },
+  {
+   "fieldname": "stethoscope",
+   "fieldtype": "Select",
+   "label": "Stethoscope",
+   "options": "\nEsophageal\nPrecodial"
+  },
+  {
+   "fieldname": "column_break_79",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "paww",
+   "fieldtype": "Check",
+   "label": "Paw"
+  },
+  {
+   "default": "0",
+   "fieldname": "agent_monitors",
+   "fieldtype": "Check",
+   "label": "Agent Monitor"
+  },
+  {
+   "default": "0",
+   "fieldname": "monitoring_other",
+   "fieldtype": "Check",
+   "label": "others"
+  },
+  {
+   "depends_on": "eval:doc.monitoring_other==1",
+   "fieldname": "comment",
+   "fieldtype": "Data",
+   "label": "Comment"
+  },
+  {
+   "default": "0",
+   "fieldname": "art_line",
+   "fieldtype": "Check",
+   "label": "Art line"
+  },
+  {
+   "depends_on": "eval:doc.art_line==1",
+   "fieldname": "art_line_site",
+   "fieldtype": "Select",
+   "label": "Art Line Site",
+   "options": "\nRadial Artery\nFemoral Artery\nUlnar Artery\nBrachial Artery\nAxillary Artery\nPosterior Tibial Artery\nDorsalis Pedis Artery:"
+  },
+  {
+   "depends_on": "eval:doc.art_line==1",
+   "fieldname": "cannula_g",
+   "fieldtype": "Select",
+   "label": "Arterial Line Cannula (Gauge)",
+   "options": "\n30\n28\n26\n24\n22\n20\n18\n16\n16\n12\n10"
+  },
+  {
+   "fieldname": "art_performed_by",
+   "fieldtype": "Link",
+   "label": "Performed By",
+   "options": "Healthcare Practitioner"
+  },
+  {
+   "default": "0",
+   "fieldname": "cvp",
+   "fieldtype": "Check",
+   "label": "CVP Site"
+  },
+  {
+   "depends_on": "eval:doc.cvp==1",
+   "fieldname": "cvp_site",
+   "fieldtype": "Select",
+   "label": "CVP Site",
+   "options": "\nInternal Jugular Vein Left\nInternal Jugular Vein Right\nSubclavian Vein Left\nSubclavian Vein Right\nFemoral Vein Left\nFemoral Vein Right\nBasilic Vein Left\nBasilic Vein Right\nAxillary Vein Left\nAxillary Vein Right\nOthers"
+  },
+  {
+   "depends_on": "eval:doc.cvp_site==\"Others\"",
+   "fieldname": "cvp_site_other",
+   "fieldtype": "Data"
+  },
+  {
+   "depends_on": "eval:doc.cvp==1",
+   "fieldname": "cvp_cannula",
+   "fieldtype": "Select",
+   "label": "CVP Cannula (Gauge)",
+   "options": "\n30\n28\n26\n24\n22\n20\n18\n16\n14\n12\n10"
+  },
+  {
+   "fieldname": "performed_by",
+   "fieldtype": "Link",
+   "label": "Performed by",
+   "options": "Healthcare Practitioner"
+  },
+  {
+   "fieldname": "peripheral_ivs_section",
+   "fieldtype": "Section Break",
+   "label": "Peripheral IVs"
+  },
+  {
+   "fieldname": "peripheral_ivs",
+   "fieldtype": "Table",
+   "label": "Peripheral IVs",
+   "options": "Theatre Peripheral IVs"
+  },
+  {
+   "default": "0",
+   "fieldname": "hme",
+   "fieldtype": "Check",
+   "label": "HME"
+  },
+  {
+   "default": "0",
+   "fieldname": "heated_humidifier",
+   "fieldtype": "Check",
+   "label": "Heated Humidifier"
+  },
+  {
+   "default": "0",
+   "fieldname": "fluid_warmer",
+   "fieldtype": "Check",
+   "label": "Fluid Warmer"
+  },
+  {
+   "default": "0",
+   "fieldname": "warming_blanket",
+   "fieldtype": "Check",
+   "label": "Warming Blanket"
+  },
+  {
+   "default": "0",
+   "fieldname": "ng_tube",
+   "fieldtype": "Check",
+   "label": "NG Tube"
+  },
+  {
+   "default": "0",
+   "fieldname": "urinary_catheter",
+   "fieldtype": "Check",
+   "label": "Urinary Catheter"
+  },
+  {
+   "default": "0",
+   "fieldname": "bair_hugger",
+   "fieldtype": "Check",
+   "label": "Bair Hugger"
+  },
+  {
+   "fieldname": "peripheral_others",
+   "fieldtype": "Data",
+   "label": "Others"
+  },
+  {
+   "fieldname": "positioning_section",
+   "fieldtype": "Section Break",
+   "label": "Positioning"
+  },
+  {
+   "default": "0",
+   "fieldname": "supine",
+   "fieldtype": "Check",
+   "label": "Supine"
+  },
+  {
+   "depends_on": "eval:doc.supine==1",
+   "fieldname": "left_arm",
+   "fieldtype": "Select",
+   "label": "Left Arm",
+   "mandatory_depends_on": "eval:doc.supine==1",
+   "options": "\nAt Side\nArmboard"
+  },
+  {
+   "depends_on": "eval:doc.supine==1",
+   "fieldname": "right_arm",
+   "fieldtype": "Select",
+   "label": "Right Arm",
+   "mandatory_depends_on": "eval:doc.supine==1",
+   "options": "\nAt Side\nArmboard"
+  },
+  {
+   "default": "0",
+   "fieldname": "lithotomy_1",
+   "fieldtype": "Check",
+   "label": "Lithotomy"
+  },
+  {
+   "default": "0",
+   "fieldname": "prone_1",
+   "fieldtype": "Check",
+   "label": "Prone"
+  },
+  {
+   "default": "0",
+   "fieldname": "lateral_1",
+   "fieldtype": "Check",
+   "label": "Lateral"
+  },
+  {
+   "fieldname": "positioning_others",
+   "fieldtype": "Data",
+   "label": "Others"
+  },
+  {
+   "default": "0",
+   "fieldname": "eyepressure_points_protected",
+   "fieldtype": "Check",
+   "label": "Eye/Pressure points protected"
+  },
+  {
+   "depends_on": "eval:doc.eyepressure_points_protected==1",
+   "fieldname": "protection_measures_taken",
+   "fieldtype": "Data",
+   "label": "Protection Measures taken",
+   "mandatory_depends_on": "eval:doc.eyepressure_points_protected==1"
+  },
+  {
+   "fieldname": "column_break_119",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "anaesthetic_technique_1",
+   "fieldtype": "Heading",
+   "label": "Anaesthetic Technique"
+  },
+  {
+   "default": "0",
+   "fieldname": "ga",
+   "fieldtype": "Check",
+   "label": "GA"
+  },
+  {
+   "fieldname": "regional",
+   "fieldtype": "Select",
+   "label": "Regional",
+   "options": "\nTIVA\nEpidural/Caudal\nSpinal\nBrachial Block\nOthers"
+  },
+  {
+   "default": "0",
+   "fieldname": "monitored_caresedation",
+   "fieldtype": "Check",
+   "label": "Monitored Care/Sedation"
+  },
+  {
+   "fieldname": "induction_section",
+   "fieldtype": "Section Break",
+   "label": "Induction"
+  },
+  {
+   "default": "0",
+   "fieldname": "intravenous",
+   "fieldtype": "Check",
+   "label": "Intravenous"
+  },
+  {
+   "default": "0",
+   "fieldname": "inhalational",
+   "fieldtype": "Check",
+   "label": "Inhalational"
+  },
+  {
+   "fieldname": "premed_sedation",
+   "fieldtype": "Select",
+   "label": "Premed Sedation",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "given_at",
+   "fieldtype": "Datetime",
+   "label": "Given at"
+  },
+  {
+   "fieldname": "by_dr",
+   "fieldtype": "Link",
+   "label": "By Dr",
+   "options": "Healthcare Practitioner"
+  },
+  {
+   "fieldname": "drugs",
+   "fieldtype": "Table MultiSelect",
+   "label": "Drugs",
+   "options": "Theatre Drugs"
+  },
+  {
+   "fieldname": "anaesthesia_drugs_infusions_section",
+   "fieldtype": "Section Break",
+   "label": "Anaesthesia Drugs/ Infusions"
+  },
+  {
+   "fieldname": "eventsmonitoring",
+   "fieldtype": "Table",
+   "label": "Events/Monitoring",
+   "options": "Theatre Event Monitoring Chart"
+  },
+  {
+   "fieldname": "input_output",
+   "fieldtype": "Table",
+   "label": "Input Output",
+   "options": "Nursing Input Output Chart Details"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "miscellaneous_drug_section",
+   "fieldtype": "Section Break",
+   "label": "Miscellaneous drug"
+  },
+  {
+   "fieldname": "antibiotic_given_at",
+   "fieldtype": "Datetime",
+   "label": "Antibiotic Given at"
+  },
+  {
+   "fieldname": "suppositories_given_at",
+   "fieldtype": "Datetime",
+   "label": "Suppositories given At"
+  },
+  {
+   "fieldname": "antiemetic_given_at",
+   "fieldtype": "Datetime",
+   "label": "Antiemetic Given At"
+  },
+  {
+   "fieldname": "eventsnotes_section",
+   "fieldtype": "Section Break",
+   "label": "Events/Notes"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Text",
+   "label": "Notes"
+  },
+  {
+   "fieldname": "reversal",
+   "fieldtype": "Data",
+   "label": "Reversal"
+  },
+  {
+   "fieldname": "reversal_time",
+   "fieldtype": "Datetime",
+   "label": "Time"
+  },
+  {
+   "fieldname": "extubation",
+   "fieldtype": "Select",
+   "label": "Extubation",
+   "options": "\nDeep\nAwake"
+  },
+  {
+   "fieldname": "airway_write_in_size_section",
+   "fieldtype": "Section Break",
+   "label": "Airway (Write in size)"
+  },
+  {
+   "fieldname": "mask_only",
+   "fieldtype": "Data",
+   "label": "Mask Only"
+  },
+  {
+   "fieldname": "oral_aw",
+   "fieldtype": "Data",
+   "label": "Oral A/W"
+  },
+  {
+   "fieldname": "nasal_aw",
+   "fieldtype": "Data",
+   "label": "Nasal A/W"
+  },
+  {
+   "fieldname": "laryngeal_mask",
+   "fieldtype": "Data",
+   "label": "Laryngeal Mask"
+  },
+  {
+   "fieldname": "tracheostomy",
+   "fieldtype": "Data",
+   "label": "Tracheostomy"
+  },
+  {
+   "fieldname": "column_break_135",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "std_ett",
+   "fieldtype": "Data",
+   "label": "Std ETT"
+  },
+  {
+   "fieldname": "rae",
+   "fieldtype": "Data",
+   "label": "RAE"
+  },
+  {
+   "fieldname": "armoured",
+   "fieldtype": "Data",
+   "label": "Armoured"
+  },
+  {
+   "fieldname": "2_lumen_tube",
+   "fieldtype": "Data",
+   "label": "2 Lumen Tube"
+  },
+  {
+   "fieldname": "lmaeet_cuff_pressure_cmh2o",
+   "fieldtype": "Data",
+   "label": "LMA/EET Cuff Pressure (cmH2O)"
+  },
+  {
+   "fieldname": "intubation_section",
+   "fieldtype": "Section Break",
+   "label": "Intubation"
+  },
+  {
+   "default": "0",
+   "fieldname": "asleep",
+   "fieldtype": "Check",
+   "label": "Asleep"
+  },
+  {
+   "default": "0",
+   "fieldname": "awaken",
+   "fieldtype": "Check",
+   "label": "Awake"
+  },
+  {
+   "default": "0",
+   "fieldname": "insitun",
+   "fieldtype": "Check",
+   "label": "In Situ"
+  },
+  {
+   "fieldname": "column_break_145",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "direct",
+   "fieldtype": "Check",
+   "label": "Direct"
+  },
+  {
+   "default": "0",
+   "fieldname": "indirectn",
+   "fieldtype": "Check",
+   "label": "Indirect"
+  },
+  {
+   "fieldname": "column_break_148",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "oral",
+   "fieldtype": "Check",
+   "label": "Oral"
+  },
+  {
+   "default": "0",
+   "fieldname": "intubation_tracheostomy",
+   "fieldtype": "Check",
+   "label": "Tracheostomy"
+  },
+  {
+   "fieldname": "nasal",
+   "fieldtype": "Select",
+   "label": "Nasal",
+   "options": "\nRight\nLeft"
+  },
+  {
+   "fieldname": "section_break_152",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "anchored_atcm",
+   "fieldtype": "Int",
+   "label": "Anchored At(cm)"
+  },
+  {
+   "fieldname": "intubation",
+   "fieldtype": "Select",
+   "label": "Intubation",
+   "options": "\nEasy\nDifficult"
+  },
+  {
+   "fieldname": "attempts",
+   "fieldtype": "Int",
+   "label": "Attempts"
+  },
+  {
+   "fieldname": "equal",
+   "fieldtype": "Select",
+   "label": "Equal",
+   "options": "\nA\nE"
+  },
+  {
+   "fieldname": "grade",
+   "fieldtype": "Select",
+   "label": "Grade",
+   "options": "\n1\n2\n3\n4"
+  },
+  {
+   "fieldname": "column_break_173",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "intubation_aided_by",
+   "fieldtype": "Select",
+   "label": "Intubation Aided by",
+   "options": "\nStylet/Bougie\nExternal Laryngeal Pressure\nFibreoptic Bronchoscope\nOthers"
+  },
+  {
+   "fieldname": "throat_pack",
+   "fieldtype": "Select",
+   "label": "Throat Pack",
+   "options": "\nYes\nNo"
+  },
+  {
+   "depends_on": "eval:doc.throat_pack==\"Yes\"",
+   "fieldname": "inserted_by",
+   "fieldtype": "Link",
+   "label": "Inserted By",
+   "options": "Healthcare Practitioner"
+  },
+  {
+   "depends_on": "eval:doc.throat_pack==\"Yes\"",
+   "fieldname": "inserted_at",
+   "fieldtype": "Datetime",
+   "label": "Inserted At"
+  },
+  {
+   "depends_on": "eval:doc.throat_pack==\"Yes\"",
+   "fieldname": "removed_by",
+   "fieldtype": "Link",
+   "label": "Removed By",
+   "options": "Healthcare Practitioner"
+  },
+  {
+   "depends_on": "eval:doc.throat_pack==\"Yes\"",
+   "fieldname": "removed_at",
+   "fieldtype": "Datetime",
+   "label": "Removed At"
+  },
+  {
+   "fieldname": "breathing_system",
+   "fieldtype": "Select",
+   "label": "Breathing System",
+   "options": "\nCircle\nBain's\nT Piece (modified)\nOxygen Supplement\nMask\nOthers"
+  },
+  {
+   "fieldname": "nasal_prongs_lmin",
+   "fieldtype": "Int",
+   "label": "Nasal Prongs L/min"
+  },
+  {
+   "fieldname": "ventilation_section",
+   "fieldtype": "Section Break",
+   "label": "Ventilation"
+  },
+  {
+   "default": "0",
+   "fieldname": "controlled",
+   "fieldtype": "Check",
+   "label": "Controlled"
+  },
+  {
+   "default": "0",
+   "fieldname": "ventilator",
+   "fieldtype": "Check",
+   "label": "Ventilator"
+  },
+  {
+   "default": "0",
+   "fieldname": "assisted_ventilation",
+   "fieldtype": "Check",
+   "label": "Spontaneous/assisted"
+  },
+  {
+   "fieldname": "column_break_170",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval:doc.assisted_ventilation==1",
+   "fieldname": "vt_mis",
+   "fieldtype": "Data",
+   "label": "VT (mis)"
+  },
+  {
+   "default": "0",
+   "fieldname": "jet_ventilator",
+   "fieldtype": "Check",
+   "label": "HFV/Jet Ventilation "
+  },
+  {
+   "depends_on": "eval:doc.jet_ventilator==1",
+   "fieldname": "rr_min",
+   "fieldtype": "Int",
+   "label": "RR (/min)"
+  },
+  {
+   "fieldname": "others",
+   "fieldtype": "Data",
+   "label": "Others"
+  },
+  {
+   "fieldname": "regional_technique_section",
+   "fieldtype": "Section Break",
+   "label": "Regional Technique"
+  },
+  {
+   "fieldname": "type",
+   "fieldtype": "Data",
+   "label": "Type"
+  },
+  {
+   "fieldname": "technique_performed_by",
+   "fieldtype": "Link",
+   "label": "Performed By",
+   "options": "Healthcare Practitioner"
+  },
+  {
+   "fieldname": "regional_technique_time",
+   "fieldtype": "Datetime",
+   "label": "Time:"
+  },
+  {
+   "fieldname": "siteapporach",
+   "fieldtype": "Data",
+   "label": "Site/Apporach"
+  },
+  {
+   "fieldname": "needle",
+   "fieldtype": "Data",
+   "label": "Needle"
+  },
+  {
+   "fieldname": "column_break_179",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "gauge",
+   "fieldtype": "Data",
+   "label": "Gauge"
+  },
+  {
+   "fieldname": "catheter",
+   "fieldtype": "Data",
+   "label": "Catheter"
+  },
+  {
+   "fieldname": "regional_drugs",
+   "fieldtype": "Table MultiSelect",
+   "label": "Drugs",
+   "options": "Theatre Drugs"
+  },
+  {
+   "fieldname": "nerve_stimulator",
+   "fieldtype": "Select",
+   "label": "Nerve Stimulator/Ultrasound guided Assessment",
+   "options": "\nComplete\nPartial\nFailed"
+  },
+  {
+   "fieldname": "regional_comments",
+   "fieldtype": "Data",
+   "label": "Comments"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Anaesthetists Record",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Anaesthetists Record",
+   "print_hide": 1,
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [
+  {
+   "link_doctype": "Inpatient Record",
+   "link_fieldname": "theatre_overview"
+  }
+ ],
+ "modified": "2024-07-08 09:19:45.823593",
+ "modified_by": "Administrator",
+ "module": "GCH Theatre",
+ "name": "Pre Induction Assessment",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

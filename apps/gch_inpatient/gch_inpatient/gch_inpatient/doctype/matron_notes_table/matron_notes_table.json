@@ -1,0 +1,84 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-08-26 11:57:08.742156",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "date",
+  "time",
+  "section",
+  "nurse_notes",
+  "created_by",
+  "signature"
+ ],
+ "fields": [
+  {
+   "allow_in_quick_entry": 1,
+   "default": "Today",
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "label": "Date",
+   "read_only_depends_on": "eval:!doc.__islocal"
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "default": "Now",
+   "fieldname": "time",
+   "fieldtype": "Time",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "label": "Time",
+   "read_only_depends_on": "eval:!doc.__islocal"
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "section",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "label": "Section",
+   "options": "\nMorning\nAfternoon\nEvening\nNight",
+   "read_only_depends_on": "eval:!doc.__islocal"
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "nurse_notes",
+   "fieldtype": "Long Text",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "label": "Nurse Notes",
+   "read_only_depends_on": "eval:!doc.__islocal"
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "default": "User",
+   "fieldname": "created_by",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "label": "Created by",
+   "options": "User",
+   "read_only": 1
+  },
+  {
+   "fieldname": "signature",
+   "fieldtype": "Signature",
+   "label": "Signature"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-09-13 10:14:47.003919",
+ "modified_by": "Administrator",
+ "module": "Gch Inpatient",
+ "name": "Matron Notes Table",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

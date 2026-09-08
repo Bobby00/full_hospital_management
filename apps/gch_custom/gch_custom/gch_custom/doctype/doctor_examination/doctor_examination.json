@@ -1,0 +1,179 @@
+{
+  "actions": [],
+  "creation": "2021-06-16 15:57:47.201822",
+  "doctype": "DocType",
+  "editable_grid": 1,
+  "engine": "InnoDB",
+  "field_order": [
+    "test",
+    "encounter",
+    "history_of_present_illness",
+    "systematic_enquiry",
+    "past_medical_history",
+    "milestones",
+    "column_break_7",
+    "patient",
+    "nutrition_history",
+    "family_history",
+    "socio_economic_history",
+    "other_relevant_history",
+    "physical_examination_section",
+    "general_exam",
+    "respiratory_exam",
+    "cardiovascular_exam",
+    "abdomen",
+    "genitourinary",
+    "column_break_18",
+    "central_nervous_system",
+    "ear_nose_and_throat",
+    "eyes",
+    "skin",
+    "musculoskeletal"
+  ],
+  "fields": [
+    {
+      "fieldname": "test",
+      "fieldtype": "Data",
+      "label": "test"
+    },
+    {
+      "fieldname": "history_of_present_illness",
+      "fieldtype": "Long Text",
+      "label": "History of Present Illness"
+    },
+    {
+      "fieldname": "systematic_enquiry",
+      "fieldtype": "Long Text",
+      "label": "Systematic Enquiry"
+    },
+    {
+      "fieldname": "past_medical_history",
+      "fieldtype": "Long Text",
+      "label": "Past Medical History"
+    },
+    {
+      "fieldname": "milestones",
+      "fieldtype": "Long Text",
+      "label": "Milestones"
+    },
+    {
+      "fieldname": "nutrition_history",
+      "fieldtype": "Long Text",
+      "label": "Nutrition history"
+    },
+    {
+      "fieldname": "family_history",
+      "fieldtype": "Long Text",
+      "label": "Family history"
+    },
+    {
+      "fieldname": "socio_economic_history",
+      "fieldtype": "Long Text",
+      "label": "Socio economic history"
+    },
+    {
+      "fieldname": "other_relevant_history",
+      "fieldtype": "Long Text",
+      "label": "Other relevant history"
+    },
+    {
+      "fieldname": "encounter",
+      "fieldtype": "Link",
+      "label": "Encounter",
+      "options": "Patient Encounter"
+    },
+    {
+      "fieldname": "physical_examination_section",
+      "fieldtype": "Section Break",
+      "label": "Physical Examination"
+    },
+    {
+      "fieldname": "general_exam",
+      "fieldtype": "Long Text",
+      "label": "General Exam"
+    },
+    {
+      "fieldname": "respiratory_exam",
+      "fieldtype": "Long Text",
+      "label": "Respiratory Exam"
+    },
+    {
+      "fieldname": "cardiovascular_exam",
+      "fieldtype": "Long Text",
+      "label": "Cardiovascular Exam"
+    },
+    {
+      "fieldname": "abdomen",
+      "fieldtype": "Long Text",
+      "label": "Abdomen"
+    },
+    {
+      "fieldname": "genitourinary",
+      "fieldtype": "Long Text",
+      "label": "Genitourinary"
+    },
+    {
+      "fieldname": "central_nervous_system",
+      "fieldtype": "Long Text",
+      "label": "Central Nervous System"
+    },
+    {
+      "fieldname": "ear_nose_and_throat",
+      "fieldtype": "Long Text",
+      "label": "Ear Nose and Throat"
+    },
+    {
+      "fieldname": "eyes",
+      "fieldtype": "Long Text",
+      "label": "Eyes"
+    },
+    {
+      "fieldname": "skin",
+      "fieldtype": "Long Text",
+      "label": "Skin"
+    },
+    {
+      "fieldname": "musculoskeletal",
+      "fieldtype": "Long Text",
+      "label": "Musculoskeletal"
+    },
+    {
+      "fieldname": "column_break_7",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "patient",
+      "fieldtype": "Link",
+      "label": "Patient",
+      "options": "Patient"
+    },
+    {
+      "fieldname": "column_break_18",
+      "fieldtype": "Column Break"
+    }
+  ],
+  "index_web_pages_for_search": 1,
+  "links": [],
+  "modified": "2021-06-16 21:52:20.080017",
+  "modified_by": "Administrator",
+  "module": "Gch Custom",
+  "name": "Doctor Examination",
+  "owner": "Administrator",
+  "permissions": [
+    {
+      "create": 1,
+      "delete": 1,
+      "email": 1,
+      "export": 1,
+      "print": 1,
+      "read": 1,
+      "report": 1,
+      "role": "System Manager",
+      "share": 1,
+      "write": 1
+    }
+  ],
+  "sort_field": "modified",
+  "sort_order": "DESC",
+  "track_changes": 1
+}

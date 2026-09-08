@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include gch_purchases *.css
+recursive-include gch_purchases *.csv
+recursive-include gch_purchases *.html
+recursive-include gch_purchases *.ico
+recursive-include gch_purchases *.js
+recursive-include gch_purchases *.json
+recursive-include gch_purchases *.md
+recursive-include gch_purchases *.png
+recursive-include gch_purchases *.py
+recursive-include gch_purchases *.svg
+recursive-include gch_purchases *.txt
+recursive-exclude gch_purchases *.pyc

@@ -1,0 +1,32 @@
+{
+ "actions": [],
+ "creation": "2021-11-30 11:53:31.519150",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "discharge_conclusion"
+ ],
+ "fields": [
+  {
+   "fieldname": "discharge_conclusion",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Conclusion",
+   "options": "Discharge Conclusion",
+   "reqd": 1
+  }
+ ],
+ "istable": 1,
+ "links": [],
+ "modified": "2021-11-30 11:53:31.519150",
+ "modified_by": "Administrator",
+ "module": "Gch Custom",
+ "name": "Patient Discharge Conclusion",
+ "owner": "Administrator",
+ "permissions": [],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

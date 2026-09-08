@@ -1,0 +1,66 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-06-21 23:52:54.386799",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "procedure",
+  "site_marking_done",
+  "time_out_done",
+  "time_surgery_started",
+  "time_surgery_ended"
+ ],
+ "fields": [
+  {
+   "fieldname": "procedure",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "label": "Procedure",
+   "options": "Clinical Procedure Template"
+  },
+  {
+   "fieldname": "site_marking_done",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "label": "Site Marking Done",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "time_out_done",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "label": "Time Out Done",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "time_surgery_started",
+   "fieldtype": "Time",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "label": "Time Surgery Started"
+  },
+  {
+   "fieldname": "time_surgery_ended",
+   "fieldtype": "Time",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "label": "Time Surgery Ended"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-06-21 23:56:37.022722",
+ "modified_by": "Administrator",
+ "module": "GCH Theatre",
+ "name": "Surgeon Theatre Procedures",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

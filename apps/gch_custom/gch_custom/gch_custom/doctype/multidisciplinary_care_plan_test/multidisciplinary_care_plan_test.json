@@ -1,0 +1,88 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-06-06 09:12:14.141708",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "assessment",
+  "diagnosis",
+  "care_objectives",
+  "column_break_4",
+  "patient_order",
+  "implementation",
+  "evaluation",
+  "practitioner",
+  "date",
+  "time"
+ ],
+ "fields": [
+  {
+   "fieldname": "assessment",
+   "fieldtype": "Small Text",
+   "label": "Assessment"
+  },
+  {
+   "fieldname": "diagnosis",
+   "fieldtype": "Link",
+   "label": "Diagnosis",
+   "options": "Codification Table"
+  },
+  {
+   "fieldname": "care_objectives",
+   "fieldtype": "Small Text",
+   "label": "Care Objectives"
+  },
+  {
+   "fieldname": "patient_order",
+   "fieldtype": "Data",
+   "label": "Patient Order"
+  },
+  {
+   "fieldname": "implementation",
+   "fieldtype": "Data",
+   "label": "Implementation"
+  },
+  {
+   "fieldname": "evaluation",
+   "fieldtype": "Data",
+   "label": "Evaluation"
+  },
+  {
+   "fieldname": "practitioner",
+   "fieldtype": "Link",
+   "label": "Practitioner",
+   "options": "Healthcare Practitioner"
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Today",
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date",
+   "read_only": 1
+  },
+  {
+   "default": "Now",
+   "fieldname": "time",
+   "fieldtype": "Time",
+   "label": "Time",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2023-06-12 22:22:57.310423",
+ "modified_by": "Administrator",
+ "module": "Gch Custom",
+ "name": "Multidisciplinary Care Plan Test",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

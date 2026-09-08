@@ -1,0 +1,43 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:feeding_route",
+ "creation": "2024-06-12 16:39:12.485922",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "feeding_route"
+ ],
+ "fields": [
+  {
+   "fieldname": "feeding_route",
+   "fieldtype": "Data",
+   "label": "Feeding Route",
+   "unique": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-06-12 16:39:12.485922",
+ "modified_by": "Administrator",
+ "module": "Gch Custom",
+ "name": "Nutrition Feeding Route",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

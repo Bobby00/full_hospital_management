@@ -1,0 +1,101 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2022-11-30 12:56:21.092897",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "code",
+  "description",
+  "quantity",
+  "category",
+  "status",
+  "external_code",
+  "price_currency",
+  "price_amount",
+  "reservation_amount",
+  "reservation_currency",
+  "previously_submitted"
+ ],
+ "fields": [
+  {
+   "fieldname": "code",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "label": "code",
+   "reqd": 1
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "label": "description"
+  },
+  {
+   "fieldname": "quantity",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "label": "quantity"
+  },
+  {
+   "fieldname": "category",
+   "fieldtype": "Data",
+   "label": "category"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Data",
+   "label": "status"
+  },
+  {
+   "fieldname": "external_code",
+   "fieldtype": "Data",
+   "label": "external code"
+  },
+  {
+   "fieldname": "price_currency",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "label": "price currency"
+  },
+  {
+   "fieldname": "price_amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "label": "price amount"
+  },
+  {
+   "fieldname": "reservation_amount",
+   "fieldtype": "Currency",
+   "label": "reservation amount"
+  },
+  {
+   "fieldname": "reservation_currency",
+   "fieldtype": "Data",
+   "label": "reservation currency"
+  },
+  {
+   "default": "0",
+   "fieldname": "previously_submitted",
+   "fieldtype": "Check",
+   "label": "previously_submitted"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2022-12-07 10:14:55.931414",
+ "modified_by": "Administrator",
+ "module": "Gch Custom",
+ "name": "Mtiba Bulk Reserve Items Details",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

@@ -1,0 +1,30 @@
+{
+ "actions": [],
+ "creation": "2022-01-13 10:04:39.229643",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "blood_condition"
+ ],
+ "fields": [
+  {
+   "fieldname": "blood_condition",
+   "fieldtype": "Link",
+   "label": "Blood Condition",
+   "options": "Blood Condition"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2022-01-13 10:04:39.229643",
+ "modified_by": "Administrator",
+ "module": "Gch Custom",
+ "name": "Blood Condition Details",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

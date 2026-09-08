@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include gch_pccu *.css
+recursive-include gch_pccu *.csv
+recursive-include gch_pccu *.html
+recursive-include gch_pccu *.ico
+recursive-include gch_pccu *.js
+recursive-include gch_pccu *.json
+recursive-include gch_pccu *.md
+recursive-include gch_pccu *.png
+recursive-include gch_pccu *.py
+recursive-include gch_pccu *.svg
+recursive-include gch_pccu *.txt
+recursive-exclude gch_pccu *.pyc

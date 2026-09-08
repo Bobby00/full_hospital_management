@@ -1,0 +1,971 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:GCH-H2TE-{###}",
+ "creation": "2023-11-29 14:09:46.059526",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "patient",
+  "inpatient_record",
+  "multidisciplinary",
+  "gender",
+  "column_break_2",
+  "general_condition",
+  "column_break_3",
+  "avpu",
+  "head_section",
+  "hair_distribution",
+  "hair_colour",
+  "hair_lusture",
+  "column_break_8",
+  "rash",
+  "scars",
+  "head_circumference",
+  "column_break_12",
+  "fontanelles",
+  "posterior",
+  "face",
+  "amended_from",
+  "eyes_section",
+  "eye_lashes",
+  "eye_lids",
+  "conjuctiva",
+  "eye_discharge",
+  "column_break_22",
+  "left_pupil_reaction_to_light",
+  "left_pupil_size",
+  "squint",
+  "cataract",
+  "column_break_27",
+  "right_pupil_reaction_to_light",
+  "right_pupil_size",
+  "sense_of_sight",
+  "ears_section",
+  "ears_discharge",
+  "ears_pain",
+  "column_break_34",
+  "lesions",
+  "column_break_35",
+  "sense_of_hearing",
+  "nose_section",
+  "nasal_flaring",
+  "nose_swelling",
+  "column_break_43",
+  "nose_discharge",
+  "polyps",
+  "column_break_46",
+  "deformities",
+  "mouth_section",
+  "colour_of_lips",
+  "lesions_ulcers",
+  "cleft",
+  "column_break_52",
+  "colour_of_tongue",
+  "teeth",
+  "gums",
+  "column_break_56",
+  "dental_prosthesis",
+  "size_of_tonsils",
+  "exudate",
+  "neck_section",
+  "lymph_nodes",
+  "chest_section",
+  "chest_shape",
+  "nipple_size",
+  "nipple_discharge",
+  "flatness",
+  "dullness",
+  "column_break_66",
+  "respiratory_rate",
+  "pattern_of_respiration",
+  "chest_movement",
+  "chest_sounds",
+  "breath_sounds",
+  "column_break_70",
+  "heart_rate",
+  "rhythm",
+  "hyperesonance",
+  "arms_section",
+  "equity",
+  "arm_deformities",
+  "clubbing_of_fingers",
+  "column_break_82",
+  "bcg_scar",
+  "axillary_temperature",
+  "oxygen_saturations",
+  "column_break_86",
+  "acillary_glands",
+  "arm_circumference",
+  "blood_pressure",
+  "abdomen_section",
+  "abdomen_shape",
+  "abdomen_size",
+  "abdominal_girth",
+  "abdomen_scars",
+  "column_break_93",
+  "bowel_sounds",
+  "abdomen_hyperesonance",
+  "abdomen_dullness",
+  "abdomen_flatness",
+  "column_break_98",
+  "hernia",
+  "tenderness",
+  "masses",
+  "genitalia_section",
+  "genitalia_scars",
+  "skin_colour",
+  "genitalia_discharge",
+  "column_break_108",
+  "growths",
+  "genitalia_swelling",
+  "perineum",
+  "column_break_112",
+  "testicles",
+  "position_of_urethral_meatus",
+  "inguinal_region_section",
+  "inguinal_region_section_swelling",
+  "inguinal_region_section_lymph_nodes",
+  "column_break_118",
+  "inguinal_region_section_pain",
+  "column_break_120",
+  "inguinal_hernia",
+  "rectum_section",
+  "rectal_examination",
+  "lower_limbs_section",
+  "column_break_125",
+  "lower_limbs_equity",
+  "lower_limbs_deformities",
+  "column_break_128",
+  "lower_limbs_edema",
+  "vericose_viens",
+  "column_break_131",
+  "lower_limbs_reflexes",
+  "back_section",
+  "back_curvature",
+  "back_growths",
+  "column_break_132",
+  "continuity_of_spine",
+  "column_break_138",
+  "back_tenderness"
+ ],
+ "fields": [
+  {
+   "fieldname": "general_condition",
+   "fieldtype": "Select",
+   "label": "General Condition",
+   "options": "\nStable\nFair\nSick looking\nCritically ill"
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "patient",
+   "fieldtype": "Link",
+   "in_global_search": 1,
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Patient",
+   "options": "Patient"
+  },
+  {
+   "fieldname": "avpu",
+   "fieldtype": "Select",
+   "label": "AVPU",
+   "options": "\nAlert\nVerbal Response\nResponsive to Pain\nUnresponsive"
+  },
+  {
+   "fieldname": "head_section",
+   "fieldtype": "Section Break",
+   "label": "Head"
+  },
+  {
+   "fieldname": "hair_distribution",
+   "fieldtype": "Select",
+   "label": "Hair Distribution",
+   "options": "\nEven\nBald\nScarce"
+  },
+  {
+   "fieldname": "hair_colour",
+   "fieldtype": "Select",
+   "label": "Hair Colour",
+   "options": "\nNormal\nAbnormal"
+  },
+  {
+   "fieldname": "hair_lusture",
+   "fieldtype": "Select",
+   "label": "Hair Lusture",
+   "options": "\nNormal\nAbnormal"
+  },
+  {
+   "fieldname": "rash",
+   "fieldtype": "Select",
+   "label": "Rash",
+   "options": "\nNone\nPresent"
+  },
+  {
+   "fieldname": "scars",
+   "fieldtype": "Select",
+   "label": "Scars",
+   "options": "\nNone\nPresent"
+  },
+  {
+   "fieldname": "head_circumference",
+   "fieldtype": "Float",
+   "label": "Head Circumference"
+  },
+  {
+   "fieldname": "fontanelles",
+   "fieldtype": "Select",
+   "label": "Fontanelles",
+   "options": "\nAnterior\nFlat\nSunken\nBulging"
+  },
+  {
+   "fieldname": "posterior",
+   "fieldtype": "Select",
+   "label": "Posterior",
+   "options": "\nNormal\nAbnormal"
+  },
+  {
+   "fieldname": "face",
+   "fieldtype": "Select",
+   "label": "Face",
+   "options": "\nAsymmetrical\nSymmetrical\nOther"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Head to Toe Examination",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_8",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_12",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "eyes_section",
+   "fieldtype": "Section Break",
+   "label": "Eyes"
+  },
+  {
+   "fieldname": "eye_lashes",
+   "fieldtype": "Select",
+   "label": "Eye Lashes",
+   "options": "\nEqually Distributed\nCurved Outwards\nScorched\nAbnormally Distributed"
+  },
+  {
+   "fieldname": "eye_lids",
+   "fieldtype": "Select",
+   "label": "Eye Lids",
+   "options": "\nAsymmetrical\nSymmetrical\nOthers"
+  },
+  {
+   "fieldname": "conjuctiva",
+   "fieldtype": "Select",
+   "label": "Conjuctiva",
+   "options": "\nNormal\nAbnormal"
+  },
+  {
+   "fieldname": "cataract",
+   "fieldtype": "Select",
+   "label": "Cataract",
+   "options": "\nNone\nPresent"
+  },
+  {
+   "fieldname": "left_pupil_reaction_to_light",
+   "fieldtype": "Select",
+   "label": "Left Pupil Reaction To Light"
+  },
+  {
+   "fieldname": "right_pupil_reaction_to_light",
+   "fieldtype": "Select",
+   "label": "Right Pupil Reaction To Light "
+  },
+  {
+   "fieldname": "eye_discharge",
+   "fieldtype": "Select",
+   "label": "Discharge",
+   "options": "\nNormal\nAbnormal"
+  },
+  {
+   "fieldname": "left_pupil_size",
+   "fieldtype": "Data",
+   "label": "Left Pupil Size"
+  },
+  {
+   "fieldname": "right_pupil_size",
+   "fieldtype": "Data",
+   "label": "Right Pupil Size"
+  },
+  {
+   "fieldname": "squint",
+   "fieldtype": "Select",
+   "label": "Squint",
+   "options": "\nNone\nPresent"
+  },
+  {
+   "fieldname": "sense_of_sight",
+   "fieldtype": "Select",
+   "label": "Sense of Sight",
+   "options": "\nNormal\nAbnormal"
+  },
+  {
+   "fieldname": "ears_section",
+   "fieldtype": "Section Break",
+   "label": "Ears",
+   "options": "\nNone\nPresent"
+  },
+  {
+   "fieldname": "lesions",
+   "fieldtype": "Select",
+   "label": "Lesions",
+   "options": "\nNone\nPresent"
+  },
+  {
+   "fieldname": "sense_of_hearing",
+   "fieldtype": "Select",
+   "label": "Sense of Hearing",
+   "options": "\nNormal\nAbnormal"
+  },
+  {
+   "fieldname": "ears_discharge",
+   "fieldtype": "Select",
+   "label": "Discharge",
+   "options": "\nNone\nPresent"
+  },
+  {
+   "fieldname": "ears_pain",
+   "fieldtype": "Select",
+   "label": "Pain",
+   "options": "\nNone\nPresent"
+  },
+  {
+   "fieldname": "column_break_22",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_27",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_34",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_35",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "nose_section",
+   "fieldtype": "Section Break",
+   "label": "Nose"
+  },
+  {
+   "fieldname": "nasal_flaring",
+   "fieldtype": "Select",
+   "label": "Nasal Flaring",
+   "options": "\nNone\nPresent"
+  },
+  {
+   "fieldname": "polyps",
+   "fieldtype": "Select",
+   "label": "Polyps",
+   "options": "\nNone\nPresent"
+  },
+  {
+   "fieldname": "deformities",
+   "fieldtype": "Select",
+   "label": "Deformities",
+   "options": "\nNone\nPresent"
+  },
+  {
+   "fieldname": "nose_swelling",
+   "fieldtype": "Select",
+   "label": "Swelling",
+   "options": "\nNone\nPresent"
+  },
+  {
+   "fieldname": "nose_discharge",
+   "fieldtype": "Select",
+   "label": "Discharge",
+   "options": "\nNone\nPresent"
+  },
+  {
+   "fieldname": "column_break_43",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_46",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "mouth_section",
+   "fieldtype": "Section Break",
+   "label": "Mouth"
+  },
+  {
+   "fieldname": "colour_of_lips",
+   "fieldtype": "Select",
+   "label": "Colour of lips",
+   "options": "\nNormal\nAbnormal"
+  },
+  {
+   "fieldname": "lesions_ulcers",
+   "fieldtype": "Select",
+   "label": "Lesions/Ulcers",
+   "options": "\nNone\nPresent"
+  },
+  {
+   "fieldname": "cleft",
+   "fieldtype": "Select",
+   "label": "Cleft",
+   "options": "\nPresent\nAbsent"
+  },
+  {
+   "fieldname": "colour_of_tongue",
+   "fieldtype": "Select",
+   "label": "Colour of Tongue",
+   "options": "\nNormal\nAbnormal"
+  },
+  {
+   "fieldname": "teeth",
+   "fieldtype": "Select",
+   "label": "Teeth",
+   "options": "\nNormal\nAbnormal"
+  },
+  {
+   "fieldname": "gums",
+   "fieldtype": "Select",
+   "label": "Gums",
+   "options": "\nNormal\nAbnormal"
+  },
+  {
+   "fieldname": "dental_prosthesis",
+   "fieldtype": "Select",
+   "label": "Dental Prosthesis",
+   "options": "\nNone\nPresent"
+  },
+  {
+   "fieldname": "size_of_tonsils",
+   "fieldtype": "Select",
+   "label": "Size of Tonsils",
+   "options": "\nNormal\nAbnormal"
+  },
+  {
+   "fieldname": "exudate",
+   "fieldtype": "Select",
+   "label": "Exudate",
+   "options": "\nNone\nPresent"
+  },
+  {
+   "fieldname": "neck_section",
+   "fieldtype": "Section Break",
+   "label": "Neck"
+  },
+  {
+   "fieldname": "lymph_nodes",
+   "fieldtype": "Select",
+   "label": "Lymph Nodes",
+   "options": "\nNot palpable\nPalpable and Tender"
+  },
+  {
+   "fieldname": "chest_section",
+   "fieldtype": "Section Break",
+   "label": "Chest"
+  },
+  {
+   "fieldname": "column_break_52",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_56",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "respiratory_rate",
+   "fieldtype": "Data",
+   "label": "Respiratory Rate"
+  },
+  {
+   "fieldname": "pattern_of_respiration",
+   "fieldtype": "Select",
+   "label": "Pattern of Respiration",
+   "options": "\nNormal\nAbnormal"
+  },
+  {
+   "fieldname": "chest_movement",
+   "fieldtype": "Select",
+   "label": "Chest Movement",
+   "options": "\nSymmetrical\nAsymmetrical"
+  },
+  {
+   "fieldname": "chest_sounds",
+   "fieldtype": "Select",
+   "label": "Chest Sounds",
+   "options": "\nNormal\nAbnormal"
+  },
+  {
+   "fieldname": "breath_sounds",
+   "fieldtype": "Select",
+   "label": "Breath Sounds",
+   "options": "\nNormal\nAbnormal"
+  },
+  {
+   "fieldname": "heart_rate",
+   "fieldtype": "Data",
+   "label": "Heart Rate"
+  },
+  {
+   "fieldname": "rhythm",
+   "fieldtype": "Select",
+   "label": "Rhythm",
+   "options": "\nRegular\nIrregular"
+  },
+  {
+   "fieldname": "nipple_size",
+   "fieldtype": "Select",
+   "label": "Nipple Size",
+   "options": "\nNone\nPresent"
+  },
+  {
+   "fieldname": "nipple_discharge",
+   "fieldtype": "Select",
+   "label": "Discharge",
+   "options": "\nNone\nPresent"
+  },
+  {
+   "fieldname": "hyperesonance",
+   "fieldtype": "Select",
+   "label": "Hyperesonance",
+   "options": "\nNone\nPresent"
+  },
+  {
+   "fieldname": "dullness",
+   "fieldtype": "Select",
+   "label": "Dullness",
+   "options": "\nNone\nPresent"
+  },
+  {
+   "fieldname": "flatness",
+   "fieldtype": "Select",
+   "label": "Flatness",
+   "options": "\nNone\nPresent"
+  },
+  {
+   "fieldname": "column_break_66",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_70",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "chest_shape",
+   "fieldtype": "Select",
+   "label": "Shape",
+   "options": "\nNormal\nAbnormal"
+  },
+  {
+   "fieldname": "arms_section",
+   "fieldtype": "Section Break",
+   "label": "Arms"
+  },
+  {
+   "fieldname": "equity",
+   "fieldtype": "Select",
+   "label": "Equity",
+   "options": "\nEqual\nUnequal"
+  },
+  {
+   "fieldname": "arm_deformities",
+   "fieldtype": "Select",
+   "label": "Deformities",
+   "options": "\nNone\nPresent"
+  },
+  {
+   "fieldname": "clubbing_of_fingers",
+   "fieldtype": "Select",
+   "label": "Clubbing of Fingers",
+   "options": "\nNone\nPresent"
+  },
+  {
+   "fieldname": "bcg_scar",
+   "fieldtype": "Select",
+   "label": "BCG Scar",
+   "options": "\nNone\nPresent"
+  },
+  {
+   "fieldname": "axillary_temperature",
+   "fieldtype": "Data",
+   "label": "Axillary Temperature"
+  },
+  {
+   "fieldname": "oxygen_saturations",
+   "fieldtype": "Data",
+   "label": "Oxygen Saturations"
+  },
+  {
+   "fieldname": "acillary_glands",
+   "fieldtype": "Select",
+   "label": "Acillary Glands",
+   "options": "\nNot palpable\nPalpable and Tender"
+  },
+  {
+   "fieldname": "arm_circumference",
+   "fieldtype": "Data",
+   "label": "Arm Circumference"
+  },
+  {
+   "fieldname": "blood_pressure",
+   "fieldtype": "Data",
+   "label": "Blood Pressure"
+  },
+  {
+   "fieldname": "abdomen_section",
+   "fieldtype": "Section Break",
+   "label": "Abdomen"
+  },
+  {
+   "fieldname": "abdomen_shape",
+   "fieldtype": "Select",
+   "label": "shape",
+   "options": "\nNormal\nAbnormal"
+  },
+  {
+   "fieldname": "abdomen_size",
+   "fieldtype": "Select",
+   "label": "size",
+   "options": "\nNormal"
+  },
+  {
+   "fieldname": "abdominal_girth",
+   "fieldtype": "Data",
+   "label": "Abdominal Girth"
+  },
+  {
+   "fieldname": "abdomen_scars",
+   "fieldtype": "Select",
+   "label": "Scars",
+   "options": "\nNone\nPresent"
+  },
+  {
+   "fieldname": "bowel_sounds",
+   "fieldtype": "Select",
+   "label": "Bowel Sounds",
+   "options": "\nAbsent\nPresent"
+  },
+  {
+   "fieldname": "abdomen_hyperesonance",
+   "fieldtype": "Select",
+   "label": "Hyperesonance",
+   "options": "\nNone\nPresent"
+  },
+  {
+   "fieldname": "abdomen_dullness",
+   "fieldtype": "Select",
+   "label": "Dullness",
+   "options": "\nNone\nPresent"
+  },
+  {
+   "fieldname": "abdomen_flatness",
+   "fieldtype": "Select",
+   "label": "Flatness",
+   "options": "\nNone\nPresent"
+  },
+  {
+   "fieldname": "hernia",
+   "fieldtype": "Select",
+   "label": "Hernia",
+   "options": "\nNone\nPresent"
+  },
+  {
+   "fieldname": "tenderness",
+   "fieldtype": "Select",
+   "label": "Tenderness",
+   "options": "\nNone\nPresent"
+  },
+  {
+   "fieldname": "masses",
+   "fieldtype": "Select",
+   "label": "Masses",
+   "options": "\nNone\nPresent"
+  },
+  {
+   "fieldname": "column_break_93",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_98",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_82",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_86",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "genitalia_section",
+   "fieldtype": "Section Break",
+   "label": "Genitalia"
+  },
+  {
+   "fieldname": "genitalia_scars",
+   "fieldtype": "Select",
+   "label": "Scars",
+   "options": "\nNone\nPresent"
+  },
+  {
+   "fieldname": "skin_colour",
+   "fieldtype": "Select",
+   "label": "Skin Colour",
+   "options": "\nNormal\nAbnormal"
+  },
+  {
+   "fieldname": "genitalia_discharge",
+   "fieldtype": "Select",
+   "label": "Discharge",
+   "options": "\nNormal\nAbnormal"
+  },
+  {
+   "fieldname": "growths",
+   "fieldtype": "Select",
+   "label": "Growths",
+   "options": "\nNone\nPresent"
+  },
+  {
+   "fieldname": "genitalia_swelling",
+   "fieldtype": "Select",
+   "label": "Swelling",
+   "options": "\nNone\nPresent"
+  },
+  {
+   "depends_on": "eval:doc.gender != \"Female\"",
+   "fieldname": "testicles",
+   "fieldtype": "Select",
+   "label": "Testicles",
+   "options": "\nNormal\nAbnormal"
+  },
+  {
+   "depends_on": "eval:doc.gender != \"Female\"",
+   "fieldname": "position_of_urethral_meatus",
+   "fieldtype": "Select",
+   "label": "Position of urethral meatus",
+   "options": "\nNormal\nAbnormal"
+  },
+  {
+   "fieldname": "perineum",
+   "fieldtype": "Select",
+   "label": "Perineum",
+   "options": "\nHealthy\nUnhealthy"
+  },
+  {
+   "fieldname": "column_break_108",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_112",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "inguinal_region_section",
+   "fieldtype": "Section Break",
+   "label": "Inguinal Region",
+   "options": "\nNone\nPresent"
+  },
+  {
+   "fieldname": "inguinal_region_section_swelling",
+   "fieldtype": "Select",
+   "label": "Swelling",
+   "options": "\nNone\nPresent"
+  },
+  {
+   "fieldname": "inguinal_region_section_lymph_nodes",
+   "fieldtype": "Select",
+   "label": "Lymph Nodes",
+   "options": "\nNot palpable\nEnlarged and Not Tender\nEnlarged and Tender"
+  },
+  {
+   "fieldname": "inguinal_region_section_pain",
+   "fieldtype": "Select",
+   "label": "Pain",
+   "options": "\nNone\nPresent"
+  },
+  {
+   "fieldname": "inguinal_hernia",
+   "fieldtype": "Select",
+   "label": "Inguinal Hernia",
+   "options": "\nNone\nPresent"
+  },
+  {
+   "fieldname": "rectum_section",
+   "fieldtype": "Section Break",
+   "label": "Rectum"
+  },
+  {
+   "fieldname": "rectal_examination",
+   "fieldtype": "Select",
+   "label": "Rectal Examination",
+   "options": "\nNot Examined\nExamined, Findings"
+  },
+  {
+   "fieldname": "lower_limbs_section",
+   "fieldtype": "Section Break",
+   "label": "Lower Limbs"
+  },
+  {
+   "fieldname": "lower_limbs_equity",
+   "fieldtype": "Select",
+   "label": "Equity",
+   "options": "\nEqual\nUnequal"
+  },
+  {
+   "fieldname": "lower_limbs_deformities",
+   "fieldtype": "Select",
+   "label": "Deformities",
+   "options": "\nNone\nPresent"
+  },
+  {
+   "fieldname": "lower_limbs_edema",
+   "fieldtype": "Select",
+   "label": "Edema",
+   "options": "\nNone\nPresent"
+  },
+  {
+   "fieldname": "vericose_viens",
+   "fieldtype": "Select",
+   "label": "Vericose Viens",
+   "options": "\nNone\nPresent"
+  },
+  {
+   "fieldname": "lower_limbs_reflexes",
+   "fieldtype": "Select",
+   "label": "Reflexes",
+   "options": "\nNormal\nAbnormal"
+  },
+  {
+   "fieldname": "back_section",
+   "fieldtype": "Section Break",
+   "label": "Back"
+  },
+  {
+   "fieldname": "back_curvature",
+   "fieldtype": "Select",
+   "label": "Curvature",
+   "options": "\nNormal\nAbnormal"
+  },
+  {
+   "fieldname": "back_growths",
+   "fieldtype": "Select",
+   "label": "Growths",
+   "options": "\nNone\nPresent"
+  },
+  {
+   "fieldname": "continuity_of_spine",
+   "fieldtype": "Select",
+   "label": "Continuity of spine",
+   "options": "\nNormal\nAbnormal"
+  },
+  {
+   "fieldname": "back_tenderness",
+   "fieldtype": "Select",
+   "label": "Tenderness",
+   "options": "\nNone\nPresent"
+  },
+  {
+   "fieldname": "column_break_118",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_120",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_125",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_131",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_128",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_132",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_138",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "multidisciplinary",
+   "fieldtype": "Link",
+   "label": "Multidisciplinary",
+   "options": "Multidisciplinary",
+   "read_only": 1
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "inpatient_record",
+   "fieldtype": "Link",
+   "in_global_search": 1,
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "inpatient_record",
+   "options": "Inpatient Record"
+  },
+  {
+   "fetch_from": "inpatient_record.gender",
+   "fieldname": "gender",
+   "fieldtype": "Link",
+   "label": "gender",
+   "options": "Gender"
+  }
+ ],
+ "hide_toolbar": 1,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2024-11-22 17:59:50.952753",
+ "modified_by": "Administrator",
+ "module": "Gch Inpatient",
+ "name": "Head to Toe Examination",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

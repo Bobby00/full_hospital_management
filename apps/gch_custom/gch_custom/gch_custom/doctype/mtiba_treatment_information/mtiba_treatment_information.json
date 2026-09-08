@@ -1,0 +1,121 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:treatment_code",
+ "creation": "2022-06-24 10:32:27.072448",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "encounter",
+  "inpatient_record",
+  "treatment_code",
+  "fullname",
+  "mobilenumber",
+  "account_program",
+  "account_description",
+  "status",
+  "account_limit_currency",
+  "account_limit_amount"
+ ],
+ "fields": [
+  {
+   "fieldname": "treatment_code",
+   "fieldtype": "Data",
+   "label": "treatment_code",
+   "unique": 1
+  },
+  {
+   "fieldname": "fullname",
+   "fieldtype": "Data",
+   "label": "fullname"
+  },
+  {
+   "fieldname": "mobilenumber",
+   "fieldtype": "Data",
+   "label": "mobileNumber"
+  },
+  {
+   "fieldname": "account_program",
+   "fieldtype": "Data",
+   "label": "account program"
+  },
+  {
+   "fieldname": "account_description",
+   "fieldtype": "Data",
+   "label": "account description"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Data",
+   "label": "status"
+  },
+  {
+   "fieldname": "account_limit_currency",
+   "fieldtype": "Data",
+   "label": "account limit currency"
+  },
+  {
+   "fieldname": "account_limit_amount",
+   "fieldtype": "Currency",
+   "label": "account limit amount"
+  },
+  {
+   "fieldname": "encounter",
+   "fieldtype": "Link",
+   "label": "Encounter",
+   "options": "Patient Encounter"
+  },
+  {
+   "fieldname": "inpatient_record",
+   "fieldtype": "Link",
+   "label": "Inpatient Record",
+   "options": "Inpatient Record"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-11-07 16:20:29.802718",
+ "modified_by": "Administrator",
+ "module": "Gch Custom",
+ "name": "Mtiba Treatment Information",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "All",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Guest",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

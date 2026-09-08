@@ -1,0 +1,161 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-08-07 16:32:38.792252",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "time",
+  "administered",
+  "time_administered",
+  "administered_by",
+  "administering_user",
+  "inpatient_prescription_tracker",
+  "comment",
+  "time_difference_in_hours",
+  "absolute_time_difference",
+  "requires_second_approval",
+  "second_approval",
+  "approving_user",
+  "second_approval_at",
+  "reopened",
+  "reopen_reason",
+  "reopened_at",
+  "reopen_user",
+  "reopened_by",
+  "reopen_time_administered"
+ ],
+ "fields": [
+  {
+   "fieldname": "time",
+   "fieldtype": "Time",
+   "in_list_view": 1,
+   "label": "Time",
+   "options": "time:HH:mm",
+   "reqd": 1
+  },
+  {
+   "fieldname": "inpatient_prescription_tracker",
+   "fieldtype": "Link",
+   "label": "Inpatient Prescription Tracker",
+   "options": "Inpatient Prescription Tracker"
+  },
+  {
+   "fieldname": "comment",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Comment"
+  },
+  {
+   "default": "0",
+   "fieldname": "administered",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Administered"
+  },
+  {
+   "fieldname": "time_administered",
+   "fieldtype": "Time",
+   "in_list_view": 1,
+   "label": "Time Administered"
+  },
+  {
+   "fieldname": "administered_by",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Administered By",
+   "options": "User"
+  },
+  {
+   "default": "0",
+   "fieldname": "time_difference_in_hours",
+   "fieldtype": "Float",
+   "hidden": 1,
+   "label": "Time difference in hours",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "absolute_time_difference",
+   "fieldtype": "Float",
+   "hidden": 1,
+   "label": "Absolute time difference",
+   "non_negative": 1,
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "requires_second_approval",
+   "fieldtype": "Check",
+   "label": "Requires Second Approval"
+  },
+  {
+   "fieldname": "second_approval",
+   "fieldtype": "Link",
+   "label": "Second Approval",
+   "options": "User"
+  },
+  {
+   "fieldname": "second_approval_at",
+   "fieldtype": "Datetime",
+   "label": "Second Approval At"
+  },
+  {
+   "fetch_from": "administered_by.full_name",
+   "fieldname": "administering_user",
+   "fieldtype": "Data",
+   "label": "Administering User"
+  },
+  {
+   "fetch_from": "second_approval.full_name",
+   "fieldname": "approving_user",
+   "fieldtype": "Data",
+   "label": "Approving User"
+  },
+  {
+   "default": "0",
+   "fieldname": "reopened",
+   "fieldtype": "Check",
+   "label": "Reopened"
+  },
+  {
+   "fieldname": "reopen_reason",
+   "fieldtype": "Data",
+   "label": "Reopen Reason"
+  },
+  {
+   "fieldname": "reopened_at",
+   "fieldtype": "Datetime",
+   "label": "Reopened At"
+  },
+  {
+   "fieldname": "reopen_user",
+   "fieldtype": "Link",
+   "label": "Reopen User",
+   "options": "User"
+  },
+  {
+   "fetch_from": "reopen_user.full_name",
+   "fieldname": "reopened_by",
+   "fieldtype": "Data",
+   "label": "Reopened By"
+  },
+  {
+   "fieldname": "reopen_time_administered",
+   "fieldtype": "Datetime",
+   "label": "Reopen Time Administered"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-12-09 19:13:03.995000",
+ "modified_by": "Administrator",
+ "module": "Gch Inpatient",
+ "name": "Inpatient Prescription Administration Tracker",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

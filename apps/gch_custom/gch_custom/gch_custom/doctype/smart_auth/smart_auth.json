@@ -1,0 +1,269 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:member_number",
+ "creation": "2022-05-19 10:28:59.107544",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "session_id",
+  "member_number",
+  "status",
+  "patient",
+  "patient_name",
+  "comments",
+  "member_info_data",
+  "visit_number",
+  "inpatient_visit_number",
+  "column_break_8",
+  "payer_code",
+  "payer_name",
+  "schemecode",
+  "scheme_name",
+  "patient_number",
+  "member_name",
+  "global_id",
+  "member_benefits_section",
+  "medicalaid_code",
+  "medicalaid_name",
+  "policy_id",
+  "medicalaid_scheme_code",
+  "medicalaid_scheme_name",
+  "medicalaid_number",
+  "medicalaid_plan",
+  "column_break_25",
+  "policy_country",
+  "policy_currency",
+  "vip_message",
+  "has_copay",
+  "co_pay_amount",
+  "session_type",
+  "admit_id",
+  "benefit_details_section",
+  "smart_benefit_details"
+ ],
+ "fields": [
+  {
+   "fieldname": "visit_number",
+   "fieldtype": "Link",
+   "label": "visit_number",
+   "options": "Patient Encounter"
+  },
+  {
+   "fieldname": "session_id",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "label": "session_id",
+   "unique": 1
+  },
+  {
+   "fieldname": "member_number",
+   "fieldtype": "Data",
+   "label": "member_number",
+   "unique": 1
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Data",
+   "label": "status"
+  },
+  {
+   "fieldname": "patient",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "label": "patient",
+   "options": "Patient"
+  },
+  {
+   "fieldname": "patient_name",
+   "fieldtype": "Data",
+   "label": "patient_name"
+  },
+  {
+   "fieldname": "comments",
+   "fieldtype": "Data",
+   "label": "comments"
+  },
+  {
+   "fieldname": "member_info_data",
+   "fieldtype": "Data",
+   "label": "member_info_data"
+  },
+  {
+   "fieldname": "payer_code",
+   "fieldtype": "Data",
+   "label": "payer_code"
+  },
+  {
+   "fieldname": "payer_name",
+   "fieldtype": "Data",
+   "label": "payer_name"
+  },
+  {
+   "fieldname": "schemecode",
+   "fieldtype": "Data",
+   "label": "schemecode"
+  },
+  {
+   "fieldname": "scheme_name",
+   "fieldtype": "Data",
+   "in_global_search": 1,
+   "in_list_view": 1,
+   "in_preview": 1,
+   "label": "scheme_name"
+  },
+  {
+   "fieldname": "patient_number",
+   "fieldtype": "Data",
+   "label": "patient_number"
+  },
+  {
+   "fieldname": "member_name",
+   "fieldtype": "Data",
+   "label": "member_name"
+  },
+  {
+   "fieldname": "global_id",
+   "fieldtype": "Data",
+   "label": "global_id"
+  },
+  {
+   "fieldname": "member_benefits_section",
+   "fieldtype": "Section Break",
+   "label": "Member Benefits"
+  },
+  {
+   "fieldname": "medicalaid_code",
+   "fieldtype": "Data",
+   "label": "medicalaid_code"
+  },
+  {
+   "fieldname": "medicalaid_name",
+   "fieldtype": "Data",
+   "label": "medicalaid_name"
+  },
+  {
+   "fieldname": "policy_id",
+   "fieldtype": "Data",
+   "label": "policy_id"
+  },
+  {
+   "fieldname": "medicalaid_scheme_code",
+   "fieldtype": "Data",
+   "label": "medicalaid_scheme_code"
+  },
+  {
+   "fieldname": "medicalaid_scheme_name",
+   "fieldtype": "Data",
+   "label": "medicalaid_scheme_name"
+  },
+  {
+   "fieldname": "medicalaid_number",
+   "fieldtype": "Data",
+   "label": "medicalaid_number"
+  },
+  {
+   "fieldname": "medicalaid_plan",
+   "fieldtype": "Data",
+   "label": "medicalaid_plan"
+  },
+  {
+   "fieldname": "policy_country",
+   "fieldtype": "Data",
+   "label": "policy_country"
+  },
+  {
+   "fieldname": "policy_currency",
+   "fieldtype": "Data",
+   "label": "policy_currency"
+  },
+  {
+   "fieldname": "vip_message",
+   "fieldtype": "Data",
+   "label": "vip_message"
+  },
+  {
+   "default": "0",
+   "fieldname": "has_copay",
+   "fieldtype": "Check",
+   "label": "has_copay"
+  },
+  {
+   "fieldname": "co_pay_amount",
+   "fieldtype": "Currency",
+   "label": "co_pay_amount"
+  },
+  {
+   "fieldname": "session_type",
+   "fieldtype": "Data",
+   "label": "session_type"
+  },
+  {
+   "fieldname": "benefit_details_section",
+   "fieldtype": "Section Break",
+   "label": "Benefit Details"
+  },
+  {
+   "fieldname": "column_break_8",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_25",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "admit_id",
+   "fieldtype": "Data",
+   "label": "admit_id"
+  },
+  {
+   "fieldname": "smart_benefit_details",
+   "fieldtype": "Table",
+   "label": "Smart Benefit Details",
+   "options": "Smart Benefit Details"
+  },
+  {
+   "fieldname": "inpatient_visit_number",
+   "fieldtype": "Link",
+   "label": "Inpatient Visit Number",
+   "options": "Inpatient Record"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-10-23 17:34:53.911090",
+ "modified_by": "Administrator",
+ "module": "Gch Custom",
+ "name": "Smart Auth",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Guest",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

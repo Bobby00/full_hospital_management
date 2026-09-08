@@ -1,0 +1,924 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:GCH-IOM-{DD}{MM}{YYYY}-{####}",
+ "creation": "2024-07-08 12:24:19.121475",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "patient_details_section",
+  "inpatient_record",
+  "theatre_overview",
+  "section_break_4",
+  "date",
+  "theatre",
+  "holding_area",
+  "column_break_8",
+  "time_in",
+  "stretcher",
+  "walking",
+  "carried",
+  "wheel_chair",
+  "sign_in_section",
+  "sign_in_time",
+  "anaesthesia_assessment_done",
+  "difficult_airway_or_risk_of_aspiration",
+  "risk_of_blood_loss__500_mls",
+  "asa_class",
+  "anaesthesiamedication_check",
+  "anaesthesia_medicine_checked_by",
+  "patient_id_verified",
+  "op_consent_signed",
+  "site_marked",
+  "preop_checklist_completed",
+  "arrived_with_iv_infusion",
+  "type_and_amount_in_bottle",
+  "iv_canulation_done_by",
+  "iv_canulation_time",
+  "site",
+  "other_site",
+  "prophylactic_antiboitic_ordered",
+  "time_given",
+  "shaving_done",
+  "sign_in_done_by_nurse",
+  "anasthesiologist",
+  "time_in_or_suite",
+  "position",
+  "position_other",
+  "safety_belt_applied",
+  "arms_secured",
+  "electric_blanket_used",
+  "other_devices",
+  "patient_in_proper_body_alignment",
+  "skin_assessment",
+  "intact",
+  "comment",
+  "urinary_catheter_in_situ",
+  "urinary_catheter_inserted_in_theatre",
+  "type",
+  "catheter_size",
+  "skin_prep",
+  "skin_prep_comment",
+  "indicator_present_internal",
+  "essential_imaging",
+  "esu",
+  "esu_other",
+  "unit_no",
+  "model",
+  "mode",
+  "setting",
+  "coag",
+  "cutting",
+  "blend",
+  "wound_classification",
+  "wound_irrigation",
+  "wound_irrigation_other",
+  "wound_type",
+  "wound_site",
+  "drain_type",
+  "arterial_clamp",
+  "clamp_on",
+  "clamp_off",
+  "clamp_time",
+  "time_out",
+  "introduction_of_team_members_and_roles",
+  "sign_out_ptid",
+  "surgeon",
+  "assistant",
+  "anaesthetist",
+  "scrub_nurse",
+  "anaesthetic_tech",
+  "circulating_nurse",
+  "observers",
+  "circulating_nurse_brief",
+  "surgeon_brief",
+  "anaesthesia_brief",
+  "scrub_nurse_brief",
+  "sterility_check",
+  "confirmation_of_operating_site",
+  "planned_surgery",
+  "start_time",
+  "finish_time",
+  "sign_out_section",
+  "preliminary_check",
+  "wound_closure",
+  "final_count",
+  "count_correct",
+  "complete_instruments_checklist",
+  "action_taken",
+  "surgical_team_informed",
+  "scrub_nurses_signature",
+  "circulating_nurse_signature",
+  "wound_closure_section",
+  "skin_closure",
+  "data_106",
+  "dressing_applied",
+  "intravenous_infusions_transfusions",
+  "packed_cells_mls",
+  "whole_blood_mls",
+  "others_mls",
+  "intravenous_infusions_mls",
+  "estimated_blood_loss_mls",
+  "urinary_output",
+  "intraop_medication_section",
+  "intraop_medication_surgical_site",
+  "surgical_implants_section",
+  "surgical_implants_or_prothesis",
+  "section_break_119",
+  "specimens_verified",
+  "specimens_collected",
+  "preop_diagnosis",
+  "intraop_diagnosis",
+  "operation",
+  "equipment_failure_reported",
+  "pain_management",
+  "venous_thromboprophylaxis_indicated",
+  "sign_out_time",
+  "sign_out_done_by",
+  "signout_signature",
+  "pull_notes_to_multidisciplinary",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "patient_details_section",
+   "fieldtype": "Section Break",
+   "label": "Patient Details"
+  },
+  {
+   "fieldname": "inpatient_record",
+   "fieldtype": "Link",
+   "label": "Inpatient Record",
+   "options": "Inpatient Record"
+  },
+  {
+   "fieldname": "theatre_overview",
+   "fieldtype": "Link",
+   "label": "Theatre Overview",
+   "options": "Theatre Overview"
+  },
+  {
+   "fieldname": "section_break_4",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "theatre",
+   "fieldtype": "Link",
+   "label": "Theatre",
+   "options": "Theatre"
+  },
+  {
+   "fieldname": "holding_area",
+   "fieldtype": "Data",
+   "label": "Holding Area"
+  },
+  {
+   "fieldname": "column_break_8",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "time_in",
+   "fieldtype": "Time",
+   "label": "Time in"
+  },
+  {
+   "default": "0",
+   "fieldname": "stretcher",
+   "fieldtype": "Check",
+   "label": "Stretcher"
+  },
+  {
+   "default": "0",
+   "fieldname": "walking",
+   "fieldtype": "Check",
+   "label": "Walking"
+  },
+  {
+   "default": "0",
+   "fieldname": "carried",
+   "fieldtype": "Check",
+   "label": "Carried"
+  },
+  {
+   "default": "0",
+   "fieldname": "wheel_chair",
+   "fieldtype": "Check",
+   "label": "Wheel Chair"
+  },
+  {
+   "fieldname": "sign_in_section",
+   "fieldtype": "Section Break",
+   "label": "Sign In"
+  },
+  {
+   "fieldname": "sign_in_time",
+   "fieldtype": "Time",
+   "label": "Sign In Time"
+  },
+  {
+   "fieldname": "anaesthesia_assessment_done",
+   "fieldtype": "Select",
+   "label": "Anaesthesia assessment Done",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "difficult_airway_or_risk_of_aspiration",
+   "fieldtype": "Select",
+   "label": "Difficult Airway or risk of aspiration",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "risk_of_blood_loss__500_mls",
+   "fieldtype": "Select",
+   "label": "Risk of blood loss > 500 mls",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "asa_class",
+   "fieldtype": "Select",
+   "label": "ASA Class",
+   "options": "\n1\n2\n3\n4\n5"
+  },
+  {
+   "fieldname": "anaesthesiamedication_check",
+   "fieldtype": "Select",
+   "label": "Anaesthesia/Medication Check",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "anaesthesia_medicine_checked_by",
+   "fieldtype": "Link",
+   "label": "Anaesthesia Medicine checked by",
+   "options": "Healthcare Practitioner"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Theatre Nursing IntraOperative Management",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "patient_id_verified",
+   "fieldtype": "Select",
+   "label": "Patient Id verified",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "op_consent_signed",
+   "fieldtype": "Select",
+   "label": "Op Consent Signed",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "site_marked",
+   "fieldtype": "Select",
+   "label": "Site Marked",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "preop_checklist_completed",
+   "fieldtype": "Select",
+   "label": "Preop Checklist completed",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "arrived_with_iv_infusion",
+   "fieldtype": "Select",
+   "label": "Arrived with IV infusion",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "type_and_amount_in_bottle",
+   "fieldtype": "Data",
+   "label": "Type and amount in bottle"
+  },
+  {
+   "fieldname": "iv_canulation_done_by",
+   "fieldtype": "Link",
+   "label": "IV canulation done by",
+   "options": "Healthcare Practitioner"
+  },
+  {
+   "fieldname": "iv_canulation_time",
+   "fieldtype": "Datetime",
+   "label": "IV Canulation Time"
+  },
+  {
+   "fieldname": "site",
+   "fieldtype": "Select",
+   "label": "Site",
+   "options": "\nRA\nLA\nRL\nLL\nOther"
+  },
+  {
+   "depends_on": "eval:doc.site==\"Other\";",
+   "fieldname": "other_site",
+   "fieldtype": "Data"
+  },
+  {
+   "fieldname": "prophylactic_antiboitic_ordered",
+   "fieldtype": "Select",
+   "label": "Prophylactic antiboitic ordered",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "time_given",
+   "fieldtype": "Time",
+   "label": "Time Given"
+  },
+  {
+   "fieldname": "shaving_done",
+   "fieldtype": "Select",
+   "label": "Shaving Done",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "sign_in_done_by_nurse",
+   "fieldtype": "Link",
+   "label": "Sign in done by Nurse",
+   "options": "Healthcare Practitioner"
+  },
+  {
+   "fieldname": "anasthesiologist",
+   "fieldtype": "Link",
+   "label": "Anasthesiologist",
+   "options": "Healthcare Practitioner"
+  },
+  {
+   "fieldname": "time_in_or_suite",
+   "fieldtype": "Time",
+   "label": "Time in OR suite"
+  },
+  {
+   "fieldname": "position",
+   "fieldtype": "Select",
+   "label": "Position",
+   "options": "Prone\nSupine\nLateral\nLithotomy\nOther"
+  },
+  {
+   "depends_on": "eval:doc.position==\"Other\";",
+   "fieldname": "position_other",
+   "fieldtype": "Data"
+  },
+  {
+   "fieldname": "safety_belt_applied",
+   "fieldtype": "Select",
+   "label": "Safety belt applied",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "arms_secured",
+   "fieldtype": "Select",
+   "label": "Arms Secured",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "electric_blanket_used",
+   "fieldtype": "Select",
+   "label": "Electric Blanket used",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "other_devices",
+   "fieldtype": "Data",
+   "label": "Other Devices"
+  },
+  {
+   "fieldname": "patient_in_proper_body_alignment",
+   "fieldtype": "Select",
+   "label": "Patient in Proper body alignment",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "skin_assessment",
+   "fieldtype": "Heading",
+   "label": "Skin Assessment"
+  },
+  {
+   "fieldname": "intact",
+   "fieldtype": "Select",
+   "label": "Intact",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "comment",
+   "fieldtype": "Data",
+   "label": "Comment"
+  },
+  {
+   "fieldname": "urinary_catheter_in_situ",
+   "fieldtype": "Select",
+   "label": "Urinary Catheter In situ",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "urinary_catheter_inserted_in_theatre",
+   "fieldtype": "Select",
+   "label": "Urinary Catheter Inserted in Theatre",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "type",
+   "fieldtype": "Data",
+   "label": "Type"
+  },
+  {
+   "fieldname": "catheter_size",
+   "fieldtype": "Data",
+   "label": "Size"
+  },
+  {
+   "fieldname": "skin_prep",
+   "fieldtype": "Select",
+   "label": "Skin Prep",
+   "options": "\nHibitane in Spirit\nHibitane in Water\nPovidone Iodine\nOther"
+  },
+  {
+   "depends_on": "eval:doc.skin_prep==\"Other\"",
+   "fieldname": "skin_prep_comment",
+   "fieldtype": "Select",
+   "label": "Sterility Check Done",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "indicator_present_internal",
+   "fieldtype": "Select",
+   "label": "Indicator Present (Internal)",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "esu",
+   "fieldtype": "Select",
+   "label": "E.S.U",
+   "options": "\nR\nL\nOther"
+  },
+  {
+   "fieldname": "essential_imaging",
+   "fieldtype": "Select",
+   "label": "Essential imaging displayed",
+   "options": "\nYes\nNo"
+  },
+  {
+   "depends_on": "eval:doc.esu==\"Other\"",
+   "fieldname": "esu_other",
+   "fieldtype": "Data",
+   "label": "Comment"
+  },
+  {
+   "fieldname": "unit_no",
+   "fieldtype": "Data",
+   "label": "Unit No."
+  },
+  {
+   "fieldname": "model",
+   "fieldtype": "Data",
+   "label": "Model"
+  },
+  {
+   "fieldname": "mode",
+   "fieldtype": "Select",
+   "label": "Mode",
+   "options": "\nBipolar\nMonopolar"
+  },
+  {
+   "fieldname": "setting",
+   "fieldtype": "Heading",
+   "label": "Setting"
+  },
+  {
+   "fieldname": "coag",
+   "fieldtype": "Data",
+   "label": "Coag"
+  },
+  {
+   "fieldname": "cutting",
+   "fieldtype": "Data",
+   "label": "Cutting"
+  },
+  {
+   "fieldname": "blend",
+   "fieldtype": "Data",
+   "label": "Blend"
+  },
+  {
+   "fieldname": "wound_classification",
+   "fieldtype": "Select",
+   "label": "Wound Classification",
+   "options": "\nClean\nClean Contaminated\nContaminated\nInfected"
+  },
+  {
+   "fieldname": "wound_irrigation",
+   "fieldtype": "Select",
+   "label": "Wound Irrigation",
+   "options": "\nSaline\nWater\nPovidone Iodine\nAntibiotic\nOther"
+  },
+  {
+   "depends_on": "eval:doc.wound_irrigation == \"Other\";",
+   "fieldname": "wound_irrigation_other",
+   "fieldtype": "Data",
+   "mandatory_depends_on": "eval:doc.wound_irrigation == \"Other\";"
+  },
+  {
+   "fieldname": "wound_type",
+   "fieldtype": "Data",
+   "label": "type"
+  },
+  {
+   "fieldname": "wound_site",
+   "fieldtype": "Data",
+   "label": "Site"
+  },
+  {
+   "fieldname": "drain_type",
+   "fieldtype": "Select",
+   "label": "Drain Type",
+   "options": "\nCorrugated\nHeamovac\nUnderwater Seal (UWS)\nNasogastric (NGT)"
+  },
+  {
+   "fieldname": "arterial_clamp",
+   "fieldtype": "Select",
+   "label": "Arterial Clamp",
+   "options": "\nYes\nNo"
+  },
+  {
+   "depends_on": "eval:doc.arterial_clamp==\"Yes\"",
+   "fieldname": "clamp_on",
+   "fieldtype": "Time",
+   "label": "Clamp on",
+   "mandatory_depends_on": "eval:doc.arterial_clamp==\"Yes\""
+  },
+  {
+   "depends_on": "eval:doc.arterial_clamp==\"Yes\";",
+   "fieldname": "clamp_off",
+   "fieldtype": "Time",
+   "label": "Clamp Off",
+   "mandatory_depends_on": "eval:doc.arterial_clamp==\"Yes\""
+  },
+  {
+   "depends_on": "eval:doc.arterial_clamp==\"Yes\"",
+   "fieldname": "clamp_time",
+   "fieldtype": "Time",
+   "label": "Clamp Time",
+   "mandatory_depends_on": "eval:doc.arterial_clamp==\"Yes\""
+  },
+  {
+   "fieldname": "time_out",
+   "fieldtype": "Time",
+   "label": "Time Out"
+  },
+  {
+   "fieldname": "introduction_of_team_members_and_roles",
+   "fieldtype": "Select",
+   "label": "Introduction of team members and roles",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "sign_out_ptid",
+   "fieldtype": "Select",
+   "label": "Patient Id Verified",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "surgeon",
+   "fieldtype": "Link",
+   "label": "Surgeon",
+   "options": "Healthcare Practitioner"
+  },
+  {
+   "fieldname": "assistant",
+   "fieldtype": "Link",
+   "label": "Assistant",
+   "options": "Healthcare Practitioner"
+  },
+  {
+   "fieldname": "anaesthetist",
+   "fieldtype": "Link",
+   "label": "Anaesthetist",
+   "options": "Healthcare Practitioner"
+  },
+  {
+   "fieldname": "scrub_nurse",
+   "fieldtype": "Link",
+   "label": "Scrub Nurse",
+   "options": "Healthcare Practitioner"
+  },
+  {
+   "fieldname": "anaesthetic_tech",
+   "fieldtype": "Link",
+   "label": "Anaesthetic Tech",
+   "options": "Healthcare Practitioner"
+  },
+  {
+   "fieldname": "circulating_nurse",
+   "fieldtype": "Link",
+   "label": "Circulating Nurse",
+   "options": "Healthcare Practitioner"
+  },
+  {
+   "fieldname": "observers",
+   "fieldtype": "Data",
+   "label": "Observers"
+  },
+  {
+   "fieldname": "circulating_nurse_brief",
+   "fieldtype": "Data",
+   "label": "Circulating Nurse brief"
+  },
+  {
+   "fieldname": "surgeon_brief",
+   "fieldtype": "Data",
+   "label": "Surgeon Brief"
+  },
+  {
+   "fieldname": "anaesthesia_brief",
+   "fieldtype": "Data",
+   "label": "Anaesthesia Brief"
+  },
+  {
+   "fieldname": "scrub_nurse_brief",
+   "fieldtype": "Data",
+   "label": "Scrub Nurse Brief"
+  },
+  {
+   "fieldname": "sterility_check",
+   "fieldtype": "Data",
+   "label": "Sterility Check"
+  },
+  {
+   "fieldname": "confirmation_of_operating_site",
+   "fieldtype": "Data",
+   "label": "Confirmation of Operating site"
+  },
+  {
+   "fieldname": "planned_surgery",
+   "fieldtype": "Data",
+   "label": "Planned Surgery"
+  },
+  {
+   "fieldname": "start_time",
+   "fieldtype": "Time",
+   "label": "Start Time"
+  },
+  {
+   "fieldname": "finish_time",
+   "fieldtype": "Time",
+   "label": "Finish Time"
+  },
+  {
+   "fieldname": "sign_out_section",
+   "fieldtype": "Section Break",
+   "label": "Sign Out"
+  },
+  {
+   "fieldname": "preliminary_check",
+   "fieldtype": "Table",
+   "label": "Preliminary Check",
+   "options": "Swabs Instruments and Sharps Count"
+  },
+  {
+   "fieldname": "wound_closure",
+   "fieldtype": "Table",
+   "label": "Wound Closure",
+   "options": "Swabs Instruments and Sharps Count"
+  },
+  {
+   "fieldname": "final_count",
+   "fieldtype": "Table",
+   "label": "Final Count",
+   "options": "Swabs Instruments and Sharps Count"
+  },
+  {
+   "fieldname": "count_correct",
+   "fieldtype": "Select",
+   "label": "Count Correct",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "complete_instruments_checklist",
+   "fieldtype": "Select",
+   "label": "Complete Instruments' Checklist",
+   "options": "\nYes\nNo"
+  },
+  {
+   "depends_on": "eval:doc.complete_instruments_checklist==\"No\"",
+   "fieldname": "action_taken",
+   "fieldtype": "Data",
+   "label": "Action Taken",
+   "mandatory_depends_on": "eval:doc.complete_instruments_checklist==\"No\""
+  },
+  {
+   "depends_on": "eval:doc.complete_instruments_checklist==\"No\"",
+   "fieldname": "surgical_team_informed",
+   "fieldtype": "Select",
+   "label": "Surgical Team Informed",
+   "mandatory_depends_on": "eval:doc.complete_instruments_checklist==\"No\"",
+   "options": "\nYes\nNo"
+  },
+  {
+   "depends_on": "eval:doc.complete_instruments_checklist==\"No\"",
+   "fieldname": "scrub_nurses_signature",
+   "fieldtype": "Signature",
+   "label": "Scrub nurse's signature",
+   "mandatory_depends_on": "eval:doc.complete_instruments_checklist==\"No\""
+  },
+  {
+   "depends_on": "eval:doc.complete_instruments_checklist==\"No\"",
+   "fieldname": "circulating_nurse_signature",
+   "fieldtype": "Signature",
+   "label": "Circulating Nurse Signature",
+   "mandatory_depends_on": "eval:doc.complete_instruments_checklist==\"No\""
+  },
+  {
+   "fieldname": "wound_closure_section",
+   "fieldtype": "Section Break",
+   "label": "Wound Closure"
+  },
+  {
+   "fieldname": "skin_closure",
+   "fieldtype": "Select",
+   "label": "Skin Closure",
+   "options": "\nAbsorbable\nNon-Absorbable\nOther"
+  },
+  {
+   "depends_on": "eval:doc.skin_closure==\"Other\"",
+   "fieldname": "data_106",
+   "fieldtype": "Data",
+   "mandatory_depends_on": "eval:doc.skin_closure==\"Other\""
+  },
+  {
+   "fieldname": "dressing_applied",
+   "fieldtype": "Select",
+   "label": "Dressing Applied",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "intravenous_infusions_transfusions",
+   "fieldtype": "Section Break",
+   "label": "Intravenous Infusions/Transfusions"
+  },
+  {
+   "fieldname": "packed_cells_mls",
+   "fieldtype": "Int",
+   "label": "Packed Cells (mls)",
+   "non_negative": 1
+  },
+  {
+   "fieldname": "whole_blood_mls",
+   "fieldtype": "Int",
+   "label": "Whole Blood (mls)",
+   "non_negative": 1
+  },
+  {
+   "fieldname": "others_mls",
+   "fieldtype": "Int",
+   "label": "Others (mls)",
+   "non_negative": 1
+  },
+  {
+   "fieldname": "intravenous_infusions_mls",
+   "fieldtype": "Int",
+   "label": "Intravenous infusions (mls)",
+   "non_negative": 1
+  },
+  {
+   "fieldname": "estimated_blood_loss_mls",
+   "fieldtype": "Int",
+   "label": "Estimated Blood Loss (mls)",
+   "non_negative": 1
+  },
+  {
+   "fieldname": "urinary_output",
+   "fieldtype": "Int",
+   "label": "Urinary Output",
+   "non_negative": 1
+  },
+  {
+   "fieldname": "intraop_medication_section",
+   "fieldtype": "Section Break",
+   "label": "Intraop Medication"
+  },
+  {
+   "fieldname": "intraop_medication_surgical_site",
+   "fieldtype": "Table",
+   "label": "Intraop Medication (surgical site)",
+   "options": "Intraop Medication"
+  },
+  {
+   "fieldname": "surgical_implants_section",
+   "fieldtype": "Section Break",
+   "label": "Surgical Implants"
+  },
+  {
+   "fieldname": "surgical_implants_or_prothesis",
+   "fieldtype": "Table",
+   "label": "surgical implants or Prothesis",
+   "options": "Surgical Implants"
+  },
+  {
+   "fieldname": "section_break_119",
+   "fieldtype": "Section Break",
+   "label": "Specimens"
+  },
+  {
+   "fieldname": "specimens_verified",
+   "fieldtype": "Select",
+   "label": "Specimens Verified",
+   "options": "\nYes\nNo\nNot Applicable"
+  },
+  {
+   "depends_on": "eval:doc.specimens_verified==\"Yes\"",
+   "fieldname": "specimens_collected",
+   "fieldtype": "Table",
+   "label": "Specimens collected",
+   "mandatory_depends_on": "eval:doc.specimens_verified==\"Yes\"",
+   "options": "Collected Specimen"
+  },
+  {
+   "fieldname": "preop_diagnosis",
+   "fieldtype": "Link",
+   "label": "Preop Diagnosis",
+   "options": "Medical Code"
+  },
+  {
+   "fieldname": "intraop_diagnosis",
+   "fieldtype": "Link",
+   "label": "Intraop Diagnosis",
+   "options": "Medical Code"
+  },
+  {
+   "fieldname": "operation",
+   "fieldtype": "Link",
+   "label": "Operation",
+   "options": "Clinical Procedure Template"
+  },
+  {
+   "fieldname": "equipment_failure_reported",
+   "fieldtype": "Data",
+   "label": "Equipment Failure reported"
+  },
+  {
+   "fieldname": "pain_management",
+   "fieldtype": "Data",
+   "label": "Pain Management"
+  },
+  {
+   "fieldname": "venous_thromboprophylaxis_indicated",
+   "fieldtype": "Select",
+   "label": "Venous thromboprophylaxis indicated",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "sign_out_done_by",
+   "fieldtype": "Link",
+   "label": "Sign Out done by",
+   "options": "Healthcare Practitioner"
+  },
+  {
+   "fieldname": "signout_signature",
+   "fieldtype": "Signature",
+   "label": "Signout Signature"
+  },
+  {
+   "fieldname": "sign_out_time",
+   "fieldtype": "Time",
+   "label": "Sign Out Time"
+  },
+  {
+   "fieldname": "pull_notes_to_multidisciplinary",
+   "fieldtype": "Button",
+   "label": "Pull Notes to Multidisciplinary"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2024-07-15 10:38:04.634818",
+ "modified_by": "Administrator",
+ "module": "GCH Theatre",
+ "name": "Theatre Nursing IntraOperative Management",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

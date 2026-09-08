@@ -1,0 +1,195 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2021-12-16 08:45:29.164451",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "patient_details_section_break",
+  "patient_encounter",
+  "patient",
+  "patient_age",
+  "patient_weight",
+  "patient_height",
+  "column_break_7",
+  "date",
+  "time",
+  "bmi",
+  "gender",
+  "patient_history_section_break",
+  "thyroid_disease",
+  "hyperlipidemia_disease",
+  "patient_history_column_break",
+  "hypertension_disease",
+  "insulin_monitoring_chart_section",
+  "insulin_chart",
+  "section_break_19",
+  "correct_medication_doses",
+  "column_break_21",
+  "compliance_of_medication",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "patient_details_section_break",
+   "fieldtype": "Section Break",
+   "label": "Patient Details"
+  },
+  {
+   "fieldname": "patient_encounter",
+   "fieldtype": "Link",
+   "label": "Patient Encounter",
+   "options": "Patient Encounter"
+  },
+  {
+   "fieldname": "patient_history_section_break",
+   "fieldtype": "Section Break",
+   "label": "Patient History"
+  },
+  {
+   "fieldname": "thyroid_disease",
+   "fieldtype": "Long Text",
+   "label": "Thyroid Disease"
+  },
+  {
+   "fieldname": "hyperlipidemia_disease",
+   "fieldtype": "Long Text",
+   "label": "Hyperlipidemia Disease"
+  },
+  {
+   "fieldname": "patient_history_column_break",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "hypertension_disease",
+   "fieldtype": "Long Text",
+   "label": "Hypertension Disease"
+  },
+  {
+   "fieldname": "insulin_monitoring_chart_section",
+   "fieldtype": "Section Break",
+   "label": "Insulin Monitoring Chart"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Diabetology Clinic Template",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fetch_from": "patient_encounter.patient",
+   "fieldname": "patient",
+   "fieldtype": "Data",
+   "label": "Patient",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "patient_encounter.patient_age",
+   "fieldname": "patient_age",
+   "fieldtype": "Data",
+   "label": "Patient Age",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "patient_encounter.weight_in_kilograms",
+   "fieldname": "patient_weight",
+   "fieldtype": "Data",
+   "label": "Patient Weight",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "patient_encounter.height_in_centimeters",
+   "fieldname": "patient_height",
+   "fieldtype": "Data",
+   "label": "Patient Height",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "patient_encounter.encounter_time",
+   "fieldname": "time",
+   "fieldtype": "Data",
+   "label": "Time",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "patient_encounter.bmi",
+   "fieldname": "bmi",
+   "fieldtype": "Data",
+   "label": "BMI",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "patient_encounter.patient_sex",
+   "fieldname": "gender",
+   "fieldtype": "Data",
+   "label": "Gender",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_7",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "patient_encounter.encounter_date",
+   "fieldname": "date",
+   "fieldtype": "Data",
+   "label": "Date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "insulin_chart",
+   "fieldtype": "Table",
+   "label": "Insulin Chart",
+   "options": "Insulin Chart"
+  },
+  {
+   "fieldname": "correct_medication_doses",
+   "fieldtype": "Select",
+   "label": "Correct Medication Doses",
+   "options": "Yes\nNo"
+  },
+  {
+   "fieldname": "compliance_of_medication",
+   "fieldtype": "Select",
+   "label": " Compliance of Medication",
+   "options": "Yes\nNo"
+  },
+  {
+   "fieldname": "section_break_19",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_21",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2021-12-16 11:03:54.670945",
+ "modified_by": "Administrator",
+ "module": "Gch Custom",
+ "name": "Diabetology Clinic Template",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

@@ -1,0 +1,82 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "GCHNB.#######",
+ "creation": "2021-11-21 20:25:53.288406",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "ward_room",
+  "bed_number",
+  "is_occupied",
+  "nursing_ward",
+  "is_locked",
+  "bed_type"
+ ],
+ "fields": [
+  {
+   "fieldname": "ward_room",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Ward Room",
+   "options": "Nursing Ward Room"
+  },
+  {
+   "fieldname": "bed_number",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Bed Number"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_occupied",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Is Occupied"
+  },
+  {
+   "fieldname": "nursing_ward",
+   "fieldtype": "Link",
+   "label": "Nursing Ward",
+   "options": "Nursing Ward"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_locked",
+   "fieldtype": "Check",
+   "label": "Is Locked"
+  },
+  {
+   "fieldname": "bed_type",
+   "fieldtype": "Link",
+   "label": "Bed Type",
+   "options": "Nursing Ward Bed Type"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-08-14 20:28:13.349806",
+ "modified_by": "Administrator",
+ "module": "Gch Inpatient",
+ "name": "Nursing Ward Bed",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "title_field": "bed_number",
+ "track_changes": 1
+}

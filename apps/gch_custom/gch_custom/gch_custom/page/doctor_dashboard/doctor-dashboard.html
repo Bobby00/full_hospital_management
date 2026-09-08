@@ -1,0 +1,540 @@
+<div class="row layout-main">
+    <div class="col-lg-2 layout-side-section">
+        <div class="user-profile-sidebar">
+
+            <div class="user-image-container hidden-xs hidden-sm">
+                <div class="sidebar-image-wrapper">
+                    <div class="sidebar-standard-image hide">
+                        <div class="standard-image"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="profile-details">
+                <div class="detail-item user-stats-detail">
+                    <!-- <h5>Details</h5> -->
+                    <div class="user-stats mt-3">
+
+                        <div class="user-stats-item mt-4">
+                            <svg class="icon icon-lg" style="">
+                                <use class="no-stroke" href="#icon-color-energy-points"></use>
+                            </svg>
+                            <div>
+                                <div class="stat-value">Doctor\'s Name</div>
+                                <div class="stat-label">{{frappe.session.user_fullname}}</div>
+                            </div>
+                        </div>
+
+                        <div class="user-stats-item mt-4">
+                            <svg class="icon icon-lg" style="">
+                                <use class="no-stroke" href="#icon-color-review-points"></use>
+                            </svg>
+                            <div>
+                                <div class="stat-value">Current Room</div>
+                                <div class="stat-label">0</div>
+                            </div>
+                        </div>
+
+                        <div class="user-stats-item mt-4">
+                            <svg class="icon icon-lg" style="">
+                                <use class="no-stroke" href="#icon-color-rank"></use>
+                            </svg>
+                            <div>
+                                <div class="stat-value">Current Clinic</div>
+                                <div class="stat-label">{{scheduled.first_name}}</div>
+                            </div>
+                        </div>
+
+
+
+                    </div>
+                </div>
+
+                <!-- <div class="profile-links detail-item">
+                    <p><a class="edit-profile-link">First Link</a></p>
+                    <p><a class="user-settings-link">Second Link</a></p>
+                    <p> <a class="leaderboard-link">Third Link</a> </p>
+                </div> -->
+
+            </div>
+        </div>
+    </div>
+    <div class="col layout-main-section-wrapper">
+        <div class="layout-main-section">
+            <div class="row user-profile">
+                <div class="col-md-12">
+                    <div class="performance-graphs">
+                        <div class="frappe-card chart-column-container line-chart-container">
+                            <div class="title-area">
+                                <h4 class="card-title">Prescriptions To Be Approved</h4>
+                            </div>
+                            <div class="list-row-container" tabindex="1">
+                                <header class="level list-row-head text-muted">
+                                    <div class="level-left list-header-subject">
+                                        <div class="list-row-col ellipsis list-subject level  ">
+                                            <input class="level-item list-check-all hidden-xs" type="checkbox"
+                                                title="Select All">
+                                            <span class="level-item">Full Name</span>
+                                        </div>
+                                        <div class="list-row-col ellipsis hidden-xs  ">
+                                            <span>DOB</span>
+                                        </div>
+                                        <div class="list-row-col ellipsis hidden-xs  ">
+                                            <span>Age</span>
+                                        </div>
+
+                                        <div class="list-row-col ellipsis hidden-xs  ">
+                                            <span>Gender</span>
+                                        </div>
+
+                                        <div class="list-row-col ellipsis hidden-xs  ">
+                                            <span>Encounter Number</span>
+                                        </div>
+                                        <div class="list-row-col ellipsis hidden-xs  ">
+                                            <span>Prescription Date</span>
+                                        </div>
+                                    </div>
+                                    <div class="level-left checkbox-actions" style="display: none;">
+                                        <div class="level list-subject">
+                                            <input class="level-item list-check-all hidden-xs" type="checkbox"
+                                                title="Select All">
+                                            <span class="level-item list-header-meta"></span>
+                                        </div>
+                                    </div>
+                                </header>
+                                {% for prescription in pending_prescriptions %}
+                                <div class="level list-row">
+                                    <div class="level-left ellipsis">
+
+                                        <div class="list-row-col ellipsis list-subject level">
+
+                                            <input class="level-item list-row-checkbox hidden-xs" type="checkbox"
+                                                data-name="{{prescription.name}}">
+                                        </div>
+                                        <div class="list-row-col ellipsis hidden-xs ">
+                                            <span class="ellipsis"
+                                                title="Full Name">
+                                                <a class="filterable ellipsis" href="/app/prescription/{{prescription.name}}">
+                                                    {{prescription.name}}
+                                                </a>
+                                            </span>
+                                        </div>
+                                        <div class="list-row-col ellipsis hidden-xs ">
+                                            <span class="ellipsis">
+                                                <a class="filterable ellipsis">
+                                                    {{prescription.patient_name}}
+                                                </a>
+                                            </span>
+                                        </div>
+                                        <div class="list-row-col ellipsis hidden-xs ">
+                                            <span class="ellipsis" title="Service Unit: {{prescription.encounter_number}}">
+                                                <a class="filterable ellipsis"
+                                                    data-filter="encounter,=,{{prescription.encounter_number}}">
+                                                    {{prescription.patient}}
+                                                </a>
+                                            </span>
+                                        </div>
+                                        <div class="list-row-col ellipsis hidden-xs ">
+                                            <span class="ellipsis" title="Service Unit">
+                                                <a class="filterable ellipsis"
+                                                    >
+                                                    {{prescription.patient}}
+                                                </a>
+                                            </span>
+                                        </div>
+                                        <div class="list-row-col ellipsis hidden-xs ">
+                                            <span class="ellipsis" title="Name">
+                                                <a class="filterable ellipsis" >
+
+                                                    {{prescription.patient}}
+
+                                                </a>
+                                            </span>
+                                        </div>
+                                        <div class="list-row-col ellipsis hidden-xs ">
+                                            <span class="ellipsis" title="Name">
+                                                <a class="filterable ellipsis" >
+
+                                                    {{prescription.patient}}
+
+                                                </a>
+                                            </span>
+                                        </div>
+                                        <div class="list-row-col ellipsis hidden-xs ">
+                                            <span class="ellipsis" title="Name">
+                                                <a class="filterable ellipsis">
+
+                                                    {{prescription.patient}}
+
+                                                </a>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                {% endfor %}
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="row user-profile">
+                <div class="col-md-12">
+                    <div class="performance-graphs">
+                        <div class="frappe-card chart-column-container line-chart-container">
+                            <div class="title-area">
+                                <h4 class="card-title">Scheduled Patients</h4>
+                            </div>
+                            <div class="list-row-container" tabindex="1">
+                                <header class="level list-row-head text-muted">
+                                    <div class="level-left list-header-subject">
+                                        <div class="list-row-col ellipsis list-subject level  ">
+                                            <input class="level-item list-check-all hidden-xs" type="checkbox"
+                                                title="Select All">
+                                            <span class="level-item">Full Name</span>
+                                        </div>
+                                        <div class="list-row-col ellipsis hidden-xs  ">
+                                            <span>DOB</span>
+                                        </div>
+                                        <div class="list-row-col ellipsis hidden-xs  ">
+                                            <span>Age</span>
+                                        </div>
+
+                                        <div class="list-row-col ellipsis hidden-xs  ">
+                                            <span>Gender</span>
+                                        </div>
+
+                                        <div class="list-row-col ellipsis hidden-xs  ">
+                                            <span>Clinic</span>
+                                        </div>
+                                        <div class="list-row-col ellipsis hidden-xs  ">
+                                            <span>Appointment Date</span>
+                                        </div>
+                                        <div class="list-row-col ellipsis hidden-xs  ">
+                                            <span>Status</span>
+                                        </div>
+                                    </div>
+                                    <div class="level-left checkbox-actions" style="display: none;">
+                                        <div class="level list-subject">
+                                            <input class="level-item list-check-all hidden-xs" type="checkbox"
+                                                title="Select All">
+                                            <span class="level-item list-header-meta"></span>
+                                        </div>
+                                    </div>
+                                </header>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+            </div>
+
+
+            <div class="row user-profile">
+                <div class="col-md-12">
+                    <div class="performance-graphs">
+                        <div class="frappe-card chart-column-container line-chart-container">
+                            <div class="title-area">
+                                <h4 class="card-title">Patient with Doctor</h4>
+                            </div>
+                            <div class="list-row-container" tabindex="1">
+                                <header class="level list-row-head text-muted">
+                                    <div class="level-left list-header-subject">
+                                        <div class="list-row-col ellipsis list-subject level  ">
+                                            <input class="level-item list-check-all hidden-xs" type="checkbox"
+                                                title="Select All">
+                                            <span class="level-item">Full Name</span>
+                                        </div>
+                                        <div class="list-row-col ellipsis hidden-xs  ">
+                                            <span>DOB</span>
+                                        </div>
+                                        <div class="list-row-col ellipsis hidden-xs  ">
+                                            <span>Age</span>
+                                        </div>
+
+                                        <div class="list-row-col ellipsis hidden-xs  ">
+                                            <span>Gender</span>
+                                        </div>
+
+                                        <div class="list-row-col ellipsis hidden-xs  ">
+                                            <span>Encounter Number</span>
+                                        </div>
+                                        <div class="list-row-col ellipsis hidden-xs  ">
+                                            <span>Start Time</span>
+                                        </div>
+                                        <div class="list-row-col ellipsis hidden-xs  ">
+                                            <span>End Time</span>
+                                        </div>
+                                    </div>
+                                    <div class="level-left checkbox-actions" style="display: none;">
+                                        <div class="level list-subject">
+                                            <input class="level-item list-check-all hidden-xs" type="checkbox"
+                                                title="Select All">
+                                            <span class="level-item list-header-meta"></span>
+                                        </div>
+                                    </div>
+                                </header>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+            </div>
+
+
+            <div class="row user-profile">
+                <div class="col-md-12">
+                    <div class="performance-graphs">
+                        <div class="frappe-card chart-column-container line-chart-container">
+                            <div class="title-area">
+                                <h4 class="card-title">Patients in Queue</h4>
+                            </div>
+                            <div class="list-row-container" tabindex="1">
+                                <header class="level list-row-head text-muted">
+                                    <div class="level-left list-header-subject">
+                                        <div class="list-row-col ellipsis list-subject level  ">
+                                            <input class="level-item list-check-all hidden-xs" type="checkbox"
+                                                title="Select All">
+                                            <span class="level-item">Full Name</span>
+                                        </div>
+                                        <div class="list-row-col ellipsis hidden-xs  ">
+                                            <span>DOB</span>
+                                        </div>
+                                        <div class="list-row-col ellipsis hidden-xs  ">
+                                            <span>Age</span>
+                                        </div>
+
+                                        <div class="list-row-col ellipsis hidden-xs  ">
+                                            <span>Gender</span>
+                                        </div>
+
+                                        <div class="list-row-col ellipsis hidden-xs  ">
+                                            <span>Encounter Number</span>
+                                        </div>
+                                        <div class="list-row-col ellipsis hidden-xs  ">
+                                            <span>Queue Position</span>
+                                        </div>
+                                        <div class="list-row-col ellipsis hidden-xs  ">
+                                            <span>Clinic</span>
+                                        </div>
+                                    </div>
+                                    <div class="level-left checkbox-actions" style="display: none;">
+                                        <div class="level list-subject">
+                                            <input class="level-item list-check-all hidden-xs" type="checkbox"
+                                                title="Select All">
+                                            <span class="level-item list-header-meta"></span>
+                                        </div>
+                                    </div>
+                                </header>
+                                {% for patient in patients_on_queue %}
+                                <div class="level list-row">
+                                    <div class="level-left ellipsis">
+
+                                        <div class="list-row-col ellipsis list-subject level">
+
+                                            <input class="level-item list-row-checkbox hidden-xs" type="checkbox"
+                                                data-name="{{patient.patient}}">
+
+
+                                            
+                                        </div>
+
+
+                                        <div class="list-row-col ellipsis hidden-xs ">
+                                            <span class="ellipsis"
+                                                title="Full Name">
+                                                <a class="filterable ellipsis" href="/app/patient/{{patient.patient}}">
+                                                    {{patient.patient}}
+                                                </a>
+                                            </span>
+                                        </div>
+
+
+                                        <div class="list-row-col ellipsis hidden-xs ">
+                                            <span class="ellipsis" title="Patient">
+                                                <a class="filterable ellipsis" data-filter="gch_patient_age,=,{{patient.gch_patient_age}}">
+                                                    {{patient.patient}}
+                                                </a>
+                                            </span>
+                                        </div>
+
+                                        <div class="list-row-col ellipsis hidden-xs ">
+                                            <span class="ellipsis" title="Service Unit: {{patient.encounter}}">
+                                                <a class="filterable ellipsis"
+                                                    data-filter="encounter,=,{{patient.encounter}}">
+                                                    {{patient.patient}}
+                                                </a>
+                                            </span>
+                                        </div>
+
+
+                                        <div class="list-row-col ellipsis hidden-xs ">
+                                            <span class="ellipsis" title="Service Unit">
+                                                <a class="filterable ellipsis"
+                                                    data-filter="service_unit,=,{{patient.service_unit}}">
+                                                    {{patient.patient}}
+                                                </a>
+                                            </span>
+                                        </div>
+                                        <div class="list-row-col ellipsis hidden-xs ">
+                                            <span class="ellipsis" title="Name">
+                                                <a class="filterable ellipsis" data-filter="queue_position,=,{{patient.queue_position}}">
+
+                                                    {{patient.queue_position}}
+
+                                                </a>
+                                            </span>
+                                        </div>
+                                        <div class="list-row-col ellipsis hidden-xs ">
+                                            <span class="ellipsis" title="Name">
+                                                <a class="filterable ellipsis" data-filter="queue_position,=,{{patient.queue_position}}">
+
+                                                    {{patient.queue_position}}
+
+                                                </a>
+                                            </span>
+                                        </div>
+                                        <div class="list-row-col ellipsis hidden-xs ">
+                                            <span class="ellipsis" title="Name">
+                                                <a class="filterable ellipsis" data-filter="queue_position,=,{{patient.queue_position}}">
+
+                                                    {{patient.queue_position}}
+
+                                                </a>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                {% endfor %}
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+            </div>
+
+
+            <div class="row user-profile">
+                <div class="col-md-12">
+                    <div class="performance-graphs">
+                        <div class="frappe-card chart-column-container line-chart-container">
+                            <div class="title-area">
+                                <h4 class="card-title">Consultations Completed</h4>
+                            </div>
+                            <div class="list-row-container" tabindex="1">
+                                <header class="level list-row-head text-muted">
+                                    <div class="level-left list-header-subject">
+                                        <div class="list-row-col ellipsis list-subject level  ">
+                                            <input class="level-item list-check-all hidden-xs" type="checkbox"
+                                                title="Select All">
+                                            <span class="level-item">Full Name</span>
+                                        </div>
+                                        <div class="list-row-col ellipsis hidden-xs  ">
+                                            <span>DOB</span>
+                                        </div>
+                                        <div class="list-row-col ellipsis hidden-xs  ">
+                                            <span>Age</span>
+                                        </div>
+
+                                        <div class="list-row-col ellipsis hidden-xs  ">
+                                            <span>Gender</span>
+                                        </div>
+
+                                        <div class="list-row-col ellipsis hidden-xs  ">
+                                            <span>Encounter Number</span>
+                                        </div>
+                                        <div class="list-row-col ellipsis hidden-xs  ">
+                                            <span>Start Time</span>
+                                        </div>
+                                        <div class="list-row-col ellipsis hidden-xs  ">
+                                            <span>End Time</span>
+                                        </div>
+                                    </div>
+                                    <div class="level-left checkbox-actions" style="display: none;">
+                                        <div class="level list-subject">
+                                            <input class="level-item list-check-all hidden-xs" type="checkbox"
+                                                title="Select All">
+                                            <span class="level-item list-header-meta"></span>
+                                        </div>
+                                    </div>
+                                </header>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="row user-profile">
+                <div class="col-md-12">
+                    <div class="performance-graphs">
+                        <div class="frappe-card chart-column-container line-chart-container">
+                            <div class="title-area">
+                                <h4 class="card-title">Diagnostic Report Status</h4>
+                            </div>
+                            <div class="list-row-container" tabindex="1">
+                                <header class="level list-row-head text-muted">
+                                    <div class="level-left list-header-subject">
+                                        <div class="list-row-col ellipsis list-subject level  ">
+                                            <input class="level-item list-check-all hidden-xs" type="checkbox"
+                                                title="Select All">
+                                            <span class="level-item">Full Name</span>
+                                        </div>
+                                        <div class="list-row-col ellipsis hidden-xs  ">
+                                            <span>DOB</span>
+                                        </div>
+                                        <div class="list-row-col ellipsis hidden-xs  ">
+                                            <span>Age</span>
+                                        </div>
+
+                                        <div class="list-row-col ellipsis hidden-xs  ">
+                                            <span>Gender</span>
+                                        </div>
+
+                                        <div class="list-row-col ellipsis hidden-xs  ">
+                                            <span>Encounter Number</span>
+                                        </div>
+                                        <div class="list-row-col ellipsis hidden-xs  ">
+                                            <span>Result Status</span>
+                                        </div>
+
+                                    </div>
+                                    <div class="level-left checkbox-actions" style="display: none;">
+                                        <div class="level list-subject">
+                                            <input class="level-item list-check-all hidden-xs" type="checkbox"
+                                                title="Select All">
+                                            <span class="level-item list-header-meta"></span>
+                                        </div>
+                                    </div>
+                                </header>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+        <div class="layout-footer hide"></div>
+    </div>
+</div>

@@ -1,0 +1,67 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-05-08 07:11:36.980895",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "pharmacy",
+  "consultation_fees",
+  "lab",
+  "x_ray",
+  "procedures"
+ ],
+ "fields": [
+  {
+   "columns": 2,
+   "default": "910",
+   "fieldname": "pharmacy",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Pharmacy"
+  },
+  {
+   "columns": 2,
+   "default": "910",
+   "fieldname": "consultation_fees",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Consultation Fees"
+  },
+  {
+   "default": "390",
+   "fieldname": "lab",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Lab"
+  },
+  {
+   "columns": 2,
+   "default": "190",
+   "fieldname": "x_ray",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "X ray"
+  },
+  {
+   "columns": 2,
+   "default": "200",
+   "fieldname": "procedures",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Procedures"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-05-08 08:18:33.014277",
+ "modified_by": "Administrator",
+ "module": "Gch Custom",
+ "name": "Managed Care Splits Template",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

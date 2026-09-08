@@ -1,0 +1,191 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2023-06-05 09:50:44.052227",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "title",
+  "patient_details_section",
+  "patient_encounter",
+  "patient",
+  "age",
+  "date_of_birth",
+  "gender",
+  "column_break_7",
+  "bmi",
+  "height_in_centimeters",
+  "weight_in_kilograms",
+  "wardroom_nobed_no",
+  "admission_notes_section",
+  "admission_note",
+  "admission_notes_table",
+  "multidisciplinary_care_plan_section",
+  "multidisciplinary_care_plan_table",
+  "nursing_tools_section",
+  "nursing_tools",
+  "start_nursing_checklist",
+  "completed_nursing_tools"
+ ],
+ "fields": [
+  {
+   "fieldname": "patient_details_section",
+   "fieldtype": "Section Break",
+   "label": "Patient Details"
+  },
+  {
+   "fieldname": "patient_encounter",
+   "fieldtype": "Link",
+   "label": "Outpatient Encounter",
+   "options": "Patient Encounter"
+  },
+  {
+   "fetch_from": "patient_encounter.patient_name",
+   "fieldname": "patient",
+   "fieldtype": "Data",
+   "label": "Patient"
+  },
+  {
+   "fetch_from": "patient_encounter.patient_age",
+   "fieldname": "age",
+   "fieldtype": "Data",
+   "label": "Age"
+  },
+  {
+   "fetch_from": "patient_encounter.date_of_birth",
+   "fieldname": "date_of_birth",
+   "fieldtype": "Data",
+   "label": "Date of Birth"
+  },
+  {
+   "fetch_from": "patient_encounter.patient_sex",
+   "fieldname": "gender",
+   "fieldtype": "Link",
+   "label": "Gender",
+   "options": "Gender"
+  },
+  {
+   "fieldname": "column_break_7",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "patient_encounter.bmi",
+   "fieldname": "bmi",
+   "fieldtype": "Data",
+   "label": "BMI"
+  },
+  {
+   "fetch_from": "patient_encounter.height_in_centimeters",
+   "fieldname": "height_in_centimeters",
+   "fieldtype": "Data",
+   "label": "Height in Centimeters"
+  },
+  {
+   "fetch_from": "patient_encounter.weight_in_kilograms",
+   "fieldname": "weight_in_kilograms",
+   "fieldtype": "Data",
+   "label": "Weight in Kilograms"
+  },
+  {
+   "fieldname": "wardroom_nobed_no",
+   "fieldtype": "Data",
+   "label": "Ward/Room No/Bed No"
+  },
+  {
+   "fieldname": "admission_notes_section",
+   "fieldtype": "Section Break",
+   "label": "Admission Notes"
+  },
+  {
+   "fieldname": "title",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Title",
+   "no_copy": 1,
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Series",
+   "no_copy": 1,
+   "options": "HLC-MDC-.YYYY.-",
+   "read_only": 1,
+   "set_only_once": 1
+  },
+  {
+   "fieldname": "admission_notes_table",
+   "fieldtype": "Table",
+   "hidden": 1,
+   "options": "Admission Notes",
+   "read_only": 1
+  },
+  {
+   "fieldname": "multidisciplinary_care_plan_section",
+   "fieldtype": "Section Break",
+   "label": "Multidisciplinary Care Plan"
+  },
+  {
+   "fieldname": "multidisciplinary_care_plan_table",
+   "fieldtype": "Table",
+   "label": "Multidisciplinary Care Plan Table",
+   "options": "Multidisciplinary Care Plan Test"
+  },
+  {
+   "fieldname": "nursing_tools_section",
+   "fieldtype": "Section Break",
+   "label": "Nursing Tools"
+  },
+  {
+   "fieldname": "nursing_tools",
+   "fieldtype": "Link",
+   "label": "Nursing Tools",
+   "options": "Nursing Checklist Template"
+  },
+  {
+   "fieldname": "start_nursing_checklist",
+   "fieldtype": "Button",
+   "label": "Start Nursing Checklist"
+  },
+  {
+   "fieldname": "completed_nursing_tools",
+   "fieldtype": "Table",
+   "label": "Completed Nursing Tools",
+   "options": "Completed Nursing Checklist Details",
+   "read_only": 1
+  },
+  {
+   "fieldname": "admission_note",
+   "fieldtype": "Small Text",
+   "label": "Admission Notes"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-06-13 13:54:35.407345",
+ "modified_by": "Administrator",
+ "module": "Gch Custom",
+ "name": "Multidisciplinary Test",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

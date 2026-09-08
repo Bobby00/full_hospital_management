@@ -1,0 +1,184 @@
+{
+ "actions": [],
+ "autoname": "naming_series:",
+ "creation": "2023-07-04 16:45:12.270676",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "patient_details_section",
+  "naming_series",
+  "patient_encounter",
+  "patient",
+  "patient_name",
+  "dob",
+  "age",
+  "column_break_7",
+  "date",
+  "gender",
+  "gender_hmtl",
+  "weight",
+  "weight_html",
+  "height",
+  "height_html",
+  "bmi",
+  "bmi_html",
+  "diet_history_section",
+  "diet_requests_details",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "patient_details_section",
+   "fieldtype": "Section Break",
+   "label": "Patient Details"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "options": "HLC-DIET-.YYYY.-"
+  },
+  {
+   "fieldname": "patient_encounter",
+   "fieldtype": "Link",
+   "label": "Patient Encounter",
+   "options": "Patient Encounter"
+  },
+  {
+   "fetch_from": "patient_encounter.patient",
+   "fieldname": "patient",
+   "fieldtype": "Link",
+   "label": "Patient",
+   "options": "Patient",
+   "read_only": 1
+  },
+  {
+   "bold": 1,
+   "fetch_from": "patient.patient_name",
+   "fieldname": "patient_name",
+   "fieldtype": "Data",
+   "label": "Patient Name",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "patient.dob",
+   "fieldname": "dob",
+   "fieldtype": "Date",
+   "hidden": 1,
+   "label": "Date of Birth"
+  },
+  {
+   "fetch_from": "patient_encounter.patient_age",
+   "fieldname": "age",
+   "fieldtype": "HTML",
+   "label": "Age",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_7",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Datetime",
+   "label": "Date"
+  },
+  {
+   "fetch_from": "patient.sex",
+   "fieldname": "gender",
+   "fieldtype": "Link",
+   "label": "Gender",
+   "options": "Gender",
+   "read_only": 1
+  },
+  {
+   "fieldname": "gender_hmtl",
+   "fieldtype": "HTML",
+   "label": "Gender"
+  },
+  {
+   "fetch_from": "patient_encounter.weight_in_kilograms",
+   "fieldname": "weight",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Weight In Kilograms"
+  },
+  {
+   "fieldname": "weight_html",
+   "fieldtype": "HTML",
+   "label": "Weight",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "patient_encounter.height_in_centimeters",
+   "fieldname": "height",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Height in Centimeters"
+  },
+  {
+   "fieldname": "height_html",
+   "fieldtype": "HTML",
+   "label": "Height",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "patient_encounter.bmi",
+   "fieldname": "bmi",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "BMI"
+  },
+  {
+   "fieldname": "bmi_html",
+   "fieldtype": "HTML",
+   "label": "BMI"
+  },
+  {
+   "fieldname": "diet_history_section",
+   "fieldtype": "Section Break",
+   "label": "Diet History"
+  },
+  {
+   "fieldname": "diet_requests_details",
+   "fieldtype": "Table",
+   "label": "Diet Requests Details",
+   "options": "Diet Requests Details"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Diet Requests Form",
+   "print_hide": 1,
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2023-07-04 16:59:27.907909",
+ "modified_by": "Administrator",
+ "module": "Gch Custom",
+ "name": "Diet Requests Form",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

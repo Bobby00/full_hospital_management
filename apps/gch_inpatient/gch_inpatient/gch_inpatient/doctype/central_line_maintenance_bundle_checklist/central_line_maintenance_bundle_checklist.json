@@ -1,0 +1,243 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:GCH-CLMB-{####}",
+ "creation": "2023-12-13 09:50:01.170630",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "encounter_details_section",
+  "patient_encounter",
+  "is_inpatient",
+  "inpatient_record",
+  "patient",
+  "patient_name",
+  "uhid",
+  "column_break_7",
+  "gender",
+  "wardroombed",
+  "consulting_doctor",
+  "date",
+  "procedure_items_section",
+  "items",
+  "section_break_2",
+  "central_line_day",
+  "need_for_central_line",
+  "gauze_and_tape_change",
+  "transparent_dressing_less_than_a_week",
+  "soiled_catheter_changed",
+  "each_time_the_line_is_used_during_the_day_section",
+  "appropriate_hand_hygiene",
+  "sterile_gloves_or_no_touch",
+  "chlorhexidine_solution_used",
+  "push_pause_technique",
+  "paranteral_nutrition",
+  "checked_by",
+  "section_break_15",
+  "html_template",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "central_line_day",
+   "fieldtype": "Date",
+   "label": "Central Line Day"
+  },
+  {
+   "fieldname": "need_for_central_line",
+   "fieldtype": "Select",
+   "label": "The need for a central line or possible date of removal was discussed during the patient round today",
+   "options": "\nYES\nNO"
+  },
+  {
+   "fieldname": "gauze_and_tape_change",
+   "fieldtype": "Select",
+   "label": "If gauze and tape dressing was used, the dressing has been changed today.",
+   "options": "\nYES\nNO"
+  },
+  {
+   "fieldname": "transparent_dressing_less_than_a_week",
+   "fieldtype": "Select",
+   "label": "If transparent dressing was used, the catheter dressing is not more than seven days old",
+   "options": "\nYES\nNO"
+  },
+  {
+   "fieldname": "soiled_catheter_changed",
+   "fieldtype": "Select",
+   "label": "If a catheter dressing is soiled or collecting moisture underneath it, it has been changed.",
+   "options": "\nYES\nNO"
+  },
+  {
+   "fieldname": "each_time_the_line_is_used_during_the_day_section",
+   "fieldtype": "Section Break",
+   "label": "Each time the line is used during the day"
+  },
+  {
+   "fieldname": "appropriate_hand_hygiene",
+   "fieldtype": "Select",
+   "label": "Appropriate hand hygiene is performed prior to use of the central line",
+   "options": "\nYES\nNO"
+  },
+  {
+   "fieldname": "sterile_gloves_or_no_touch",
+   "fieldtype": "Select",
+   "label": "Healthcare worker either wore sterile gloves prior to using the central line or use clean gloves and a sterile no-touch technique to access.",
+   "options": "\nYES\nNO"
+  },
+  {
+   "fieldname": "push_pause_technique",
+   "fieldtype": "Select",
+   "label": "A pulsated flushing technique (push-pause technique) to flush the line.",
+   "options": "\nYES\nNO"
+  },
+  {
+   "fieldname": "paranteral_nutrition",
+   "fieldtype": "Select",
+   "label": "If parenteral nutrition is being administered, this is done on its own dedicated lumen",
+   "options": "\nYES\nNO"
+  },
+  {
+   "fetch_from": "user.full_name",
+   "fieldname": "checked_by",
+   "fieldtype": "Link",
+   "label": "Checked by",
+   "options": "User"
+  },
+  {
+   "fieldname": "html_template",
+   "fieldtype": "HTML",
+   "label": "HTML_TEMPLATE"
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_2",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "chlorhexidine_solution_used",
+   "fieldtype": "Select",
+   "label": "The healthcare worker cleaned the dressing area with a 0.5% to 2% chlorhexidine solution and allowed it to dry prior to accessing the line",
+   "options": "\nYES\nNO"
+  },
+  {
+   "fieldname": "section_break_15",
+   "fieldtype": "Section Break",
+   "label": "Central Line Maintenance Bundle Checklist"
+  },
+  {
+   "fieldname": "patient",
+   "fieldtype": "Link",
+   "label": "Patient",
+   "options": "Patient"
+  },
+  {
+   "depends_on": "eval:doc.is_inpatient == 1",
+   "fieldname": "inpatient_record",
+   "fieldtype": "Link",
+   "label": "Inpatient Record",
+   "options": "Inpatient Record"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_inpatient",
+   "fieldtype": "Check",
+   "label": "Is Inpatient"
+  },
+  {
+   "fieldname": "wardroombed",
+   "fieldtype": "Data",
+   "label": "Ward/room/bed"
+  },
+  {
+   "fieldname": "consulting_doctor",
+   "fieldtype": "Data",
+   "label": "Consulting Doctor"
+  },
+  {
+   "fieldname": "encounter_details_section",
+   "fieldtype": "Section Break",
+   "label": "Encounter Details"
+  },
+  {
+   "fetch_from": "patient.patient_name",
+   "fieldname": "patient_name",
+   "fieldtype": "Data",
+   "label": "Patient Name"
+  },
+  {
+   "fetch_from": "patient.uhid_code",
+   "fieldname": "uhid",
+   "fieldtype": "Data",
+   "label": "UHID"
+  },
+  {
+   "fieldname": "column_break_7",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "patient.sex",
+   "fieldname": "gender",
+   "fieldtype": "Data",
+   "label": "Gender"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Central Line Maintenance Bundle Checklist",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "procedure_items_section",
+   "fieldtype": "Section Break",
+   "label": "Procedure Items"
+  },
+  {
+   "fieldname": "items",
+   "fieldtype": "Table",
+   "label": "Items",
+   "options": "Clinical Procedure Item"
+  },
+  {
+   "depends_on": "eval:doc.is_inpatient == 0 ",
+   "fieldname": "patient_encounter",
+   "fieldtype": "Link",
+   "label": "Patient Encounter",
+   "options": "Patient Encounter"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2024-05-29 09:16:07.879005",
+ "modified_by": "Administrator",
+ "module": "Gch Inpatient",
+ "name": "Central Line Maintenance Bundle Checklist",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

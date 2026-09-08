@@ -1,0 +1,20 @@
+{
+ "content": null,
+ "creation": "2022-11-22 13:33:17.162948",
+ "docstatus": 0,
+ "doctype": "Page",
+ "idx": 0,
+ "modified": "2024-11-13 12:48:59.593809",
+ "modified_by": "Administrator",
+ "module": "Gch Custom",
+ "name": "patient-dashboard",
+ "owner": "Administrator",
+ "page_name": "Patient Dashboard",
+ "restrict_to_domain": "Healthcare",
+ "roles": [],
+ "script": null,
+ "standard": "Yes",
+ "style": null,
+ "system_page": 0,
+ "title": "Patient's Dashboard"
+}

@@ -1,0 +1,58 @@
+{
+ "actions": [],
+ "creation": "2021-07-28 08:49:02.029914",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "assessment_type",
+  "assessment",
+  "score",
+  "comments"
+ ],
+ "fields": [
+  {
+   "fieldname": "assessment_type",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Assessment Type",
+   "options": "Patient Assessment Template",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "score",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Score",
+   "non_negative": 1,
+   "read_only": 1
+  },
+  {
+   "fetch_from": "score_guideline.score",
+   "fieldname": "assessment",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Assessment",
+   "options": "Patient Assessment",
+   "read_only": 1
+  },
+  {
+   "fieldname": "comments",
+   "fieldtype": "Small Text",
+   "label": "Comments"
+  }
+ ],
+ "istable": 1,
+ "links": [],
+ "modified": "2021-07-29 11:06:36.117039",
+ "modified_by": "Administrator",
+ "module": "Gch Custom",
+ "name": "Patient Assessments",
+ "owner": "Administrator",
+ "permissions": [],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

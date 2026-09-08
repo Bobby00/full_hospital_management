@@ -1,0 +1,341 @@
+{
+ "actions": [],
+ "autoname": "format:GCH-NST-{####}",
+ "creation": "2023-12-14 11:09:58.220927",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "encounter_details_section",
+  "inpatient_record",
+  "patient",
+  "patient_name",
+  "uhid",
+  "column_break_8",
+  "gender",
+  "wardroombed",
+  "encounter_date",
+  "consulting_doctor",
+  "triage_section",
+  "weight",
+  "height",
+  "temperature",
+  "bmi_column",
+  "bmi",
+  "bsa",
+  "section_break_30",
+  "normal_weight",
+  "weight_for_ageweight_for_height_10_percentile_at_risk",
+  "weight_for_age_weight_for_height_third_percentile_underweight",
+  "weight_for_height_three_sd_severe_acute_malnutrition",
+  "weight_for_age_weight_for_height_eighty_fifth_percentile",
+  "unintentional_weight_loss_in_the_past_one_month",
+  "normal_food_intake",
+  "decreased_appetite_but_taking_usual_foods",
+  "use_of_nutritional_supplements_or_specialized_feeding",
+  "taking_very_little_food_or_liquids",
+  "diabetes",
+  "cancer",
+  "burns_over_ten_percent",
+  "icu_care",
+  "renal",
+  "cardiac",
+  "hepatitis",
+  "documented_nutritional_deficiencies",
+  "documented_food_allergies_and_intolerances",
+  "git_symptoms",
+  "complementary_feeding_age",
+  "nutrition_screening_tool_section",
+  "nutrition_screening_tool_html",
+  "section_break_comments",
+  "comments",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "encounter_details_section",
+   "fieldtype": "Section Break",
+   "label": "Encounter Details"
+  },
+  {
+   "fieldname": "inpatient_record",
+   "fieldtype": "Link",
+   "label": "Inpatient Record",
+   "options": "Inpatient Record"
+  },
+  {
+   "fetch_from": "patient_encounter.patient",
+   "fieldname": "patient",
+   "fieldtype": "Link",
+   "label": "Patient",
+   "options": "Patient"
+  },
+  {
+   "fetch_from": "patient.patient_name",
+   "fieldname": "patient_name",
+   "fieldtype": "Data",
+   "label": "Patient Name"
+  },
+  {
+   "fetch_from": "patient.uhid_code",
+   "fieldname": "uhid",
+   "fieldtype": "Data",
+   "label": "UHID"
+  },
+  {
+   "fieldname": "column_break_8",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "patient.sex",
+   "fieldname": "gender",
+   "fieldtype": "Data",
+   "label": "Gender"
+  },
+  {
+   "fieldname": "wardroombed",
+   "fieldtype": "Data",
+   "label": "Ward/Room/Bed"
+  },
+  {
+   "default": "Today",
+   "fieldname": "encounter_date",
+   "fieldtype": "Date",
+   "label": "Encounter Date"
+  },
+  {
+   "fieldname": "consulting_doctor",
+   "fieldtype": "Data",
+   "label": "Consulting Doctor"
+  },
+  {
+   "fieldname": "triage_section",
+   "fieldtype": "Section Break",
+   "label": "TRIAGE"
+  },
+  {
+   "fieldname": "weight",
+   "fieldtype": "Data",
+   "label": "Weight"
+  },
+  {
+   "fieldname": "height",
+   "fieldtype": "Data",
+   "label": "Height"
+  },
+  {
+   "fieldname": "temperature",
+   "fieldtype": "Data",
+   "label": "Temperature"
+  },
+  {
+   "fieldname": "bmi_column",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "bmi",
+   "fieldtype": "Data",
+   "label": "BMI"
+  },
+  {
+   "fieldname": "bsa",
+   "fieldtype": "Data",
+   "label": "BSA"
+  },
+  {
+   "fieldname": "section_break_30",
+   "fieldtype": "Section Break",
+   "hidden": 1
+  },
+  {
+   "fieldname": "weight_for_ageweight_for_height_10_percentile_at_risk",
+   "fieldtype": "Select",
+   "label": "Weight for age/Weight for height 10 percentile (at_risk)",
+   "options": "\nYES\nNO"
+  },
+  {
+   "fieldname": "weight_for_age_weight_for_height_third_percentile_underweight",
+   "fieldtype": "Select",
+   "label": "Weight for age/ weight for height third percentile (underweight)",
+   "options": "\nYES\nNO"
+  },
+  {
+   "fieldname": "weight_for_height_three_sd_severe_acute_malnutrition",
+   "fieldtype": "Select",
+   "label": "Weight for height three sd (severe acute malnutrition)",
+   "options": "\nYES\nNO"
+  },
+  {
+   "fieldname": "weight_for_age_weight_for_height_eighty_fifth_percentile",
+   "fieldtype": "Select",
+   "label": "Weight for age/ weight for height eighty fifth percentile",
+   "options": "\nYES\nNO"
+  },
+  {
+   "fieldname": "unintentional_weight_loss_in_the_past_one_month",
+   "fieldtype": "Select",
+   "label": "Unintentional weight loss in the past one month",
+   "options": "\nYES\nNO"
+  },
+  {
+   "fieldname": "normal_food_intake",
+   "fieldtype": "Select",
+   "label": "Normal food intake",
+   "options": "\nYES\nNO"
+  },
+  {
+   "fieldname": "decreased_appetite_but_taking_usual_foods",
+   "fieldtype": "Select",
+   "label": "Decreased appetite but taking usual foods",
+   "options": "\nYES\nNO"
+  },
+  {
+   "fieldname": "use_of_nutritional_supplements_or_specialized_feeding",
+   "fieldtype": "Select",
+   "label": "Use of nutritional supplements or specialized feeding",
+   "options": "\nYES\nNO"
+  },
+  {
+   "fieldname": "taking_very_little_food_or_liquids",
+   "fieldtype": "Select",
+   "label": "Taking very little food or liquids",
+   "options": "\nYES\nNO"
+  },
+  {
+   "fieldname": "diabetes",
+   "fieldtype": "Select",
+   "label": "Diabetes",
+   "options": "\nYES\nNO"
+  },
+  {
+   "fieldname": "cancer",
+   "fieldtype": "Select",
+   "label": "Cancer",
+   "options": "\nYES\nNO"
+  },
+  {
+   "fieldname": "icu_care",
+   "fieldtype": "Select",
+   "label": "ICU care",
+   "options": "\nYES\nNO"
+  },
+  {
+   "fieldname": "renal",
+   "fieldtype": "Select",
+   "label": "Renal",
+   "options": "\nYES\nNO"
+  },
+  {
+   "fieldname": "cardiac",
+   "fieldtype": "Select",
+   "label": "Cardiac",
+   "options": "\nYES\nNO"
+  },
+  {
+   "fieldname": "hepatitis",
+   "fieldtype": "Select",
+   "label": "Hepatitis",
+   "options": "\nYES\nNO"
+  },
+  {
+   "fieldname": "section_break_comments",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "comments",
+   "fieldtype": "Small Text",
+   "label": "Comments"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "NUTRITION SCREENING TOOL",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "burns_over_ten_percent",
+   "fieldtype": "Select",
+   "label": "Burns > 10%",
+   "options": "\nYES\nNO"
+  },
+  {
+   "fieldname": "documented_nutritional_deficiencies",
+   "fieldtype": "Select",
+   "label": "Documented nutritional deficiencies",
+   "options": "\nYES\nNO"
+  },
+  {
+   "fieldname": "documented_food_allergies_and_intolerances",
+   "fieldtype": "Select",
+   "label": "Documented food allergies and intolerances",
+   "options": "\nYES\nNO"
+  },
+  {
+   "fieldname": "git_symptoms",
+   "fieldtype": "Select",
+   "label": "GIT symptoms",
+   "options": "\nYES\nNO"
+  },
+  {
+   "fieldname": "complementary_feeding_age",
+   "fieldtype": "Select",
+   "label": "Complementary feeding age",
+   "options": "\nYES\nNO"
+  },
+  {
+   "fieldname": "nutrition_screening_tool_section",
+   "fieldtype": "Section Break",
+   "label": "NUTRITION SCREENING TOOL"
+  },
+  {
+   "fieldname": "nutrition_screening_tool_html",
+   "fieldtype": "HTML"
+  },
+  {
+   "fieldname": "normal_weight",
+   "fieldtype": "Select",
+   "label": "Normal Weight",
+   "options": "\nYES\nNO"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2024-01-22 14:30:46.562379",
+ "modified_by": "Administrator",
+ "module": "Gch Inpatient",
+ "name": "NUTRITION SCREENING TOOL",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "All",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

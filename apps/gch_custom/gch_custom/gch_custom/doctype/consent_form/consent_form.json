@@ -1,0 +1,1423 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2023-02-10 02:52:56.780467",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "patient_details_section",
+  "naming_series",
+  "is_inpatient",
+  "patient_encounter",
+  "inpatient_record",
+  "patient",
+  "date_of_birth",
+  "consent_template",
+  "procedure_name",
+  "column_break_5",
+  "age",
+  "gender",
+  "date",
+  "time",
+  "section_break_11",
+  "html_12",
+  "yes_unique_spiritual_cultural_needs",
+  "no_unique_spiritual_cultural_needs",
+  "html_15",
+  "yes_requires_translator_and_provided",
+  "no_requires_translator_and_provided",
+  "html_18",
+  "blood_transfusion",
+  "general_anaesthesia",
+  "local_anaesthesia",
+  "sedation",
+  "other",
+  "html_24",
+  "doctor_name",
+  "practitioner_code",
+  "doctor_signature",
+  "add_doctor_comment",
+  "doctor_comment",
+  "anaesthetist_declaration_section",
+  "not_applicable_anaesthetist_2",
+  "html_28",
+  "anesthetist_name",
+  "anesthetist_signature",
+  "add_anesthetist_comment",
+  "anesthetist_comment",
+  "patient_consent_section",
+  "consent",
+  "i_consent_and_authorize_performance_of_the_procedure",
+  "i_refuse_to_consent_performance_of_the_procedure",
+  "i_consent_and_authorize_performance_anesthesia",
+  "i_refuse_to_consent_performance_anesthesia",
+  "terms",
+  "patientparentguardian_name",
+  "patient_signature",
+  "add_patient_comment",
+  "patient_comment",
+  "html_50",
+  "select_51",
+  "html_100",
+  "consent_relationship_to_patient",
+  "html_60",
+  "witness_section",
+  "witness_name",
+  "other_witness",
+  "other_witness_name",
+  "witness_signature",
+  "add_witness_comment",
+  "witness_comment",
+  "interpreter_declaration_section",
+  "not_applicable_interpreter",
+  "html_52",
+  "information_language",
+  "html_54",
+  "translation_language",
+  "html_56",
+  "interpreter_name",
+  "other_interpreter",
+  "other_interpreter_name",
+  "interpreter_signature",
+  "add_interpreter_comment",
+  "interpreter_comment",
+  "consent_revocation_section",
+  "i_revoke_consent_of_the_procedure",
+  "i_revoke_the_consent_for_anesthestia",
+  "revoked_by",
+  "other_consent_revoker",
+  "other_revoker",
+  "revoker_signature",
+  "add_revoker_comment",
+  "revoker_comment",
+  "information_and_consent_about_conscious_sedation_section",
+  "html_76",
+  "sedation_consent_parent_name",
+  "html_78",
+  "sedation_parent_signature",
+  "html_80",
+  "sedation_practitioner_signature",
+  "consent_for_release_of_medical_information_section",
+  "html_83",
+  "po_box",
+  "city",
+  "html_86",
+  "patient_data_from_date",
+  "patient_data_to_date",
+  "html_89",
+  "personal",
+  "lawyer",
+  "employer",
+  "html_93",
+  "insurance_report",
+  "police_report",
+  "lab_results",
+  "specify_other_purpose_for_data_release",
+  "other_purpose_for_data_release",
+  "html_99",
+  "patient_namelegal_representative",
+  "patientlegal_representative_signature",
+  "idpassport_number",
+  "relationship_to_patient",
+  "hospital_witness",
+  "consent_for_release_of_medical_information_covid_19_section",
+  "html_106",
+  "po_box_release_covid_data",
+  "city_release_covid_data",
+  "html_109",
+  "releasie",
+  "release_covid_data_to",
+  "html_112",
+  "covid_data_release_to_employer",
+  "name_of_employer",
+  "covid_data_release_to_other",
+  "other_name",
+  "html_117",
+  "fitness_to_work",
+  "other_use_for_covid_info_check",
+  "other_use_for_covid_info",
+  "html_121",
+  "patientlegal_representative_name",
+  "html_123",
+  "patient_legal_rep_signature_covid_data",
+  "id_passport_number_covid_data",
+  "relationship_to_patient_covid_data",
+  "hospital_witness_covid_data",
+  "witness_designation_covid_data",
+  "consent_for_post_mortem_section",
+  "html_130",
+  "doctor_name_post_mortem",
+  "doctor_signature_post_mortem",
+  "doctor_code_post_mortem",
+  "html_133",
+  "parent_name_post_mortem",
+  "parent_signature_post_mortem",
+  "html_136",
+  "religious_considerations_post_mortem",
+  "cultutal_considerations_mortem",
+  "financial_considerations_mortem",
+  "funeral_delay_mortem",
+  "known_death_cause_mortem",
+  "no_benefit_mortem",
+  "other_reason_no_consent_mortem",
+  "text_other_reason_mortem",
+  "html_145",
+  "witness_name_post_mortem",
+  "check_other_witness_name_post_mortem",
+  "other_witness_name_post_mortem",
+  "witness_signature_post_mortem",
+  "pre_test_and_post_test_counseling_consent_form_section",
+  "html_149",
+  "care_givers_name",
+  "html_151",
+  "father_relation_pre_test_consent",
+  "mother_relation_pre_test_consent",
+  "care_givers_age",
+  "care_givers_gender",
+  "care_givers_contacts",
+  "referred_by_pre_test_consent",
+  "care_givers_residence",
+  "reason_for_counseling",
+  "has_the_client_been_for_counseling_before",
+  "give_details_of_previous_counseling",
+  "what_was_the_outcome_of_the_counseling",
+  "html_163",
+  "anxious_pre_test_counseling",
+  "depressed_pre_test_counseling",
+  "elated_pre_test_counseling",
+  "normal_pre_test_counseling",
+  "life_crisis_pre_test_counseling",
+  "html_169",
+  "pre_test_hiv_counseling",
+  "post_test_hiv_counseling",
+  "adherence_counseling",
+  "comment_or_refer_if_client_is_not_ready_for_test",
+  "counselors_additional_comments_and_observations",
+  "session_duration",
+  "next_appointment",
+  "counselors_name",
+  "clients_name",
+  "clients_signature_counseling",
+  "patient_telemedicine_consent_and_disclaimer_section",
+  "html_telemedicine_consent",
+  "patient_signature_telemedicine",
+  "anaesthesia_consent_section",
+  "anaesthesia_consent",
+  "postop",
+  "doctor",
+  "language",
+  "parent_guardian",
+  "date_time",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "patient_details_section",
+   "fieldtype": "Section Break",
+   "label": "Patient Details"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "options": "HLC-CONSENT-.YYYY.-"
+  },
+  {
+   "fetch_from": "patient_encounter.patient_name",
+   "fieldname": "patient",
+   "fieldtype": "Data",
+   "label": "Patient",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "patient_encounter.patient_age",
+   "fieldname": "age",
+   "fieldtype": "Data",
+   "label": "Age",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "patient_encounter.date_of_birth",
+   "fieldname": "date_of_birth",
+   "fieldtype": "Data",
+   "label": "Date of Birth",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "patient_encounter.patient_sex",
+   "fieldname": "gender",
+   "fieldtype": "Link",
+   "label": "Gender",
+   "options": "Gender",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval:doc.consent_template == \"Procedure Consent Form\" || doc.consent_template == \"Theatre Procedure Consent Form\"",
+   "fieldname": "patient_consent_section",
+   "fieldtype": "Section Break",
+   "label": "Patient Consent"
+  },
+  {
+   "fieldname": "consent",
+   "fieldtype": "HTML",
+   "label": "Consent",
+   "options": "<h4>Parent/Guardian/Patient Declaration</h4>\n<p style=\"font-size: 15px;\">As the parent/guardian/patient, I confirm that</p>\n<ol style=\"font-size: 15px;\">\n  <li>The doctor, anesthetist, or other authorized health professional has explained to me about the procedure.</li>\n  <li>The risks, expected outcomes, benefits, and alternatives of this procedure, and what would happen if the procedure is not performed have been discussed with me, and my questions have been answered to my satisfaction and understanding.</li>\n  <li>I understand that anesthesia services may/will be required and the risks, expected outcomes, benefits, and alternatives, and what would happen if the anesthesia is not performed have been discussed with me and that my questions have been answered to my satisfaction and understanding.</li>\n  <li>I have been given written explanations of the procedure and anesthesia (where applicable).</li>\n  <li>I understand if any tissue, part, limb, or organ is removed, the hospital will dispose of it in accordance with the hospital-approved process.</li>\n  <li>I understand that photography, audio, or visual recordings for the purpose of diagnosis/treatment only may be made.</li>\n</ol>\n<br>\n<p style=\"font-size: 15px;\">Tick approved boxes below</p>"
+  },
+  {
+   "default": "0",
+   "fieldname": "i_consent_and_authorize_performance_of_the_procedure",
+   "fieldtype": "Check",
+   "label": "I consent and authorize performance of the procedure"
+  },
+  {
+   "default": "0",
+   "fieldname": "i_refuse_to_consent_performance_of_the_procedure",
+   "fieldtype": "Check",
+   "label": "I refuse to consent performance of the procedure"
+  },
+  {
+   "default": "0",
+   "fieldname": "i_consent_and_authorize_performance_anesthesia",
+   "fieldtype": "Check",
+   "label": "I consent and authorize performance anesthesia",
+   "mandatory_depends_on": "eval:doc.general_anaesthesia"
+  },
+  {
+   "default": "0",
+   "fieldname": "i_refuse_to_consent_performance_anesthesia",
+   "fieldtype": "Check",
+   "label": "I refuse to consent performance anesthesia"
+  },
+  {
+   "fieldname": "terms",
+   "fieldtype": "HTML",
+   "label": "terms",
+   "options": "<p style=\"font-size: 15px; color: #59BAE3; font-weight: 500;\"><em>If you have any questions concerning the proposed procedure/treatment, ask the doctor before signing this consent form. Read and thoroughly understand the written explanations of the procedure(s) (where applicable)</em></p> \n\n<hr>"
+  },
+  {
+   "fieldname": "patient_signature",
+   "fieldtype": "Signature",
+   "in_list_view": 1,
+   "label": "Patient/Parent/Guardian Signature"
+  },
+  {
+   "default": " ",
+   "fieldname": "doctor_signature",
+   "fieldtype": "Signature",
+   "label": "Doctor Signature"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Consent Form",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval:doc.is_inpatient == 0;",
+   "fieldname": "patient_encounter",
+   "fieldtype": "Link",
+   "label": "Patient Encounter",
+   "mandatory_depends_on": "eval:doc.is_inpatient == 0;",
+   "options": "Patient Encounter"
+  },
+  {
+   "default": "Today",
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Date",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "default": "Now",
+   "fieldname": "time",
+   "fieldtype": "Time",
+   "label": "Time",
+   "read_only": 1
+  },
+  {
+   "fieldname": "html_12",
+   "fieldtype": "HTML",
+   "options": "<p style=\"font-size: 15px; color: #59BAE3; font-weight: 500;\"><i>To be used for surgical procedures, and diagnostic procedures and investigations that require specific consent</i></p>\n\n<p style=\"font-size: 15px; color: #000000; font-weight: 600;\">\nProcedure:</p>\n\n<p style=\"font-size: 14px; font-weight: 400;\">\nAs the health professional performing the procedure, I confirm that:\n</p>\n\n<p style=\"font-size: 14px;\">1. Following evaluation, it has been determined that the parent/guardian/patient</p>\n\n<p style=\"font-size: 14px;\"><i> - Has unique individual/Spiritual cultural needs that have been addressed</i></p>"
+  },
+  {
+   "depends_on": "eval:doc.consent_template == \"Procedure Consent Form\" || doc.consent_template == \"Theatre Procedure Consent Form\" ",
+   "fieldname": "section_break_11",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "yes_unique_spiritual_cultural_needs",
+   "fieldtype": "Check",
+   "label": "Yes"
+  },
+  {
+   "default": "0",
+   "fieldname": "no_unique_spiritual_cultural_needs",
+   "fieldtype": "Check",
+   "label": "No"
+  },
+  {
+   "fieldname": "html_15",
+   "fieldtype": "HTML",
+   "options": "<p style=\"font-size: 14px;\"><i>- Requires a translator and one has been provided</i></p>"
+  },
+  {
+   "default": "0",
+   "fieldname": "yes_requires_translator_and_provided",
+   "fieldtype": "Check",
+   "label": "Yes"
+  },
+  {
+   "default": "0",
+   "fieldname": "no_requires_translator_and_provided",
+   "fieldtype": "Check",
+   "label": "No"
+  },
+  {
+   "fieldname": "html_18",
+   "fieldtype": "HTML",
+   "options": "<p style=\"font-size: 14px;\">2. I am a health professional with appropriate knowledge &amp; authorized to perform the proposed procedure</p>\n\n<p style=\"font-size: 14px;\">3. I have explained to the patient/guardian/patient the procedure and in particular, I have explained:</p>\n\n<ul style=\"font-size: 14px;\">\n    <li>The intended benefits of the procedure</li>\n    <li>What the treatment or procedure is likely to involve</li>\n    <li>The possible risks involved</li>\n    <li>Probability of its success and the possible consequences of not having this procedure</li>\n    <li>The benefits and risks of any available alternative treatments/procedures (including no treatment) and</li>\n    <li>Any particular concerns of this patient/parent/guardian</li>\n</ul>\n\n<p style=\"font-size: 14px;\">4. I have explained any extra procedures that might become necessary during the procedure such as:</p>"
+  },
+  {
+   "default": "0",
+   "fieldname": "blood_transfusion",
+   "fieldtype": "Check",
+   "label": "Blood transfusion"
+  },
+  {
+   "default": "0",
+   "fieldname": "general_anaesthesia",
+   "fieldtype": "Check",
+   "label": "General Anaesthesia"
+  },
+  {
+   "default": "0",
+   "fieldname": "local_anaesthesia",
+   "fieldtype": "Check",
+   "label": "Local Anaesthesia"
+  },
+  {
+   "default": "0",
+   "fieldname": "sedation",
+   "fieldtype": "Check",
+   "label": "Sedation"
+  },
+  {
+   "fieldname": "other",
+   "fieldtype": "Data",
+   "label": "Other (state)"
+  },
+  {
+   "fieldname": "html_24",
+   "fieldtype": "HTML",
+   "options": "<p style=\"font-size: 14px;\">5. I have given the patient written information regarding the procedure</p>\n\n<p style=\"font-size: 14px;\">6. I am of the opinion that the patient/parent/guardian has understood the information</p>\n\n<hr>"
+  },
+  {
+   "fetch_from": "patient_encounter.practitioner",
+   "fieldname": "doctor_name",
+   "fieldtype": "Link",
+   "label": "Doctor Name",
+   "options": "Healthcare Practitioner"
+  },
+  {
+   "depends_on": "eval:doc.consent_template == \"Procedure Consent Form\"",
+   "fieldname": "anaesthetist_declaration_section",
+   "fieldtype": "Section Break",
+   "label": "Anaesthetist Declaration"
+  },
+  {
+   "depends_on": "eval:!doc.not_applicable_anaesthetist_2",
+   "fieldname": "html_28",
+   "fieldtype": "HTML",
+   "options": "<p style=\"font-size: 14px;\">As the health professional performing the procedure, I confirm that:</p>\n\n<p style=\"font-size: 14px;\">1. I am a health professional with appropriate knowledge and authorized to perform the proposed procedure</p>\n\n<p style=\"font-size: 14px;\">2. I have completed a thorough preoperative anesthetic evaluation of the patient</p>\n\n<p style=\"font-size: 14px;\">3. I have explained to the patient/guardian/patient the procedure and in particular, I have explained:</p>\n\n<ul style=\"font-size: 14px;\">\n    <li>The intended benefits of the procedure</li>\n    <li>What the treatment or procedure is likely to involve</li>\n    <li>The possible risks involved</li>\n    <li>Probability of its success and the possible consequences of not having this procedure</li>\n    <li>The benefits and risks of any available alternative treatments/procedures (including no treatment) and</li>\n    <li>Any particular concerns of this patient/parent/guardian</li>\n</ul>\n\n<p style=\"font-size: 14px;\">4. I have given the patient written information regarding the planned anesthesia </p>\n\n<p style=\"font-size: 14px;\">5. I am of the opinion that the patient/parent/guardian has understood the information</p>\n\n<hr>\n"
+  },
+  {
+   "fieldname": "patientparentguardian_name",
+   "fieldtype": "Data",
+   "label": "Patient/Parent/Guardian Name"
+  },
+  {
+   "depends_on": "eval:!doc.not_applicable_anaesthetist_2",
+   "fieldname": "anesthetist_name",
+   "fieldtype": "Link",
+   "label": "Anesthetist Name",
+   "mandatory_depends_on": "eval:!doc.not_applicable_anaesthetist_2 && doc.consent_template == \"Procedure Consent Form\"",
+   "options": "Healthcare Practitioner"
+  },
+  {
+   "default": " ",
+   "depends_on": "eval:!doc.not_applicable_anaesthetist_2",
+   "fieldname": "anesthetist_signature",
+   "fieldtype": "Signature",
+   "label": "Anesthetist Signature",
+   "mandatory_depends_on": "eval:!doc.not_applicable_anaesthetist_2 && doc.consent_template == \"Procedure Consent Form\""
+  },
+  {
+   "default": "0",
+   "fieldname": "add_doctor_comment",
+   "fieldtype": "Check",
+   "label": "Add Comment?"
+  },
+  {
+   "depends_on": "eval:doc.add_doctor_comment",
+   "fieldname": "doctor_comment",
+   "fieldtype": "Small Text",
+   "label": "Doctor comment"
+  },
+  {
+   "default": "0",
+   "depends_on": "eval:!doc.not_applicable_anaesthetist_2",
+   "fieldname": "add_anesthetist_comment",
+   "fieldtype": "Check",
+   "label": "Add Comment?"
+  },
+  {
+   "depends_on": "eval:doc.add_anesthetist_comment",
+   "fieldname": "anesthetist_comment",
+   "fieldtype": "Small Text",
+   "label": "Anesthetist Comment"
+  },
+  {
+   "default": "0",
+   "fieldname": "add_patient_comment",
+   "fieldtype": "Check",
+   "label": "Add Comment?"
+  },
+  {
+   "depends_on": "eval:doc.add_patient_comment",
+   "fieldname": "patient_comment",
+   "fieldtype": "Small Text",
+   "label": "Patient/Parent/Guardian Comment"
+  },
+  {
+   "depends_on": "eval:doc.consent_template == \"Procedure Consent Form\"",
+   "fieldname": "witness_section",
+   "fieldtype": "Section Break",
+   "label": "Witness Section"
+  },
+  {
+   "fieldname": "witness_name",
+   "fieldtype": "Link",
+   "label": "Witness Name",
+   "options": "Healthcare Practitioner"
+  },
+  {
+   "default": "0",
+   "fieldname": "other_witness",
+   "fieldtype": "Check",
+   "label": "Other (not registered on system)"
+  },
+  {
+   "depends_on": "eval:doc.other_witness",
+   "fieldname": "other_witness_name",
+   "fieldtype": "Data",
+   "label": "Other Witness Name"
+  },
+  {
+   "fieldname": "witness_signature",
+   "fieldtype": "Signature",
+   "label": "Witness Signature"
+  },
+  {
+   "depends_on": "eval:doc.consent_template == \"Procedure Consent Form\" || doc.consent_template == \"Theatre Procedure Consent Form\"",
+   "fieldname": "interpreter_declaration_section",
+   "fieldtype": "Section Break",
+   "label": "Interpreter Declaration"
+  },
+  {
+   "depends_on": "eval:!doc.not_applicable_interpreter",
+   "fieldname": "html_52",
+   "fieldtype": "HTML",
+   "options": "<p style=\"font-size: 14px;\">I have given translation to the patient/parent/guardian and assisted in explaining the verbal and written information given by the doctor and in my opinion the patient/parent/guardian understood the issues being discussed.</p>\n\n<p style=\"font-size: 14px;\">I translated the information from:</p>"
+  },
+  {
+   "depends_on": "eval:!doc.not_applicable_interpreter",
+   "fieldname": "information_language",
+   "fieldtype": "Link",
+   "label": "Information Language",
+   "mandatory_depends_on": "eval:!doc.not_applicable_interpreter",
+   "options": "Language"
+  },
+  {
+   "depends_on": "eval:!doc.not_applicable_interpreter",
+   "fieldname": "html_54",
+   "fieldtype": "HTML",
+   "options": "<p style=\"font-size: 14px;\">To:</p>"
+  },
+  {
+   "depends_on": "eval:!doc.not_applicable_interpreter",
+   "fieldname": "translation_language",
+   "fieldtype": "Link",
+   "label": "Translation Language",
+   "mandatory_depends_on": "eval:!doc.not_applicable_interpreter",
+   "options": "Language"
+  },
+  {
+   "depends_on": "eval:!doc.not_applicable_interpreter",
+   "fieldname": "html_56",
+   "fieldtype": "HTML",
+   "options": "<br>\n<hr>"
+  },
+  {
+   "depends_on": "eval:!doc.not_applicable_interpreter",
+   "fieldname": "interpreter_name",
+   "fieldtype": "Link",
+   "label": "Interpreter Name",
+   "mandatory_depends_on": "eval:!doc.not_applicable_interpreter && doc.consent_template == \"Procedure Consent Form\"",
+   "options": "Healthcare Practitioner"
+  },
+  {
+   "default": "0",
+   "depends_on": "eval:!doc.not_applicable_interpreter",
+   "fieldname": "other_interpreter",
+   "fieldtype": "Check",
+   "label": "Other Interpreter (not registered on system)"
+  },
+  {
+   "depends_on": "eval: doc.other_interpreter",
+   "fieldname": "other_interpreter_name",
+   "fieldtype": "Data",
+   "label": "Other Interpreter Name"
+  },
+  {
+   "depends_on": "eval:!doc.not_applicable_interpreter",
+   "fieldname": "interpreter_signature",
+   "fieldtype": "Signature",
+   "label": "Interpreter Signature",
+   "mandatory_depends_on": "eval:!doc.not_applicable_interpreter && doc.consent_template == \"Procedure Consent Form\""
+  },
+  {
+   "depends_on": "eval:doc.consent_template == \"Procedure Consent Form\" || doc.consent_template == \"Theatre Procedure Consent Form\"",
+   "fieldname": "consent_revocation_section",
+   "fieldtype": "Section Break",
+   "label": "Consent Revocation"
+  },
+  {
+   "default": "0",
+   "fieldname": "i_revoke_consent_of_the_procedure",
+   "fieldtype": "Check",
+   "label": "I revoke consent of the procedure"
+  },
+  {
+   "default": "0",
+   "fieldname": "i_revoke_the_consent_for_anesthestia",
+   "fieldtype": "Check",
+   "label": "I revoke the consent for anesthestia"
+  },
+  {
+   "fieldname": "revoked_by",
+   "fieldtype": "Link",
+   "label": "Revoked by?",
+   "options": "Healthcare Practitioner"
+  },
+  {
+   "default": "0",
+   "fieldname": "other_consent_revoker",
+   "fieldtype": "Check",
+   "label": "Other (not registered on system)"
+  },
+  {
+   "depends_on": "eval: doc.other_consent_revoker",
+   "fieldname": "other_revoker",
+   "fieldtype": "Data",
+   "label": "Other Revoker"
+  },
+  {
+   "fieldname": "revoker_signature",
+   "fieldtype": "Signature",
+   "label": "Revoker Signature"
+  },
+  {
+   "default": "0",
+   "depends_on": "eval:!doc.not_applicable_interpreter",
+   "fieldname": "add_interpreter_comment",
+   "fieldtype": "Check",
+   "label": "Add Comment?"
+  },
+  {
+   "depends_on": "eval:doc.add_interpreter_comment",
+   "fieldname": "interpreter_comment",
+   "fieldtype": "Small Text",
+   "label": "Interpreter Comment"
+  },
+  {
+   "default": "0",
+   "fieldname": "add_revoker_comment",
+   "fieldtype": "Check",
+   "label": "Add Comment?"
+  },
+  {
+   "depends_on": "eval: doc.add_revoker_comment",
+   "fieldname": "revoker_comment",
+   "fieldtype": "Small Text",
+   "label": "Revoker Comment"
+  },
+  {
+   "default": "0",
+   "fieldname": "add_witness_comment",
+   "fieldtype": "Check",
+   "label": "Add Comment?"
+  },
+  {
+   "depends_on": "eval:doc.add_witness_comment",
+   "fieldname": "witness_comment",
+   "fieldtype": "Small Text",
+   "label": "Witness Comment"
+  },
+  {
+   "fieldname": "consent_template",
+   "fieldtype": "Link",
+   "label": "Consent Template",
+   "options": "Consent Template",
+   "reqd": 1
+  },
+  {
+   "depends_on": "eval:doc.consent_template == \"Dental Conscious Sedation Consent Form\"",
+   "fieldname": "information_and_consent_about_conscious_sedation_section",
+   "fieldtype": "Section Break",
+   "label": "Information and Consent About Conscious Sedation"
+  },
+  {
+   "fieldname": "html_76",
+   "fieldtype": "HTML",
+   "options": "<h5 style=\"color: #3678FC;\">Consent for Sedation</h5>\n\n<ol style=\"font-size: 16px;\">\n<li>I have been informed and I understand the purpose and the nature of the dental or surgical procedure.</li>\n\n<li>My dental surgeon has carefully examined my child\u2019s mouth and alternatives to this treatment have been explained.</li>\n\n<li>To my knowledge I have given an accurate report of my child\u2019s medical history. I have also reported any prior allergic or unusual reactions to drugs, foods, insect bites, anaesthetics, pollen, dust, blood or body diseases, gum or skin reactions, abnormal bleeding, or any other conditions related to my child\u2019s health.</li>\n\n<li>\nI agree to the type of sedation, which has been explained to me.\n</li>\n\n<li>\nI understand that my child must <b>not eat or drink for 6 hours before sedation.</b>\n</li>\n\n<li>\nI agree to go directly home, my child will be <b>accompanied by a responsible adult</b> who will remain with him/her for at least 6 hours and to rest quietly there for at least 12 hours.\n</li>\n\n<li>\nFor a few hours after the sedation temporary loss of memory may occur.\n</li>\n\n</ol>\n\n<p style=\"font-size: 16px;\"><b>I have been given the opportunity to ask questions about sedation.</b></p>\n\n<p style=\"font-size: 16px;\">I have read this, have understood it and have a copy to take home. <b>I agree to this treatment.</b></p>\n\n<p style=\"font-size: 16px;\">I understand that my child is to have oral sedation via the mouth. I agree to follow the instructions.\n<br>\nWhile under sedation my child will have the required treatment that I have already consented to on the Treatment Plan.</p>\n"
+  },
+  {
+   "fieldname": "sedation_consent_parent_name",
+   "fieldtype": "Data",
+   "label": "Parent/Patient/Guardian Name"
+  },
+  {
+   "fieldname": "html_78",
+   "fieldtype": "HTML",
+   "options": "<br>\n<h6>Parent/Patient/Guardian Signature:</h6>"
+  },
+  {
+   "fieldname": "sedation_parent_signature",
+   "fieldtype": "Signature",
+   "label": "Parent/Patient/Guardian Signature"
+  },
+  {
+   "fieldname": "html_80",
+   "fieldtype": "HTML",
+   "options": "<br><br>\n<h6>Dentist's/Nurse's Signature:</h6>"
+  },
+  {
+   "fieldname": "sedation_practitioner_signature",
+   "fieldtype": "Signature",
+   "label": "Dentist's/Nurse's Signature"
+  },
+  {
+   "depends_on": "eval:doc.consent_template == \"Consent for Release of Medical Information\"",
+   "fieldname": "consent_for_release_of_medical_information_section",
+   "fieldtype": "Section Break",
+   "label": "Consent for Release of Medical Information"
+  },
+  {
+   "fieldname": "html_83",
+   "fieldtype": "HTML",
+   "options": "<p style=\"font-size: 16px;\">The undersigned hereby authorize Gertrude\u2019s Children\u2019s Hospital to release medical information on hospitalization/Medical Examinations/Treatment/Outpatient visits to:</p>"
+  },
+  {
+   "fieldname": "po_box",
+   "fieldtype": "Data",
+   "label": "P.O. BOX"
+  },
+  {
+   "fieldname": "city",
+   "fieldtype": "Link",
+   "label": "City",
+   "options": "Patient Town"
+  },
+  {
+   "fieldname": "html_86",
+   "fieldtype": "HTML",
+   "options": "<p style=\"font-size: 16px;\">Dates of hospitalization, Treatment, Visit information is to be released:-</p>\n"
+  },
+  {
+   "fieldname": "patient_data_from_date",
+   "fieldtype": "Date",
+   "label": "From"
+  },
+  {
+   "fieldname": "patient_data_to_date",
+   "fieldtype": "Date",
+   "label": "To"
+  },
+  {
+   "fieldname": "html_89",
+   "fieldtype": "HTML",
+   "options": "<p style=\"font-size: 16px;\">The specific information to be released to:\n<br>\n</p>\n<p style=\"font-size: 14px;\">Medical Report:</p>"
+  },
+  {
+   "default": "0",
+   "fieldname": "personal",
+   "fieldtype": "Check",
+   "label": "Personal"
+  },
+  {
+   "default": "0",
+   "fieldname": "lawyer",
+   "fieldtype": "Check",
+   "label": "Lawyer"
+  },
+  {
+   "default": "0",
+   "fieldname": "employer",
+   "fieldtype": "Check",
+   "label": "Employer"
+  },
+  {
+   "fieldname": "html_93",
+   "fieldtype": "HTML",
+   "options": "<p style=\"font-size: 16px;\">The above information will be used for the following purposes.</p>"
+  },
+  {
+   "default": "0",
+   "fieldname": "insurance_report",
+   "fieldtype": "Check",
+   "label": "Insurance Report"
+  },
+  {
+   "default": "0",
+   "fieldname": "police_report",
+   "fieldtype": "Check",
+   "label": "Police Report"
+  },
+  {
+   "default": "0",
+   "fieldname": "lab_results",
+   "fieldtype": "Check",
+   "label": "Lab Results"
+  },
+  {
+   "default": "0",
+   "fieldname": "specify_other_purpose_for_data_release",
+   "fieldtype": "Check",
+   "label": "Other (specify)"
+  },
+  {
+   "depends_on": "eval:doc.specify_other_purpose_for_data_release",
+   "fieldname": "other_purpose_for_data_release",
+   "fieldtype": "Data",
+   "label": "Other Purpose for Data Release"
+  },
+  {
+   "fieldname": "html_99",
+   "fieldtype": "HTML",
+   "options": "<hr>\n<hr>\n<p style=\"font-size: 16px;\">I understand that there are laws and regulations protecting the confidentiality of information contained in the medical records and the above information is only released by my permission.\n<br>\nI hereby acknowledge that this consent is truly voluntary and the authorization will automatically expire 60 days from today\u2019s date or sooner at my request.</p>"
+  },
+  {
+   "fieldname": "patient_namelegal_representative",
+   "fieldtype": "Data",
+   "label": "Patient Name/Legal Representative"
+  },
+  {
+   "fieldname": "patientlegal_representative_signature",
+   "fieldtype": "Signature",
+   "label": "Patient/Legal representative Signature"
+  },
+  {
+   "fieldname": "idpassport_number",
+   "fieldtype": "Data",
+   "label": "I.D/Passport Number"
+  },
+  {
+   "fieldname": "relationship_to_patient",
+   "fieldtype": "Data",
+   "label": "Relationship to Patient"
+  },
+  {
+   "fieldname": "hospital_witness",
+   "fieldtype": "Link",
+   "label": "Hospital Witness",
+   "options": "Healthcare Practitioner"
+  },
+  {
+   "depends_on": "eval:doc.consent_template == \"Consent for Release of Medical Information: Covid-19 Test Results\"",
+   "fieldname": "consent_for_release_of_medical_information_covid_19_section",
+   "fieldtype": "Section Break",
+   "label": "Consent for Release of Medical Information (Covid 19 Results)"
+  },
+  {
+   "fieldname": "html_106",
+   "fieldtype": "HTML",
+   "options": "<p style=\"font-size: 16px;\">The undersigned hereby authorize Gertrude\u2019s Children\u2019s Hospital to release medical information on my Covid-19 test results:</p>\n<hr>"
+  },
+  {
+   "fieldname": "po_box_release_covid_data",
+   "fieldtype": "Data",
+   "label": "P.O Box"
+  },
+  {
+   "fieldname": "city_release_covid_data",
+   "fieldtype": "Link",
+   "label": "City",
+   "options": "Patient Town"
+  },
+  {
+   "fieldname": "html_109",
+   "fieldtype": "HTML",
+   "options": "<p style=\"font-size: 16px;\">Dates of testing for which information is to be released:</p>"
+  },
+  {
+   "fieldname": "releasie",
+   "fieldtype": "Date",
+   "label": "From"
+  },
+  {
+   "fieldname": "release_covid_data_to",
+   "fieldtype": "Date",
+   "label": "To"
+  },
+  {
+   "fieldname": "html_112",
+   "fieldtype": "HTML",
+   "options": "<p style=\"font-size: 16px;\">\nThe specific information to be released to:\n</p>"
+  },
+  {
+   "default": "0",
+   "fieldname": "covid_data_release_to_employer",
+   "fieldtype": "Check",
+   "label": "Employer"
+  },
+  {
+   "depends_on": "eval:doc.covid_data_release_to_employer",
+   "fieldname": "name_of_employer",
+   "fieldtype": "Data",
+   "label": "Name of Employer"
+  },
+  {
+   "default": "0",
+   "fieldname": "covid_data_release_to_other",
+   "fieldtype": "Check",
+   "label": "Other"
+  },
+  {
+   "fieldname": "other_name",
+   "fieldtype": "Data",
+   "label": "Other Name"
+  },
+  {
+   "fieldname": "html_117",
+   "fieldtype": "HTML",
+   "options": "<p style=\"font-size: 16px;\">The above information will be used for the following purposes:</p>"
+  },
+  {
+   "default": "0",
+   "fieldname": "fitness_to_work",
+   "fieldtype": "Check",
+   "label": "Fitness to work"
+  },
+  {
+   "default": "0",
+   "fieldname": "other_use_for_covid_info_check",
+   "fieldtype": "Check",
+   "label": "Other (specify)"
+  },
+  {
+   "fieldname": "other_use_for_covid_info",
+   "fieldtype": "Data",
+   "label": "Other Use for Covid-19 Info"
+  },
+  {
+   "fieldname": "html_121",
+   "fieldtype": "HTML",
+   "options": "<p style=\"font-size: 16px;\">I understand that there are laws and regulations protecting the confidentiality of information contained in the medical records and the above information is only released by my permission.\n<br>\nI hereby acknowledge that this consent is truly voluntary, and the authorization will automatically expire 60 days from today\u2019s date or sooner at my request.</p>"
+  },
+  {
+   "fieldname": "patientlegal_representative_name",
+   "fieldtype": "Data",
+   "label": "Patient/Legal representative Name"
+  },
+  {
+   "fieldname": "html_123",
+   "fieldtype": "HTML",
+   "options": "<br><br>\n<p>Patient/Legal representative Signature:</p>"
+  },
+  {
+   "fieldname": "patient_legal_rep_signature_covid_data",
+   "fieldtype": "Signature",
+   "label": "Patient/Legal representative Signature"
+  },
+  {
+   "fieldname": "id_passport_number_covid_data",
+   "fieldtype": "Data",
+   "label": "ID/Passport Number"
+  },
+  {
+   "fieldname": "relationship_to_patient_covid_data",
+   "fieldtype": "Data",
+   "label": "Relationship to Patient"
+  },
+  {
+   "fieldname": "hospital_witness_covid_data",
+   "fieldtype": "Link",
+   "label": "Hospital Witness",
+   "options": "Healthcare Practitioner"
+  },
+  {
+   "fieldname": "witness_designation_covid_data",
+   "fieldtype": "Data",
+   "label": "Witness Designation"
+  },
+  {
+   "depends_on": "eval:doc.consent_template == \"Consent for Post Mortem\"",
+   "fieldname": "consent_for_post_mortem_section",
+   "fieldtype": "Section Break",
+   "label": "Consent for Post Mortem"
+  },
+  {
+   "fieldname": "html_130",
+   "fieldtype": "HTML",
+   "options": "<p style=\"font-size: 15px;\">I have explained to the Parents/Guardians of the deceased, the nature and importance of the post-mortem and the eventual report.</p>"
+  },
+  {
+   "fetch_from": "patient_encounter.practitioner",
+   "fieldname": "doctor_name_post_mortem",
+   "fieldtype": "Link",
+   "label": "Doctor's Name",
+   "options": "Healthcare Practitioner"
+  },
+  {
+   "default": " ",
+   "fieldname": "doctor_signature_post_mortem",
+   "fieldtype": "Signature",
+   "label": "Doctor's SIgnature"
+  },
+  {
+   "fieldname": "html_133",
+   "fieldtype": "HTML",
+   "options": "<br>\n<hr>\n<br>\n<p style=\"font-size: 15px;\">I, the Parent/Guardian of the deceased consent/do NOT consent for the post-mortem to be conducted on his/her body. The nature of the post-mortem has been explained to me by the doctor.</p>"
+  },
+  {
+   "fieldname": "parent_name_post_mortem",
+   "fieldtype": "Data",
+   "label": "Parent/Guardian Name"
+  },
+  {
+   "fieldname": "parent_signature_post_mortem",
+   "fieldtype": "Signature",
+   "label": "Parent/Guardian SIgnature"
+  },
+  {
+   "fieldname": "html_136",
+   "fieldtype": "HTML",
+   "options": "<br>\n<p style=\"font-size: 15px;\">I <b>do NOT consent</b> for the post-mortem due to:</p>"
+  },
+  {
+   "default": "0",
+   "fieldname": "religious_considerations_post_mortem",
+   "fieldtype": "Check",
+   "label": "Religious Considerations"
+  },
+  {
+   "default": "0",
+   "fieldname": "cultutal_considerations_mortem",
+   "fieldtype": "Check",
+   "label": "Cultural Considerations"
+  },
+  {
+   "default": "0",
+   "fieldname": "financial_considerations_mortem",
+   "fieldtype": "Check",
+   "label": "FInancial Considerations"
+  },
+  {
+   "default": "0",
+   "fieldname": "funeral_delay_mortem",
+   "fieldtype": "Check",
+   "label": "Delay in Funeral Arrangements"
+  },
+  {
+   "default": "0",
+   "fieldname": "known_death_cause_mortem",
+   "fieldtype": "Check",
+   "label": "Determined/Known Cause of Death"
+  },
+  {
+   "default": "0",
+   "fieldname": "no_benefit_mortem",
+   "fieldtype": "Check",
+   "label": "No Perceived Benefit of Post-mortem"
+  },
+  {
+   "default": "0",
+   "fieldname": "other_reason_no_consent_mortem",
+   "fieldtype": "Check",
+   "label": "Other (Specify)"
+  },
+  {
+   "depends_on": "eval:doc.other_reason_no_consent_mortem",
+   "fieldname": "text_other_reason_mortem",
+   "fieldtype": "Small Text",
+   "label": "Other Reason"
+  },
+  {
+   "fieldname": "html_145",
+   "fieldtype": "HTML",
+   "options": "<br><br>\n<p style=\"font-size: 15px;\">Witness Details:</p>"
+  },
+  {
+   "fieldname": "witness_name_post_mortem",
+   "fieldtype": "Link",
+   "label": "WItness Name",
+   "options": "Healthcare Practitioner"
+  },
+  {
+   "fieldname": "witness_signature_post_mortem",
+   "fieldtype": "Signature",
+   "label": "Witness Signature"
+  },
+  {
+   "depends_on": "eval:doc.consent_template == \"Pre-test and Post Test Counseling Consent Form\"",
+   "fieldname": "pre_test_and_post_test_counseling_consent_form_section",
+   "fieldtype": "Section Break",
+   "label": "Pre test and Post Test Counseling Consent Form"
+  },
+  {
+   "fieldname": "html_149",
+   "fieldtype": "HTML",
+   "options": "<center><h5>Department of Counseling and Psychotherapy</h5></center>"
+  },
+  {
+   "fieldname": "care_givers_name",
+   "fieldtype": "Data",
+   "label": "Care Giver's Name"
+  },
+  {
+   "fieldname": "html_151",
+   "fieldtype": "HTML",
+   "options": "<p style=\"font-size: 15px;\">Care GIver's Association to the patient (select appropriate):</p>"
+  },
+  {
+   "default": "0",
+   "fieldname": "father_relation_pre_test_consent",
+   "fieldtype": "Check",
+   "label": "Father"
+  },
+  {
+   "default": "0",
+   "fieldname": "mother_relation_pre_test_consent",
+   "fieldtype": "Check",
+   "label": "Mother"
+  },
+  {
+   "fieldname": "care_givers_age",
+   "fieldtype": "Data",
+   "label": "Care giver's age"
+  },
+  {
+   "fieldname": "care_givers_gender",
+   "fieldtype": "Link",
+   "label": "Care giver's gender",
+   "options": "Gender"
+  },
+  {
+   "fieldname": "care_givers_contacts",
+   "fieldtype": "Data",
+   "label": "Care giver's contacts"
+  },
+  {
+   "fieldname": "referred_by_pre_test_consent",
+   "fieldtype": "Data",
+   "label": "Referred by"
+  },
+  {
+   "fieldname": "care_givers_residence",
+   "fieldtype": "Data",
+   "label": "Care giver's residence"
+  },
+  {
+   "fieldname": "reason_for_counseling",
+   "fieldtype": "Data",
+   "label": "Reason for counseling"
+  },
+  {
+   "default": "0",
+   "fieldname": "has_the_client_been_for_counseling_before",
+   "fieldtype": "Check",
+   "label": "Has the client been for counseling before?"
+  },
+  {
+   "depends_on": "eval:doc.has_the_client_been_for_counseling_before",
+   "fieldname": "give_details_of_previous_counseling",
+   "fieldtype": "Small Text",
+   "label": "Give details of previous counseling"
+  },
+  {
+   "depends_on": "eval:doc.has_the_client_been_for_counseling_before",
+   "fieldname": "what_was_the_outcome_of_the_counseling",
+   "fieldtype": "Small Text",
+   "label": "What was the outcome of the counseling"
+  },
+  {
+   "fieldname": "html_163",
+   "fieldtype": "HTML",
+   "options": "<br><br>\n<p style=\"font-size: 15px;\">What is the emotional state of the client?</p>"
+  },
+  {
+   "default": "0",
+   "fieldname": "anxious_pre_test_counseling",
+   "fieldtype": "Check",
+   "label": "Anxious"
+  },
+  {
+   "default": "0",
+   "fieldname": "depressed_pre_test_counseling",
+   "fieldtype": "Check",
+   "label": "Depressed"
+  },
+  {
+   "default": "0",
+   "fieldname": "elated_pre_test_counseling",
+   "fieldtype": "Check",
+   "label": "Elated"
+  },
+  {
+   "default": "0",
+   "fieldname": "normal_pre_test_counseling",
+   "fieldtype": "Check",
+   "label": "Normal"
+  },
+  {
+   "fieldname": "life_crisis_pre_test_counseling",
+   "fieldtype": "Small Text",
+   "label": "Any life crisis"
+  },
+  {
+   "fieldname": "html_169",
+   "fieldtype": "HTML",
+   "options": "<br>\n<p style=\"font-size: 15px;\">Nature of session <b>(Tick appropriate)</b></p>\n"
+  },
+  {
+   "default": "0",
+   "fieldname": "pre_test_hiv_counseling",
+   "fieldtype": "Check",
+   "label": "Pre Test HIV counseling"
+  },
+  {
+   "default": "0",
+   "fieldname": "post_test_hiv_counseling",
+   "fieldtype": "Check",
+   "label": "Post Test HIV counseling"
+  },
+  {
+   "default": "0",
+   "fieldname": "adherence_counseling",
+   "fieldtype": "Check",
+   "label": "Adherence counseling"
+  },
+  {
+   "fieldname": "comment_or_refer_if_client_is_not_ready_for_test",
+   "fieldtype": "Small Text",
+   "label": "Comment or refer if client is not ready for test"
+  },
+  {
+   "fieldname": "counselors_additional_comments_and_observations",
+   "fieldtype": "Small Text",
+   "label": "Counselor's additional comments and observations"
+  },
+  {
+   "fieldname": "session_duration",
+   "fieldtype": "Data",
+   "label": "Session Duration"
+  },
+  {
+   "fieldname": "next_appointment",
+   "fieldtype": "Datetime",
+   "label": "Next appointment"
+  },
+  {
+   "fieldname": "counselors_name",
+   "fieldtype": "Link",
+   "label": "Counselor's name",
+   "options": "Healthcare Practitioner"
+  },
+  {
+   "fieldname": "clients_name",
+   "fieldtype": "Data",
+   "label": "Client's name"
+  },
+  {
+   "fieldname": "clients_signature_counseling",
+   "fieldtype": "Signature",
+   "label": "Client's signature"
+  },
+  {
+   "fetch_from": "patient_encounter.practitioner",
+   "fieldname": "practitioner_code",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Practitioner code"
+  },
+  {
+   "fetch_from": "patient_encounter.practitioner",
+   "fieldname": "doctor_code_post_mortem",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "doctor_code_post_mortem"
+  },
+  {
+   "default": "0",
+   "fieldname": "check_other_witness_name_post_mortem",
+   "fieldtype": "Check",
+   "label": "Other (not registered on system)"
+  },
+  {
+   "depends_on": "eval:doc.check_other_witness_name_post_mortem",
+   "fieldname": "other_witness_name_post_mortem",
+   "fieldtype": "Data",
+   "label": "Other Witness Name"
+  },
+  {
+   "fieldname": "procedure_name",
+   "fieldtype": "Link",
+   "label": "Procedure Name",
+   "options": "Clinical Procedure Template"
+  },
+  {
+   "fieldname": "html_50",
+   "fieldtype": "HTML",
+   "options": "<p>The parent/patient is unable to consent because: </p>"
+  },
+  {
+   "fieldname": "select_51",
+   "fieldtype": "Select",
+   "options": "\nMINOR\nUNCONSCIOUS\nDISABLED\nOTHER"
+  },
+  {
+   "fieldname": "html_100",
+   "fieldtype": "HTML",
+   "options": "<p>I, therefore, being (relationship to patient)</p>"
+  },
+  {
+   "fieldname": "consent_relationship_to_patient",
+   "fieldtype": "Link",
+   "options": "Parent Relation"
+  },
+  {
+   "fieldname": "html_60",
+   "fieldtype": "HTML",
+   "options": "<p>Consent for this patient.</p>"
+  },
+  {
+   "default": "0",
+   "fieldname": "not_applicable_interpreter",
+   "fieldtype": "Check",
+   "label": "Not Applicable?"
+  },
+  {
+   "default": "0",
+   "fieldname": "not_applicable_anaesthetist_2",
+   "fieldtype": "Check",
+   "label": "Not Applicable?"
+  },
+  {
+   "depends_on": "eval:doc.consent_template == \"Telemedicine Consent Form\"",
+   "fieldname": "patient_telemedicine_consent_and_disclaimer_section",
+   "fieldtype": "Section Break",
+   "label": "Patient Telemedicine Consent and Disclaimer"
+  },
+  {
+   "fieldname": "html_telemedicine_consent",
+   "fieldtype": "HTML",
+   "options": "<p>I hereby attest that I have requested and authorized Gertrude's Children's Hospital, to arrange an online tele-consult for me regarding the medical care prescribed by a doctor who is a medical staff of Gertrude's Children\u2019s Hospital. Via this consult, the Gertrude's Children's Hospital. Gertrude's Children's Hospital doctor will reach his or her conclusions regarding my medical diagnosis based solely on the information provided by me.</p>\n\n<p>To facilitate Gertrude's Children's Hospital doctor's tele-consult providing his or her opinion \u201c\tregarding my diagnosis, I authorize the doctor to use my medical history, pathology,\nlaboratory, and diagnostic results either available at Gertrude's Children's Hospital or from external sources. Gertrude's Children's Hospital is authorized, at its election, to obtain any of such records and information. I understand and agree that:</p>\n\n<ul>\n<li>Gertrude's Children's Hospital \u2019s tele-consult is solely based on the information provided by me and physician may not be aware of certain facts that may limit or affect his or her assessment or diagnosis of my condition and recommended treatment.</li>\n\n<li>The Gertrude's Children's Hospital tele-consult is very different from a regular face-to-face examination and that the Gertrude's Children\u2019s Hospital doctor providing the consult is limited by the written. Accordingly, the diagnosis I will receive is limited and provisional.</li>\n\n<li>Tele-consult is not intended to rcplace a ftill medical face-to-face evaluation by a doctor.</li>\n\n<li>The Gertrude's Children's Hospital doctor\u2019s opinion and conclusions will be communicated directly to me so that an informed decision can be made for my medical needs.</li>\n\n<li>Medical  information  will  be handled  with strict confidentiality, privacy and security; however, I understand there are risks associated with any electronic transfer process from one location to another.</li>\n\n<li>I solely assume the risk of the limitations set forth herein, and I further understand that no warranty or guarantee has been made to me concerning any particular result related to my condition or diagnosis.</li>\n\n</ul>\n\n<br><br>\n\n<h4>Disclaimer</h4>\n<p>I hereby completely and irrevocably release Gertrude's Children's Hospital medical staff members, physicians, and other health care professionals, insurance providers, administrators, officers, employees of any and all errors and omissions, known or unknown, foreseen or unforeseen, knowingly or unknowingly, as well as all claims, actions or damages arising from or in connection with the tele-consult.</p>\n\n<p>Furthermore, I agree that the Gertrude's Children's Hospital has no liability or responsibility for the accuracy or completeness of the medical information by the patient or for any errors iii the electronic transmission. As a condition to receiving the tele-consult service, I have read and acknowledge that I have given this consent of my own free will.\nBy accepting and agreeing to these terms, I acknowledge and agree to assume the risks of the\nlimitations set forth herein.</p>"
+  },
+  {
+   "fieldname": "patient_signature_telemedicine",
+   "fieldtype": "Signature",
+   "label": "Patient Signature"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_inpatient",
+   "fieldtype": "Check",
+   "label": "is Inpatient"
+  },
+  {
+   "depends_on": "eval:doc.is_inpatient ==1",
+   "fieldname": "inpatient_record",
+   "fieldtype": "Link",
+   "label": "Inpatient Record",
+   "mandatory_depends_on": "eval:doc.is_inpatient ==1",
+   "options": "Inpatient Record"
+  },
+  {
+   "fieldname": "anaesthesia_consent",
+   "fieldtype": "HTML",
+   "label": "Anaesthesia Consent",
+   "options": "<h3>Patient Information For General/Regional Anaesthesia</h3>\n<h4>\nGeneral Anaesthesia (GA)\n</h4>\n\n<p style=\"font-size: 16px;\"><strong>General Anaesthesia</strong> is administered either by giving medicine through a plastic tube inserted into your child's vein or gas through a mask or breathing tube. This keeps your child asleep fro the duration of surgery/medical procedure. If your child is very anxious or fretful, some sedation maybe given beforehand (pre-medication). In addition, painkillers and other medication may be given to facilitate surgery.</p>\n\n<h4>Are there any risks from GA?</h4>\n<p style=\"font-size: 16px;\">GA is generally very safe today, even for a young child. In general, anesthetic risks depend on your child's medical condition as well as type of surgery. Side effects are sometimes unavoidable but generally transient</p>\n<div class=\"row\">\n<div class=\"col-md-6\" style=\"font-size: 16px;\">\n<strong>Common Temporary side effect</strong><br>\n<ul>\n<li>Headache, dizziness.</li>\n<li>Nausea vomit.</li>\n<li>Pain or bruising at Injection sites.</li>\n<li>Sore throat.</li>\n<li>Drowsiness, short  term memory loss.</li>\n<li>Shivering or teeth-chattering.</li>\n<li>\nEmergence Delirium: a restless and irritable recovery process during which your child may thrash about, cry or seem inconsolable.\n</li>\n<li>Skin redness or rash from tapes/medication</li>\n</ul>\n</div>\n<div class=\"col-md-6\" style=\"font-size: 16px;\">\n<strong>Uncommon complications</strong>\n<ul>\n<li>Awareness</li>\n<li>Damage to teeth, Dental prosthetics, lip or tongue.</li>\n<li> Damage to vocal cords or larynx.</li>\n<li>Allergic reactions. </li>\n<li>Injury to nerves or vulnerable pressure areas. </li>\n<li>Pressure sores (especially if the surgery is long and involves cardiopulmonary bypass. </li>\n</ul>\n\n<strong> Extremely rare and serious complications. </strong>\n<ul>\n<li>Severe allergy (anaphylaxis) or shock. </li>\n<li>Very high temperature (malignant hyperthemia).  </li>\n<li>Aspiration resulting in pneumonia. </li>\n</ul>\n</div>\n</div>\n<h4>Fasting Guidelines</h4>\n<p style=\"font-size: 16px;\">\nOur staff will instruct you on fasting. If breakfast is allowed, please serve only plain bread, Milo <sup><strong>TM</strong></sup> or milk. Water may be allowed afterwards. Your Child must finish eating or drinking by the stipulated time.\n</p>\n<p style=\"font-size: 16px;\">\nDuring the relaxed anaesthetized state, food and fluid can flow back from the stomach into the mouth and then get inhaled into the lungs (aspiration). This can be life threatening, therefore, <strong> FASTING BEFORE ANAESTHESIA IS ESSENTIAL and universally practiced.</strong>\n</p>\n\n<p style=\"font-size: 16px;\"><strong>\nIF YOU DO NOT FOLLOW INSTRUCTIONS, THE PROCEDURE MAY BE POSTPONED OR CANCELLED IN YOUR CHILD'S BEST INTEREST.\n</strong></p>\n\n<p style=\"font-size: 16px;\">In the event the timing of the procedure is delayed, your child may be fasted for longer than intended. Although we try to minimize such occurrences, we seek your understanding that it may not be possible to avoid such situations absolutely</p>\n\n<h4>\nRegional Anaesthesia (RA)\n</h4>\n<p style=\"font-size: 16px;\">\nRegional Anaesthesia involves injection of local anesthesia drug around the nerves that carry pain sensation from the surgical site. This provides pain relief during the surgery and afterwards. The exact place where the local anaesthesia drug is injected depends on the surgical site. Your child's anaesthetist will discuss with you  which nerve block will work best for your child as well as potential risks associated with it.\nDepending on the age and medical condition, RA can be performed awake, or more commonly under GA or sedation in children.\n</p>\n\n<h4> Common types of regional anesthesia include:</h4>\n<ol style=\"font-size: 16px;\">\n<li><strong>Peripheral block: e.g Penile Nerve, Illoinguinal Nerve, Brachial plexus, Femoral Nerve</strong></li>\n<li><strong>Central Block: eg Epidural, Caudal or spinal Anaesthesia</strong></li>\n</ol>\n\n<p style=\"font-size: 16px;\">\nIn epidural anaesthesia, a special needle guides the placement of a fine bore tubing (catheter) into a space near the spine between the backbones. Continuos pain relief can be achieved by administering local anaesthetics and painkillers via this catheter. This catheter may be left in place up to several days post-surgery. This allows for continued postoperative pain relief. Caudal anaethsesia is essentially epidural anesthesia given at the bottom of your child's spine. It can be given as a single injection or repeated at the end of the surgery. Alternatively a catheter may be left in place like in an epidural.\n</p>\n\n<h4>Are there any risks?</h4>\n<p style=\"font-size: 16px;\">\nIt may take several hours for the effect of regional anaesthesia to wear off.As the anaesthetized site is numb, extra care should be taken to avoid accidental injury. Where central blocks or illoinguinal nerve blocks are used, your child should not ambulate until the numbness has subsided and strength regained in the legs. Rarely,  the nerve blocks may fail or result in an incomplete patchy block.\n</p>\n\n<div class=\"row\" style=\"font-size: 16px;\">\n<div class=\"col-md-6\">\n<strong>Common side-effects (Usually temporary) of central blocks</strong>\n<ul>\n<li>Numbness or tingling sensation in lower limbs</li>\n<li>Weakness of muscle over numbed areas.</li>\n<li>Shivering</li>\n<li>Itching</li>\n<li>Backache and bruising  over injection site. </li>\n<li> Inability to pass urine. </li>\n<li> Dizziness, headache</li>\n<li> Drop in blood pressure (uncommon in younger children) </li>\n</ul>\n</div>\n<div class=\"col-md-6\">\n<strong>Serious but rare side effects.</strong>\n<ul>\n<li>Trauma to surrounding structures.</li>\n<li>Nerve damage.</li>\n<li> Blood clot (Heamotoma) </li>\n<li> Seizures. </li>\n<li> Breathing difficulties. </li>\n<li>Infection, abscess formation. </li>\n<li>Cardiac Arrest. </li>\n</ul>\n</div>\n</div>\n\n<h3>INVASIVE MONITORING</h3>\n<p style=\"font-size: 16px;\">Invasive Monitoring may be required if your child is critically ill or undergoing major surgery </p>\n\n<h4>Arterial Line</h4>\n<p style=\"font-size: 16px;\">\nArterial line involves placement of a plastic catheter into an artery for accurate monitoring of your child's blood pressure. Blood can also be drawn from the line for tests if necessary. Complications may include injury to the vessel/ surrounding structures and blood clot.\n</p>\n\n<h4>Central venous Line</h4>\n<p style=\"font-size: 16px;\">\nA large bore catheter is inserted through your child's neck, chest or groin into a large vein leading to the heart so that we can assess your child's blood volume and heart function better. The central venous line also allows for administration of drugs and fluids as required. Complications may include inadvertent puncture of the artery or lung, blood clot formation or heart rhythm changes. Very rare complications include nerve injury, damage to the thoracic duct and migration of the catheter of out of the vein. Very rarely, some of these complications can be fatal. Puncture of the lung can cause an airtrap (pneumothorax) and puncture of the artery can cause blood to leak into the chest. (Heamothorax). An X-Ray of the chest is normally don afterwards to check for this complication and if present, may require a tube to be inserted in the chest to drain the air or blood.\n</p>\n"
+  },
+  {
+   "depends_on": "eval:doc.consent_template == \"Anaesthesia Consent Form\";",
+   "fieldname": "anaesthesia_consent_section",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "postop",
+   "fieldtype": "HTML",
+   "label": "postop",
+   "options": "<h3>POST-OP SPECIAL CARE: INTENSIVE CARE(ICU), HIGH DEPENDENCY (HP)</h3>\n<p style=\"font-size: 16px;\">\nPost-operative intensive care may be required in cases where intensive monitoring, ventilatory support or cardiovascular support is needed. <br>\nHigh dependency monitoring is required for children who require closer monitoring/care that than available in the general ward\n</p>\n\n<h3>HIGH-RISK PATIENTS : THE CRITICALLY-ILL : EXTREMELY YOUNG BABIES</h3>\n<p style=\"font-size: 16px;\">\nIn a critically-ill child, the risk of peri-operative complications and death is vastly increased. The benefits of anesthesia need to be weighed against the risks and this balance varies from patient to patient to patient. Your anaesthetist will advise you on the appropriate peri-operative care for your child after discussion with you and the surgical team.\n</p>\n\n<br>\n<br>\n<p style=\"font-size: 20px;\">\nI fully understand the anesthesia risks and options and agree to the anaesthesia plan as explained to me by  \n</p>\n"
+  },
+  {
+   "fieldname": "doctor",
+   "fieldtype": "Link",
+   "label": "Doctor",
+   "options": "Healthcare Practitioner"
+  },
+  {
+   "fieldname": "language",
+   "fieldtype": "Link",
+   "label": "Language",
+   "options": "Language"
+  },
+  {
+   "fieldname": "parent_guardian",
+   "fieldtype": "Signature",
+   "label": "Parent/ Guardian"
+  },
+  {
+   "fieldname": "date_time",
+   "fieldtype": "Datetime",
+   "label": "Date/ Time"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2024-07-08 08:10:00.202812",
+ "modified_by": "Administrator",
+ "module": "Gch Custom",
+ "name": "Consent Form",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1,
+ "track_seen": 1
+}

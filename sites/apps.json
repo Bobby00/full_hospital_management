@@ -1,0 +1,155 @@
+{
+    "frappe": {
+        "resolution": {
+            "commit_hash": null,
+            "branch": null
+        },
+        "required": [],
+        "idx": 1,
+        "version": "13.18.0"
+    },
+    "gch_middleware": {
+        "resolution": {
+            "commit_hash": null,
+            "branch": null
+        },
+        "required": [],
+        "idx": 2,
+        "version": "0.0.1"
+    },
+    "gch_custom": {
+        "resolution": {
+            "commit_hash": null,
+            "branch": null
+        },
+        "required": [],
+        "idx": 3,
+        "version": "0.0.1"
+    },
+    "erpnext": {
+        "resolution": {
+            "commit_hash": null,
+            "branch": null
+        },
+        "required": [],
+        "idx": 4,
+        "version": "13.18.0"
+    },
+    "gch_theme": {
+        "resolution": {
+            "commit_hash": null,
+            "branch": null
+        },
+        "required": [],
+        "idx": 5,
+        "version": "0.0.1"
+    },
+    "gch_messaging": {
+        "resolution": {
+            "commit_hash": null,
+            "branch": null
+        },
+        "required": [],
+        "idx": 6,
+        "version": "0.0.1"
+    },
+    "gch_queue": {
+        "resolution": {
+            "commit_hash": null,
+            "branch": null
+        },
+        "required": [],
+        "idx": 7,
+        "version": "0.0.1"
+    },
+    "gch_sentry": {
+        "is_repo": true,
+        "resolution": {
+            "commit_hash": "0ecfde67c7a8648c09d6cba025bc6352a059c2b3",
+            "branch": "main"
+        },
+        "required": [],
+        "idx": 8,
+        "version": "0.0.1"
+    },
+    "gch_inpatient": {
+        "is_repo": true,
+        "resolution": {
+            "commit_hash": "991122bafcd901a44cc5b48ff43f6880539352b0",
+            "branch": "master"
+        },
+        "required": [],
+        "idx": 9,
+        "version": "0.0.1"
+    },
+    "gch_purchases": {
+        "is_repo": true,
+        "resolution": {
+            "commit_hash": "9b5831bc6ca917165ffdd2e376e50389e17f02fe",
+            "branch": "main"
+        },
+        "required": [],
+        "idx": 10,
+        "version": "0.0.1"
+    },
+    "gch_insurance": {
+        "is_repo": true,
+        "resolution": {
+            "commit_hash": "e1997c4268b93aa1b11bf9215b4c21475e9793f1",
+            "branch": "main"
+        },
+        "required": [],
+        "idx": 11,
+        "version": "0.0.1"
+    },
+    "gch_theatre": {
+        "is_repo": true,
+        "resolution": {
+            "commit_hash": "b68d63c3781f4a5c32f9497870d41ffef440f1c5",
+            "branch": "main"
+        },
+        "required": [],
+        "idx": 12,
+        "version": "0.0.1"
+    },
+    "gch_common": {
+        "is_repo": true,
+        "resolution": {
+            "commit_hash": "5180b76945eb4445bf49ce1fdd6056c1bd64f963",
+            "branch": "main"
+        },
+        "required": [],
+        "idx": 13,
+        "version": "0.0.1"
+    },
+    "gch_pccu": {
+        "is_repo": true,
+        "resolution": {
+            "commit_hash": "10cf326410035c85b0465c03167692799084c8b2",
+            "branch": "master"
+        },
+        "required": [],
+        "idx": 14,
+        "version": "0.0.1"
+    },
+    "frappe_helper": {
+        "is_repo": true,
+        "resolution": {
+            "commit_hash": "38e3ee7ff65fa674f2ec0e81097e3af38d379861",
+            "branch": "master"
+        },
+        "required": [],
+        "idx": 15,
+        "version": "0.3.3"
+    },
+    "gch_pacs": {
+        "is_repo": true,
+        "resolution": {
+            "commit_hash": "b65d47b054b5e84c522590bcb3a950c20c1756a8",
+            "branch": "main"
+        },
+        "required": [],
+        "idx": 16,
+        "version": "0.0.1"
+    }
+}

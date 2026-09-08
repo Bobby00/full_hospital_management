@@ -1,0 +1,50 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:meal_name",
+ "creation": "2024-08-26 15:54:40.262909",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "meal_name",
+  "supported_menus"
+ ],
+ "fields": [
+  {
+   "fieldname": "meal_name",
+   "fieldtype": "Data",
+   "label": "Meal Name",
+   "unique": 1
+  },
+  {
+   "fieldname": "supported_menus",
+   "fieldtype": "Table MultiSelect",
+   "label": "Supported Menus",
+   "options": "Catering Items Linked Menus"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-09-02 22:28:37.691412",
+ "modified_by": "Administrator",
+ "module": "Gch Inpatient",
+ "name": "Lunch Accompaniments",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

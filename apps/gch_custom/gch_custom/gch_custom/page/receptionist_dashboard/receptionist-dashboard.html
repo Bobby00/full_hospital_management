@@ -1,0 +1,300 @@
+<div class="row layout-main">
+    <div class="col-lg-2 layout-side-section">
+        <div class="user-profile-sidebar">
+
+            <div class="user-image-container hidden-xs hidden-sm">
+                <div class="sidebar-image-wrapper">
+                    <div class="sidebar-standard-image hide">
+                        <div class="standard-image"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="profile-details">
+                <div class="detail-item user-stats-detail">
+                    <!-- <h5>Details</h5> -->
+                    <div class="user-stats mt-3">
+                        <div class="user-stats-item mt-4">
+                            <svg class="icon icon-lg" style="">
+                                <use class="no-stroke" href="#icon-color-energy-points"></use>
+                            </svg>
+                            <div>
+                                <div class="stat-value">Current Clinic</div>
+                                <div class="stat-label">{{frappe.session.user_fullname}}</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- <div class="profile-links detail-item">
+                    <p><a class="edit-profile-link">First Link</a></p>
+                    <p><a class="user-settings-link">Second Link</a></p>
+                    <p> <a class="leaderboard-link">Third Link</a> </p>
+                </div> -->
+
+            </div>
+        </div>
+    </div>
+    <div class="col layout-main-section-wrapper">
+        <div class="layout-main-section">
+            <div class="row user-profile">
+                <div class="col-md-12">
+                    <div class="performance-graphs">
+                        <div class="frappe-card chart-column-container line-chart-container">
+                            <div class="title-area">
+                                <h4 class="card-title">Patients on Queue</h4>
+                            </div>
+                            <div class="list-row-container" tabindex="1">
+                                <header class="level list-row-head text-muted">
+                                    <div class="level-left list-header-subject">
+                                        <div class="list-row-col ellipsis list-subject level  ">
+                                            <input class="level-item list-check-all hidden-xs" type="checkbox"
+                                                title="Select All">
+                                            <span class="level-item">Full Name</span>
+                                        </div>
+                                        <div class="list-row-col ellipsis hidden-xs  ">
+                                            <span>DOB</span>
+                                        </div>
+                                        <div class="list-row-col ellipsis hidden-xs  ">
+                                            <span>Age</span>
+                                        </div>
+
+                                        <div class="list-row-col ellipsis hidden-xs  ">
+                                            <span>Gender</span>
+                                        </div>
+
+                                        <div class="list-row-col ellipsis hidden-xs  ">
+                                            <span>Encounter Number</span>
+                                        </div>
+                                        <div class="list-row-col ellipsis hidden-xs  ">
+                                            <span>Queue Position</span>
+                                        </div>
+                                        <div class="list-row-col ellipsis hidden-xs  ">
+                                            <span>Clinic</span>
+                                        </div>
+                                    </div>
+                                    <div class="level-left checkbox-actions" style="display: none;">
+                                        <div class="level list-subject">
+                                            <input class="level-item list-check-all hidden-xs" type="checkbox"
+                                                title="Select All">
+                                            <span class="level-item list-header-meta"></span>
+                                        </div>
+                                    </div>
+                                </header>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="row user-profile">
+                <div class="col-md-12">
+                    <div class="performance-graphs">
+                        <div class="frappe-card chart-column-container line-chart-container">
+                            <div class="title-area">
+                                <h4 class="card-title">Patient with Doctor</h4>
+                            </div>
+                            <div class="list-row-container" tabindex="1">
+                                <header class="level list-row-head text-muted">
+                                    <div class="level-left list-header-subject">
+                                        <div class="list-row-col ellipsis list-subject level  ">
+                                            <input class="level-item list-check-all hidden-xs" type="checkbox"
+                                                title="Select All">
+                                            <span class="level-item">Full Name</span>
+                                        </div>
+                                        <div class="list-row-col ellipsis hidden-xs  ">
+                                            <span>DOB</span>
+                                        </div>
+                                        <div class="list-row-col ellipsis hidden-xs  ">
+                                            <span>Age</span>
+                                        </div>
+
+                                        <div class="list-row-col ellipsis hidden-xs  ">
+                                            <span>Gender</span>
+                                        </div>
+
+                                        <div class="list-row-col ellipsis hidden-xs  ">
+                                            <span>Encounter Number</span>
+                                        </div>
+                                        <div class="list-row-col ellipsis hidden-xs  ">
+                                            <span>Start Time</span>
+                                        </div>
+                                        <div class="list-row-col ellipsis hidden-xs  ">
+                                            <span>End Time</span>
+                                        </div>
+                                    </div>
+                                    <div class="level-left checkbox-actions" style="display: none;">
+                                        <div class="level list-subject">
+                                            <input class="level-item list-check-all hidden-xs" type="checkbox"
+                                                title="Select All">
+                                            <span class="level-item list-header-meta"></span>
+                                        </div>
+                                    </div>
+                                </header>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row user-profile">
+                <div class="col-md-12">
+                    <div class="performance-graphs">
+                        <div class="frappe-card chart-column-container line-chart-container">
+                            <div class="title-area">
+                                <h4 class="card-title">Scheduled Patients</h4>
+                            </div>
+                            <div class="list-row-container" tabindex="1">
+                                <header class="level list-row-head text-muted">
+                                    <div class="level-left list-header-subject">
+                                        <div class="list-row-col ellipsis list-subject level  ">
+                                            <input class="level-item list-check-all hidden-xs" type="checkbox"
+                                                title="Select All">
+                                            <span class="level-item">Full Name</span>
+                                        </div>
+                                        <div class="list-row-col ellipsis hidden-xs  ">
+                                            <span>DOB</span>
+                                        </div>
+                                        <div class="list-row-col ellipsis hidden-xs  ">
+                                            <span>Age</span>
+                                        </div>
+
+                                        <div class="list-row-col ellipsis hidden-xs  ">
+                                            <span>Gender</span>
+                                        </div>
+
+                                        <div class="list-row-col ellipsis hidden-xs  ">
+                                            <span>Clinic</span>
+                                        </div>
+                                        <div class="list-row-col ellipsis hidden-xs  ">
+                                            <span>Appointment Date</span>
+                                        </div>
+                                        <div class="list-row-col ellipsis hidden-xs  ">
+                                            <span>Status</span>
+                                        </div>
+                                    </div>
+                                    <div class="level-left checkbox-actions" style="display: none;">
+                                        <div class="level list-subject">
+                                            <input class="level-item list-check-all hidden-xs" type="checkbox"
+                                                title="Select All">
+                                            <span class="level-item list-header-meta"></span>
+                                        </div>
+                                    </div>
+                                </header>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="row user-profile">
+                <div class="col-md-12">
+                    <div class="performance-graphs">
+                        <div class="frappe-card chart-column-container line-chart-container">
+                            <div class="title-area">
+                                <h4 class="card-title">Patients Discharged</h4>
+                            </div>
+                            <div class="list-row-container" tabindex="1">
+                                <header class="level list-row-head text-muted">
+                                    <div class="level-left list-header-subject">
+                                        <div class="list-row-col ellipsis list-subject level  ">
+                                            <input class="level-item list-check-all hidden-xs" type="checkbox"
+                                                title="Select All">
+                                            <span class="level-item">Full Name</span>
+                                        </div>
+                                        <div class="list-row-col ellipsis hidden-xs  ">
+                                            <span>DOB</span>
+                                        </div>
+                                        <div class="list-row-col ellipsis hidden-xs  ">
+                                            <span>Age</span>
+                                        </div>
+                                        <div class="list-row-col ellipsis hidden-xs  ">
+                                            <span>Gender</span>
+                                        </div>
+                                        <div class="list-row-col ellipsis hidden-xs  ">
+                                            <span>Encounter Number</span>
+                                        </div>
+                                        <div class="list-row-col ellipsis hidden-xs  ">
+                                            <span>Start Time</span>
+                                        </div>
+                                        <div class="list-row-col ellipsis hidden-xs  ">
+                                            <span>End Time</span>
+                                        </div>
+                                        <div class="list-row-col ellipsis hidden-xs  ">
+                                            <span>Discharged Time</span>
+                                        </div>
+                                        <div class="list-row-col ellipsis hidden-xs  ">
+                                            <span>Closed Encounter</span>
+                                        </div>
+                                    </div>
+                                    <div class="level-left checkbox-actions" style="display: none;">
+                                        <div class="level list-subject">
+                                            <input class="level-item list-check-all hidden-xs" type="checkbox"
+                                                title="Select All">
+                                            <span class="level-item list-header-meta"></span>
+                                        </div>
+                                    </div>
+                                </header>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="row user-profile">
+                <div class="col-md-12">
+                    <div class="performance-graphs">
+                        <div class="frappe-card chart-column-container line-chart-container">
+                            <div class="title-area">
+                                <h4 class="card-title">Diagnostic Report Status</h4>
+                            </div>
+                            <div class="list-row-container" tabindex="1">
+                                <header class="level list-row-head text-muted">
+                                    <div class="level-left list-header-subject">
+                                        <div class="list-row-col ellipsis list-subject level  ">
+                                            <input class="level-item list-check-all hidden-xs" type="checkbox"
+                                                title="Select All">
+                                            <span class="level-item">Full Name</span>
+                                        </div>
+                                        <div class="list-row-col ellipsis hidden-xs  ">
+                                            <span>DOB</span>
+                                        </div>
+                                        <div class="list-row-col ellipsis hidden-xs  ">
+                                            <span>Age</span>
+                                        </div>
+
+                                        <div class="list-row-col ellipsis hidden-xs  ">
+                                            <span>Gender</span>
+                                        </div>
+
+                                        <div class="list-row-col ellipsis hidden-xs  ">
+                                            <span>Encounter Number</span>
+                                        </div>
+                                        <div class="list-row-col ellipsis hidden-xs  ">
+                                            <span>Result Status</span>
+                                        </div>
+
+                                    </div>
+                                    <div class="level-left checkbox-actions" style="display: none;">
+                                        <div class="level list-subject">
+                                            <input class="level-item list-check-all hidden-xs" type="checkbox"
+                                                title="Select All">
+                                            <span class="level-item list-header-meta"></span>
+                                        </div>
+                                    </div>
+                                </header>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+        <div class="layout-footer hide"></div>
+    </div>
+</div>

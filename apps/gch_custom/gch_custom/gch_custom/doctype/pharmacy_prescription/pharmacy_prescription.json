@@ -1,0 +1,111 @@
+{
+ "actions": [],
+ "autoname": "PRN.#####",
+ "creation": "2021-08-31 09:38:49.352109",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "connections_section",
+  "patient_name",
+  "encounter_information_section",
+  "over_the_counter",
+  "patient_encounter",
+  "service",
+  "diagnosis",
+  "prescription_section",
+  "pharmacy_prescription_table",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "encounter_information_section",
+   "fieldtype": "Section Break",
+   "label": "Encounter Information"
+  },
+  {
+   "fieldname": "service",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Service"
+  },
+  {
+   "fieldname": "diagnosis",
+   "fieldtype": "Table",
+   "label": "Diagnosis",
+   "options": "Codification Table",
+   "read_only_depends_on": "eval:cur_frm.doc.patient_encounter!=undefined;"
+  },
+  {
+   "fieldname": "prescription_section",
+   "fieldtype": "Section Break",
+   "label": "Prescription"
+  },
+  {
+   "fieldname": "pharmacy_prescription_table",
+   "fieldtype": "Table",
+   "label": "Pharmacy Prescription Table",
+   "options": "Pharmacy Prescription Table"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Pharmacy Prescription",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "connections_section",
+   "fieldtype": "Section Break",
+   "label": "Connections"
+  },
+  {
+   "depends_on": "eval:cur_frm.doc.patient_encounter!=undefined;",
+   "fetch_from": "patient_encounter.patient",
+   "fieldname": "patient_name",
+   "fieldtype": "Data",
+   "label": "Patient Name",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval:cur_frm.doc.over_the_counter===0;",
+   "fieldname": "patient_encounter",
+   "fieldtype": "Link",
+   "label": "Patient Encounter",
+   "options": "Patient Encounter"
+  },
+  {
+   "default": "0",
+   "fieldname": "over_the_counter",
+   "fieldtype": "Check",
+   "label": "Over the Counter"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2021-09-07 02:22:07.376080",
+ "modified_by": "Administrator",
+ "module": "Gch Custom",
+ "name": "Pharmacy Prescription",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

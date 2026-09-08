@@ -1,0 +1,506 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<style>
+    /* ===== Career ===== */
+.career-form {
+  background-color: #4e63d7;
+  border-radius: 5px;
+  padding: 0 16px;
+}
+
+.career-form .form-control {
+  background-color: rgba(255, 255, 255, 0.2);
+  border: 0;
+  padding: 12px 15px;
+  color: #fff;
+}
+
+.career-form .form-control::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  color: #fff;
+}
+
+.career-form .form-control::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #fff;
+}
+
+.career-form .form-control:-ms-input-placeholder {
+  /* IE 10+ */
+  color: #fff;
+}
+
+.career-form .form-control:-moz-placeholder {
+  /* Firefox 18- */
+  color: #fff;
+}
+
+.career-form .custom-select {
+  background-color: rgba(255, 255, 255, 0.2);
+  border: 0;
+  padding: 12px 15px;
+  color: #fff;
+  width: 100%;
+  border-radius: 5px;
+  text-align: left;
+  height: auto;
+  background-image: none;
+}
+
+.career-form .custom-select:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.career-form .select-container {
+  position: relative;
+}
+
+
+.filter-result .job-box {
+background:#fff;
+  -webkit-box-shadow: 0 0 35px 0 rgba(130, 130, 130, 0.2);
+          box-shadow: 0 0 35px 0 rgba(130, 130, 130, 0.2);
+  border-radius: 10px;
+  padding: 10px 35px;
+}
+
+ul {
+  list-style: none; 
+}
+
+.list-disk li {
+  list-style: none;
+  margin-bottom: 12px;
+}
+
+.list-disk li:last-child {
+  margin-bottom: 0;
+}
+
+.job-box .img-holder {
+  height: 65px;
+  width: 65px;
+  background-color: #4e63d7;
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(78, 99, 215, 0.9)), to(#5a85dd));
+  background-image: linear-gradient(to right, rgba(78, 99, 215, 0.9) 0%, #5a85dd 100%);
+  font-family: "Open Sans", sans-serif;
+  color: #fff;
+  font-size: 22px;
+  font-weight: 700;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 65px;
+}
+
+.career-title {
+  background-color: #4e63d7;
+  color: #fff;
+  padding: 15px;
+  text-align: center;
+  border-radius: 10px 10px 0 0;
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(78, 99, 215, 0.9)), to(#5a85dd));
+  background-image: linear-gradient(to right, rgba(78, 99, 215, 0.9) 0%, #5a85dd 100%);
+}
+
+.job-overview {
+  -webkit-box-shadow: 0 0 35px 0 rgba(130, 130, 130, 0.2);
+          box-shadow: 0 0 35px 0 rgba(130, 130, 130, 0.2);
+  border-radius: 10px;
+}
+
+</style>
+
+<div class="row layout-main">
+
+    
+    <div class="col layout-main-section-wrapper">
+        <div class="layout-main-section">
+            
+
+            <link rel="stylesheet" type="text/css" href="https://pixinvent.com/stack-responsive-bootstrap-4-admin-template/app-assets/css/colors.min.css">
+                <!-- <link rel="stylesheet" type="text/css" href="https://pixinvent.com/stack-responsive-bootstrap-4-admin-template/app-assets/css/bootstrap.min.css"> -->
+                <link rel="stylesheet" type="text/css" href="https://pixinvent.com/stack-responsive-bootstrap-4-admin-template/app-assets/css/bootstrap-extended.min.css">
+                <link rel="stylesheet" type="text/css" href="https://pixinvent.com/stack-responsive-bootstrap-4-admin-template/app-assets/fonts/simple-line-icons/style.min.css">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+            <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+
+            <div class="grey-bg container-fluid">
+            
+            
+            <section id="stats-subtitle">
+
+
+            <div class="row">
+                <div class="col-12 mt-3 mb-1">
+                    <p>Welcome, <span style="color: green; font-weight: 700;">{{ current_viewer }}</span></p>
+                <h3 style="font-weight: 800;" class="text-uppercase">CATERING MEAL ORDERS OVERVIEW</h3>
+                
+                </div>
+            </div>
+
+            <select class="input-with-feedback form-control ellipsis mb-3">
+                <option>--- SELECT WAREHOUSE ---</option>
+                <option>--- ALL WAREHOUSES ---</option>
+            </select>
+
+            <div class="row">
+
+                <div class="col-xl-4 col-md-12">
+                    <div class="card">
+                        <div class="card-content">
+                        <div class="card-body cleartfix">
+                            <div class="media align-items-stretch">
+                            <div class="align-self-center">
+                                <i class="icon-list success font-large-2 mr-2"></i>
+                            </div>
+                            <div class="media-body">
+                                <h4>All Orders</h4>
+                                <a href="/app/patient-meal-order" class="btn-primary btn-sm">View</a>
+                            </div>
+                            <div class="align-self-center"> 
+                                <h1>{{ total_orders }}</h1>
+                            </div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+
+                <div class="col-xl-4 col-md-12">
+                    <div class="card">
+                        <div class="card-content">
+                        <div class="card-body cleartfix">
+                            <div class="media align-items-stretch">
+                            <div class="align-self-center">
+                                <i class="icon-check success font-large-2 mr-2"></i>
+                            </div>
+                            <div class="media-body">
+                                <h4>Completed Orders</h4>
+                                <a href="/app/patient-meal-order" class="btn-primary btn-sm">View</a>
+                            </div>
+                            <div class="align-self-center"> 
+                                <h1>{{ total_completed_orders }}</h1>
+                            </div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+
+                <div class="col-xl-4 col-md-12">
+                <div class="card overflow-hidden">
+                    <div class="card-content">
+                    <div class="card-body cleartfix">
+                        <div class="media align-items-stretch">
+                        <div class="align-self-center">
+                            <i class="icon-clock warning font-large-2 mr-2"></i>
+                        </div>
+                        <div class="media-body">
+                            <h4>Pending Orders</h4>
+                            <a href="/app/patient-meal-order" class="btn-primary btn-sm">View</a>
+                        </div>
+                        <div class="align-self-center">
+                            <h1>{{ total_pending_orders }}</h1>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                </div>
+
+                
+
+                <div class="col-xl-4 col-md-12">
+                    <div class="card">
+                        <div class="card-content">
+                        <div class="card-body cleartfix">
+                            <div class="media align-items-stretch">
+                            <div class="align-self-center">
+                                <i class="icon-basket-loaded warning font-large-2 mr-2"></i>
+                            </div>
+                            <div class="media-body">
+                                <h4>Delivered Orders</h4>
+                                <a href="/app/patient-meal-order" class="btn-primary btn-sm">View</a>
+                            </div>
+                            <div class="align-self-center"> 
+                                <h1>{{ total_delivered_orders }}</h1>
+                            </div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+
+                    <div class="col-xl-4 col-md-12">
+                        <div class="card">
+                            <div class="card-content">
+                            <div class="card-body cleartfix">
+                                <div class="media align-items-stretch">
+                                <div class="align-self-center">
+                                    <i class="icon-ban danger font-large-2 mr-2"></i>
+                                </div>
+                                <div class="media-body">
+                                    <h4>Cancelled Orders</h4>
+                                    <a href="/app/patient-meal-order" class="btn-primary btn-sm">View</a>
+                                </div>
+                                <div class="align-self-center"> 
+                                    <h1>{{ total_cancelled_orders }}</h1>
+                                </div>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                        </div>
+
+                        <!-- <div class="col-xl-4 col-md-12">
+                            <div class="card">
+                                <div class="card-content">
+                                <div class="card-body cleartfix">
+                                    <div class="media align-items-stretch">
+                                    <div class="align-self-center">
+                                        <i class="icon-pie-chart primary font-large-2 mr-2"></i>
+                                    </div>
+                                    <div class="media-body">
+                                        <h4>Total Catering Items</h4>
+                                        <a href="/app/catering-menu-item" class="btn-primary btn-sm">View</a>
+                                    </div>
+                                    <div class="align-self-center"> 
+                                        <h1>{{ catering_items_total_count }}</h1>
+                                    </div>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                            </div> -->
+            </div>
+
+            <div class="row">
+                <div class="col-12 mt-3 mb-1">
+                
+                <!-- <p>Welcome, user</p> -->
+                <h3 style="font-weight: 800;" class="text-uppercase">RECENT ORDERS FROM ALL WARDS</h3>
+                
+                </div>
+            </div>
+            
+        
+            <div class="row">
+                <div class="col-lg-12 mx-auto">
+                    <div class="career-search mb-60">
+
+
+                        {% for row in catering_info_docs %}
+                        <div style="box-shadow: 0 0 35px 0 rgba(130, 130, 130, 0.4);" class="filter-result mb-2">
+
+                            <div class="job-box d-md-flex align-items-center justify-content-between mb-10">
+                                <div class="job-left my-1 d-md-flex align-items-center flex-wrap">
+                                    <div class="img-holder mr-md-4 mb-md-0 mb-4 mx-auto mx-md-0 d-md-none d-lg-flex">
+                                        <i class="icon-user"></i>
+                                    </div>
+                                    <div class="job-content">
+
+                                        <span style="font-size: 15px;">Patient Name:
+                                            <span style="font-size: 16px; color: black; font-weight: 600;"> {{ row.patient }}</span>
+                                        </span>
+
+                                        <br>
+
+                                        <span>DOB:
+                                            <span style="font-size: 16px; color: black; font-weight: 600;"> {{ row.dob }}</span>
+                                        </span>
+
+                                        <br>
+                                        <span>Gender:
+                                            <span style="font-size: 16px; color: black; font-weight: 600;"> {{ row.gender }}</span>
+                                        </span>
+
+                                        <!-- <ul class="d-md-flex flex-wrap text-capitalize ff-open-sans">
+                                            <li class="mr-md-4">
+                                                <i class="zmdi zmdi-pin mr-2"></i> Los Angeles
+                                            </li>
+                                            <li class="mr-md-4">
+                                                <i class="zmdi zmdi-money mr-2"></i> 2500-3500/pm
+                                            </li>
+                                            <li class="mr-md-4">
+                                                <i class="zmdi zmdi-time mr-2"></i> Full Time
+                                            </li>
+                                        </ul> -->
+                                    </div>
+                                </div>
+                                <div class="job-right my-1 flex-shrink-0">
+                                    <div class="job-content">
+
+                                        <span>Ward:
+                                            <span style="font-size: 16px; color: black; font-weight: 600;"> {{ row.ward }}</span>
+                                        </span>
+
+                                        <br>
+
+                                        <span>Room:
+                                            <span style="font-size: 16px; color: black; font-weight: 600;"> {{ row.room }}</span>
+                                        </span>
+
+                                        <br>
+                                        <span>Bed:
+                                            <span style="font-size: 16px; color: black; font-weight: 600;"> {{ row.bed }}</span>
+                                        </span>
+
+                                        <!-- <ul class="d-md-flex flex-wrap text-capitalize ff-open-sans">
+                                            <li class="mr-md-4">
+                                                <i class="zmdi zmdi-pin mr-2"></i> Los Angeles
+                                            </li>
+                                            <li class="mr-md-4">
+                                                <i class="zmdi zmdi-money mr-2"></i> 2500-3500/pm
+                                            </li>
+                                            <li class="mr-md-4">
+                                                <i class="zmdi zmdi-time mr-2"></i> Full Time
+                                            </li>
+                                        </ul> -->
+                                    </div>
+                                </div>
+
+                                <div class="job-right my-1 flex-shrink-0">
+                                    <p>Order Number: <span style="font-size: 16px; color: black; font-weight: 600;">{{ row.name }}</span></p>
+                                    <p>Order Status: <span style="font-size: 16px; color: black; font-weight: 600;">{{ row.workflow_state }}</span></p>
+
+                                    <a href="/app/patient-meal-order/{{ row.name }}" class="btn btn-primary">View Order</a>
+                                </div>
+
+                                
+                            </div>
+                            
+                            <div style="background-color: #fff; padding-bottom: 10px;" class="container">
+                                <ul class="d-md-flex flex-wrap text-capitalize ff-open-sans">
+                                    <li class="mr-md-4">
+                                        <i class="zmdi zmdi-money mr-2"></i>
+                                        <span>Meal Plan:</span>
+                                        <span style="font-size: 16px; color: black; font-weight: 600;"></span>
+                                    </li>
+                                        <li class="mr-md-4">
+                                            <i class="zmdi zmdi-pin mr-2"></i>
+                                            <span>Selected Menu:</span>
+                                            <span style="font-size: 16px; color: black; font-weight: 600;">{{ row.select_menu }}</span>
+                                        </li>
+                                        <li class="mr-md-4">
+                                            <i class="zmdi zmdi-money mr-2"></i>
+                                            <span>Menu Time Option:</span>
+                                            <span style="font-size: 16px; color: black; font-weight: 600;">{{ row.menu_time_option }}</span>
+                                        </li>
+                                        <li class="mr-md-4">
+                                            <i class="zmdi zmdi-time mr-2"></i>
+                                            <span>Taken by:</span>
+                                            <span style="font-size: 16px; color: black; font-weight: 600;">{{ row.taken_by }}</span>
+                                        </li>
+
+                                        <div class="row"> 
+
+                                            <div class="col-6">
+                                                <li class="mr-md-4">
+                                                    <br>
+                                                    {% if row.breakfast_drink_option || row.breakfast_starch_options || row.breakfast_protein_options || row.breakfast_side_piece_option %}
+                                                    <i class="zmdi zmdi-time mr-3"></i>
+                                                    <span style="font-weight: 600;">Patient Breakfast Items Ordered:</span>
+                                                        {{ row.breakfast_drink_option }}, {{ row.breakfast_starch_options }}, {{ row.breakfast_protein_options }}, {{ row.breakfast_side_piece_option }}
+                                                    <br>
+                                                    {% endif %}
+                                                    <!-- <p style="font-weight: 600;">Patient 10AM Items Ordered:</p>
+                                                    <span>{{ row.10_am_drink }}, {{ row.10_am_accompaniment }}</span> -->
+                                                    
+                                                    {% if row.lunch_main_dish_options || row.lunch_accompaniment_options || row.lunch_accompaniment_options || row.lunch_dessert_1 %}
+                                                    <span style="font-weight: 600;">Patient Lunch Items Ordered:</span>
+                                                    <span>{{ row.lunch_main_dish_options }}, {{ row.lunch_accompaniment_options }}, {{ row.lunch_accompaniment_options }}, {{ row.lunch_dessert_1 }}</span>
+                                                    
+                                                    <br>
+                                                    {% endif %}
+
+                                                    {% if row.dinner_main_dish_options || row.dinner_accompaniment_1_options || row.dinner_accompaniment_2_options || row.dinner_dessert_options %}
+                                                    <span style="font-weight: 600;">Patient Dinner Items Ordered:</span>
+                                                    <span>{{ row.dinner_main_dish_options }}, {{ row.dinner_accompaniment_1_options }}, {{ row.dinner_accompaniment_2_options }}, {{ row.dinner_dessert_options }}
+                                                    {% endif %}
+                                                    
+                                                        <!-- {% for item_row in row.catering_meal_order_details %}
+        
+                                                    <span style="font-size: 16px; color: black; font-weight: 600;">{{ item_row.menu_item }},</span>
+        
+                                                    {% endfor %} -->
+        
+                                                </li>
+                                            </div>
+
+                                            <div class="col-6">
+                                                {% if row.make_parent_catering_meal_order == 1 %}
+                                                <li class="mr-md-4">
+                                                    <br>
+                                                    <i class="zmdi zmdi-time mr-3"></i>
+                                                    <span style="font-weight: 600;">Parent Breakfast Items Ordered:</span>
+                                                    {{ row.parent_breakfast_drink_options }}, {{ row.parent_breakfast_starch_options }}, {{ row.parent_breakfast_protein_options }}, {{ row.parent_breakfast_side_piece_options }}
+                                                    <br>
+                                                    <span style="font-weight: 600;">Parent Lunch Items Ordered:</span>
+                                                    <span>{{ row.parent_lunch_main_dish_options }}, {{ row.parent_lunch_accompaniment_options }}, {{ row.parent_lunch_accompaniment_2_options }}, {{ row.parent_lunch_dessert_options }}</span>
+                                                    
+                                                    <br>
+                                                    <span style="font-weight: 600;">Parent Dinner Items Ordered:</span>
+                                                    <span>{{ row.dinner_main_dish_options }}, {{ row.dinner_accompaniment_1_options }}, {{ row.dinner_accompaniment_2_options }}, {{ row.dinner_dessert_options }}
+                                                    
+                                                </li>
+                                                {% endif %}
+                                            </div>
+
+                                        </div>
+
+                                        
+
+                                    </ul>
+                            </div>
+                        
+                        </div>
+                        {% endfor %}
+
+
+                    </div>
+
+                    <!-- START Pagination -->
+                    <!-- <nav aria-label="Page navigation">
+                        <ul class="pagination pagination-reset justify-content-center">
+                            <li class="page-item disabled">
+                                <a class="page-link" href="#" tabindex="-1" aria-disabled="true">
+                                    <i class="zmdi zmdi-long-arrow-left"></i>
+                                </a>
+                            </li>
+                            <li class="page-item"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item d-none d-md-inline-block"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item d-none d-md-inline-block"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item"><a class="page-link" href="#">...</a></li>
+                            <li class="page-item"><a class="page-link" href="#">8</a></li>
+                            <li class="page-item">
+                                <a class="page-link" href="#">
+                                    <i class="zmdi zmdi-long-arrow-right"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav> -->
+                    <!-- END Pagination -->
+                </div>
+            </div>
+        
+                
+
+            
+            </section>
+            </div>
+
+            
+
+        </div>
+        <div class="layout-footer hide"></div>
+    </div>
+</div>

@@ -1,0 +1,8 @@
+/* Custom CSS if needed */
+.form-select {
+    width: 100%;
+}
+
+#service-list {
+    height: 300px; /* Adjust height as needed */
+}

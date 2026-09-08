@@ -1,0 +1,79 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-05-31 10:17:57.246426",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "item_code",
+  "item_name",
+  "quantity",
+  "reserved",
+  "reserved_for",
+  "reserved_qty",
+  "extra_stock_declaration",
+  "status"
+ ],
+ "fields": [
+  {
+   "fieldname": "item_code",
+   "fieldtype": "Link",
+   "label": "Item Code",
+   "options": "Item"
+  },
+  {
+   "fetch_from": "item_code.item_name",
+   "fieldname": "item_name",
+   "fieldtype": "Data",
+   "label": "Item Name"
+  },
+  {
+   "fieldname": "quantity",
+   "fieldtype": "Int",
+   "label": "Quantity",
+   "non_negative": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "reserved",
+   "fieldtype": "Check",
+   "label": "Reserved"
+  },
+  {
+   "fieldname": "reserved_for",
+   "fieldtype": "Link",
+   "label": "Reserved For",
+   "options": "Warehouse"
+  },
+  {
+   "default": "0",
+   "fieldname": "reserved_qty",
+   "fieldtype": "Int",
+   "label": "Reserved Qty"
+  },
+  {
+   "fieldname": "extra_stock_declaration",
+   "fieldtype": "Link",
+   "label": "Extra Stock Declaration",
+   "options": "Extra Stock Declaration"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Available\nPartially Reserved\nReserved\nTransferred\nPartially Transferred"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2023-05-31 12:06:39.453886",
+ "modified_by": "Administrator",
+ "module": "Gch Purchases",
+ "name": "Extra Stock Items",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

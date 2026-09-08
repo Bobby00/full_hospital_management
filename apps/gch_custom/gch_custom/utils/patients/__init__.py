@@ -1,0 +1,6 @@
+from .truncate_patients import clean_patient_data
+from .create_wellbaby_schedules import create_wellbaby
+
+clean_patients = clean_patient_data.prune_wrong_patient_data
+create_wellbaby_schedule = create_wellbaby.create_wellbaby
+

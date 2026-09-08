@@ -1,0 +1,55 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-11-29 12:14:21.463778",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "nursing_ward",
+  "nursing_ward_room",
+  "nursing_ward_bed",
+  "nursing_ward_bed_code"
+ ],
+ "fields": [
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "nursing_ward",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Nursing Ward",
+   "options": "Nursing Ward"
+  },
+  {
+   "fieldname": "nursing_ward_bed",
+   "fieldtype": "Link",
+   "label": "Nursing Ward Bed",
+   "options": "Nursing Ward Bed"
+  },
+  {
+   "fetch_from": "nursing_ward_bed.bed_number",
+   "fieldname": "nursing_ward_bed_code",
+   "fieldtype": "Data",
+   "label": "Nursing Ward Bed Code"
+  },
+  {
+   "fetch_from": "nursing_ward_bed.ward_room",
+   "fieldname": "nursing_ward_room",
+   "fieldtype": "Link",
+   "label": "Nursing Ward Room",
+   "options": "Nursing Ward Room"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-06-05 19:19:13.800354",
+ "modified_by": "Administrator",
+ "module": "Gch Inpatient",
+ "name": "Catering Menu Ward Details",
+ "owner": "Administrator",
+ "permissions": [],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

@@ -1,0 +1,526 @@
+{
+ "actions": [],
+ "allow_import": 1,
+ "allow_rename": 1,
+ "creation": "2022-01-27 11:46:58.756412",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "patient_details_section",
+  "patient_encounter",
+  "date",
+  "ophthalmology_column_break_1",
+  "patient",
+  "time",
+  "visual_acuity_section",
+  "distance_without_spectacles_right",
+  "perception_without_spectacles_right",
+  "near_vision_without_spectacles_right",
+  "distance_with_spectacles_right",
+  "perception_with_spectacles_right",
+  "near_vision_with_spectacles_right",
+  "ophthalmology_column_break_2",
+  "distance_without_spectacles_left",
+  "perception_without_spectacles_left",
+  "near_vision_without_spectacles_left",
+  "distance_with_spectacles_left",
+  "perception_with_spectacles_left",
+  "near_vision_with_spectacles_left",
+  "orbitadnexa_section",
+  "orbit_adnexa_right",
+  "orbit_adnexa_right_comment",
+  "lids_lashes_right",
+  "lids_lashes_right_comment",
+  "ophthalmology_column_break_3",
+  "orbit_adnexa_left",
+  "orbit_adnexa_left_comment",
+  "lids_lashes_left",
+  "lids_lashes_left_comment",
+  "anterior_segment_section",
+  "conjunctiva_right",
+  "conjunctiva_right_comment",
+  "cornea_right",
+  "cornea_right_comment",
+  "iris_pupil_right",
+  "iris_pupil_right_comment",
+  "anterior_chamber_right",
+  "anterior_chamber_right_comment",
+  "lens_right",
+  "lens_right_comment",
+  "iops_mmhg_right",
+  "ophthalmology_column_break_4",
+  "conjunctiva_left",
+  "conjunctiva_left_comment",
+  "cornea_left",
+  "cornea_left_comment",
+  "iris_pupil_left",
+  "iris_pupil_left_comment",
+  "anterior_chamber_left",
+  "anterior_chamber_left_comment",
+  "lens_left",
+  "lens_left_comment",
+  "iops_mmhg_left",
+  "fundoscopy_section",
+  "right_fundoscopy",
+  "optic_disk_macular_right",
+  "optic_disk_macular_right_comment",
+  "retina_finding_right",
+  "retina_finding_right_comment",
+  "ophthalmology_column_break_5",
+  "left_fundoscopy",
+  "optic_disk_macular_left",
+  "optic_disk_macular_left_comment",
+  "retina_finding_left",
+  "retina_finding_left_comment",
+  "refraction_section",
+  "patient_refraction",
+  "orthoptic_assessment_right",
+  "orthoptic_assessment_right_comment",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "patient_details_section",
+   "fieldtype": "Section Break",
+   "label": "Patient Details"
+  },
+  {
+   "fieldname": "patient_encounter",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Patient Encounter",
+   "options": "Patient Encounter",
+   "reqd": 1
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Date",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "patient_encounter.patient",
+   "fieldname": "patient",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Patient",
+   "options": "Patient",
+   "reqd": 1
+  },
+  {
+   "fieldname": "time",
+   "fieldtype": "Time",
+   "in_list_view": 1,
+   "label": "Time",
+   "reqd": 1
+  },
+  {
+   "fieldname": "ophthalmology_column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "visual_acuity_section",
+   "fieldtype": "Section Break",
+   "label": "Visual Acuity"
+  },
+  {
+   "fieldname": "distance_without_spectacles_right",
+   "fieldtype": "Select",
+   "label": "Distance Without Spectacles (Right)",
+   "options": "\n5/6\n6/6",
+   "reqd": 1
+  },
+  {
+   "fieldname": "distance_without_spectacles_left",
+   "fieldtype": "Select",
+   "label": "Distance Without Spectacles (Left)",
+   "options": "\n5/6\n6/6",
+   "reqd": 1
+  },
+  {
+   "depends_on": "eval:doc.distance_without_spectacles_right==\"6/6\"",
+   "fieldname": "perception_without_spectacles_right",
+   "fieldtype": "Select",
+   "label": "Perception Without Spectacles (Right)"
+  },
+  {
+   "fieldname": "near_vision_without_spectacles_right",
+   "fieldtype": "Select",
+   "label": "Near Vision Without Spectacles (Right)"
+  },
+  {
+   "fieldname": "distance_with_spectacles_right",
+   "fieldtype": "Select",
+   "label": "Distance With Spectacles (Right)",
+   "options": "\n5/6\n6/6",
+   "reqd": 1
+  },
+  {
+   "depends_on": "eval:doc.distance_with_spectacles_right==\"6/6\"",
+   "fieldname": "perception_with_spectacles_right",
+   "fieldtype": "Select",
+   "label": "Perception With Spectacles (Right)"
+  },
+  {
+   "fieldname": "near_vision_with_spectacles_right",
+   "fieldtype": "Select",
+   "label": "Near Vision With Spectacles (Right)"
+  },
+  {
+   "depends_on": "eval:doc.distance_without_spectacles_left==\"6/6\"",
+   "fieldname": "perception_without_spectacles_left",
+   "fieldtype": "Select",
+   "label": "Perception Without Spectacles (Left)"
+  },
+  {
+   "fieldname": "near_vision_without_spectacles_left",
+   "fieldtype": "Select",
+   "label": "Near Vision Without Spectacles (Left)"
+  },
+  {
+   "fieldname": "distance_with_spectacles_left",
+   "fieldtype": "Select",
+   "label": "Distance With Spectacles (Left)",
+   "options": "\n5/6\n6/6",
+   "reqd": 1
+  },
+  {
+   "depends_on": "eval:doc.distance_with_spectacles_left==\"6/6\"",
+   "fieldname": "perception_with_spectacles_left",
+   "fieldtype": "Select",
+   "label": "Perception With Spectacles (Left)"
+  },
+  {
+   "fieldname": "near_vision_with_spectacles_left",
+   "fieldtype": "Select",
+   "label": "Near Vision With Spectacles (Left)"
+  },
+  {
+   "fieldname": "ophthalmology_column_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "orbitadnexa_section",
+   "fieldtype": "Section Break",
+   "label": "Orbit/Adnexa"
+  },
+  {
+   "fieldname": "orbit_adnexa_right",
+   "fieldtype": "Select",
+   "label": "Orbit/Adnexa (Right)",
+   "options": "\nNormal\nAbnormal"
+  },
+  {
+   "fieldname": "lids_lashes_right",
+   "fieldtype": "Select",
+   "label": "Lids/Lashes (Right)",
+   "options": "\nNormal\nAbnormal"
+  },
+  {
+   "depends_on": "eval:doc.orbit_adnexa_right==\"Abnormal\"",
+   "fieldname": "orbit_adnexa_right_comment",
+   "fieldtype": "Small Text",
+   "label": "Comment"
+  },
+  {
+   "depends_on": "eval:doc.lids_lashes_right==\"Abnormal\"",
+   "fieldname": "lids_lashes_right_comment",
+   "fieldtype": "Small Text",
+   "label": "Comment"
+  },
+  {
+   "fieldname": "orbit_adnexa_left",
+   "fieldtype": "Select",
+   "label": "Orbit/Adnexa (Left)",
+   "options": "\nNormal\nAbnormal"
+  },
+  {
+   "depends_on": "eval:doc.orbit_adnexa_left==\"Abnormal\"",
+   "fieldname": "orbit_adnexa_left_comment",
+   "fieldtype": "Small Text",
+   "label": "Comment"
+  },
+  {
+   "fieldname": "lids_lashes_left",
+   "fieldtype": "Select",
+   "label": "Lids/Lashes (Left)",
+   "options": "\nNormal\nAbnormal"
+  },
+  {
+   "depends_on": "eval:doc.lids_lashes_left==\"Abnormal\"",
+   "fieldname": "lids_lashes_left_comment",
+   "fieldtype": "Small Text",
+   "label": "Comment"
+  },
+  {
+   "fieldname": "anterior_segment_section",
+   "fieldtype": "Section Break",
+   "label": "Anterior Segment"
+  },
+  {
+   "fieldname": "ophthalmology_column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "conjunctiva_right",
+   "fieldtype": "Select",
+   "label": "Conjunctiva (Right)",
+   "options": "\nNormal\nAbnormal"
+  },
+  {
+   "depends_on": "eval:doc.conjunctiva_right==\"Abnormal\"",
+   "fieldname": "conjunctiva_right_comment",
+   "fieldtype": "Small Text",
+   "label": "Comment"
+  },
+  {
+   "fieldname": "cornea_right",
+   "fieldtype": "Select",
+   "label": "Cornea Right",
+   "options": "\nNormal\nAbnormal"
+  },
+  {
+   "depends_on": "eval:doc.cornea_right==\"Abnormal\"",
+   "fieldname": "cornea_right_comment",
+   "fieldtype": "Small Text",
+   "label": "Comment"
+  },
+  {
+   "fieldname": "iris_pupil_right",
+   "fieldtype": "Select",
+   "label": "Iris Pupil Right",
+   "options": "\nNormal\nAbnormal"
+  },
+  {
+   "depends_on": "eval:doc.iris_pupil_right==\"Abnormal\"",
+   "fieldname": "iris_pupil_right_comment",
+   "fieldtype": "Small Text",
+   "label": "Comment"
+  },
+  {
+   "fieldname": "anterior_chamber_right",
+   "fieldtype": "Select",
+   "label": "Anterior Chamber Right",
+   "options": "\nNormal\nAbnormal"
+  },
+  {
+   "depends_on": "eval:doc.anterior_chamber_right==\"Abnormal\"",
+   "fieldname": "anterior_chamber_right_comment",
+   "fieldtype": "Small Text",
+   "label": "Comment"
+  },
+  {
+   "fieldname": "lens_right",
+   "fieldtype": "Select",
+   "label": "Lens Right",
+   "options": "\nClear\nOpacified"
+  },
+  {
+   "depends_on": "eval:doc.lens_right==\"Opacified\"",
+   "fieldname": "lens_right_comment",
+   "fieldtype": "Small Text",
+   "label": "Comment"
+  },
+  {
+   "fieldname": "iops_mmhg_right",
+   "fieldtype": "Data",
+   "label": "IOPs Mmhg (Right)"
+  },
+  {
+   "fieldname": "ophthalmology_column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "conjunctiva_left",
+   "fieldtype": "Select",
+   "label": "Conjunctiva (Left)",
+   "options": "\nNormal\nAbnormal"
+  },
+  {
+   "depends_on": "eval:doc.conjunctiva_left==\"Abnormal\"",
+   "fieldname": "conjunctiva_left_comment",
+   "fieldtype": "Small Text",
+   "label": "Comment"
+  },
+  {
+   "fieldname": "cornea_left",
+   "fieldtype": "Select",
+   "label": "Cornea Left",
+   "options": "\nNormal\nAbnormal"
+  },
+  {
+   "depends_on": "eval:doc.cornea_left==\"Abnormal\"",
+   "fieldname": "cornea_left_comment",
+   "fieldtype": "Small Text",
+   "label": "Comment"
+  },
+  {
+   "fieldname": "iris_pupil_left",
+   "fieldtype": "Select",
+   "label": "Iris/Pupil (Left)",
+   "options": "\nNormal\nAbnormal"
+  },
+  {
+   "depends_on": "eval:doc.iris_pupil_left==\"Abnormal\"",
+   "fieldname": "iris_pupil_left_comment",
+   "fieldtype": "Small Text",
+   "label": "Comment"
+  },
+  {
+   "fieldname": "anterior_chamber_left",
+   "fieldtype": "Select",
+   "label": "Anterior Chamber(Left)",
+   "options": "\nNormal\nAbnormal"
+  },
+  {
+   "depends_on": "eval:doc.anterior_chamber_left==\"Abnormal\"",
+   "fieldname": "anterior_chamber_left_comment",
+   "fieldtype": "Small Text",
+   "label": "Comment"
+  },
+  {
+   "fieldname": "lens_left",
+   "fieldtype": "Select",
+   "label": "Lens Left",
+   "options": "\nClear\nOpacified"
+  },
+  {
+   "depends_on": "eval:doc.lens_left==\"Opacified\"",
+   "fieldname": "lens_left_comment",
+   "fieldtype": "Small Text",
+   "label": "Comment"
+  },
+  {
+   "fieldname": "iops_mmhg_left",
+   "fieldtype": "Data",
+   "label": "IOPs Mmhg (Left)"
+  },
+  {
+   "fieldname": "fundoscopy_section",
+   "fieldtype": "Section Break",
+   "label": "Fundoscopy"
+  },
+  {
+   "fieldname": "optic_disk_macular_right",
+   "fieldtype": "Select",
+   "label": "Optic Disk/Macular (Right)",
+   "options": "\nNormal\nAbnormal"
+  },
+  {
+   "depends_on": "eval:doc.optic_disk_macular_right==\"Abnormal\"",
+   "fieldname": "optic_disk_macular_right_comment",
+   "fieldtype": "Small Text",
+   "label": "Comment"
+  },
+  {
+   "fieldname": "retina_finding_right",
+   "fieldtype": "Select",
+   "label": "Retina Finding (Right)",
+   "options": "\nNormal\nAbnormal"
+  },
+  {
+   "depends_on": "eval:doc.retina_finding_right==\"Abnormal\"",
+   "fieldname": "retina_finding_right_comment",
+   "fieldtype": "Small Text",
+   "label": "Comment"
+  },
+  {
+   "fieldname": "optic_disk_macular_left",
+   "fieldtype": "Select",
+   "label": "Optic Disk/Macular (Left)",
+   "options": "\nNormal\nAbnormal"
+  },
+  {
+   "depends_on": "eval:doc.optic_disk_macular_left==\"Abnormal\"",
+   "fieldname": "optic_disk_macular_left_comment",
+   "fieldtype": "Small Text",
+   "label": "Comment"
+  },
+  {
+   "fieldname": "retina_finding_left",
+   "fieldtype": "Select",
+   "label": "Retina Finding (Left)",
+   "options": "\nNormal\nAbnormal"
+  },
+  {
+   "depends_on": "eval:doc.retina_finding_left==\"Abnormal\"",
+   "fieldname": "retina_finding_left_comment",
+   "fieldtype": "Small Text",
+   "label": "Comment"
+  },
+  {
+   "fieldname": "ophthalmology_column_break_5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "refraction_section",
+   "fieldtype": "Section Break",
+   "label": "Refraction"
+  },
+  {
+   "fieldname": "orthoptic_assessment_right",
+   "fieldtype": "Select",
+   "label": "Orthoptic Assessment (Right)",
+   "options": "\nNormal\nAbnormal"
+  },
+  {
+   "depends_on": "eval:doc.orthoptic_assessment_right==\"Abnormal\"",
+   "fieldname": "orthoptic_assessment_right_comment",
+   "fieldtype": "Small Text",
+   "label": "Comment"
+  },
+  {
+   "fieldname": "patient_refraction",
+   "fieldtype": "Table",
+   "label": "Patient Refraction",
+   "options": "Refraction"
+  },
+  {
+   "fieldname": "right_fundoscopy",
+   "fieldtype": "HTML",
+   "label": "Right Fundoscopy",
+   "options": "<div class=\"row\">\n\t<img src=\"/assets/gch_custom/images/right-fundoscopy.png\" style=\"height: 250px; display: block; margin-left: auto; margin-right: auto;\">\n</div>"
+  },
+  {
+   "fieldname": "left_fundoscopy",
+   "fieldtype": "HTML",
+   "label": "Left Fundoscopy",
+   "options": "<div class=\"row\">\n\t<img src=\"/assets/gch_custom/images/left-fundoscopy.png\" style=\"height: 250px; display: block; margin-left: auto; margin-right: auto;\">\n</div>"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Ophthalmology Clinic Form",
+   "print_hide": 1,
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2022-03-22 13:28:02.423371",
+ "modified_by": "Administrator",
+ "module": "Gch Custom",
+ "name": "Ophthalmology Clinic Form",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

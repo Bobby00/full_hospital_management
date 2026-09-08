@@ -1,0 +1,73 @@
+{
+ "actions": [],
+ "autoname": "format:Q-{#######}",
+ "creation": "2021-07-22 06:22:44.565002",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "patient",
+  "patient_encounter",
+  "queue_group",
+  "priority",
+  "is_in"
+ ],
+ "fields": [
+  {
+   "fieldname": "patient",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Patient",
+   "options": "Patient",
+   "reqd": 1
+  },
+  {
+   "fieldname": "queue_group",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Queue Group",
+   "options": "Queue Group",
+   "reqd": 1
+  },
+  {
+   "fieldname": "priority",
+   "fieldtype": "Data",
+   "label": "Priority"
+  },
+  {
+   "fieldname": "patient_encounter",
+   "fieldtype": "Data",
+   "label": "Patient Encounter"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_in",
+   "fieldtype": "Check",
+   "label": "Is In"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-07-11 06:58:22.540424",
+ "modified_by": "Administrator",
+ "module": "Queue Management",
+ "name": "Queue",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

@@ -1,0 +1,168 @@
+{
+ "actions": [],
+ "autoname": "field:membership_number",
+ "creation": "2022-03-14 12:05:14.483941",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "patient",
+  "first_name",
+  "last_name",
+  "other_names",
+  "full_name",
+  "membership_number",
+  "membership_type",
+  "scheme_name",
+  "scheme_code",
+  "insurance_id",
+  "column_break_7",
+  "status",
+  "outpatient_status",
+  "payer_code",
+  "payer_name",
+  "auth_code",
+  "benefit_type",
+  "benefit_balance",
+  "benefits_picked",
+  "encounter",
+  "inpatient_record"
+ ],
+ "fields": [
+  {
+   "fieldname": "membership_number",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "label": "Membership Number",
+   "unique": 1
+  },
+  {
+   "fieldname": "scheme_name",
+   "fieldtype": "Data",
+   "label": "Scheme Name"
+  },
+  {
+   "fieldname": "scheme_code",
+   "fieldtype": "Data",
+   "label": "Scheme Code"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Data",
+   "label": "Status"
+  },
+  {
+   "fieldname": "membership_type",
+   "fieldtype": "Data",
+   "label": "Membership Type"
+  },
+  {
+   "fieldname": "insurance_id",
+   "fieldtype": "Data",
+   "label": "Insurance Id"
+  },
+  {
+   "fieldname": "outpatient_status",
+   "fieldtype": "Data",
+   "label": "Outpatient Status"
+  },
+  {
+   "fieldname": "payer_name",
+   "fieldtype": "Data",
+   "label": "Payer Name"
+  },
+  {
+   "fieldname": "payer_code",
+   "fieldtype": "Data",
+   "label": "Payer Code"
+  },
+  {
+   "fieldname": "patient",
+   "fieldtype": "Link",
+   "label": "Patient",
+   "options": "Patient"
+  },
+  {
+   "fieldname": "column_break_7",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "full_name",
+   "fieldtype": "Data",
+   "label": "Full Name"
+  },
+  {
+   "fieldname": "first_name",
+   "fieldtype": "Data",
+   "label": "First Name"
+  },
+  {
+   "fieldname": "last_name",
+   "fieldtype": "Data",
+   "label": "Last Name"
+  },
+  {
+   "fieldname": "other_names",
+   "fieldtype": "Data",
+   "label": "Other Names"
+  },
+  {
+   "fieldname": "auth_code",
+   "fieldtype": "Data",
+   "label": "auth_code"
+  },
+  {
+   "fieldname": "benefit_type",
+   "fieldtype": "Data",
+   "label": "benefit_type"
+  },
+  {
+   "fieldname": "benefit_balance",
+   "fieldtype": "Data",
+   "label": "benefit_balance"
+  },
+  {
+   "fieldname": "benefits_picked",
+   "fieldtype": "Data",
+   "label": "benefits_picked"
+  },
+  {
+   "fieldname": "encounter",
+   "fieldtype": "Link",
+   "label": "encounter",
+   "options": "Patient Encounter"
+  },
+  {
+   "fieldname": "inpatient_record",
+   "fieldtype": "Link",
+   "label": "Inpatient Record",
+   "options": "Inpatient Record"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-11-07 21:20:38.891983",
+ "modified_by": "Administrator",
+ "module": "Gch Custom",
+ "name": "Lct Member",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "title_field": "full_name",
+ "track_changes": 1
+}

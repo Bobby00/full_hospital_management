@@ -1,0 +1,48 @@
+{
+ "actions": [],
+ "creation": "2023-03-06 08:41:07.482320",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "nurse_note",
+  "nurse_name",
+  "date_and_time"
+ ],
+ "fields": [
+  {
+   "columns": 3,
+   "fieldname": "nurse_note",
+   "fieldtype": "Small Text",
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Nurse note",
+   "options": " "
+  },
+  {
+   "default": "User",
+   "fieldname": "nurse_name",
+   "fieldtype": "Link",
+   "label": "Nurse name",
+   "options": "User",
+   "read_only": 1
+  },
+  {
+   "default": "Now",
+   "fieldname": "date_and_time",
+   "fieldtype": "Datetime",
+   "label": "Date and Time",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-04-22 15:31:50.417899",
+ "modified_by": "Administrator",
+ "module": "Gch Custom",
+ "name": "Nurse Notes Table",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

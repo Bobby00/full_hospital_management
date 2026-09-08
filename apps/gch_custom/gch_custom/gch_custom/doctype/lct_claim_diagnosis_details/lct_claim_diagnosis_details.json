@@ -1,0 +1,61 @@
+{
+ "actions": [],
+ "creation": "2022-03-14 14:46:55.038142",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "code",
+  "description",
+  "is_primary",
+  "coding_standard",
+  "coding_standard_version"
+ ],
+ "fields": [
+  {
+   "fieldname": "coding_standard",
+   "fieldtype": "Link",
+   "label": "coding_standard",
+   "options": "Medical Code Standard"
+  },
+  {
+   "fieldname": "coding_standard_version",
+   "fieldtype": "Data",
+   "label": "coding_standard_version"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_primary",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "is_primary",
+   "reqd": 1
+  },
+  {
+   "fieldname": "code",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "code",
+   "reqd": 1
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "description",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2022-03-15 12:56:39.166179",
+ "modified_by": "Administrator",
+ "module": "Gch Custom",
+ "name": "Lct Claim Diagnosis Details",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

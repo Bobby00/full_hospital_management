@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include gch_inpatient *.css
+recursive-include gch_inpatient *.csv
+recursive-include gch_inpatient *.html
+recursive-include gch_inpatient *.ico
+recursive-include gch_inpatient *.js
+recursive-include gch_inpatient *.json
+recursive-include gch_inpatient *.md
+recursive-include gch_inpatient *.png
+recursive-include gch_inpatient *.py
+recursive-include gch_inpatient *.svg
+recursive-include gch_inpatient *.txt
+recursive-exclude gch_inpatient *.pyc

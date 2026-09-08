@@ -1,0 +1,79 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:kranium_encounter",
+ "creation": "2023-01-16 15:13:25.029311",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "kranium_encounter",
+  "seen_by",
+  "description",
+  "kranium_uhid",
+  "encounter_date",
+  "medication"
+ ],
+ "fields": [
+  {
+   "columns": 2,
+   "fieldname": "kranium_encounter",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Kranium Encounter",
+   "read_only": 1,
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "columns": 2,
+   "fieldname": "seen_by",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "label": "Seen By",
+   "read_only": 1
+  },
+  {
+   "columns": 5,
+   "fieldname": "description",
+   "fieldtype": "Long Text",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "label": "Description",
+   "read_only": 1
+  },
+  {
+   "fieldname": "kranium_uhid",
+   "fieldtype": "Data",
+   "label": "Kranium UHID",
+   "read_only": 1
+  },
+  {
+   "columns": 2,
+   "fieldname": "encounter_date",
+   "fieldtype": "Datetime",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "label": "Encounter Date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "medication",
+   "fieldtype": "Long Text",
+   "in_preview": 1,
+   "label": "Medication ",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2023-05-16 17:14:49.934230",
+ "modified_by": "Administrator",
+ "module": "Gch Custom",
+ "name": "Kranium Physical Exams Notes",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

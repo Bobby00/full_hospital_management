@@ -1,0 +1,23 @@
+{
+ "content": null,
+ "creation": "2021-10-26 07:08:27.069959",
+ "docstatus": 0,
+ "doctype": "Page",
+ "idx": 0,
+ "modified": "2021-10-26 07:08:27.069959",
+ "modified_by": "Administrator",
+ "module": "Gch Custom",
+ "name": "receptionist-dashboard",
+ "owner": "Administrator",
+ "page_name": "Receptionist Dashboard",
+ "roles": [
+  {
+   "role": "GCH-Reception"
+  }
+ ],
+ "script": null,
+ "standard": "Yes",
+ "style": null,
+ "system_page": 0,
+ "title": "Front Office"
+}

@@ -1,0 +1,33 @@
+{
+ "actions": [],
+ "autoname": "GDN-#####",
+ "creation": "2021-09-13 12:03:03.916494",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "generic_drug_formula"
+ ],
+ "fields": [
+  {
+   "fieldname": "generic_drug_formula",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Generic Drug Formula",
+   "options": "Drug Formula",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2021-09-13 12:03:03.916494",
+ "modified_by": "Administrator",
+ "module": "Gch Custom",
+ "name": "Generic Drug Formula Link",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

@@ -1,0 +1,224 @@
+<div class="doctor_medication" style="width: 100%;">
+    <div class="row layout-main">
+        <div class="col layout-main-section-wrapper">
+            <div class="layout-main-section">
+                <div class="row user-profile" >
+                    
+                    <div style="overflow-x: auto;">
+                        <h3 style="text-align: right;">Stopped Medications</h3>
+
+                    {% for prescription in inpatient_data %}
+                    
+                    <div class="" style="display: flex;flex-direction: row;overflow-x: scroll;">
+                        
+                        <div class="card col-md-offset-1 " style="margin: 10px;background-color: rgb(236, 119, 106, 1);flex-shrink: 0">
+                            {% if prescription.high_alert == 1 %}
+                            <div class="card-header" style="border-color: white;border-width: 2px;background-color: yellow;color: red;">
+                                <div class="row" style="font-size: 16px;">
+                                    <div class="col-md">
+                                        <strong>Drug</strong><br>
+                                        {{prescription.generic_drug_name}}
+                                    </div>
+                                    <div class="col-md">
+                                        <strong>Item</strong> <br>
+                                        {{prescription.item_description}}
+                                    </div>
+                                    <div class="col-md">
+                                        <strong>Issued Qty:</strong> {{prescription.selling_quantity}}
+                                    </div>
+                                </div>
+                            </div>
+                            {%else%}
+                            <div class="card-header" style="border-color: white;border-width: 2px;">
+                                <div class="row" style="color: whitesmoke;font-size: 16px;">
+                                    <div class="col-md">
+                                        <strong>Drug</strong><br>
+                                        {{prescription.generic_drug_name}}
+                                    </div>
+                                    <div class="col-md">
+                                        <strong>Item</strong> <br>
+                                        {{prescription.item_description}}
+                                    </div>
+                                    <div class="col-md">
+                                        <strong>Issued Qty:</strong> {{prescription.selling_quantity}}
+                                    </div>
+                                </div>
+                            </div>
+                            {%endif%}
+
+                            <div class="card-body" style="color: whitesmoke;font-size: 12px;">
+                                <div>
+                                    <div class="row">
+                                        <div class="col-md">
+                                            <strong>Dose</strong> <br>
+                                            {{prescription.dose}} {{prescription.dose_uom}}
+                                        </div>
+                                        <div class="col-md">
+                                            <strong>Route</strong> <br>
+                                            {{prescription.route}}
+                                        </div>
+                                        <div class="col-md">
+                                            <strong>Frequency:</strong> <br>
+                                            {{prescription.prescription_frequency}}
+                                        </div>
+                                        <div class="col-md">
+                                            <strong>Duration:</strong> <br>
+                                            {{prescription.duration}} <strong>Days</strong>
+                                        </div>
+                                        
+                                    </div>
+                                    <div class="row" style="margin-top: 12px;color: whitesmoke;font-size: 12px;">
+                                        <div class="col-md" >
+                                            <span"><h5>Stopped_by: <br> {{prescription.stopped_by}}</h5></span>
+                                        </div>
+                                        <div class="col-md" >
+                                            <span"><h5>Stopped at: <br> {{prescription.stopped_at}}</h5></span>
+                                        </div>
+                                        <div class="col-md" >
+                                            <span"><h5>Comment: <br> {{prescription.stop_comment}}</h5></span>
+                                        </div>
+                                    </div>                                    
+                                </div>
+                            </div>
+                            <div class="card-body" style="color: whitesmoke;font-size: 12px;">
+
+                                <div>
+                                    <div class="row">
+                                        <div class="col-md">
+                                           <strong>Prescription Date: </strong> {{prescription.creation}}<br>
+                                           <strong>Prescribed By:</strong> {{prescription.owner}}<br>
+                                            <strong>Signature </strong>
+                                        </div>
+                                        <div class="col-md">
+                                            <strong>Issue Date:</strong>   <br>
+                                            <strong>Issued By: </strong><br>
+                                            <strong>Signature:</strong> 
+                                        </div>
+                                        <div class="col-md">
+                                            <strong>Indication: </strong> <br>
+                                            {{prescription.indication}} <br>
+
+                                            {% if prescription.patient_owned_medication == 1 %}
+
+                                            <span class="badge badge-pill" style="background-color: orange;margin-top: 10px;font-size: 16px;color: black;" >Patient Own</span>
+
+                                            {% endif %}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-footer" style="color: whitesmoke;font-size: 12px;border-top: 2px solid white;">
+                                <div> <strong>Doctors Note:</strong> {{prescription.remarks}}</div>
+                                <div> <strong>Pharmacy Note:</strong>  {{prescription.pharmacy_remark}}</div>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <div class="flex-container" style="display: flex;flex-direction: row;">
+                                {%for track in prescription.prescription_tracker %}
+                                <table class="table table-bordered  flex-container" >
+                                    
+                                    <thead style="background-color: rgb(236, 119, 106, 1);color: white;">
+                                      <tr>                                    
+                                        <th colspan="3" scope="colgroup" >{{track.date}}</th>
+                                        
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                        {%for entry in track.entries %}
+                                        
+                                        <tr colspan="3" scope="colgroup">
+                                            <td style="background-color: rgb(236, 119, 106, 1);color: white;">
+                                                <strong>{{entry.time}}</strong>  
+                                            </td>
+                                            <!-- {% if track.date == today %} -->
+                                            {% if entry.administered == 1  && track.date == today %}
+                                            <td style="background-color: orange;">
+                                                <p style="font-weight: bolder;font-size: 10px;">
+                                                    Administered at {{entry.time_administered}} <br>
+                                                    by {{entry.administered_by}}
+                                                </p>
+                                                {%if entry.comment %}
+                                                <p style="font-weight: bolder;font-size: 10px;color: white;">
+                                                    Comment: {{entry.comment}}
+                                                </p>
+                                                {% endif %}
+                                            </td>
+                                            {% endif %}
+                                            {% if entry.administered == 1 &&track.date != today %}
+                                            <td style="background-color: orange;">
+                                                <p style="font-weight: bolder;font-size: 10px;color: white;">
+                                                    Administered at {{entry.time_administered}} <br>
+                                                    by {{entry.administered_by}}
+                                                </p>
+                                                <p>
+                                                    {{entry.comment? entry.comment: ""}}
+                                                </p>
+                                            </td>
+                                            {% endif %}
+                                            {% if entry.administered == 0 &&track.date != today %}
+                                            <td style="background-color: red;">
+                                                <p style="font-weight: bolder;font-size: 10px;color: black;">
+                                                    Medication missed
+                                                </p>
+                                            </td>
+                                            {% endif %}
+                                        </tr>
+                                        {%endfor%}
+                                    </tbody>
+            
+    
+                                </table>
+                                {%endfor%}
+                            </div>
+                        </div>
+
+                        
+                        
+                        <!-- {%for track in prescription.prescription_tracker%}
+                        <div class="card col-md-offset-1 " style="margin: 10px;background-color: rgb(62, 62, 241);">
+                            <div class="card col-md-offset-1 " style="margin: 10px;background-color: rgb(62, 62, 241);">
+                                <div class="card-header">
+                                    <div class="row" style="color: whitesmoke;">
+                                        <div class="col-md">
+                                           <strong>Date: </strong>
+                                            <br>{{track.date}}
+                                        </div>
+                                    </div>
+                                </div>
+
+                                {% for freq in prescription.frequency_tracker %}
+                                
+                                <div style="color: whitesmoke;font-size: 12px;">
+                                    <div>
+                                       {{freq.time}}
+                                    </div>
+                                    <div>
+                                        <strong>Administered </strong> {{freq.time_dispensed}}
+                                     </div>
+                                    <button class="btn btn-primary btn-sm" style="font-size: 8px;">Administer</button>
+                                </div>
+
+                                {% endfor %}
+                            </div>
+                        </div>
+                        {%endfor%} -->
+
+                        <!-- {%for track in prescription.prescription_tracker%}
+                            <table class="col-md-offset-1 table">
+                                <thead>
+                                    <tr>
+                                        {{track.date}}
+                                    </tr>
+                                </thead>
+                            </table>
+                        {%endfor%} -->
+                        
+                </div>
+                {%endfor%}
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

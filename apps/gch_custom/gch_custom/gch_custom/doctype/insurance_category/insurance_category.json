@@ -1,0 +1,332 @@
+{
+ "actions": [],
+ "allow_import": 1,
+ "autoname": "format:{name1}-{company_code}",
+ "creation": "2021-08-30 10:53:23.640308",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "scheme_details_section",
+  "name1",
+  "insurance_category_kra_pin",
+  "is_main_kra_pin",
+  "corporate_company",
+  "company_name",
+  "company_code",
+  "is_managed_care",
+  "managed_care",
+  "column_break_6",
+  "kranium_id",
+  "valid_from",
+  "valid_upto",
+  "suspend",
+  "insurance_details_section",
+  "inpatient_insurance",
+  "inpatient_insurance_company",
+  "inpatient_kramiun_id",
+  "inpatient_company_kra_pin",
+  "inpatient_cover_limit",
+  "column_break_12",
+  "outpatient_insurance",
+  "outpatient_insurance_company",
+  "outpatient_kranium_id",
+  "outpatient_company_kra_pin",
+  "outpatient_cover_limit",
+  "copayment_details_section",
+  "copayment",
+  "billing_details_section",
+  "insurance_billing_rules",
+  "verification_devices_section",
+  "verification_devices",
+  "insurance_preauthorizationexclusions_section",
+  "pre_authorizations",
+  "exclusion"
+ ],
+ "fields": [
+  {
+   "fieldname": "scheme_details_section",
+   "fieldtype": "Section Break",
+   "label": "Category Details"
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "name1",
+   "fieldtype": "Data",
+   "in_global_search": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Category Name",
+   "reqd": 1
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "corporate_company",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Employer",
+   "options": "Corporate Company"
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "kranium_id",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Kranium ID"
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "inpatient_insurance",
+   "fieldtype": "Link",
+   "in_global_search": 1,
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Inpatient Cover",
+   "options": "Insurance Company"
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "outpatient_insurance",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Outpatient Cover",
+   "options": "Insurance Company"
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "default": "0",
+   "fieldname": "suspend",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Suspend"
+  },
+  {
+   "fieldname": "copayment_details_section",
+   "fieldtype": "Section Break",
+   "label": "Copayment Details"
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "copayment",
+   "fieldtype": "Table",
+   "label": "Copayment",
+   "options": "Copayment Detail"
+  },
+  {
+   "fieldname": "billing_details_section",
+   "fieldtype": "Section Break",
+   "label": "Billing Details"
+  },
+  {
+   "fieldname": "insurance_billing_rules",
+   "fieldtype": "Table",
+   "label": "Insurance Billing Rules",
+   "options": "Insurance Billing Rule"
+  },
+  {
+   "fieldname": "verification_devices_section",
+   "fieldtype": "Section Break",
+   "label": "Verification Devices"
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "verification_devices",
+   "fieldtype": "Table",
+   "in_standard_filter": 1,
+   "label": "Verification Devices",
+   "options": "Verification Device Detail"
+  },
+  {
+   "fieldname": "insurance_preauthorizationexclusions_section",
+   "fieldtype": "Section Break",
+   "label": "Insurance Preauthorization /Exclusions"
+  },
+  {
+   "fieldname": "pre_authorizations",
+   "fieldtype": "Table",
+   "label": "Pre Authorizations",
+   "options": "Insurance Scheme Preauthorization"
+  },
+  {
+   "fieldname": "exclusion",
+   "fieldtype": "Table",
+   "label": "Exclusion",
+   "options": "Insurance Scheme Exclusion"
+  },
+  {
+   "fieldname": "valid_from",
+   "fieldtype": "Date",
+   "label": "Valid From"
+  },
+  {
+   "fieldname": "valid_upto",
+   "fieldtype": "Date",
+   "label": "Valid Upto"
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fetch_from": "corporate_company.company_code",
+   "fieldname": "company_code",
+   "fieldtype": "Data",
+   "in_global_search": 1,
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Company Code",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "corporate_company.company_name",
+   "fieldname": "company_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "label": "Company Name",
+   "read_only": 1
+  },
+  {
+   "bold": 1,
+   "fetch_from": "inpatient_insurance.company_name",
+   "fieldname": "inpatient_insurance_company",
+   "fieldtype": "Data",
+   "in_preview": 1,
+   "label": "Inpatient Insurance Company",
+   "read_only": 1
+  },
+  {
+   "bold": 1,
+   "fetch_from": "outpatient_insurance.company_name",
+   "fieldname": "outpatient_insurance_company",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "label": "Outpatient Insurance Company",
+   "read_only": 1
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "bold": 1,
+   "fieldname": "inpatient_cover_limit",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "label": "Inpatient Cover Limit",
+   "mandatory_depends_on": "eval:(doc.inpatient_insurance)",
+   "non_negative": 1,
+   "options": "currency"
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "bold": 1,
+   "depends_on": "eval:(doc.outpatient_insurance)",
+   "fieldname": "outpatient_cover_limit",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "label": "Outpatient Cover Limit",
+   "mandatory_depends_on": " ",
+   "non_negative": 1,
+   "options": "currency"
+  },
+  {
+   "fieldname": "insurance_details_section",
+   "fieldtype": "Section Break",
+   "label": "Insurance Details"
+  },
+  {
+   "fieldname": "column_break_12",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_6",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "inpatient_insurance.kranium_id",
+   "fieldname": "inpatient_kramiun_id",
+   "fieldtype": "Data",
+   "label": "Inpatient kramiun Id",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "outpatient_insurance.kranium_id",
+   "fieldname": "outpatient_kranium_id",
+   "fieldtype": "Data",
+   "label": "Outpatient Kranium Id",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "inpatient_insurance.kra_pin",
+   "fieldname": "inpatient_company_kra_pin",
+   "fieldtype": "Data",
+   "label": "Inpatient company KRA Pin",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "outpatient_insurance.kra_pin",
+   "fieldname": "outpatient_company_kra_pin",
+   "fieldtype": "Data",
+   "label": "outpatient company KRA Pin",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "is_managed_care",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Is Managed Care"
+  },
+  {
+   "default": "0",
+   "fieldname": "managed_care",
+   "fieldtype": "Check",
+   "label": "Managed Care"
+  },
+  {
+   "fieldname": "insurance_category_kra_pin",
+   "fieldtype": "Data",
+   "label": "Insurance Category KRA Pin"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_main_kra_pin",
+   "fieldtype": "Check",
+   "label": "Is main kra pin"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-06-05 05:27:57.918742",
+ "modified_by": "Administrator",
+ "module": "Gch Custom",
+ "name": "Insurance Category",
+ "name_case": "Title Case",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

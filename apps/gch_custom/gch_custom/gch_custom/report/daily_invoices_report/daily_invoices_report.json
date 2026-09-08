@@ -1,0 +1,58 @@
+{
+ "add_total_row": 0,
+ "columns": [],
+ "creation": "2022-09-29 05:24:46.437347",
+ "disable_prepared_report": 0,
+ "disabled": 0,
+ "docstatus": 0,
+ "doctype": "Report",
+ "filters": [
+  {
+   "fieldname": "from_date",
+   "fieldtype": "Date",
+   "label": "From Date",
+   "mandatory": 1,
+   "wildcard_filter": 0
+  },
+  {
+   "fieldname": "to_date",
+   "fieldtype": "Date",
+   "label": "To Date",
+   "mandatory": 1,
+   "wildcard_filter": 0
+  }
+ ],
+ "idx": 0,
+ "is_standard": "Yes",
+ "modified": "2022-09-30 08:18:32.653729",
+ "modified_by": "Administrator",
+ "module": "Gch Custom",
+ "name": "Daily Invoices Report",
+ "owner": "Administrator",
+ "prepared_report": 0,
+ "query": "SELECT\n    `tabPatient Encounter`.branch as \"Clinic (Branch)\",  \n    `tabSales Invoice`.name as \"Invoice Number:Link/Sales Invoice\",\n    `tabSales Invoice`.posting_date as \"Invoice Date\",\n    `tabSales Invoice`.status as \"Document Status\",\n    `tabSales Invoice`.encounter as \"Patient Encounter:Link/Patient Encounter:120\",\n    `tabPatient Encounter`.patient as \"Patient Name\",\n    `tabPatient Encounter`.patient_uhid as \"Patient UHID\",\n    `tabPatient Encounter`.mode_of_payment as \"Mode of Payment\",\n    SUBSTRING_INDEX(`tabPatient Encounter`.clinic, \"-\", 1) as \"Patient Clinic\", \n    `tabPayment Entry`.name as \"Payment Entry Receipt:Link/Payment Entry:120\",  \n    SUBSTRING_INDEX(`tabPayment Entry`.mode_of_payment, \"-\", 1) as \"Receipt Mode\",    \n    \n    CASE\n        WHEN `tabPatient Encounter`.mode_of_payment != \"Insurance\" AND COUNT(`tabPayment Entry`.name) OVER(PARTITION BY `tabSales Invoice`.name) > 1 THEN  \"Multipay\"\n        WHEN `tabPatient Encounter`.mode_of_payment = \"Insurance\" AND `tabPayment Entry`.mode_of_payment != \"Insurance\" AND\n            COUNT(`tabPayment Entry`.name) OVER(PARTITION BY `tabSales Invoice`.name) > 2 THEN  \"Multipay\" \n        WHEN `tabPatient Encounter`.mode_of_payment = \"Insurance\" AND `tabPayment Entry`.mode_of_payment != \"Insurance\" THEN \"Copay\"\n        WHEN `tabPatient Encounter`.mode_of_payment = \"Insurance\" AND `tabPayment Entry`.mode_of_payment = \"Insurance\" THEN \"Insurance\"\n        WHEN `tabPatient Encounter`.mode_of_payment = \"Insurance\" AND `tabPayment Entry`.mode_of_payment = \"Insurance\" AND COUNT(`tabPayment Entry`.name) OVER(PARTITION BY `tabSales Invoice`.name) > 1 THEN \"Insurance\"\n        WHEN `tabPatient Encounter`.mode_of_payment IS NULL AND `tabPayment Entry`.mode_of_payment = \"Insurance\" AND COUNT(`tabPayment Entry`.name) OVER(PARTITION BY `tabSales Invoice`.name) > 1 THEN \"Insurance\"\n        WHEN `tabPayment Entry`.mode_of_payment IS NULL THEN `tabPatient Encounter`.mode_of_payment  \n        ELSE \"Cash\" END  as \"Purpose\", \n        \n    COUNT(`tabPayment Entry`.name) OVER(PARTITION BY `tabSales Invoice`.name) as \"No of Payments\",                                                                                         \n    CASE\n\t    WHEN `tabPayment Entry`.mode_of_payment != \"Insurance\" THEN `tabPayment Entry`.total_allocated_amount\n\t    WHEN `tabPayment Entry`.mode_of_payment IS NULL THEN `tabPayment Entry`.total_allocated_amount\n\t    END AS \"Allocated\",      \n    `tabPayment Entry`.reference_no as \"Payment Reference\",\n    `tabPayment Entry`.party_name as \"Paying For\",\n    `tabSales Invoice`.default_insurance as \"Ins Category (Scheme)\",\n    `tabSales Invoice`.membership_no as \"Member No\", \n    `tabSales Invoice`.principal_member_name as \"Member Name\", \n    `tabSales Invoice`.insurance_outpatient_company_name as \"Outpatient Insurance\",\n    CASE\n\t    WHEN `tabPayment Entry`.mode_of_payment = \"Insurance\" THEN `tabPayment Entry`.paid_amount\n\t    WHEN `tabPatient Encounter`.mode_of_payment like \"Insurance\" OR `tabSales Invoice`.default_insurance IS NOT NULL AND `tabSales Invoice`.outstanding_amount > 0 THEN `tabSales Invoice`.outstanding_amount      \n    END AS \"To Be Paid By Insurance\",\n    /*CASE WHEN `tabPatient Encounter`.mode_of_payment like \"Insurance\" OR `tabSales Invoice`.default_insurance IS NOT NULL\n        THEN `tabSales Invoice`.outstanding_amount END as \"Insurance Balance\",*/\n    `tabSales Invoice`.grand_total as \"Bill Total\",\n    `tabSales Invoice`.outstanding_amount as \"Bill Balance\" \n\nFROM \n    `tabSales Invoice` \n    \nLEFT JOIN \n    `tabPatient Encounter` ON `tabSales Invoice`.encounter = `tabPatient Encounter`.encounter_number\n    \nLEFT JOIN \n    `tabPayment Entry Reference` ON `tabSales Invoice`.name = `tabPayment Entry Reference`.reference_name \n    \nLEFT JOIN \n    `tabPayment Entry` ON `tabPayment Entry Reference`.parent = `tabPayment Entry`.name\n    \nWHERE \n    `tabSales Invoice`.status = \"Paid\" AND `tabSales Invoice`.posting_date BETWEEN %(from_date)s AND %(to_date)s AND `tabPayment Entry`.status != \"Cancelled\"",
+ "ref_doctype": "Sales Invoice",
+ "report_name": "Daily Invoices Report",
+ "report_script": "frappe.query_reports['Daily Invoices Report'] = {\n\"filters\": [\n        {\n        \"fieldname\":\"from_date\",\n        \"default\":frappe.datetime.now_date()\n        }\n         {\n        \"fieldname\":\"to_date\",\n        \"default\":frappe.datetime.now_date()\n        }\n    ]    ",
+ "report_type": "Query Report",
+ "roles": [
+  {
+   "role": "Accounts Manager"
+  },
+  {
+   "role": "Accounts User"
+  },
+  {
+   "role": "Employee Self Service"
+  },
+  {
+   "role": "GCH-Reception"
+  },
+  {
+   "role": "GCH-TriageNurse"
+  },
+  {
+   "role": "GCH-Doctor"
+  }
+ ]
+}

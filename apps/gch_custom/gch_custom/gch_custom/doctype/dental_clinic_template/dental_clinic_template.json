@@ -1,0 +1,154 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2022-05-17 14:09:08.979046",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "patient_details_section",
+  "naming_series",
+  "patient_encounter",
+  "patient",
+  "age",
+  "height",
+  "column_break_6",
+  "date",
+  "assessment_time",
+  "bmi",
+  "gender",
+  "section_break_12",
+  "dental_screen_gch",
+  "dental_section_section",
+  "dental_procedure_table",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "patient_details_section",
+   "fieldtype": "Section Break",
+   "label": "Patient Details"
+  },
+  {
+   "fieldname": "patient_encounter",
+   "fieldtype": "Link",
+   "label": "Patient Encounter",
+   "options": "Patient Encounter"
+  },
+  {
+   "fetch_from": "patient_encounter.patient_name",
+   "fieldname": "patient",
+   "fieldtype": "Data",
+   "label": "Patient",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "patient_encounter.patient_age",
+   "fieldname": "age",
+   "fieldtype": "Data",
+   "label": "Age",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "patient_encounter.height_in_centimeters",
+   "fieldname": "height",
+   "fieldtype": "Data",
+   "label": "Height in Centimeter",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_6",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Today",
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "assessment_time",
+   "fieldtype": "Time",
+   "in_list_view": 1,
+   "label": "Assessment Time",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "patient_encounter.bmi",
+   "fieldname": "bmi",
+   "fieldtype": "Data",
+   "label": "Bmi"
+  },
+  {
+   "fetch_from": "patient.sex",
+   "fieldname": "gender",
+   "fieldtype": "Link",
+   "label": "Gender",
+   "options": "Gender"
+  },
+  {
+   "fieldname": "dental_section_section",
+   "fieldtype": "Section Break",
+   "label": "Dental Section"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "options": "HLC-DENTAL-.YYYY.-"
+  },
+  {
+   "fieldname": "section_break_12",
+   "fieldtype": "Section Break",
+   "label": "Dental Formula Guide"
+  },
+  {
+   "fieldname": "dental_screen_gch",
+   "fieldtype": "HTML",
+   "options": "<div class=\"\">\n  <div class=\"row\">\n    <div class=\"col-12\">\n      <center>\n        <img src=\"/files/dental_gch.png\" style=\"width: 110%;\">\n      </center>\n    </div>\n  </div>\n</div>"
+  },
+  {
+   "fieldname": "dental_procedure_table",
+   "fieldtype": "Table",
+   "label": "Dental Procedure Table",
+   "options": "Dental Procedures"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Dental Clinic Template",
+   "print_hide": 1,
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2022-10-19 16:41:56.615919",
+ "modified_by": "Administrator",
+ "module": "Gch Custom",
+ "name": "Dental Clinic Template",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

@@ -1,0 +1,226 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2021-12-16 11:10:12.113191",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "patient_details_section_break",
+  "patient_encounter",
+  "patient",
+  "patient_age",
+  "patient_weight",
+  "patient_height",
+  "column_break_7",
+  "date",
+  "time",
+  "bmi",
+  "gender",
+  "patient_history_section_break",
+  "diabetes_disease",
+  "hypertension_disease",
+  "patient_history_column_break",
+  "thyroid_disease",
+  "hyperlipidemia_disease",
+  "physical_examination_section",
+  "growth_velocity_cmyr",
+  "tanner_stage_5_breast",
+  "testes_right_cc",
+  "extremities",
+  "column_break_23",
+  "penile_length",
+  "tanner_stage_5_pubic_hair",
+  "testes_left_cc",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "patient_details_section_break",
+   "fieldtype": "Section Break",
+   "label": "Patient Details"
+  },
+  {
+   "fieldname": "patient_encounter",
+   "fieldtype": "Link",
+   "label": "Patient Encounter",
+   "options": "Patient Encounter"
+  },
+  {
+   "fetch_from": "patient_encounter.patient",
+   "fieldname": "patient",
+   "fieldtype": "Data",
+   "label": "Patient",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "patient_encounter.patient_age",
+   "fieldname": "patient_age",
+   "fieldtype": "Data",
+   "label": "Patient Age",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "patient_encounter.weight_in_kilograms",
+   "fieldname": "patient_weight",
+   "fieldtype": "Data",
+   "label": "Patient Weight",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "patient_encounter.height_in_centimeters",
+   "fieldname": "patient_height",
+   "fieldtype": "Data",
+   "label": "Patient Height",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_7",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "patient_encounter.encounter_date",
+   "fieldname": "date",
+   "fieldtype": "Data",
+   "label": "Date",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "patient_encounter.encounter_time",
+   "fieldname": "time",
+   "fieldtype": "Data",
+   "label": "Time",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "patient_encounter.bmi",
+   "fieldname": "bmi",
+   "fieldtype": "Data",
+   "label": "BMI",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "patient_encounter.patient_sex",
+   "fieldname": "gender",
+   "fieldtype": "Data",
+   "label": "Gender",
+   "read_only": 1
+  },
+  {
+   "fieldname": "patient_history_section_break",
+   "fieldtype": "Section Break",
+   "label": "Patient History"
+  },
+  {
+   "fieldname": "hyperlipidemia_disease",
+   "fieldtype": "Long Text",
+   "label": "Hyperlipidemia Disease"
+  },
+  {
+   "fieldname": "patient_history_column_break",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "hypertension_disease",
+   "fieldtype": "Long Text",
+   "label": "Hypertension Disease"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Endocrine Clinic Template",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Endocrine Clinic Template",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "diabetes_disease",
+   "fieldtype": "Long Text",
+   "label": "Diabetes Disease"
+  },
+  {
+   "fieldname": "thyroid_disease",
+   "fieldtype": "Long Text",
+   "label": "Thyroid Disease"
+  },
+  {
+   "fieldname": "physical_examination_section",
+   "fieldtype": "Section Break",
+   "label": "Physical Examination"
+  },
+  {
+   "fieldname": "growth_velocity_cmyr",
+   "fieldtype": "Data",
+   "label": "Growth Velocity (Cm/Yr)"
+  },
+  {
+   "fieldname": "tanner_stage_5_breast",
+   "fieldtype": "Data",
+   "label": "Tanner Stage /5 (Breast)"
+  },
+  {
+   "fieldname": "testes_right_cc",
+   "fieldtype": "Data",
+   "label": "Testes (Right CC)"
+  },
+  {
+   "fieldname": "extremities",
+   "fieldtype": "Long Text",
+   "label": "Extremities"
+  },
+  {
+   "fieldname": "column_break_23",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "penile_length",
+   "fieldtype": "Data",
+   "label": "Penile Length"
+  },
+  {
+   "fieldname": "tanner_stage_5_pubic_hair",
+   "fieldtype": "Data",
+   "label": "Tanner Stage /5 (Pubic Hair)"
+  },
+  {
+   "fieldname": "testes_left_cc",
+   "fieldtype": "Data",
+   "label": "Testes (Left CC)"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2021-12-16 11:20:28.514758",
+ "modified_by": "Administrator",
+ "module": "Gch Custom",
+ "name": "Endocrine Clinic Template",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

@@ -1,0 +1,13 @@
+{
+ "db_name": "_e2da2d4270ac3c39",
+ "db_password": "KEiTfpCAL1jtcyqp",
+ "db_type": "mariadb",
+ "developer_mode": 1,
+ "encryption_key": "2ODSLBBUsx9sqY69JBjczeqXVeXK3TXznueltli4ORE=",
+ "maintenance_mode": 0,
+ "max_file_size": 40000000,
+ "pause_scheduler": 0,
+ "user_type_doctype_limit": {
+  "employee_self_service": 10
+ }
+}

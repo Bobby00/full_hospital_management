@@ -1,0 +1,261 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2024-07-24 10:11:49.334895",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "inpatient_record",
+  "theatre_overview",
+  "post_anaesthesia_orders_section",
+  "oxygen_mask",
+  "spo2_monitoring",
+  "feed_at",
+  "assessments_section",
+  "patient_assessment",
+  "start_assessment",
+  "completed_assessments",
+  "fluids",
+  "analgesia",
+  "analgesia_others",
+  "special_instructions_section",
+  "spec_instructions",
+  "nurse_led_discharge",
+  "pain_scale",
+  "pacu_section",
+  "time_arrived",
+  "temperature",
+  "received_by_nurse",
+  "receiving_nurse",
+  "time_discharged",
+  "discharged_to",
+  "pacu_discharge_score",
+  "glasgow_coma_scale_gcs",
+  "reviewed_by_nurse",
+  "doc_sign",
+  "pacu_observation_chart",
+  "limb_circulation_chart",
+  "total_input_output",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "post_anaesthesia_orders_section",
+   "fieldtype": "Section Break",
+   "label": "Post Anaesthesia Orders"
+  },
+  {
+   "fieldname": "oxygen_mask",
+   "fieldtype": "Select",
+   "label": "Oxygen 6L mask When SPO2 is less than 95%",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "spo2_monitoring",
+   "fieldtype": "Select",
+   "label": "SPO2/ PR monitoring every 5 Mins",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "fluids",
+   "fieldtype": "Table",
+   "label": "Fluids",
+   "options": "Intake Fluid Details"
+  },
+  {
+   "fieldname": "analgesia",
+   "fieldtype": "Select",
+   "label": "Analgesia Via",
+   "options": "\nEpidural; No IV opioids\nPump Controlled Analgesia (PCA) Morphine Fentanyl\nOthers"
+  },
+  {
+   "depends_on": "eval:doc.analgesia==\"Others\"",
+   "fieldname": "analgesia_others",
+   "fieldtype": "Data",
+   "label": "Others",
+   "mandatory_depends_on": "eval:doc.analgesia==\"Others\""
+  },
+  {
+   "fieldname": "special_instructions_section",
+   "fieldtype": "Section Break",
+   "label": "Special Instructions"
+  },
+  {
+   "fieldname": "spec_instructions",
+   "fieldtype": "Data",
+   "label": "Special Instructions"
+  },
+  {
+   "fieldname": "nurse_led_discharge",
+   "fieldtype": "Select",
+   "label": "Nurse Led Discharge",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "pain_scale",
+   "fieldtype": "Select",
+   "label": "Pain Scale",
+   "options": "\nVAS/ Wong BAker\nFLACC"
+  },
+  {
+   "fieldname": "pacu_section",
+   "fieldtype": "Section Break",
+   "label": "PACU"
+  },
+  {
+   "fieldname": "time_arrived",
+   "fieldtype": "Datetime",
+   "label": "Time arrived"
+  },
+  {
+   "fieldname": "temperature",
+   "fieldtype": "Int",
+   "label": "Temperature"
+  },
+  {
+   "fieldname": "received_by_nurse",
+   "fieldtype": "Link",
+   "label": "Received by Nurse",
+   "options": "Healthcare Practitioner"
+  },
+  {
+   "fieldname": "time_discharged",
+   "fieldtype": "Datetime",
+   "label": "Time Discharged"
+  },
+  {
+   "fieldname": "discharged_to",
+   "fieldtype": "Select",
+   "label": "Discharged To",
+   "options": "\nWard\nHigh Dependency Unit\nIntensive Care Unit"
+  },
+  {
+   "fieldname": "pacu_discharge_score",
+   "fieldtype": "Data",
+   "label": "PACU Discharge Score"
+  },
+  {
+   "fieldname": "glasgow_coma_scale_gcs",
+   "fieldtype": "Data",
+   "label": "Glasgow Coma Scale (GCS)"
+  },
+  {
+   "fieldname": "reviewed_by_nurse",
+   "fieldtype": "Link",
+   "label": "Reviewed By Nurse",
+   "options": "Healthcare Practitioner"
+  },
+  {
+   "fieldname": "doc_sign",
+   "fieldtype": "Signature",
+   "label": "Doctor's Signature"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Post Operative Checklist",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "pacu_observation_chart",
+   "fieldtype": "Table",
+   "label": "Pacu Observation Chart",
+   "options": "Post Anaesthesia Care Observation"
+  },
+  {
+   "fieldname": "limb_circulation_chart",
+   "fieldtype": "Table",
+   "label": "Limb Circulation Chart",
+   "options": "Limb Circulation Chart"
+  },
+  {
+   "fieldname": "total_input_output",
+   "fieldtype": "Table",
+   "label": "Total Input Output",
+   "options": "PACU Input Output"
+  },
+  {
+   "fieldname": "feed_at",
+   "fieldtype": "Time",
+   "label": "Feed at"
+  },
+  {
+   "fieldname": "assessments_section",
+   "fieldtype": "Section Break",
+   "label": "Assessments"
+  },
+  {
+   "fieldname": "patient_assessment",
+   "fieldtype": "Link",
+   "label": "Patient Assessment",
+   "options": "Patient Assessment Template"
+  },
+  {
+   "fieldname": "start_assessment",
+   "fieldtype": "Button",
+   "label": "Start Assessment"
+  },
+  {
+   "fieldname": "inpatient_record",
+   "fieldtype": "Link",
+   "label": "Inpatient Record",
+   "options": "Inpatient Record"
+  },
+  {
+   "fieldname": "theatre_overview",
+   "fieldtype": "Link",
+   "label": "Theatre Overview",
+   "options": "Theatre Overview"
+  },
+  {
+   "fieldname": "completed_assessments",
+   "fieldtype": "HTML",
+   "label": "Completed Assessments",
+   "options": "<div class=\"row\">\n  <div class=\"col-md-12\">\n    <div class=\"table-responsive-sm\">\n      <table class=\"table table-striped table-bordered \" style=\"font-size: 12px;\">\n        <thead>\n          <tr>\n            <th>Assessment No</th>\n            <th>Type</th>\n            <th>Score</th>\n            <th>Date</th>\n            <th>Time</th>\n            <th>Done by</th>\n            <th>Action</th>\n          </tr>\n        </thead>\n        <tbody class=\"encounter-assessment\"></tbody>\n      </table>\n    </div>\n  </div>\n</div>"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Naming Series",
+   "options": "HLC-POC-.YYYY.-"
+  },
+  {
+   "fetch_from": "received_by_nurse.practitioner_name",
+   "fieldname": "receiving_nurse",
+   "fieldtype": "Data",
+   "label": "Receiving Nurse",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2024-07-25 09:58:52.114406",
+ "modified_by": "Administrator",
+ "module": "GCH Theatre",
+ "name": "Post Operative Checklist",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

@@ -1,0 +1,6 @@
+Metadata-Version: 2.1
+Name: gch-messaging
+Version: 0.0.1
+Summary: App utility to handle all messaging channels within the GCH ERPNext ecosystem
+Author: devs@gerties.org
+Author-email: devs@gerties.org

@@ -1,0 +1,16 @@
+frappe
+gch_inpatient
+gch_insurance
+gch_middleware
+gch_common
+gch_custom
+gch_pacs
+frappe_helper
+erpnext
+gch_purchases
+gch_theme
+gch_messaging
+gch_pccu
+gch_theatre
+gch_sentry
+gch_queue

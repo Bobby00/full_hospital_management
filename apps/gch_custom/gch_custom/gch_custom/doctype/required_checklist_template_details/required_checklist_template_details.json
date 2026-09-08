@@ -1,0 +1,40 @@
+{
+ "actions": [],
+ "creation": "2022-01-06 13:33:56.690527",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "nursing_checklist_template",
+  "template_name"
+ ],
+ "fields": [
+  {
+   "fieldname": "nursing_checklist_template",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Nursing Checklist Template",
+   "options": "Nursing Checklist Template",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "nursing_checklist_template.template_name",
+   "fieldname": "template_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Template Name"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2022-01-06 13:35:01.584675",
+ "modified_by": "Administrator",
+ "module": "Gch Custom",
+ "name": "Required Checklist Template Details",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

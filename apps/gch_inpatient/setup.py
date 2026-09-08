@@ -1,0 +1,19 @@
+from setuptools import setup, find_packages
+
+with open("requirements.txt") as f:
+	install_requires = f.read().strip().split("\n")
+
+# get version from __version__ variable in gch_inpatient/__init__.py
+from gch_inpatient import __version__ as version
+
+setup(
+	name="gch_inpatient",
+	version=version,
+	description="GCH Inpatient App",
+	author="Redward",
+	author_email="redward@gerties.org",
+	packages=find_packages(),
+	zip_safe=False,
+	include_package_data=True,
+	install_requires=install_requires
+)

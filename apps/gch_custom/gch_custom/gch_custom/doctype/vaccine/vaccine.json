@@ -1,0 +1,64 @@
+{
+ "actions": [],
+ "allow_import": 1,
+ "allow_rename": 1,
+ "autoname": "format:{vaccine_name} - {administered_at}",
+ "creation": "2021-09-02 13:21:01.990066",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "vaccine_name",
+  "abbreviation",
+  "administered_at"
+ ],
+ "fields": [
+  {
+   "fieldname": "vaccine_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Vaccine Name",
+   "reqd": 1,
+   "translatable": 1
+  },
+  {
+   "fieldname": "abbreviation",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Abbreviation",
+   "reqd": 1
+  },
+  {
+   "fieldname": "administered_at",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Administered at",
+   "options": "Birth\n6 Weeks\n10 Weeks\n14 Weeks\n18 Weeks\n6 Months\n7 Months\n9 Months\n1 Year\n15 Months\n2 Years\n6 Years\n10 Years",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2021-09-15 15:39:51.999491",
+ "modified_by": "Administrator",
+ "module": "Gch Custom",
+ "name": "Vaccine",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

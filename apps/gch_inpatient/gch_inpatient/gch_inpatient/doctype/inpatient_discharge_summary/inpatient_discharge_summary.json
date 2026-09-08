@@ -1,0 +1,287 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2024-08-19 15:20:25.829634",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "patient_details_section",
+  "inpatient_record",
+  "patient",
+  "patient_name",
+  "patient_uhid",
+  "age",
+  "date_of_birth",
+  "gender",
+  "column_break_10",
+  "wardroombed",
+  "patient_file_number",
+  "nationality",
+  "admission_class",
+  "admission_date",
+  "admission_time",
+  "discharge_date_and_time",
+  "section_break_17",
+  "diagnosis",
+  "medication",
+  "history",
+  "examinations",
+  "lab_reports",
+  "radiology_reports",
+  "section_break_25",
+  "discharge_and_follow_up_instructions",
+  "follow_up_date",
+  "column_break_28",
+  "reason_to_make_emergency_call",
+  "emergency_phone_contacts",
+  "section_break_31",
+  "name_of_consultant",
+  "signature",
+  "column_break_34",
+  "consultant_phone_number"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Series",
+   "options": "DISC-SUMMARY-.YYYY.-"
+  },
+  {
+   "fieldname": "patient_details_section",
+   "fieldtype": "Section Break",
+   "label": "Patient Details"
+  },
+  {
+   "fieldname": "inpatient_record",
+   "fieldtype": "Link",
+   "in_global_search": 1,
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Inpatient Record",
+   "options": "Inpatient Record",
+   "unique": 1
+  },
+  {
+   "fetch_from": "inpatient_record.patient",
+   "fieldname": "patient",
+   "fieldtype": "Link",
+   "in_global_search": 1,
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Patient",
+   "options": "Patient"
+  },
+  {
+   "fetch_from": "patient.patient_name",
+   "fieldname": "patient_name",
+   "fieldtype": "Data",
+   "label": "Patient Name"
+  },
+  {
+   "fetch_from": "patient.uhid_code",
+   "fieldname": "patient_uhid",
+   "fieldtype": "Data",
+   "in_global_search": 1,
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Patient UHID"
+  },
+  {
+   "fieldname": "age",
+   "fieldtype": "Data",
+   "label": "Age"
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fetch_from": "patient.dob",
+   "fieldname": "date_of_birth",
+   "fieldtype": "Data",
+   "in_global_search": 1,
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Date of Birth (YYYY-MM-DD)"
+  },
+  {
+   "fetch_from": "patient.sex",
+   "fieldname": "gender",
+   "fieldtype": "Link",
+   "in_global_search": 1,
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Gender",
+   "options": "Gender"
+  },
+  {
+   "fieldname": "column_break_10",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "patient.physical_file",
+   "fieldname": "patient_file_number",
+   "fieldtype": "Data",
+   "label": "Patient File Number"
+  },
+  {
+   "fetch_from": "patient.nationality",
+   "fieldname": "nationality",
+   "fieldtype": "Data",
+   "label": "Nationality"
+  },
+  {
+   "fieldname": "admission_class",
+   "fieldtype": "Data",
+   "label": "Admission Class"
+  },
+  {
+   "fetch_from": "inpatient_record.scheduled_date",
+   "fieldname": "admission_date",
+   "fieldtype": "Date",
+   "label": "Admission Date"
+  },
+  {
+   "fetch_from": "inpatient_record.admitted_datetime",
+   "fieldname": "admission_time",
+   "fieldtype": "Time",
+   "label": "Admission Time"
+  },
+  {
+   "fieldname": "section_break_17",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "diagnosis",
+   "fieldtype": "Small Text",
+   "label": "DIAGNOSIS"
+  },
+  {
+   "fieldname": "history",
+   "fieldtype": "Long Text",
+   "label": "HISTORY"
+  },
+  {
+   "fetch_from": "inpatient_record.discharge_instructions",
+   "fieldname": "discharge_and_follow_up_instructions",
+   "fieldtype": "Data",
+   "label": "DISCHARGE AND FOLLOW UP INSTRUCTIONS"
+  },
+  {
+   "fieldname": "follow_up_date",
+   "fieldtype": "Date",
+   "label": "FOLLOW UP DATE"
+  },
+  {
+   "fieldname": "reason_to_make_emergency_call",
+   "fieldtype": "Data",
+   "label": "REASON TO MAKE EMERGENCY CALL"
+  },
+  {
+   "default": "020 7206 000; 0709 529 000; 0730 645 000",
+   "fieldname": "emergency_phone_contacts",
+   "fieldtype": "Data",
+   "label": "EMERGENCY PHONE CONTACTS"
+  },
+  {
+   "fetch_from": "inpatient_record.practitioner_name",
+   "fieldname": "name_of_consultant",
+   "fieldtype": "Data",
+   "label": "NAME OF CONSULTANT"
+  },
+  {
+   "fieldname": "consultant_phone_number",
+   "fieldtype": "Data",
+   "label": "CONSULTANT PHONE NUMBER"
+  },
+  {
+   "fieldname": "signature",
+   "fieldtype": "Signature",
+   "label": "SIGNATURE"
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "wardroombed",
+   "fieldtype": "Data",
+   "in_global_search": 1,
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Ward/Room/Bed"
+  },
+  {
+   "fetch_from": "inpatient_record.discharge_datetime",
+   "fieldname": "discharge_date_and_time",
+   "fieldtype": "Datetime",
+   "label": "Discharge Date and Time"
+  },
+  {
+   "fieldname": "examinations",
+   "fieldtype": "Small Text",
+   "label": "Examinations"
+  },
+  {
+   "fieldname": "lab_reports",
+   "fieldtype": "Small Text",
+   "label": "Lab Reports"
+  },
+  {
+   "fieldname": "radiology_reports",
+   "fieldtype": "Small Text",
+   "label": "Radiology Reports"
+  },
+  {
+   "fieldname": "section_break_25",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_28",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_31",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_34",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "No Discharge Medication",
+   "fieldname": "medication",
+   "fieldtype": "Small Text",
+   "label": "MEDICATION",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-11-21 09:27:30.021304",
+ "modified_by": "Administrator",
+ "module": "Gch Inpatient",
+ "name": "Inpatient Discharge Summary",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

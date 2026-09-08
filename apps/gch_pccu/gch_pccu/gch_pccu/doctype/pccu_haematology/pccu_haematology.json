@@ -1,0 +1,97 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-07-02 15:35:23.579694",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "wbc",
+  "haemoglobin",
+  "platelets",
+  "inr",
+  "ptt",
+  "fibrinogen",
+  "time"
+ ],
+ "fields": [
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "wbc",
+   "fieldtype": "Data",
+   "in_global_search": 1,
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "WBC"
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "haemoglobin",
+   "fieldtype": "Data",
+   "in_global_search": 1,
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Haemoglobin"
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "platelets",
+   "fieldtype": "Data",
+   "in_global_search": 1,
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Platelets"
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "inr",
+   "fieldtype": "Data",
+   "in_global_search": 1,
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "INR"
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "ptt",
+   "fieldtype": "Data",
+   "in_global_search": 1,
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "PTT"
+  },
+  {
+   "fieldname": "fibrinogen",
+   "fieldtype": "Data",
+   "label": "Fibrinogen"
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "columns": 2,
+   "default": "Now",
+   "fieldname": "time",
+   "fieldtype": "Datetime",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Time",
+   "search_index": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-07-02 15:45:00.333871",
+ "modified_by": "Administrator",
+ "module": "GCH PCCU",
+ "name": "PCCU Haematology",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

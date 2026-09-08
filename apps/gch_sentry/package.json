@@ -1,0 +1,15 @@
+{
+    "name": "gch_sentry",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Gertrude-s-Children-s-Hospital/gch-sentry.git"
+    },
+    "author": "GCH Developers",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/Gertrude-s-Children-s-Hospital/gch-sentry/issues"
+    },
+    "dependencies": {
+        "@sentry/browser": "^6.5.1"
+    }
+}

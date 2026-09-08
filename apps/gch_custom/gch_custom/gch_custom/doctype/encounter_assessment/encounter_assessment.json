@@ -1,0 +1,54 @@
+{
+ "actions": [],
+ "creation": "2021-07-29 17:49:16.555615",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "assessment_type",
+  "assessment",
+  "score",
+  "comments"
+ ],
+ "fields": [
+  {
+   "fieldname": "assessment_type",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Assessment Type",
+   "options": "Patient Assessment Template",
+   "reqd": 1
+  },
+  {
+   "fieldname": "assessment",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Assessment",
+   "options": "Patient Assessment"
+  },
+  {
+   "fetch_from": "assessment.total_score_obtained",
+   "fieldname": "score",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Score"
+  },
+  {
+   "fieldname": "comments",
+   "fieldtype": "Small Text",
+   "label": "Comments"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2021-07-29 18:07:33.047066",
+ "modified_by": "Administrator",
+ "module": "Gch Custom",
+ "name": "Encounter Assessment",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

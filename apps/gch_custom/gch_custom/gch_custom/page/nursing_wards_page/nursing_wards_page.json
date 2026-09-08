@@ -1,0 +1,19 @@
+{
+ "content": null,
+ "creation": "2021-11-21 10:00:50.621005",
+ "docstatus": 0,
+ "doctype": "Page",
+ "idx": 0,
+ "modified": "2021-11-21 10:00:50.621005",
+ "modified_by": "Administrator",
+ "module": "Gch Custom",
+ "name": "nursing-wards-page",
+ "owner": "Administrator",
+ "page_name": "Nursing Wards Page",
+ "roles": [],
+ "script": null,
+ "standard": "Yes",
+ "style": null,
+ "system_page": 0,
+ "title": "Nursing Wards"
+}

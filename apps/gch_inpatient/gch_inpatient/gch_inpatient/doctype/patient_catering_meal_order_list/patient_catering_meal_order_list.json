@@ -1,0 +1,236 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2023-11-29 10:58:54.339636",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "inpatient_record",
+  "patient",
+  "dob",
+  "gender",
+  "ward",
+  "room",
+  "bed",
+  "column_break_9",
+  "status",
+  "taken_by",
+  "date",
+  "time",
+  "patient_meal_order_details_section_section",
+  "select_menu",
+  "menu_option",
+  "catering_meal_order_details",
+  "parent_meal_order_details_section_section",
+  "make_parent_catering_meal_order",
+  "select_parent_menu",
+  "select_parent_menu_option",
+  "parent_catering_meal_order_details",
+  "section_break_23",
+  "ordered_by",
+  "ordered_by_signature",
+  "column_break_26",
+  "received_by",
+  "received_by_signature",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Naming Series",
+   "options": "HLC-CMO-.YYYY.-"
+  },
+  {
+   "fieldname": "inpatient_record",
+   "fieldtype": "Link",
+   "label": "Inpatient Record",
+   "options": "Inpatient Record"
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fetch_from": "order_name.patient",
+   "fieldname": "patient",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Patient",
+   "options": "Patient"
+  },
+  {
+   "fieldname": "dob",
+   "fieldtype": "Data",
+   "label": "DOB"
+  },
+  {
+   "fieldname": "gender",
+   "fieldtype": "Data",
+   "label": "Gender"
+  },
+  {
+   "fetch_from": "order_name.ward",
+   "fieldname": "ward",
+   "fieldtype": "Link",
+   "in_global_search": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Ward",
+   "options": "Nursing Ward"
+  },
+  {
+   "fetch_from": "order_name.room",
+   "fieldname": "room",
+   "fieldtype": "Data",
+   "label": "Room"
+  },
+  {
+   "fetch_from": "order_name.bed",
+   "fieldname": "bed",
+   "fieldtype": "Data",
+   "label": "Bed"
+  },
+  {
+   "fieldname": "column_break_9",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "in_global_search": 1,
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Status",
+   "options": "\nDraft\nOrdered\nIssued\nDelivered\nCancelled"
+  },
+  {
+   "fieldname": "taken_by",
+   "fieldtype": "Data",
+   "label": "Taken By"
+  },
+  {
+   "fetch_from": "order_name.date",
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Order Date"
+  },
+  {
+   "fetch_from": "order_name.time",
+   "fieldname": "time",
+   "fieldtype": "Time",
+   "label": "Order Time"
+  },
+  {
+   "fieldname": "patient_meal_order_details_section_section",
+   "fieldtype": "Section Break",
+   "label": "Patient Meal Order Details Section"
+  },
+  {
+   "fetch_from": "order_name.select_menu",
+   "fieldname": "select_menu",
+   "fieldtype": "Link",
+   "label": "Select Menu",
+   "options": "Catering Menu"
+  },
+  {
+   "fetch_from": "order_name.menu_option",
+   "fieldname": "menu_option",
+   "fieldtype": "Link",
+   "label": "Menu Option",
+   "options": "Catering Menu Option"
+  },
+  {
+   "fieldname": "catering_meal_order_details",
+   "fieldtype": "Table",
+   "label": "Catering Meal Order Details",
+   "options": "Catering Meal Order Details"
+  },
+  {
+   "fieldname": "parent_meal_order_details_section_section",
+   "fieldtype": "Section Break",
+   "label": "Parent Meal Order Details Section"
+  },
+  {
+   "default": "0",
+   "fieldname": "make_parent_catering_meal_order",
+   "fieldtype": "Check",
+   "label": "Make Parent Catering Meal Order?"
+  },
+  {
+   "fieldname": "select_parent_menu",
+   "fieldtype": "Link",
+   "label": "Select Parent Menu",
+   "options": "Catering Menu"
+  },
+  {
+   "fieldname": "select_parent_menu_option",
+   "fieldtype": "Link",
+   "label": "Select Parent Menu Option",
+   "options": "Catering Menu Option"
+  },
+  {
+   "fieldname": "parent_catering_meal_order_details",
+   "fieldtype": "Link",
+   "label": "Parent Catering Meal Order Details",
+   "options": "Catering Meal Order Details"
+  },
+  {
+   "fieldname": "section_break_23",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fetch_from": "order_name.ordered_by",
+   "fieldname": "ordered_by",
+   "fieldtype": "Link",
+   "label": "Ordered by",
+   "options": "Healthcare Practitioner"
+  },
+  {
+   "fieldname": "ordered_by_signature",
+   "fieldtype": "Signature",
+   "label": "Ordered by signature"
+  },
+  {
+   "fieldname": "column_break_26",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "order_name.received_by",
+   "fieldname": "received_by",
+   "fieldtype": "Link",
+   "label": "Received By",
+   "options": "User"
+  },
+  {
+   "fieldname": "received_by_signature",
+   "fieldtype": "Signature",
+   "label": "Received by signature"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Patient Catering Meal Order List",
+   "print_hide": 1,
+   "read_only": 1
+  }
+ ],
+ "hide_toolbar": 1,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2024-06-12 10:02:49.824786",
+ "modified_by": "Administrator",
+ "module": "Gch Inpatient",
+ "name": "Patient Catering Meal Order List",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

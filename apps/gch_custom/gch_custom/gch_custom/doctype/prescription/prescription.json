@@ -1,0 +1,353 @@
+{
+    "actions": [],
+    "autoname": "GCHPRES.#####",
+    "creation": "2021-10-28 20:02:18.368052",
+    "doctype": "DocType",
+    "editable_grid": 1,
+    "engine": "InnoDB",
+    "field_order": [
+        "connections_section",
+        "patient_name",
+        "patient_gender",
+        "patient_date_of_birth",
+        "patient_age",
+        "weight_in_kg",
+        "column_break_9",
+        "height_in_centimeters",
+        "bmi",
+        "is_emergency_patient",
+        "is_fall_risk",
+        "is_isolation_patient",
+        "has_drug_allergies",
+        "has_food_allergy",
+        "drug_history",
+        "encounter_information_section",
+        "over_the_counter",
+        "patient_encounter",
+        "encounter_number",
+        "primary_doctor",
+        "column_break_6",
+        "encounter_date",
+        "encounter_start_time",
+        "branch_name",
+        "service",
+        "prescription_info_section",
+        "prescription_number",
+        "prescribing_doctor",
+        "column_break_29",
+        "prescription_date",
+        "prescription_time",
+        "diagnosis_section",
+        "diagnosis",
+        "gertrudes_standard_treatment_guidelines_med_doses_section",
+        "standard_treatment_guidelines",
+        "prescription_section",
+        "prescriptions",
+        "amended_from"
+    ],
+    "fields": [
+        {
+            "fieldname": "connections_section",
+            "fieldtype": "Section Break",
+            "label": "Connections",
+            "read_only": 1
+        },
+        {
+            "fetch_from": "patient_encounter.patient",
+            "fieldname": "patient_name",
+            "fieldtype": "Data",
+            "label": "Patient Name",
+            "read_only": 1
+        },
+        {
+            "fetch_from": "patient_encounter.patient_sex",
+            "fieldname": "patient_gender",
+            "fieldtype": "Data",
+            "label": "Patient Gender",
+            "read_only": 1
+        },
+        {
+            "depends_on": "eval:cur_frm.doc.patient_encounter!==undefined;",
+            "fieldname": "patient_date_of_birth",
+            "fieldtype": "Data",
+            "label": "Patient Date of Birth",
+            "read_only": 1
+        },
+        {
+            "fetch_from": "patient_encounter.patient_age",
+            "fieldname": "patient_age",
+            "fieldtype": "Data",
+            "label": "Patient Age",
+            "read_only": 1
+        },
+        {
+            "fetch_from": "patient_encounter.weight_in_kilograms",
+            "fieldname": "weight_in_kg",
+            "fieldtype": "Data",
+            "label": "Weight in KG",
+            "read_only": 1
+        },
+        {
+            "fetch_from": "patient_encounter.height_in_centimeters",
+            "fieldname": "height_in_centimeters",
+            "fieldtype": "Data",
+            "label": "Height in Centimeters",
+            "read_only": 1
+        },
+        {
+            "fetch_from": "patient_encounter.bmi",
+            "fieldname": "bmi",
+            "fieldtype": "Data",
+            "label": "BMI",
+            "read_only": 1
+        },
+        {
+            "fieldname": "column_break_9",
+            "fieldtype": "Column Break"
+        },
+        {
+            "default": "0",
+            "depends_on": "eval:cur_frm.doc.patient_encounter!==undefined;",
+            "fetch_from": "patient_encounter.is_emergency_patient",
+            "fieldname": "is_emergency_patient",
+            "fieldtype": "Check",
+            "label": "Is Emergency Patient",
+            "read_only": 1
+        },
+        {
+            "default": "0",
+            "depends_on": "eval:doc.patient_encounter!==undefined;",
+            "fetch_from": "patient_encounter.is_fall_risk_patient",
+            "fieldname": "is_fall_risk",
+            "fieldtype": "Check",
+            "label": "Is Fall Risk Patient",
+            "read_only": 1
+        },
+        {
+            "default": "0",
+            "depends_on": "eval:cur_frm.doc.patient_encounter!==undefined;",
+            "fetch_from": "patient_encounter.is_isolation_patient",
+            "fieldname": "is_isolation_patient",
+            "fieldtype": "Check",
+            "label": "Is Isolation Patient",
+            "read_only": 1
+        },
+        {
+            "default": "0",
+            "depends_on": "eval:cur_frm.doc.patient_encounter!==undefined;",
+            "fetch_from": "patient_encounter.is_drug_allergy_patient",
+            "fieldname": "has_drug_allergies",
+            "fieldtype": "Check",
+            "label": "Has Drug Allergies",
+            "read_only": 1
+        },
+        {
+            "default": "0",
+            "depends_on": "eval:cur_frm.doc.patient_encounter!==undefined;",
+            "fieldname": "has_food_allergy",
+            "fieldtype": "Check",
+            "label": "Has Food Allergy",
+            "read_only": 1
+        },
+        {
+            "fetch_from": "patient_encounter.drug_history",
+            "fieldname": "drug_history",
+            "fieldtype": "Data",
+            "label": "Drug History",
+            "read_only": 1
+        },
+        {
+            "fieldname": "encounter_information_section",
+            "fieldtype": "Section Break",
+            "label": "Encounter Information"
+        },
+        {
+            "fieldname": "patient_encounter",
+            "fieldtype": "Link",
+            "label": "Encounter",
+            "options": "Patient Encounter"
+        },
+        {
+            "fetch_from": "patient_encounter.encounter_number",
+            "fieldname": "encounter_number",
+            "fieldtype": "Data",
+            "label": "Encounter Number",
+            "read_only": 1
+        },
+        {
+            "fetch_from": "patient_encounter.practitioner_name",
+            "fieldname": "primary_doctor",
+            "fieldtype": "Data",
+            "label": "Primary Doctor",
+            "read_only": 1
+        },
+        {
+            "fieldname": "column_break_6",
+            "fieldtype": "Column Break"
+        },
+        {
+            "fetch_from": "patient_encounter.encounter_date",
+            "fieldname": "encounter_date",
+            "fieldtype": "Data",
+            "label": "Encounter Date",
+            "read_only": 1
+        },
+        {
+            "fetch_from": "patient_encounter.encounter_time",
+            "fieldname": "encounter_start_time",
+            "fieldtype": "Data",
+            "label": "Encounter Start Time",
+            "read_only": 1
+        },
+        {
+            "fetch_from": "patient_encounter.branch",
+            "fieldname": "branch_name",
+            "fieldtype": "Data",
+            "label": "Branch Name",
+            "read_only": 1
+        },
+        {
+            "fetch_from": "patient_encounter.clinic",
+            "fieldname": "service",
+            "fieldtype": "Data",
+            "label": "Service",
+            "read_only": 1
+        },
+        {
+            "collapsible": 1,
+            "fieldname": "diagnosis_section",
+            "fieldtype": "Section Break",
+            "label": "Diagnosis",
+            "read_only": 1
+        },
+        {
+            "fieldname": "diagnosis",
+            "fieldtype": "Table",
+            "label": "Diagnosis",
+            "options": "Codification Table",
+            "read_only": 1
+        },
+        {
+            "collapsible": 1,
+            "fieldname": "gertrudes_standard_treatment_guidelines_med_doses_section",
+            "fieldtype": "Section Break",
+            "label": "Gertrudes Standard Treatment Guidelines Med Doses"
+        },
+        {
+            "fieldname": "standard_treatment_guidelines",
+            "fieldtype": "Table",
+            "label": "Standard Treatment Guidelines",
+            "options": "GCH Standard Treatment Guideline",
+            "read_only": 1
+        },
+        {
+            "collapsible": 1,
+            "fieldname": "prescription_section",
+            "fieldtype": "Section Break",
+            "label": "Prescription"
+        },
+        {
+            "columns": 1,
+            "fieldname": "prescriptions",
+            "fieldtype": "Table",
+            "label": "Prescriptions",
+            "options": "Doctor Prescription Table",
+            "read_only_depends_on": "eval:!frappe.user_roles.includes(\"GCH-Pharmacy\")"
+        },
+        {
+            "fieldname": "amended_from",
+            "fieldtype": "Link",
+            "label": "Amended From",
+            "no_copy": 1,
+            "options": "Prescription",
+            "print_hide": 1,
+            "read_only": 1
+        },
+        {
+            "fieldname": "amended_from",
+            "fieldtype": "Link",
+            "label": "Amended From",
+            "no_copy": 1,
+            "options": "Prescription",
+            "print_hide": 1,
+            "read_only": 1
+        },
+        {
+            "collapsible": 1,
+            "fieldname": "prescription_info_section",
+            "fieldtype": "Section Break",
+            "hidden": 1,
+            "label": "Prescription Info",
+            "read_only": 1
+        },
+        {
+            "fetch_from": "cur_frm.doc.name",
+            "fieldname": "prescription_number",
+            "fieldtype": "Data",
+            "label": "Prescription Number",
+            "read_only": 1
+        },
+        {
+            "default": "Now",
+            "fieldname": "prescription_date",
+            "fieldtype": "Date",
+            "label": "Prescription Date",
+            "read_only": 1
+        },
+        {
+            "default": "Now",
+            "fieldname": "prescription_time",
+            "fieldtype": "Time",
+            "label": "Prescription Time",
+            "read_only": 1
+        },
+        {
+            "fieldname": "prescribing_doctor",
+            "fieldtype": "Data",
+            "label": "Prescribing Doctor",
+            "read_only": 1
+        },
+        {
+            "fieldname": "column_break_29",
+            "fieldtype": "Column Break"
+        },
+        {
+            "default": "0",
+            "fieldname": "over_the_counter",
+            "fieldtype": "Check",
+            "hidden": 1,
+            "label": "Over The Counter"
+        }
+    ],
+    "index_web_pages_for_search": 1,
+    "is_submittable": 1,
+    "links": [
+        {
+            "group": "Prescription Refills",
+            "link_doctype": "Prescription Refill Detail",
+            "link_fieldname": "prescription"
+        }
+    ],
+    "modified": "2022-01-05 08:12:17.097958",
+    "modified_by": "Administrator",
+    "module": "Gch Custom",
+    "name": "Prescription",
+    "owner": "Administrator",
+    "permissions": [
+        {
+            "create": 1,
+            "delete": 1,
+            "email": 1,
+            "export": 1,
+            "print": 1,
+            "read": 1,
+            "report": 1,
+            "role": "System Manager",
+            "share": 1,
+            "write": 1
+        }
+    ],
+    "sort_field": "modified",
+    "sort_order": "DESC",
+    "track_changes": 1
+}

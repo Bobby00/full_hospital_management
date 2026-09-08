@@ -1,0 +1,72 @@
+{
+ "actions": [],
+ "creation": "2021-06-16 19:03:43.528758",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "insurance_billing_rule_templates",
+  "applies_for",
+  "valid_from",
+  "valid_upto",
+  "fixed_amount"
+ ],
+ "fields": [
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "insurance_billing_rule_templates",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Insurance Billing Rule Templates",
+   "options": "Insurance Billing Rule Template"
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "valid_from",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Valid From"
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "valid_upto",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Valid Upto"
+  },
+  {
+   "fetch_from": "insurance_billing_rule_templates.valid_for",
+   "fieldname": "applies_for",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "label": " Applies For",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "insurance_billing_rule_templates.fixed_amount",
+   "fieldname": "fixed_amount",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Fixed Amount"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-05-08 06:37:23.296155",
+ "modified_by": "Administrator",
+ "module": "Gch Custom",
+ "name": "Insurance Billing Rule",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

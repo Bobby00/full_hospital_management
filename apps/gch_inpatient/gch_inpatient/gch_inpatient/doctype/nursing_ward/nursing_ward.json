@@ -1,0 +1,159 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:GCHNWD-{ward_name}",
+ "creation": "2021-11-20 19:49:51.887246",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "ward_name",
+  "is_pccu_ward",
+  "unoccupied_beds",
+  "unoccupied_cots",
+  "available_beds_for_admission",
+  "available_cots_for_admission",
+  "occupied_beds",
+  "occupied_cots",
+  "locked_beds",
+  "locked_cots",
+  "total_beds",
+  "total_cots",
+  "gender",
+  "nhif_charge_item",
+  "service_unit",
+  "nursing_ward_charges"
+ ],
+ "fields": [
+  {
+   "fieldname": "ward_name",
+   "fieldtype": "Data",
+   "label": "Ward Name"
+  },
+  {
+   "fieldname": "unoccupied_beds",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Unoccupied Beds",
+   "read_only": 1
+  },
+  {
+   "fieldname": "unoccupied_cots",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Unoccupied Cots",
+   "read_only": 1
+  },
+  {
+   "fieldname": "available_beds_for_admission",
+   "fieldtype": "Data",
+   "label": "Available Beds for Admission",
+   "read_only": 1
+  },
+  {
+   "fieldname": "available_cots_for_admission",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Available Cots for Admission",
+   "read_only": 1
+  },
+  {
+   "fieldname": "occupied_beds",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Occupied Beds",
+   "read_only": 1
+  },
+  {
+   "fieldname": "occupied_cots",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Occupied Cots",
+   "read_only": 1
+  },
+  {
+   "fieldname": "locked_beds",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Locked Beds",
+   "read_only": 1
+  },
+  {
+   "fieldname": "locked_cots",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Locked Cots",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_beds",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Total Beds",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_cots",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Total Cots",
+   "read_only": 1
+  },
+  {
+   "fieldname": "gender",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Gender"
+  },
+  {
+   "fieldname": "service_unit",
+   "fieldtype": "Link",
+   "label": "Service Unit",
+   "options": "Healthcare Service Unit"
+  },
+  {
+   "fieldname": "nursing_ward_charges",
+   "fieldtype": "Table",
+   "label": "Nursing Ward Charges",
+   "options": "Nursing Ward Charges"
+  },
+  {
+   "fieldname": "nhif_charge_item",
+   "fieldtype": "Link",
+   "label": "NHIF Charge Item",
+   "options": "Item",
+   "reqd": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "is_pccu_ward",
+   "fieldtype": "Check",
+   "label": "Is PCCU Ward"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-07-02 12:53:36.855428",
+ "modified_by": "Administrator",
+ "module": "Gch Inpatient",
+ "name": "Nursing Ward",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "title_field": "ward_name",
+ "track_changes": 1
+}

@@ -1,0 +1,65 @@
+{
+ "actions": [],
+ "allow_copy": 1,
+ "creation": "2022-01-14 12:45:09.645874",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "medical_code",
+  "code",
+  "description",
+  "nursing_diagnosis_cbreak",
+  "nursing_diagnosis_others"
+ ],
+ "fields": [
+  {
+   "fieldname": "medical_code",
+   "fieldtype": "Link",
+   "ignore_user_permissions": 1,
+   "in_list_view": 1,
+   "label": "Medical Code",
+   "options": "Medical Code",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "medical_code.code",
+   "fieldname": "code",
+   "fieldtype": "Data",
+   "ignore_xss_filter": 1,
+   "in_list_view": 1,
+   "label": "Code",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "medical_code.description",
+   "fieldname": "description",
+   "fieldtype": "Small Text",
+   "ignore_xss_filter": 1,
+   "in_list_view": 1,
+   "label": "Description",
+   "read_only": 1
+  },
+  {
+   "fieldname": "nursing_diagnosis_cbreak",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "nursing_diagnosis_others",
+   "fieldtype": "Small Text",
+   "label": "Others"
+  }
+ ],
+ "istable": 1,
+ "links": [],
+ "modified": "2022-01-14 12:59:05.761910",
+ "modified_by": "Administrator",
+ "module": "Gch Custom",
+ "name": "Nursing Diagnosis",
+ "owner": "Administrator",
+ "permissions": [],
+ "quick_entry": 1,
+ "restrict_to_domain": "Healthcare",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

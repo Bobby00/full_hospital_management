@@ -1,0 +1,334 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2024-07-02 12:32:12.811474",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "patient_details_section",
+  "inpatient_record",
+  "patient",
+  "age",
+  "gender",
+  "date",
+  "pccu_day",
+  "ett_length",
+  "ett_size",
+  "column_break_7",
+  "ward",
+  "room",
+  "bed",
+  "arterial_line_insertion_site",
+  "arterial_line_insertion_date",
+  "central_line_insertion_site",
+  "central_line_insertion_date",
+  "doctor",
+  "intensivist",
+  "daily_orders_section_section",
+  "daily_orders_table",
+  "intake_output_summary_section",
+  "intake_output_summary_table",
+  "pccu_vitals_alarm_limits_section_section",
+  "pccu_vitals_alarm_limits",
+  "pccu_vital_signs_section",
+  "pccu_vital_signs_graph",
+  "pccu_vital_signs_table",
+  "section_break_24",
+  "ventilation",
+  "blood_gases",
+  "chemistry",
+  "haematology",
+  "dipstix_urinalysis",
+  "ventilator_settings_chart_section",
+  "ventilator_settings_chart_table",
+  "manual_dialysis_chart_section",
+  "dialysis_instructions",
+  "dialysis_chart_table",
+  "lanoxin_elixir_administration_chart_section",
+  "dosage_instructions",
+  "lanoxin_elixir_administration_chart_table"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Naming Series",
+   "options": "HLC-PCCU-.YYYY.-"
+  },
+  {
+   "fieldname": "patient_details_section",
+   "fieldtype": "Section Break",
+   "label": "Patient Details"
+  },
+  {
+   "fieldname": "inpatient_record",
+   "fieldtype": "Link",
+   "label": "Inpatient Record",
+   "options": "Inpatient Record"
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fetch_from": "inpatient_record.patient",
+   "fieldname": "patient",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Patient",
+   "options": "Patient"
+  },
+  {
+   "fetch_from": "inpatient_record.dob",
+   "fieldname": "age",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "DOB"
+  },
+  {
+   "fetch_from": "inpatient_record.gender",
+   "fieldname": "gender",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "Gender",
+   "options": "Gender"
+  },
+  {
+   "fieldname": "column_break_7",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "inpatient_record.ward_station",
+   "fieldname": "ward",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "in_global_search": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Ward",
+   "options": "Nursing Ward"
+  },
+  {
+   "fetch_from": "inpatient_record.room_no",
+   "fieldname": "room",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Room"
+  },
+  {
+   "fetch_from": "inpatient_record.bed_number",
+   "fieldname": "bed",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Bed"
+  },
+  {
+   "fieldname": "intake_output_summary_section",
+   "fieldtype": "Section Break",
+   "label": "Intake Output Summary"
+  },
+  {
+   "fieldname": "intake_output_summary_table",
+   "fieldtype": "Table",
+   "label": "Intake Output Summary Table",
+   "options": "Intake Output Chart Summary"
+  },
+  {
+   "default": "Today",
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "pccu_day",
+   "fieldtype": "Data",
+   "label": "PCCU Day"
+  },
+  {
+   "fieldname": "ett_size",
+   "fieldtype": "Data",
+   "label": "ETT Size"
+  },
+  {
+   "fieldname": "ett_length",
+   "fieldtype": "Data",
+   "label": "ETT Length"
+  },
+  {
+   "fieldname": "arterial_line_insertion_site",
+   "fieldtype": "Data",
+   "label": "Arterial Line Insertion Site"
+  },
+  {
+   "fieldname": "arterial_line_insertion_date",
+   "fieldtype": "Datetime",
+   "label": "Arterial Line Insertion Date"
+  },
+  {
+   "fieldname": "central_line_insertion_site",
+   "fieldtype": "Data",
+   "label": "Central Line Insertion Site"
+  },
+  {
+   "fieldname": "central_line_insertion_date",
+   "fieldtype": "Datetime",
+   "label": "Central Line Insertion Date"
+  },
+  {
+   "fieldname": "intensivist",
+   "fieldtype": "Link",
+   "label": "Intensivist",
+   "options": "Healthcare Practitioner"
+  },
+  {
+   "fieldname": "pccu_vital_signs_section",
+   "fieldtype": "Section Break",
+   "label": "PCCU Vital SIgns"
+  },
+  {
+   "fieldname": "pccu_vital_signs_table",
+   "fieldtype": "Table",
+   "label": "PCCU Vital Signs Table",
+   "options": "PCCU Vital Signs"
+  },
+  {
+   "fieldname": "section_break_24",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "ventilation",
+   "fieldtype": "Table",
+   "label": "Ventilation",
+   "options": "PCCU Ventilation"
+  },
+  {
+   "fieldname": "blood_gases",
+   "fieldtype": "Table",
+   "label": "Blood Gases",
+   "options": "PCCU Blood Gases"
+  },
+  {
+   "fieldname": "chemistry",
+   "fieldtype": "Table",
+   "label": "Chemistry",
+   "options": "PCCU Chemistry"
+  },
+  {
+   "fieldname": "haematology",
+   "fieldtype": "Table",
+   "label": "Haematology",
+   "options": "PCCU Haematology"
+  },
+  {
+   "fieldname": "ventilator_settings_chart_section",
+   "fieldtype": "Section Break",
+   "label": "Ventilator Settings Chart"
+  },
+  {
+   "fieldname": "ventilator_settings_chart_table",
+   "fieldtype": "Table",
+   "label": "Ventilator Settings Chart Table",
+   "options": "PCCU Ventilator Settings Chart"
+  },
+  {
+   "fieldname": "manual_dialysis_chart_section",
+   "fieldtype": "Section Break",
+   "label": "Manual Dialysis Chart"
+  },
+  {
+   "fieldname": "dialysis_chart_table",
+   "fieldtype": "Table",
+   "label": "Manual Dialysis Chart Table",
+   "options": "PCCU Manual Dialysis Chart"
+  },
+  {
+   "fieldname": "dialysis_instructions",
+   "fieldtype": "Small Text",
+   "label": "Instructions"
+  },
+  {
+   "fieldname": "lanoxin_elixir_administration_chart_section",
+   "fieldtype": "Section Break",
+   "label": "Lanoxin Elixir Administration Chart"
+  },
+  {
+   "fieldname": "dosage_instructions",
+   "fieldtype": "Small Text",
+   "label": "Dosage Instructions"
+  },
+  {
+   "fieldname": "lanoxin_elixir_administration_chart_table",
+   "fieldtype": "Table",
+   "label": "Lanoxin Elixir Administration Chart Table",
+   "options": "PCCU Lanoxin Elixir Administration Chart"
+  },
+  {
+   "fieldname": "pccu_vital_signs_graph",
+   "fieldtype": "HTML",
+   "label": "PCCU Vital Signs Graph",
+   "options": "<canvas height=\"400\" id=\"vitalsChart\" width=\"400\"></canvas>"
+  },
+  {
+   "fieldname": "doctor",
+   "fieldtype": "Link",
+   "label": "Doctor",
+   "options": "Healthcare Practitioner"
+  },
+  {
+   "fieldname": "daily_orders_section_section",
+   "fieldtype": "Section Break",
+   "label": "Daily Orders Section"
+  },
+  {
+   "fieldname": "daily_orders_table",
+   "fieldtype": "Table",
+   "label": "Daily Orders Table",
+   "options": "PCCU Daily Orders Table"
+  },
+  {
+   "fieldname": "pccu_vitals_alarm_limits_section_section",
+   "fieldtype": "Section Break",
+   "label": "PCCU Vitals Alarm Limits Section"
+  },
+  {
+   "fieldname": "pccu_vitals_alarm_limits",
+   "fieldtype": "Table",
+   "label": "PCCU Vitals Alarm Limits",
+   "options": "PCCU Vitals Alarm Limits Table"
+  },
+  {
+   "fieldname": "dipstix_urinalysis",
+   "fieldtype": "Table",
+   "label": "Dipstix Urinalysis",
+   "options": "Dipstix Urinalysis Table"
+  }
+ ],
+ "hide_toolbar": 1,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-09-12 09:44:54.262872",
+ "modified_by": "Administrator",
+ "module": "GCH PCCU",
+ "name": "PCCU Overview",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

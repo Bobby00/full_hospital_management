@@ -1,0 +1,516 @@
+{
+ "actions": [],
+ "autoname": "format:GCH-CLI-{###}",
+ "creation": "2023-12-11 09:23:09.350195",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "encounter_details_section",
+  "patient_encounter",
+  "is_inpatient",
+  "inpatient_record",
+  "patient",
+  "patient_name",
+  "uhid",
+  "column_break_8",
+  "gender",
+  "wardroombed",
+  "encounter_date",
+  "consulting_doctor",
+  "triage_section",
+  "weight",
+  "height",
+  "temperature",
+  "bmi_column",
+  "bmi",
+  "bsa",
+  "section_break_14",
+  "date_of_insertion",
+  "type_of_catheter",
+  "proceduralist",
+  "column_break_18",
+  "post_insertion_hours",
+  "catheter_site",
+  "procedure_assistant",
+  "procedure_items_section",
+  "items",
+  "section_break_39",
+  "correct_patient_verified_by_using_two_2_patient_identifiers",
+  "correct_site_identified",
+  "completed_correct_signed_procedure_consent_form",
+  "relevant_documentation_available",
+  "list_known_allergies",
+  "safety_precautions_dictated_by_patient_history_on_med_use",
+  "explain",
+  "physical_examination_to_establish_suitability_for_central_line",
+  "assessment_of_most_suitable_site_for_central_line_insertion",
+  "patient_education_on_prevention_of_central_line_infections",
+  "timeout_verification_section",
+  "timeout_html_table",
+  "section_break_54",
+  "zero_to_two_chlorohexidine_in_70_alcohol_used_to_disinfect_site",
+  "chlorhexidine_allowed_to_dry_before_skin_puncture",
+  "hand_hygiene_performed_before_catheter_insertion",
+  "head_cover_mask_and_sterile_gown_and_gloves_worn_for_procedure",
+  "proceduralist_gloves_worn_before",
+  "procedure_assisstant_gloves_worn_before",
+  "large_sterile_drapes_used_as_per_protocol",
+  "sterile_field_maintained_throughout_procedure",
+  "dressing_applied_using_sterile_technique",
+  "dressing_dated_as_per_policy",
+  "central_line_insertion_guided_by_ultrasound",
+  "femoral_vein_not_used_unless_other_sites_are_not_available",
+  "explain_procedure_section",
+  "procedure_section",
+  "procedure_html_table",
+  "section_break_61",
+  "procedure_documented_in_the_patients_medical_record",
+  "post_check_x_ray_ordered",
+  "confirmation_of_correct_placement_received",
+  "any_equipment_problems_to_be_addressed",
+  "explain_equipment_problem",
+  "post_procedure_checks_section",
+  "post_procedure_html_table",
+  "change_to_a_peripheral_line_when_central_line_not_needed",
+  "html_54",
+  "name_of_nurse_completing_form",
+  "nurse_signature",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "encounter_details_section",
+   "fieldtype": "Section Break",
+   "label": "Encounter Details"
+  },
+  {
+   "depends_on": "eval:doc.is_inpatient == 0 ",
+   "fieldname": "patient_encounter",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Patient Encounter",
+   "mandatory_depends_on": "eval:doc.is_inpatient == 0 ",
+   "options": "Patient Encounter"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_inpatient",
+   "fieldtype": "Check",
+   "label": "Is inpatient"
+  },
+  {
+   "depends_on": "eval:doc.is_inpatient == 1",
+   "fieldname": "inpatient_record",
+   "fieldtype": "Link",
+   "label": "Inpatient Record",
+   "mandatory_depends_on": "eval:doc.is_inpatient == 1",
+   "options": "Inpatient Record"
+  },
+  {
+   "fetch_from": "patient_encounter.patient",
+   "fieldname": "patient",
+   "fieldtype": "Link",
+   "label": "Patient",
+   "options": "Patient"
+  },
+  {
+   "fetch_from": "patient.patient_name",
+   "fieldname": "patient_name",
+   "fieldtype": "Data",
+   "label": "Patient Name"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "CENTRAL LINE INSERTION CHECKLIST",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "triage_section",
+   "fieldtype": "Section Break",
+   "label": "TRIAGE"
+  },
+  {
+   "fieldname": "weight",
+   "fieldtype": "Data",
+   "label": "Weight"
+  },
+  {
+   "fieldname": "height",
+   "fieldtype": "Data",
+   "label": "Height"
+  },
+  {
+   "fieldname": "temperature",
+   "fieldtype": "Data",
+   "label": "Temperature"
+  },
+  {
+   "fieldname": "bmi_column",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "bsa",
+   "fieldtype": "Data",
+   "label": "BSA"
+  },
+  {
+   "fieldname": "bmi",
+   "fieldtype": "Data",
+   "label": "BMI"
+  },
+  {
+   "fieldname": "section_break_14",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "date_of_insertion",
+   "fieldtype": "Date",
+   "label": "Date of Insertion"
+  },
+  {
+   "fieldname": "type_of_catheter",
+   "fieldtype": "Select",
+   "label": "Type of Catheter",
+   "options": "\nCentral Line\nPort Cath\nPICC\nOther"
+  },
+  {
+   "fieldname": "proceduralist",
+   "fieldtype": "Link",
+   "label": "Proceduralist",
+   "options": "User"
+  },
+  {
+   "fieldname": "column_break_18",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "post_insertion_hours",
+   "fieldtype": "Data",
+   "label": "Post insertion (hours)",
+   "read_only": 1
+  },
+  {
+   "fieldname": "catheter_site",
+   "fieldtype": "Data",
+   "label": "Catheter Site"
+  },
+  {
+   "fieldname": "procedure_assistant",
+   "fieldtype": "Link",
+   "label": "Procedure Assistant",
+   "options": "User"
+  },
+  {
+   "fieldname": "timeout_verification_section",
+   "fieldtype": "Section Break",
+   "label": "TIMEOUT VERIFICATION"
+  },
+  {
+   "fieldname": "correct_patient_verified_by_using_two_2_patient_identifiers",
+   "fieldtype": "Select",
+   "label": "Correct patient verified by using two (2) patient identifiers",
+   "options": "\nYES\nNO"
+  },
+  {
+   "fieldname": "correct_site_identified",
+   "fieldtype": "Select",
+   "label": "Correct site identified",
+   "options": "\nYES\nNO"
+  },
+  {
+   "fieldname": "completed_correct_signed_procedure_consent_form",
+   "fieldtype": "Select",
+   "label": "Completed, correct, signed procedure consent form",
+   "options": "\nYES\nNO"
+  },
+  {
+   "fieldname": "relevant_documentation_available",
+   "fieldtype": "Select",
+   "label": "Relevant documentation available",
+   "options": "\nYES\nNO"
+  },
+  {
+   "fieldname": "list_known_allergies",
+   "fieldtype": "Data",
+   "label": "List Known Allergies"
+  },
+  {
+   "fieldname": "safety_precautions_dictated_by_patient_history_on_med_use",
+   "fieldtype": "Select",
+   "label": "Any safety precautions dictated by patient history on medication use",
+   "options": "\nYES\nNO"
+  },
+  {
+   "fieldname": "explain",
+   "fieldtype": "Small Text",
+   "label": "Explain"
+  },
+  {
+   "fieldname": "physical_examination_to_establish_suitability_for_central_line",
+   "fieldtype": "Select",
+   "label": "physical_examination_to_establish_suitability_fPhysical examination of the patient done to establish suitability for  central line insertion",
+   "options": "\nYES\nNO"
+  },
+  {
+   "fieldname": "assessment_of_most_suitable_site_for_central_line_insertion",
+   "fieldtype": "Select",
+   "label": "Assessment of most suitable site for central line insertion done by  proceduralist",
+   "options": "\nYES\nNO"
+  },
+  {
+   "fieldname": "patient_education_on_prevention_of_central_line_infections",
+   "fieldtype": "Select",
+   "label": "Patient/family received education  prevention of central line associated bloodstream infections",
+   "options": "\nYES\nNO"
+  },
+  {
+   "fieldname": "procedure_section",
+   "fieldtype": "Section Break",
+   "label": "PROCEDURE"
+  },
+  {
+   "fieldname": "chlorhexidine_allowed_to_dry_before_skin_puncture",
+   "fieldtype": "Select",
+   "label": "Chlorhexidine allowed to dry before skin puncture",
+   "options": "\nYES\nNO"
+  },
+  {
+   "fieldname": "hand_hygiene_performed_before_catheter_insertion",
+   "fieldtype": "Select",
+   "label": "Hand hygiene performed before catheter insertion or manipulation",
+   "options": "\nYES\nNO"
+  },
+  {
+   "fieldname": "head_cover_mask_and_sterile_gown_and_gloves_worn_for_procedure",
+   "fieldtype": "Data",
+   "label": "Head cover, mask and sterile gown and gloves worn for procedure"
+  },
+  {
+   "fieldname": "proceduralist_gloves_worn_before",
+   "fieldtype": "Select",
+   "label": "Proceduralist",
+   "options": "\nYES\nNO"
+  },
+  {
+   "fieldname": "procedure_assisstant_gloves_worn_before",
+   "fieldtype": "Select",
+   "label": "Procedure Assistant",
+   "options": "\nYES\nNO"
+  },
+  {
+   "fieldname": "large_sterile_drapes_used_as_per_protocol",
+   "fieldtype": "Select",
+   "label": "Large sterile drapes used as per protocol",
+   "options": "\nYES\nNO"
+  },
+  {
+   "fieldname": "sterile_field_maintained_throughout_procedure",
+   "fieldtype": "Select",
+   "label": "Sterile field maintained throughout procedure",
+   "options": "\nYES\nNO"
+  },
+  {
+   "fieldname": "dressing_applied_using_sterile_technique",
+   "fieldtype": "Select",
+   "label": "Dressing applied using sterile technique",
+   "options": "\nYES\nNO"
+  },
+  {
+   "fieldname": "dressing_dated_as_per_policy",
+   "fieldtype": "Select",
+   "label": "Dressing dated as per policy",
+   "options": "\nYES\nNO"
+  },
+  {
+   "fieldname": "central_line_insertion_guided_by_ultrasound",
+   "fieldtype": "Select",
+   "label": "Central line insertion guided by ultrasound",
+   "options": "\nYES\nNO"
+  },
+  {
+   "fieldname": "femoral_vein_not_used_unless_other_sites_are_not_available",
+   "fieldtype": "Select",
+   "label": "Femoral vein not used unless other sites are not available",
+   "options": "\nYES\nNO"
+  },
+  {
+   "fieldname": "explain_procedure_section",
+   "fieldtype": "Small Text",
+   "label": "Explain"
+  },
+  {
+   "fieldname": "post_procedure_checks_section",
+   "fieldtype": "Section Break",
+   "label": "POST PROCEDURE CHECKS"
+  },
+  {
+   "fieldname": "procedure_documented_in_the_patients_medical_record",
+   "fieldtype": "Select",
+   "label": "Procedure documented in the patient's medical record",
+   "options": "\nYES\nNO"
+  },
+  {
+   "fieldname": "post_check_x_ray_ordered",
+   "fieldtype": "Select",
+   "label": "Post check X ray ordered?",
+   "options": "\nYES\nNO"
+  },
+  {
+   "fieldname": "confirmation_of_correct_placement_received",
+   "fieldtype": "Select",
+   "label": "Confirmation of correct placement received",
+   "options": "\nYES\nNO"
+  },
+  {
+   "fieldname": "any_equipment_problems_to_be_addressed",
+   "fieldtype": "Select",
+   "label": "Any equipment problems to be addressed",
+   "options": "\nYES\nNO"
+  },
+  {
+   "fieldname": "explain_equipment_problem",
+   "fieldtype": "Small Text",
+   "label": "Explain_equipment_problem"
+  },
+  {
+   "fieldname": "change_to_a_peripheral_line_when_central_line_not_needed",
+   "fieldtype": "Section Break",
+   "label": "NB (Remove Or Change To A Peripheral Line When Central Line Is No Longer Needed)"
+  },
+  {
+   "fieldname": "html_54",
+   "fieldtype": "HTML",
+   "options": "<p style=\"font-size: 16px;\">Missing information, discrepancies, or any concerns shall be addressed before starting the procedure.</p>\n<p style=\"font-size: 16px;\">Key concerns for the recovery period shall be reviewed after procedure completion.</p>\n<p style=\"font-size: 16px;\">When two (2) or more procedures are performed on the same patient, a time-out shall be performed to  confirm each subsequent procedure before starting the procedure.</p>\n"
+  },
+  {
+   "default": "User",
+   "fieldname": "name_of_nurse_completing_form",
+   "fieldtype": "Data",
+   "label": "Name of Nurse Completing Form"
+  },
+  {
+   "fieldname": "nurse_signature",
+   "fieldtype": "Signature",
+   "label": "Sign"
+  },
+  {
+   "fetch_from": "patient.uhid_code",
+   "fieldname": "uhid",
+   "fieldtype": "Data",
+   "label": "UHID"
+  },
+  {
+   "fieldname": "column_break_8",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "patient.sex",
+   "fieldname": "gender",
+   "fieldtype": "Data",
+   "label": "Gender"
+  },
+  {
+   "fieldname": "wardroombed",
+   "fieldtype": "Data",
+   "label": "Ward/Room/Bed"
+  },
+  {
+   "default": "Today",
+   "fieldname": "encounter_date",
+   "fieldtype": "Date",
+   "label": "Encounter Date"
+  },
+  {
+   "fieldname": "consulting_doctor",
+   "fieldtype": "Data",
+   "label": "Consulting Doctor"
+  },
+  {
+   "fieldname": "timeout_html_table",
+   "fieldtype": "HTML"
+  },
+  {
+   "fieldname": "procedure_html_table",
+   "fieldtype": "HTML"
+  },
+  {
+   "fieldname": "post_procedure_html_table",
+   "fieldtype": "HTML"
+  },
+  {
+   "fieldname": "section_break_61",
+   "fieldtype": "Section Break",
+   "hidden": 1
+  },
+  {
+   "fieldname": "section_break_54",
+   "fieldtype": "Section Break",
+   "hidden": 1
+  },
+  {
+   "fieldname": "section_break_39",
+   "fieldtype": "Section Break",
+   "hidden": 1
+  },
+  {
+   "fieldname": "zero_to_two_chlorohexidine_in_70_alcohol_used_to_disinfect_site",
+   "fieldtype": "Select",
+   "label": "0.5% to 2% Chlorohexidine in 70% alcohol used to disinfect site",
+   "options": "\nYES\nNO"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "procedure_items_section",
+   "fieldtype": "Section Break",
+   "label": "Procedure Items"
+  },
+  {
+   "fieldname": "items",
+   "fieldtype": "Table",
+   "label": "Items",
+   "options": "Clinical Procedure Item"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2024-05-28 12:01:31.699545",
+ "modified_by": "Administrator",
+ "module": "Gch Inpatient",
+ "name": "CENTRAL LINE INSERTION CHECKLIST",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "All",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

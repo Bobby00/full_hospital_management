@@ -1,0 +1,86 @@
+{
+    "actions": [],
+    "creation": "2021-08-26 14:37:04.157685",
+    "doctype": "DocType",
+    "editable_grid": 1,
+    "engine": "InnoDB",
+    "field_order": [
+        "a_operation",
+        "patient_age",
+        "type",
+        "wa_operation",
+        "weight",
+        "w_operation",
+        "absolute_max"
+    ],
+    "fields": [
+        {
+            "columns": 2,
+            "fetch_from": "Band",
+            "fieldname": "a_operation",
+            "fieldtype": "Select",
+            "in_list_view": 1,
+            "label": "A. Operation",
+            "options": "\nLess\nGreater"
+        },
+        {
+            "columns": 1,
+            "fieldname": "patient_age",
+            "fieldtype": "Int",
+            "in_list_view": 1,
+            "label": "Age"
+        },
+        {
+            "columns": 1,
+            "fieldname": "type",
+            "fieldtype": "Select",
+            "in_list_view": 1,
+            "label": "Type",
+            "options": "\nYears\nMonths",
+            "print_width": "Band"
+        },
+        {
+            "columns": 1,
+            "fieldname": "wa_operation",
+            "fieldtype": "Select",
+            "in_list_view": 1,
+            "label": "W/A",
+            "options": "\nOr"
+        },
+        {
+            "columns": 1,
+            "fieldname": "weight",
+            "fieldtype": "Float",
+            "in_list_view": 1,
+            "label": "Weight",
+            "non_negative": 1
+        },
+        {
+            "columns": 2,
+            "fieldname": "w_operation",
+            "fieldtype": "Select",
+            "in_list_view": 1,
+            "label": "W. Operation",
+            "options": "\nLess"
+        },
+        {
+            "columns": 2,
+            "fieldname": "absolute_max",
+            "fieldtype": "Data",
+            "in_list_view": 1,
+            "label": "Absolute Max"
+        }
+    ],
+    "index_web_pages_for_search": 1,
+    "istable": 1,
+    "links": [],
+    "modified": "2021-09-06 12:13:54.683083",
+    "modified_by": "Administrator",
+    "module": "Gch Custom",
+    "name": "Age and Weight Band",
+    "owner": "Administrator",
+    "permissions": [],
+    "sort_field": "modified",
+    "sort_order": "DESC",
+    "track_changes": 1
+}

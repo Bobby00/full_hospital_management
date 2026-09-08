@@ -1,0 +1,382 @@
+<div class="doctor_medication" style="width: 100%;">
+    <div class="row layout-main">
+        <div class="col layout-main-section-wrapper">
+            <div class="layout-main-section">
+                <div class="row user-profile" >
+                    
+                    <div style="overflow-x: auto;">
+                        <h3 style="text-align: right;">{{page_status}}</h3>
+
+                    {% for prescription in inpatient_data %}
+                    
+                    <div class="" style="display: flex;flex-direction: row;overflow-x: scroll;">
+                        
+                        <div class="card col-md-offset-1 " id="presc_card" style="margin: 10px;background-color:rgb(103, 91, 209);flex-shrink: 0">
+                            {% if prescription.high_alert == 1 %}
+                            <div class="card-header" style="border-color: white;border-width: 2px;background-color: yellow;color: red;">
+                                <div class="row" style="font-size: 16px;">
+                                    <div class="col-md">
+                                        <strong>Drug</strong><br>
+                                        {{prescription.generic_drug_name}}
+                                    </div>
+                                    <div class="col-md">
+                                        <strong>Item</strong> <br>
+                                        {{prescription.item_description}}
+                                    </div>
+                                    {% if prescription.received == 0 &&  prescription.dispensed == 1  %}
+                                    <div class="col-md">
+                                        <strong>Issued Qty:</strong> {{prescription.selling_quantity}}
+                                        <div class="btn btn-primary" data-dispensed="{{prescription.selling_quantity}}" data-name="{{prescription.parent}}" id={{prescription.name}} onclick="receive_meds(this)">Receive</div>
+                                    </div>
+                                    {% endif %}
+                                    {% if prescription.received == 0 &&  prescription.dispensed == 0  %}
+                                    <div class="col-md">
+                                        <strong>Issued Qty:</strong> {{prescription.selling_quantity}}
+                                    </div>
+                                    {% endif %}
+                                    {% if prescription.received == 1 %}
+                                    <div class="col-md">
+                                        <strong>Issued Qty:</strong> {{prescription.selling_quantity}} <br>
+                                        <strong>Received Qty:</strong> {{prescription.received_qty}}
+                                    </div>
+                                    {% endif %}
+                                </div>
+                            </div>
+                                                        
+                            {%else%}
+
+                            <div class="card-header" style="border-color: white;border-width: 2px;">
+                                <div class="row" style="color: whitesmoke;font-size: 16px;">
+                                    <div class="col-md">
+                                        <strong>Drug</strong><br>
+                                        {{prescription.generic_drug_name}}
+                                    </div>
+                                    <div class="col-md">
+                                        <strong>Item</strong> <br>
+                                        {{prescription.item_description}}
+                                    </div>
+                                    {% if prescription.received == 0 && prescription.dispensed == 1 %}
+                                    <div class="col-md">
+                                        <strong>Issued Qty:</strong> {{prescription.selling_quantity}}
+                                        <div class="btn btn-primary" 
+                                            data-name="{{prescription.parent}}" 
+                                            data-dispensed="{{prescription.selling_quantity}}"
+                                            id={{prescription.name}} 
+                                            onclick="receive_meds(this)">Receive</div>
+                                    </div>
+                                    {% endif %}
+                                    {% if prescription.received == 0 &&  prescription.dispensed == 0  %}
+                                    <div class="col-md">
+                                        <strong>Issued Qty:</strong> {{prescription.selling_quantity}}
+                                    </div>
+                                    {% endif %}
+                                    {% if prescription.received == 1 %}
+                                    <div class="col-md">
+                                        <strong>Issued Qty:</strong> {{prescription.selling_quantity}} <br>
+                                        <strong>Received Qty:</strong> {{prescription.received_qty}}
+                                    </div>
+                                    {% endif %}
+                                </div>
+                            </div>
+                            {%endif%}
+
+                            <div class="card-body" style="color: whitesmoke;font-size: 12px;">
+                                <div>
+                                    <div class="row">
+                                        <div class="col-md">
+                                            <strong>Dose</strong> <br>
+                                            {{prescription.pharmacy_dose}}
+                                        </div>
+                                        <div class="col-md">
+                                            <strong>Route</strong> <br>
+                                            {{prescription.route}}
+                                        </div>
+                                        <div class="col-md">
+                                            <strong>Frequency:</strong> <br>
+                                            {{prescription.pharmacy_frequency}} Times a Day
+                                        </div>
+                                        <div class="col-md">
+                                            <strong>Duration:</strong> <br>
+                                            {{prescription.pharmacy_duration}} <strong>Days</strong>
+                                        </div>
+                                        {% if prescription.received == 1 %}
+                                        <div class="col-md">
+                                            <div class="btn btn-secondary btn-sm" data-generic="prescription.generic_drug" id={{prescription.name}} onclick="stopMedication(this)">Stop</div>
+                                        </div>
+                                        {% endif %}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-body" style="color: whitesmoke;font-size: 12px;">
+
+                                <div>
+                                    <div class="row">
+                                        <div class="col-md">
+                                           <strong>Prescription Date: </strong> {{prescription.creation}}<br>
+                                           <strong>Prescribed By:</strong> {{prescription.prescribed_by}}<br>
+                                            <strong>Signature </strong>
+                                        </div>
+                                        <div class="col-md">
+                                            <strong>Issue Date: {{prescription.dispensed_at}}</strong>   <br>
+                                            <strong>Issued By: {{prescription.dispensed_by}}</strong><br>
+                                            <strong>Signature:</strong> 
+                                        </div>
+                                        <div class="col-md">
+                                            <strong>Indication: </strong> <br>
+                                            {{prescription.indication}} <br>
+
+                                            {% if prescription.patient_owned_medication == 1 %}
+
+                                            <span class="badge badge-pill" style="background-color: orange;margin-top: 10px;font-size: 16px;color: black;" >Patient Own</span>
+
+                                            {% endif %}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-footer" style="color: whitesmoke;font-size: 12px;border-top: 2px solid white;">
+                                <div> <strong>Doctors Note:</strong> {{prescription.remarks}}</div>
+                                <div> <strong>Pharmacy Note:</strong>  {{prescription.pharmacy_remark}}</div>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <div class="flex-container" style="display: flex;flex-direction: row;">
+                                {%for track in prescription.prescription_tracker %}
+                                <table class="table table-bordered  flex-container" >
+                                    
+                                    <thead style="background-color: rgb(103, 91, 209);color: white;">
+                                      <tr>                                    
+                                        <th colspan="3" scope="colgroup" >{{track.date}}</th>
+                                        
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                        {%for entry in track.entries %}
+                                        
+                                        <!-- Check for high alert medication and offer two step administration process -->
+                                        <!-- Check if date is today and medication is not administred -->
+                                        <!-- Check if date is today and medication is administred  pending second approval-->
+                                        <!--  Check if both are done -->
+
+                                        <!-- {% if entry.administered == 1  && entry.requires_second_approval == 0  && !entry.second_approval %}
+                                        <tr colspan="3" scope="colgroup">
+                                            <td style="background-color: rgb(103, 91, 209);color: white;">
+                                                <strong>{{entry.time}}</strong>  
+                                            </td>
+                                            <td><div class="btn btn-primary" id={{entry.name}}  onclick="administerMedications(this)">Approve</div></td>
+                                        </tr>
+                                        {% endif %} -->
+
+
+                                        <!-- {% if entry.administered == 1  && track.date == today  %}
+
+                                            {% if entry.requires_second_approval == 1  && !entry.second_approval %}
+                                                <td><div class="btn btn-primary" id={{entry.name}}  onclick="high_alert_medication_second_approval(this)">Approve</div></td>
+                                            {% else %}
+
+                                                {%if entry.absolute_time_difference  <=1 %}
+                                                <td style="background-color: blue;">
+                                                    <p style="font-weight: bolder;font-size: 10px;">
+                                                        Administered at {{entry.time_administered}} <br>
+                                                        by {{entry.administered_by}}
+                                                    </p>
+                                                    <p>
+                                                        {{entry.comment? entry.comment: ""}}
+                                                    </p>
+                                                </td>
+                                                {%endif%}
+                                                {%if entry.absolute_time_difference  >  1 && entry.absolute_time_difference <= 2 %}
+                                                <td style="background-color: #FFC300;">
+                                                    <p style="font-weight: bolder;font-size: 10px;">
+                                                        Administered at {{entry.time_administered}} <br>
+                                                        by {{entry.administered_by}}
+                                                    </p>
+                                                    <p>
+                                                        {{entry.comment? entry.comment: ""}}
+                                                    </p>
+                                                </td>
+                                                {%endif%}
+                                                {%if entry.absolute_time_difference  > 2 %}
+                                                <td style="background-color: red;">
+                                                    <p style="font-weight: bolder;font-size: 10px;">
+                                                        Administered at {{entry.time_administered}} <br>
+                                                        by {{entry.administered_by}}
+                                                    </p>
+                                                    <p>
+                                                        {{entry.comment? entry.comment: ""}}
+                                                    </p>
+                                                </td>
+                                                {%endif%}
+                                            {% endif %}
+                                        {% endif %} -->
+                                        
+                                        <tr colspan="3" scope="colgroup">
+                                            <td style="background-color: rgb(103, 91, 209);color: white;">
+                                                <strong>{{entry.time}}</strong>  
+                                            </td>
+                                            <!-- {% if track.date == today %} -->
+                                            {% if entry.administered == 1  && track.date == today %}
+
+                                            {% if entry.requires_second_approval == 1  && !entry.second_approval %}
+                                                <td>
+                                                    <p>Administered by {{entry.administered_by}} <br> Requires Second approval</p>
+                                                    <div class="btn btn-secondary" id={{entry.name}}  onclick="high_alert_medication_second_approval(this)">Approve</div>
+                                                </td>
+                                            {% else %}
+                                            
+                                                {%if entry.absolute_time_difference  <=1 %}
+                                                <td style="background-color: rgb(103, 91, 209);color: white;">
+                                                    <p style="font-weight: bolder;font-size: 10px;">
+                                                        Administered at {{entry.time_administered}} <br>
+                                                        by {{entry.administering_user}}
+                                                    </p>
+                                                    <p>
+                                                        {{entry.comment? entry.comment: ""}}
+                                                    </p>
+                                                </td>
+                                                {%endif%}
+                                                {%if entry.absolute_time_difference  >  1 && entry.absolute_time_difference <= 2 %}
+                                                <td style="background-color: #FFC300;">
+                                                    <p style="font-weight: bolder;font-size: 10px;">
+                                                        Administered at {{entry.time_administered}} <br>
+                                                        by {{entry.administering_user}}
+                                                    </p>
+                                                    <p>
+                                                        {{entry.comment? entry.comment: ""}}
+                                                    </p>
+                                                </td>
+                                                {%endif%}
+                                                {%if entry.absolute_time_difference  > 2 %}
+                                                <td style="background-color: red;color: white">
+                                                    <p style="font-weight: bolder;font-size: 10px;">
+                                                        Administered at {{entry.time_administered}} <br>
+                                                        by {{entry.administering_user}}
+                                                    </p>
+                                                    <p>
+                                                        {{entry.comment? entry.comment: ""}}
+                                                    </p>
+                                                </td>
+                                                {%endif%}
+                                            {% endif %}
+                                            {%endif%}
+                                            {% if entry.administered == 0  && track.date == today %}
+                                            <td>
+                                                <div class="btn btn-primary" id={{entry.name}}  onclick="administerMedications(this)">Administer</div>
+                                                <!-- <div style="font-size: 7px;background-color: orange;color: black;" data-item=`{{prescription.item_description}}` onclick="flagDrugAllergy(this)" class="btn btn-sm btn-primary">Flag allery</div> -->
+                                            </td>
+                                            {% endif %}
+<!-- <td style="color: rgb(96, 221, 96);"></td> -->
+
+                                            {% if entry.administered == 1 &&track.date != today  %}
+                                                {%if entry.absolute_time_difference  <=1 %}
+                                                <td style="background-color: rgb(103, 91, 209);color: white">
+                                                    <p style="font-weight: bolder;font-size: 10px;">
+                                                        Administered at {{entry.time_administered}} <br>
+                                                        by {{entry.administering_user}}
+                                                    </p>
+                                                    <p>
+                                                        {{entry.comment? entry.comment: ""}}
+                                                    </p>
+                                                </td>
+                                                {%endif%}
+                                                {%if entry.absolute_time_difference  >  1 && entry.absolute_time_difference <= 2 %}
+                                                <td style="background-color: #FFC300;">
+                                                    <p style="font-weight: bolder;font-size: 10px; color: white;">
+                                                        Administered at {{entry.time_administered}} <br>
+                                                        by {{entry.administering_user}}
+                                                    </p>
+                                                    <p>
+                                                        {{entry.comment? entry.comment: ""}}
+                                                    </p>
+                                                </td>
+                                                {%endif%}
+                                                {%if entry.absolute_time_difference  > 2 %}
+                                                <td style="background-color: red;color: white;">
+                                                    <p style="font-weight: bolder;font-size: 10px;">
+                                                        Administered at {{entry.time_administered}} <br>
+                                                        by {{entry.administering_user}}
+                                                    </p>
+                                                    <p>
+                                                        {{entry.comment? entry.comment: ""}}
+                                                    </p>
+                                                </td>
+                                                {%endif%}
+                                            {% endif %}
+
+
+                                            {% if entry.administered == 0 && track.date != today  && entry.reopened == 0 %}
+                                            <td style="background-color: red;color: black;">
+                                                <p style="font-weight: bolder;font-size: 16px;">
+                                                    Missed
+                                                </p>
+                                                <button class="btn btn-sm btn-primary" data-entry={{entry.name}} onclick="reopen_slot(this)" style="font-size: 8px;">Reopen Slot</button>
+                                            </td>
+                                            {% endif %}
+
+                                            {% if entry.administered == 0 && track.date != today  && entry.reopened == 1 %}
+                                            <td style="background-color: red;color: black;">
+                                                <div class="btn btn-primary" id={{entry.name}}  onclick="administerMedications(this)">Administer</div>
+                                            </td>
+                                            {% endif %}
+
+
+                                        </tr>
+                                        {%endfor%}
+                                    </tbody>
+            
+    
+                                </table>
+                                {%endfor%}
+                            </div>
+                        </div>
+
+                        
+                        
+                        <!-- {%for track in prescription.prescription_tracker%}
+                        <div class="card col-md-offset-1 " style="margin: 10px;background-color: rgb(62, 62, 241);">
+                            <div class="card col-md-offset-1 " style="margin: 10px;background-color: rgb(62, 62, 241);">
+                                <div class="card-header">
+                                    <div class="row" style="color: whitesmoke;">
+                                        <div class="col-md">
+                                           <strong>Date: </strong>
+                                            <br>{{track.date}}
+                                        </div>
+                                    </div>
+                                </div>
+
+                                {% for freq in prescription.frequency_tracker %}
+                                
+                                <div style="color: whitesmoke;font-size: 12px;">
+                                    <div>
+                                       {{freq.time}}
+                                    </div>
+                                    <div>
+                                        <strong>Administered </strong> {{freq.time_dispensed}}
+                                     </div>
+                                    <button class="btn btn-primary btn-sm" style="font-size: 8px;">Administer</button>
+                                </div>
+
+                                {% endfor %}
+                            </div>
+                        </div>
+                        {%endfor%} -->
+
+                        <!-- {%for track in prescription.prescription_tracker%}
+                            <table class="col-md-offset-1 table">
+                                <thead>
+                                    <tr>
+                                        {{track.date}}
+                                    </tr>
+                                </thead>
+                            </table>
+                        {%endfor%} -->
+                        
+                </div>
+                {%endfor%}
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,304 @@
+{
+ "actions": [],
+ "autoname": "naming_series:",
+ "creation": "2023-07-04 17:34:07.547802",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "patient_details_section",
+  "naming_series",
+  "inpatient_record",
+  "patient_encounter",
+  "patient",
+  "patient_name",
+  "dob",
+  "age",
+  "column_break_7",
+  "date",
+  "gender",
+  "gender_hmtl",
+  "weight",
+  "weight_html",
+  "height",
+  "height_html",
+  "bmi",
+  "bmi_html",
+  "charts_section",
+  "input_output_chart",
+  "fluid_specification_section",
+  "previous_date_6_am_to_current_date_6_am",
+  "input_fluids",
+  "intake_fluid_total",
+  "intake_fluid_balance",
+  "column_break_21",
+  "amended_from",
+  "output_fluids",
+  "output_fluid_total",
+  "intake_section",
+  "intake_fluid_details",
+  "column_break_30",
+  "output_fluid_details",
+  "output_section",
+  "total_intake_fluids",
+  "total_fluid_difference",
+  "column_break_35",
+  "total_output_fluids"
+ ],
+ "fields": [
+  {
+   "fieldname": "patient_details_section",
+   "fieldtype": "Section Break",
+   "label": "Patient Details"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "options": "HLC-IOCHART-.YYYY.-"
+  },
+  {
+   "fieldname": "patient_encounter",
+   "fieldtype": "Link",
+   "label": "Patient Encounter",
+   "options": "Patient Encounter"
+  },
+  {
+   "fetch_from": "patient_encounter.patient",
+   "fieldname": "patient",
+   "fieldtype": "Link",
+   "label": "Patient",
+   "options": "Patient",
+   "read_only": 1
+  },
+  {
+   "bold": 1,
+   "fetch_from": "patient.patient_name",
+   "fieldname": "patient_name",
+   "fieldtype": "Data",
+   "label": "Patient Name",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "patient.dob",
+   "fieldname": "dob",
+   "fieldtype": "Date",
+   "hidden": 1,
+   "label": "Date of Birth"
+  },
+  {
+   "fetch_from": "patient_encounter.patient_age",
+   "fieldname": "age",
+   "fieldtype": "HTML",
+   "label": "Age",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_7",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Datetime",
+   "label": "Date"
+  },
+  {
+   "fetch_from": "patient.sex",
+   "fieldname": "gender",
+   "fieldtype": "Link",
+   "label": "Gender",
+   "options": "Gender",
+   "read_only": 1
+  },
+  {
+   "fieldname": "gender_hmtl",
+   "fieldtype": "HTML",
+   "label": "Gender"
+  },
+  {
+   "fetch_from": "patient_encounter.weight_in_kilograms",
+   "fieldname": "weight",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Weight In Kilograms"
+  },
+  {
+   "fieldname": "weight_html",
+   "fieldtype": "HTML",
+   "label": "Weight",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "patient_encounter.height_in_centimeters",
+   "fieldname": "height",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Height in Centimeters"
+  },
+  {
+   "fieldname": "height_html",
+   "fieldtype": "HTML",
+   "label": "Height",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "patient_encounter.bmi",
+   "fieldname": "bmi",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "BMI"
+  },
+  {
+   "fieldname": "bmi_html",
+   "fieldtype": "HTML",
+   "label": "BMI"
+  },
+  {
+   "fieldname": "fluid_specification_section",
+   "fieldtype": "Section Break",
+   "label": "Fluid Specification (Expectation)"
+  },
+  {
+   "fieldname": "previous_date_6_am_to_current_date_6_am",
+   "fieldtype": "Heading",
+   "hidden": 1,
+   "label": "Previous Date 6 AM to Current Date 6 AM"
+  },
+  {
+   "fieldname": "input_fluids",
+   "fieldtype": "Table",
+   "label": "Input fluids",
+   "options": "Intake Fluid Specification Table"
+  },
+  {
+   "fieldname": "column_break_21",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Input Output Chart",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "intake_fluid_total",
+   "fieldtype": "Data",
+   "label": "TOTAL INTAKE (A)",
+   "read_only": 1
+  },
+  {
+   "bold": 1,
+   "fieldname": "intake_fluid_balance",
+   "fieldtype": "Data",
+   "label": "Difference(A-B)=",
+   "read_only": 1
+  },
+  {
+   "fieldname": "output_fluids",
+   "fieldtype": "Table",
+   "label": "Output Fluids",
+   "options": "Output Fluid Specification Table"
+  },
+  {
+   "fieldname": "output_fluid_total",
+   "fieldtype": "Data",
+   "label": "TOTAL OUTPUT(B)",
+   "read_only": 1
+  },
+  {
+   "fieldname": "intake_section",
+   "fieldtype": "Section Break",
+   "label": "Total Fluids ( Actual Give or Derived )"
+  },
+  {
+   "fieldname": "output_section",
+   "fieldtype": "Section Break",
+   "label": "Totals"
+  },
+  {
+   "fieldname": "intake_fluid_details",
+   "fieldtype": "Table",
+   "label": "Intake Fluid Details",
+   "options": "Intake Fluid Details"
+  },
+  {
+   "fieldname": "output_fluid_details",
+   "fieldtype": "Table",
+   "label": "Output Fluid Details",
+   "options": "Output Fluid Details"
+  },
+  {
+   "fieldname": "column_break_30",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total_output_fluids",
+   "fieldtype": "Int",
+   "label": "TOTAL OUTPUT(B)",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_intake_fluids",
+   "fieldtype": "Int",
+   "label": "TOTAL INTAKE (A)",
+   "read_only": 1
+  },
+  {
+   "bold": 1,
+   "fieldname": "total_fluid_difference",
+   "fieldtype": "Int",
+   "label": "Difference(A-B)=",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_35",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "charts_section",
+   "fieldtype": "Section Break",
+   "label": "Intake & Output Chart"
+  },
+  {
+   "default": "<h1>HELLO</h1>",
+   "fieldname": "input_output_chart",
+   "fieldtype": "HTML",
+   "label": "input_output_chart"
+  },
+  {
+   "fieldname": "inpatient_record",
+   "fieldtype": "Link",
+   "label": "Inpatient Record",
+   "options": "Inpatient Record"
+  }
+ ],
+ "hide_toolbar": 1,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2023-08-14 11:15:44.703106",
+ "modified_by": "Administrator",
+ "module": "Gch Custom",
+ "name": "Input Output Chart",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

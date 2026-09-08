@@ -1,0 +1,180 @@
+{
+ "actions": [],
+ "allow_import": 1,
+ "allow_rename": 1,
+ "autoname": "format:{generic_name}",
+ "creation": "2021-08-26 10:58:36.817628",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "code",
+  "generic_name",
+  "main_category",
+  "classification",
+  "sub_classification",
+  "is_triage_medication",
+  "is_controlled_drug",
+  "is_high_alert",
+  "emergency_medication",
+  "column_break_5",
+  "kranium_code",
+  "kranium_name",
+  "preparation",
+  "route",
+  "drug_uom",
+  "generic_name_formulation_section",
+  "age_weight_band",
+  "ageweight_band",
+  "section_break_10",
+  "gch_standard_treatment_guideline_detail"
+ ],
+ "fields": [
+  {
+   "fieldname": "code",
+   "fieldtype": "Link",
+   "label": "Code",
+   "options": "Medical Code",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fetch_from": "code.description",
+   "fieldname": "generic_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Generic Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "classification",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Classification",
+   "reqd": 1
+  },
+  {
+   "fieldname": "sub_classification",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Sub Classification",
+   "mandatory_depends_on": "eval:doc.classification==\"Antibiotic\"",
+   "options": "\nFluoroquinolones"
+  },
+  {
+   "fieldname": "column_break_5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "kranium_code",
+   "fieldtype": "Data",
+   "label": "Kranium Code"
+  },
+  {
+   "fieldname": "kranium_name",
+   "fieldtype": "Data",
+   "label": "Kranium Name"
+  },
+  {
+   "fieldname": "route",
+   "fieldtype": "Table MultiSelect",
+   "label": "Route",
+   "options": "Generic Drug Route",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_10",
+   "fieldtype": "Section Break",
+   "label": "Gertrude's Standard Treatment Guidelines Medicine Mapping"
+  },
+  {
+   "fieldname": "generic_name_formulation_section",
+   "fieldtype": "Section Break",
+   "label": "Dosage per KG"
+  },
+  {
+   "fieldname": "main_category",
+   "fieldtype": "Link",
+   "label": "Main Category",
+   "options": "Generic Main Category",
+   "reqd": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "is_triage_medication",
+   "fieldtype": "Check",
+   "label": "Is Triage Medication"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_controlled_drug",
+   "fieldtype": "Check",
+   "label": "Is Controlled Drug"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_high_alert",
+   "fieldtype": "Check",
+   "label": "Is High Alert"
+  },
+  {
+   "default": "0",
+   "fieldname": "emergency_medication",
+   "fieldtype": "Check",
+   "label": "Emergency Medication"
+  },
+  {
+   "fieldname": "age_weight_band",
+   "fieldtype": "Section Break",
+   "label": "Age/Weight Band"
+  },
+  {
+   "fieldname": "ageweight_band",
+   "fieldtype": "Table",
+   "label": "Age/Weight Band",
+   "options": "Age Weight Band Details"
+  },
+  {
+   "fieldname": "preparation",
+   "fieldtype": "Table MultiSelect",
+   "label": "Preparation",
+   "options": "Generic Drug Formula Link",
+   "reqd": 1
+  },
+  {
+   "fieldname": "drug_uom",
+   "fieldtype": "Table",
+   "label": "Drug UOM",
+   "options": "Generic Drug UOM"
+  },
+  {
+   "fieldname": "gch_standard_treatment_guideline_detail",
+   "fieldtype": "Table",
+   "options": "GCH Standard Guideline Detail"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-09-05 12:06:00.001918",
+ "modified_by": "Administrator",
+ "module": "Gch Custom",
+ "name": "Generic Drug Name",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

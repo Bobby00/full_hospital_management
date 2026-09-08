@@ -1,0 +1,117 @@
+from erpnext.healthcare.doctype.patient.patient import Patient
+import uuid
+import frappe
+from gch_messaging.utils.core import messaging
+
+import calendar;
+import time;
+  
+# gmt stores current gmtime
+
+
+class GCHPatient(Patient):
+        
+    def validate(self):
+        phone_number = self.phone
+        country_code = self.country_code
+        if country_code and not phone_number:
+            frappe.throw("Phone number is required")
+        if phone_number:
+            if not country_code:
+                frappe.throw("Please select country code")
+            phone_number_ = f"{country_code}{phone_number}"
+            valid, phone = messaging.validate_phone(phone_number=phone_number_)
+            if not valid:
+                frappe.throw(
+                    f"{self.phone} is not a valid phone number. Use format 712******"
+                )
+        if not self.uhid_code:
+            self.uhid_code = str(uuid.uuid4().int)[:8]
+            self.uhid = self.uhid_code
+        return super().validate()
+
+    def before_insert(self):
+        patient_barcode = str(uuid.uuid4().int)[:8]
+        self.uhid_code = patient_barcode
+        self.uhid = patient_barcode
+        self.added_by = frappe.session.user
+        self.set_missing_customer_details()
+        super().before_insert()
+
+    def set_full_name(self):
+        """Set Patient Full Name (patient_name)
+        
+        If middle_name is present, concatenate the three names
+        """
+        if self.last_name and self.middle_name:
+            self.patient_name = " ".join(
+                filter(None, [self.first_name, self.middle_name, self.last_name])
+            )
+        elif self.last_name and not self.middle_name:
+            self.patient_name = " ".join(
+                filter(None, [self.first_name, f"{self.last_name[0].capitalize()}", self.last_name])
+            )
+        else:
+            self.patient_name = self.first_name
+
+    
+    def on_update(self):
+        from gch_middleware.utils.hl7.labware.service import gch_labware_service
+
+        current_time = str(frappe.utils.now()).split(".")[0].replace("-", "").replace(":", "").replace(" ", "")
+        gmt = time.gmtime()
+        ts = calendar.timegm(gmt)
+        message_id = f"{self.name}{ts}".replace(' ', '').upper().strip()
+        uhid = self.uhid_code
+        first_name = self.first_name
+        middle_name = self.middle_name if self.middle_name != "" or self.middle_name!=None else self.last_name[0]
+        last_name = self.last_name
+        dob = self.dob.replace("-", "")
+        gender = self.sex[0]
+        address = self.town
+        country_code = "001234567"
+        multiple_birth_indicator="N"
+        country_name="Kenya"
+        patient_class="O"
+        admission_type="C"
+        hospital_service="M"
+        encounter_number=message_id
+        admission_time = current_time
+        reason_for_admission="0101"
+        expected_discharge_time = current_time
+        email_address = f"{self.first_name}{self.last_name}@gmail.com"
+        sending_facility = "20"
+        try:
+            response = gch_labware_service.update_patient(
+                message_id=message_id,
+                uhid=uhid,
+                first_name=first_name,
+                last_name=last_name,
+                middle_name=middle_name,
+                dob=dob,
+                gender = gender,
+                address=address,
+                country_code=country_code,
+                phone_number="",
+                multiple_birth_indicator=multiple_birth_indicator,
+                country_name=country_name,
+                patient_class=patient_class,
+                admission_time=admission_time,
+                encounter_number=encounter_number,
+                hospital_service=hospital_service,
+                admission_type=admission_type,
+                reason_for_admission=reason_for_admission,
+                expected_discharge_time=expected_discharge_time,
+                email_address=email_address,
+                sending_facility=sending_facility
+            )
+            print(response)
+            frappe.publish_realtime(event='eval_js', message='frappe.show_alert("{0}")'.format("Sent to Labware"), user=frappe.session.user)
+        except Exception as e:
+            print(e)
+            frappe.log_error(e, f"Error setting up")
+
+
+
+
+

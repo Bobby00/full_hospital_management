@@ -1,0 +1,351 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:GCH-PAA-{DD}{MM}{YYYY}-{####}",
+ "creation": "2024-07-08 08:27:34.735069",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "patient_details_section",
+  "inpatient_record",
+  "theatre_booking",
+  "theatre_overview",
+  "pre_anaesthesia_assessment",
+  "planned_procedure_section",
+  "procedures",
+  "birth",
+  "preop_anaesthesia_orders_section",
+  "emla",
+  "time",
+  "npo_orders",
+  "other_orders",
+  "pre_anaesthetic_history",
+  "drug_latext_allergy",
+  "relevant_medical_surgical_history_problem_list",
+  "medications_time_of_last_dose_checked_by",
+  "medications_time_of_last_dose_verified_by",
+  "anaesthetic_history",
+  "current_diagnosis",
+  "physical_examination_section",
+  "dental_test",
+  "airway_assessment",
+  "mouth_opening__2_fingers",
+  "thyromental_distance__3_fingers",
+  "full_neck_movement",
+  "mallampati_score",
+  "general_condition",
+  "temp",
+  "cvs_column",
+  "baselin_pr_bpm",
+  "bpmmhg",
+  "heart_sounds",
+  "murmurs",
+  "resp_system",
+  "rrbpm",
+  "baselin_spo2_on_rao2_suplement",
+  "chest_exam",
+  "cns",
+  "mss",
+  "anaesthesia",
+  "anaesthesia_plan",
+  "risks_discussed",
+  "anaesthetist",
+  "anaesthetist_name",
+  "anaesthetist_datetime",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "collapsible": 1,
+   "fieldname": "patient_details_section",
+   "fieldtype": "Section Break",
+   "label": "Patient Details"
+  },
+  {
+   "fieldname": "inpatient_record",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Inpatient Record",
+   "options": "Inpatient Record",
+   "reqd": 1
+  },
+  {
+   "fieldname": "theatre_booking",
+   "fieldtype": "Link",
+   "label": "Theatre Booking",
+   "options": "Theatre Booking",
+   "read_only": 1
+  },
+  {
+   "fieldname": "theatre_overview",
+   "fieldtype": "Link",
+   "label": "Theatre Overview",
+   "options": "Theatre Overview"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "pre_anaesthesia_assessment",
+   "fieldtype": "Section Break",
+   "label": "PRE-ANAESTHESIA ASSESSMENT"
+  },
+  {
+   "fieldname": "planned_procedure_section",
+   "fieldtype": "Section Break",
+   "label": "Planned Procedure"
+  },
+  {
+   "fieldname": "procedures",
+   "fieldtype": "Table",
+   "label": "Procedures",
+   "options": "Theatre Procedure"
+  },
+  {
+   "fieldname": "birth",
+   "fieldtype": "Select",
+   "label": "Birth",
+   "options": "\nTerm\nPremature"
+  },
+  {
+   "fieldname": "preop_anaesthesia_orders_section",
+   "fieldtype": "Section Break",
+   "label": "Preop Anaesthesia Orders"
+  },
+  {
+   "fieldname": "emla",
+   "fieldtype": "Select",
+   "label": "EMLA",
+   "options": "\nYES\nNO"
+  },
+  {
+   "fieldname": "time",
+   "fieldtype": "Datetime",
+   "label": "Time"
+  },
+  {
+   "fieldname": "npo_orders",
+   "fieldtype": "Data",
+   "label": "NPO ORDERS"
+  },
+  {
+   "fieldname": "other_orders",
+   "fieldtype": "Section Break",
+   "label": "Other Orders"
+  },
+  {
+   "fieldname": "pre_anaesthetic_history",
+   "fieldtype": "Section Break",
+   "label": "Pre-anaesthetic Assessment History"
+  },
+  {
+   "fieldname": "drug_latext_allergy",
+   "fieldtype": "Select",
+   "label": "Drug/ Latext Allergy",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "relevant_medical_surgical_history_problem_list",
+   "fieldtype": "Data",
+   "label": "Relevant Medical/ Surgical History/ Problem List"
+  },
+  {
+   "fieldname": "medications_time_of_last_dose_checked_by",
+   "fieldtype": "Datetime",
+   "label": "Medications/ Time of last Dose Checked by"
+  },
+  {
+   "fieldname": "medications_time_of_last_dose_verified_by",
+   "fieldtype": "Datetime",
+   "label": "Medications/ Time of last dose verified by"
+  },
+  {
+   "fieldname": "anaesthetic_history",
+   "fieldtype": "Data",
+   "label": "Anaesthetic History"
+  },
+  {
+   "fieldname": "current_diagnosis",
+   "fieldtype": "Link",
+   "label": "Current Diagnosis",
+   "options": "Medical Code"
+  },
+  {
+   "fieldname": "physical_examination_section",
+   "fieldtype": "Section Break",
+   "label": "Physical Examination"
+  },
+  {
+   "fieldname": "dental_test",
+   "fieldtype": "HTML",
+   "label": "dental test",
+   "options": "<div class=\"\">\n  <div class=\"row\">\n    <div class=\"col-12\">\n      <center>\n        <img src=\"/files/dental_tooth.png\" style=\"\">\n      </center>\n    </div>\n  </div>\n</div>\n\n<br>\n<br>\n<br>\n<div id=\"scroll_to_procedure_table\">\n</div>\n\n"
+  },
+  {
+   "fieldname": "airway_assessment",
+   "fieldtype": "Select",
+   "label": "Airway Assessment",
+   "options": "\nNormal\nDifficult"
+  },
+  {
+   "fieldname": "mouth_opening__2_fingers",
+   "fieldtype": "Select",
+   "label": "Mouth Opening > 2 fingers",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "thyromental_distance__3_fingers",
+   "fieldtype": "Select",
+   "label": "Thyromental distance > 3 fingers",
+   "options": "\nYes\nNo"
+  },
+  {
+   "default": "0",
+   "fieldname": "full_neck_movement",
+   "fieldtype": "Check",
+   "label": "Full Neck Movement"
+  },
+  {
+   "fieldname": "mallampati_score",
+   "fieldtype": "Select",
+   "label": "Mallampati Score",
+   "options": "\nI\nII\nIII\nIV"
+  },
+  {
+   "fieldname": "general_condition",
+   "fieldtype": "Data",
+   "label": "General Condition"
+  },
+  {
+   "fieldname": "temp",
+   "fieldtype": "Int",
+   "label": "Temp"
+  },
+  {
+   "fieldname": "cvs_column",
+   "fieldtype": "Column Break",
+   "label": "CVS"
+  },
+  {
+   "fieldname": "baselin_pr_bpm",
+   "fieldtype": "Int",
+   "label": "Baselin PR (bpm)"
+  },
+  {
+   "fieldname": "bpmmhg",
+   "fieldtype": "Int",
+   "label": "BP(mmHg)"
+  },
+  {
+   "fieldname": "heart_sounds",
+   "fieldtype": "Data",
+   "label": "Heart Sounds"
+  },
+  {
+   "fieldname": "murmurs",
+   "fieldtype": "Data",
+   "label": "Murmurs"
+  },
+  {
+   "fieldname": "resp_system",
+   "fieldtype": "Heading",
+   "label": "Resp System"
+  },
+  {
+   "fieldname": "rrbpm",
+   "fieldtype": "Int",
+   "label": "RR(B/min)"
+  },
+  {
+   "fieldname": "baselin_spo2_on_rao2_suplement",
+   "fieldtype": "Int",
+   "label": "Baselin SpO2 (on RA/O2 suplement)"
+  },
+  {
+   "fieldname": "chest_exam",
+   "fieldtype": "Heading",
+   "label": "Chest Exam"
+  },
+  {
+   "fieldname": "cns",
+   "fieldtype": "Data",
+   "label": "CNS"
+  },
+  {
+   "fieldname": "mss",
+   "fieldtype": "Data",
+   "label": "MSS"
+  },
+  {
+   "fieldname": "anaesthesia",
+   "fieldtype": "Section Break",
+   "label": "Anaesthesia Plan"
+  },
+  {
+   "fieldname": "anaesthesia_plan",
+   "fieldtype": "Data",
+   "label": "Anaesthesia Plan"
+  },
+  {
+   "fieldname": "risks_discussed",
+   "fieldtype": "Select",
+   "label": "Plan/ Risk discussed with parents/ Caregiver",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "anaesthetist",
+   "fieldtype": "Link",
+   "label": "Anaesthetist",
+   "options": "Healthcare Practitioner"
+  },
+  {
+   "fetch_from": "anaesthetist.practitioner_name",
+   "fieldname": "anaesthetist_name",
+   "fieldtype": "Data",
+   "label": "Anaesthetist Name"
+  },
+  {
+   "fieldname": "anaesthetist_datetime",
+   "fieldtype": "Datetime",
+   "label": "Date and time"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Pre Anaesthesia Assessment",
+   "print_hide": 1,
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [
+  {
+   "link_doctype": "Inpatient Record",
+   "link_fieldname": "theatre_overview"
+  }
+ ],
+ "modified": "2024-07-08 09:08:03.179456",
+ "modified_by": "Administrator",
+ "module": "GCH Theatre",
+ "name": "Pre Anaesthesia Assessment",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

@@ -1,0 +1,92 @@
+{
+ "actions": [],
+ "autoname": "format:GCHSGD-{code}",
+ "creation": "2022-03-10 06:44:28.543741",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "generic_drug_name",
+  "medical_code",
+  "standard_treatment",
+  "code",
+  "column_break_3",
+  "generic_drug",
+  "description",
+  "treatment_option"
+ ],
+ "fields": [
+  {
+   "columns": 3,
+   "fieldname": "medical_code",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Medical code",
+   "options": "Medical Code"
+  },
+  {
+   "columns": 3,
+   "fieldname": "standard_treatment",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Diagnosis",
+   "options": "GCH Standard Treatment Guideline"
+  },
+  {
+   "columns": 1,
+   "fetch_from": "standard_treatment.code",
+   "fieldname": "code",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Code",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "standard_treatment.description",
+   "fieldname": "description",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Description",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "standard_treatment.preparation",
+   "fieldname": "treatment_option",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Formula",
+   "options": "Drug Formula",
+   "reqd": 1
+  },
+  {
+   "fieldname": "generic_drug",
+   "fieldtype": "Link",
+   "label": "Generic Drug",
+   "options": "Generic Drug Name"
+  },
+  {
+   "columns": 3,
+   "fetch_from": "generic_drug.generic_name",
+   "fieldname": "generic_drug_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Generic Drug Name"
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2022-03-12 00:19:15.345016",
+ "modified_by": "Administrator",
+ "module": "Gch Custom",
+ "name": "GCH Standard Guideline Detail",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "title_field": "medical_code",
+ "track_changes": 1
+}

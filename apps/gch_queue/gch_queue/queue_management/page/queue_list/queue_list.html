@@ -1,0 +1,205 @@
+<div class="row layout-main">
+  <div class="col layout-main-section-wrapper">
+    <div class="layout-main-section">
+      <div class="row user-profile">
+        <div class="col-md-12">
+          <div class="performance-graphs">
+            <div
+              class="frappe-card chart-column-container line-chart-container"
+            >
+              <div class="title-area py-3">
+                <h4 class="card-title">
+                  Queued Patients on {{service_unit}} &nbsp;
+                </h4>
+
+                                <div class="queue-list-filter dept-filter py-0">
+                                       
+                                </div>
+                                <div class="queue-list-filter date-filter py-0">
+                                       
+                                </div>
+                                <div id="reception-btn">
+
+                                </div> 
+
+                                <span class="badge badge-pill badge-warning">
+                                    {{current_station_entry.branch}}
+                                </span>
+                            </div>
+                            <div class="list-row-container" tabindex="1">
+                                <header class="level list-row-head text-muted">
+                                    <div class="level-left list-header-subject">
+                                        <div class="list-row-col ellipsis list-subject level  ">
+                                            <input class="level-item list-check-all hidden-xs" type="checkbox"
+                                                title="Select All">
+                                            <span class="level-item">Full Name</span>
+                                        </div>
+                                        <div class="list-row-col ellipsis hidden-xs  ">
+                                            <span>Encounter Number</span>
+                                        </div>
+                                        <!-- <div class="list-row-col ellipsis hidden-xs hidden-sm hidden-md hidden-lg ">
+                                            <span>Encounter Creation Time</span>
+                                        </div> -->
+                                        <div class="list-row-col ellipsis hidden-xs  ">
+                                            <span>Join Queue Time</span>
+                                        </div>
+                                        <div class="list-row-col ellipsis hidden-xs  ">
+                                            <span>Time Spent</span>
+                                        </div>
+                                        <div class="list-row-col ellipsis hidden-xs  ">
+                                            <span>Queue</span>
+                                        </div>
+                                        <div class="list-row-col ellipsis hidden-xs  ">
+                                            <span>Urgency</span>
+                                        </div>
+                                        <div class="list-row-col ellipsis hidden-xs  ">
+                                            <span>Patient Clinic</span>
+                                        </div>
+                                        <div class="list-row-col ellipsis hidden-xs  ">
+                                            <span>Mode of Payment</span>
+                                        </div>
+                                        <div class="list-row-col ellipsis hidden-xs  ">
+                                            <span>Status</span>
+                                        </div>
+                                        <div class="list-row-col ellipsis hidden-xs  ">
+                                            <span>Action</span>
+                                        </div>
+                                    </div>
+                                    <div class="level-left checkbox-actions" style="display: none;">
+                                        <div class="level list-subject">
+                                            <input class="level-item list-check-all hidden-xs" type="checkbox"
+                                                title="Select All">
+                                            <span class="level-item list-header-meta"></span>
+                                        </div>
+                                    </div>
+                                </header>
+
+                    <!-- <div class="list-row-col ellipsis hidden-xs">
+                      <span>Urgency</span>
+                    </div>
+                    <div class="list-row-col ellipsis hidden-xs">
+                      <span>Patient Clinic</span>
+                    </div>
+                    <div class="list-row-col ellipsis hidden-xs">
+                      <span>Mode of Payment</span>
+                    </div>
+                    <div class="list-row-col ellipsis hidden-xs">
+                      <span>Services</span>
+                    </div>
+                    <div class="list-row-col ellipsis hidden-xs">
+                      <span>Action</span>
+                    </div> -->
+                  </div>
+                  <div
+                    class="level-left checkbox-actions"
+                    style="display: none"
+                  >
+                    <div class="level list-subject">
+                      <input
+                        class="level-item list-check-all hidden-xs"
+                        type="checkbox"
+                        title="Select All"
+                      />
+                      <span class="level-item list-header-meta"></span>
+                    </div>
+                  </div>
+                </header>
+
+                <!-- {% for entry in queue %} -->
+                <!-- {% set entry_1 = queue[loop.index] %} -->
+                <div class="queue-list"></div>
+                <!-- <div class="level list-row"> -->
+                <!-- <div
+                                        class="level-left ellipsis {% if entry[1][0]==1 %} indicator-pill red {% else %} indicator-pill green {% endif%}">
+                                        <div class="list-row-col ellipsis list-subject level">
+                                            <input class="level-item list-row-checkbox hidden-xs" type="checkbox"
+                                                data-name={{entry[0]}}>
+                                            <span class="level-item" style="margin-bottom: 1px;">
+                                                <span class="like-action not-liked" data-name={{entry[0]}}
+                                                    data-doctype="Patient" data-liked-by="null" title=""></span>
+                                                <span class="likes-count"></span>
+                                            </span>
+                                            <span class="level-item bold ellipsis" title={{entry[0]}}>
+                                                <a class="ellipsis" href="/app/patient/{{entry[0]}}" title={{entry[0]}}
+                                                    data-doctype="Patient" data-name={{entry[0]}}>
+                                                    {{entry[0]}}
+                                                </a>
+                                            </span>
+                                        </div>
+                                        <div class="list-row-col ellipsis hidden-xs ">
+                                            <span class="ellipsis"
+                                                title="Patient Encounter: {{ entry[1][3].patient_encounter }}">
+                                                <a class="filterable ellipsis"
+                                                    data-filter="encounter,=,{{ entry[1][3].patient_encounter }}"
+                                                    href="/app/patient-encounter/{{ entry[1][3].patient_encounter }}">
+                                                    {{ entry[1][3].patient_encounter }}
+                                                </a>
+                                            </span>
+                                        </div>
+                                        <div class="list-row-col ellipsis hidden-xs hidden-sm hidden-md hidden-lg ">
+                                            <span class="ellipsis" title="Creation Time: {{ entry[1][3].creation }}">
+                                                <a class="filterable ellipsis">
+                                                    {{ entry[1][3].creation }}
+                                                </a>
+                                            </span>
+                                        </div>
+                                        <div class="list-row-col ellipsis hidden-xs ">
+                                            <span class="ellipsis" title="Updated Time:  {{ entry[1][3].modified }}">
+                                                <a class="filterable ellipsis"
+                                                    data-filter="gch_patient_age,=,{{entry[0]}}">
+                                                    {{ entry[1][3].modified }}
+                                                </a>
+                                            </span>
+                                        </div>
+                                        <div class="list-row-col ellipsis hidden-xs ">
+                                            <span class="ellipsis" title="Patient Type: {{entry[1][3].type}}">
+                                                <a class="filterable ellipsis" data-filter="patient_type">
+                                                    {{service_unit}}
+                                                </a>
+                                            </span>
+                                        </div>
+                                        <div class="list-row-col ellipsis hidden-xs ">
+                                            <span class="ellipsis" title="Priority: {{entry[1][0]}}">
+                                                <a class="filterable ellipsis" data-filter="queue_position,=,{{entry[1][0]}}
+                             }">
+                                                    {%if entry[1][0] == 1 %}
+                                                    Emergency
+                                                    {%else%}
+                                                    Normal
+                                                    {%endif%}
+                                                </a>
+                                            </span>
+                                        </div>
+                                        <div class="list-row-col ellipsis hidden-xs ">
+                                            <span class="ellipsis" title="Patient Type: {{entry[1][3].type}}">
+                                                <a class="filterable ellipsis" data-filter="patient_type">
+                                                    {{ entry[1][3].clinic }}
+                                                </a>
+                                            </span>
+                                        </div>
+                                        <div class="list-row-col ellipsis hidden-xs ">
+                                            <span class="ellipsis" title="Patient Type: {{entry[1][3].type}}">
+                                                <a class="filterable ellipsis" data-filter="patient_type">
+                                                    {{ entry[1][3].mode_of_payment }}
+                                                </a>
+                                            </span>
+                                        </div>
+                                        <div class="list-row-col ellipsis hidden-xs ">
+                                            <span class="ellipsis" title="Patient Type: {{entry[1][3].type}}">
+                                                <a class="filterable ellipsis" data-filter="patient_type">
+                                                    {{ entry[1][3].workflow_state }}
+                                                </a>
+                                            </span>
+                                        </div>
+                                    </div> -->
+                <!-- </div> -->
+                <!-- {% endfor %} -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="layout-footer hide"></div>
+  </div>
+</div>

@@ -1,0 +1,11 @@
+Service Unit Type,Disabled,Allow Appointments,Allow Overlap,Inpatient Occupancy,Is Billable,Item,Item Code,Item Group,UOM,UOM Conversion in Hours,Rate / UOM,Description
+Procedure,0,1,0,0,0,,,,,0,0,
+Consultation,0,1,1,0,0,,,,,0,0,
+Wellbaby,0,1,0,0,0,,,,,0,0,
+Doctor,0,1,1,0,0,,,,,0,0,
+Discharge,0,1,0,0,0,,,,,0,0,
+Pharmacy,0,1,1,0,0,,,,,0,0,
+LAB/Investigation,0,1,1,0,0,,,,,0,0,
+Reception,0,1,1,0,0,,,,,0,0,
+Triage,0,1,1,0,0,,,,,0,0,
+Registration,0,1,1,0,0,,,,,0,0,

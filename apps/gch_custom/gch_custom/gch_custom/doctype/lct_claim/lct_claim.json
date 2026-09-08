@@ -1,0 +1,370 @@
+{
+ "actions": [],
+ "autoname": "LCT-Claim-.#####",
+ "creation": "2022-03-14 14:06:13.681732",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "member_details_section",
+  "first_name",
+  "last_name",
+  "other_names",
+  "patient_number",
+  "patient",
+  "is_primary",
+  "column_break_14",
+  "claim_code",
+  "batch_number",
+  "dispatch_date",
+  "payer_section_section",
+  "lct_member",
+  "member_number",
+  "nhif_number",
+  "phone_number",
+  "column_break_24",
+  "payer_code",
+  "payer_name",
+  "scheme_code",
+  "scheme_name",
+  "visit_section_section",
+  "visit_number",
+  "visit_end",
+  "visit_start",
+  "visit_type",
+  "column_break_32",
+  "visit_status",
+  "branch_code",
+  "branch_name",
+  "amended_from",
+  "invoice_section_section",
+  "invoices",
+  "currency",
+  "gross_amount",
+  "amount",
+  "authorizations_section_section",
+  "authorization_code",
+  "authorization_type",
+  "authorization_letters",
+  "diagnosis_section_section",
+  "coding_standard",
+  "coding_standard_version",
+  "diagnosis",
+  "pre_authorization_section_section",
+  "pre_authorization",
+  "admission_section_section",
+  "admissions",
+  "doctors_section_section",
+  "doctors",
+  "is_processed",
+  "claimref"
+ ],
+ "fields": [
+  {
+   "fieldname": "claim_code",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "claim_code"
+  },
+  {
+   "fieldname": "batch_number",
+   "fieldtype": "Data",
+   "label": "batch_number"
+  },
+  {
+   "fieldname": "dispatch_date",
+   "fieldtype": "Date",
+   "label": "dispatch_date"
+  },
+  {
+   "fieldname": "currency",
+   "fieldtype": "Data",
+   "label": "currency"
+  },
+  {
+   "fieldname": "amount",
+   "fieldtype": "Currency",
+   "label": "amount"
+  },
+  {
+   "fieldname": "gross_amount",
+   "fieldtype": "Currency",
+   "label": "gross_amount"
+  },
+  {
+   "fieldname": "coding_standard",
+   "fieldtype": "Data",
+   "label": "coding_standard"
+  },
+  {
+   "fieldname": "coding_standard_version",
+   "fieldtype": "Data",
+   "label": "coding_standard_version"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_primary",
+   "fieldtype": "Check",
+   "label": "is_primary"
+  },
+  {
+   "fieldname": "first_name",
+   "fieldtype": "Data",
+   "label": "first_name"
+  },
+  {
+   "fieldname": "last_name",
+   "fieldtype": "Data",
+   "label": "last_name"
+  },
+  {
+   "fieldname": "other_names",
+   "fieldtype": "Data",
+   "label": "other_names"
+  },
+  {
+   "fieldname": "patient_number",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "patient_number"
+  },
+  {
+   "fieldname": "patient",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "patient",
+   "options": "Patient"
+  },
+  {
+   "fieldname": "nhif_number",
+   "fieldtype": "Data",
+   "label": "nhif_number"
+  },
+  {
+   "fieldname": "member_number",
+   "fieldtype": "Data",
+   "label": "member_number"
+  },
+  {
+   "fieldname": "payer_code",
+   "fieldtype": "Data",
+   "label": "payer_code"
+  },
+  {
+   "fieldname": "payer_name",
+   "fieldtype": "Data",
+   "label": "payer_name"
+  },
+  {
+   "fieldname": "scheme_code",
+   "fieldtype": "Data",
+   "label": "scheme_code"
+  },
+  {
+   "fieldname": "scheme_name",
+   "fieldtype": "Data",
+   "label": "scheme_name"
+  },
+  {
+   "fieldname": "visit_number",
+   "fieldtype": "Data",
+   "label": "visit_number"
+  },
+  {
+   "fieldname": "visit_end",
+   "fieldtype": "Datetime",
+   "label": "visit_end"
+  },
+  {
+   "fieldname": "visit_start",
+   "fieldtype": "Datetime",
+   "label": "visit_start"
+  },
+  {
+   "fieldname": "visit_type",
+   "fieldtype": "Data",
+   "label": "visit_type"
+  },
+  {
+   "fieldname": "visit_status",
+   "fieldtype": "Data",
+   "label": "visit_status"
+  },
+  {
+   "fieldname": "branch_code",
+   "fieldtype": "Data",
+   "label": "branch_code"
+  },
+  {
+   "fieldname": "branch_name",
+   "fieldtype": "Data",
+   "label": "branch_name"
+  },
+  {
+   "fieldname": "phone_number",
+   "fieldtype": "Data",
+   "label": "phone_number"
+  },
+  {
+   "fieldname": "authorization_code",
+   "fieldtype": "Data",
+   "label": "authorization_code"
+  },
+  {
+   "fieldname": "authorization_type",
+   "fieldtype": "Data",
+   "label": "authorization_type"
+  },
+  {
+   "fieldname": "column_break_14",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Lct Claim",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "lct_member",
+   "fieldtype": "Link",
+   "label": "Lct Member",
+   "options": "Lct Member"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "diagnosis_section_section",
+   "fieldtype": "Section Break",
+   "label": "Diagnosis Section"
+  },
+  {
+   "fieldname": "diagnosis",
+   "fieldtype": "Table",
+   "label": "Diagnosis",
+   "options": "Lct Claim Diagnosis Details"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "authorizations_section_section",
+   "fieldtype": "Section Break",
+   "label": "Authorizations Section"
+  },
+  {
+   "fieldname": "authorization_letters",
+   "fieldtype": "Table",
+   "label": "Authorization Letters",
+   "options": "Lct Claim Authorization Letter Details"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "pre_authorization_section_section",
+   "fieldtype": "Section Break",
+   "label": "Pre Authorization Section"
+  },
+  {
+   "fieldname": "pre_authorization",
+   "fieldtype": "Table",
+   "label": "Pre Authorization",
+   "options": "Lct Claim Preauthorization Details"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "admission_section_section",
+   "fieldtype": "Section Break",
+   "label": "Admission Section"
+  },
+  {
+   "fieldname": "member_details_section",
+   "fieldtype": "Section Break",
+   "in_preview": 1,
+   "label": "Member Details"
+  },
+  {
+   "fieldname": "admissions",
+   "fieldtype": "Table",
+   "label": "Admissions",
+   "options": "Lct Claim Admission Details"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "doctors_section_section",
+   "fieldtype": "Section Break",
+   "label": "Doctors Section"
+  },
+  {
+   "fieldname": "doctors",
+   "fieldtype": "Table",
+   "label": "Doctors",
+   "options": "Lct Claim Doctor Details"
+  },
+  {
+   "fieldname": "invoice_section_section",
+   "fieldtype": "Section Break",
+   "label": "Invoice Section"
+  },
+  {
+   "fieldname": "invoices",
+   "fieldtype": "Table",
+   "label": "invoices",
+   "options": "Lct Claim Invoice Details"
+  },
+  {
+   "fieldname": "payer_section_section",
+   "fieldtype": "Section Break",
+   "label": "Payer Section"
+  },
+  {
+   "fieldname": "visit_section_section",
+   "fieldtype": "Section Break",
+   "label": "Visit Section"
+  },
+  {
+   "fieldname": "column_break_24",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_32",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_processed",
+   "fieldtype": "Check",
+   "hidden": 1,
+   "label": "is_processed"
+  },
+  {
+   "fieldname": "claimref",
+   "fieldtype": "Data",
+   "label": "claimref"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2022-09-23 11:38:11.628630",
+ "modified_by": "Administrator",
+ "module": "Gch Custom",
+ "name": "Lct Claim",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

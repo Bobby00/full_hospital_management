@@ -1,0 +1,147 @@
+ID,Task Name,,ID,Option,Option Name
+,,,,,
+"""GCH-NCTT-105874""",OTHERS,,"""ac0fb95e93""",Documented nutritional Deficiencies e.g. iron deficiency anaemia,Documented nutritional Deficiencies e.g. iron deficiency anaemia
+,,,"""7859c0ebcb""",Documented food allergies and intolerances e.g. Milk protein allergy,Documented food allergies and intolerances e.g. Milk protein allergy
+,,,"""2f29315dce""","GIT symptoms e.g. nausea, vomiting and diarrhea affecting dietary intake","GIT symptoms e.g. nausea, vomiting and diarrhea affecting dietary intake"
+,,,"""a9511ab91a""",Complementary feeding age (6 months),Complementary feeding age (6 months)
+"""GCH-NCTT-105873""",MEDICAL DIAGNOSIS,,"""2b5312543d""",Diabetes,Diabetes
+,,,"""c9ca0ce7f8""",Cancer,Cancer
+,,,"""ee921db607""",Burns greater than 10%,Burns greater than 10%
+,,,"""62fd9a4cf5""",ICU care,ICU care
+,,,"""af5a4b3c9a""",Cardiac,Cardiac
+,,,"""a76de406d8""",Hepatitis,Hepatitis
+"""GCH-NCTT-105871""",DIETARY INTAKE,,"""8640969dee""",Normal  food intake,Normal  food intake
+,,,"""e70ab90bfe""",Decreased appetite but taking usual foods,Decreased appetite but taking usual foods
+,,,"""cb350bbb5d""","Use of nutritional supplements or specialized feeding (NGT, Gastrotomy)","Use of nutritional supplements or specialized feeding (NGT, Gastrotomy)"
+,,,"""434c09ed64""","Taking very little food, or liquids only","Taking very little food, or liquids only"
+"""GCH-NCTT-105868""",WEIGHT,,"""3cbd6963e0""",Weight for age/Weight for height less than 1SD/10th percentile (at risk),Weight for age/Weight for height less than 1SD/10th percentile (at risk)
+,,,"""da71910e56""",Weight for age /Weight for height less than 2SD/3rd percentile (underweight),Weight for age /Weight for height less than 2SD/3rd percentile (underweight)
+,,,"""20db9d8c12""",Weight for height less than 3SD (Severe Acute Malnutrition),Weight for height less than 3SD (Severe Acute Malnutrition)
+,,,"""8b7c3b5126""",Weight for age /Weight for height  greater than 3SD/ 85th percentile (Overweight),Weight for age /Weight for height  greater than 3SD/ 85th percentile (Overweight)
+,,,"""af94cbf208""",Unintentional weight loss in the past 1 month,Unintentional weight loss in the past 1 month
+"""GCH-NCTT-21158""",Checked by (Nurse’s name),,,,
+"""GCH-NCTT-21157""",Blood collected for laboratory analysis,,,,
+"""GCH-NCTT-21156""","Appearance of limb before insertion eg pain swelling, pressure  sores, erythema",,,,
+"""GCH-NCTT-21154""","Patient compliance level (poor, fair or good)",,,,
+"""GCH-NCTT-21153""",Ease of insertion eg first attempt,,,,
+"""GCH-NCTT-21152""",Catheter site cleaned with,,,,
+"""GCH-NCTT-21151""",Reason for Insertion,,"""3539a741a5""",comment,comment
+"""GCH-NCTT-21150""",Catheter Gauge,,"""34523d0476""",Date,Date
+"""GCH-NCTT-16634""",Action taken after VIP scoring,,"""7d5672c62f""",Yes,Yes
+,,,"""bc7a05504c""",No,No
+,,,"""05716fcf45""",N/A,N/A
+"""GCH-NCTT-16632""",VIP SCORING,,"""6f346ccedc""",Appears healthy (0),Appears healthy (0)
+,,,"""d62d6f5585""",Slight Pain near IV site (1),Slight Pain near IV site (1)
+,,,"""e9ab4a1c1a""",Slight redness near IV site (1),Slight redness near IV site (1)
+,,,"""4f7e8c22d4""",Pain at IV site (2),Pain at IV site (2)
+,,,"""74f0b636c6""",Swelling (2),Swelling (2)
+,,,"""5b76083852""",Pain along path of cannula (3),Pain along path of cannula (3)
+,,,"""382dd26682""",Erythema (2),Erythema (2)
+,,,"""02f2e0647c""",Induration (3),Induration (3)
+,,,"""992421040f""",Palpable venous cord (4),Palpable venous cord (4)
+,,,"""818e55e3c9""",Pyrexia (5),Pyrexia (5)
+"""GCH-NCTT-16624""","1.	 Bandage appearance (Wet, dry, soiled clean)",,"""37f3746b58""",Yes,Yes
+,,,"""6594cf0c56""",No,No
+,,,"""1d62987ee9""",N/A,N/A
+"""GCH-NCTT-16622""",1.	Hand hygiene performed before catheter care,,"""ee232d4276""",Yes,Yes
+,,,"""77b51570d3""",No,No
+,,,"""a6617d78ce""",N/A,N/A
+"""GCH-NCTT-12190""",Does the patient still need the catheter?,,"""0074b2c0d1""",Yes,Yes
+"""GCH-NCTT-12189""",Catheter flushed with pre filled normal saline,,"""515fd4eba8""",Yes,Yes
+,,,"""3415ef6990""",No,No
+"""GCH-NCTT-12188""",Hub/port cleaned with,,"""01fe3247f4""",Yes,Yes
+,,,"""77c842734c""",No,No
+,,,"""1f540f202b""",N/A,N/A
+"""GCH-NCTT-12187""",Any patient interference?,,"""a633f6eeac""",Yes,Yes
+,,,"""817ce5b653""",No,No
+,,,"""a5661d28d8""",N/A,N/A
+"""GCH-NCTT-12186""","Bandage appearance (Wet, dry, soiled clean)",,"""d43e05bf49""",No,No
+,,,"""b5b871ccc9""",Yes,Yes
+,,,"""10a34a9c2d""",N/A,N/A
+"""GCH-NCTT-12185""",Hand hygiene performed before catheter care,,"""294b2f7552""",Yes,Yes
+,,,"""1b38506af1""",No,No
+,,,"""24d5043c55""",N/A,N/A
+"""GCH-NCTT-12183""",A different lumen is used for parenteral nutrition,,,,
+"""GCH-NCTT-12182""",Pulsated flushing technique (push – pause technique) used during flushing ,,"""38c7c8d611""",Use a 10cc syringe to flush the line 12 hourly and when the line is accessed for procedures,Use a 10cc syringe to flush the line 12 hourly and when the line is accessed for procedures
+"""GCH-NCTT-12181""",Site care: site and dressing is clean ,,"""d4147c4e28""",disinfect site with chlorhexidine and change dressing every 5 – 7 days (change earlier if soiled),disinfect site with chlorhexidine and change dressing every 5 – 7 days (change earlier if soiled)
+"""GCH-NCTT-12180""",Site care: site and dressing is clean ,,"""013bee0633""",disinfect site with chlorhexidine and change dressing every 5 – 7 days (change earlier if soiled),disinfect site with chlorhexidine and change dressing every 5 – 7 days (change earlier if soiled)
+"""GCH-NCTT-12179""",Hub scrubbed with chlorhexidine swab before access ,,"""eef5bb8ff2""",Scrub the hub at least 10 times in a motion similar to juicing the orange,Scrub the hub at least 10 times in a motion similar to juicing the orange
+"""GCH-NCTT-12178""",Appropriate PPE used during the procedure,,,,
+"""GCH-NCTT-12177""",Hand hygiene performed before and after handling,,"""9e2f566829""",Consider correct technique and duration for hand hygiene,Consider correct technique and duration for hand hygiene
+"""GCH-NCTT-12175""",Hand hygiene performed before and after handling,,,,
+"""GCH-NCTT-12174""",Daily Review of Central line necessity( date of removal discussed during rounds),,"""b61c891625""",Must we continue having the central line on the patient,Must we continue having the central line on the patient
+"""GCH-NCTT-10897""",Location of peripheral catheter (eg left cephalic vein),,"""feb35fb5b5""",Location,Location
+"""GCH-NCTT-10896""",Name of person inserting,,"""e74fb596e6""",Done by,Done by
+"""GCH-NCTT-10894""",Normal blood sugars maintained through surgey for diabetic patients,,"""26018e006b""",Yes,Yes
+,,,"""6eadef8862""",No,No
+,,,"""9fc87a50b0""",N/A,N/A
+"""GCH-NCTT-10893""",Temperature maintained at normal throughout surgery (unless it was intentionally lowered eg in cardiac surgery),,"""4ad07230b0""",Yes,Yes
+,,,"""e2bb83d815""",No,No
+,,,"""706bb1798b""",N/A,N/A
+"""GCH-NCTT-10892""",Prophylactic antibiotic was administered (Administer within 60 minutes or as close to incision as possible),,"""53bf4c421b""",Yes,Yes
+,,,"""3610e82879""",No,No
+,,,"""983818e7e6""",N/A,N/A
+"""GCH-NCTT-10891""","Hair removal was avoided (if hair removal, clippers should be used)",,"""864a17a3b9""",Yes,Yes
+,,,"""57864c7c7c""",No,No
+,,,"""a16cea8f57""",N/A,N/A
+"""GCH-NCTT-10889""",Deep Venous Thrombosis (DVT) prophylaxis,,"""143ae8d832""",Yes,Yes
+,,,"""89fc67f7c3""",No,No
+,,,"""1b05a4870f""",N/A,N/A
+"""GCH-NCTT-10888""",Peptic ulcer disease (PUD) prophylaxis,,"""6a763a2b8d""",Yes,Yes
+,,,"""edabf7c598""",No,No
+,,,"""e52a475e6b""",N/A,N/A
+"""GCH-NCTT-10887""",Daily oral care done (6hourly or PRN),,"""050fe0d5c8""",Yes,Yes
+,,,"""3fcbeebc6c""",No,No
+,,,"""6dc76b9678""",N/A,N/A
+"""GCH-NCTT-10885""",Daily sedative interruption and daily assessment for readiness to extubate,,"""d3897e36ec""",Yes,Yes
+,,,"""c3a81e1bb0""",No,No
+,,,"""81d09bc7a3""",N/A,N/A
+"""GCH-NCTT-10884""",Head of bed elevated to 30 to 45 degrees,,"""9647f23f34""",Yes,Yes
+,,,"""03a72142d2""",No,No
+,,,"""4545388af2""",N/A,N/A
+"""GCH-NCTT-10883""",Date of ET tube insertion,,"""ec174dcec8""",Date,Date
+"""GCH-NCTT-10882""",Hand hygiene performed before ventilator care,,"""45cf408be6""",Yes,Yes
+,,,"""826c607965""",No,No
+,,,"""1842248b69""",N/A,N/A
+"""GCH-NCTT-10880""",Urinary bag maintained below the level of the bladder and not touching the floor,,"""95671ec6c5""",Yes,Yes
+,,,"""eb709205ff""",No,No
+,,,"""6c1ea9c7cd""",N/A,N/A
+"""GCH-NCTT-10878""",Routine emptying of the urinary bladder,,"""16a3be4f8b""",Yes,Yes
+,,,"""99ffac59e2""",No,No
+,,,"""b558b4be2b""",N/A,N/A
+"""GCH-NCTT-10877""",Daily meatal hygiene has been performed on the patient,,"""6b882ad2bb""",Yes,Yes
+,,,"""f2d547052a""",No,No
+,,,"""177361d378""",N/A,N/A
+"""GCH-NCTT-10875""",Urinary catheter is continuously connected,,"""7134db6883""",Yes,Yes
+,,,"""15a6991bf1""",No,No
+,,,"""97485a1167""",N/A,N/A
+"""GCH-NCTT-10874""",Patient assessed for continual need for the urinary catheter,,"""8caa9ba715""",Yes,Yes
+,,,"""2c28b78b48""",No,No
+,,,"""34b347a11d""",N/A,N/A
+"""GCH-NCTT-10873""",Hand hygiene performed before and after handling the urinary catheter,,"""f3b668c15e""",Yes,Yes
+,,,"""e80ee64bb8""",No,No
+,,,"""439617848a""",N/A,N/A
+"""GCH-NCTT-10871""",Checked by (indicate name of nurse or doctor),,"""987cb0f3f9""",Checked By,Checked By
+"""GCH-NCTT-10869""",Standardized insertion packs/ equipment used,,"""d3dd34cc1a""",Yes,Yes
+,,,"""4fd33ee12f""",No,No
+,,,"""f05d4448ad""",N/A,N/A
+"""GCH-NCTT-10868""",Choice of site: correct site considered,,"""afc659fb5b""",Yes,Yes
+,,,"""8e80c47c55""",No,No
+,,,"""9fa72449e8""",N/A,N/A
+"""GCH-NCTT-10867""",Skin cleaning with alcohol-based chlorhexidine done,,"""2719fa66b0""",Yes,Yes
+,,,"""04e1bd55d1""",No,No
+,,,"""46a9987b64""",N/A,N/A
+"""GCH-NCTT-10866""","Maximal sterile barrier precautions (PPE use: surgical mask, sterile gloves, cap, sterile gown, and large sterile drape)",,"""617de76c67""",Yes,Yes
+,,,"""75d4575553""",No,No
+,,,"""4b36fd8a06""",N/A,N/A
+"""GCH-NCTT-10865""",Hand hygiene performed before the procedure starts,,"""3836949b12""",Yes,Yes
+,,,"""8092b9fa11""",No,No
+,,,"""63efc13e77""",N/A,N/A
+"""GCH-NCTT-10287""",Procedure site has been marked with a site marker😊,,"""d62d90f06c""",Yes,Yes
+,,,"""ca3d6fb6e5""",No,No
+,,,"""1823ecf986""",N/A,N/A
+"""GCH-NCTT-10286""",Informed consent has been completed,,"""bbd17fee76""",No,No
+,,,"""5211f06f46""",Yes,Yes
+,,,"""ba75feddc1""",N/A,N/A
+"""GCH-NCTT-10285""","Verify the correct patient, procedure and site",,"""ce6691c48c""",Yes,Yes
+,,,"""2143e27dec""",No,No

@@ -1,0 +1,125 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2021-12-08 13:43:19.333385",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "patient_encounter_chief_complaint",
+  "patient_encounter_history_of_present_illness",
+  "patient_encounter_systematic_enquiry",
+  "patient_encounter_past_medical_history",
+  "patient_encounter_milestones",
+  "patient_encounter_other_immunization",
+  "patient_encounter_nutrition_history",
+  "patient_encounter_family_history",
+  "patient_encounter_socio_economic_history",
+  "patient_encounter_chronic_care_med_history",
+  "patient_encounter_other_relevant_history",
+  "review_identifier"
+ ],
+ "fields": [
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "patient_encounter_chief_complaint",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "label": "Chief Complaint",
+   "mandatory_depends_on": "eval:frappe.user.has_role('GCH-Doctor')"
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "patient_encounter_history_of_present_illness",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "label": "History of present illness",
+   "mandatory_depends_on": "eval:frappe.user.has_role('GCH-Doctor')"
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "patient_encounter_systematic_enquiry",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "label": "Systemic Enquiry",
+   "mandatory_depends_on": "eval:frappe.user.has_role('GCH-Doctor')"
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "patient_encounter_past_medical_history",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "label": "Past medical history",
+   "mandatory_depends_on": "eval:frappe.user.has_role('GCH-Doctor')"
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "patient_encounter_milestones",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "label": "Milestones"
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "patient_encounter_family_history",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "label": "Family History",
+   "mandatory_depends_on": "eval:frappe.user.has_role('GCH-Doctor')"
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "patient_encounter_nutrition_history",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "label": "Nutrition History",
+   "mandatory_depends_on": "eval:frappe.user.has_role('GCH-Doctor')"
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "patient_encounter_socio_economic_history",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "label": "Socio economic history",
+   "mandatory_depends_on": "eval:frappe.user.has_role('GCH-Doctor')"
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "patient_encounter_other_relevant_history",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "label": "Other relevant history"
+  },
+  {
+   "fieldname": "patient_encounter_chronic_care_med_history",
+   "fieldtype": "Small Text",
+   "label": "Chronic Care Medication History",
+   "mandatory_depends_on": "eval:frappe.user.has_role('GCH-Doctor')"
+  },
+  {
+   "fieldname": "review_identifier",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Review Identifier"
+  },
+  {
+   "fieldname": "patient_encounter_other_immunization",
+   "fieldtype": "Small Text",
+   "label": "Immunization",
+   "mandatory_depends_on": "eval:frappe.user.has_role('GCH-Doctor')"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-12-04 08:40:32.319226",
+ "modified_by": "Administrator",
+ "module": "Gch Custom",
+ "name": "Patient Encounter History Details",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

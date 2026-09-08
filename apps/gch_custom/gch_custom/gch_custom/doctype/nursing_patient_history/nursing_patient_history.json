@@ -1,0 +1,731 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-12-14 23:38:52.649833",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "encounter_details_section",
+  "inpatient_record",
+  "patient",
+  "patient_name",
+  "uhid",
+  "column_break_8",
+  "gender",
+  "wardroombed",
+  "encounter_date",
+  "consulting_doctor",
+  "triage_section",
+  "weight",
+  "height",
+  "temperature",
+  "bmi_column",
+  "bmi",
+  "bsa",
+  "section_break_3",
+  "kranium_form",
+  "section_break_2",
+  "fever",
+  "fever_duration",
+  "fever_notes",
+  "cough",
+  "cough_duration",
+  "cough_notes",
+  "chest_pain",
+  "chest_pain_duration",
+  "chest_pain_notes",
+  "breathing_difficulty",
+  "breathing_difficulty_duration",
+  "breathing_difficulty_notes",
+  "snoring",
+  "snoring_duration",
+  "snoring_notes",
+  "sweating",
+  "sweating_duration",
+  "sweating_notes",
+  "leg_swelling",
+  "leg_swelling_duration",
+  "leg_swelling_notes",
+  "dysphagia",
+  "dysphagia_duration",
+  "dysphagia_notes",
+  "abdominal_pain",
+  "abdominal_pain_duration",
+  "abdominal_pain_notes",
+  "anorexia",
+  "anorexia_duration",
+  "anorexia_notes",
+  "vomiting",
+  "vomiting_duration",
+  "vomiting_notes",
+  "diarrhoea",
+  "diarrhoea_duration",
+  "diarrhoea_notes",
+  "constipation",
+  "constipation_duration",
+  "constipation_notes",
+  "urinary_frequency",
+  "urinary_frequency_duration",
+  "urinary_frequency_notes",
+  "dysuria",
+  "dysuria_duration",
+  "dysuria_notes",
+  "discoloured_urine",
+  "discoloured_urine_duration",
+  "discoloured_urine_notes",
+  "oliguria",
+  "oliguria_duration",
+  "oliguria_notes",
+  "headache",
+  "headache_duration",
+  "headache_notes",
+  "irritability",
+  "irritability_duration",
+  "irritability_notes",
+  "altered_consciousness",
+  "altered_consciousness_duration",
+  "altered_consciousness_notes",
+  "convulsions",
+  "convulsions_duration",
+  "convulsions_notes",
+  "eye_pain",
+  "eye_pain_duration",
+  "eye_pain_notes",
+  "eye_discharge",
+  "eye_discharge_duration",
+  "eye_discharge_notes",
+  "ear_pain",
+  "ear_pain_duration",
+  "ear_pain_notes",
+  "ear_discharge",
+  "ear_discharge_duration",
+  "ear_discharge_notes",
+  "skin_rash",
+  "skin_rash_duration",
+  "skin_rash_notes",
+  "allergies",
+  "allergies_duration",
+  "allergies_notes",
+  "injuries",
+  "injuries_duration",
+  "injuries_notes",
+  "nutrition_history",
+  "family_history",
+  "socioeconomic_history",
+  "drug_history",
+  "other_relevant_history",
+  "birth_history",
+  "immunization",
+  "growth_and_development",
+  "history_of_present_illness",
+  "test",
+  "patient_details_section"
+ ],
+ "fields": [
+  {
+   "fieldname": "encounter_details_section",
+   "fieldtype": "Section Break",
+   "label": "Encounter Details"
+  },
+  {
+   "fieldname": "column_break_8",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "patient.sex",
+   "fieldname": "gender",
+   "fieldtype": "Data",
+   "label": "Gender"
+  },
+  {
+   "fieldname": "wardroombed",
+   "fieldtype": "Data",
+   "label": "Ward/Room/Bed"
+  },
+  {
+   "default": "Today",
+   "fieldname": "encounter_date",
+   "fieldtype": "Date",
+   "label": "Encounter Date"
+  },
+  {
+   "fieldname": "consulting_doctor",
+   "fieldtype": "Data",
+   "label": "Consulting Doctor"
+  },
+  {
+   "fieldname": "triage_section",
+   "fieldtype": "Section Break",
+   "label": "TRIAGE"
+  },
+  {
+   "fieldname": "weight",
+   "fieldtype": "Data",
+   "label": "Weight"
+  },
+  {
+   "fieldname": "height",
+   "fieldtype": "Data",
+   "label": "Height"
+  },
+  {
+   "fieldname": "temperature",
+   "fieldtype": "Data",
+   "label": "Temperature"
+  },
+  {
+   "fieldname": "bmi_column",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "bmi",
+   "fieldtype": "Data",
+   "label": "BMI"
+  },
+  {
+   "fieldname": "bsa",
+   "fieldtype": "Data",
+   "label": "BSA"
+  },
+  {
+   "fieldname": "kranium_form",
+   "fieldtype": "HTML",
+   "label": "kranium_form"
+  },
+  {
+   "fieldname": "section_break_2",
+   "fieldtype": "Section Break",
+   "hidden": 1
+  },
+  {
+   "fieldname": "fever",
+   "fieldtype": "Data",
+   "label": "fever"
+  },
+  {
+   "fieldname": "fever_duration",
+   "fieldtype": "Data",
+   "label": "fever_duration"
+  },
+  {
+   "fieldname": "fever_notes",
+   "fieldtype": "Data",
+   "label": "fever_notes"
+  },
+  {
+   "fieldname": "cough",
+   "fieldtype": "Data",
+   "label": "cough"
+  },
+  {
+   "fieldname": "cough_duration",
+   "fieldtype": "Data",
+   "label": "cough_duration"
+  },
+  {
+   "fieldname": "cough_notes",
+   "fieldtype": "Data",
+   "label": "cough_notes"
+  },
+  {
+   "fieldname": "chest_pain",
+   "fieldtype": "Data",
+   "label": "chest_pain"
+  },
+  {
+   "fieldname": "chest_pain_duration",
+   "fieldtype": "Data",
+   "label": "chest_pain_duration"
+  },
+  {
+   "fieldname": "chest_pain_notes",
+   "fieldtype": "Data",
+   "label": "chest_pain_notes"
+  },
+  {
+   "fieldname": "breathing_difficulty",
+   "fieldtype": "Data",
+   "label": "breathing_difficulty"
+  },
+  {
+   "fieldname": "breathing_difficulty_duration",
+   "fieldtype": "Data",
+   "label": "breathing_difficulty_duration"
+  },
+  {
+   "fieldname": "breathing_difficulty_notes",
+   "fieldtype": "Data",
+   "label": "breathing_difficulty_notes"
+  },
+  {
+   "fieldname": "snoring",
+   "fieldtype": "Data",
+   "label": "snoring"
+  },
+  {
+   "fieldname": "snoring_duration",
+   "fieldtype": "Data",
+   "label": "snoring_duration"
+  },
+  {
+   "fieldname": "snoring_notes",
+   "fieldtype": "Data",
+   "label": "snoring_notes"
+  },
+  {
+   "fieldname": "sweating",
+   "fieldtype": "Data",
+   "label": "sweating"
+  },
+  {
+   "fieldname": "sweating_duration",
+   "fieldtype": "Data",
+   "label": "sweating_duration"
+  },
+  {
+   "fieldname": "sweating_notes",
+   "fieldtype": "Data",
+   "label": "sweating_notes"
+  },
+  {
+   "fieldname": "leg_swelling",
+   "fieldtype": "Data",
+   "label": "leg_swelling"
+  },
+  {
+   "fieldname": "leg_swelling_duration",
+   "fieldtype": "Data",
+   "label": "leg_swelling_duration"
+  },
+  {
+   "fieldname": "leg_swelling_notes",
+   "fieldtype": "Data",
+   "label": "leg_swelling_notes"
+  },
+  {
+   "fieldname": "dysphagia",
+   "fieldtype": "Data",
+   "label": "dysphagia"
+  },
+  {
+   "fieldname": "dysphagia_duration",
+   "fieldtype": "Data",
+   "label": "dysphagia_duration"
+  },
+  {
+   "fieldname": "dysphagia_notes",
+   "fieldtype": "Data",
+   "label": "dysphagia_notes"
+  },
+  {
+   "fieldname": "abdominal_pain",
+   "fieldtype": "Data",
+   "label": "abdominal_pain"
+  },
+  {
+   "fieldname": "abdominal_pain_duration",
+   "fieldtype": "Data",
+   "label": "abdominal_pain_duration"
+  },
+  {
+   "fieldname": "abdominal_pain_notes",
+   "fieldtype": "Data",
+   "label": "abdominal_pain_notes"
+  },
+  {
+   "fieldname": "anorexia",
+   "fieldtype": "Data",
+   "label": "anorexia"
+  },
+  {
+   "fieldname": "anorexia_duration",
+   "fieldtype": "Data",
+   "label": "anorexia_duration"
+  },
+  {
+   "fieldname": "anorexia_notes",
+   "fieldtype": "Data",
+   "label": "anorexia_notes"
+  },
+  {
+   "fieldname": "vomiting",
+   "fieldtype": "Data",
+   "label": "vomiting"
+  },
+  {
+   "fieldname": "vomiting_duration",
+   "fieldtype": "Data",
+   "label": "vomiting_duration"
+  },
+  {
+   "fieldname": "vomiting_notes",
+   "fieldtype": "Data",
+   "label": "vomiting_notes"
+  },
+  {
+   "fieldname": "diarrhoea",
+   "fieldtype": "Data",
+   "label": "diarrhoea"
+  },
+  {
+   "fieldname": "diarrhoea_duration",
+   "fieldtype": "Data",
+   "label": "diarrhoea_duration"
+  },
+  {
+   "fieldname": "diarrhoea_notes",
+   "fieldtype": "Data",
+   "label": "diarrhoea_notes"
+  },
+  {
+   "fieldname": "constipation",
+   "fieldtype": "Data",
+   "label": "constipation"
+  },
+  {
+   "fieldname": "constipation_duration",
+   "fieldtype": "Data",
+   "label": "constipation_duration"
+  },
+  {
+   "fieldname": "constipation_notes",
+   "fieldtype": "Data",
+   "label": "constipation_notes"
+  },
+  {
+   "fieldname": "urinary_frequency",
+   "fieldtype": "Data",
+   "label": "urinary_frequency"
+  },
+  {
+   "fieldname": "urinary_frequency_duration",
+   "fieldtype": "Data",
+   "label": "urinary_frequency_duration"
+  },
+  {
+   "fieldname": "urinary_frequency_notes",
+   "fieldtype": "Data",
+   "label": "urinary_frequency_notes"
+  },
+  {
+   "fieldname": "dysuria",
+   "fieldtype": "Data",
+   "label": "dysuria"
+  },
+  {
+   "fieldname": "dysuria_duration",
+   "fieldtype": "Data",
+   "label": "dysuria_duration"
+  },
+  {
+   "fieldname": "dysuria_notes",
+   "fieldtype": "Data",
+   "label": "dysuria_notes"
+  },
+  {
+   "fieldname": "discoloured_urine",
+   "fieldtype": "Data",
+   "label": "discoloured_urine"
+  },
+  {
+   "fieldname": "discoloured_urine_duration",
+   "fieldtype": "Data",
+   "label": "discoloured_urine_duration"
+  },
+  {
+   "fieldname": "discoloured_urine_notes",
+   "fieldtype": "Data",
+   "label": "discoloured_urine_notes"
+  },
+  {
+   "fieldname": "oliguria",
+   "fieldtype": "Data",
+   "label": "oliguria"
+  },
+  {
+   "fieldname": "oliguria_duration",
+   "fieldtype": "Data",
+   "label": "oliguria_duration"
+  },
+  {
+   "fieldname": "oliguria_notes",
+   "fieldtype": "Data",
+   "label": "oliguria_notes"
+  },
+  {
+   "fieldname": "headache",
+   "fieldtype": "Data",
+   "label": "headache"
+  },
+  {
+   "fieldname": "headache_duration",
+   "fieldtype": "Data",
+   "label": "headache_duration"
+  },
+  {
+   "fieldname": "headache_notes",
+   "fieldtype": "Data",
+   "label": "headache_notes"
+  },
+  {
+   "fieldname": "irritability",
+   "fieldtype": "Data",
+   "label": "irritability"
+  },
+  {
+   "fieldname": "irritability_duration",
+   "fieldtype": "Data",
+   "label": "irritability_duration"
+  },
+  {
+   "fieldname": "irritability_notes",
+   "fieldtype": "Data",
+   "label": "irritability_notes"
+  },
+  {
+   "fieldname": "altered_consciousness",
+   "fieldtype": "Data",
+   "label": "altered_consciousness"
+  },
+  {
+   "fieldname": "altered_consciousness_duration",
+   "fieldtype": "Data",
+   "label": "altered_consciousness_duration"
+  },
+  {
+   "fieldname": "altered_consciousness_notes",
+   "fieldtype": "Data",
+   "label": "altered_consciousness_notes"
+  },
+  {
+   "fieldname": "convulsions",
+   "fieldtype": "Data",
+   "label": "convulsions"
+  },
+  {
+   "fieldname": "convulsions_duration",
+   "fieldtype": "Data",
+   "label": "convulsions_duration"
+  },
+  {
+   "fieldname": "convulsions_notes",
+   "fieldtype": "Data",
+   "label": "convulsions_notes"
+  },
+  {
+   "fieldname": "eye_pain",
+   "fieldtype": "Data",
+   "label": "eye_pain"
+  },
+  {
+   "fieldname": "eye_pain_duration",
+   "fieldtype": "Data",
+   "label": "eye_pain_duration"
+  },
+  {
+   "fieldname": "eye_pain_notes",
+   "fieldtype": "Data",
+   "label": "eye_pain_notes"
+  },
+  {
+   "fieldname": "eye_discharge",
+   "fieldtype": "Data",
+   "label": "eye_discharge"
+  },
+  {
+   "fieldname": "eye_discharge_duration",
+   "fieldtype": "Data",
+   "label": "eye_discharge_duration"
+  },
+  {
+   "fieldname": "eye_discharge_notes",
+   "fieldtype": "Data",
+   "label": "eye_discharge_notes"
+  },
+  {
+   "fieldname": "ear_pain",
+   "fieldtype": "Data",
+   "label": "ear_pain"
+  },
+  {
+   "fieldname": "ear_pain_duration",
+   "fieldtype": "Data",
+   "label": "ear_pain_duration"
+  },
+  {
+   "fieldname": "ear_pain_notes",
+   "fieldtype": "Data",
+   "label": "ear_pain_notes"
+  },
+  {
+   "fieldname": "ear_discharge",
+   "fieldtype": "Data",
+   "label": "ear_discharge"
+  },
+  {
+   "fieldname": "ear_discharge_duration",
+   "fieldtype": "Data",
+   "label": "ear_discharge_duration"
+  },
+  {
+   "fieldname": "ear_discharge_notes",
+   "fieldtype": "Data",
+   "label": "ear_discharge_notes"
+  },
+  {
+   "fieldname": "skin_rash",
+   "fieldtype": "Data",
+   "label": "skin_rash"
+  },
+  {
+   "fieldname": "skin_rash_duration",
+   "fieldtype": "Data",
+   "label": "skin_rash_duration"
+  },
+  {
+   "fieldname": "skin_rash_notes",
+   "fieldtype": "Data",
+   "label": "skin_rash_notes"
+  },
+  {
+   "fieldname": "allergies",
+   "fieldtype": "Data",
+   "label": "allergies"
+  },
+  {
+   "fieldname": "allergies_duration",
+   "fieldtype": "Data",
+   "label": "allergies_duration"
+  },
+  {
+   "fieldname": "allergies_notes",
+   "fieldtype": "Data",
+   "label": "allergies_notes"
+  },
+  {
+   "fieldname": "injuries",
+   "fieldtype": "Data",
+   "label": "injuries"
+  },
+  {
+   "fieldname": "injuries_duration",
+   "fieldtype": "Data",
+   "label": "injuries_duration"
+  },
+  {
+   "fieldname": "injuries_notes",
+   "fieldtype": "Data",
+   "label": "injuries_notes"
+  },
+  {
+   "fieldname": "nutrition_history",
+   "fieldtype": "Data",
+   "label": "nutrition_history"
+  },
+  {
+   "fieldname": "family_history",
+   "fieldtype": "Data",
+   "label": "family_history"
+  },
+  {
+   "fieldname": "socioeconomic_history",
+   "fieldtype": "Data",
+   "label": "socioeconomic_history"
+  },
+  {
+   "fieldname": "drug_history",
+   "fieldtype": "Data",
+   "label": "drug_history"
+  },
+  {
+   "fieldname": "other_relevant_history",
+   "fieldtype": "Data",
+   "label": "other_relevant_history"
+  },
+  {
+   "fieldname": "birth_history",
+   "fieldtype": "Data",
+   "label": "birth_history"
+  },
+  {
+   "fieldname": "immunization",
+   "fieldtype": "Data",
+   "label": "immunization"
+  },
+  {
+   "fieldname": "growth_and_development",
+   "fieldtype": "Data",
+   "label": "growth_and_development"
+  },
+  {
+   "fieldname": "history_of_present_illness",
+   "fieldtype": "Data",
+   "label": "history_of_present_illness"
+  },
+  {
+   "fieldname": "test",
+   "fieldtype": "Button",
+   "label": "test"
+  },
+  {
+   "fieldname": "patient_details_section",
+   "fieldtype": "Section Break",
+   "label": "Encounter Details"
+  },
+  {
+   "fieldname": "section_break_3",
+   "fieldtype": "Section Break",
+   "label": "HISTORY"
+  },
+  {
+   "fieldname": "inpatient_record",
+   "fieldtype": "Link",
+   "label": "Inpatient Record",
+   "options": "Inpatient Record"
+  },
+  {
+   "fetch_from": "patient_encounter.patient",
+   "fieldname": "patient",
+   "fieldtype": "Link",
+   "label": "Patient",
+   "options": "Patient"
+  },
+  {
+   "fetch_from": "patient.patient_name",
+   "fieldname": "patient_name",
+   "fieldtype": "Data",
+   "label": "Patient Name"
+  },
+  {
+   "fetch_from": "patient.uhid_code",
+   "fieldname": "uhid",
+   "fieldtype": "Data",
+   "label": "UHID"
+  }
+ ],
+ "hide_toolbar": 1,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-12-15 10:55:24.849631",
+ "modified_by": "Administrator",
+ "module": "Gch Custom",
+ "name": "Nursing Patient History",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

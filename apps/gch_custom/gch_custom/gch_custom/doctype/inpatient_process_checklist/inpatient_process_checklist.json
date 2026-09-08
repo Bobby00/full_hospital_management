@@ -1,0 +1,442 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-01-22 09:49:02.871874",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "patient",
+  "amended_from",
+  "general_section",
+  "admitting_doctor",
+  "guardian",
+  "admitting_clerk",
+  "ward_consultant",
+  "admitting_nurse",
+  "pharmacy_staff",
+  "discharge_clerk",
+  "primary_nurse",
+  "overview_section",
+  "overview_html",
+  "proposed_care_section",
+  "pc_details",
+  "column_break_14",
+  "pc_confirmer",
+  "pc_confirm",
+  "pc_unconfirm",
+  "pc_parent_confirm_request",
+  "column_break_17",
+  "pc_confirm_date",
+  "pc_parent_confirm_name",
+  "pc_parent_confirm",
+  "pc_parent_confirm_date",
+  "admission_section",
+  "ad_details",
+  "column_break_18",
+  "ad_confirmer",
+  "ad_confirm",
+  "ad_unconfirm",
+  "ad_parent_confirm_request",
+  "column_break_19",
+  "ad_confirm_date",
+  "ad_parent_confirm_name",
+  "ad_parent_confirm",
+  "ad_parent_confirm_date",
+  "ward_section",
+  "wo_details",
+  "column_break_20",
+  "wo_confirmer",
+  "wo_confirm",
+  "wo_unconfirm",
+  "wo_parent_confirm_request",
+  "column_break_21",
+  "wo_confirm_date",
+  "wo_parent_confirm_name",
+  "wo_parent_confirm",
+  "wo_parent_confirm_date",
+  "stay_section",
+  "sd_details",
+  "column_break_22",
+  "sd_confirmer",
+  "sd_confirm",
+  "sd_unconfirm",
+  "sd_parent_confirm_request",
+  "column_break_23",
+  "sd_confirm_date",
+  "sd_parent_confirm_name",
+  "sd_parent_confirm",
+  "sd_parent_confirm_date"
+ ],
+ "fields": [
+  {
+   "fieldname": "patient",
+   "fieldtype": "Link",
+   "label": "Patient",
+   "options": "Patient"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Inpatient Process Checklist",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "admitting_doctor",
+   "fieldtype": "Link",
+   "label": "Admitting Doctor",
+   "options": "User"
+  },
+  {
+   "fieldname": "guardian",
+   "fieldtype": "Link",
+   "label": "Guardian",
+   "options": "Parent"
+  },
+  {
+   "fieldname": "admitting_clerk",
+   "fieldtype": "Link",
+   "label": "Admitting Clerk",
+   "options": "User"
+  },
+  {
+   "fieldname": "ward_consultant",
+   "fieldtype": "Link",
+   "label": "Ward Consultant",
+   "options": "User"
+  },
+  {
+   "fieldname": "admitting_nurse",
+   "fieldtype": "Link",
+   "label": "Admitting Nurse",
+   "options": "User"
+  },
+  {
+   "fieldname": "pharmacy_staff",
+   "fieldtype": "Link",
+   "label": "Pharmacy Staff",
+   "options": "User"
+  },
+  {
+   "fieldname": "discharge_clerk",
+   "fieldtype": "Link",
+   "label": "Discharge Clerk",
+   "options": "User"
+  },
+  {
+   "fieldname": "primary_nurse",
+   "fieldtype": "Link",
+   "label": "Primary Nurse",
+   "options": "User"
+  },
+  {
+   "fieldname": "general_section",
+   "fieldtype": "Section Break",
+   "hidden": 1,
+   "label": "General"
+  },
+  {
+   "fieldname": "pc_confirm",
+   "fieldtype": "Button",
+   "label": "Confirm"
+  },
+  {
+   "fieldname": "ad_confirm",
+   "fieldtype": "Button",
+   "label": "Confirm"
+  },
+  {
+   "fieldname": "pc_confirmer",
+   "fieldtype": "Link",
+   "label": "pc_confirmer",
+   "options": "User",
+   "read_only": 1
+  },
+  {
+   "fieldname": "ad_confirmer",
+   "fieldtype": "Link",
+   "label": "ad_confirmer",
+   "options": "User",
+   "read_only": 1
+  },
+  {
+   "fieldname": "pc_confirm_date",
+   "fieldtype": "Datetime",
+   "label": "pc_confirm_date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "ad_confirm_date",
+   "fieldtype": "Datetime",
+   "label": "ad_confirm_date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "pc_unconfirm",
+   "fieldtype": "Button",
+   "label": "Unconfirm"
+  },
+  {
+   "fieldname": "ad_unconfirm",
+   "fieldtype": "Button",
+   "label": "Unconfirm"
+  },
+  {
+   "fieldname": "pc_details",
+   "fieldtype": "HTML",
+   "label": "pc_details",
+   "options": "<div>\n    <h5>Proposed Care</h5>\n  \n    <p>Definitive / Supportive Care</p>\n  \n    <h5>Expected Outcomes</h5>\n  \n    <p>Cure / Control / Palliation</p>\n  \n    <p>likelihood of success</p>\n  \n    <p>Duration of stay</p>\n  </div>"
+  },
+  {
+   "fieldname": "ad_details",
+   "fieldtype": "HTML",
+   "label": "ad_details",
+   "options": "<div>\n    <h5>Admission Done</h5>\n    <h5>Parent Informed of expected cost</h5>\n  \n  \n  \n    <h5>Admission Documents Issued / Completed</h5>\n  \n    <p>NHIF Requirements</p>\n    <p>Insurance Form</p>\n    <p>Admission Confirmation</p>\n    <p>PFR Brochure</p>\n    <p>Notice of Privacy</p>\n <h5>Payer / Insurance Informed</h5>\n  </div>"
+  },
+  {
+   "fieldname": "column_break_14",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "pc_parent_confirm",
+   "fieldtype": "Signature",
+   "label": "pc_parent_confirm",
+   "read_only": 1
+  },
+  {
+   "fieldname": "ad_parent_confirm",
+   "fieldtype": "Signature",
+   "label": "ad_parent_confirm",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_17",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_18",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_19",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "pc_parent_confirm_request",
+   "fieldtype": "Button",
+   "label": "pc_parent_confirm_request"
+  },
+  {
+   "fieldname": "ad_parent_confirm_request",
+   "fieldtype": "Button",
+   "label": "ad_parent_confirm_request"
+  },
+  {
+   "fieldname": "overview_section",
+   "fieldtype": "Section Break",
+   "label": "Overview"
+  },
+  {
+   "fieldname": "overview_html",
+   "fieldtype": "HTML",
+   "label": "overview_html",
+   "options": "<div>\n    <div class=\"\">\n        <h4>Proposed Care (<span>Incomplete</span>)</h4>\n       \n    </div>\n    <div class=\"\">\n        <h4>Admission (<span>Incomplete</span>)</h4>\n    </div>\n    <div class=\"\">\n        <h4>Ward Orientation (<span>Incomplete</span>)</h4>\n        </div>\n   <div class=\"\">\n        <h4>Stay Discussion (<span>Incomplete</span>)</h4>\n        </div>\n</div>"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "proposed_care_section",
+   "fieldtype": "Section Break",
+   "label": "Proposed Care"
+  },
+  {
+   "fieldname": "pc_parent_confirm_name",
+   "fieldtype": "Data",
+   "label": "pc_parent_confirm_name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "ad_parent_confirm_name",
+   "fieldtype": "Data",
+   "label": "ad_parent_confirm_name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "pc_parent_confirm_date",
+   "fieldtype": "Datetime",
+   "label": "pc_parent_confirm_date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "ad_parent_confirm_date",
+   "fieldtype": "Datetime",
+   "label": "ad_parent_confirm_date",
+   "read_only": 1
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "admission_section",
+   "fieldtype": "Section Break",
+   "label": "Admission"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "ward_section",
+   "fieldtype": "Section Break",
+   "label": "Ward Oritentation"
+  },
+  {
+   "fieldname": "wo_details",
+   "fieldtype": "HTML",
+   "label": "wo_details",
+   "options": "  <div>\n    <h5>Initial Medication Administered</h5>\n    <h5>Ward / Unit Orientation</h5>\n    <p>Ward / Unit environment</p>\n    <p>Equipment</p>\n    <p>Services</p>\n   \n  </div>"
+  },
+  {
+   "fieldname": "column_break_20",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "wo_confirmer",
+   "fieldtype": "Link",
+   "label": "wo_confirmer",
+   "options": "User",
+   "read_only": 1
+  },
+  {
+   "fieldname": "wo_confirm",
+   "fieldtype": "Button",
+   "label": "Confirm"
+  },
+  {
+   "fieldname": "wo_unconfirm",
+   "fieldtype": "Button",
+   "label": "Unconfirm"
+  },
+  {
+   "fieldname": "wo_parent_confirm_request",
+   "fieldtype": "Button",
+   "label": "Parent Confirm Request"
+  },
+  {
+   "fieldname": "column_break_21",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "wo_confirm_date",
+   "fieldtype": "Date",
+   "label": "wo_confirm_date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "wo_parent_confirm_name",
+   "fieldtype": "Data",
+   "label": "wo_parent_confirm_name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "wo_parent_confirm",
+   "fieldtype": "Signature",
+   "label": "wo_parent_confirm",
+   "read_only": 1
+  },
+  {
+   "fieldname": "wo_parent_confirm_date",
+   "fieldtype": "Date",
+   "label": "wo_parent_confirm_date",
+   "read_only": 1
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "stay_section",
+   "fieldtype": "Section Break",
+   "label": "Stay Discussion"
+  },
+  {
+   "fieldname": "sd_details",
+   "fieldtype": "HTML",
+   "label": "sd_details",
+   "options": "  <div>\n    <h5>Proposed care and expected outcomes and length of stay discussed with Parent / Guardian</h5> \n  </div>"
+  },
+  {
+   "fieldname": "column_break_22",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "sd_confirmer",
+   "fieldtype": "Link",
+   "label": "sd_confirmer",
+   "options": "User",
+   "read_only": 1
+  },
+  {
+   "fieldname": "sd_confirm",
+   "fieldtype": "Button",
+   "label": "Confirm"
+  },
+  {
+   "fieldname": "sd_unconfirm",
+   "fieldtype": "Button",
+   "label": "Unconfirm"
+  },
+  {
+   "fieldname": "sd_parent_confirm_request",
+   "fieldtype": "Button",
+   "label": "Parent Confirm Request"
+  },
+  {
+   "fieldname": "column_break_23",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "sd_confirm_date",
+   "fieldtype": "Date",
+   "label": "sd_confirm_date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "sd_parent_confirm_name",
+   "fieldtype": "Data",
+   "label": "sd_parent_confirm_name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "sd_parent_confirm",
+   "fieldtype": "Signature",
+   "label": "sd_parent_confirm",
+   "read_only": 1
+  },
+  {
+   "fieldname": "sd_parent_confirm_date",
+   "fieldtype": "Date",
+   "label": "sd_parent_confirm_date",
+   "read_only": 1
+  }
+ ],
+ "hide_toolbar": 1,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2024-01-22 13:36:43.907687",
+ "modified_by": "Administrator",
+ "module": "Gch Custom",
+ "name": "Inpatient Process Checklist",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

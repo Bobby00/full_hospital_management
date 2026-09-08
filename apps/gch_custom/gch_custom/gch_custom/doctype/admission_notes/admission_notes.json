@@ -1,0 +1,47 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-06-06 09:04:30.664730",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "note",
+  "written_by",
+  "written_at"
+ ],
+ "fields": [
+  {
+   "fieldname": "note",
+   "fieldtype": "Small Text",
+   "label": "Note"
+  },
+  {
+   "fieldname": "written_by",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "written_by",
+   "options": "Healthcare Practitioner",
+   "read_only": 1
+  },
+  {
+   "default": "Now",
+   "fieldname": "written_at",
+   "fieldtype": "Datetime",
+   "hidden": 1,
+   "label": "Written at",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2023-06-06 09:04:40.068106",
+ "modified_by": "Administrator",
+ "module": "Gch Custom",
+ "name": "Admission Notes",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

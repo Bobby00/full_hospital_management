@@ -1,0 +1,150 @@
+{
+ "actions": [],
+ "autoname": "format:GCH-NC-{###}",
+ "creation": "2022-01-06 10:17:16.690076",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "encounter_details_section",
+  "patient_encounter",
+  "is_inpatient",
+  "inpatient_record",
+  "patient",
+  "patient_name",
+  "procedure",
+  "checklist_details_section",
+  "checklist_template",
+  "checklist_name",
+  "checklist_details",
+  "checked_by",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "checklist_template",
+   "fieldtype": "Link",
+   "label": "Checklist Template",
+   "options": "Nursing Checklist Template",
+   "reqd": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Nursing Checklist",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fetch_from": "checklist_template.template_name",
+   "fieldname": "checklist_name",
+   "fieldtype": "Data",
+   "label": "Checklist Name",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval:doc.is_inpatient == 0 ",
+   "fieldname": "patient_encounter",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Patient Encounter",
+   "mandatory_depends_on": "eval:doc.is_inpatient == 0 ",
+   "options": "Patient Encounter"
+  },
+  {
+   "fetch_from": "patient_encounter.patient",
+   "fieldname": "patient",
+   "fieldtype": "Link",
+   "label": "Patient",
+   "options": "Patient"
+  },
+  {
+   "fetch_from": "patient.patient_name",
+   "fieldname": "patient_name",
+   "fieldtype": "Data",
+   "label": "Patient Name"
+  },
+  {
+   "fieldname": "checklist_details_section",
+   "fieldtype": "Section Break",
+   "label": "Checklist Details"
+  },
+  {
+   "fieldname": "checklist_details",
+   "fieldtype": "Table",
+   "label": "Checklist Details",
+   "options": "Nursing Checklist Details"
+  },
+  {
+   "fieldname": "encounter_details_section",
+   "fieldtype": "Section Break",
+   "label": "Encounter Details"
+  },
+  {
+   "fieldname": "procedure",
+   "fieldtype": "Link",
+   "label": "Procedure",
+   "options": "Clinical Procedure"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_inpatient",
+   "fieldtype": "Check",
+   "label": "Is inpatient"
+  },
+  {
+   "depends_on": "eval:doc.is_inpatient == 1",
+   "fieldname": "inpatient_record",
+   "fieldtype": "Link",
+   "label": "Inpatient Record",
+   "mandatory_depends_on": "eval:doc.is_inpatient == 1",
+   "options": "Inpatient Record"
+  },
+  {
+   "default": "User",
+   "fieldname": "checked_by",
+   "fieldtype": "Link",
+   "label": "Checked by",
+   "options": "User"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2023-12-20 10:41:48.483587",
+ "modified_by": "Administrator",
+ "module": "Gch Custom",
+ "name": "Nursing Checklist",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "All",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

@@ -1,0 +1,666 @@
+{
+ "actions": [],
+ "autoname": "naming_series:",
+ "creation": "2022-01-10 11:30:56.726889",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "patient_details_section",
+  "naming_series",
+  "patient_encounter",
+  "patient",
+  "patient_name",
+  "dob",
+  "age",
+  "column_break_7",
+  "date",
+  "gender",
+  "gender_hmtl",
+  "weight",
+  "weight_html",
+  "height",
+  "height_html",
+  "bmi",
+  "bmi_html",
+  "amended_from",
+  "abdomenal_pain_section",
+  "duration",
+  "episodes",
+  "duration_of_episodes",
+  "duration_of_episodes_other",
+  "character_of_pain",
+  "character_of_pain_other",
+  "character_of_pain_reliever",
+  "character_of_pain_reliever_medication",
+  "character_of_pain_reliever_other",
+  "column_break_28",
+  "abdomenal_pain_location",
+  "abdomenal_pain_location_other",
+  "abdomenal_pain_occurrence",
+  "abdomenal_pain_occurrence_other",
+  "abdomenal_pain_aggravator",
+  "abdomenal_pain_aggravator_other",
+  "night_time_awakening",
+  "bowel_movement_section",
+  "number_of_bowel_movement",
+  "diarrhoea",
+  "usual_bowel_movement_type",
+  "change_in_bowel_movement_habit",
+  "enuresis",
+  "constipation",
+  "encopresis",
+  "column_break_44",
+  "blood_in_stool",
+  "pain_with_defection",
+  "other_gastro_symptoms",
+  "vomit",
+  "other_gastro_symptoms_other",
+  "social_history_section",
+  "stressors_at_school",
+  "stressors_at_school_other",
+  "missing_school_due_to_pain",
+  "column_break_54",
+  "stressors_at_home",
+  "stressors_at_home_other",
+  "performance_at_school",
+  "family_history_section",
+  "allergy",
+  "allergy_other",
+  "peptic_ulcer",
+  "peptic_ulcer_other",
+  "column_break_63",
+  "inflammatory_bowel_disease",
+  "inflammatory_bowel_disease_other",
+  "constipation_history",
+  "constipation_history_other",
+  "diet_history_section",
+  "adequate_fluid_intake",
+  "excessive_milk_intake",
+  "column_break_71",
+  "adequate_fiber",
+  "weaning_diet",
+  "physical_examination_section",
+  "pallor",
+  "oedema",
+  "abdominal_tenderness",
+  "bowel_sound",
+  "perianal_exam",
+  "anal_tone",
+  "blood_on_glove",
+  "column_break_82",
+  "jaundice",
+  "eczema",
+  "mass",
+  "mass_other",
+  "stool_in_rectum",
+  "positive_finding_in_other_systems",
+  "positive_finding_in_other_systems_other"
+ ],
+ "fields": [
+  {
+   "fieldname": "patient_details_section",
+   "fieldtype": "Section Break",
+   "label": "Patient Details"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "options": "HLC-GFENC-.YYYY.-"
+  },
+  {
+   "fieldname": "patient_encounter",
+   "fieldtype": "Link",
+   "label": "Patient Encounter",
+   "options": "Patient Encounter"
+  },
+  {
+   "fetch_from": "patient_encounter.patient",
+   "fieldname": "patient",
+   "fieldtype": "Link",
+   "label": "Patient",
+   "options": "Patient",
+   "read_only": 1
+  },
+  {
+   "bold": 1,
+   "fetch_from": "patient.patient_name",
+   "fieldname": "patient_name",
+   "fieldtype": "Data",
+   "label": "Patient Name",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "patient.dob",
+   "fieldname": "dob",
+   "fieldtype": "Date",
+   "hidden": 1,
+   "label": "Date of Birth"
+  },
+  {
+   "fetch_from": "patient_encounter.patient_age",
+   "fieldname": "age",
+   "fieldtype": "HTML",
+   "label": "Age",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_7",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Datetime",
+   "label": "Date"
+  },
+  {
+   "fetch_from": "patient.sex",
+   "fieldname": "gender",
+   "fieldtype": "Link",
+   "label": "Gender",
+   "options": "Gender",
+   "read_only": 1
+  },
+  {
+   "fieldname": "gender_hmtl",
+   "fieldtype": "HTML",
+   "label": "Gender"
+  },
+  {
+   "fetch_from": "patient_encounter.weight_in_kilograms",
+   "fieldname": "weight",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Weight In Kilograms"
+  },
+  {
+   "fieldname": "weight_html",
+   "fieldtype": "HTML",
+   "label": "Weight",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "patient_encounter.height_in_centimeters",
+   "fieldname": "height",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Height in Centimeters"
+  },
+  {
+   "fieldname": "height_html",
+   "fieldtype": "HTML",
+   "label": "Height",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "patient_encounter.bmi",
+   "fieldname": "bmi",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "BMI"
+  },
+  {
+   "fieldname": "bmi_html",
+   "fieldtype": "HTML",
+   "label": "BMI"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Gastroenterology  Form",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "abdomenal_pain_section",
+   "fieldtype": "Section Break",
+   "label": "Abdomenal Pain"
+  },
+  {
+   "fieldname": "duration",
+   "fieldtype": "Select",
+   "label": "Duration",
+   "options": "\nless than a month\n1 to 6 months\n6 to 12 months\n12 to 24 months\ngreater than 24 months"
+  },
+  {
+   "fieldname": "episodes",
+   "fieldtype": "Select",
+   "label": "Episodes",
+   "options": "\nonce a day\nseveral times a day\nless than once a week\n2 to 3 times per week"
+  },
+  {
+   "fieldname": "duration_of_episodes",
+   "fieldtype": "Select",
+   "label": "Duration of Episodes",
+   "options": "\nLess than a min\nOther"
+  },
+  {
+   "depends_on": "eval:(doc.duration_of_episodes==\"Other\")",
+   "fieldname": "duration_of_episodes_other",
+   "fieldtype": "Small Text",
+   "label": " Duration of Episodes Other",
+   "mandatory_depends_on": "eval:(doc.duration_of_episodes==\"Other\")"
+  },
+  {
+   "fieldname": "character_of_pain",
+   "fieldtype": "Table MultiSelect",
+   "label": "Character of Pain",
+   "options": "Character of Pain Details"
+  },
+  {
+   "fieldname": "character_of_pain_other",
+   "fieldtype": "Small Text",
+   "hidden": 1,
+   "label": "Character of Pain Other"
+  },
+  {
+   "fieldname": "character_of_pain_reliever",
+   "fieldtype": "Table MultiSelect",
+   "label": "Character of Pain Reliever",
+   "options": "Character of Pain Reliever Details"
+  },
+  {
+   "fieldname": "character_of_pain_reliever_medication",
+   "fieldtype": "Small Text",
+   "hidden": 1,
+   "label": "Character of Pain Reliever Medication"
+  },
+  {
+   "fieldname": "character_of_pain_reliever_other",
+   "fieldtype": "Small Text",
+   "hidden": 1,
+   "label": "Character of Pain Reliever Other"
+  },
+  {
+   "fieldname": "column_break_28",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "abdomenal_pain_location",
+   "fieldtype": "Table MultiSelect",
+   "label": "Abdomenal Pain Location",
+   "options": "Abdomenal Pain Location Details"
+  },
+  {
+   "fieldname": "abdomenal_pain_location_other",
+   "fieldtype": "Small Text",
+   "hidden": 1,
+   "label": "Abdomenal Pain Location Other"
+  },
+  {
+   "fieldname": "abdomenal_pain_occurrence",
+   "fieldtype": "Table MultiSelect",
+   "label": "Abdomenal Pain Occurrence",
+   "options": "Abdomenal Pain Occurrence Details"
+  },
+  {
+   "fieldname": "abdomenal_pain_occurrence_other",
+   "fieldtype": "Small Text",
+   "hidden": 1,
+   "label": "Abdomenal Pain Occurrence Other"
+  },
+  {
+   "fieldname": "abdomenal_pain_aggravator",
+   "fieldtype": "Table MultiSelect",
+   "label": "Abdomenal Pain Aggravator",
+   "options": "Abdomenal Pain Aggravator Details"
+  },
+  {
+   "fieldname": "abdomenal_pain_aggravator_other",
+   "fieldtype": "Small Text",
+   "hidden": 1,
+   "label": "Abdomenal Pain Aggravator Other"
+  },
+  {
+   "fieldname": "night_time_awakening",
+   "fieldtype": "Select",
+   "label": "Night Time Awakening",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "bowel_movement_section",
+   "fieldtype": "Section Break",
+   "label": "Bowel Movement"
+  },
+  {
+   "fieldname": "number_of_bowel_movement",
+   "fieldtype": "Select",
+   "label": "Number of Bowel Movement",
+   "options": "\n0\n1\n2\n3\n4\n5"
+  },
+  {
+   "fieldname": "diarrhoea",
+   "fieldtype": "Select",
+   "label": "Diarrhoea",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "usual_bowel_movement_type",
+   "fieldtype": "Select",
+   "label": "Usual Bowel Movement Type",
+   "options": "\nHard\nSoft"
+  },
+  {
+   "fieldname": "change_in_bowel_movement_habit",
+   "fieldtype": "Select",
+   "label": "Change in Bowel Movement Habit",
+   "options": "\nHard\nSoft"
+  },
+  {
+   "fieldname": "enuresis",
+   "fieldtype": "Select",
+   "label": "Enuresis",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "constipation",
+   "fieldtype": "Select",
+   "label": "Constipation",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "encopresis",
+   "fieldtype": "Select",
+   "label": "Encopresis",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "column_break_44",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "blood_in_stool",
+   "fieldtype": "Select",
+   "label": "Blood in Stool",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "pain_with_defection",
+   "fieldtype": "Select",
+   "label": "Pain with Defection",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "other_gastro_symptoms",
+   "fieldtype": "Table MultiSelect",
+   "label": "Other Gastro Symptoms",
+   "options": "Gastro Symptom Details"
+  },
+  {
+   "fieldname": "vomit",
+   "fieldtype": "Table MultiSelect",
+   "hidden": 1,
+   "label": "vomit",
+   "options": "Vomit Details"
+  },
+  {
+   "fieldname": "other_gastro_symptoms_other",
+   "fieldtype": "Small Text",
+   "hidden": 1,
+   "label": "Other Gastro Symptoms Other"
+  },
+  {
+   "fieldname": "social_history_section",
+   "fieldtype": "Section Break",
+   "label": "Social History"
+  },
+  {
+   "fieldname": "stressors_at_school",
+   "fieldtype": "Select",
+   "label": "Stressors at School",
+   "options": "\nYes\nNo"
+  },
+  {
+   "depends_on": "eval:(doc.stressors_at_school==\"Yes\")",
+   "fieldname": "stressors_at_school_other",
+   "fieldtype": "Small Text",
+   "label": "Stressors at School Other",
+   "mandatory_depends_on": "eval:(doc.stressors_at_school==\"Yes\")"
+  },
+  {
+   "fieldname": "missing_school_due_to_pain",
+   "fieldtype": "Select",
+   "label": "Missing School Due to Pain",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "column_break_54",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "stressors_at_home",
+   "fieldtype": "Select",
+   "label": "Stressors at Home",
+   "options": "\nYes\nNo"
+  },
+  {
+   "depends_on": "eval:(doc.stressors_at_home==\"Yes\")",
+   "fieldname": "stressors_at_home_other",
+   "fieldtype": "Small Text",
+   "label": "Stressors at Home Other",
+   "mandatory_depends_on": "eval:(doc.stressors_at_home==\"Yes\")"
+  },
+  {
+   "fieldname": "performance_at_school",
+   "fieldtype": "Select",
+   "label": "Performance at School",
+   "options": "\nNormal\nAverage"
+  },
+  {
+   "fieldname": "family_history_section",
+   "fieldtype": "Section Break",
+   "label": "Family History"
+  },
+  {
+   "fieldname": "allergy",
+   "fieldtype": "Select",
+   "label": "Allergy",
+   "options": "\nYes\nNo"
+  },
+  {
+   "depends_on": "eval:(doc.allergy==\"Yes\")",
+   "fieldname": "allergy_other",
+   "fieldtype": "Small Text",
+   "label": "Allergy Other",
+   "mandatory_depends_on": "eval:(doc.allergy==\"Yes\")"
+  },
+  {
+   "fieldname": "peptic_ulcer",
+   "fieldtype": "Select",
+   "label": "Peptic Ulcer",
+   "options": "\nYes\nNo"
+  },
+  {
+   "depends_on": "eval:(doc.peptic_ulcer==\"Yes\")",
+   "fieldname": "peptic_ulcer_other",
+   "fieldtype": "Small Text",
+   "label": "Peptic Ulcer Other",
+   "mandatory_depends_on": "eval:(doc.peptic_ulcer==\"Yes\")"
+  },
+  {
+   "fieldname": "column_break_63",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "inflammatory_bowel_disease",
+   "fieldtype": "Select",
+   "label": "Inflammatory Bowel Disease",
+   "options": "\nYes\nNo"
+  },
+  {
+   "depends_on": "eval:(doc.inflammatory_bowel_disease==\"Yes\")",
+   "fieldname": "inflammatory_bowel_disease_other",
+   "fieldtype": "Small Text",
+   "label": "Inflammatory Bowel Disease Other",
+   "mandatory_depends_on": "eval:(doc.inflammatory_bowel_disease==\"Yes\")"
+  },
+  {
+   "fieldname": "constipation_history",
+   "fieldtype": "Select",
+   "label": "Constipation History",
+   "options": "\nYes\nNo"
+  },
+  {
+   "depends_on": "eval:(doc.constipation_history==\"Yes\")",
+   "fieldname": "constipation_history_other",
+   "fieldtype": "Small Text",
+   "label": "Constipation History Other",
+   "mandatory_depends_on": "eval:(doc.constipation_history==\"Yes\")"
+  },
+  {
+   "fieldname": "diet_history_section",
+   "fieldtype": "Section Break",
+   "label": "Diet History"
+  },
+  {
+   "fieldname": "adequate_fluid_intake",
+   "fieldtype": "Select",
+   "label": "Adequate Fluid Intake",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "excessive_milk_intake",
+   "fieldtype": "Select",
+   "label": "Excessive Milk Intake",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "column_break_71",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "adequate_fiber",
+   "fieldtype": "Select",
+   "label": "Adequate Fiber",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "weaning_diet",
+   "fieldtype": "Small Text",
+   "label": "Weaning Diet"
+  },
+  {
+   "fieldname": "physical_examination_section",
+   "fieldtype": "Section Break",
+   "label": "Physical Examination"
+  },
+  {
+   "fieldname": "pallor",
+   "fieldtype": "Select",
+   "label": "Pallor",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "oedema",
+   "fieldtype": "Select",
+   "label": "Oedema",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "abdominal_tenderness",
+   "fieldtype": "Select",
+   "label": "Abdominal Tenderness",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "bowel_sound",
+   "fieldtype": "Select",
+   "label": "Bowel Sound",
+   "options": "\nNormal\nHypoactive\nHyperactive"
+  },
+  {
+   "fieldname": "perianal_exam",
+   "fieldtype": "Table MultiSelect",
+   "label": "Perianal Exam",
+   "options": "Perianal Exam Details"
+  },
+  {
+   "fieldname": "anal_tone",
+   "fieldtype": "Select",
+   "label": "Anal Tone",
+   "options": "\nNormal\nTight\nLax"
+  },
+  {
+   "fieldname": "blood_on_glove",
+   "fieldtype": "Select",
+   "label": "Blood on Glove",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "column_break_82",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "jaundice",
+   "fieldtype": "Select",
+   "label": "Jaundice",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "eczema",
+   "fieldtype": "Select",
+   "label": "Eczema",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "mass",
+   "fieldtype": "Select",
+   "label": "Mass",
+   "options": "\nYes\nNo"
+  },
+  {
+   "depends_on": "eval:(doc.mass==\"Other\")",
+   "fieldname": "mass_other",
+   "fieldtype": "Small Text",
+   "label": "Mass Other",
+   "mandatory_depends_on": "eval:(doc.mass==\"Other\")"
+  },
+  {
+   "fieldname": "stool_in_rectum",
+   "fieldtype": "Select",
+   "label": "Stool in Rectum",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "positive_finding_in_other_systems",
+   "fieldtype": "Select",
+   "label": "Positive Finding in Other Systems",
+   "options": "\nYes\nNo"
+  },
+  {
+   "depends_on": "eval:(doc.positive_finding_in_other_systems==\"Yes\")",
+   "fieldname": "positive_finding_in_other_systems_other",
+   "fieldtype": "Small Text",
+   "label": "Positive Finding in Other Systems Other",
+   "mandatory_depends_on": "eval:(doc.positive_finding_in_other_systems==\"Yes\")"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2022-03-03 12:59:11.106815",
+ "modified_by": "Administrator",
+ "module": "Gch Custom",
+ "name": "Gastroenterology  Form",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

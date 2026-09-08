@@ -1,0 +1,38 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:item_name",
+ "creation": "2024-08-26 14:58:23.432694",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "item_name",
+  "menu"
+ ],
+ "fields": [
+  {
+   "fieldname": "item_name",
+   "fieldtype": "Data",
+   "label": "Item Name",
+   "unique": 1
+  },
+  {
+   "fieldname": "menu",
+   "fieldtype": "Link",
+   "label": "Menu",
+   "options": "Catering Menu"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-08-26 14:58:23.432694",
+ "modified_by": "Administrator",
+ "module": "Gch Inpatient",
+ "name": "Lunch Dessert 2",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

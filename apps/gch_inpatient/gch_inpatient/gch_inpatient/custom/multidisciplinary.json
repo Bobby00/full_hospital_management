@@ -1,0 +1,32 @@
+{
+ "custom_fields": [],
+ "custom_perms": [],
+ "doctype": "Multidisciplinary",
+ "property_setters": [
+  {
+   "_assign": null,
+   "_comments": null,
+   "_liked_by": null,
+   "_user_tags": null,
+   "creation": "2023-07-28 09:46:43.089599",
+   "default_value": null,
+   "doc_type": "Multidisciplinary",
+   "docstatus": 0,
+   "doctype_or_field": "DocField",
+   "field_name": "naming_series",
+   "idx": 0,
+   "modified": "2023-07-28 09:46:43.089599",
+   "modified_by": "Administrator",
+   "name": "Multidisciplinary-naming_series-options",
+   "owner": "Administrator",
+   "parent": null,
+   "parentfield": null,
+   "parenttype": null,
+   "property": "options",
+   "property_type": "Text",
+   "row_name": null,
+   "value": "HLC-MDC-.YYYY.-"
+  }
+ ],
+ "sync_on_migrate": 1
+}
